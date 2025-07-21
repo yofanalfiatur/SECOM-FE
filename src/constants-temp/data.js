@@ -161,17 +161,17 @@ export const HBanner = {
 
 export const HSurvey = {
   hint: "Is Your Home Already Safe?",
-  description: "Check your home safety levels with this short survey",
+  desc: "Check your home safety levels with this short survey",
   title: "Ut enim ad minim veniam, quis nostrud exercitation?",
   btnSurvey: [
     {
       text: "OPTION A",
-      href: "/#",
+      href: "/#option-a",
       target: "_self",
     },
     {
       text: "OPTION B",
-      href: "/#",
+      href: "/#option-b",
       target: "_self",
     },
   ],
@@ -179,9 +179,8 @@ export const HSurvey = {
 
 export const HAbout = {
   title: "How SECOM protect You and Your Family",
-  description:
-    "Idque Caesaris facere voluntate liceret: sese habere. Ut enim ad minim veniam, quis nostrud exercitation. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Morbi fringilla convallis sapien, id pulvinar odio volutpat. Nec dubitamus multa iter quae et nos invenerat. Paullum deliquit, ponderibus modulisque suis ratio utitur. Ullamco laboris nisi ut aliquid ex ea commodi consequat.",
-  photo: "/img/temp/h-about-photo.png",
+  desc: "Idque Caesaris facere voluntate liceret: sese habere. Ut enim ad minim veniam, quis nostrud exercitation. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Morbi fringilla convallis sapien, id pulvinar odio volutpat. Nec dubitamus multa iter quae et nos invenerat. Paullum deliquit, ponderibus modulisque suis ratio utitur. Ullamco laboris nisi ut aliquid ex ea commodi consequat.",
+  photo: "/img/temp/h-about-photo.jpg",
   items: [
     {
       icon: "/img/temp/h-ab-icon-1.svg",
@@ -206,28 +205,27 @@ export const HAbout = {
 export const HSolution = {
   hint: "Our Solution",
   title: "Quisque ut dolor gravida, placerat libero vel, euismod.",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur",
+  desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur",
   itemSlider: [
     {
-      photo: "/img/temp/h-solution-photo-1.png",
+      photo: "/img/temp/h-slide-solution.jpg",
       title:
-        "Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
+        "#1Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
     },
     {
-      photo: "/img/temp/h-solution-photo-1.png",
+      photo: "/img/temp/h-slide-solution.jpg",
       title:
-        "Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
+        "#2Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
     },
     {
-      photo: "/img/temp/h-solution-photo-1.png",
+      photo: "/img/temp/h-slide-solution.jpg",
       title:
-        "Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
+        "#3Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
     },
     {
-      photo: "/img/temp/h-solution-photo-1.png",
+      photo: "/img/temp/h-slide-solution.jpg",
       title:
-        "Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
+        "#4Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
     },
   ],
   btnSolution: {
@@ -254,26 +252,25 @@ export const HQuote = [
 
 export const HTestimonial = {
   title: "Hear it from our customers",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur. Curabitur blandit tempus ardua ridiculus sed magna.",
-  testiSlider: [
+  desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitionni dedisse scripsisse iudicaretur. Curabitur blandit tempus ardua ridiculus sed magna.",
+  items: [
     {
-      testi:
-        "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur. Curabitur blandit tempus ardua ridiculus sed magna.",
+      testimony:
+        "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitionni dedisse scripsisse iudicaretur. Curabitur blandit tempus ardua ridiculus sed magna.",
       name: "Nama Pelanggan, Usia",
-      position: "Lokasi",
+      location: "Lokasi",
     },
     {
-      testi:
-        "#2Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur. Curabitur blandit tempus ardua ridiculus sed magna.",
-      name: "Nama Pelanggan, Usia",
-      position: "Lokasi",
+      testimony:
+        "Curabitur blandit tempus ardua ridiculus sed magna. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.",
+      name: "John Doe, 35",
+      location: "Jakarta",
     },
     {
-      testi:
-        "#3Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur. Curabitur blandit tempus ardua ridiculus sed magna.",
-      name: "Nama Pelanggan, Usia",
-      position: "Lokasi",
+      testimony:
+        "Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Curabitur blandit tempus ardua ridiculus sed magna.",
+      name: "Jane Smith, 42",
+      location: "Surabaya",
     },
   ],
 };
@@ -281,8 +278,8 @@ export const HTestimonial = {
 export const HPromotion = {
   hint: "Promotion",
   title: "Quisque ut dolor gravida, placerat libero vel, euismod.",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+  desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+  image: "/img/temp/h-promotion.jpg",
   btnPromotion: {
     text: "CALL TO ACTION BUTTON",
     href: "/#",
@@ -293,16 +290,14 @@ export const HPromotion = {
 //////////////////////  CONTACT  ///////////////////////
 export const ContactPage = {
   title: "Get Your Free Consultation",
-  description:
-    "Talk to our expert today and find the right solution for your home.",
+  desc: "Talk to our expert today and find the right solution for your home.",
   photo: "/img/temp/contact-photo.png",
 };
 
 //////////////////////  THANK YOU  ///////////////////////
 export const ThankYouPage = {
   title: "Thank You For Your Message",
-  description:
-    "Idque Caesaris facere voluntate liceret: sese habere. Ut enim ad minim veniam, quis nostrud exercitation. Tu quoque, Brute, fili mi, nihil timor populi, nihil!",
+  desc: "Idque Caesaris facere voluntate liceret: sese habere. Ut enim ad minim veniam, quis nostrud exercitation. Tu quoque, Brute, fili mi, nihil timor populi, nihil!",
   buttonCTA: {
     text: "Back to Homepage",
     href: "/",
@@ -321,4 +316,88 @@ export const ErrorPage = {
     href: "/",
     target: "_self",
   },
+};
+
+//////////////////////  ALARM LANDING  ///////////////////////
+export const AlarmBanner = {
+  title: "Your Home Secured with Intelligence.",
+  background: "/img/temp/alarm-banner-bg.jpg",
+};
+
+export const AlarmOverview = {
+  title:
+    "At SECOM, we understand that your home isn'tjust a place. It's where your family, memories,and future are kept safe. That's why we offertailored residential security solutions thatcombine cutting-edge technology with fast,reliable response services.",
+  items: [
+    {
+      icon: "/img/temp/h-ab-icon-1.svg",
+      title: "Intelligent and Secured Platform",
+    },
+    {
+      icon: "/img/temp/h-ab-icon-2.svg",
+      title: "Protected by Professionals",
+    },
+    {
+      icon: "/img/temp/h-ab-icon-3.svg",
+      title: "Unique Smart Features and Function",
+    },
+  ],
+};
+
+export const AlarmReason = {
+  title: "Why Choose Us?",
+  background: "img/temp/alarm-reason-bg.jpg",
+  items: [
+    {
+      title: "Quisque ut dolor gravida, placerat libero vel, euismod.",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    },
+    {
+      title: "Quisque ut dolor gravida, placerat libero vel, euismod.",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    },
+    {
+      title: "Quisque ut dolor gravida, placerat libero vel, euismod.",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    },
+    {
+      title: "Quisque ut dolor gravida, placerat libero vel, euismod.",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    },
+  ],
+};
+
+export const AlarmProtect = {
+  title: "How SECOM Protects You?",
+  desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+  image: "/img/temp/alarm-protect.png",
+  items: [
+    {
+      title: "Lorem ipsum dolor sit amet",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    },
+    {
+      title: "#2Lorem ipsum dolor sit ",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    },
+    {
+      title: "#3Lorem ipsum dolor sit ",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    },
+  ],
+  btnCTA: {
+    text: "CONSULT WITH US NOW",
+    href: "/#",
+    target: "_self",
+  },
+};
+
+export const AlarmProduct = {
+  title: "Our Products",
+  desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+  products: [
+    {
+      title: "Control Panel",
+      desc: "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM.",
+    },
+  ],
 };

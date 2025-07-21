@@ -1,5 +1,5 @@
-import React from "react";
 import { HBanner } from "@/constants-temp/data";
+
 import Image from "next/image";
 
 const HomeBanner = () => {
@@ -25,11 +25,13 @@ const HomeBanner = () => {
               position: "absolute",
               maxWidth: item.maxWidth,
             }}
-            className="text-white text-[16px] leading-[1.2] lg:mt-6 py-4 px-4 flex flex-col h-banner__card"
+            className="flex flex-col h-banner__card"
           >
-            <span className="text-navyblue font-raleway leading-6">
-              {item.text}
-            </span>
+            <div className="flex flex-col h-banner__card-wrap">
+              <p className="text-navyblue py-4 px-4 rounded-[10px] overflow-hidden font-raleway leading-6 text-[16px]">
+                {item.text}
+              </p>
+            </div>
           </li>
         ))}
       </ul>

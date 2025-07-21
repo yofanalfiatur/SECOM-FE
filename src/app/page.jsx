@@ -13,10 +13,10 @@ export default function Home() {
       <HomeBanner />
       <HomeSurvey />
       <HomeAbout />
-      <HomePromotion />
-      <HomeQuote />
       <HomeSolution />
       <HomeTesti />
+      <HomeQuote />
+      <HomePromotion />
     </>
   );
 }

@@ -1,3 +1,10 @@
+import {
+  FooterContent,
+  FooterMenu,
+  FooterSocMed,
+  FooterDropdown,
+} from "@/constants-temp/data";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -7,12 +14,6 @@ import {
   FaYoutube,
   FaTiktok,
 } from "react-icons/fa";
-import {
-  FooterContent,
-  FooterMenu,
-  FooterSocMed,
-  FooterDropdown,
-} from "@/constants-temp/data";
 import ButtonSecondary from "../Elements/ButtonSecondary";
 
 const Footer = () => {

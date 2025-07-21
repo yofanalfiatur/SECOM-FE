@@ -1,5 +1,6 @@
-import Image from "next/image";
 import { MenuType, MenuHeader, HeaderButton } from "../../constants-temp/data";
+
+import Image from "next/image";
 import Link from "next/link";
 import ButtonPrimary from "../Elements/ButtonPrimary";
 
