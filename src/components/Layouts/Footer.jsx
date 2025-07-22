@@ -15,6 +15,7 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 import ButtonSecondary from "../Elements/ButtonSecondary";
+import Starfield from "../Elements/Starfield";
 
 const Footer = () => {
   return (
@@ -22,6 +23,7 @@ const Footer = () => {
       <div className="radial one"></div>
       <div className="radial two"></div>
       <div className="radial three"></div>
+      <Starfield />
 
       <section className=" relative z-10 flex flex-col border-b-1 border-[#ffffff66] w-full">
         <div className="relative z-[1] container w-full mx-auto">

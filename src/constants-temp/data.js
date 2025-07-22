@@ -296,8 +296,10 @@ export const ContactPage = {
 
 //////////////////////  THANK YOU  ///////////////////////
 export const ThankYouPage = {
-  title: "Thank You For Your Message",
+  title: "Thank You",
+  title2: "ForYour Message",
   desc: "Idque Caesaris facere voluntate liceret: sese habere. Ut enim ad minim veniam, quis nostrud exercitation. Tu quoque, Brute, fili mi, nihil timor populi, nihil!",
+  logo: "/img/logo-thankyou.svg",
   buttonCTA: {
     text: "Back to Homepage",
     href: "/",

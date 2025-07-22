@@ -8,7 +8,7 @@ const Header = () => {
   const { HeaderBtnText, HeaderBtnHref, HeaderBtnTarget } = HeaderButton;
   return (
     <>
-      <header className="flex flex-col items-center justify-center max-w-screen z-[999] top-0 sticky bg-white border-x-1 border-[#ffffff33] header ">
+      <header className="flex flex-col items-center justify-center max-w-screen z-[999] top-0 sticky bg-white border-b-1 border-[#00529C33] header ">
         <div className=" w-full max-w-screen flex flex-row items-center justify-between header__wrap">
           <div className="w-[220px] items-center flex flex-col justify-center header__logo border-r-1 border-[#00529C33] h-[-webkit-fill-available]">
             <Link
