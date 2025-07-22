@@ -6,7 +6,7 @@ export default function Starfield({
   speedFactor = 0.05,
   backgroundColor = "black",
   starColor = [255, 255, 255],
-  starCount = 5000,
+  starCount = 10000,
 }) {
   useEffect(() => {
     const canvas = document.getElementById("starfield");
@@ -150,6 +150,8 @@ export default function Starfield({
         opacity: 1,
         pointerEvents: "none",
         mixBlendMode: "screen",
+        height: "100%",
+        width: "100%",
       }}
     ></canvas>
   );

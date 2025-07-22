@@ -1,11 +1,23 @@
-import { MenuType, MenuHeader, HeaderButton } from "../../constants-temp/data";
+"use client";
+
+import {
+  MenuType,
+  MenuHeader,
+  HeaderButton,
+  HeaderTop,
+} from "../../constants-temp/data";
+
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 import Image from "next/image";
 import Link from "next/link";
 import ButtonPrimary from "../Elements/ButtonPrimary";
 
 const Header = () => {
-  const { HeaderBtnText, HeaderBtnHref, HeaderBtnTarget } = HeaderButton;
+  const pathname = usePathname();
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <>
       <header className="flex flex-col items-center justify-center max-w-screen z-[999] top-0 sticky bg-white border-b-1 border-[#00529C33] header ">
@@ -24,31 +36,38 @@ const Header = () => {
             </Link>
           </div>
           <div className="w-[90%] flex flex-col justify-end header__wrap-right">
-            <div className="pr-8 flex flex-row justify-end border-b-1 border-[#00529C33] header__wrap-top">
-              <div className="flex flex-row">
-                <ul className="lang-list">
-                  <li className="lang-option active">
-                    <Link href="/#" className="flex flex-row  lang-link">
-                      <Image
-                        src="/img/flag-en.svg"
-                        alt="English"
-                        width={20}
-                        height={14}
-                      />
-                      <span>EN</span>
-                    </Link>
-                  </li>
-                  <li className="lang-option">
-                    <Link href="/#" className="flex flex-row  lang-link">
-                      <Image
-                        src="/img/flag-id.svg"
-                        alt="Indonesian"
-                        width={20}
-                        height={14}
-                      />
-                      <span>ID</span>
-                    </Link>
-                  </li>
+            <div className="pr-8 flex flex-row justify-end border-b-1 border-[#00529C33] gap-6 header__wrap-top">
+              <div className="flex flex-row items-center">
+                <ul
+                  className={`relative lang-list ${
+                    isHovered ? "expand-lang" : ""
+                  }`}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  {HeaderTop.language.map((item, index) => (
+                    <li
+                      className={`lang-option ${
+                        pathname === item.href ? "active" : ""
+                      }`}
+                      key={index}
+                    >
+                      <Link
+                        href={item.href}
+                        className="flex flex-row items-center gap-2 lang-link"
+                      >
+                        <Image
+                          src={item.icon}
+                          alt="English"
+                          width={20}
+                          height={14}
+                        />
+                        <span className="font-raleway text-[14px] text-darkblue">
+                          {item.text}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
                 <svg
                   width="12"
@@ -65,8 +84,9 @@ const Header = () => {
               </div>
 
               <Link
-                href={"#/"}
-                className="flex flex-row  gap-2 lg:py-2 lg:px-2.5 items-center justify-center bg-navyblue"
+                href={HeaderTop.login.href}
+                className="flex flex-row  gap-2 lg:py-1 lg:px-[12px] items-center justify-center bg-tosca"
+                target={HeaderTop.login.target}
               >
                 <svg
                   width="16"
@@ -83,7 +103,7 @@ const Header = () => {
                   />
                 </svg>
                 <span className="text-white text-[13px] tracking-[2px] font-raleway leading-none">
-                  SMART SECURITY LOGIN
+                  {HeaderTop.login.text}
                 </span>
               </Link>
             </div>
@@ -96,7 +116,7 @@ const Header = () => {
                       className=" flex flex-row py-5 gap-2 items-center justify-center header__type__link"
                     >
                       <Image src={icon} alt="Business" width={20} height={20} />
-                      <span className="text-navyblue header__type__text uppercase tracking-[2px] font-raleway leading-none">
+                      <span className="text-navyblue header__type__text uppercase tracking-[2px] font-medium font-raleway leading-none">
                         {text}
                       </span>
                     </Link>
@@ -105,7 +125,7 @@ const Header = () => {
               </ul>
               {/* Menu Desktop */}
               <div className="flex flex-row gap-4 items-center">
-                <ul className="gap-x-4 flex flex-row header__menu">
+                <ul className="gap-x-6 flex flex-row header__menu">
                   {MenuHeader.map(({ text, href, subMenu }, index) => (
                     <li
                       className="flex flex-col items-center justify-center header__menu__item group"
@@ -115,7 +135,7 @@ const Header = () => {
                         href={href}
                         className="relative py-5 header__menu__link flex flex-row items-center gap-2"
                       >
-                        <span className="text-navyblue uppercase tracking-[2px] font-raleway leading-none">
+                        <span className="text-navyblue uppercase tracking-[2px] font-raleway font-medium leading-none">
                           {text}
                         </span>
                         {subMenu && subMenu.length > 0 && (
@@ -154,11 +174,11 @@ const Header = () => {
                   ))}
                 </ul>
                 <ButtonPrimary
-                  href={HeaderBtnHref}
-                  target={HeaderBtnTarget}
-                  className="!text-[12px] !px-6 !py-3.5"
+                  href={HeaderButton.HeaderBtnHref}
+                  target={HeaderButton.HeaderBtnTarget}
+                  className="!text-[12px] !px-6 !py-3.5 !bg-navyblue"
                 >
-                  {HeaderBtnText}
+                  {HeaderButton.HeaderBtnText}
                 </ButtonPrimary>
               </div>
             </nav>

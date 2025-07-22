@@ -47,6 +47,26 @@ export const HeaderButton = {
   HeaderBtnTarget: "_self",
 };
 
+export const HeaderTop = {
+  language: [
+    {
+      text: "EN",
+      href: "/",
+      icon: "/img/flag-en.svg",
+    },
+    {
+      text: "ID",
+      href: "/id",
+      icon: "/img/flag-id.svg",
+    },
+  ],
+  login: {
+    text: "SMART SECURITY LOGIN",
+    href: "/login",
+    target: "_self",
+  },
+};
+
 //////////////////////  Footer  ///////////////////////
 export const FooterContent = {
   FtTitle: "Let's Start Protecting Your Home and Your Loved Ones",
@@ -291,7 +311,7 @@ export const HPromotion = {
 export const ContactPage = {
   title: "Get Your Free Consultation",
   desc: "Talk to our expert today and find the right solution for your home.",
-  photo: "/img/temp/contact-photo.png",
+  photo: "/img/temp/contact-image.jpg",
 };
 
 //////////////////////  THANK YOU  ///////////////////////
