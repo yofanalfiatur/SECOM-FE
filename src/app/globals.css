@@ -498,3 +498,64 @@ main {
   position: relative;
   z-index: 1;
 }
+
+/* Radial Grid Animation */
+@property --diameter {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --bg-size {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --size {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --spread {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.radial-grid {
+  --mx: 50%;
+  --my: 50%;
+  --diameter: 30;
+  --spacing: 30;
+  --size: 30;
+  --spread: 40;
+  --light-color: #009fa766;
+  --bg-color: #00529c;
+  --halftone: 0;
+  background: var(--bg-color);
+  background-image: radial-gradient(
+      circle at var(--mx) var(--my),
+      transparent calc(var(--size) * 1%),
+      var(--bg-color) calc((var(--size) + var(--spread)) * 1%)
+    ),
+    radial-gradient(
+      var(--light-color) calc(var(--diameter) * 0.1px)
+        calc((var(--diameter) * 0.1px) + 0.1px),
+      transparent calc((var(--diameter) * 0.1px) + 0.2px)
+    );
+  background-size: 100% 100%,
+    calc(var(--spacing) * 1px) calc(var(--spacing) * 1px);
+  transition: --x 0.1s, --y 0.1s, all 0.1s;
+}
+
+.radial-grid::before {
+  --brightness: brightness(calc(max(var(--halftone) * 0.8, 1)));
+  --blur: blur(calc(var(--halftone) * 3px));
+  --contrast: contrast(calc(max(var(--halftone) * 999, 1)));
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: var(--brightness) var(--blur) var(--contrast);
+}

@@ -8,7 +8,7 @@ const BackgroundDots = () => {
     let num_dots_x = 25;
     let num_dots_y = 20;
     let dot_size = 5;
-    let dot_color = "#01F3FF"; // Biru muda
+    let dot_color = "#01F3FF33"; // Biru muda
     let dot_hl_color = "#004697"; // Biru tua
 
     const updateGradient = (x, y) => {

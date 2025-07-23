@@ -340,6 +340,11 @@ export const ErrorPage = {
   },
 };
 
+//////////////////////  LOGIN PAGE  ///////////////////////
+export const LoginDummy = {
+  title: "Login to Your Account",
+};
+
 //////////////////////  ALARM LANDING  ///////////////////////
 export const AlarmBanner = {
   title: "Your Home Secured with Intelligence.",
