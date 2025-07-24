@@ -22,8 +22,8 @@ export const MenuHeader = [
     href: "/about",
     subMenu: [
       {
-        subMenuText: "Company Profile",
-        subMenuHref: "/about/company-profile",
+        subMenuText: "Alarm",
+        subMenuHref: "/alarm",
       },
       {
         subMenuText: "Our Team",

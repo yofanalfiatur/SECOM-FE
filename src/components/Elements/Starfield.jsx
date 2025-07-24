@@ -1,158 +1,127 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 export default function Starfield({
   speedFactor = 0.05,
   backgroundColor = "black",
   starColor = [255, 255, 255],
-  starCount = 10000,
+  starCount = 5000, // default dikurangi dari 10000 jadi 1500
 }) {
+  const canvasRef = useRef(null);
+  const animationRef = useRef(null);
+  const observerRef = useRef(null);
+
   useEffect(() => {
-    const canvas = document.getElementById("starfield");
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-    if (canvas) {
-      const c = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
 
-      if (c) {
-        let w = window.innerWidth;
-        let h = window.innerHeight;
+    let w = window.innerWidth;
+    let h = window.innerHeight;
+    canvas.width = w;
+    canvas.height = h;
 
-        const setCanvasExtents = () => {
-          canvas.width = w;
-          canvas.height = h;
-        };
+    const makeStars = (count) =>
+      Array.from({ length: count }, () => ({
+        x: Math.random() * 1600 - 800,
+        y: Math.random() * 900 - 450,
+        z: Math.random() * 1000,
+      }));
 
-        setCanvasExtents();
+    let stars = makeStars(starCount);
 
-        window.onresize = () => {
-          setCanvasExtents();
-        };
+    const clear = () => {
+      ctx.fillStyle = backgroundColor;
+      ctx.fillRect(0, 0, w, h);
+    };
 
-        const makeStars = (count) => {
-          const out = [];
-          for (let i = 0; i < count; i++) {
-            const s = {
-              x: Math.random() * 1600 - 800,
-              y: Math.random() * 900 - 450,
-              z: Math.random() * 1000,
-            };
-            out.push(s);
-          }
-          return out;
-        };
+    const putPixel = (x, y, brightness) => {
+      ctx.fillStyle = `rgba(${starColor[0]},${starColor[1]},${starColor[2]},${brightness})`;
+      ctx.fillRect(x, y, 1, 1);
+    };
 
-        let stars = makeStars(starCount);
+    const moveStars = (distance) => {
+      stars.forEach((s) => {
+        s.z -= distance;
+        if (s.z <= 1) s.z += 1000;
+      });
+    };
 
-        const clear = () => {
-          c.fillStyle = backgroundColor;
-          c.fillRect(0, 0, canvas.width, canvas.height);
-        };
+    let prevTime = performance.now();
 
-        const putPixel = (x, y, brightness) => {
-          const rgb =
-            "rgba(" +
-            starColor[0] +
-            "," +
-            starColor[1] +
-            "," +
-            starColor[2] +
-            "," +
-            brightness +
-            ")";
-          c.fillStyle = rgb;
-          c.fillRect(x, y, 1, 1);
-        };
+    const render = (time) => {
+      const elapsed = time - prevTime;
+      prevTime = time;
 
-        const moveStars = (distance) => {
-          const count = stars.length;
-          for (var i = 0; i < count; i++) {
-            const s = stars[i];
-            s.z -= distance;
-            while (s.z <= 1) {
-              s.z += 1000;
-            }
-          }
-        };
+      moveStars(elapsed * speedFactor);
+      clear();
 
-        let prevTime;
-        const init = (time) => {
-          prevTime = time;
-          requestAnimationFrame(tick);
-        };
+      const cx = w / 2;
+      const cy = h / 2;
 
-        const tick = (time) => {
-          let elapsed = time - prevTime;
-          prevTime = time;
+      stars.forEach((star) => {
+        const x = cx + star.x / (star.z * 0.001);
+        const y = cy + star.y / (star.z * 0.001);
 
-          moveStars(elapsed * speedFactor);
+        if (x >= 0 && x < w && y >= 0 && y < h) {
+          const d = star.z / 1000.0;
+          const b = 1 - d * d;
+          putPixel(x, y, b);
+        }
+      });
 
-          clear();
+      animationRef.current = requestAnimationFrame(render);
+    };
 
-          const cx = w / 2;
-          const cy = h / 2;
+    const resize = () => {
+      w = window.innerWidth;
+      h = window.innerHeight;
+      canvas.width = w;
+      canvas.height = h;
+    };
 
-          const count = stars.length;
-          for (var i = 0; i < count; i++) {
-            const star = stars[i];
+    window.addEventListener("resize", resize);
 
-            const x = cx + star.x / (star.z * 0.001);
-            const y = cy + star.y / (star.z * 0.001);
+    // Intersection observer: hanya render jika terlihat
+    observerRef.current = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          prevTime = performance.now();
+          animationRef.current = requestAnimationFrame(render);
+        } else {
+          cancelAnimationFrame(animationRef.current);
+        }
+      },
+      { threshold: 0.1 }
+    );
 
-            if (x < 0 || x >= w || y < 0 || y >= h) {
-              continue;
-            }
+    observerRef.current.observe(canvas);
 
-            const d = star.z / 1000.0;
-            const b = 1 - d * d;
-
-            putPixel(x, y, b);
-          }
-
-          requestAnimationFrame(tick);
-        };
-
-        requestAnimationFrame(init);
-
-        // add window resize listener:
-        const resizeListener = function () {
-          w = window.innerWidth;
-          h = window.innerHeight;
-          setCanvasExtents();
-        };
-        window.addEventListener("resize", resizeListener);
-
-        // Cleanup
-        return () => {
-          window.removeEventListener("resize", resizeListener);
-          window.onresize = null;
-        };
-      } else {
-        console.error("Could not get 2d context from canvas element");
-      }
-    } else {
-      console.error('Could not find canvas element with id "starfield"');
-    }
+    return () => {
+      cancelAnimationFrame(animationRef.current);
+      window.removeEventListener("resize", resize);
+      observerRef.current?.disconnect();
+    };
   }, [starColor, backgroundColor, speedFactor, starCount]);
 
   return (
     <canvas
-      id="starfield"
+      ref={canvasRef}
       style={{
-        padding: 0,
-        margin: 0,
         position: "absolute",
         top: 0,
         right: 0,
         bottom: 0,
         left: 0,
         zIndex: 10,
-        opacity: 1,
         pointerEvents: "none",
         mixBlendMode: "screen",
-        height: "100%",
         width: "100%",
+        height: "100%",
       }}
-    ></canvas>
+    />
   );
 }

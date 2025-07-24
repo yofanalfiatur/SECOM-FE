@@ -7,7 +7,7 @@ import {
   HeaderTop,
 } from "../../constants-temp/data";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { usePathname } from "next/navigation";
 
 import Image from "next/image";
@@ -17,6 +17,21 @@ import ButtonPrimary from "../Elements/ButtonPrimary";
 const Header = () => {
   const pathname = usePathname();
   const [isHovered, setIsHovered] = useState(false);
+
+  // Menentukan bahasa aktif berdasarkan pathname
+  const activeLanguage = useMemo(() => {
+    // Jika pathname dimulai dengan /id/, maka bahasa aktif adalah ID
+    if (pathname.startsWith("/id/") || pathname === "/id") {
+      return "ID";
+    }
+    // Selain itu, bahasa aktif adalah EN (default)
+    return "EN";
+  }, [pathname]);
+
+  // Function untuk mengecek apakah language option aktif
+  const isLanguageActive = (langCode) => {
+    return activeLanguage === langCode;
+  };
 
   return (
     <>
@@ -45,29 +60,34 @@ const Header = () => {
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >
-                  {HeaderTop.language.map((item, index) => (
-                    <li
-                      className={`lang-option ${
-                        pathname === item.href ? "active" : ""
-                      }`}
-                      key={index}
-                    >
-                      <Link
-                        href={item.href}
-                        className="flex flex-row items-center gap-2 lang-link"
+                  {HeaderTop.language.map((item, index) => {
+                    // Ekstrak kode bahasa dari text atau tambahkan property langCode di data
+                    const langCode = item.text; // Asumsi item.text berisi 'EN' atau 'ID'
+
+                    return (
+                      <li
+                        className={`lang-option ${
+                          isLanguageActive(langCode) ? "active" : ""
+                        }`}
+                        key={index}
                       >
-                        <Image
-                          src={item.icon}
-                          alt="English"
-                          width={20}
-                          height={14}
-                        />
-                        <span className="font-raleway text-[14px] text-darkblue">
-                          {item.text}
-                        </span>
-                      </Link>
-                    </li>
-                  ))}
+                        <Link
+                          href={item.href}
+                          className="flex flex-row items-center gap-2 lang-link"
+                        >
+                          <Image
+                            src={item.icon}
+                            alt={item.text}
+                            width={20}
+                            height={14}
+                          />
+                          <span className="font-raleway text-[14px] text-darkblue">
+                            {item.text}
+                          </span>
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
                 <svg
                   width="12"
