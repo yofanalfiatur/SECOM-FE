@@ -13,10 +13,10 @@ const LoginPage = () => {
         animate={{ y: "0%", opacity: 1 }}
         initial={{ y: "-100%", opacity: 0 }}
         transition={{ duration: 0.5 }}
-        className="py-[3rem] relative overflow-hidden flex flex-col items-center justify-center h-[80vh] hide__footer__top"
+        className="relative overflow-hidden flex flex-col items-center justify-center hide__footer__top"
       >
         <RadialGrid />
-        <div className="container mx-auto flex flex-col items-center justify-center relative z-10 ">
+        <div className="container pt-[166px] pb-[180px] mx-auto flex flex-col items-center justify-center relative z-10 ">
           <div className="w-full lg:w-1/2 overflow-hidden">
             <motion.h1
               animate={{ y: "0%", opacity: 1 }}

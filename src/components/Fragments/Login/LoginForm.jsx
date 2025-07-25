@@ -84,33 +84,35 @@ const LoginForm = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.8 }}
-      className="w-full rounded-lg shadow-lg p-8 login__form"
-    >
-      <div className="space-y-6 h-full flex flex-col">
+    <div className="w-full rounded-lg shadow-lg p-8 form__wrap">
+      <div className="h-full flex flex-col">
         {/* Email Field */}
-        <div className="relative overflow-hidden rounded-[5px] flex flex-col login__wrap-input">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="relative overflow-hidden  flex flex-col mb-6 "
+        >
           <div
-            className={`relative flex flex-col m-4 px-4 min-h-[77px] bg-gray-50 rounded-[5px] ${
+            className={`relative flex flex-col rounded-[5px] overflow-hidden form__wrap__input ${
               errors.email ? "border-red-500" : ""
             } `}
           >
-            <label
-              htmlFor="email"
-              className="text-navyblue text-xl tracking-[2px]"
-            >
-              EMAIL
-            </label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`w-full border-1 text-navyblue text-xl`}
+              className={`peer pt-[32px] pb-3 px-4 text-navyblue text-xl rounded-[3px] bg-white m-[3px] focus:outline-none`}
             />
+            <label
+              htmlFor="email"
+              className={`text-navyblue text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[10px] peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
+                formData.email ? "text-[10px] top-[23px]" : ""
+              }`}
+            >
+              EMAIL
+            </label>
           </div>
           {errors.email && (
             <motion.p
@@ -121,29 +123,45 @@ const LoginForm = () => {
               {errors.email}
             </motion.p>
           )}
-        </div>
+        </motion.div>
 
         {/* Password Field */}
-        <div className="space-y-2">
-          <div className="relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.9 }}
+          className="relative overflow-hidden flex flex-col mb-2"
+        >
+          <div
+            className={`relative flex flex-col rounded-[5px] overflow-hidden form__wrap__input ${
+              errors.password ? "ring-2 ring-red-500" : ""
+            }`}
+          >
             <input
               type={showPassword ? "text" : "password"}
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className={`w-full pl-12 pr-12 py-3 bg-gray-50 border-0 rounded-lg text-gray-900 placeholder-gray-400 text-sm font-medium tracking-wide focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200 ${
-                errors.password ? "ring-2 ring-red-500" : ""
-              }`}
+              className={`peer pt-[32px] pb-3 px-4 text-navyblue text-xl rounded-[3px] bg-white m-[3px] focus:outline-none `}
             />
+            <label
+              htmlFor="password"
+              className={`text-navyblue text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[10px] peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
+                formData.password ? "text-[10px] top-[23px]" : ""
+              }`}
+            >
+              PASSWORD
+            </label>
+
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
             >
               {showPassword ? (
-                <EyeOff className="w-5 h-5" />
+                <EyeOff className="w-5 h-5 cursor-pointer" />
               ) : (
-                <Eye className="w-5 h-5" />
+                <Eye className="w-5 h-5 cursor-pointer" />
               )}
             </button>
           </div>
@@ -156,17 +174,20 @@ const LoginForm = () => {
               {errors.password}
             </motion.p>
           )}
-        </div>
+        </motion.div>
 
         {/* Forgot Password Link */}
         <div className="text-left">
-          <button
+          <motion.button
             type="button"
-            className="text-white text-sm hover:text-blue-200 transition-colors duration-200 font-medium"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            className="text-white text-lg hover:text-blue-200 transition-colors duration-200 font-raleway"
             onClick={() => console.log("Forgot password clicked")}
           >
             Forgot password?
-          </button>
+          </motion.button>
         </div>
 
         {/* Submit Error */}
@@ -187,10 +208,13 @@ const LoginForm = () => {
           onClick={handleSubmit}
           whileHover={{ scale: isLoading ? 1 : 1.02 }}
           whileTap={{ scale: isLoading ? 1 : 0.98 }}
-          className={`w-full py-3 rounded-lg font-medium text-white text-sm tracking-wider transition-all duration-200 ${
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1.3 }}
+          className={`w-full py-4 mt-9 rounded-[5px] tracking-[5px] font-raleway text-white text-xl transition-all duration-200 ${
             isLoading
               ? "bg-gray-400 cursor-not-allowed"
-              : "bg-teal-500 hover:bg-teal-600 active:bg-teal-700"
+              : "bg-tosca hover:bg-teal-600 active:bg-teal-700"
           }`}
         >
           {isLoading ? (
@@ -203,7 +227,7 @@ const LoginForm = () => {
           )}
         </motion.button>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
