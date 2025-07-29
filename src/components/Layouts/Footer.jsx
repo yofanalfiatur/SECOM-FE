@@ -40,21 +40,21 @@ const Footer = () => {
       {!shouldHideFooterTop && (
         <section className=" relative z-10 flex flex-col border-b-1 border-[#ffffff66] w-full footer__top">
           <div className="relative z-[1] container w-full mx-auto">
-            <div className="w-3/4 border-r-1 py-10 lg:pt-22 lg:pb-16 border-[#ffffff66] flex flex-col items-center">
-              <h2 className="text-white text-[60px] py-3">
+            <div className="w-[90%] lg:w-3/4 border-r-1 py-10 lg:pt-22 lg:pb-16 border-[#ffffff66] flex flex-col items-center">
+              <h2 className="text-white text-[25px] lg:text-[60px] pr-4 lg:pl-0 py-3">
                 {FooterContent.FtTitle}
               </h2>
             </div>
-            <div className="w-1/4"></div>
+            <div className="w-[10%] lg:w-1/4"></div>
           </div>
         </section>
       )}
 
       <section className=" relative z-10 flex flex-col w-full footer__cta">
         <div className="container relative z-[1] w-full mx-auto flex flex-row">
-          <div className="w-1/4"></div>
-          <div className="w-3/4 flex flex-col gap-y-6 border-[#ffffff66] border-l-1 lg:pl-26 lg:pt-18 lg:pb-24 py-10">
-            <p className="text-white text-lg lg:text-[25px]">
+          <div className="w-[20%] lg:w-1/4"></div>
+          <div className="w-[80%] lg:w-3/4 flex flex-col gap-y-6 border-[#ffffff66] border-l-1 pl-8 lg:pl-26 lg:pt-18 lg:pb-24 py-10">
+            <p className="text-white text-[13px] lg:text-lg lg:text-[25px]">
               {FooterContent.FtDescription}
             </p>
             <ButtonSecondary
@@ -67,9 +67,9 @@ const Footer = () => {
         </div>
       </section>
       <section className=" relative z-10 w-full flex flex-col border-y-1 border-[#ffffff66] footer__info">
-        <div className="container w-full mx-auto flex flex-row">
-          <div className="w-1/4 flex flex-col justify-center">
-            <div className="flex flex-col gap-9">
+        <div className="container w-full mx-auto flex flex-col lg:flex-row !p-0">
+          <div className="w-full lg:w-1/4 flex flex-col justify-center">
+            <div className="flex items-center lg:items-start flex-col gap-9 border-b-1 border-[#ffffff66] lg:border-none">
               <Image
                 src="/img/secom-logo.png"
                 alt="logo"
@@ -95,18 +95,18 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="w-3/4 border-l-1 border-[#ffffff66] flex flex-col">
-            <div className="f-wrap-address lg:pl-26 lg:py-6 flex flex-col gap-y-2 ">
+          <div className="w-full lg:w-3/4 lg:border-l-1 border-[#ffffff66] flex flex-col">
+            <div className="f-wrap-address lg:pl-26 lg:py-6 flex flex-col gap-y-2 px-[1rem] lg:px-0">
               <p className="f-address__text text-white text-[14px]">ADDRESS</p>
               <Link
-                className="text-white font-semibold text-xl w-2/3"
+                className="text-white font-semibold text-xl w-full lg:w-2/3"
                 href={FooterContent.FtAddressLink}
               >
                 {FooterContent.FtAddressText}
               </Link>
             </div>
-            <div className=" f-info relative lg:pl-26 flex flex-row w-full">
-              <div className="lg:mt-8 lg:mb-20 flex flex-row w-full ">
+            <div className=" f-info relative lg:pl-26 flex flex-row w-full border-t-[1px] border-[#ffffff66] lg:border-none">
+              <div className="lg:mt-8 lg:mb-20 flex flex-col lg:flex-row w-full px-[1rem] lg:px-0">
                 <div className="f-sitemap w-2/3">
                   <p className="f-hint text-white lg:text-[14px] font-bold mb-4">
                     SITEMAPS

@@ -308,6 +308,11 @@ main {
   z-index: 1;
   background-color: white;
 }
+@media screen and (max-width: 1023px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
 
 /* ===== Header Language ===== */
 .lang-list .lang-option {
@@ -345,6 +350,17 @@ main {
   transition: all ease 0.3s;
 }
 
+/* mobile menu */
+.hamburger.active .line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ===== Custom Radial Footer Animation ===== */
 .footer .radial {
   position: absolute;
@@ -378,10 +394,10 @@ main {
 
 .footer .radial.three {
   border-radius: 100%;
-  width: 80%;
+  width: 60%;
   height: 80%;
   background: #0b2b4b;
-  bottom: -10%;
+  top: -5%;
   right: -10%;
   animation: move-three 4s linear infinite;
   transform: rotate(0) translate(100px) rotate(0);
@@ -397,6 +413,13 @@ main {
   background-color: rgba(255, 255, 255, 0.4);
   z-index: 0;
 }
+
+@media screen and (max-width: 1023px) {
+  .footer .f-info::after {
+    content: unset;
+  }
+}
+
 .footer .f-wrap-dropdown::after {
   position: absolute;
   top: 8px;

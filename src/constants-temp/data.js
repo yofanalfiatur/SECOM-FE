@@ -47,7 +47,7 @@ export const HeaderButton = {
   HeaderBtnTarget: "_self",
 };
 
-export const HeaderTop = {
+export const HTop = {
   language: [
     {
       text: "EN",

@@ -19,16 +19,16 @@ const LoginForm = () => {
 
     // Email validation
     if (!formData.email) {
-      newErrors.email = "Email is required";
+      newErrors.email = "Email is required !";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email";
+      newErrors.email = "Please enter a valid email !";
     }
 
     // Password validation
     if (!formData.password) {
-      newErrors.password = "Password is required";
+      newErrors.password = "Password is required !";
     } else if (formData.password.length < 6) {
-      newErrors.password = "Password must be at least 6 characters";
+      newErrors.password = "Password must be at least 6 characters !";
     }
 
     setErrors(newErrors);
@@ -118,7 +118,7 @@ const LoginForm = () => {
             <motion.p
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-red-500 text-xs ml-1"
+              className="text-white text-xs mt-2 ml-1 bg-[#ff4444b9] max-w-max px-2"
             >
               {errors.email}
             </motion.p>
@@ -134,7 +134,7 @@ const LoginForm = () => {
         >
           <div
             className={`relative flex flex-col rounded-[5px] overflow-hidden form__wrap__input ${
-              errors.password ? "ring-2 ring-red-500" : ""
+              errors.password ? "" : ""
             }`}
           >
             <input
@@ -169,7 +169,7 @@ const LoginForm = () => {
             <motion.p
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-red-500 text-xs ml-1"
+              className="text-white text-xs mt-2 ml-1 bg-[#ff4444b9] max-w-max px-4"
             >
               {errors.password}
             </motion.p>
