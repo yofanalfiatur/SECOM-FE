@@ -1,29 +1,33 @@
 "use client";
 import { HTop } from "../../../constants-temp/data";
 
+import useActiveLanguage from "@/components/Hooks/useActiveLanguage";
+
 import { useState, useMemo } from "react";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
 const HeaderTop = () => {
-  const pathname = usePathname();
+  // const pathname = usePathname();
   const [isHovered, setIsHovered] = useState(false);
 
-  // Menentukan bahasa aktif berdasarkan pathname
-  const activeLanguage = useMemo(() => {
-    // Jika pathname dimulai dengan /id/, maka bahasa aktif adalah ID
-    if (pathname.startsWith("/id/") || pathname === "/id") {
-      return "ID";
-    }
-    // Selain itu, bahasa aktif adalah EN (default)
-    return "EN";
-  }, [pathname]);
+  const { isLanguageActive } = useActiveLanguage();
 
-  // Function untuk mengecek apakah language option aktif
-  const isLanguageActive = (langCode) => {
-    return activeLanguage === langCode;
-  };
+  // // check active language based on pathname
+  // const activeLanguage = useMemo(() => {
+  //   // if pathname starts with /id/ or /id
+  //   if (pathname.startsWith("/id/") || pathname === "/id") {
+  //     return "ID";
+  //   }
+  //   // if pathname starts with /en/ or /en
+  //   return "EN";
+  // }, [pathname]);
+
+  // // Function for checking active language
+  // const isLanguageActive = (langCode) => {
+  //   return activeLanguage === langCode;
+  // };
 
   return (
     <>
@@ -35,8 +39,7 @@ const HeaderTop = () => {
             onMouseLeave={() => setIsHovered(false)}
           >
             {HTop.language.map((item, index) => {
-              // Ekstrak kode bahasa dari text atau tambahkan property langCode di data
-              const langCode = item.text; // Asumsi item.text berisi 'EN' atau 'ID'
+              const langCode = item.text; // 'EN' or 'ID'
 
               return (
                 <li

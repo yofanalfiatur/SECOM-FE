@@ -8,7 +8,7 @@ const ThankYou = () => {
     <>
       <section className="">
         <div className="container mx-auto flex flex-row">
-          <div className="w-full lg:w-2/3 border-none lg:border-r-[1px] pt-13 pb-13 lg:pt-20 lg:pb-26 lg:border-[#13223322]">
+          <div className="w-full lg:w-2/3 border-r-0 lg:border-r-[1px] pt-13 pb-13 lg:pt-20 lg:pb-26 lg:border-[#13223322]">
             <h1 className="text-[33px] lg:text-[95px] font-open-sans font-semibold relative max-w-max leading-[1.1]">
               {ThankYouPage.title}
               <br />
@@ -19,7 +19,7 @@ const ThankYou = () => {
                 height="51"
                 viewBox="0 0 300 51"
                 fill="none"
-                className="absolute top-[17%] right-[-2%] w-[105px] lg:w-[300px]"
+                className="absolute top-[-3px] right-[-2px] object-contain lg:top-[17%] lg:right-[-2%] w-[105px] lg:w-[300px]"
               >
                 <line
                   y1="48.5"

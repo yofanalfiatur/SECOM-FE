@@ -6,7 +6,7 @@ const ButtonWa = () => {
     <Link
       href="https://api.whatsapp.com/send?phone=6281288888888&text=Halo%20SECOM"
       target="_blank"
-      className=" fixed bottom-4 right-14 z-50 flex flex-col items-center justify-center"
+      className=" fixed bottom-4 right-4 lg:right-14 z-50 flex flex-col items-center justify-center"
     >
       <svg
         width="54"

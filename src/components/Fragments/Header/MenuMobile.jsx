@@ -1,11 +1,34 @@
 "use client";
 
-import { MenuHeader } from "@/constants-temp/data";
+import useActiveLanguage from "@/components/Hooks/useActiveLanguage";
+import { HTop, MenuHeader } from "@/constants-temp/data";
+import Image from "next/image";
 import Link from "next/link";
 
 const MenuMobile = () => {
+  const { isLanguageActive } = useActiveLanguage();
+
   return (
     <>
+      {/* language Mobile */}
+      <div className="flex flex-row border-b-[1px] border-[#13223333]  header__lang-md">
+        {HTop.language.map((item, index) => (
+          <Link
+            href={item.href}
+            key={index}
+            className={`w-1/2 border-r-[1px] border-[#13223333] relative py-5 header__menu__link flex flex-row items-center justify-center gap-2 ${
+              isLanguageActive(item.text) ? "active-md" : ""
+            }`}
+          >
+            <Image src={item.icon} alt={item.text} width={20} height={14} />
+            <span className="text-navyblue uppercase tracking-[2px] font-raleway font-medium leading-none">
+              {item.text}
+            </span>
+          </Link>
+        ))}
+      </div>
+
+      {/* Menu Mobile */}
       <ul className="gap-x-6 flex flex-col lg:hidden header__menu-md">
         {MenuHeader.map(({ text, href, subMenu }, index) => (
           <li

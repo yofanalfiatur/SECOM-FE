@@ -1,4 +1,5 @@
 "use client";
+
 import {
   FooterContent,
   FooterMenu,
@@ -6,7 +7,7 @@ import {
   FooterDropdown,
 } from "@/constants-temp/data";
 
-import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -21,14 +22,16 @@ import ButtonSecondary from "../Elements/ButtonSecondary";
 import Starfield from "../Elements/Starfield";
 
 const Footer = () => {
-  // Get current pathname
-  const pathname = usePathname();
+  const [shouldHideFooterTop, setShouldHideFooterTop] = useState(false);
 
-  // Define pages where footer__top should be hidden
-  const hideFooterTopPages = ["/login", "/thankyou"];
-
-  // Check if current page should hide footer top
-  const shouldHideFooterTop = hideFooterTopPages.includes(pathname);
+  useEffect(() => {
+    const main = document.querySelector("main");
+    if (main && main.querySelector(".hide__footer__top")) {
+      setShouldHideFooterTop(true);
+    } else {
+      setShouldHideFooterTop(false);
+    }
+  }, []);
 
   return (
     <footer className="max-w-screen items-center justify-center flex flex-col bg-[#00529c] footer overflow-hidden relative">
@@ -36,12 +39,12 @@ const Footer = () => {
       <div className="radial two"></div>
       <div className="radial three"></div>
       <Starfield />
-      {/* Conditionally render footer__top based on current pathname */}
+
       {!shouldHideFooterTop && (
         <>
           <section className=" relative z-10 flex flex-col border-b-1 border-[#ffffff66] w-full footer__top">
             <div className="relative z-[1] container w-full mx-auto">
-              <div className="w-[90%] lg:w-3/4 border-r-1 py-10 lg:pt-22 lg:pb-16 border-[#ffffff66] flex flex-col items-center">
+              <div className="w-[90%] lg:w-3/4 border-r-1 py-3 lg:pt-22 lg:pb-16 border-[#ffffff66] flex flex-col items-center">
                 <h2 className="text-white text-[25px] lg:text-[60px] pr-4 lg:pl-0 py-3">
                   {FooterContent.FtTitle}
                 </h2>
@@ -52,8 +55,8 @@ const Footer = () => {
 
           <section className=" relative z-10 flex flex-col w-full footer__cta">
             <div className="container relative z-[1] w-full mx-auto flex flex-row">
-              <div className="w-[20%] lg:w-1/4"></div>
-              <div className="w-[80%] lg:w-3/4 flex flex-col gap-y-6 border-[#ffffff66] border-l-1 pl-8 lg:pl-26 lg:pt-18 lg:pb-24 py-10">
+              <div className="w-[15%] lg:w-1/4"></div>
+              <div className="w-[85%] lg:w-3/4 flex flex-col gap-y-8 lg:gap-y-6 border-[#ffffff66] border-l-1 pl-8 py-6 lg:pl-26 lg:pt-18 lg:pb-24">
                 <p className="text-white text-[13px] lg:text-lg lg:text-[25px]">
                   {FooterContent.FtDescription}
                 </p>
@@ -70,9 +73,9 @@ const Footer = () => {
       )}
 
       <section className=" relative z-10 w-full flex flex-col border-y-1 border-[#ffffff66] footer__info">
-        <div className="container w-full mx-auto flex flex-col lg:flex-row !p-0">
-          <div className="w-full lg:w-1/4 flex flex-col justify-center">
-            <div className="lg:max-w-max flex items-center lg:items-start flex-col gap-9 border-b-1 border-[#ffffff66] lg:border-none">
+        <div className="lg:container w-full mx-auto flex flex-col lg:flex-row !p-0">
+          <div className="w-full lg:w-1/4 flex flex-col justify-center border-b-1 border-[#ffffff66] lg:border-none">
+            <div className="lg:max-w-max pt-8 pb-8 lg:pt-0 lg:pb-0 flex items-center lg:items-start flex-col gap-9">
               <Image
                 src="/img/secom-logo.png"
                 alt="logo"
@@ -84,7 +87,7 @@ const Footer = () => {
                 <select
                   name="f-dropdown"
                   id="f-dropdown"
-                  className="lg:text-[14px] max-w-max lg:py-2.5 lg:pl-3 lg:pr-16 relative border-1 border-[#ffffffb3] appearance-none text-[#ffffffb3] f-dropdown"
+                  className="text-[12px] lg:text-[14px] max-w-max py-2 pl-3 pr-10 lg:py-2.5 lg:pl-3 lg:pr-16 relative border-1 border-[#ffffffb3] appearance-none text-[#ffffffb3] f-dropdown"
                 >
                   {FooterDropdown.map(({ FtDropText, FtDropValue }, index) => (
                     <option
@@ -100,22 +103,24 @@ const Footer = () => {
             </div>
           </div>
           <div className="w-full lg:w-3/4 lg:border-l-1 border-[#ffffff66] flex flex-col">
-            <div className="f-wrap-address lg:pl-26 lg:py-6 flex flex-col gap-y-2 px-[1rem] lg:px-0">
-              <p className="f-address__text text-white text-[14px]">ADDRESS</p>
+            <div className="f-wrap-address lg:pl-26 pt-6 pb-7 lg:py-6 flex flex-col gap-y-2 px-[1rem] lg:px-0">
+              <p className="f-address__text text-white text-[12px] lg:text-[14px]">
+                ADDRESS
+              </p>
               <Link
-                className="text-white font-semibold text-xl w-full lg:w-2/3"
+                className="text-white leading-[1.7] lg:leading-[1.2] font-semibold text-[15px] lg:text-xl w-full lg:w-2/3"
                 href={FooterContent.FtAddressLink}
               >
                 {FooterContent.FtAddressText}
               </Link>
             </div>
             <div className=" f-info relative lg:pl-26 flex flex-row w-full border-t-[1px] border-[#ffffff66] lg:border-none">
-              <div className="lg:mt-8 lg:mb-20 flex flex-col lg:flex-row w-full px-[1rem] lg:px-0">
-                <div className="f-sitemap w-2/3">
-                  <p className="f-hint text-white lg:text-[14px] font-bold mb-4">
+              <div className="mt-6 lg:mt-8 mb-11 lg:mb-20 flex flex-col lg:flex-row w-full px-[1rem] lg:px-0 gap-y-6 lg:gap-0">
+                <div className="f-sitemap w-full lg:w-2/3">
+                  <p className="f-hint text-white text-[12px] lg:text-[14px] font-bold mb-3 lg:mb-4">
                     SITEMAPS
                   </p>
-                  <ul className="f-sitemap__list flex flex-col flex-wrap max-h-[65px] max-w-max gap-[15px]">
+                  <ul className="f-sitemap__list flex flex-col flex-wrap max-h-[105px] lg:max-h-[80px] max-w-max gap-[15px] lg:gap-[20px]">
                     {FooterMenu.map(({ FtMenuText, FtMenuLink }, index) => (
                       <li
                         className="f-sitemap__list__item flex flex-col max-w-max"
@@ -123,7 +128,7 @@ const Footer = () => {
                       >
                         <Link
                           href={FtMenuLink}
-                          className="f-sitemap__list__item__link text-white max-w-max"
+                          className="f-sitemap__list__item__link text-[14px] lg:text-lg text-white max-w-max"
                         >
                           {FtMenuText}
                         </Link>
@@ -131,11 +136,11 @@ const Footer = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="f-socmed w-1/3">
-                  <p className="f-hint text-white lg:text-[14px] font-bold  lg:mb-8">
+                <div className="f-socmed w-full lg:w-1/3">
+                  <p className="f-hint text-white text-[12px] lg:text-[14px] font-bold mb-3 lg:mb-8">
                     STAY CONNECTED
                   </p>
-                  <div className="f-socmed__list flex flex-row gap-8 ">
+                  <div className="f-socmed__list flex flex-row gap-6 lg:gap-8 ">
                     <Link
                       href={FooterSocMed.FtFacebook}
                       target="_blank"
@@ -180,16 +185,16 @@ const Footer = () => {
       </section>
 
       <section className=" relative z-10 flex flex-col w-full footer__bottom">
-        <div className="container lg:pt-[2rem] lg:pb-[2rem] flex flex-row w-full mx-auto">
-          <div className="w-1/6">
-            <p className="text-white text-[14px] ">
+        <div className="lg:container !pt-[1.5rem] !pb-[1.5rem] lg:pt-[2rem] lg:pb-[2rem] px-[1rem] lg:px-0 gap-1 lg:gap-0 flex flex-col lg:flex-row w-full mx-auto">
+          <div className="w-full lg:w-1/6">
+            <p className="text-white text-[12px] lg:text-[14px]">
               © {new Date().getFullYear()} PT. SECOM Indonesia
             </p>
           </div>
-          <div className="w-5/6">
+          <div className="w-full lg:w-5/6 flex flex-col items-start lg:items-end">
             <Link
               href="/privacy-policy"
-              className="float-right text-white text-[14px]"
+              className="float-right text-white text-[12px] lg:text-[14px]"
             >
               Privacy Policy
             </Link>
