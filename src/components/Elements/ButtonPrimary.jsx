@@ -8,7 +8,7 @@ const ButtonPrimary = (props) => {
       <Link
         href={href}
         target={target}
-        className={`flex flex-col max-w-max max-h-max font-raleway bg-tosca text-white text-[20px] px-5 py-5 rounded-[5px] tracking-[4px] leading-none uppercase ${className}`}
+        className={`flex flex-col items-center max-w-full sm:max-w-max sm:max-h-max font-raleway bg-tosca text-white text-sm lg:text-[20px] px-4 py-4 lg:px-5 lg:py-5 rounded-[5px] tracking-[4px] leading-none uppercase ${className}`}
       >
         {children}
       </Link>

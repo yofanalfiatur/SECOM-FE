@@ -38,43 +38,47 @@ const Footer = () => {
       <Starfield />
       {/* Conditionally render footer__top based on current pathname */}
       {!shouldHideFooterTop && (
-        <section className=" relative z-10 flex flex-col border-b-1 border-[#ffffff66] w-full footer__top">
-          <div className="relative z-[1] container w-full mx-auto">
-            <div className="w-[90%] lg:w-3/4 border-r-1 py-10 lg:pt-22 lg:pb-16 border-[#ffffff66] flex flex-col items-center">
-              <h2 className="text-white text-[25px] lg:text-[60px] pr-4 lg:pl-0 py-3">
-                {FooterContent.FtTitle}
-              </h2>
+        <>
+          <section className=" relative z-10 flex flex-col border-b-1 border-[#ffffff66] w-full footer__top">
+            <div className="relative z-[1] container w-full mx-auto">
+              <div className="w-[90%] lg:w-3/4 border-r-1 py-10 lg:pt-22 lg:pb-16 border-[#ffffff66] flex flex-col items-center">
+                <h2 className="text-white text-[25px] lg:text-[60px] pr-4 lg:pl-0 py-3">
+                  {FooterContent.FtTitle}
+                </h2>
+              </div>
+              <div className="w-[10%] lg:w-1/4"></div>
             </div>
-            <div className="w-[10%] lg:w-1/4"></div>
-          </div>
-        </section>
+          </section>
+
+          <section className=" relative z-10 flex flex-col w-full footer__cta">
+            <div className="container relative z-[1] w-full mx-auto flex flex-row">
+              <div className="w-[20%] lg:w-1/4"></div>
+              <div className="w-[80%] lg:w-3/4 flex flex-col gap-y-6 border-[#ffffff66] border-l-1 pl-8 lg:pl-26 lg:pt-18 lg:pb-24 py-10">
+                <p className="text-white text-[13px] lg:text-lg lg:text-[25px]">
+                  {FooterContent.FtDescription}
+                </p>
+                <ButtonSecondary
+                  href={FooterContent.FtButtonHref}
+                  target={FooterContent.FtButtonTarget}
+                >
+                  {FooterContent.FtButtonText}
+                </ButtonSecondary>
+              </div>
+            </div>
+          </section>
+        </>
       )}
 
-      <section className=" relative z-10 flex flex-col w-full footer__cta">
-        <div className="container relative z-[1] w-full mx-auto flex flex-row">
-          <div className="w-[20%] lg:w-1/4"></div>
-          <div className="w-[80%] lg:w-3/4 flex flex-col gap-y-6 border-[#ffffff66] border-l-1 pl-8 lg:pl-26 lg:pt-18 lg:pb-24 py-10">
-            <p className="text-white text-[13px] lg:text-lg lg:text-[25px]">
-              {FooterContent.FtDescription}
-            </p>
-            <ButtonSecondary
-              href={FooterContent.FtButtonHref}
-              target={FooterContent.FtButtonTarget}
-            >
-              {FooterContent.FtButtonText}
-            </ButtonSecondary>
-          </div>
-        </div>
-      </section>
       <section className=" relative z-10 w-full flex flex-col border-y-1 border-[#ffffff66] footer__info">
         <div className="container w-full mx-auto flex flex-col lg:flex-row !p-0">
           <div className="w-full lg:w-1/4 flex flex-col justify-center">
-            <div className="flex items-center lg:items-start flex-col gap-9 border-b-1 border-[#ffffff66] lg:border-none">
+            <div className="lg:max-w-max flex items-center lg:items-start flex-col gap-9 border-b-1 border-[#ffffff66] lg:border-none">
               <Image
                 src="/img/secom-logo.png"
                 alt="logo"
                 width={248}
                 height={62}
+                className="max-w-[205px] lg:max-w-full object-contain pr-0 lg:pr-14"
               />
               <div className="flex flex-col f-wrap-dropdown relative max-w-max max-h-max">
                 <select

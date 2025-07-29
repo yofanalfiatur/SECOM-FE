@@ -8,8 +8,8 @@ const ThankYou = () => {
     <>
       <section className="">
         <div className="container mx-auto flex flex-row">
-          <div className="w-2/3 border-r-[1px] pt-20 pb-26 border-[#13223322]">
-            <h1 className="text-[95px] font-open-sans font-semibold relative max-w-max leading-[1.1]">
+          <div className="w-full lg:w-2/3 border-none lg:border-r-[1px] pt-13 pb-13 lg:pt-20 lg:pb-26 lg:border-[#13223322]">
+            <h1 className="text-[33px] lg:text-[95px] font-open-sans font-semibold relative max-w-max leading-[1.1]">
               {ThankYouPage.title}
               <br />
               {ThankYouPage.title2}
@@ -19,7 +19,7 @@ const ThankYou = () => {
                 height="51"
                 viewBox="0 0 300 51"
                 fill="none"
-                className="absolute top-[17%] right-[-2%]"
+                className="absolute top-[17%] right-[-2%] w-[105px] lg:w-[300px]"
               >
                 <line
                   y1="48.5"
@@ -51,17 +51,19 @@ const ThankYou = () => {
               </svg>
             </h1>
           </div>
-          <div className="w-1/3"></div>
+          <div className=" hidden lg:flex lg:w-1/3"></div>
         </div>
         <div className="bg-[#13223322] w-screen h-[1px]"></div>
         <div className="container mx-auto flex flex-row">
-          <div className="w-2/3 border-r-[1px] border-[#13223322]"></div>
-          <div className="w-1/3 flex flex-col pt-10 pb-36 pl-8">
-            <p className="text-lg text-darkblue w-[83%]">{ThankYouPage.desc}</p>
+          <div className="hidden lg:flex lg:w-2/3 border-r-[1px] border-[#13223322]"></div>
+          <div className="w-full lg:w-1/3 flex flex-col pt-11 pb-15 lg:pt-10 lg:pb-36 lg:pl-8">
+            <p className="text-sm lg:text-lg text-darkblue w-full lg:w-[83%]">
+              {ThankYouPage.desc}
+            </p>
             <ButtonPrimary
               href={ThankYouPage.buttonCTA.href}
               target={ThankYouPage.buttonCTA.target}
-              className="mt-5"
+              className="mt-6 lg:mt-5"
             >
               {ThankYouPage.buttonCTA.text}
             </ButtonPrimary>
