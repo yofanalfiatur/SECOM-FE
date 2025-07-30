@@ -144,7 +144,7 @@ const ContactForm = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="relative overflow-hidden flex flex-col mb-6"
+            className="relative overflow-hidden flex flex-col mb-3 lg:mb-6"
           >
             <div
               className={`relative flex flex-col rounded-[5px] overflow-hidden ct__wrap__input form__wrap__input ${
@@ -156,12 +156,14 @@ const ContactForm = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className={`peer pt-[32px] pb-3 px-4 text-navyblue text-xl rounded-[3px] bg-white m-[3px] focus:outline-none`}
+                className={`peer pb-2 px-3 pt-[20px] lg:pb-3 lg:px-4 lg:pt-[32px] text-navyblue text-[12px] lg:text-xl rounded-[3px] bg-white m-[3px] focus:outline-none`}
               />
               <label
                 htmlFor="name"
-                className={`text-navyblue text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[10px] peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
-                  formData.name ? "text-[10px] top-[23px]" : ""
+                className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
+                  formData.name
+                    ? "!text-[8px] lg:!text-[10px] top-[15px] lg:top-[23px]"
+                    : ""
                 }`}
               >
                 YOUR NAME<span className="text-red-500">*</span>
@@ -179,7 +181,7 @@ const ContactForm = () => {
           </motion.div>
 
           {/* Email and Phone Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-6 mb-3 lg:mb-6">
             {/* Email Field */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -197,12 +199,14 @@ const ContactForm = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`peer pt-[32px] pb-3 px-4 text-navyblue text-xl rounded-[3px] bg-white m-[3px] focus:outline-none`}
+                  className={`peer pb-2 px-3 pt-[20px] lg:pb-3 lg:px-4 lg:pt-[32px] text-navyblue text-[12px] lg:text-xl rounded-[3px] bg-white m-[3px] focus:outline-none`}
                 />
                 <label
                   htmlFor="email"
-                  className={`text-navyblue text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[10px] peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
-                    formData.email ? "text-[10px] top-[23px]" : ""
+                  className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
+                    formData.email
+                      ? "!text-[8px] lg:!text-[10px] top-[15px] lg:top-[23px]"
+                      : ""
                   }`}
                 >
                   EMAIL<span className="text-red-500">*</span>
@@ -236,12 +240,14 @@ const ContactForm = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className={`peer pt-[32px] pb-3 px-4 text-navyblue text-xl rounded-[3px] bg-white m-[3px] focus:outline-none`}
+                  className={`peer pb-2 px-3 pt-[20px] lg:pb-3 lg:px-4 lg:pt-[32px] text-navyblue text-[12px] lg:text-xl rounded-[3px] bg-white m-[3px] focus:outline-none`}
                 />
                 <label
                   htmlFor="phone"
-                  className={`text-navyblue text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[10px] peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
-                    formData.phone ? "text-[10px] top-[23px]" : ""
+                  className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
+                    formData.phone
+                      ? "!text-[8px] lg:!text-[10px] top-[15px] lg:top-[23px]"
+                      : ""
                   }`}
                 >
                   PHONE NUMBER<span className="text-red-500">*</span>
@@ -264,7 +270,7 @@ const ContactForm = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="relative overflow-hidden flex flex-col mb-6"
+            className="relative overflow-hidden flex flex-col mb-3 lg:mb-6"
           >
             <div
               className={`relative flex flex-col rounded-[5px] overflow-hidden ct__wrap__input form__wrap__input ${
@@ -275,7 +281,7 @@ const ContactForm = () => {
                 name="location"
                 value={formData.location}
                 onChange={handleChange}
-                className={`peer pt-[32px] pb-3 px-4 text-navyblue text-xl rounded-[3px] bg-white m-[3px] focus:outline-none appearance-none cursor-pointer ${
+                className={`peer pb-2 px-3 pt-[20px] lg:pb-3 lg:px-4 lg:pt-[32px] text-navyblue text-[12px] lg:text-xl rounded-[3px] bg-white m-[3px] focus:outline-none appearance-none cursor-pointer ${
                   !formData.location ? "text-gray-400" : ""
                 }`}
               >
@@ -287,8 +293,10 @@ const ContactForm = () => {
               </select>
               <label
                 htmlFor="location"
-                className={`text-navyblue text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[10px] peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
-                  formData.location ? "text-[10px] top-[23px]" : ""
+                className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
+                  formData.location
+                    ? "!text-[8px] lg:!text-[10px] top-[15px] lg:top-[23px]"
+                    : ""
                 }`}
               >
                 LOCATION TYPE<span className="text-red-500">*</span>
@@ -311,7 +319,7 @@ const ContactForm = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="relative overflow-hidden flex flex-col mb-6"
+            className="relative overflow-hidden flex flex-col mb-3 lg:mb-6"
           >
             <div
               className={`relative flex flex-col rounded-[5px] overflow-hidden ct__wrap__input form__wrap__input ${
@@ -323,12 +331,14 @@ const ContactForm = () => {
                 name="company"
                 value={formData.company}
                 onChange={handleChange}
-                className={`peer pt-[32px] pb-3 px-4 text-navyblue text-xl rounded-[3px] bg-white m-[3px] focus:outline-none`}
+                className={`peer pb-2 px-3 pt-[20px] lg:pb-3 lg:px-4 lg:pt-[32px] text-navyblue text-[12px] lg:text-xl rounded-[3px] bg-white m-[3px] focus:outline-none`}
               />
               <label
                 htmlFor="company"
-                className={`text-navyblue text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[10px] peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
-                  formData.company ? "text-[10px] top-[23px]" : ""
+                className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
+                  formData.company
+                    ? "!text-[8px] lg:!text-[10px] top-[15px] lg:top-[23px]"
+                    : ""
                 }`}
               >
                 COMPANY NAME<span className="text-red-500">*</span>
@@ -350,7 +360,7 @@ const ContactForm = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="relative overflow-hidden flex flex-col mb-6"
+            className="relative overflow-hidden flex flex-col mb-3 lg:mb-6"
           >
             <div
               className={`relative flex flex-col rounded-[5px] overflow-hidden ct__wrap__input form__wrap__input ${
@@ -361,7 +371,7 @@ const ContactForm = () => {
                 name="howDidYouKnow"
                 value={formData.howDidYouKnow}
                 onChange={handleChange}
-                className={`peer pt-[32px] pb-3 px-4 text-navyblue text-xl rounded-[3px] bg-white m-[3px] focus:outline-none appearance-none cursor-pointer ${
+                className={`peer pb-2 px-3 pt-[20px] lg:pb-3 lg:px-4 lg:pt-[32px] text-navyblue text-[12px] lg:text-xl rounded-[3px] bg-white m-[3px] focus:outline-none appearance-none cursor-pointer ${
                   !formData.howDidYouKnow ? "text-gray-400" : ""
                 }`}
               >
@@ -373,8 +383,10 @@ const ContactForm = () => {
               </select>
               <label
                 htmlFor="howDidYouKnow"
-                className={`text-navyblue text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[10px] peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
-                  formData.howDidYouKnow ? "text-[10px] top-[23px]" : ""
+                className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
+                  formData.howDidYouKnow
+                    ? "!text-[8px] lg:!text-[10px] top-[15px] lg:top-[23px]"
+                    : ""
                 }`}
               >
                 HOW DID YOU KNOW SECOM?<span className="text-red-500">*</span>
@@ -397,7 +409,7 @@ const ContactForm = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
-            className="relative overflow-hidden flex flex-col mb-6"
+            className="relative overflow-hidden flex flex-col mb-3 lg:mb-6"
           >
             <div
               className={`relative flex flex-col rounded-[5px] overflow-hidden ct__wrap__input form__wrap__input ${
@@ -409,12 +421,14 @@ const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows={6}
-                className={`peer pt-[32px] pb-3 px-4 text-navyblue text-xl rounded-[3px] bg-white m-[3px] focus:outline-none resize-none`}
+                className={`peer pb-2 px-3 pt-[32px] lg:pb-3 lg:px-4 lg:pt-[35px] text-navyblue text-[12px] lg:text-xl rounded-[3px] bg-white m-[3px] focus:outline-none`}
               />
               <label
                 htmlFor="message"
-                className={`text-navyblue text-xl tracking-[2px] absolute top-[25px] pointer-events-none left-[18px] peer-focus:text-[10px] peer-focus:top-[15px] transition-all duration-200 ease-in-out ${
-                  formData.message ? "text-[10px] top-[23px]" : ""
+                className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute pt-[12px] lg:pt-[17px] pointer-events-none w-[98%] left-[3px] top-[3px] pl-[16px] pb-1 rounded-[5px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:pt-[12px] lg:peer-focus:pt-[17px] transition-all duration-200 ease-in-out bg-white ${
+                  formData.message
+                    ? "!text-[8px] lg:!text-[10px] pt-[12px] lg:pt-[17px]"
+                    : ""
                 }`}
               >
                 MESSAGE<span className="text-red-500">*</span>
@@ -462,7 +476,7 @@ const ContactForm = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.8 }}
-            className={`cursor-pointer w-full py-4 mt-4 rounded-[5px] tracking-[5px] font-raleway text-white text-xl transition-all duration-200 ${
+            className={`cursor-pointer w-full py-3 lg:py-4 mt-1 lg:mt-4 rounded-[5px] tracking-[5px] font-raleway text-white text-sm lg:text-xl transition-all duration-200 ${
               isLoading
                 ? "bg-gray-400 cursor-not-allowed"
                 : "bg-tosca hover:bg-teal-600 active:bg-teal-700"

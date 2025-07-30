@@ -92,7 +92,7 @@ const Footer = () => {
                 alt="logo"
                 width={248}
                 height={62}
-                className="max-w-[205px] lg:max-w-full object-contain pr-0 lg:pr-14"
+                className="max-w-[205px] lg:max-w-full object-contain"
               />
               <div className="flex flex-col f-wrap-dropdown relative max-w-max max-h-max">
                 <select

@@ -9,7 +9,7 @@ import Image from "next/image";
 const Contact = () => {
   return (
     <>
-      <section className="flex flex-col items-center justify-center pt-0 pb-8 lg:pt-15 lg:pb-15 relative overflow-hidden">
+      <section className="flex flex-col items-center justify-center pt-0 pb-5 lg:pt-15 lg:pb-15 relative overflow-hidden hide__footer__top">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -26,11 +26,11 @@ const Contact = () => {
         </motion.div>
 
         <div className="container mx-auto flex flex-row justify-end">
-          <div className="w-full lg:w-1/2">
-            <h1 className="font-raleway text-darkblue text-[25px] lg:text-[40px] font-medium mt-6  lg:mt-[2px] mb-2">
+          <div className="w-full lg:w-1/2 flex flex-col">
+            <h1 className="font-raleway text-darkblue text-[25px] lg:text-[40px] font-medium mt-6  lg:mt-[2px] lg:mb-2">
               {ContactPage.title}
             </h1>
-            <p className="text-darkblue font-open-sans text-lg">
+            <p className="text-darkblue font-open-sans text-sm lg:text-lg">
               {ContactPage.desc}
             </p>
             <p className="text-[14px] flex flex-row mb-6">
