@@ -20,18 +20,29 @@ import {
 } from "react-icons/fa";
 import ButtonSecondary from "../Elements/ButtonSecondary";
 import Starfield from "../Elements/Starfield";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const [shouldHideFooterTop, setShouldHideFooterTop] = useState(false);
 
+  const pathname = usePathname();
+
   useEffect(() => {
-    const main = document.querySelector("main");
-    if (main && main.querySelector(".hide__footer__top")) {
-      setShouldHideFooterTop(true);
-    } else {
-      setShouldHideFooterTop(false);
-    }
-  }, []);
+    const checkFooterVisibility = () => {
+      const main = document.querySelector("main");
+      if (main && main.querySelector(".hide__footer__top")) {
+        setShouldHideFooterTop(true);
+      } else {
+        setShouldHideFooterTop(false);
+      }
+    };
+
+    const timeout = setTimeout(() => {
+      checkFooterVisibility();
+    }, 20);
+
+    return () => clearTimeout(timeout);
+  }, [pathname]);
 
   return (
     <footer className="max-w-screen items-center justify-center flex flex-col bg-[#00529c] footer overflow-hidden relative">

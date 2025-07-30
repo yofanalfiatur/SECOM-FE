@@ -1,39 +1,33 @@
+"use client";
 import { ContactPage } from "@/constants-temp/data";
 
+import ContactForm from "@/components/Fragments/Contact/ContactForm";
+
+import { motion } from "framer-motion";
+
 import Image from "next/image";
-// import Form from "next/form";
-
-const InputForm = (props) => {
-  const { children, type, placeholder, className } = props;
-  return (
-    <div className="flex flex-col gap-2">
-      <label className="text-[14px] text-darkblue font-open-sans">
-        {children}
-      </label>
-      <input
-        type={type}
-        placeholder={placeholder}
-        className={`border-2 border-[#00000022] pt-8 pb-2 px-4 ${className}`}
-      />
-    </div>
-  );
-};
-
 const Contact = () => {
   return (
     <>
-      <section className="flex flex-col items-center justify-center py-16 relative overflow-hidden">
-        <Image
-          src={ContactPage.photo}
-          width={630}
-          height={1091}
-          alt="Contact"
-          className="absolute w-full h-full lg:w-[45vw]  left-0 top-0 object-cover object-center"
-        />
+      <section className="flex flex-col items-center justify-center pt-0 pb-8 lg:pt-15 lg:pb-15 relative overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col relative lg:absolute top-0 left-0 w-full h-auto lg:h-full lg:w-[45vw]"
+        >
+          <Image
+            src={ContactPage.photo}
+            width={630}
+            height={1091}
+            alt="Contact"
+            className="w-full lg:h-full aspect-[32/22] lg:aspect-auto object-cover object-center"
+          />
+        </motion.div>
 
         <div className="container mx-auto flex flex-row justify-end">
-          <div className="w-1/2">
-            <h1 className="font-raleway text-darkblue text-[40px] font-medium mt-[2px] mb-2">
+          <div className="w-full lg:w-1/2">
+            <h1 className="font-raleway text-darkblue text-[25px] lg:text-[40px] font-medium mt-6  lg:mt-[2px] mb-2">
               {ContactPage.title}
             </h1>
             <p className="text-darkblue font-open-sans text-lg">
@@ -43,16 +37,8 @@ const Contact = () => {
               <span className="text-red-500">* </span>Required
             </p>
 
-            <div className="h-[800px] w-full contact__form bg-amber-200 mb-6">
-              <form action="">
-                <InputForm
-                  type="text"
-                  placeholder="Name"
-                  className="text-[14px] text-darkblue font-open-sans"
-                >
-                  Name
-                </InputForm>
-              </form>
+            <div className="flex flex-col w-full mb-6 ct__wrap-form">
+              <ContactForm />
             </div>
           </div>
         </div>

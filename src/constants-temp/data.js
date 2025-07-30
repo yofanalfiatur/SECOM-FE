@@ -3,12 +3,12 @@ export const MenuType = [
   {
     icon: "/img/menu-type-1.svg",
     text: "Business",
-    href: "/#business",
+    href: "/business",
   },
   {
     icon: "/img/menu-type-2.svg",
     text: "Residental",
-    href: "/#residental",
+    href: "/residental",
   },
 ];
 
@@ -43,7 +43,7 @@ export const MenuHeader = [
 
 export const HeaderButton = {
   HeaderBtnText: "Free Consultation",
-  HeaderBtnHref: "/#free-consultation",
+  HeaderBtnHref: "/contact",
   HeaderBtnTarget: "_self",
 };
 
@@ -312,6 +312,49 @@ export const ContactPage = {
   title: "Get Your Free Consultation",
   desc: "Talk to our expert today and find the right solution for your home.",
   photo: "/img/temp/contact-image.jpg",
+};
+
+export const FormValue = {
+  locationType: [
+    {
+      value: "",
+      label: "",
+    },
+    {
+      value: "Residential",
+      label: "Residential",
+    },
+    {
+      value: "Commercial",
+      label: "Commercial",
+    },
+    {
+      value: "Industrial",
+      label: "Industrial",
+    },
+  ],
+  howDidYouKnow: [
+    {
+      value: "",
+      label: "",
+    },
+    {
+      value: "Google",
+      label: "Google",
+    },
+    {
+      value: "Facebook",
+      label: "Facebook",
+    },
+    {
+      value: "Instagram",
+      label: "Instagram",
+    },
+    {
+      value: "Others",
+      label: "Others",
+    },
+  ],
 };
 
 //////////////////////  THANK YOU  ///////////////////////
