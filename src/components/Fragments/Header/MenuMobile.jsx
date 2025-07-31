@@ -5,8 +5,10 @@ import { HTop, MenuHeader } from "@/constants-temp/data";
 import Image from "next/image";
 import Link from "next/link";
 
-const MenuMobile = () => {
+const MenuMobile = (props) => {
   const { isLanguageActive } = useActiveLanguage();
+
+  const { handleHamburgerClick } = props;
 
   return (
     <>
@@ -16,6 +18,7 @@ const MenuMobile = () => {
           <Link
             href={item.href}
             key={index}
+            onClick={handleHamburgerClick}
             className={`w-1/2 border-r-[1px] border-[#13223333] relative py-5 header__menu__link flex flex-row items-center justify-center gap-2 ${
               isLanguageActive(item.text) ? "active-md" : ""
             }`}
@@ -37,6 +40,7 @@ const MenuMobile = () => {
           >
             <Link
               href={href}
+              onClick={handleHamburgerClick}
               className="relative py-5 header__menu__link flex flex-row items-center gap-2"
             >
               <span className="text-navyblue uppercase tracking-[2px] font-raleway font-medium leading-none">
@@ -63,6 +67,7 @@ const MenuMobile = () => {
                 {subMenu.map(({ subMenuText, subMenuHref }, subIdx) => (
                   <li key={subIdx}>
                     <Link
+                      onClick={handleHamburgerClick}
                       href={subMenuHref}
                       className="block px-4 py-2 text-navyblue hover:bg-tosca hover:text-white font-raleway"
                     >

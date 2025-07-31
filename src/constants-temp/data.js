@@ -33,6 +33,14 @@ export const MenuHeader = [
         subMenuText: "Our Partners",
         subMenuHref: "/about/our-partners",
       },
+      {
+        subMenuText: "Thank You",
+        subMenuHref: "/thankyou",
+      },
+      {
+        subMenuText: "Error Page 404",
+        subMenuHref: "/error",
+      },
     ],
   },
   {

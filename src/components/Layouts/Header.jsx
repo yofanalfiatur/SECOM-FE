@@ -6,8 +6,10 @@ import Link from "next/link";
 import HeaderTop from "../Fragments/Header/HeaderTop";
 import MenuDesktop from "../Fragments/Header/MenuDesktop";
 import MenuMobile from "../Fragments/Header/MenuMobile";
+import useIsDesktop from "../Hooks/useIsDesktop";
 
 const Header = () => {
+  const isDesktop = useIsDesktop();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleHamburgerClick = () => {
@@ -32,39 +34,49 @@ const Header = () => {
               />
             </Link>
           </div>
-
-          <div className="w-[90%] hidden lg:flex flex-col justify-end header__wrap-right">
-            <HeaderTop />
-            <MenuDesktop />
-          </div>
-
-          {/* Mobile Hamburger Button */}
-          <div className="lg:hidden w-max h-auto pr-[2rem] header__btn-md">
-            <div
-              className={`hamburger hover:cursor-pointer ${
-                isMenuOpen ? "active" : ""
-              }`}
-              id="hamburger"
-              onClick={handleHamburgerClick}
-            >
-              <span className="line w-[20px] h-[2px] bg-black block my-[5px] mx-auto transition-all duration-300 ease-in-out"></span>
-              <span className="line w-[20px] h-[2px] bg-black block my-[5px] mx-auto transition-all duration-300 ease-in-out"></span>
-              <span className="line w-[20px] h-[2px] bg-black block my-[5px] mx-auto transition-all duration-300 ease-in-out"></span>
-            </div>
-          </div>
+          {isDesktop ? (
+            <>
+              <div className="w-[90%] hidden lg:flex flex-col justify-end header__wrap-right">
+                <HeaderTop />
+                <MenuDesktop />
+              </div>
+            </>
+          ) : (
+            <>
+              {/* Mobile Hamburger Button */}
+              <div className="lg:hidden w-max h-auto pr-[2rem] header__btn-md">
+                <div
+                  className={`hamburger hover:cursor-pointer ${
+                    isMenuOpen ? "active" : ""
+                  }`}
+                  id="hamburger"
+                  onClick={handleHamburgerClick}
+                >
+                  <span className="line w-[20px] h-[2px] bg-black block my-[5px] mx-auto transition-all duration-300 ease-in-out"></span>
+                  <span className="line w-[20px] h-[2px] bg-black block my-[5px] mx-auto transition-all duration-300 ease-in-out"></span>
+                  <span className="line w-[20px] h-[2px] bg-black block my-[5px] mx-auto transition-all duration-300 ease-in-out"></span>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </header>
 
-      {/* Offcanvas Mobile Menu */}
-      <div
-        className={`${
-          isMenuOpen
-            ? "top-0 visible opacity-100"
-            : "top-[-100%] invisible opacity-0"
-        } lg:hidden flex-col pt-[60px] fixed left-0 w-full h-screen z-[99] bg-white offcanvas transition-all duration-300 ease-in-out`}
-      >
-        <MenuMobile />
-      </div>
+      {!isDesktop && (
+        <>
+          {/* Offcanvas Mobile Menu */}
+
+          <div
+            className={`${
+              isMenuOpen
+                ? "top-0 visible opacity-100"
+                : "top-[-100%] invisible opacity-0"
+            } lg:hidden flex-col pt-[60px] fixed left-0 w-full h-screen z-[99] bg-white offcanvas transition-all duration-300 ease-in-out`}
+          >
+            <MenuMobile handleHamburgerClick={handleHamburgerClick} />
+          </div>
+        </>
+      )}
     </>
   );
 };
