@@ -84,14 +84,14 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="w-full rounded-lg shadow-lg p-8 form__wrap">
+    <div className="w-full lg:p-8 form__wrap">
       <div className="h-full flex flex-col">
         {/* Email Field */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
-          className="relative overflow-hidden  flex flex-col mb-6 "
+          className="relative overflow-hidden  flex flex-col mb-2 lg:mb-6 "
         >
           <div
             className={`relative flex flex-col rounded-[5px] overflow-hidden form__wrap__input ${
@@ -103,12 +103,14 @@ const LoginForm = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`peer pt-[32px] pb-3 px-4 text-navyblue text-xl rounded-[3px] bg-white m-[3px] focus:outline-none`}
+              className={`peer pb-2 px-3 pt-[20px] lg:pb-3 lg:px-4 lg:pt-[32px] text-navyblue text-[12px] lg:text-xl rounded-[3px] bg-white m-[3px] focus:outline-none`}
             />
             <label
               htmlFor="email"
-              className={`text-navyblue text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[10px] peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
-                formData.email ? "text-[10px] top-[23px]" : ""
+              className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
+                formData.email
+                  ? "!text-[8px] lg:!text-[10px] top-[15px] lg:top-[23px]"
+                  : ""
               }`}
             >
               EMAIL
@@ -142,12 +144,14 @@ const LoginForm = () => {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className={`peer pt-[32px] pb-3 px-4 text-navyblue text-xl rounded-[3px] bg-white m-[3px] focus:outline-none `}
+              className={`peer pb-2 px-3 pt-[20px] lg:pb-3 lg:px-4 lg:pt-[32px] text-navyblue text-[12px] lg:text-xl rounded-[3px] bg-white m-[3px] focus:outline-none `}
             />
             <label
               htmlFor="password"
-              className={`text-navyblue text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[10px] peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
-                formData.password ? "text-[10px] top-[23px]" : ""
+              className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[23px] transition-all duration-200 ease-in-out ${
+                formData.password
+                  ? "!text-[8px] lg:!text-[10px] top-[15px] lg:top-[23px]"
+                  : ""
               }`}
             >
               PASSWORD
@@ -183,7 +187,7 @@ const LoginForm = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
-            className="text-white text-lg hover:text-blue-200 transition-colors duration-200 font-raleway"
+            className="text-white text-sm lg:text-lg hover:text-blue-200 transition-colors duration-200 font-raleway"
             onClick={() => console.log("Forgot password clicked")}
           >
             Forgot password?
@@ -211,7 +215,7 @@ const LoginForm = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.3 }}
-          className={`w-full py-4 mt-9 rounded-[5px] tracking-[5px] font-raleway text-white text-xl transition-all duration-200 ${
+          className={`w-full py-3 lg:py-4 mt-5 lg:mt-9 rounded-[5px] tracking-[5px] font-raleway text-white text-sm lg:text-xl transition-all duration-200 ${
             isLoading
               ? "bg-gray-400 cursor-not-allowed"
               : "bg-tosca hover:bg-teal-600 active:bg-teal-700"

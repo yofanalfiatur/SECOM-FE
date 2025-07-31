@@ -16,13 +16,13 @@ const LoginPage = () => {
         className="relative overflow-hidden flex flex-col items-center justify-center hide__footer__top"
       >
         <RadialGrid />
-        <div className="container pt-[166px] pb-[180px] mx-auto flex flex-col items-center justify-center relative z-10 ">
-          <div className="w-full lg:w-1/2 overflow-hidden">
+        <div className="container mx-auto flex flex-col items-center justify-center relative z-10 ">
+          <div className="w-full pt-16 pb-16 lg:pt-[166px] lg:pb-[180px] lg:w-1/2 overflow-hidden">
             <motion.h1
               animate={{ y: "0%", opacity: 1 }}
               initial={{ y: "100%", opacity: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="text-[40px] text-white text-center font-medium font-raleway"
+              className="text-[25px] lg:text-[40px] mb-6 lg:mb-0 text-white text-center font-medium font-raleway"
             >
               {LoginDummy.title}
             </motion.h1>

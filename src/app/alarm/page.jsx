@@ -9,13 +9,13 @@ import AmPackage from "@/components/Fragments/Alarm/AmPackage";
 import AmProducts from "@/components/Fragments/Alarm/AmProducts";
 import AmProtect from "@/components/Fragments/Alarm/AmProtect";
 import AmTrusted from "@/components/Fragments/Alarm/AmTrusted";
-import AmValue from "@/components/Fragments/Alarm/AmValue";
+import AmOverview from "@/components/Fragments/Alarm/AmOverview";
 
 const AlarmLanding = () => {
   return (
     <>
       <AmBanner />
-      <AmValue />
+      <AmOverview />
       <AmChoose />
       <AmProtect />
       <AmProducts />

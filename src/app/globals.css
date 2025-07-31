@@ -459,6 +459,31 @@ main {
   }
 }
 
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #00529c; /* Warna progress bar */
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #00529c, 0 0 5px #00529c;
+  opacity: 1;
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
 .h-banner::after {
   content: "";
   background: linear-gradient(
@@ -659,4 +684,30 @@ main {
 
 .form__wrap__input:focus {
   outline: none;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200% -200%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+.am-value .am-value__desc b {
+  color: transparent;
+  background: linear-gradient(
+    to right,
+    #01f3ff,
+    #01a2ff,
+    #004697,
+    #01a2ff,
+    #01f3ff,
+    #01f3ff
+  );
+  background-clip: text;
+  animation: shine 5s linear infinite;
+  background-size: 200% 200%;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
 }

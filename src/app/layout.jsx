@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "@/components/Layouts/Header";
 import Footer from "@/components/Layouts/Footer";
 import ButtonWa from "@/components/Elements/ButtonWa";
+import ProgressBar from "@/components/Layouts/ProgressBar";
 
 export const metadata = {
   title: "SECOM",
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </head>
       <body>
+        <ProgressBar />
         <Header />
         <main>{children}</main>
         <Footer />

@@ -390,13 +390,12 @@ export const LoginDummy = {
 
 //////////////////////  ALARM LANDING  ///////////////////////
 export const AlarmBanner = {
-  title: "Your Home Secured with Intelligence.",
-  background: "/img/temp/alarm-banner-bg.jpg",
+  title: ["Your Home Secured with ", "Intelligence."],
+  background: "/img/temp/alarm-banner-bg-desktop.jpg",
 };
 
 export const AlarmOverview = {
-  title:
-    "At SECOM, we understand that your home isn'tjust a place. It's where your family, memories,and future are kept safe. That's why we offertailored residential security solutions thatcombine cutting-edge technology with fast,reliable response services.",
+  desc: "At SECOM, we understand that <b>your home isn't just a place</b>. It's where your family, memories,and future are kept safe. That's why we offertailored residential security solutions thatcombine cutting-edge technology with fast,reliable response services.",
   items: [
     {
       icon: "/img/temp/h-ab-icon-1.svg",
