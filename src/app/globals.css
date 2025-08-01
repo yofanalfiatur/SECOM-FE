@@ -283,6 +283,27 @@
   --font-open-sans: "Open Sans", sans-serif;
 }
 
+@layer utilities {
+  .animated-gradient-bg {
+    background: linear-gradient(
+      60deg,
+      #009fa7 20%,
+      #004697 40%,
+      #009fa7 60%,
+      #004697 80%,
+      #009fa7 100%
+    );
+    background-size: 200% 200%;
+    animation: animatedgradient 3s ease alternate infinite;
+  }
+}
+
+@layer components {
+  .glide__bullet--active {
+    @apply !bg-tosca;
+  }
+}
+
 *,
 *::before,
 *::after {

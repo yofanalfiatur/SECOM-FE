@@ -475,6 +475,105 @@ export const AlarmProduct = {
     {
       title: "Control Panel",
       desc: "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM.",
+      image: "/img/temp/product-1.png",
+      link: "#1",
+    },
+    {
+      title: "#2Control Panel",
+      desc: "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM.",
+      image: "/img/temp/product-2.png",
+      link: "#2",
+    },
+    {
+      title: "#3Control Panel",
+      desc: "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM.",
+      image: "/img/temp/product-1.png",
+      link: "#3",
+    },
+    {
+      title: "#4Control Panel",
+      desc: "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM.",
+      image: "/img/temp/product-2.png",
+      link: "#4",
+    },
+    {
+      title: "#5Control Panel",
+      desc: "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM.",
+      image: "/img/temp/product-1.png",
+      link: "#5",
+    },
+    {
+      title: "#6Control Panel",
+      desc: "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM.",
+      image: "/img/temp/product-2.png",
+      link: "#6",
+    },
+    {
+      title: "#7Control Panel",
+      desc: "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM.",
+      image: "/img/temp/product-1.png",
+      link: "#7",
+    },
+    {
+      title: "#8Control Panel",
+      desc: "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM.",
+      image: "/img/temp/product-2.png",
+      link: "#8",
+    },
+  ],
+};
+
+export const AlarmCorners = {
+  title: "Protect Every Corner of Your Home",
+  desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+  btnConsult: {
+    text: "CONSULT WITH US NOW",
+    href: "/#",
+    target: "_self",
+  },
+  image: "/img/temp/protect-bg.png",
+  items: [
+    {
+      positionX: "10%",
+      positionY: "5%",
+      image: "/img/temp/product-1.png",
+      title: "Control Panel",
+      desc: "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM.",
+    },
+    {
+      positionX: "15%",
+      positionY: "15%",
+      image: "/img/temp/product-2.png",
+      title: "#2Control Panel",
+      desc: "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM.",
+    },
+    {
+      positionX: "20%",
+      positionY: "15%",
+      image: "/img/temp/product-1.png",
+      title: "#3Control Panel",
+      desc: "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM.",
+    },
+    {
+      positionX: "30%",
+      positionY: "30%",
+      image: "/img/temp/product-2.png",
+      title: "#4Control Panel",
+      desc: "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM.",
+    },
+    {
+      positionX: "50%",
+      positionY: "50%",
+      image: "/img/temp/product-1.png",
+      title: "#5Control Panel",
+      desc: "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM.",
+    },
+    {
+      positionX: "70%",
+      positionY: "70%",
+      image: "/img/temp/product-2.png",
+      title: "#6Control Panel",
+      desc: "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM.",
     },
   ],
 };
