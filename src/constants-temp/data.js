@@ -577,3 +577,205 @@ export const AlarmCorners = {
     },
   ],
 };
+
+export const AlarmApps = {
+  title: "Feel safe anytime, anywhere.",
+  desc: "In a rush? Feel worried when going on vacation? SECOM alarm system makes it easy for you to monitor and control your location via your smartphone and tablet.",
+  image: "/img/temp/phone-img.png",
+  items: [
+    {
+      title: "Tu quoque, Brute, fili mi, nihil timor populi, nihil!",
+      icon: "/img/temp/am-apps-icon.svg",
+    },
+    {
+      title: "#2Tu quoque, Brute, fili mi, nihil timor populi, nihil!",
+      icon: "/img/temp/am-apps-icon.svg",
+    },
+    {
+      title: "#3Tu quoque, Brute, fili mi, nihil timor populi, nihil!",
+      icon: "/img/temp/am-apps-icon.svg",
+    },
+    {
+      title: "#4Tu quoque, Brute, fili mi, nihil timor populi, nihil!",
+      icon: "/img/temp/am-apps-icon.svg",
+    },
+    {
+      title: "#5Tu quoque, Brute, fili mi, nihil timor populi, nihil!",
+      icon: "/img/temp/am-apps-icon.svg",
+    },
+    {
+      title: "#6Tu quoque, Brute, fili mi, nihil timor populi, nihil!",
+      icon: "/img/temp/am-apps-icon.svg",
+    },
+    {
+      title: "#7Tu quoque, Brute, fili mi, nihil timor populi, nihil!",
+      icon: "/img/temp/am-apps-icon.svg",
+    },
+  ],
+  download: [
+    {
+      link: "#",
+      image: "/img/temp/googleplay.svg",
+    },
+    {
+      link: "#",
+      image: "/img/temp/appstore.svg",
+    },
+  ],
+};
+
+export const AlarmTrusted = {
+  title: "Trusted by Thousand, Chosen for a Reason.",
+  desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+  table: [
+    {
+      feature: "24/7 Monitoring",
+      secom: true,
+      other: "available", // "available" || "limited" || "unavailable"
+    },
+    {
+      feature: "Response Team",
+      secom: true,
+      other: "unavailable",
+    },
+    {
+      feature: "Mobile App Access",
+      secom: true,
+      other: "unavailable",
+    },
+    {
+      feature: "Local Support in Indonesia",
+      secom: true,
+      other: "limited",
+    },
+    {
+      feature: "Installation by Experts",
+      secom: true,
+      other: "limited",
+    },
+    {
+      feature: "Customizable for Every Family",
+      secom: true,
+      other: "unavailable",
+    },
+  ],
+};
+
+export const AlarmPackage = {
+  title: "Customize Your Package",
+  desc: "Choose your service package and additional equipment that best suit your needs and your usage, elevating complete protection and total peace of mind even when you are not home.",
+  items: [
+    {
+      title: "Home",
+      price: "1.500.000",
+      serviceFee: "5.000.000",
+      desc: "Qui ipsorum lingua Celtae, nostra Galli appellantur. Quae vero auctorem tractata ab fiducia dicuntur. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
+      device: "15",
+      image: "/img/temp/package-1.png",
+      isRent: true,
+    },
+    {
+      title: "Home Pro",
+      price: "5.000.000",
+      serviceFee: "5.000.000",
+      desc: "Qui ipsorum lingua Celtae, nostra Galli appellantur. Quae vero auctorem tractata ab fiducia dicuntur. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
+      device: "9",
+      image: "/img/temp/package-1.png",
+      isRent: true,
+    },
+    {
+      title: "Home",
+      price: "1.500.000",
+      serviceFee: "5.000.000",
+      desc: "Qui ipsorum lingua Celtae, nostra Galli appellantur. Quae vero auctorem tractata ab fiducia dicuntur. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
+      device: "15",
+      image: "/img/temp/package-1.png",
+      isRent: true,
+    },
+    {
+      title: "Home Pro",
+      price: "5.000.000",
+      serviceFee: "5.000.000",
+      desc: "Qui ipsorum lingua Celtae, nostra Galli appellantur. Quae vero auctorem tractata ab fiducia dicuntur. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
+      device: "9",
+      image: "/img/temp/package-1.png",
+      isRent: true,
+    },
+    {
+      title: "Home",
+      price: "1.500.000",
+      serviceFee: "5.000.000",
+      desc: "Qui ipsorum lingua Celtae, nostra Galli appellantur. Quae vero auctorem tractata ab fiducia dicuntur. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
+      device: "15",
+      image: "/img/temp/package-1.png",
+      isRent: false,
+    },
+    {
+      title: "Home Pro",
+      price: "5.000.000",
+      serviceFee: "5.000.000",
+      desc: "Qui ipsorum lingua Celtae, nostra Galli appellantur. Quae vero auctorem tractata ab fiducia dicuntur. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
+      device: "9",
+      image: "/img/temp/package-1.png",
+      isRent: false,
+    },
+  ],
+};
+
+export const AlarmDifferences = {
+  title: "See The Differences",
+  hint: "Hide Information",
+  note: "*Phasellus laoreet lorem vel dolor tempus vehicula. Gallia est omnis divisa in partes tres, quarum. Praeterea iter est quasdam res quas ex communi. Contra legem facit qui id facit quod lex prohibet. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
+  items: [
+    {
+      device: "Control Panel",
+      home: "1",
+      pro: "1",
+    },
+  ],
+  price: { home: "5.000.000", pro: "8.000.000" },
+  serviceFee: [
+    {
+      name: "Non equidem invideo, miror magis",
+      price: "5.000.000",
+      isPerMonth: true,
+    },
+    {
+      name: "Non equidem invideo, miror magis",
+      price: "5.000.000",
+      isPerMonth: true,
+    },
+    {
+      name: "Non equidem invideo, miror magis",
+      price: "5.000.000",
+      isPerMonth: true,
+    },
+  ],
+};
+
+export const AlarmFAQ = {
+  title: "Frequently Asked Questions",
+  desc: "Nihil hic munitissimus habendi senatus locus, nihil horum? Pellentesque habitant morbi tristique senectus et netus. Ambitioni dedisse scripsisse iudicaretur.",
+  items: [
+    {
+      question: "Contra legem facit qui id facit quod lex prohibet.",
+      answer:
+        "Curabitur est gravida et libero vitae dictum. Quisque ut dolor gravida, placerat libero vel, euismod. Cum sociis natoque penatibus et magnis dis parturient. Integer legentibus erat a ante historiarum dapibus.<br><br>Etiam habebis sem dicantur magna mollis euismod. At nos hinc posthac, sitientis piros Afros. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras. Quisque placerat facilisis egestas cillum dolore. Non equidem invideo, miror magis posuere velit aliquet.",
+    },
+    {
+      question: "#2Contra legem facit qui id facit quod lex prohibet.",
+      answer:
+        "Curabitur est gravida et libero vitae dictum. Quisque ut dolor gravida, placerat libero vel, euismod. Cum sociis natoque penatibus et magnis dis parturient. Integer legentibus erat a ante historiarum dapibus.<br><br>Etiam habebis sem dicantur magna mollis euismod. At nos hinc posthac, sitientis piros Afros. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras. Quisque placerat facilisis egestas cillum dolore. Non equidem invideo, miror magis posuere velit aliquet.",
+    },
+    {
+      question: "#3Contra legem facit qui id facit quod lex prohibet.",
+      answer:
+        "Curabitur est gravida et libero vitae dictum. Quisque ut dolor gravida, placerat libero vel, euismod. Cum sociis natoque penatibus et magnis dis parturient. Integer legentibus erat a ante historiarum dapibus.<br><br>Etiam habebis sem dicantur magna mollis euismod. At nos hinc posthac, sitientis piros Afros. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras. Quisque placerat facilisis egestas cillum dolore. Non equidem invideo, miror magis posuere velit aliquet.",
+    },
+    {
+      question: "#4Contra legem facit qui id facit quod lex prohibet.",
+      answer:
+        "Curabitur est gravida et libero vitae dictum. Quisque ut dolor gravida, placerat libero vel, euismod. Cum sociis natoque penatibus et magnis dis parturient. Integer legentibus erat a ante historiarum dapibus.<br><br>Etiam habebis sem dicantur magna mollis euismod. At nos hinc posthac, sitientis piros Afros. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras. Quisque placerat facilisis egestas cillum dolore. Non equidem invideo, miror magis posuere velit aliquet.",
+    },
+  ],
+};
