@@ -627,6 +627,7 @@ export const AlarmApps = {
 export const AlarmTrusted = {
   title: "Trusted by Thousand, Chosen for a Reason.",
   desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+  logoSecom: "/img/secom-logo.png",
   table: [
     {
       feature: "24/7 Monitoring",
@@ -664,9 +665,19 @@ export const AlarmTrusted = {
 export const AlarmPackage = {
   title: "Customize Your Package",
   desc: "Choose your service package and additional equipment that best suit your needs and your usage, elevating complete protection and total peace of mind even when you are not home.",
+  tabs: [
+    {
+      title: "RENTAL",
+      desc: "Qui ipsorum lingua Celtae,",
+    },
+    {
+      title: "Buy",
+      desc: "Qui ipsorum lingua Celtae,",
+    },
+  ],
   items: [
     {
-      title: "Home",
+      title: "HomeRent",
       price: "1.500.000",
       serviceFee: "5.000.000",
       desc: "Qui ipsorum lingua Celtae, nostra Galli appellantur. Quae vero auctorem tractata ab fiducia dicuntur. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
@@ -702,7 +713,7 @@ export const AlarmPackage = {
       isRent: true,
     },
     {
-      title: "Home",
+      title: "Home Buy",
       price: "1.500.000",
       serviceFee: "5.000.000",
       desc: "Qui ipsorum lingua Celtae, nostra Galli appellantur. Quae vero auctorem tractata ab fiducia dicuntur. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
@@ -711,7 +722,7 @@ export const AlarmPackage = {
       isRent: false,
     },
     {
-      title: "Home Pro",
+      title: "Home Pro Buy",
       price: "5.000.000",
       serviceFee: "5.000.000",
       desc: "Qui ipsorum lingua Celtae, nostra Galli appellantur. Quae vero auctorem tractata ab fiducia dicuntur. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",

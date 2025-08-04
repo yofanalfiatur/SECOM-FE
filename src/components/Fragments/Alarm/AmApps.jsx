@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const AmApps = () => {
   return (
-    <section className="py-6">
+    <section className="pb-10 lg:pb-14">
       <div className="container mx-auto relative flex flex-row justify-end">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

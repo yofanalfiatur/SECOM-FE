@@ -732,3 +732,25 @@ main {
   font-weight: 500;
   font-family: "Raleway", sans-serif;
 }
+
+.am-trusted .custom-scrollbar::-webkit-scrollbar {
+  width: 9px; /* Width 3px */
+}
+
+.am-trusted .custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Track transparan */
+  border-radius: 20px; /* Rounded 20px */
+}
+
+.am-trusted .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 10px;
+  border-right: 3px solid transparent; /* Tambahkan space di kanan */
+  border-left: 3px solid transparent; /* Tambahkan space di kanan */
+
+  background-clip: content-box; /* Agar border tidak mengubah warna background */
+}
+
+.am-trusted .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #b8b8b8; /* Hover effect sedikit lebih gelap */
+}

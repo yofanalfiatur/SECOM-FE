@@ -1,87 +1,100 @@
 "use client";
 
 import { AlarmTrusted } from "@/constants-temp/data";
+import Image from "next/image";
 import React from "react";
+import useIsDesktop from "@/components/Hooks/useIsDesktop";
 
 const AmTrusted = () => {
+  const isDesktop = useIsDesktop(1023); // 1023px sesuai dengan lg breakpoint Tailwind
+
   return (
-    <section className="py-16 relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-tosca before:z-[-1]">
+    <section className="pt-6 pb-10 lg:pb-0 lg:pt-14 relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:lg:h-[85%] before:bg-tosca before:z-[-1] am-trusted">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-white text-4xl md:text-5xl font-bold mb-6">
+        <div className="flex flex-col items-center justify-center">
+          <h2 className="text-white text-[25px] lg:text-[40px] text-center">
             {AlarmTrusted.title}
           </h2>
-          <p className="text-white text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
+          <p className="text-white text-sm lg:text-lg lg:max-w-[53%] text-center mt-2 mb-6 lg:mb-9">
             {AlarmTrusted.desc}
           </p>
         </div>
 
-        {/* Comparison Table */}
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-white overflow-hidden">
-            <table className="w-full">
-              {/* Table Header */}
-              <thead className="bg-blue-800 text-white">
-                <tr>
-                  <th className="text-left py-6 px-8 text-xl font-semibold">
-                    FEATURE
-                  </th>
-                  <th className="text-center py-6 px-8">
-                    <div className="text-3xl font-bold tracking-wider">
-                      SECOM
-                    </div>
-                  </th>
-                  <th className="text-center py-6 px-8 text-xl font-semibold">
-                    OTHER COMPANY
-                  </th>
-                </tr>
-              </thead>
+        {/* Comparison Table using DIV */}
+        <div className="shadow-[0px_4px_20px_0px_#0000001A] lg:rounded-[5px] overflow-hidden">
+          <div className="bg-white">
+            {/* Table Header */}
+            <div className="bg-navyblue text-white grid grid-cols-12">
+              <div className="flex flex-col justify-center text-left py-3 lg:py-[22px] px-4 lg:px-8 text-xs lg:text-xl font-semibold font-raleway col-span-6">
+                FEATURE
+              </div>
+              <div className="text-center py-3 lg:py-[22px] px-0 lg:px-8 flex flex-col items-center justify-center col-span-3">
+                <Image
+                  src={AlarmTrusted.logoSecom}
+                  alt="secom"
+                  width={112}
+                  height={28}
+                  className="w-[66px] my-auto h-[28px] lg:w-max lg:h-auto object-contain"
+                />
+              </div>
+              <div className="text-center py-3 lg:py-[22px] px-8 text-xs lg:text-xl font-semibold font-raleway col-span-3">
+                OTHER BRAND
+              </div>
+            </div>
 
-              {/* Table Body */}
-              <tbody>
-                {AlarmTrusted.table.map((row, index) => (
-                  <tr
-                    key={index}
-                    className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}
-                  >
-                    {/* Feature Column */}
-                    <td className="py-6 px-8 text-gray-800 font-medium text-lg">
-                      {row.feature}
-                    </td>
+            {/* Table Body - Conditional scroll berdasarkan isDesktop */}
+            <div
+              className={`${
+                isDesktop
+                  ? "max-h-full overflow-auto"
+                  : "max-h-[320px] overflow-y-scroll custom-scrollbar"
+              }`}
+            >
+              {AlarmTrusted.table.map((row, index) => (
+                <div
+                  key={index}
+                  className="bg-white border-b-[1px] border-[#0000001A] last:border-0 grid grid-cols-12"
+                >
+                  {/* Feature Column */}
+                  <div className="py-3 lg:py-[18px] px-4 lg:px-8 text-gray-800 font-medium text-[15px] leading-[1.8] lg:leading-[1.3] lg:text-xl font-raleway col-span-6">
+                    {row.feature}
+                  </div>
 
-                    {/* SECOM Column */}
-                    <td className="py-6 px-8 text-center">
-                      {row.secom ? (
-                        <div className="flex items-center justify-center mx-auto">
-                          <CheckIcon />
-                        </div>
-                      ) : (
-                        <div className="flex items-center justify-center mx-auto">
-                          <CrossIcon />
-                        </div>
-                      )}
-                    </td>
+                  {/* SECOM Column */}
+                  <div className="lg:py-[18px] text-center bg-[#E0FEFF] flex items-center justify-center col-span-3">
+                    {row.secom ? (
+                      <div className="flex items-center justify-center mx-8 lg:mx-auto">
+                        <CheckIcon />
+                      </div>
+                    ) : (
+                      <div className="flex items-center justify-center mx-8 lg:mx-auto">
+                        <CrossIcon />
+                      </div>
+                    )}
+                  </div>
 
-                    {/* OTHER Column */}
-                    <td className="py-6 px-8 text-center">
-                      {row.other === "available" ? (
-                        <div className="flex items-center justify-center mx-auto">
-                          <CheckIcon />
-                        </div>
-                      ) : row.other === "limited" ? (
-                        <div className="flex items-center justify-center mx-auto">
-                          <LimitIcon />
-                        </div>
-                      ) : (
-                        <div className="flex items-center justify-center mx-auto">
-                          <CrossIcon />
-                        </div>
-                      )}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+                  {/* OTHER Column */}
+                  <div className="lg:py-[18px] text-center flex items-center justify-center col-span-3">
+                    {row.other === "available" ? (
+                      <div className="flex items-center justify-center mx-auto">
+                        <CheckIcon />
+                      </div>
+                    ) : row.other === "limited" ? (
+                      <div className="flex flex-col lg:flex-row gap-2 lg:gap-3 items-center justify-center mx-auto">
+                        <LimitIcon />{" "}
+                        <span className="font-raleway font-medium lg:text-xl text-darkblue">
+                          Limited
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="flex items-center justify-center mx-auto">
+                        <CrossIcon />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -89,7 +102,7 @@ const AmTrusted = () => {
   );
 };
 
-// ✅ Check icon component
+// Check icon component
 const CheckIcon = () => (
   <svg
     width="34"
@@ -97,6 +110,7 @@ const CheckIcon = () => (
     viewBox="0 0 34 34"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className="w-[27px] h-[27px] lg:w-[34px] lg:h-[34px]"
   >
     <path
       d="M17 0C7.6263 0 0 7.6263 0 17C0 26.3737 7.6263 34 17 34C26.3737 34 34 26.3737 34 17C34 7.6263 26.3737 0 17 0ZM25.8474 11.3025L14.8627 24.3795C14.7422 24.523 14.5923 24.6389 14.4231 24.7195C14.2539 24.8 14.0693 24.8432 13.882 24.8462H13.8599C13.6766 24.8461 13.4954 24.8075 13.328 24.7329C13.1606 24.6582 13.0107 24.5493 12.8881 24.413L8.18043 19.1822C8.06087 19.0554 7.96787 18.906 7.90689 18.7427C7.8459 18.5794 7.81817 18.4056 7.82532 18.2315C7.83246 18.0574 7.87435 17.8864 7.94851 17.7287C8.02267 17.571 8.12761 17.4297 8.25715 17.3131C8.3867 17.1965 8.53825 17.107 8.70289 17.0498C8.86752 16.9926 9.04193 16.9689 9.21585 16.9801C9.38977 16.9913 9.55971 17.0372 9.71566 17.115C9.87162 17.1928 10.0104 17.301 10.124 17.4332L13.8256 21.5459L23.845 9.62053C24.0697 9.36069 24.3877 9.19973 24.7301 9.17244C25.0726 9.14515 25.412 9.25372 25.6751 9.47469C25.9382 9.69566 26.1037 10.0113 26.1359 10.3533C26.1682 10.6953 26.0645 11.0363 25.8474 11.3025Z"
@@ -106,7 +120,6 @@ const CheckIcon = () => (
 );
 
 // Limit icon component
-
 const LimitIcon = () => (
   <svg
     width="34"
@@ -114,6 +127,7 @@ const LimitIcon = () => (
     viewBox="0 0 34 34"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className="w-[27px] h-[27px] lg:w-[34px] lg:h-[34px]"
   >
     <path
       d="M17 0C26.3891 0 34 7.6109 34 17C34 26.3891 26.3891 34 17 34C7.6109 34 0 26.3891 0 17C0 7.6109 7.6109 0 17 0ZM17 22.1C16.5491 22.1 16.1167 22.2791 15.7979 22.5979C15.4791 22.9167 15.3 23.3491 15.3 23.8C15.3 24.2509 15.4791 24.6833 15.7979 25.0021C16.1167 25.3209 16.5491 25.5 17 25.5C17.4509 25.5 17.8833 25.3209 18.2021 25.0021C18.5209 24.6833 18.7 24.2509 18.7 23.8C18.7 23.3491 18.5209 22.9167 18.2021 22.5979C17.8833 22.2791 17.4509 22.1 17 22.1ZM17 6.8C16.5836 6.80006 16.1817 6.95293 15.8706 7.22962C15.5594 7.50631 15.3606 7.88757 15.3119 8.3011L15.3 8.5V18.7C15.3005 19.1333 15.4664 19.5501 15.7638 19.8651C16.0613 20.1802 16.4678 20.3698 16.9004 20.3952C17.3329 20.4206 17.7588 20.2799 18.0911 20.0018C18.4234 19.7236 18.6369 19.3292 18.6881 18.8989L18.7 18.7V8.5C18.7 8.04913 18.5209 7.61673 18.2021 7.29792C17.8833 6.97911 17.4509 6.8 17 6.8Z"
@@ -122,7 +136,7 @@ const LimitIcon = () => (
   </svg>
 );
 
-// ✅ Cross icon component
+// Cross icon component
 const CrossIcon = () => (
   <svg
     width="34"
@@ -130,6 +144,7 @@ const CrossIcon = () => (
     viewBox="0 0 34 34"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className="w-[27px] h-[27px] lg:w-[34px] lg:h-[34px]"
   >
     <path
       fill-rule="evenodd"
