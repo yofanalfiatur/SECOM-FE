@@ -740,26 +740,52 @@ export const AlarmDifferences = {
   items: [
     {
       device: "Control Panel",
+      image: "/img/temp/product-1.png",
+      home: "1",
+      pro: "1",
+    },
+    {
+      device: "2Control Panel",
+      image: "/img/temp/product-1.png",
+      home: "1",
+      pro: "1",
+    },
+    {
+      device: "3Control Panel",
+      image: "/img/temp/product-1.png",
+      home: "1",
+      pro: "1",
+    },
+    {
+      device: "4Control Panel",
+      image: "/img/temp/product-1.png",
+      home: "1",
+      pro: "1",
+    },
+    {
+      device: "5Control Panel",
+      image: "/img/temp/product-2.png",
       home: "1",
       pro: "1",
     },
   ],
   price: { home: "5.000.000", pro: "8.000.000" },
+  serviceTitle: "Service Fee",
   serviceFee: [
     {
       name: "Non equidem invideo, miror magis",
-      price: "5.000.000",
-      isPerMonth: true,
+      priceHome: "5.000.000",
+      pricePro: "313.323",
     },
     {
       name: "Non equidem invideo, miror magis",
-      price: "5.000.000",
-      isPerMonth: true,
+      priceHome: "5.000.000",
+      pricePro: "313.323",
     },
     {
       name: "Non equidem invideo, miror magis",
-      price: "5.000.000",
-      isPerMonth: true,
+      priceHome: "5.000.000",
+      pricePro: "313.323",
     },
   ],
 };

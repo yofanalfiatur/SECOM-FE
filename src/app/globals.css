@@ -296,6 +296,19 @@
     background-size: 200% 200%;
     animation: animatedgradient 3s ease alternate infinite;
   }
+
+  .animated-gradient-bg2 {
+    background: linear-gradient(
+      60deg,
+      #01f3ff 20%,
+      #004697 40%,
+      #01f3ff 60%,
+      #004697 80%,
+      #01f3ff 100%
+    );
+    background-size: 200% 200%;
+    animation: animatedgradient 3s ease alternate infinite;
+  }
 }
 
 @layer components {
@@ -752,5 +765,27 @@ main {
 }
 
 .am-trusted .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #b8b8b8; /* Hover effect sedikit lebih gelap */
+}
+
+.am-diff .am-diff__wrap::-webkit-scrollbar {
+  height: 20px;
+}
+
+.am-diff .am-diff__wrap::-webkit-scrollbar-track {
+  background: transparent; /* Track transparan */
+  border-radius: 20px; /* Rounded 20px */
+}
+
+.am-diff .am-diff__wrap::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 10px;
+  border-bottom: 7px solid transparent; /* Tambahkan space di kanan */
+  border-top: 7px solid transparent; /* Tambahkan space di kanan */
+
+  background-clip: content-box; /* Agar border tidak mengubah warna background */
+}
+
+.am-diff .am-diff__wrap::-webkit-scrollbar-thumb:hover {
   background: #b8b8b8; /* Hover effect sedikit lebih gelap */
 }

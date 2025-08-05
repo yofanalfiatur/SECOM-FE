@@ -55,14 +55,14 @@ const AmFAQ = () => {
                   {/* Answer */}
                   <div
                     className={`transition-all duration-500 ease-in-out overflow-hidden px-4 lg:px-8 text-sm lg:text-xl ${
-                      isOpen ? "max-h-[400px] py-5 lg:py-4" : "max-h-0 py-0"
+                      isOpen ? "max-h-[400px] py-5 lg:pt-5 lg:pb-8" : "max-h-0"
                     }`}
                     dangerouslySetInnerHTML={{ __html: item.answer }}
                   />
                 </div>
 
                 {isOpen ? (
-                  <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg transition-all duration-200 ease opacity-100" />
+                  <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg2 transition-all duration-200 ease opacity-100" />
                 ) : (
                   <div className="absolute top-0 left-0 w-full h-full z-0 bg-white border-[1px] border-[#13223333] transition-all duration-200 ease opacity-100"></div>
                 )}
