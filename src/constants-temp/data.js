@@ -447,6 +447,7 @@ export const AlarmProtect = {
   title: "How SECOM Protects You?",
   desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
   image: "/img/temp/alarm-protect.png",
+  imageMobile: "/img/temp/alarm-protect-md.png",
   items: [
     {
       title: "Lorem ipsum dolor sit amet",

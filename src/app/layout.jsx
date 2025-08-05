@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+        <meta name="robots" content="noindex, nofollow" />
       </head>
       <body>
         <ProgressBar />

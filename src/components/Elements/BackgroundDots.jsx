@@ -2,14 +2,10 @@
 
 import { useEffect } from "react";
 
-const BackgroundDots = () => {
+const BackgroundDots = ({ dotSize = 5, dotsX = 25, dotsY = 20 }) => {
   useEffect(() => {
-    // Default setup
-    let num_dots_x = 25;
-    let num_dots_y = 20;
-    let dot_size = 5;
-    let dot_color = "#01F3FF33"; // Biru muda
-    let dot_hl_color = "#004697"; // Biru tua
+    const dot_color = "#01F3FF33";
+    const dot_hl_color = "#00469799";
 
     const updateGradient = (x, y) => {
       const container = document.querySelector(".dots-bg-container");
@@ -40,20 +36,12 @@ const BackgroundDots = () => {
 
       const svgNS = "http://www.w3.org/2000/svg";
 
-      for (let i = 0; i < num_dots_x; i++) {
-        for (let j = 0; j < num_dots_y; j++) {
+      for (let i = 0; i < dotsX; i++) {
+        for (let j = 0; j < dotsY; j++) {
           const circle = document.createElementNS(svgNS, "circle");
-          circle.setAttributeNS(
-            null,
-            "cx",
-            `${(i + 0.5) * (100 / num_dots_x)}%`
-          );
-          circle.setAttributeNS(
-            null,
-            "cy",
-            `${(j + 0.5) * (100 / num_dots_y)}%`
-          );
-          circle.setAttributeNS(null, "r", dot_size);
+          circle.setAttributeNS(null, "cx", `${(i + 0.5) * (100 / dotsX)}%`);
+          circle.setAttributeNS(null, "cy", `${(j + 0.5) * (100 / dotsY)}%`);
+          circle.setAttributeNS(null, "r", dotSize);
           mask.appendChild(circle);
         }
       }
@@ -65,27 +53,24 @@ const BackgroundDots = () => {
       updateGradient(mouseX, mouseY);
     };
 
-    // Initialize
     drawDots();
     resizeSvg();
 
-    // Event listeners
     window.addEventListener("resize", resizeSvg);
     document.addEventListener("mousemove", handleMouseMove);
 
-    // Cleanup
     return () => {
       window.removeEventListener("resize", resizeSvg);
       document.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [dotSize, dotsX, dotsY]);
 
   return (
     <div className="dots-bg-container">
-      <svg className="dots-svg-bg" width="100%" height="100%">
+      <svg className="dots-svg-bg w-full h-full">
         <defs>
           <mask id="dots-bg-mask">
-            <rect id="mask-rect" width="100%" height="100%" fill="white" />
+            <rect id="mask-rect" className="w-full h-full" fill="white" />
           </mask>
         </defs>
         <rect

@@ -311,12 +311,6 @@
   }
 }
 
-@layer components {
-  .glide__bullet--active {
-    @apply !bg-tosca;
-  }
-}
-
 *,
 *::before,
 *::after {
@@ -583,6 +577,10 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.h-sol__wrap-slider .splide__track {
+  overflow: visible !important;
 }
 
 /* Make sure content stays above the dots */

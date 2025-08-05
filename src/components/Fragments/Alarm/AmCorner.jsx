@@ -1,7 +1,10 @@
+"use client";
 import ButtonPrimary from "@/components/Elements/ButtonPrimary";
 import { AlarmCorners } from "@/constants-temp/data";
 import Image from "next/image";
 import React from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 const AmCorner = () => {
   return (

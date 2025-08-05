@@ -1,107 +1,126 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 import Image from "next/image";
-import Glide from "@glidejs/glide";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import BackgroundDots from "@/components/Elements/BackgroundDots";
 import { AlarmProtect } from "@/constants-temp/data";
 import ButtonPrimary from "@/components/Elements/ButtonPrimary";
 
 const AmProtect = () => {
-  const sliderRef = useRef(null);
-  const glideInstance = useRef(null);
-  const isDesktop = useIsDesktop(); // default breakpoint >1023px
-
-  useEffect(() => {
-    if (!sliderRef.current) return;
-
-    if (glideInstance.current) {
-      glideInstance.current.destroy();
-      glideInstance.current = null;
-    }
-
-    if (!isDesktop) {
-      const glide = new Glide(sliderRef.current, {
-        type: "carousel",
-        perView: 1,
-        gap: 30,
-        autoplay: false,
-        hoverpause: true,
-      });
-
-      glide.mount();
-      glideInstance.current = glide;
-    }
-
-    return () => {
-      if (glideInstance.current) {
-        glideInstance.current.destroy();
-        glideInstance.current = null;
-      }
-    };
-  }, [isDesktop]);
+  const isDesktop = useIsDesktop(); // breakpoint >1023px
 
   return (
-    <section className="relative pt-8 lg:pt-18 overflow-hidden">
-      <BackgroundDots />
-      <div className="container mx-auto relative z-[1] flex flex-col justify-center items-center">
-        <h2 className="text-[25px] lg:text-[40px] text-center font-raleway font-medium">
+    <section className="relative pt-9 pb-13 lg:pb-23 lg:pt-17 overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:lg:h-10/12 after:h-full after:bg-[linear-gradient(0deg,_#ffffff_30%,_rgba(255,255,255,0)_60%)]">
+      <BackgroundDots
+        dotSize={isDesktop ? 5 : 4}
+        dotsX={isDesktop ? 25 : 12}
+        dotsY={isDesktop ? 20 : 15}
+      />
+      <div className="container mx-auto relative z-[3] flex flex-col justify-center items-center">
+        <h2 className="text-[25px] lg:text-[40px] lg:text-center font-raleway font-medium">
           {AlarmProtect.title}
         </h2>
-        <p className="text-sm lg:text-lg text-center mt-2 lg:mt-4 lg:mb-10">
+        <p className="text-sm lg:text-lg lg:text-center mt-3 leading-[1.7] lg:leading-[1.5] lg:mt-4 lg:mb-10 w-full lg:w-[65%]">
           {AlarmProtect.desc}
         </p>
 
         <Image
-          src={AlarmProtect.image}
+          src={isDesktop ? AlarmProtect.image : AlarmProtect.imageMobile}
           alt="Alarm Protect"
           width={1321}
           height={1000}
-          className="max-w-full h-auto mb-6"
+          className="max-w-full h-auto lg:mb-7"
         />
 
-        <div className="relative w-full lg:w-[52%] flex flex-col justify-center py-1">
+        <div className="relative w-full flex flex-col justify-center py-1">
           {!isDesktop ? (
-            <div className="glide" ref={sliderRef}>
-              <div
-                className="glide__track !overflow-visible"
-                data-glide-el="track"
-              >
-                <ul className="glide__slides">
-                  {AlarmProtect.items.map((item, index) => (
-                    <li key={index} className="glide__slide text-center px-4">
-                      <p className="text-lg font-semibold mb-2">{item.title}</p>
-                      <p className="text-base text-gray-600">{item.desc}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="glide__arrows" data-glide-el="controls">
-                <button
-                  className="glide__arrow glide__arrow--left absolute left-[-18px] top-1/2 -translate-y-1/2 bg-white p-2 shadow hover:bg-gray-200 w-[36px] h-[36px] flex justify-center items-center"
-                  data-glide-dir="<"
-                >
-                  ←
+            <Splide
+              options={{
+                type: "loop",
+                perPage: 1,
+                gap: "10px",
+                autoplay: false,
+                pauseOnHover: false,
+                arrows: true,
+                pagination: false,
+              }}
+              className=""
+              hasTrack={false}
+            >
+              <SplideTrack className="test-track pb-19">
+                {AlarmProtect.items.map((item, index) => (
+                  <SplideSlide key={index} className="group">
+                    <div className="text-center flex flex-col items-center justify-center">
+                      <p
+                        className={`text-2xl font-semibold mb-2 w-[42px] h-[42px] flex flex-col items-center justify-center rounded-full font-raleway self-center text-white ${
+                          index % 3 === 0
+                            ? "bg-[#CE2129]"
+                            : index % 3 === 1
+                            ? "bg-navyblue"
+                            : "bg-tosca"
+                        }`}
+                      >
+                        {index + 1}
+                      </p>
+                      <p className="text-lg font-raleway font-semibold mb-1">
+                        {item.title}
+                      </p>
+                      <p className="text-sm leading-[1.7] text-gray-600">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </SplideSlide>
+                ))}
+              </SplideTrack>
+              {/* Custom Arrow Buttons */}
+              <div className="splide__arrows absolute bottom-10 w-full z-10">
+                <button className="splide__arrow splide__arrow--prev !bg-white !border-tosca !border-[1px] !rounded-none !left-[37%] ">
+                  <svg
+                    width="22"
+                    height="15"
+                    viewBox="0 0 22 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="scale-75 rotate-[270deg]"
+                  >
+                    <path
+                      d="M21.3765 12.0804L10.9045 0L0.432595 12.0804C0.148111 12.4096 -0.00740039 12.8514 0.000270989 13.3085C0.00794236 13.7656 0.178168 14.2005 0.473501 14.5177C0.768834 14.8349 1.16508 15.0083 1.57507 14.9997C1.98507 14.9911 2.37522 14.8014 2.6597 14.4721L10.9045 4.95578L19.1585 14.4721C19.443 14.8014 19.8331 14.9911 20.2431 14.9997C20.6531 15.0083 21.0493 14.8349 21.3447 14.5177C21.64 14.2005 21.8102 13.7656 21.8179 13.3085C21.8256 12.8514 21.6701 12.4096 21.3856 12.0804H21.3765Z"
+                      fill="#00AAAD"
+                    />
+                  </svg>
                 </button>
-                <button
-                  className="glide__arrow glide__arrow--right absolute right-[-18px] top-1/2 -translate-y-1/2 bg-white p-2 shadow hover:bg-gray-200 w-[36px] h-[36px] flex justify-center items-center"
-                  data-glide-dir=">"
-                >
-                  →
+                <button className="splide__arrow splide__arrow--next !bg-white !border-tosca !border-[1px] !rounded-none !right-[37%]">
+                  <svg
+                    width="22"
+                    height="15"
+                    viewBox="0 0 22 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="scale-75 rotate-[90deg]"
+                  >
+                    <path
+                      d="M21.3765 12.0804L10.9045 0L0.432595 12.0804C0.148111 12.4096 -0.00740039 12.8514 0.000270989 13.3085C0.00794236 13.7656 0.178168 14.2005 0.473501 14.5177C0.768834 14.8349 1.16508 15.0083 1.57507 14.9997C1.98507 14.9911 2.37522 14.8014 2.6597 14.4721L10.9045 4.95578L19.1585 14.4721C19.443 14.8014 19.8331 14.9911 20.2431 14.9997C20.6531 15.0083 21.0493 14.8349 21.3447 14.5177C21.64 14.2005 21.8102 13.7656 21.8179 13.3085C21.8256 12.8514 21.6701 12.4096 21.3856 12.0804H21.3765Z"
+                      fill="#00AAAD"
+                    />
+                  </svg>
                 </button>
               </div>
-            </div>
+            </Splide>
           ) : (
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-12 gap-18">
               {AlarmProtect.items.map((item, index) => (
-                <div key={index} className="text-center px-4">
-                  <div className="text-2xl font-bold text-navyblue mb-2">
+                <div key={index} className="col-span-4 flex flex-col group">
+                  <p className="text-3xl font-semibold text-white mb-2 group-nth-[1]:bg-[#CE2129] group-nth-[2]:bg-navyblue group-nth-[3]:bg-tosca w-[52px] h-[52px] flex flex-col items-center justify-center rounded-full font-raleway">
                     {index + 1}
-                  </div>
-                  <p className="text-lg font-semibold mb-2">{item.title}</p>
-                  <p className="text-base text-gray-600">{item.desc}</p>
+                  </p>
+                  <p className="text-[25px] font-raleway font-semibold mt-2 mb-1 w-full xl:w-10/12">
+                    {item.title}
+                  </p>
+                  <p className="text-lg text-gray-600 w-full xl:w-10/12">
+                    {item.desc}
+                  </p>
                 </div>
               ))}
             </div>
@@ -111,6 +130,7 @@ const AmProtect = () => {
         <ButtonPrimary
           href={AlarmProtect.btnCTA.href}
           target={AlarmProtect.btnCTA.target}
+          className="lg:mt-15"
         >
           {AlarmProtect.btnCTA.text}
         </ButtonPrimary>
