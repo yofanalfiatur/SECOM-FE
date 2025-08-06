@@ -29,7 +29,7 @@ const AlarmLanding = () => {
       <AmPackage />
       <AmDiffrences />
       <AmFAQ />
-      {/* <CardStack /> */}
+      <CardStack />
     </>
   );
 };

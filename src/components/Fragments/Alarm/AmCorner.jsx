@@ -57,7 +57,11 @@ const AmCorner = () => {
               {AlarmCorners.items.map((item, index) => (
                 <div
                   key={index}
-                  className="absolute flex flex-col max-w-max -translate-x-1/2 -translate-y-1/2"
+                  className={`absolute flex flex-col max-w-max -translate-x-1/2 -translate-y-1/2 ${
+                    activeIndex === index || cardEnabled === index
+                      ? "z-10"
+                      : "z-0"
+                  }`}
                   style={{ top: item.positionX, left: item.positionY }}
                   onMouseLeave={() => {
                     setActiveIndex(null);
@@ -132,34 +136,30 @@ const AmCorner = () => {
                 />
                 <div className="absolute top-0 left-0 w-full h-full z-1">
                   {AlarmCorners.items.map((item, index) => (
-                    <>
-                      {/* Pin Mobile  */}
+                    <div
+                      className="z-[1] bg-tosca rounded-full w-[20px] h-[20px] flex items-center justify-center cursor-pointer absolute"
+                      style={{
+                        top: `calc(${item.positionX} - 10px)`,
+                        left: `calc(${item.positionY} - 10px)`,
+                      }}
+                      key={index}
+                    >
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        width={10}
+                        height={10}
+                      />
                       <div
-                        className="z-[1] bg-tosca rounded-full w-[20px] h-[20px] flex items-center justify-center cursor-pointer absolute"
-                        style={{
-                          top: `calc(${item.positionX} - 10px)`,
-                          left: `calc(${item.positionY} - 10px)`,
-                        }}
+                        className={`absolute wrapper-pulse transition-opacity duration-300 ${
+                          activeIndexMd === index ? "opacity-100" : "opacity-0"
+                        }`}
                       >
-                        <Image
-                          src={item.image}
-                          alt={item.title}
-                          width={10}
-                          height={10}
-                        />
-                        <div
-                          className={`absolute wrapper-pulse transition-opacity duration-300 ${
-                            activeIndexMd === index
-                              ? "opacity-100"
-                              : "opacity-0"
-                          }`}
-                        >
-                          <div className="absolute w-[20px] h-[20px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-one" />
-                          <div className="absolute w-[20px] h-[20px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-two" />
-                          <div className="absolute w-[20px] h-[20px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-three" />
-                        </div>
+                        <div className="absolute w-[20px] h-[20px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-one" />
+                        <div className="absolute w-[20px] h-[20px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-two" />
+                        <div className="absolute w-[20px] h-[20px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-three" />
                       </div>
-                    </>
+                    </div>
                   ))}
                 </div>
               </div>

@@ -49,6 +49,79 @@ export const MenuHeader = [
   },
 ];
 
+export const MenuHeaderMd = [
+  {
+    text: "Home",
+    href: "/",
+    icon: "",
+  },
+  {
+    text: "Business",
+    href: "/",
+    icon: "/img/menu-type-1.svg",
+    subMenu: [
+      {
+        subMenuText: "Alarm",
+        subMenuHref: "/alarm",
+      },
+      {
+        subMenuText: "Our Team",
+        subMenuHref: "/about/our-team",
+      },
+      {
+        subMenuText: "Our Partners",
+        subMenuHref: "/about/our-partners",
+      },
+      {
+        subMenuText: "Thank You",
+        subMenuHref: "/thankyou",
+      },
+      {
+        subMenuText: "Error Page 404",
+        subMenuHref: "/error",
+      },
+    ],
+  },
+  {
+    text: "Residental",
+    href: "/",
+    icon: "/img/menu-type-2.svg",
+  },
+  {
+    text: "About",
+    href: "/about",
+    icon: "",
+
+    subMenu: [
+      {
+        subMenuText: "Alarm",
+        subMenuHref: "/alarm",
+      },
+      {
+        subMenuText: "Our Team",
+        subMenuHref: "/about/our-team",
+      },
+      {
+        subMenuText: "Our Partners",
+        subMenuHref: "/about/our-partners",
+      },
+      {
+        subMenuText: "Thank You",
+        subMenuHref: "/thankyou",
+      },
+      {
+        subMenuText: "Error Page 404",
+        subMenuHref: "/error",
+      },
+    ],
+  },
+  {
+    text: "Articles",
+    href: "/articles",
+    icon: "",
+  },
+];
+
 export const HeaderButton = {
   HeaderBtnText: "Free Consultation",
   HeaderBtnHref: "/contact",

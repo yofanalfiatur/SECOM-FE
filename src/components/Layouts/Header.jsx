@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import HeaderTop from "../Fragments/Header/HeaderTop";
@@ -15,6 +15,19 @@ const Header = () => {
   const handleHamburgerClick = () => {
     setIsMenuOpen((prev) => !prev);
   };
+  // 👇 Disable body scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    // Cleanup when component unmounts
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
 
   return (
     <>
@@ -71,7 +84,7 @@ const Header = () => {
               isMenuOpen
                 ? "top-0 visible opacity-100"
                 : "top-[-100%] invisible opacity-0"
-            } lg:hidden flex-col pt-[60px] fixed left-0 w-full h-screen z-[99] bg-white offcanvas transition-all duration-300 ease-in-out`}
+            } lg:hidden flex-col pt-[60px] fixed left-0 w-screen h-screen max-h-screen overflow-scroll z-[99] bg-white offcanvas transition-all duration-300 ease-in-out`}
           >
             <MenuMobile handleHamburgerClick={handleHamburgerClick} />
           </div>
