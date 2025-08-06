@@ -84,7 +84,7 @@ const Header = () => {
               isMenuOpen
                 ? "top-0 visible opacity-100"
                 : "top-[-100%] invisible opacity-0"
-            } lg:hidden flex-col pt-[60px] fixed left-0 w-screen h-screen max-h-screen overflow-scroll z-[99] bg-white offcanvas transition-all duration-300 ease-in-out`}
+            } lg:hidden flex-col pt-[60px] pb-[60px] fixed left-0 w-screen h-screen max-h-screen overflow-scroll z-[99] bg-white offcanvas transition-all duration-300 ease-in-out`}
           >
             <MenuMobile handleHamburgerClick={handleHamburgerClick} />
           </div>
