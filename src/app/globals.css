@@ -787,3 +787,26 @@ main {
 .am-diff .am-diff__wrap::-webkit-scrollbar-thumb:hover {
   background: #b8b8b8; /* Hover effect sedikit lebih gelap */
 }
+
+@keyframes pulsecircle {
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    scale: 1.5;
+    opacity: 0;
+  }
+}
+
+.am-corner .pulse-one {
+  animation: pulsecircle 2s ease-in-out infinite;
+}
+.am-corner .pulse-two {
+  animation: pulsecircle 2s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+.am-corner .pulse-three {
+  animation: pulsecircle 2s ease-in-out infinite;
+  animation-delay: 1s;
+}

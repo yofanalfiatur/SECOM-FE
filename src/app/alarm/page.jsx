@@ -11,6 +11,7 @@ import AmProtect from "@/components/Fragments/Alarm/AmProtect";
 import AmTrusted from "@/components/Fragments/Alarm/AmTrusted";
 import AmOverview from "@/components/Fragments/Alarm/AmOverview";
 import AmDiffrences from "@/components/Fragments/Alarm/AmDiffrences";
+import CardStack from "@/components/Elements/CardStack";
 
 const AlarmLanding = () => {
   return (
@@ -26,6 +27,7 @@ const AlarmLanding = () => {
       <AmPackage />
       <AmDiffrences />
       <AmFAQ />
+      {/* <CardStack /> */}
     </>
   );
 };

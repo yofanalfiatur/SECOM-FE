@@ -14,14 +14,14 @@ const AmApps = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="flex lg:flex-col justify-center lg:justify-start absolute left-[50%] lg:left-0 top-[4%] lg:top-[50%] transform translate-y-[-50%] translate-x-[-50%] lg:translate-x-[0%] z-[2] w-full lg:w-max"
+          className="flex lg:flex-col justify-center lg:justify-start absolute left-[50%] lg:left-0 top-[4%] md:top-[3%] lg:top-[50%] transform translate-y-[-50%] translate-x-[-50%] lg:translate-x-[0%] z-[2] w-full lg:w-max"
         >
           <Image
             src={AlarmApps.image}
             alt="apps"
             width={477}
             height={477}
-            className="w-[240px] md:w-[340px] lg:w-[477px] "
+            className="w-[240px] lg:w-[477px] "
           />
         </motion.div>
         <motion.div
