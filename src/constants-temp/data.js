@@ -526,7 +526,7 @@ export const AlarmProduct = {
 
 export const AlarmCorners = {
   title: "Protect Every Corner of Your Home",
-  desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+  desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse.",
   btnConsult: {
     text: "CONSULT WITH US NOW",
     href: "/#",

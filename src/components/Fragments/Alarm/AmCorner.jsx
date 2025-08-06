@@ -43,7 +43,6 @@ const AmCorner = () => {
         >
           {AlarmCorners.btnConsult.text}
         </ButtonPrimary>
-
         <div className="relative flex flex-col w-full mt-2 lg:mt-10">
           {isDesktop ? (
             <>
@@ -81,7 +80,6 @@ const AmCorner = () => {
                       <div className="absolute w-[50px] h-[50px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-three" />
                     </div>
                   </div>
-
                   {/* Card */}
                   <div
                     className={`flex flex-col absolute min-w-[330px] z-[2] -translate-x-1/2 -translate-y-1/2 top-[-160%] left-[50%] transition-all duration-300 ${

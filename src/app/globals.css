@@ -799,6 +799,7 @@ main {
   }
 }
 
+/* Alarm corner pin */
 .am-corner .pulse-one {
   animation: pulsecircle 2s ease-in-out infinite;
 }
