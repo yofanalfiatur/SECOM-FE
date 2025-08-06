@@ -1,5 +1,7 @@
 // Page Alarm Landing
 
+"use client";
+
 import AmApps from "@/components/Fragments/Alarm/AmApps";
 import AmBanner from "@/components/Fragments/Alarm/AmBanner";
 import AmChoose from "@/components/Fragments/Alarm/AmChooseUs";
@@ -21,7 +23,7 @@ const AlarmLanding = () => {
       <AmChoose />
       <AmProtect />
       <AmProducts />
-      {/* <AmCorner /> */}
+      <AmCorner />
       <AmApps />
       <AmTrusted />
       <AmPackage />
