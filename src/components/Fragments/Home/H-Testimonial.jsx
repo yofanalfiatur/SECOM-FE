@@ -1,8 +1,11 @@
+"use client";
 import { HTestimonial } from "@/constants-temp/data";
 import CardStackSlider from "@/components/Elements/CardStackSlider";
 import BackgroundDots from "@/components/Elements/BackgroundDots";
+import useIsDesktop from "@/components/Hooks/useIsDesktop";
 
 const HomeTesti = () => {
+  const isDesktop = useIsDesktop();
   return (
     <section className="py-[3rem] h-testi">
       <BackgroundDots
