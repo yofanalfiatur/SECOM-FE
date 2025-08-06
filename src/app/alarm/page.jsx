@@ -21,7 +21,7 @@ const AlarmLanding = () => {
       <AmChoose />
       <AmProtect />
       <AmProducts />
-      <AmCorner />
+      {/* <AmCorner /> */}
       <AmApps />
       <AmTrusted />
       <AmPackage />
