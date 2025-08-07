@@ -5,7 +5,6 @@ import { ReQuote } from "@/constants-temp/data";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import Image from "next/image";
-import GLightbox from "glightbox";
 import "glightbox/dist/css/glightbox.min.css";
 import Link from "next/link";
 
@@ -19,32 +18,33 @@ const ResQuote = () => {
       const textSlider = textSliderRef.current.splide;
 
       if (imageSlider && textSlider) {
-        // Sync the sliders
         imageSlider.sync(textSlider);
       }
     }
   }, []);
 
   useEffect(() => {
-    const lightbox = GLightbox({
-      selector: ".glightbox",
-      loop: false,
-      zoomable: true,
-      draggable: true,
-      touchNavigation: false,
-      openEffect: "zoom",
-      closeEffect: "zoom",
-      onOpen: () => {
-        console.log("Lightbox opened");
-      },
-      onClose: () => {
-        console.log("Lightbox closed");
-      },
-    });
+    import("glightbox").then(({ default: GLightbox }) => {
+      const lightbox = GLightbox({
+        selector: ".glightbox",
+        loop: false,
+        zoomable: true,
+        draggable: true,
+        touchNavigation: false,
+        openEffect: "zoom",
+        closeEffect: "zoom",
+        onOpen: () => {
+          console.log("Lightbox opened");
+        },
+        onClose: () => {
+          console.log("Lightbox closed");
+        },
+      });
 
-    return () => {
-      lightbox.destroy();
-    };
+      return () => {
+        lightbox.destroy();
+      };
+    });
   }, []);
 
   return (

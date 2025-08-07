@@ -414,7 +414,7 @@ export const ReQuote = [
     text: "Quisque ut dolor gravida, placerat libero vel, euismod. Fabio vel iudice vincam, sunt in culpa qui officia. Magna pars studiorum.",
   },
   {
-    thumb: "",
+    thumb: "/img/temp/alarm-reason-bg.jpg",
     linkVideo: "https://youtu.be/qbFsiN9M9a4?list=RDqbFsiN9M9a4",
     text: "Quisque ut dolor gravida, placerat libero vel, euismod. Fabio vel iudice vincam, sunt in culpa qui officia. Magna pars studiorum.",
   },
