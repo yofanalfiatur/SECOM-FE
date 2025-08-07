@@ -1,0 +1,167 @@
+"use client";
+
+import { ReSurvey } from "@/constants-temp/data";
+
+import ButtonPrimary from "@/components/Elements/ButtonPrimary";
+import React, { useState } from "react";
+import Image from "next/image";
+
+const ResSurvey = () => {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [answers, setAnswers] = useState([]);
+  const [showResult, setShowResult] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const handleAnswer = (value) => {
+    setIsTransitioning(true);
+
+    setTimeout(() => {
+      const newAnswers = [...answers, value];
+      setAnswers(newAnswers);
+
+      if (currentQuestion < ReSurvey.survey.length - 1) {
+        setCurrentQuestion(currentQuestion + 1);
+      } else {
+        // Survey completed, show result
+        setShowResult(true);
+      }
+      setIsTransitioning(false);
+    }, 300);
+  };
+
+  const getResult = () => {
+    const answerKey = answers.join("-");
+
+    for (const [riskLevel, combinations] of Object.entries(
+      ReSurvey.resultCombinations
+    )) {
+      if (combinations.includes(answerKey)) {
+        switch (riskLevel) {
+          case "high":
+            return ReSurvey.result[0];
+          case "moderate":
+            return ReSurvey.result[1];
+          case "low":
+            return ReSurvey.result[2];
+          default:
+            return ReSurvey.result[1]; // Default to moderate
+        }
+      }
+    }
+    return ReSurvey.result[1]; // Default to moderate if no match
+  };
+
+  const resetSurvey = () => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentQuestion(0);
+      setAnswers([]);
+      setShowResult(false);
+      setIsTransitioning(false);
+    }, 300);
+  };
+
+  return (
+    <section className="relative res-survey mt-[-4rem] z-10">
+      <div className="container mx-auto flex flex-col relative">
+        <div className="flex bg-white pt-[2.3rem] pb-6 flex-col items-center justify-center relative z-[1] m-1 res-survey__wrap">
+          <div className="res-survey__wrap-decor absolute top-0 left-[50%] transform -translate-1/2 w-[63px] h-[63px] rounded-[50%] flex flex-col items-center justify-center bg-tosca">
+            <svg
+              width="26"
+              height="33"
+              viewBox="0 0 26 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.4937 22.8926H8.14404V22.0576C8.14404 20.6367 8.30518 19.4868 8.62744 18.6079C8.94971 17.7144 9.42578 16.9014 10.0557 16.1689C10.7002 15.4365 12.1357 14.1475 14.3623 12.3018C15.5488 11.335 16.1421 10.4487 16.1421 9.64307C16.1421 8.8374 15.9004 8.21484 15.417 7.77539C14.9482 7.32129 14.2305 7.09424 13.2637 7.09424C12.2236 7.09424 11.3594 7.43848 10.6709 8.12695C9.99707 8.81543 9.56494 10.0166 9.37451 11.7305L0.849121 10.6758C1.14209 7.54102 2.27734 5.02148 4.25488 3.11719C6.24707 1.19824 9.29395 0.23877 13.3955 0.23877C16.5889 0.23877 19.167 0.905273 21.1299 2.23828C23.7959 4.04004 25.1289 6.44238 25.1289 9.44531C25.1289 10.6904 24.7847 11.8916 24.0962 13.0488C23.4077 14.2061 22.0015 15.6196 19.8774 17.2896C18.3979 18.4614 17.4604 19.4062 17.0649 20.124C16.6841 20.8271 16.4937 21.75 16.4937 22.8926ZM7.8584 25.1118H16.8013V33H7.8584V25.1118Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div className="flex flex-col w-full border-b-1 border-[#00529C33] pb-5">
+            <p className="text-navyblue text-center font-bold text-[25px] font-raleway">
+              {ReSurvey.title}
+            </p>
+            <p className="text-[25px] text-center font-normal text-navyblue font-raleway">
+              {ReSurvey.desc}
+            </p>
+          </div>
+
+          {/* Survey */}
+          <div className="flex flex-col items-center justify-center lg:min-h-[440px] w-full">
+            {!showResult ? (
+              <div
+                className={`flex flex-col items-center w-full survey-question transition-all duration-300 ease-in-out ${
+                  isTransitioning
+                    ? "opacity-0 transform translate-y-4"
+                    : "opacity-100 transform translate-y-0"
+                }`}
+              >
+                <p className="text-navyblue text-6xl text-center w-[70%] mt-10 mb-10">
+                  {ReSurvey.survey[currentQuestion]?.question}
+                </p>
+                <div className="flex flex-row res-survey__wrap-btn gap-4">
+                  {ReSurvey.survey[currentQuestion]?.options.map(
+                    (answer, index) => (
+                      <button
+                        key={index}
+                        className="py-4 px-6 bg-tosca text-xl tracking-[4px] text-white rounded-[5px] hover:bg-tosca-dark transition-colors duration-300 uppercase cursor-pointer hover:shadow-sm hover:bg-[#166368]"
+                        onClick={() => handleAnswer(answer.value)}
+                        disabled={isTransitioning}
+                      >
+                        {answer.text}
+                      </button>
+                    )
+                  )}
+                </div>
+              </div>
+            ) : (
+              <div
+                className={`flex flex-col items-center w-full survey-results transition-all duration-300 ease-in-out ${
+                  isTransitioning
+                    ? "opacity-0 transform translate-y-4"
+                    : "opacity-100 transform translate-y-0"
+                }`}
+              >
+                <Image
+                  src={getResult().icon}
+                  alt="Survey Result"
+                  width={120}
+                  height={120}
+                  className="mt-8"
+                />
+                <p className="text-navyblue font-normal lg:text-6xl text-center mb-4">
+                  {getResult().text}
+                </p>
+                <p className="text-navyblue text-xl text-center w-[70%] mb-6">
+                  {getResult().desc}
+                </p>
+                <div className="flex flex-row res-survey__wrap-btn gap-4 mb-2">
+                  <ButtonPrimary
+                    className=""
+                    target={getResult().btn.target}
+                    href={getResult().btn.href}
+                  >
+                    {getResult().btn.text}
+                  </ButtonPrimary>
+                </div>
+                <button
+                  onClick={resetSurvey}
+                  className="text-navyblue text-lg underline hover:text-tosca transition-colors duration-300"
+                  disabled={isTransitioning}
+                >
+                  Take Survey Again
+                </button>
+              </div>
+            )}
+          </div>
+          {/* End Survey */}
+        </div>
+        <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg transition-all duration-200 ease opacity-100"></div>
+      </div>
+    </section>
+  );
+};
+
+export default ResSurvey;

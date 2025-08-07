@@ -1,13 +1,13 @@
 "use client";
-import { HTestimonial } from "@/constants-temp/data";
+import { ReTestimonial } from "@/constants-temp/data";
 import CardStackSlider from "@/components/Elements/CardStackSlider";
 import BackgroundDots from "@/components/Elements/BackgroundDots";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 
-const HomeTesti = () => {
+const ResTesti = () => {
   const isDesktop = useIsDesktop();
   return (
-    <section className="py-[3rem] h-testi">
+    <section className="py-[3rem] res-testi">
       <BackgroundDots
         dotSize={isDesktop ? 5 : 4}
         dotsX={isDesktop ? 25 : 12}
@@ -15,10 +15,10 @@ const HomeTesti = () => {
       />
       <div className="container mx-auto">
         <h2 className="text-center text-4xl font-raleway font-medium text-darkblue">
-          {HTestimonial.title}
+          {ReTestimonial.title}
         </h2>
         <p className="text-center text-lg text-darkblue opacity-80">
-          {HTestimonial.desc}
+          {ReTestimonial.desc}
         </p>
 
         <CardStackSlider />
@@ -27,4 +27,4 @@ const HomeTesti = () => {
   );
 };
 
-export default HomeTesti;
+export default ResTesti;

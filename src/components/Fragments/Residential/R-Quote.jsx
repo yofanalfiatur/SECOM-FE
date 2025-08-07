@@ -1,0 +1,179 @@
+"use client";
+
+import React, { useEffect, useRef } from "react";
+import { ReQuote } from "@/constants-temp/data";
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+import Image from "next/image";
+import GLightbox from "glightbox";
+import "glightbox/dist/css/glightbox.min.css";
+import Link from "next/link";
+
+const ResQuote = () => {
+  const imageSliderRef = useRef(null);
+  const textSliderRef = useRef(null);
+
+  useEffect(() => {
+    if (imageSliderRef.current && textSliderRef.current) {
+      const imageSlider = imageSliderRef.current.splide;
+      const textSlider = textSliderRef.current.splide;
+
+      if (imageSlider && textSlider) {
+        // Sync the sliders
+        imageSlider.sync(textSlider);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const lightbox = GLightbox({
+      selector: ".glightbox",
+      loop: false,
+      zoomable: true,
+      draggable: true,
+      touchNavigation: false,
+      openEffect: "zoom",
+      closeEffect: "zoom",
+      onOpen: () => {
+        console.log("Lightbox opened");
+      },
+      onClose: () => {
+        console.log("Lightbox closed");
+      },
+    });
+
+    return () => {
+      lightbox.destroy();
+    };
+  }, []);
+
+  return (
+    <section className="res-quote flex flex-col lg:flex-row bg-tosca relative min-h-[500px]">
+      {/* IMAGE SLIDER */}
+      <div className="w-full lg:w-[60%] relative z-[1] h-[600px]">
+        <Splide
+          ref={imageSliderRef}
+          options={{
+            type: "loop",
+            perPage: 1,
+            perMove: 1,
+            arrows: true,
+            pagination: false,
+            gap: "0px",
+            height: "600px",
+          }}
+          aria-label="Image Slider"
+          hasTrack={false}
+        >
+          {/* Custom Arrow Buttons */}
+          <div className="container h-[600px] mx-auto absolute">
+            <div className="splide__arrows w-full z-10">
+              <button className="splide__arrow splide__arrow--prev !bg-white !border-tosca !border-[1px] !left-[4vw] !rounded-none ">
+                <svg
+                  width="22"
+                  height="15"
+                  viewBox="0 0 22 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="scale-75 rotate-[270deg]"
+                >
+                  <path
+                    d="M21.3765 12.0804L10.9045 0L0.432595 12.0804C0.148111 12.4096 -0.00740039 12.8514 0.000270989 13.3085C0.00794236 13.7656 0.178168 14.2005 0.473501 14.5177C0.768834 14.8349 1.16508 15.0083 1.57507 14.9997C1.98507 14.9911 2.37522 14.8014 2.6597 14.4721L10.9045 4.95578L19.1585 14.4721C19.443 14.8014 19.8331 14.9911 20.2431 14.9997C20.6531 15.0083 21.0493 14.8349 21.3447 14.5177C21.64 14.2005 21.8102 13.7656 21.8179 13.3085C21.8256 12.8514 21.6701 12.4096 21.3856 12.0804H21.3765Z"
+                    fill="#00AAAD"
+                  />
+                </svg>
+              </button>
+              <button className="splide__arrow splide__arrow--next !bg-white !border-tosca !border-[1px] !left-[95vw] !rounded-none">
+                <svg
+                  width="22"
+                  height="15"
+                  viewBox="0 0 22 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="scale-75 rotate-[90deg]"
+                >
+                  <path
+                    d="M21.3765 12.0804L10.9045 0L0.432595 12.0804C0.148111 12.4096 -0.00740039 12.8514 0.000270989 13.3085C0.00794236 13.7656 0.178168 14.2005 0.473501 14.5177C0.768834 14.8349 1.16508 15.0083 1.57507 14.9997C1.98507 14.9911 2.37522 14.8014 2.6597 14.4721L10.9045 4.95578L19.1585 14.4721C19.443 14.8014 19.8331 14.9911 20.2431 14.9997C20.6531 15.0083 21.0493 14.8349 21.3447 14.5177C21.64 14.2005 21.8102 13.7656 21.8179 13.3085C21.8256 12.8514 21.6701 12.4096 21.3856 12.0804H21.3765Z"
+                    fill="#00AAAD"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Image Slides */}
+          <SplideTrack className="res-quote__track">
+            {ReQuote.map((item, index) => (
+              <SplideSlide key={index}>
+                <div className="flex justify-center h-full items-center w-full bg-gray-200">
+                  <Link
+                    key={index}
+                    href={item.linkVideo}
+                    className="glightbox w-full h-full relative"
+                  >
+                    <Image
+                      src={item.thumb}
+                      width={1840}
+                      height={1200}
+                      alt={`Quote ${index + 1}`}
+                      className="w-full h-full object-cover absolute top-0 left-0 opacity-100"
+                    />
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-[87px] z-0 triangle-shape">
+                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 triangle-shape animated-gradient-bg"></div>
+
+                      <div className="bg-white triangle-shape absolute z-1 w-full h-full scale-[83%] top-1/2 left-[47%] transform -translate-x-1/2 -translate-y-1/2"></div>
+                    </div>
+                  </Link>
+                </div>
+              </SplideSlide>
+            ))}
+          </SplideTrack>
+        </Splide>
+      </div>
+
+      {/* TEXT SLIDER */}
+      <div className="relative lg:absolute left-[50%] transform -translate-x-[50%] z-[0] container mx-auto flex flex-col items-end h-full">
+        <div className="w-full lg:w-[37.5%] h-full">
+          <Splide
+            ref={textSliderRef}
+            options={{
+              type: "loop",
+              perPage: 1,
+              arrows: false,
+              pagination: false,
+              gap: "0px",
+              drag: false,
+              height: "600px",
+            }}
+            aria-label="Text Slider"
+          >
+            {ReQuote.map((item, index) => (
+              <SplideSlide key={index}>
+                <div className="flex flex-col justify-center items-start py-8 pl-16 pr-20 h-full">
+                  <svg
+                    width="60"
+                    height="47"
+                    viewBox="0 0 60 47"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="mt-0 mb-8"
+                  >
+                    <path
+                      d="M21.7337 0L17.6471 22.3113H25.0774V47H0V21.9455L6.6873 0H21.7337ZM56.6564 0L52.5697 22.3113H60V47H34.9226V21.9455L41.6099 0H56.6564Z"
+                      fill="#00529C"
+                    />
+                  </svg>
+                  <p className="lg:text-[35px] font-normal font-raleway leading-[1.4] text-white">
+                    {item.text}
+                  </p>
+                </div>
+              </SplideSlide>
+            ))}
+          </Splide>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ResQuote;

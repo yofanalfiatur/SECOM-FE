@@ -309,6 +309,10 @@
     background-size: 200% 200%;
     animation: animatedgradient 3s ease alternate infinite;
   }
+
+  .triangle-shape {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
+  }
 }
 
 *,
@@ -512,7 +516,7 @@ main {
   transform: rotate(3deg) translate(0px, -4px);
 }
 
-.h-banner::after {
+.res-banner::after {
   content: "";
   background: linear-gradient(
     360deg,
@@ -526,12 +530,12 @@ main {
   z-index: 0;
 }
 
-.h-banner .h-banner__card {
+.res-banner .res-banner__card {
   border-radius: 10px;
   overflow: hidden;
 }
 
-.h-banner .h-banner__card-wrap {
+.res-banner .res-banner__card-wrap {
   border: 3px solid;
   border-image-source: radial-gradient(
     45.66% 102.95% at 63.16% 45.66%,
@@ -541,20 +545,8 @@ main {
   );
   border-image-slice: 10;
 }
-.h-banner .h-banner__card-wrap p {
+.res-banner .res-banner__card-wrap p {
   background: rgba(255, 255, 255, 0.6);
-}
-
-.h-survey .container {
-  border: 3px solid;
-  border-image-source: radial-gradient(
-    45.66% 102.95% at 63.16% 45.66%,
-    #f0feff 0%,
-    #00aaad 46.15%,
-    #00529c 100%
-  );
-  border-image-slice: 10;
-  box-shadow: 0px 4px 25px 0px #00000040;
 }
 
 /* Background Dots Styles */
@@ -579,16 +571,16 @@ main {
   height: 100%;
 }
 
-.h-sol__wrap-slider .splide__track {
+.res-sol__wrap-slider .splide__track {
   overflow: visible !important;
 }
 
 /* Make sure content stays above the dots */
-.h-testi {
+.res-testi {
   position: relative;
 }
 
-.h-testi .container {
+.res-testi .container {
   position: relative;
   z-index: 1;
 }

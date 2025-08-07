@@ -4,11 +4,31 @@ export const MenuType = [
     icon: "/img/menu-type-1.svg",
     text: "Business",
     href: "/business",
+    subMenu: [
+      {
+        subMenuText: "Business",
+        subMenuHref: "/#submenu1",
+      },
+      {
+        subMenuText: "Business 2",
+        subMenuHref: "/#submenu2",
+      },
+    ],
   },
   {
     icon: "/img/menu-type-2.svg",
-    text: "Residental",
-    href: "/residental",
+    text: "Residential",
+    href: "/residential",
+    subMenu: [
+      {
+        subMenuText: "Residential",
+        subMenuHref: "/#submenu1",
+      },
+      {
+        subMenuText: "Residential 2",
+        subMenuHref: "/#submenu2",
+      },
+    ],
   },
 ];
 
@@ -228,7 +248,7 @@ export const FooterDropdown = [
 ];
 
 //////////////////////  Home  ///////////////////////
-export const HBanner = {
+export const ReBanner = {
   title: "Every Member of Your Family Need The Best Protection",
   photo: "/img/temp/photo-h-banner.png",
   background: "/img/temp/bg-h-banner.jpg",
@@ -260,25 +280,76 @@ export const HBanner = {
   ],
 };
 
-export const HSurvey = {
-  hint: "Is Your Home Already Safe?",
+export const ReSurvey = {
+  title: "Is Your Home Already Safe?",
   desc: "Check your home safety levels with this short survey",
-  title: "Ut enim ad minim veniam, quis nostrud exercitation?",
-  btnSurvey: [
+
+  survey: [
     {
-      text: "OPTION A",
-      href: "/#option-a",
-      target: "_self",
+      question: "How often is your home left empty?",
+      options: [
+        { text: "A. Most Days", value: "a" },
+        { text: "B. Few Hours A Day", value: "b" },
+      ],
     },
     {
-      text: "OPTION B",
-      href: "/#option-b",
-      target: "_self",
+      question:
+        "Do you live with children, elderly parents, or loved ones with special needs?",
+      options: [
+        { text: "Yes", value: "yes" },
+        { text: "No", value: "no" },
+      ],
+    },
+    {
+      question: "What security systems do you currently have installed?",
+      options: [
+        { text: "A. None", value: "a" },
+        { text: "B. Self-Installed CCTV", value: "b" },
+      ],
     },
   ],
+
+  result: [
+    {
+      icon: "/img/survey-h-risk.png",
+      text: "High Risk",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Magna pars studiorum, prodita quaerimus. dolore magna aliqua. Magna pars studiorum, prodita quaerimus.",
+      btn: {
+        text: "CHECK OUR PACKAGES",
+        href: "/#packages",
+        target: "_self",
+      },
+    },
+    {
+      icon: "/img/survey-m-risk.png",
+      text: "Moderate Risk",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Magna pars studiorum, prodita quaerimus. dolore magna aliqua. Magna pars studiorum, prodita quaerimus.",
+      btn: {
+        text: "CHECK OUR PACKAGES",
+        href: "/#packages",
+        target: "_self",
+      },
+    },
+    {
+      icon: "/img/survey-l-risk.png",
+      text: "Low Risk",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Magna pars studiorum, prodita quaerimus. dolore magna aliqua. Magna pars studiorum, prodita quaerimus.",
+      btn: {
+        text: "CHECK OUR PACKAGES",
+        href: "/#packages",
+        target: "_self",
+      },
+    },
+  ],
+
+  resultCombinations: {
+    high: ["a-yes-a", "a-no-a", "b-yes-a"],
+    moderate: ["a-yes-b", "a-no-b", "b-yes-b"],
+    low: ["b-no-a", "b-no-b"],
+  },
 };
 
-export const HAbout = {
+export const ReAbout = {
   title: "How SECOM protect You and Your Family",
   desc: "Idque Caesaris facere voluntate liceret: sese habere. Ut enim ad minim veniam, quis nostrud exercitation. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Morbi fringilla convallis sapien, id pulvinar odio volutpat. Nec dubitamus multa iter quae et nos invenerat. Paullum deliquit, ponderibus modulisque suis ratio utitur. Ullamco laboris nisi ut aliquid ex ea commodi consequat.",
   photo: "/img/temp/h-about-photo.jpg",
@@ -303,7 +374,7 @@ export const HAbout = {
   },
 };
 
-export const HSolution = {
+export const ReSolution = {
   hint: "Our Solution",
   title: "Quisque ut dolor gravida, placerat libero vel, euismod.",
   desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur",
@@ -336,22 +407,25 @@ export const HSolution = {
   },
 };
 
-export const HQuote = [
+export const ReQuote = [
   {
-    link: "/img/temp/h-quote-1.png",
+    thumb: "/img/temp/h-quote-1.jpg",
+    linkVideo: "https://youtu.be/BGIfSu1T_sY?list=RDqbFsiN9M9a4",
     text: "Quisque ut dolor gravida, placerat libero vel, euismod. Fabio vel iudice vincam, sunt in culpa qui officia. Magna pars studiorum.",
   },
   {
-    link: "/img/temp/h-quote-2.png",
+    thumb: "",
+    linkVideo: "https://youtu.be/qbFsiN9M9a4?list=RDqbFsiN9M9a4",
     text: "Quisque ut dolor gravida, placerat libero vel, euismod. Fabio vel iudice vincam, sunt in culpa qui officia. Magna pars studiorum.",
   },
   {
-    link: "/img/temp/h-quote-3.png",
+    thumb: "/img/temp/alarm-banner-bg-desktop.jpg",
+    linkVideo: "https://youtu.be/W5apuB0FSIQ?list=RDqbFsiN9M9a4",
     text: "Quisque ut dolor gravida, placerat libero vel, euismod. Fabio vel iudice vincam, sunt in culpa qui officia. Magna pars studiorum.",
   },
 ];
 
-export const HTestimonial = {
+export const ReTestimonial = {
   title: "Hear it from our customers",
   desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitionni dedisse scripsisse iudicaretur. Curabitur blandit tempus ardua ridiculus sed magna.",
   items: [
@@ -376,7 +450,7 @@ export const HTestimonial = {
   ],
 };
 
-export const HPromotion = {
+export const RePromotion = {
   hint: "Promotion",
   title: "Quisque ut dolor gravida, placerat libero vel, euismod.",
   desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",

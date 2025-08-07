@@ -1,11 +1,11 @@
 import React from "react";
 
-const HomeCTA = () => {
+const ResCTA = () => {
   return (
     <section className="py-[3rem] h-cta">
-      <h1>HomeCTA</h1>
+      <h1>ResCTA</h1>
     </section>
   );
 };
 
-export default HomeCTA;
+export default ResCTA;
