@@ -68,7 +68,7 @@ const ResQuote = () => {
           {/* Custom Arrow Buttons */}
           <div className="container h-[600px] mx-auto absolute">
             <div className="splide__arrows w-full z-10">
-              <button className="splide__arrow splide__arrow--next !border-white !bg-transparent !border-[1px] !left-[4vw] !rounded-none !w-[36px] !h-[36px]">
+              <button className="splide__arrow splide__arrow--prev !border-white !bg-transparent !border-[1px] !left-[4vw] !rounded-none !w-[36px] !h-[36px]">
                 <svg
                   width="22"
                   height="15"
