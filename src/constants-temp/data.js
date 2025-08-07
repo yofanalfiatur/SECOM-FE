@@ -385,7 +385,7 @@ export const ReSolution = {
         "#1Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
     },
     {
-      photo: "/img/temp/h-slide-solution.jpg",
+      photo: "/img/temp/alarm-reason-bg.jpg",
       title:
         "#2Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
     },
@@ -395,7 +395,7 @@ export const ReSolution = {
         "#3Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
     },
     {
-      photo: "/img/temp/h-slide-solution.jpg",
+      photo: "/img/temp/alarm-reason-bg.jpg",
       title:
         "#4Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
     },
@@ -445,6 +445,12 @@ export const ReTestimonial = {
       testimony:
         "Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Curabitur blandit tempus ardua ridiculus sed magna.",
       name: "Jane Smith, 42",
+      location: "Surabaya",
+    },
+    {
+      testimony:
+        "Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Curabitur blandit tempus ardua ridiculus sed magna.",
+      name: "Halo Halo, 99",
       location: "Surabaya",
     },
   ],
@@ -569,22 +575,25 @@ export const AlarmOverview = {
 
 export const AlarmReason = {
   title: "Why Choose Us?",
-  background: "img/temp/alarm-reason-bg.jpg",
   items: [
     {
+      background: "img/temp/alarm-reason-bg.jpg",
       title: "Quisque ut dolor gravida, placerat libero vel, euismod.",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
     },
     {
-      title: "Quisque ut dolor gravida, placerat libero vel, euismod.",
+      background: "img/temp/alarm-banner-bg-desktop.jpg",
+      title: "#2Quisque ut dolor gravida, placerat libero vel, euismod.",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
     },
     {
-      title: "Quisque ut dolor gravida, placerat libero vel, euismod.",
+      background: "img/temp/alarm-reason-bg.jpg",
+      title: "#3Quisque ut dolor gravida, placerat libero vel, euismod.",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
     },
     {
-      title: "Quisque ut dolor gravida, placerat libero vel, euismod.",
+      background: "img/temp/alarm-banner-bg-desktop.jpg",
+      title: "#4Quisque ut dolor gravida, placerat libero vel, euismod.",
       desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
     },
   ],

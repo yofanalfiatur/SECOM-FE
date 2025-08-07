@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ReSolution } from "@/constants-temp/data";
 import ButtonSecondary from "@/components/Elements/ButtonSecondary";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
 const ResSolution = () => {
@@ -40,24 +40,60 @@ const ResSolution = () => {
               pagination: false,
               gap: "30px",
             }}
-            className="w-full"
+            className="res-sol__slider"
+            hasTrack={false}
           >
-            {ReSolution.itemSlider.map((item, index) => (
-              <SplideSlide key={index}>
-                <div className="bg-white overflow-hidden shadow-lg relative">
-                  <Image
-                    src={item.photo}
-                    alt={item.title}
-                    width={693}
-                    height={524}
-                    className="w-full h-auto object-cover"
+            {/* Custom Arrow Buttons */}
+            <div className="splide__arrows absolute w-full z-[1] !top-[50%]">
+              <button className="splide__arrow splide__arrow--prev !border-tosca !bg-white !border-[1px] !rounded-none !w-[36px] !h-[36px] !left-[-18px]">
+                <svg
+                  width="22"
+                  height="15"
+                  viewBox="0 0 22 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="scale-75 rotate-[270deg]"
+                >
+                  <path
+                    d="M21.3765 12.0804L10.9045 0L0.432595 12.0804C0.148111 12.4096 -0.00740039 12.8514 0.000270989 13.3085C0.00794236 13.7656 0.178168 14.2005 0.473501 14.5177C0.768834 14.8349 1.16508 15.0083 1.57507 14.9997C1.98507 14.9911 2.37522 14.8014 2.6597 14.4721L10.9045 4.95578L19.1585 14.4721C19.443 14.8014 19.8331 14.9911 20.2431 14.9997C20.6531 15.0083 21.0493 14.8349 21.3447 14.5177C21.64 14.2005 21.8102 13.7656 21.8179 13.3085C21.8256 12.8514 21.6701 12.4096 21.3856 12.0804H21.3765Z"
+                    fill="#00AAAD"
                   />
-                  <h3 className="text-lg font-semibold m-6 bg-tosca p-6 absolute bottom-0 left-0 text-white">
-                    {item.title}
-                  </h3>
-                </div>
-              </SplideSlide>
-            ))}
+                </svg>
+              </button>
+              <button className="splide__arrow splide__arrow--next !border-tosca !bg-white !border-[1px] !rounded-none !w-[36px] !h-[36px] !right-[-18px]">
+                <svg
+                  width="22"
+                  height="15"
+                  viewBox="0 0 22 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="scale-75 rotate-[90deg]"
+                >
+                  <path
+                    d="M21.3765 12.0804L10.9045 0L0.432595 12.0804C0.148111 12.4096 -0.00740039 12.8514 0.000270989 13.3085C0.00794236 13.7656 0.178168 14.2005 0.473501 14.5177C0.768834 14.8349 1.16508 15.0083 1.57507 14.9997C1.98507 14.9911 2.37522 14.8014 2.6597 14.4721L10.9045 4.95578L19.1585 14.4721C19.443 14.8014 19.8331 14.9911 20.2431 14.9997C20.6531 15.0083 21.0493 14.8349 21.3447 14.5177C21.64 14.2005 21.8102 13.7656 21.8179 13.3085C21.8256 12.8514 21.6701 12.4096 21.3856 12.0804H21.3765Z"
+                    fill="#00AAAD"
+                  />
+                </svg>
+              </button>
+            </div>
+            <SplideTrack>
+              {ReSolution.itemSlider.map((item, index) => (
+                <SplideSlide key={index}>
+                  <div className="bg-white overflow-hidden relative h-full">
+                    <Image
+                      src={item.photo}
+                      alt={item.title}
+                      width={693}
+                      height={524}
+                      className="w-full h-full object-cover"
+                    />
+                    <h3 className="m-6 bg-tosca py-5 px-6 absolute bottom-0 left-0 text-white">
+                      {item.title}
+                    </h3>
+                  </div>
+                </SplideSlide>
+              ))}
+            </SplideTrack>
           </Splide>
         </div>
       </div>
