@@ -62,7 +62,7 @@ const MenuMobile = (props) => {
                 <button
                   type="button"
                   onClick={() => toggleSubmenu(index)}
-                  className="flex items-center justify-center w-[30px] h-[30px] absolute right-[1rem] top-[35px] transform -translate-y-1/2 z-10 arrow-submenu-md"
+                  className="flex items-center justify-center w-[60px] h-[70px] absolute right-[3px] top-[35px] transform -translate-y-1/2 z-10 arrow-submenu-md"
                 >
                   <svg
                     width="13"
@@ -93,7 +93,7 @@ const MenuMobile = (props) => {
                       <Link
                         onClick={handleHamburgerClick}
                         href={subMenuHref}
-                        className="block px-4 py-2 hover:text-white font-raleway"
+                        className={`block px-4 py-2 hover:text-white font-raleway`}
                       >
                         {subMenuText}
                       </Link>

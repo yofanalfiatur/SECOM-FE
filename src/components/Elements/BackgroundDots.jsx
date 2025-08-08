@@ -53,8 +53,12 @@ const BackgroundDots = ({ dotSize = 5, dotsX = 25, dotsY = 20 }) => {
       updateGradient(mouseX, mouseY);
     };
 
+    // Render awal
     drawDots();
     resizeSvg();
+
+    // Set efek hover default di tengah
+    updateGradient(50, 50);
 
     window.addEventListener("resize", resizeSvg);
     document.addEventListener("mousemove", handleMouseMove);

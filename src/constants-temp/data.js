@@ -103,8 +103,8 @@ export const MenuHeaderMd = [
     ],
   },
   {
-    text: "Residental",
-    href: "/",
+    text: "Residential",
+    href: "/residential",
     icon: "/img/menu-type-2.svg",
   },
   {
@@ -250,32 +250,36 @@ export const FooterDropdown = [
 //////////////////////  Home  ///////////////////////
 export const ReBanner = {
   title: "Every Member of Your Family Need The Best Protection",
-  photo: "/img/temp/photo-h-banner.png",
-  background: "/img/temp/bg-h-banner.jpg",
+  photo: "/img/temp/h-banner-front.png",
+  background: "/img/temp/h-banner-bg.jpg",
   items: [
     {
-      text: "#1 Petierunt uti sibi concilium totius Galliae in diem certam indicere.",
-      top: "67%",
-      left: "6%",
+      text: "If I leave food too long in the microwave, the smoke detector will alert us.",
+      top: "45%",
+      left: "15%",
       maxWidth: "314px",
+      icon: "/img/temp/h-banner-ibu.png",
     },
     {
-      text: "#2 Petierunt uti sibi concilium totius Galliae in diem certam indicere.",
-      top: "35%",
-      left: "18%",
-      maxWidth: "314px",
+      text: "If someone knocks, I don't have to be scared anymore. ",
+      top: "36%",
+      left: "41%",
+      maxWidth: "200px",
+      icon: "/img/temp/h-banner-anak.png",
     },
     {
-      text: "#3 Petierunt uti sibi concilium totius Galliae in diem certam indicere.",
-      top: "27%",
-      left: "50%",
+      text: "Even if I'm home alone, I know help is just one button away.",
+      top: "37%",
+      left: "57%",
       maxWidth: "314px",
+      icon: "/img/temp/h-banner-nenek.png",
     },
     {
-      text: "#4 Petierunt uti sibi concilium totius Galliae in diem certam indicere.",
-      top: "68%",
-      left: "80%",
-      maxWidth: "214px",
+      text: "If anyone tries to break in, I know my family and home are still protected.",
+      top: "50%",
+      left: "70.5%",
+      maxWidth: "314px",
+      icon: "/img/temp/h-banner-bapak.png",
     },
   ],
 };

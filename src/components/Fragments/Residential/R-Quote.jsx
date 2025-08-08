@@ -48,7 +48,7 @@ const ResQuote = () => {
   }, []);
 
   return (
-    <section className="res-quote flex flex-col lg:flex-row bg-tosca relative min-h-[500px]">
+    <section className="res-quote flex flex-col lg:flex-row bg-tosca relative lg:min-h-[500px] overflow-hidden">
       {/* IMAGE SLIDER */}
       <div className="w-full lg:w-[60%] relative z-[1] h-[600px]">
         <Splide
@@ -66,7 +66,7 @@ const ResQuote = () => {
           hasTrack={false}
         >
           {/* Custom Arrow Buttons */}
-          <div className="container h-[600px] mx-auto absolute">
+          <div className="container h-auto lg:h-[600px] mx-auto absolute">
             <div className="splide__arrows w-full z-10">
               <button className="splide__arrow splide__arrow--prev !border-white !bg-transparent !border-[1px] !left-[4vw] !rounded-none !w-[36px] !h-[36px]">
                 <svg
@@ -116,7 +116,7 @@ const ResQuote = () => {
                       width={1840}
                       height={1200}
                       alt={`Quote ${index + 1}`}
-                      className="w-full h-full object-cover absolute top-0 left-0 opacity-100"
+                      className="w-full lg:h-full object-cover absolute top-0 left-0 opacity-100"
                     />
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-[87px] z-0 triangle-shape">
                       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 triangle-shape animated-gradient-bg"></div>
@@ -143,9 +143,9 @@ const ResQuote = () => {
               pagination: false,
               gap: "0px",
               drag: false,
-              height: "600px",
             }}
             aria-label="Text Slider"
+            className="h-[600px]"
           >
             {ReQuote.map((item, index) => (
               <SplideSlide key={index}>

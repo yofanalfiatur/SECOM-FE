@@ -516,7 +516,7 @@ main {
   transform: rotate(3deg) translate(0px, -4px);
 }
 
-.res-banner::after {
+.res-banner__wrap::after {
   content: "";
   background: linear-gradient(
     360deg,

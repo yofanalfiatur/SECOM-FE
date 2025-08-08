@@ -2,8 +2,11 @@
 import { ReTestimonial } from "@/constants-temp/data";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import BackgroundDots from "@/components/Elements/BackgroundDots";
+import useIsDesktop from "@/components/Hooks/useIsDesktop";
 
 const ResTesti = () => {
+  const isDesktop = useIsDesktop();
   const [current, setCurrent] = useState(0);
   const testimonials = ReTestimonial.items;
   const total = testimonials.length;
@@ -17,12 +20,17 @@ const ResTesti = () => {
   };
 
   return (
-    <section className="pt-10 lg:pt-16 pb-6 lg:pb-8 res-testi relative overflow-hidden">
+    <section className="pt-8 lg:pt-16 pb-25 lg:pb-21 res-testi relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-4/12 before:z-[1] before:bg-[linear-gradient(0deg,_#ffffff,_rgba(255,255,255,0)_60%)]">
+      <BackgroundDots
+        dotSize={isDesktop ? 5 : 3}
+        dotsX={isDesktop ? 25 : 12}
+        dotsY={isDesktop ? 15 : 15}
+      />
       <div className="container mx-auto flex flex-col items-center">
-        <h2 className="text-center text-xl lg:text-[45px] font-raleway font-normal text-darkblue">
+        <h2 className="text-center text-[25px] lg:text-[45px] font-raleway font-normal text-darkblue">
           {ReTestimonial.title}
         </h2>
-        <p className="text-center text-lg text-darkblue opacity-80 w-full lg:w-[60%] mt-3 mb-8">
+        <p className="text-center text-sm lg:text-lg font-normal text-darkblue opacity-80 w-full lg:w-[60%] mt-3 mb-10 lg:mb-13">
           {ReTestimonial.desc}
         </p>
 
@@ -57,7 +65,7 @@ const ResTesti = () => {
                 >
                   <div className="relative z-10 flex flex-col items-center wrap-testi">
                     <div
-                      className={`flex flex-col items-center bg-white p-8 transition-all duration-200 ease relative z-[1] min-h-[376px] ${
+                      className={`flex flex-col items-center bg-white py-6 px-8 lg:p-8 relative z-[1] min-h-[376px] ${
                         position === 0 ? "m-1" : "m-[16px]"
                       } `}
                     >
@@ -67,17 +75,26 @@ const ResTesti = () => {
                         viewBox="0 0 60 47"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
+                        className="scale-75 lg:scale-100"
                       >
                         <path
                           d="M21.7337 0L17.6471 22.3113H25.0774V47H0V21.9455L6.6873 0H21.7337ZM56.6564 0L52.5697 22.3113H60V47H34.9226V21.9455L41.6099 0H56.6564Z"
                           fill="#00AAAD"
                         />
                       </svg>
-                      <p className="text-darkblue lg:text-[25px] font-raleway font-normal mb-6">
+                      <p
+                        className={`text-darkblue text-center font-raleway font-normal mt-3 lg:mt-4 mb-3 lg:mb-4 transition-all duration-200 ease ${
+                          position === 0
+                            ? "lg:text-[25px] scale-100 visible opacity-100"
+                            : "scale-0 hidden opacity-0"
+                        }`}
+                      >
                         {item.testimony}
                       </p>
-                      <p className="text-tosca font-semibold">{item.name}</p>
-                      <p className="text-darkblue font-medium">
+                      <p className="text-tosca font-semibold mb-1 font-raleway lg:text-base text-sm">
+                        {item.name}
+                      </p>
+                      <p className="text-darkblue text-sm lg:text-base">
                         {item.location}
                       </p>
                     </div>
@@ -91,10 +108,10 @@ const ResTesti = () => {
           </AnimatePresence>
 
           {/* Navigation Buttons */}
-          <div className="absolute w-full z-[5] top-1/2 -translate-y-1/2 flex justify-between px-2">
+          <div className="absolute w-full z-[5] top-[calc(100%+50px)] lg:top-1/2 -translate-y-1/2 flex justify-between">
             <button
               onClick={prev}
-              className="btn-prev border-tosca bg-white border rounded w-[36px] h-[36px] flex items-center justify-center"
+              className="btn-prev border-tosca bg-white border w-[36px] h-[36px] flex items-center justify-center cursor-pointer relative left-[37%] lg:left-[-60px]"
             >
               <svg
                 width="22"
@@ -112,7 +129,7 @@ const ResTesti = () => {
             </button>
             <button
               onClick={next}
-              className="btn-next border-tosca bg-white border rounded w-[36px] h-[36px] flex items-center justify-center"
+              className="btn-next border-tosca bg-white border w-[36px] h-[36px] flex items-center justify-center cursor-pointer relative right-[37%] lg:right-[-60px]"
             >
               <svg
                 width="22"
