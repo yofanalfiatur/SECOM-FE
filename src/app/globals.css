@@ -530,11 +530,6 @@ main {
   z-index: 0;
 }
 
-.res-banner .res-banner__card {
-  border-radius: 10px;
-  overflow: hidden;
-}
-
 .res-banner .res-banner__card-wrap {
   border: 3px solid;
   border-image-source: radial-gradient(

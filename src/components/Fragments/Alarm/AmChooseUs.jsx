@@ -1,3 +1,5 @@
+"use client";
+
 import { AlarmReason } from "@/constants-temp/data";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
@@ -8,29 +10,62 @@ const AmChoose = () => {
   const [current, setCurrent] = useState(0);
   const total = AlarmReason.items.length;
   const splideRef = useRef(null);
-  const autoplayInterval = 5000; // Change slide every 5 seconds
+  const autoplayInterval = 8000; // Autoplay interval in milliseconds
+  const touchStartX = useRef(null);
+  const cardAreaRef = useRef(null);
 
-  // Autoplay functionality
+  // Autoplay
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prevCurrent) => (prevCurrent + 1) % total);
     }, autoplayInterval);
-
-    // Clean up the timer when the component unmounts
     return () => clearInterval(timer);
   }, [total, autoplayInterval]);
 
-  // Sync Splide with current index
+  // Sync Splide with current
   useEffect(() => {
     if (splideRef.current) {
       splideRef.current.go(current);
     }
   }, [current]);
 
+  // Swipe detection
+  useEffect(() => {
+    const area = cardAreaRef.current;
+    if (!area) return;
+
+    const handleTouchStart = (e) => {
+      touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e) => {
+      if (touchStartX.current === null) return;
+      const endX = e.changedTouches[0].clientX;
+      const diffX = touchStartX.current - endX;
+
+      if (Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          setCurrent((prev) => (prev + 1) % total);
+        } else {
+          setCurrent((prev) => (prev - 1 + total) % total);
+        }
+      }
+      touchStartX.current = null;
+    };
+
+    area.addEventListener("touchstart", handleTouchStart);
+    area.addEventListener("touchend", handleTouchEnd);
+
+    return () => {
+      area.removeEventListener("touchstart", handleTouchStart);
+      area.removeEventListener("touchend", handleTouchEnd);
+    };
+  }, [total]);
+
   return (
-    <section className="flex flex-col relative overflow-hidden am-choose">
+    <section className="flex flex-col relative lg:overflow-hidden am-choose h-[680px] md:h-[750px] lg:h-auto">
       {/* Background image slider */}
-      <div className="flex flex-col h-[693px] relative z-0">
+      <div className="flex flex-co h-[328px] md:h-[400px] lg:h-[693px] relative z-0">
         <Splide
           ref={splideRef}
           options={{
@@ -57,8 +92,11 @@ const AmChoose = () => {
       </div>
 
       {/* Card slider with pagination */}
-      <div className="container mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-end w-full h-full z-[1]">
-        <div className="w-5/12 h-full relative flex flex-col justify-center items-start">
+      <div
+        ref={cardAreaRef} // ⬅️ area untuk swipe
+        className="container mx-auto relative lg:absolute top-[100px] lg:top-1/2 lg:left-1/2 transform lg:-translate-x-1/2 lg:-translate-y-1/2 flex flex-col justify-center lg:items-end w-full h-max lg:h-full z-[1]"
+      >
+        <div className="w-full lg:w-5/12 h-full relative flex flex-col justify-center items-start">
           <AnimatePresence initial={false} mode="popLayout">
             {AlarmReason.items.map((item, index) => {
               const position = (index - current + total) % total;
@@ -79,17 +117,17 @@ const AmChoose = () => {
                   transition={{ duration: 0.4 }}
                 >
                   <div
-                    className={`py-8 pl-10 pr-18 flex flex-col justify-center items-start h-[566px] ${
+                    className={`py-7 pl-7 pr-12 lg:py-8 lg:pl-10 lg:pr-18 flex flex-col justify-center items-start md:h-[430px] lg:h-[566px] ${
                       position === 0 ? "bg-navyblue" : "bg-tosca"
                     }`}
                   >
-                    <p className="text-[#ffffff99] uppercase text-lg tracking-[2px] font-raleway mb-4">
+                    <p className="text-[#ffffff99] uppercase text-sm lg:text-lg tracking-[2px] font-raleway mb-3 lg:mb-4">
                       {AlarmReason.title}
                     </p>
-                    <p className="text-2xl lg:text-[45px] font-raleway font-normal text-white leading-[1.1]">
+                    <p className="text-[25px] lg:text-[45px] font-raleway font-normal text-white lg:leading-[1.1]">
                       {item.title}
                     </p>
-                    <p className="text-lg text-white opacity-80 mt-3">
+                    <p className="leading-[1.7] lg:leading-[1.5] lg:text-lg text-white opacity-80 mt-3">
                       {item.desc}
                     </p>
                   </div>
@@ -100,7 +138,7 @@ const AmChoose = () => {
         </div>
 
         {/* Pagination Dots */}
-        <div className="flex flex-col justify-center gap-1 mt-6 absolute top-1/2 right-2 transform -translate-x-1/2 z-10">
+        <div className="flex flex-col justify-center gap-1 mt-6 absolute top-1/2 right-7 lg:right-2 transform -translate-x-1/2 z-10">
           {AlarmReason.items.map((_, index) => (
             <button
               key={index}

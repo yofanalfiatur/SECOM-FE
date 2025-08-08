@@ -252,7 +252,7 @@ export const ReBanner = {
   title: "Every Member of Your Family Need The Best Protection",
   photo: "/img/temp/photo-h-banner.png",
   background: "/img/temp/bg-h-banner.jpg",
-  cardBanner: [
+  items: [
     {
       text: "#1 Petierunt uti sibi concilium totius Galliae in diem certam indicere.",
       top: "67%",

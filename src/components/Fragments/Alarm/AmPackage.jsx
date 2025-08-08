@@ -65,14 +65,14 @@ const AmPackage = () => {
               >
                 <button
                   onClick={() => handleTabClick(index)}
-                  className={`w-full pt-4 pb-3 lg:px-6 lg:pb-5 lg:pt-8 flex flex-col cursor-pointer relative z-10 border-b-[4px] lg:border-b-[9px] hover:bg-[#00AAAD33] transition-all duration-200 ease ${
+                  className={`w-full pt-4 pb-3 lg:px-6 lg:pb-5 lg:pt-8 flex flex-col items-center cursor-pointer relative z-10 border-b-[4px] lg:border-b-[9px] hover:bg-[#00AAAD33] transition-all duration-200 ease ${
                     activeTab === index
                       ? " border-[#00AAAD]"
                       : "bg-transparent border-transparent"
                   }`}
                 >
                   <p
-                    className={`text-xs lg:text-xl tracking-[2px] lg:tracking-normal font-raleway font-normal ${
+                    className={`text-xs lg:text-xl text-center uppercase tracking-[2px] lg:tracking-normal font-raleway font-normal ${
                       activeTab === index ? "text-navyblue" : "text-slate-500"
                     }`}
                   >
