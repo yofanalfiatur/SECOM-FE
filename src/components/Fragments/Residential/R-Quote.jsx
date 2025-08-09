@@ -48,9 +48,9 @@ const ResQuote = () => {
   }, []);
 
   return (
-    <section className="res-quote flex flex-col lg:flex-row bg-tosca relative lg:min-h-[500px] overflow-hidden">
+    <section className="pb-20 lg:pb-0 flex flex-col lg:flex-row bg-tosca relative overflow-hidden res-quote">
       {/* IMAGE SLIDER */}
-      <div className="w-full lg:w-[60%] relative z-[1] h-[600px]">
+      <div className="w-full lg:w-[60%] relative z-[1] flex flex-col">
         <Splide
           ref={imageSliderRef}
           options={{
@@ -60,15 +60,15 @@ const ResQuote = () => {
             arrows: true,
             pagination: false,
             gap: "0px",
-            height: "600px",
           }}
           aria-label="Image Slider"
           hasTrack={false}
+          className=""
         >
           {/* Custom Arrow Buttons */}
-          <div className="container h-auto lg:h-[600px] mx-auto absolute">
+          <div className="w-full mx-auto absolute top-[200%] sm:top-[180%] lg:top-1/2 lg:transform lg:-translate-y-1/2 z-10">
             <div className="splide__arrows w-full z-10">
-              <button className="splide__arrow splide__arrow--prev !border-white !bg-transparent !border-[1px] !left-[4vw] !rounded-none !w-[36px] !h-[36px]">
+              <button className="splide__arrow splide__arrow--prev !border-white !bg-transparent !border-[1px] !left-[37.5%] lg:!left-[4vw] !rounded-none !w-[36px] !h-[36px]">
                 <svg
                   width="22"
                   height="15"
@@ -83,7 +83,7 @@ const ResQuote = () => {
                   />
                 </svg>
               </button>
-              <button className="splide__arrow splide__arrow--next !border-white !bg-transparent !border-[1px] !left-[95vw] !rounded-none !w-[36px] !h-[36px]">
+              <button className="splide__arrow splide__arrow--next !border-white !bg-transparent !border-[1px] !left-[52.5%] lg:!left-[95vw] !rounded-none !w-[36px] !h-[36px]">
                 <svg
                   width="22"
                   height="15"
@@ -104,7 +104,10 @@ const ResQuote = () => {
           {/* Image Slides */}
           <SplideTrack className="res-quote__track">
             {ReQuote.map((item, index) => (
-              <SplideSlide key={index}>
+              <SplideSlide
+                key={index}
+                className="h-[300px] lg:h-[600px] flex flex-col"
+              >
                 <div className="flex justify-center h-full items-center w-full bg-gray-200">
                   <Link
                     key={index}
@@ -116,7 +119,7 @@ const ResQuote = () => {
                       width={1840}
                       height={1200}
                       alt={`Quote ${index + 1}`}
-                      className="w-full lg:h-full object-cover absolute top-0 left-0 opacity-100"
+                      className="w-full h-full object-cover absolute top-0 left-0 opacity-100"
                     />
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-[87px] z-0 triangle-shape">
                       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 triangle-shape animated-gradient-bg"></div>
@@ -132,8 +135,8 @@ const ResQuote = () => {
       </div>
 
       {/* TEXT SLIDER */}
-      <div className="relative lg:absolute left-[50%] transform -translate-x-[50%] z-[0] container mx-auto flex flex-col items-end h-full">
-        <div className="w-full lg:w-[37.5%] h-full">
+      <div className="relative lg:absolute lg:left-1/2 lg:transform lg:-translate-x-[50%] z-[0] container mx-auto flex flex-col items-end h-full">
+        <div className="w-full lg:w-[37.5%] h-full flex flex-col justify-center">
           <Splide
             ref={textSliderRef}
             options={{
@@ -145,25 +148,25 @@ const ResQuote = () => {
               drag: false,
             }}
             aria-label="Text Slider"
-            className="h-[600px]"
+            className=""
           >
             {ReQuote.map((item, index) => (
-              <SplideSlide key={index}>
-                <div className="flex flex-col justify-center items-start py-8 pl-16 pr-20 h-full">
+              <SplideSlide key={index} className="!h-full">
+                <div className="flex flex-col justify-center items-start pt-6 pb-4 px-0 lg:py-8 lg:pl-16 lg:pr-20 h-full">
                   <svg
                     width="60"
                     height="47"
                     viewBox="0 0 60 47"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="mt-0 mb-8"
+                    className="mt-0 mb-3 lg:mb-8 scale-85 lg:scale-100"
                   >
                     <path
                       d="M21.7337 0L17.6471 22.3113H25.0774V47H0V21.9455L6.6873 0H21.7337ZM56.6564 0L52.5697 22.3113H60V47H34.9226V21.9455L41.6099 0H56.6564Z"
                       fill="#00529C"
                     />
                   </svg>
-                  <p className="lg:text-[35px] font-normal font-raleway leading-[1.4] text-white">
+                  <p className="text-[25px] lg:text-[35px] font-normal font-raleway leading-[1.4] text-white">
                     {item.text}
                   </p>
                 </div>

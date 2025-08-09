@@ -414,17 +414,17 @@ export const ReSolution = {
 export const ReQuote = [
   {
     thumb: "/img/temp/h-quote-1.jpg",
-    linkVideo: "https://youtu.be/BGIfSu1T_sY?list=RDqbFsiN9M9a4",
+    linkVideo: "https://youtu.be/X-EK60rmcQs?list=RDX-EK60rmcQs",
     text: "Quisque ut dolor gravida, placerat libero vel, euismod. Fabio vel iudice vincam, sunt in culpa qui officia. Magna pars studiorum.",
   },
   {
     thumb: "/img/temp/alarm-reason-bg.jpg",
-    linkVideo: "https://youtu.be/qbFsiN9M9a4?list=RDqbFsiN9M9a4",
+    linkVideo: "https://youtu.be/WOGbsA5t9kk?list=RDWOGbsA5t9kk",
     text: "Quisque ut dolor gravida, placerat libero vel, euismod. Fabio vel iudice vincam, sunt in culpa qui officia. Magna pars studiorum.",
   },
   {
     thumb: "/img/temp/alarm-banner-bg-desktop.jpg",
-    linkVideo: "https://youtu.be/W5apuB0FSIQ?list=RDqbFsiN9M9a4",
+    linkVideo: "https://youtu.be/tGv7CUutzqU?list=RDWOGbsA5t9kk",
     text: "Quisque ut dolor gravida, placerat libero vel, euismod. Fabio vel iudice vincam, sunt in culpa qui officia. Magna pars studiorum.",
   },
 ];
