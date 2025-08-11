@@ -247,7 +247,7 @@ export const FooterDropdown = [
   },
 ];
 
-//////////////////////  Home  ///////////////////////
+//////////////////////  Residential  ///////////////////////
 export const ReBanner = {
   title: "Every Member of Your Family Need The Best Protection",
   photo: "/img/temp/h-banner-front.png",
@@ -354,21 +354,24 @@ export const ReSurvey = {
 };
 
 export const ReAbout = {
-  title: "How SECOM protect You and Your Family",
-  desc: "Idque Caesaris facere voluntate liceret: sese habere. Ut enim ad minim veniam, quis nostrud exercitation. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Morbi fringilla convallis sapien, id pulvinar odio volutpat. Nec dubitamus multa iter quae et nos invenerat. Paullum deliquit, ponderibus modulisque suis ratio utitur. Ullamco laboris nisi ut aliquid ex ea commodi consequat.",
+  title: "How SECOM Protects You",
+  desc: "SECOM goes beyond alarms.<br>We combine smart technology with human response to truly protect what matters most.",
   photo: "/img/temp/h-about-photo.jpg",
   items: [
     {
-      icon: "/img/temp/h-ab-icon-1.svg",
-      title: "Intelligent and Secured Platform",
+      icon: "/img/temp/res-protect-spots.png",
+      title:
+        "Instantly spots intrusions, fire, or suspicious activity, even when you're not home.",
     },
     {
-      icon: "/img/temp/h-ab-icon-2.svg",
-      title: "Protected by Professionals",
+      icon: "/img/temp/res-protect-video.png",
+      title:
+        "We only view live video during emergencies, ensuring safety without compromising your privacy.",
     },
     {
-      icon: "/img/temp/h-ab-icon-3.svg",
-      title: "Unique Smart Features and Function",
+      icon: "/img/temp/res-protect-physical.png",
+      title:
+        "In a emergency, we don't wait. Our physical response personnel is on the ground. Fast.",
     },
   ],
   btnAbout: {
@@ -379,29 +382,29 @@ export const ReAbout = {
 };
 
 export const ReSolution = {
-  hint: "Our Solution",
-  title: "Quisque ut dolor gravida, placerat libero vel, euismod.",
-  desc: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur",
+  hint: "Our Solutions",
+  title: "Secure Every Corner of Your Home",
+  desc: "Each room has different risks. SECOM helps you place the right protection in the right place.",
   itemSlider: [
     {
       photo: "/img/temp/h-slide-solution.jpg",
       title:
-        "#1Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
+        "<b>Smart Video Camera - Outdoor</b><br>Monitor your gates, garage, and yard with smart detection and two-way audio.",
     },
     {
       photo: "/img/temp/alarm-reason-bg.jpg",
       title:
-        "#2Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
+        "<b>PIR Cam Indoor - Living Room</b><br>Watch over your home's central space with reliable motion-sensing protection.",
     },
     {
       photo: "/img/temp/h-slide-solution.jpg",
       title:
-        "#3Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
+        "<b>Door Contact - Windows</b><br>Protect windows from silent entry with smart magnetic sensors.",
     },
     {
       photo: "/img/temp/alarm-reason-bg.jpg",
       title:
-        "#4Gallia est omnis divisa in partes tres, quarum. Idque Caesaris facere voluntate liceret: sese habere.",
+        "<b>Smoke Detector - Clean Kitchen</b><br>Even in the cleanest kitchens, accidents can happen. Stay alert with a smoke detector.",
     },
   ],
   btnSolution: {

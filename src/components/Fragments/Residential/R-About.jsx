@@ -27,9 +27,11 @@ const ResAbout = () => {
           />
         </div>
         <div className="w-full lg:w-[55%] relative flex flex-col pt-6 lg:pt-16 l:pb-16 lg:pl-16 lg:pr-2 after:content-[''] after:lg:content-none after:absolute after:w-[200%] after:h-[1px] after:bg-[#13223333] after:top-[0%] after:left-[-50%] after:-translate-y-1/2">
-          <div className="flex flex-col text-sm lg:text-lg text-darkblue leading-[1.7] lg:leading-[1.5]">
-            {ReAbout.desc}
-          </div>
+          <div
+            className="flex flex-col text-sm lg:text-lg text-darkblue leading-[1.7] lg:leading-[1.5]"
+            dangerouslySetInnerHTML={{ __html: ReAbout.desc }}
+          />
+
           <div className="flex flex-col mt-5 mb-6 lg:mb-12 gap-6">
             {ReAbout.items.map((item, index) => (
               <div

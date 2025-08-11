@@ -33,7 +33,7 @@ const ResSolution = () => {
             options={{
               type: "loop",
               perPage: 1,
-              autoplay: true,
+              autoplay: false,
               interval: 4000,
               pauseOnHover: true,
               arrows: true,
@@ -80,8 +80,8 @@ const ResSolution = () => {
             </div>
             <SplideTrack>
               {ReSolution.itemSlider.map((item, index) => (
-                <SplideSlide key={index}>
-                  <div className="bg-white overflow-hidden relative h-full flex flex-col">
+                <SplideSlide key={index} className="flex flex-col">
+                  <div className="bg-white overflow-hidden relative h-full flex flex-col w-full">
                     <Image
                       src={item.photo}
                       alt={item.title}
@@ -89,9 +89,12 @@ const ResSolution = () => {
                       height={524}
                       className="w-full h-full object-cover"
                     />
-                    <p className="lg:m-6 bg-tosca p-4 lg:py-5 lg:px-6 lg:absolute lg:bottom-0 lg:left-0 text-white text-sm lg:text-base leading-[1.7] lg:leading-[1.5]">
-                      {item.title}
-                    </p>
+                    <div className="flex flex-col lg:p-6 lg:absolute lg:bottom-0 lg:left-0 w-full">
+                      <div
+                        className=" bg-tosca p-4 lg:py-5 lg:px-6 text-white text-sm lg:text-base leading-[1.7] lg:leading-[1.5] w-full"
+                        dangerouslySetInnerHTML={{ __html: item.title }}
+                      />
+                    </div>
                   </div>
                 </SplideSlide>
               ))}
