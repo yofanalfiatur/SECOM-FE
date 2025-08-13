@@ -1,12 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { ReSolution } from "@/constants-temp/data";
 import ButtonSecondary from "@/components/Elements/ButtonSecondary";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import { useTranslations } from "next-intl";
 
 const ResSolution = () => {
+  const t = useTranslations();
+  const ReSolution = t.raw("ReSolution");
+
   return (
     <section className="pt-11 pb-19 lg:py-11 res-sol bg-navyblue overflow-hidden">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between gap-8">
@@ -90,10 +93,15 @@ const ResSolution = () => {
                       className="w-full h-full object-cover"
                     />
                     <div className="flex flex-col lg:p-6 lg:absolute lg:bottom-0 lg:left-0 w-full">
-                      <div
-                        className=" bg-tosca p-4 lg:py-5 lg:px-6 text-white text-sm lg:text-base leading-[1.7] lg:leading-[1.5] w-full"
-                        dangerouslySetInnerHTML={{ __html: item.title }}
-                      />
+                      <div className="bg-tosca p-4 lg:py-5 lg:px-6 flex flex-col gap-1 w-full">
+                        <p className="text-white text-sm lg:text-lg font-medium leading-[1.7] lg:leading-[1.5]">
+                          {item.title}
+                        </p>
+                        <div
+                          className="text-white text-sm lg:text-base leading-[1.7] lg:leading-[1.5] "
+                          dangerouslySetInnerHTML={{ __html: item.desc }}
+                        />
+                      </div>
                     </div>
                   </div>
                 </SplideSlide>

@@ -1,12 +1,16 @@
 "use client";
 
-import { AlarmReason } from "@/constants-temp/data";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const AmChoose = () => {
+  const t = useTranslations();
+  const AlarmReason = t.raw("AlarmReason");
+
   const [current, setCurrent] = useState(0);
   const total = AlarmReason.items.length;
   const splideRef = useRef(null);
@@ -80,12 +84,14 @@ const AmChoose = () => {
         >
           {AlarmReason.items.map((item, index) => (
             <SplideSlide key={index} className="relative w-full h-full">
-              <div
-                className="w-full h-[300px] md:h-[400px] lg:h-[693px] bg-cover bg-center bg-no-repeat"
-                style={{
-                  backgroundImage: `url(${item.background})`,
-                }}
-              ></div>
+              <Image
+                src={item.image}
+                alt=""
+                width={1920}
+                height={693}
+                className="w-full h-[300px] md:h-[400px] lg:h-[693px] object-cover object-center"
+                sizes="100vw"
+              />
             </SplideSlide>
           ))}
         </Splide>
@@ -93,7 +99,7 @@ const AmChoose = () => {
 
       {/* Card slider with pagination */}
       <div
-        ref={cardAreaRef} // ⬅️ area untuk swipe
+        ref={cardAreaRef} // swipe area
         className="container mx-auto relative lg:absolute top-[100px] lg:top-1/2 lg:left-1/2 transform lg:-translate-x-1/2 lg:-translate-y-1/2 flex flex-col justify-center lg:items-end w-full h-max lg:h-full z-[1]"
       >
         <div className="w-full lg:w-5/12 h-full relative flex flex-col justify-center items-start">
@@ -117,7 +123,7 @@ const AmChoose = () => {
                   transition={{ duration: 0.4 }}
                 >
                   <div
-                    className={`py-7 pl-7 pr-12 lg:py-8 lg:pl-10 lg:pr-18 flex flex-col justify-center items-start md:h-[430px] lg:h-[566px] ${
+                    className={`py-7 pl-7 pr-12 lg:py-8 lg:pl-10 lg:pr-18 flex flex-col justify-center items-start h-[450px] md:h-[430px] lg:h-[566px] ${
                       position === 0 ? "bg-navyblue" : "bg-tosca"
                     }`}
                   >

@@ -1,14 +1,17 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { ReQuote } from "@/constants-temp/data";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import Image from "next/image";
 import "glightbox/dist/css/glightbox.min.css";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 const ResQuote = () => {
+  const t = useTranslations();
+  const ReQuote = t.raw("ReQuote");
+
   const imageSliderRef = useRef(null);
   const textSliderRef = useRef(null);
 
@@ -54,10 +57,10 @@ const ResQuote = () => {
         <Splide
           ref={imageSliderRef}
           options={{
-            type: "loop",
+            type: ReQuote.length > 1 ? "loop" : "slide",
             perPage: 1,
             perMove: 1,
-            arrows: true,
+            arrows: ReQuote.length > 1 ? true : false,
             pagination: false,
             gap: "0px",
           }}
@@ -115,7 +118,11 @@ const ResQuote = () => {
                     className="glightbox w-full h-full relative"
                   >
                     <Image
-                      src={item.thumb}
+                      src={
+                        item.thumb && item.thumb.trim() !== ""
+                          ? item.thumb
+                          : "/img/thumb-default-blue.jpg"
+                      }
                       width={1840}
                       height={1200}
                       alt={`Quote ${index + 1}`}
@@ -140,7 +147,7 @@ const ResQuote = () => {
           <Splide
             ref={textSliderRef}
             options={{
-              type: "loop",
+              type: ReQuote.length > 1 ? "loop" : "slide",
               perPage: 1,
               arrows: false,
               pagination: false,

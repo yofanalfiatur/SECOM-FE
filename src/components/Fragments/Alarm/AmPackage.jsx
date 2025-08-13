@@ -1,16 +1,20 @@
 "use client";
-import { AlarmPackage } from "@/constants-temp/data";
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
+import { useTranslations } from "next-intl";
 
 const AmPackage = () => {
+  const t = useTranslations();
+  const AlarmPackage = t.raw("AlarmPackage");
+  const Packages = t.raw("Packages");
+
   const isDesktop = useIsDesktop();
   const [activeTab, setActiveTab] = useState(0); // 0 = Rent, 1 = Buy
 
   // Filter items based on the active tab
-  const filteredItems = AlarmPackage.items.filter((item) =>
+  const filteredItems = Packages.filter((item) =>
     activeTab === 0 ? item.isRent === true : item.isRent === false
   );
 
@@ -140,38 +144,44 @@ const AmPackage = () => {
                             </span>
                           </div>
 
-                          <div className="bg-[#CE2129] relative z-[1] text-white px-3 py-[4px] rounded text-sm flex flex-col items-center">
-                            <svg
-                              width="13"
-                              height="13"
-                              viewBox="0 0 13 13"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="absolute top-1/2 -translate-y-1/2 left-[-6px]"
-                            >
-                              <circle
-                                cx="6.30964"
-                                cy="6.30964"
-                                r="6.30964"
-                                fill="#00529C"
-                              />
-                              <path
-                                d="M8.43516 6.06586V6.97445H6.94608V8.58972H5.93654V6.97445H4.44746V6.06586H5.93654V4.45059H6.94608V6.06586H8.43516Z"
-                                fill="white"
-                              />
-                            </svg>
-                            <span className="text-[10px] leading-[1] mb-1">
-                              Service Fee Starting From
-                            </span>
-                            <div className="flex flex-row items-start">
-                              <span className="text-[8px] leading-[1] mr-[1px] mt-[1px]">
-                                IDR
-                              </span>
-                              <span className="text-sm leading-[1] font-bold">
-                                {item.serviceFee}
-                              </span>
-                            </div>
-                          </div>
+                          {item.serviceFee && item.serviceFee.length > 0 && (
+                            <>
+                              {item.serviceFee.map((sub, index) => (
+                                <div className="bg-[#CE2129] relative z-[1] text-white px-3 py-[4px] rounded text-sm flex flex-col items-center">
+                                  <svg
+                                    width="13"
+                                    height="13"
+                                    viewBox="0 0 13 13"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="absolute top-1/2 -translate-y-1/2 left-[-6px]"
+                                  >
+                                    <circle
+                                      cx="6.30964"
+                                      cy="6.30964"
+                                      r="6.30964"
+                                      fill="#00529C"
+                                    />
+                                    <path
+                                      d="M8.43516 6.06586V6.97445H6.94608V8.58972H5.93654V6.97445H4.44746V6.06586H5.93654V4.45059H6.94608V6.06586H8.43516Z"
+                                      fill="white"
+                                    />
+                                  </svg>
+                                  <span className="text-[10px] leading-[1] mb-1">
+                                    {sub.text}
+                                  </span>
+                                  <div className="flex flex-row items-start">
+                                    <span className="text-[8px] leading-[1] mr-[1px] mt-[1px]">
+                                      IDR
+                                    </span>
+                                    <span className="text-sm leading-[1] font-bold">
+                                      {sub.fee}
+                                    </span>
+                                  </div>
+                                </div>
+                              ))}
+                            </>
+                          )}
                         </div>
                         <p className="text-darkblue">{item.desc}</p>
                       </div>

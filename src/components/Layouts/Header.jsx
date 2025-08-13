@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import HeaderTop from "../Fragments/Header/HeaderTop";
 import MenuDesktop from "../Fragments/Header/MenuDesktop";
 import MenuMobile from "../Fragments/Header/MenuMobile";

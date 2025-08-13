@@ -1,12 +1,15 @@
 "use client";
-import { ReBanner } from "@/constants-temp/data";
 
 import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import Image from "next/image";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
+import { useTranslations } from "next-intl";
 
 const ResBanner = () => {
+  const t = useTranslations();
+  const ReBanner = t.raw("ReBanner");
+
   const isDesktop = useIsDesktop();
   return (
     <>

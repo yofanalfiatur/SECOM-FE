@@ -2,13 +2,17 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { AlarmCorners } from "@/constants-temp/data";
 import ButtonPrimary from "@/components/Elements/ButtonPrimary";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import { useTranslations } from "next-intl";
 
 const AmCorner = () => {
+  const t = useTranslations();
+  const AlarmCorners = t.raw("AlarmCorners");
+  const ProductDetails = t.raw("ProductDetails");
+
   const isDesktop = useIsDesktop();
   const [activeIndex, setActiveIndex] = useState(null); // index of hovered pin
   const [cardEnabled, setCardEnabled] = useState(null); // delay trigger
@@ -54,7 +58,7 @@ const AmCorner = () => {
                 height={700}
                 className="w-full h-auto relative z-0"
               />
-              {AlarmCorners.items.map((item, index) => (
+              {ProductDetails.map((item, index) => (
                 <div
                   key={index}
                   className={`absolute flex flex-col max-w-max -translate-x-1/2 -translate-y-1/2 ${
@@ -110,7 +114,7 @@ const AmCorner = () => {
                         <p className="text-darkblue text-sm font-raleway mb-2">
                           {item.title}
                         </p>
-                        <p className="text-darkblue text-xs">{item.desc}</p>
+                        <p className="text-darkblue text-xs">{item.subtitle}</p>
                       </div>
                     </div>
 

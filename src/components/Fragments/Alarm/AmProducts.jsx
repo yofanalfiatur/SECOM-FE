@@ -2,14 +2,17 @@
 
 import RadialGridCard from "@/components/Elements/RadialGridCard";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
-import { AlarmProduct } from "@/constants-temp/data";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css"; // default theme
+import "@splidejs/react-splide/css";
+import { useTranslations } from "next-intl";
 
 const AmProducts = () => {
   const isDesktop = useIsDesktop();
+  const t = useTranslations();
+  const ProductDetails = t.raw("ProductDetails");
+  const AlarmProduct = t.raw("AlarmProduct");
 
   return (
     <section className="pt-10 pb-6 lg:pt-20 lg:pb-26 bg-navyblue">
@@ -25,7 +28,7 @@ const AmProducts = () => {
         {isDesktop ? (
           <div className="flex flex-col am-products__grid">
             <ul className="flex flex-row flex-wrap justify-center gap-4">
-              {AlarmProduct.products.map((item, index) => (
+              {ProductDetails.map((item, index) => (
                 <li
                   key={index}
                   className="w-[32.5%] relative flex flex-col min-h-[500px] group"
@@ -40,7 +43,7 @@ const AmProducts = () => {
                         {item.title}
                       </p>
                       <p className="text-white text-center mt-2 mb-10 w-[80%] min-h-[80px]">
-                        {item.desc}
+                        {item.subtitle}
                       </p>
                       <Image
                         src={item.image}
@@ -72,7 +75,7 @@ const AmProducts = () => {
               }}
               className="[&_.splide__track]:!overflow-visible w-full"
             >
-              {AlarmProduct.products.map((item, index) => (
+              {ProductDetails.map((item, index) => (
                 <SplideSlide key={index}>
                   <div className="relative flex flex-col group min-h-[350px] bg-[#012146] pt-7 pb-6 px-8">
                     <Link
@@ -84,7 +87,7 @@ const AmProducts = () => {
                           {item.title}
                         </p>
                         <p className="text-white text-center mt-1 mb-8 w-[80%] text-sm">
-                          {item.desc}
+                          {item.subtitle}
                         </p>
                         <Image
                           src={item.image}

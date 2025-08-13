@@ -1,13 +1,19 @@
 "use client";
 
-import useActiveLanguage from "@/components/Hooks/useActiveLanguage";
-import { HeaderButton, HTop, MenuHeaderMd } from "@/constants-temp/data";
+import { useTranslations, useLocale } from "next-intl";
+import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useState } from "react";
 
 const MenuMobile = (props) => {
-  const { isLanguageActive } = useActiveLanguage();
+  const t = useTranslations();
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+  const HeaderButton = t.raw("HeaderButton");
+  const HTop = t.raw("HTop");
+  const MenuHeaderMd = t.raw("MenuHeaderMd");
 
   const { handleHamburgerClick } = props;
 
@@ -16,24 +22,87 @@ const MenuMobile = (props) => {
   const toggleSubmenu = (index) => {
     setOpenSubmenuIndex((prev) => (prev === index ? null : index));
   };
+
+  // Get current locale and available locales
+  const currentLocale = locale;
+  const availableLocales = ["id", "en"];
+
+  // Function to get locale display name
+  const getLocaleDisplayName = (localeCode) => {
+    // Return locale code in uppercase (ID or EN)
+    return localeCode.toUpperCase();
+  };
+
+  // Function to get locale flag
+  const getLocaleFlag = (localeCode) => {
+    if (localeCode === "id") return "/img/flag-id.svg";
+    if (localeCode === "en") return "/img/flag-en.svg";
+    return "/img/flag-en.svg";
+  };
+
+  // Function to handle language change
+  const handleLanguageChange = (newLocale) => {
+    if (newLocale === currentLocale) return;
+
+    try {
+      // Remove current locale from pathname
+      let newPath = pathname;
+      if (currentLocale !== "id") {
+        // id is default, so no prefix
+        newPath = pathname.replace(`/${currentLocale}`, "");
+      }
+
+      // Add new locale prefix if not default (id)
+      if (newLocale !== "id") {
+        newPath = `/${newLocale}${newPath}`;
+      }
+
+      // Ensure path starts with /
+      if (!newPath.startsWith("/")) {
+        newPath = `/${newPath}`;
+      }
+
+      // Navigate to new path
+      router.push(newPath);
+    } catch (error) {
+      console.error("Error changing language:", error);
+      // Fallback: simple redirect
+      if (newLocale === "id") {
+        router.push("/");
+      } else {
+        router.push(`/${newLocale}`);
+      }
+    }
+  };
+
+  // Check if language is active
+  const isLanguageActive = (localeCode) => {
+    return currentLocale === localeCode;
+  };
+
   return (
     <>
       {/* language Mobile */}
       <div className="flex flex-row border-b-[1px] border-[#13223333]  header__lang-md">
-        {HTop.language.map((item, index) => (
-          <Link
-            href={item.href}
+        {availableLocales.map((localeCode, index) => (
+          <button
             key={index}
-            onClick={handleHamburgerClick}
+            onClick={() => handleLanguageChange(localeCode)}
             className={`w-1/2 border-r-[1px] border-[#13223333] relative py-4 header__menu__link flex flex-row items-center justify-center gap-2 ${
-              isLanguageActive(item.text) ? "active-md" : ""
+              isLanguageActive(localeCode) ? "active-md" : ""
             }`}
+            disabled={isLanguageActive(localeCode)}
           >
-            <Image src={item.icon} alt={item.text} width={20} height={14} />
+            <Image
+              src={getLocaleFlag(localeCode)}
+              alt={getLocaleDisplayName(localeCode)}
+              width={20}
+              height={14}
+            />
             <span className="uppercase tracking-[2px] font-raleway font-medium leading-none text-lg text-darkblue">
-              {item.text}
+              {getLocaleDisplayName(localeCode)}
             </span>
-          </Link>
+          </button>
         ))}
       </div>
 

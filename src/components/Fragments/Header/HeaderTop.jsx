@@ -1,33 +1,81 @@
 "use client";
-import { HTop } from "../../../constants-temp/data";
-
-import useActiveLanguage from "@/components/Hooks/useActiveLanguage";
-
-import { useState, useMemo } from "react";
-// import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
+import { useRouter, usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 
 const HeaderTop = () => {
-  // const pathname = usePathname();
+  const t = useTranslations();
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
   const [isHovered, setIsHovered] = useState(false);
 
-  const { isLanguageActive } = useActiveLanguage();
+  const HTop = t.raw("HTop");
 
-  // // check active language based on pathname
-  // const activeLanguage = useMemo(() => {
-  //   // if pathname starts with /id/ or /id
-  //   if (pathname.startsWith("/id/") || pathname === "/id") {
-  //     return "ID";
-  //   }
-  //   // if pathname starts with /en/ or /en
-  //   return "EN";
-  // }, [pathname]);
+  // Get current locale and available locales
+  const currentLocale = locale;
+  const availableLocales = ["id", "en"];
 
-  // // Function for checking active language
-  // const isLanguageActive = (langCode) => {
-  //   return activeLanguage === langCode;
-  // };
+  // Function to get locale display name using LocalSwitcher
+  const getLocaleDisplayName = (localeCode) => {
+    // Return locale code in uppercase (ID or EN)
+    return localeCode.toUpperCase();
+  };
+
+  // Function to get locale flag
+  const getLocaleFlag = (localeCode) => {
+    if (localeCode === "id") return "/img/flag-id.svg";
+    if (localeCode === "en") return "/img/flag-en.svg";
+    return "/img/flag-en.svg";
+  };
+
+  // Function to handle language change
+  const handleLanguageChange = (newLocale) => {
+    if (newLocale === currentLocale) return;
+
+    try {
+      // Remove current locale from pathname
+      let newPath = pathname;
+      if (currentLocale !== "id") {
+        // id is default, so no prefix
+        newPath = pathname.replace(`/${currentLocale}`, "");
+      }
+
+      // Add new locale prefix if not default (id)
+      if (newLocale !== "id") {
+        newPath = `/${newLocale}${newPath}`;
+      }
+
+      // Ensure path starts with /
+      if (!newPath.startsWith("/")) {
+        newPath = `/${newPath}`;
+      }
+
+      // Navigate to new path
+      router.push(newPath);
+    } catch (error) {
+      console.error("Error changing language:", error);
+      // Fallback: simple redirect
+      if (newLocale === "id") {
+        router.push("/");
+      } else {
+        router.push(`/${newLocale}`);
+      }
+    }
+  };
+
+  // Check if language is active
+  const isLanguageActive = (localeCode) => {
+    return currentLocale === localeCode;
+  };
+
+  // Debug logging
+  useEffect(() => {
+    console.log("Current locale:", currentLocale);
+    console.log("Current pathname:", pathname);
+  }, [currentLocale, pathname]);
 
   return (
     <>
@@ -38,33 +86,31 @@ const HeaderTop = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            {HTop.language.map((item, index) => {
-              const langCode = item.text; // 'EN' or 'ID'
-
-              return (
-                <li
-                  className={`lang-option ${
-                    isLanguageActive(langCode) ? "active" : ""
-                  }`}
-                  key={index}
+            {availableLocales.map((localeCode, index) => (
+              <li
+                className={`lang-option ${
+                  isLanguageActive(localeCode) ? "active" : ""
+                }`}
+                key={index}
+              >
+                <button
+                  onClick={() => handleLanguageChange(localeCode)}
+                  className="flex flex-row items-center gap-2 lang-link cursor-pointer"
+                  disabled={isLanguageActive(localeCode)}
+                  title={`Switch to ${getLocaleDisplayName(localeCode)}`}
                 >
-                  <Link
-                    href={item.href}
-                    className="flex flex-row items-center gap-2 lang-link"
-                  >
-                    <Image
-                      src={item.icon}
-                      alt={item.text}
-                      width={20}
-                      height={14}
-                    />
-                    <span className="font-raleway text-[14px] text-darkblue">
-                      {item.text}
-                    </span>
-                  </Link>
-                </li>
-              );
-            })}
+                  <Image
+                    src={getLocaleFlag(localeCode)}
+                    alt={getLocaleDisplayName(localeCode)}
+                    width={20}
+                    height={14}
+                  />
+                  <span className="font-raleway text-[14px] text-darkblue">
+                    {getLocaleDisplayName(localeCode)}
+                  </span>
+                </button>
+              </li>
+            ))}
           </ul>
           <svg
             width="12"
@@ -72,6 +118,9 @@ const HeaderTop = () => {
             viewBox="0 0 12 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className={`transition-transform duration-200 ${
+              isHovered ? "rotate-180" : ""
+            }`}
           >
             <path
               d="M6.17202 6.41228L11.482 0.839283C11.5707 0.746294 11.6201 0.622753 11.6201 0.494282C11.6201 0.365812 11.5707 0.242271 11.482 0.149283L11.476 0.143282C11.433 0.0980473 11.3813 0.0620278 11.324 0.037414C11.2667 0.0128003 11.2049 0.000107252 11.1425 0.000107247C11.0801 0.000107241 11.0184 0.0128003 10.9611 0.037414C10.9037 0.0620278 10.852 0.0980473 10.809 0.143282L5.80902 5.39128L0.811022 0.143281C0.768049 0.0980464 0.716323 0.0620269 0.65899 0.0374131C0.601657 0.0127994 0.539916 0.00010632 0.477522 0.000106314C0.415129 0.000106309 0.353388 0.0127993 0.296055 0.0374131C0.238722 0.0620268 0.186996 0.0980463 0.144023 0.143281L0.138022 0.149282C0.0493773 0.24227 -7.38444e-05 0.365811 -7.38557e-05 0.494281C-7.38669e-05 0.622752 0.0493773 0.746293 0.138022 0.839282L5.44802 6.41228C5.49472 6.46129 5.55088 6.50031 5.61311 6.52697C5.67533 6.55363 5.74233 6.56738 5.81002 6.56738C5.87772 6.56738 5.94471 6.55363 6.00694 6.52697C6.06916 6.50031 6.12532 6.46129 6.17202 6.41228Z"

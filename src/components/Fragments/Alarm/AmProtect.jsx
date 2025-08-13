@@ -5,10 +5,13 @@ import "@splidejs/react-splide/css";
 import Image from "next/image";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import BackgroundDots from "@/components/Elements/BackgroundDots";
-import { AlarmProtect } from "@/constants-temp/data";
 import ButtonPrimary from "@/components/Elements/ButtonPrimary";
+import { useTranslations } from "next-intl";
 
 const AmProtect = () => {
+  const t = useTranslations();
+  const AlarmProtect = t.raw("AlarmProtect");
+
   const isDesktop = useIsDesktop(); // breakpoint >1023px
 
   return (
@@ -67,9 +70,10 @@ const AmProtect = () => {
                       <p className="text-lg font-raleway font-semibold mb-1">
                         {item.title}
                       </p>
-                      <p className="text-sm leading-[1.7] text-gray-600">
-                        {item.desc}
-                      </p>
+                      <div
+                        dangerouslySetInnerHTML={{ __html: item.desc }}
+                        className="text-sm leading-[1.7] text-gray-600"
+                      />
                     </div>
                   </SplideSlide>
                 ))}
@@ -118,9 +122,10 @@ const AmProtect = () => {
                   <p className="text-[25px] font-raleway font-semibold mt-2 mb-1 w-full xl:w-10/12">
                     {item.title}
                   </p>
-                  <p className="text-lg text-gray-600 w-full xl:w-10/12">
-                    {item.desc}
-                  </p>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: item.desc }}
+                    className="text-lg text-gray-600 w-full xl:w-10/12"
+                  />
                 </div>
               ))}
             </div>

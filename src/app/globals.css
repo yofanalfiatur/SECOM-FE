@@ -799,3 +799,9 @@ main {
   animation: pulsecircle 2s ease-in-out infinite;
   animation-delay: 1s;
 }
+
+/* Glightbox styling */
+.gprev.gbtn,
+.gnext.gbtn {
+  display: none !important;
+}

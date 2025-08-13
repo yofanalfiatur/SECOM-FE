@@ -1,9 +1,12 @@
 import React from "react";
-import { RePromotion } from "@/constants-temp/data";
 import Image from "next/image";
 import ButtonPrimary from "@/components/Elements/ButtonPrimary";
+import { useTranslations } from "next-intl";
 
 const ResPromotion = () => {
+  const t = useTranslations();
+  const RePromotion = t.raw("RePromotion");
+
   return (
     <section className="pt-6 pb-13 lg:pt-24 lg:pb-24 res-prom">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between">

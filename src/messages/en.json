@@ -1,0 +1,1060 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "description": "Go to the about page"
+  },
+  "LocalSwitcher": "{locale, select, id {Indonesia}, en {English}}",
+
+  "langIdentifier": "English",
+  "MenuType": [
+    {
+      "icon": "/img/menu-type-1.svg",
+      "text": "Business",
+      "href": "/#",
+      "subMenu": [
+        {
+          "subMenuText": "Solution",
+          "subMenuHref": "/solution"
+        }
+      ]
+    },
+    {
+      "icon": "/img/menu-type-2.svg",
+      "text": "Residential",
+      "href": "/residential",
+      "subMenu": [
+        {
+          "subMenuText": "Alarm",
+          "subMenuHref": "/alarm"
+        }
+      ]
+    }
+  ],
+  "MenuHeader": [
+    {
+      "text": "Home",
+      "href": "/"
+    },
+    {
+      "text": "About",
+      "href": "/about",
+      "subMenu": [
+        {
+          "subMenuText": "Alarm",
+          "subMenuHref": "/alarm"
+        },
+        {
+          "subMenuText": "Our Team",
+          "subMenuHref": "/about/our-team"
+        },
+        {
+          "subMenuText": "Our Partners",
+          "subMenuHref": "/about/our-partners"
+        },
+        {
+          "subMenuText": "Thank You",
+          "subMenuHref": "/thankyou"
+        },
+        {
+          "subMenuText": "Error Page 404",
+          "subMenuHref": "/error"
+        }
+      ]
+    },
+    {
+      "text": "Articles",
+      "href": "/articles"
+    }
+  ],
+  "MenuHeaderMd": [
+    {
+      "text": "Business",
+      "href": "/#",
+      "icon": "/img/menu-type-1.svg",
+      "subMenu": [
+        {
+          "subMenuText": "Solution",
+          "subMenuHref": "/solution"
+        }
+      ]
+    },
+    {
+      "text": "Residential",
+      "href": "/residential",
+      "icon": "/img/menu-type-2.svg",
+      "subMenu": [
+        {
+          "subMenuText": "Alarm",
+          "subMenuHref": "/alarm"
+        }
+      ]
+    }
+  ],
+  "HeaderButton": {
+    "HeaderBtnText": "Free Consultation",
+    "HeaderBtnHref": "/contact",
+    "HeaderBtnTarget": "_self"
+  },
+  "HTop": {
+    "language": [
+      {
+        "text": "EN",
+        "href": "/",
+        "icon": "/img/flag-en.svg"
+      },
+      {
+        "text": "ID",
+        "href": "/id",
+        "icon": "/img/flag-id.svg"
+      }
+    ],
+    "login": {
+      "text": "SMART SECURITY LOGIN",
+      "href": "/login",
+      "target": "_self"
+    }
+  },
+  "FooterContent": {
+    "FtTitle": "Let's Start Protecting Your Home and Your Loved Ones",
+    "FtDescription": "EN# ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur. Curabitur blandit tempus ardua ridiculus sed magna.",
+    "FtButtonText": "Free Consultation",
+    "FtButtonHref": "/#free-consultation",
+    "FtButtonTarget": "_self",
+    "FtAddressText": "Mangkuluhur City Tower 1, 8th Floor, Jl. Jend. Gatot Subroto Kav. 1-3, Jakarta Selatan 12930",
+    "FtAddressLink": "https://goo.gl/maps/3Z1b5d7z8x2k9f4cA"
+  },
+  "FooterMenu": [
+    {
+      "FtMenuText": "SECOM For Home",
+      "FtMenuLink": "/#secom-for-home"
+    },
+    {
+      "FtMenuText": "SECOM For Business",
+      "FtMenuLink": "/#secom-for-business"
+    },
+    {
+      "FtMenuText": "About Us",
+      "FtMenuLink": "/#about"
+    },
+    {
+      "FtMenuText": "Blog",
+      "FtMenuLink": "/#blog"
+    },
+    {
+      "FtMenuText": "Career",
+      "FtMenuLink": "/#career"
+    },
+    {
+      "FtMenuText": "FAQ",
+      "FtMenuLink": "/#faq"
+    }
+  ],
+  "FooterSocMed": {
+    "FtFacebook": "https://www.facebook.com/",
+    "FtLinkedin": "https://www.linkedin.com/",
+    "FtInstagram": "https://www.instagram.com/",
+    "FtYoutube": "https://www.youtube.com/",
+    "FtTiktok": "https://www.tiktok.com/"
+  },
+  "FooterDropdown": [
+    {
+      "FtDropValue": "secom-global-network",
+      "FtDropText": "SECOM Global Network",
+      "FtDropHref": "#"
+    },
+    {
+      "FtDropValue": "secom-global-network-2",
+      "FtDropText": "SECOM Global Network 2",
+      "FtDropHref": "#"
+    },
+    {
+      "FtDropValue": "secom-global-network-3",
+      "FtDropText": "SECOM Global Network 3",
+      "FtDropHref": "#"
+    },
+    {
+      "FtDropValue": "secom-global-network-4",
+      "FtDropText": "SECOM Global Network 4",
+      "FtDropHref": "#"
+    },
+    {
+      "FtDropValue": "secom-global-network-5",
+      "FtDropText": "SECOM Global Network 5",
+      "FtDropHref": "#"
+    }
+  ],
+  "ReBanner": {
+    "title": "Every Member of Your Family Deserves To Be Safe",
+    "photo": "/img/temp/h-banner-front.png",
+    "background": "/img/temp/h-banner-bg.jpg",
+    "items": [
+      {
+        "text": "If I leave food too long in the microwave, the smoke detector will alert us.",
+        "top": "45%",
+        "left": "15%",
+        "maxWidth": "314px",
+        "icon": "/img/temp/h-banner-ibu.png"
+      },
+      {
+        "text": "If someone knocks, I don't have to be scared anymore. ",
+        "top": "36%",
+        "left": "41%",
+        "maxWidth": "200px",
+        "icon": "/img/temp/h-banner-anak.png"
+      },
+      {
+        "text": "Even if I'm home alone, I know help is just one button away.",
+        "top": "37%",
+        "left": "57%",
+        "maxWidth": "314px",
+        "icon": "/img/temp/h-banner-nenek.png"
+      },
+      {
+        "text": "If anyone tries to break in, I know my family and home are still protected.",
+        "top": "50%",
+        "left": "70.5%",
+        "maxWidth": "314px",
+        "icon": "/img/temp/h-banner-bapak.png"
+      }
+    ]
+  },
+  "ReSurvey": {
+    "title": "How Safe Is My Home?",
+    "desc": "3 quick questions to find out our solution",
+    "survey": [
+      {
+        "question": "How often is your home left empty?",
+        "options": [
+          {
+            "text": "A. Most Days",
+            "value": "a"
+          },
+          {
+            "text": "B. Few Hours A Day",
+            "value": "b"
+          }
+        ]
+      },
+      {
+        "question": "Do you live with children, elderly parents, or loved ones with special needs?",
+        "options": [
+          {
+            "text": "Yes",
+            "value": "yes"
+          },
+          {
+            "text": "No",
+            "value": "no"
+          }
+        ]
+      },
+      {
+        "question": "What security systems do you currently have installed?",
+        "options": [
+          {
+            "text": "A. None",
+            "value": "a"
+          },
+          {
+            "text": "B. Self-Installed CCTV",
+            "value": "b"
+          }
+        ]
+      }
+    ],
+    "result": [
+      {
+        "icon": "/img/survey-h-risk.png",
+        "text": "High Risk",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Magna pars studiorum, prodita quaerimus. dolore magna aliqua. Magna pars studiorum, prodita quaerimus.",
+        "btn": {
+          "text": "CHECK OUR PACKAGES",
+          "href": "/#packages",
+          "target": "_self"
+        }
+      },
+      {
+        "icon": "/img/survey-m-risk.png",
+        "text": "Moderate Risk",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Magna pars studiorum, prodita quaerimus. dolore magna aliqua. Magna pars studiorum, prodita quaerimus.",
+        "btn": {
+          "text": "CHECK OUR PACKAGES",
+          "href": "/#packages",
+          "target": "_self"
+        }
+      },
+      {
+        "icon": "/img/survey-l-risk.png",
+        "text": "Low Risk",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Magna pars studiorum, prodita quaerimus. dolore magna aliqua. Magna pars studiorum, prodita quaerimus.",
+        "btn": {
+          "text": "CHECK OUR PACKAGES",
+          "href": "/#packages",
+          "target": "_self"
+        }
+      }
+    ],
+    "resultCombinations": {
+      "high": ["a-yes-a", "a-no-a", "b-yes-a"],
+      "moderate": ["a-yes-b", "a-no-b", "b-yes-b"],
+      "low": ["b-no-a", "b-no-b"]
+    }
+  },
+  "ReAbout": {
+    "title": "How SECOM Protects You",
+    "desc": "SECOM goes beyond alarms.<br>We combine smart technology with human response to truly protect what matters most.",
+    "photo": "/img/temp/residential/Residence-How-SECOM-Protects-You.jpg",
+    "items": [
+      {
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "title": "Instantly spots intrusions, fire, or suspicious activity, even when you're not home."
+      },
+      {
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
+        "title": "We only view live video during emergencies, ensuring safety without compromising your privacy."
+      },
+      {
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You BE.svg",
+        "title": "In a emergency, we don't wait. Our physical response personnel is on the ground. Fast."
+      }
+    ],
+    "btnAbout": {
+      "text": "Learn More",
+      "href": "/about",
+      "target": "_self"
+    }
+  },
+  "ReSolution": {
+    "hint": "Our Solutions",
+    "title": "Secure Every Corner of Your Home",
+    "desc": "Each room has different risks. SECOM helps you place the right protection in the right place.",
+    "itemSlider": [
+      {
+        "photo": "/img/temp/residential/Residence Solution Landing Page 1.jpg",
+        "title": "Smart Video Camera - Outdoor",
+        "desc": "Monitor your gates, garage, and yard with smart detection and two-way audio."
+      },
+      {
+        "photo": "/img/temp/residential/Residence Solution Landing Page 2.jpg",
+        "title": "PIR Cam Indoor - Living Room",
+        "desc": "Watch over your home's central space with reliable motion-sensing protection."
+      },
+      {
+        "photo": "/img/temp/residential/Residence Solution Landing Page 3.jpg",
+        "title": "Door Contact - Windows",
+        "desc": "Protect windows from silent entry with smart magnetic sensors."
+      },
+      {
+        "photo": "/img/temp/residential/Residence Solution Landing Page 4.jpg",
+        "title": "Smoke Detector - Clean Kitchen",
+        "desc": "Even in the cleanest kitchens, accidents can happen. Stay alert with a smoke detector."
+      }
+    ],
+    "btnSolution": {
+      "text": "Learn More",
+      "href": "/#",
+      "target": "_self"
+    }
+  },
+  "ReQuote": [
+    {
+      "thumb": "/img/temp/quote-thumb.jpg",
+      "linkVideo": "https://youtu.be/euM9kW0ZRWg",
+      "text": "I wasn't just looking for a security system, I wanted to feel really safe. SECOM gave me both."
+    }
+  ],
+  "ReTestimonial": {
+    "title": "They Chose SECOM. Here's Why.",
+    "desc": "Every family deserves to feel safe at home. Hear how SECOM has brought peace of mind to families across Indonesia. Real stories from those who trust us every day.",
+    "items": [
+      {
+        "testimony": "When me and my wife are at work, the kids stay home with our nanny. With SECOM, I can check in anytime. It helps me stay connected and calm throughout the day.",
+        "name": "Andi Widjaja",
+        "location": "Jakarta"
+      },
+      {
+        "testimony": "My parents are often home alone, and they're getting older. Having the panic button makes me feel more at ease knowing they can get help fast.",
+        "name": "Tania Gunawan",
+        "location": "Tangerang"
+      },
+      {
+        "testimony": "We often get packages delivered when no one's home. With SECOM, I can monitor visitors and make sure everything's safe and recorded.",
+        "name": "Teguh Santoso",
+        "location": "Bandung"
+      },
+      {
+        "testimony": "We just moved into our first house, and I wanted to make sure it was safe for my family. SECOM helped us choose the right security setup. Simple, fast, and now we feel a lot more at ease at home.",
+        "name": "Rudi Adinata",
+        "location": "Karawang"
+      },
+      {
+        "testimony": "We used to worry whenever we left the house empty, even just for a few hours. Since installing SECOM's system, we feel more at ease. It's not about fear, it's about knowing our home is being looked after.",
+        "name": "Dimas Hadi",
+        "location": "Surabaya"
+      }
+    ]
+  },
+  "RePromotion": {
+    "hint": "Promotion",
+    "title": "Because home is where they should always feel safe",
+    "desc": "With SECOM, you get more than security, you get peace of mind. Protect what matters most, starting today.",
+    "image": "/img/temp/h-promotion.jpg",
+    "btnPromotion": {
+      "text": "FREE CONSULTATION",
+      "href": "/#",
+      "target": "_self"
+    }
+  },
+  "ContactPage": {
+    "title": "Get Your Free Consultation",
+    "desc": "Talk to our expert today and find the right solution for your home.",
+    "photo": "/img/temp/contact-image.jpg"
+  },
+  "FormValue": {
+    "locationType": [
+      {
+        "value": "",
+        "label": ""
+      },
+      {
+        "value": "Residential",
+        "label": "Residential"
+      },
+      {
+        "value": "Commercial",
+        "label": "Commercial"
+      },
+      {
+        "value": "Industrial",
+        "label": "Industrial"
+      }
+    ],
+    "howDidYouKnow": [
+      {
+        "value": "",
+        "label": ""
+      },
+      {
+        "value": "Google",
+        "label": "Google"
+      },
+      {
+        "value": "Facebook",
+        "label": "Facebook"
+      },
+      {
+        "value": "Instagram",
+        "label": "Instagram"
+      },
+      {
+        "value": "Others",
+        "label": "Others"
+      }
+    ]
+  },
+  "ThankYouPage": {
+    "title": "Thank You",
+    "title2": "ForYour Message",
+    "desc": "Idque Caesaris facere voluntate liceret: sese habere. Ut enim ad minim veniam, quis nostrud exercitation. Tu quoque, Brute, fili mi, nihil timor populi, nihil!",
+    "logo": "/img/logo-thankyou.svg",
+    "buttonCTA": {
+      "text": "Back to Homepage",
+      "href": "/",
+      "target": "_self"
+    }
+  },
+  "ErrorPage": {
+    "title": "The Page You're Looking For Didn't Exist",
+    "description": "Idque Caesaris facere voluntate liceret: sese habere. Ut enim ad minim veniam, quis nostrud exercitation. Tu quoque, Brute, fili mi, nihil timor populi, nihil!",
+    "buttonCTA": {
+      "text": "Back to Home",
+      "href": "/",
+      "target": "_self"
+    }
+  },
+  "LoginDummy": {
+    "title": "Login to Your Account"
+  },
+  "AlarmBanner": {
+    "title": [
+      "Introduce SECOM's alarm sensor solutions specifically tailored for Business ",
+      "24/7."
+    ],
+    "background": "/img/temp/alarm/alarm-banner.jpg",
+    "backgroundMd": "/img/temp/alarm/alarm-banner-mobile.jpg"
+  },
+  "AlarmOverview": {
+    "desc": "Your business is where goals are achieved, teams grow, and futures are built. <b>At SECOM, we provide personalized security solutions</b> to help you protect what you've worked hard to build, with confidence, care, and cutting-edge technology.",
+    "items": [
+      {
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "title": "Integrated Security System"
+      },
+      {
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
+        "title": "24/7 Monitoring"
+      },
+      {
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You BE.svg",
+        "title": "Trained Response Team"
+      }
+    ]
+  },
+  "AlarmReason": {
+    "title": "Why Choose Us?",
+    "items": [
+      {
+        "image": "/img/temp/alarm/solutions-how-secom-works-1.jpg",
+        "title": "Start with Understanding",
+        "desc": "Our security specialists take time to assess your business site and operations, recommending a solution tailored to your industry needs"
+      },
+      {
+        "image": "/img/temp/alarm/solutions-how-secom-works-2.jpg",
+        "title": "Strategic Design, Complete Coverage",
+        "desc": "We design the layout with precision. Placing sensors, alarms, and cameras where they matter most to protect every critical area."
+      },
+      {
+        "image": "/img/temp/alarm/solutions-how-secom-works-3.jpg",
+        "title": "Efficient, Professional Installation",
+        "desc": "Our expert technicians ensure a smooth setup process with minimal disruption to your business activities."
+      },
+      {
+        "image": "/img/temp/alarm/solutions-how-secom-works-4.jpg",
+        "title": "24/7 Monitoring, Always On",
+        "desc": "Your system is connected to SECOM's Control Center, providing real-time monitoring and rapid emergency response at any time of day."
+      },
+      {
+        "image": "/img/temp/alarm/solutions-how-secom-works-5.jpg",
+        "title": "Ongoing Support",
+        "desc": "We deliver regular system checks and proactive service, ensuring your security system remains dependable as your business grows."
+      }
+    ]
+  },
+  "AlarmProtect": {
+    "title": "Integrated Security for Your Business",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    "image": "/img/temp/alarm/Circle-of-Service.png",
+    "imageMobile": "/img/temp/alarm/Circle-of-Service-Mobile.png",
+    "items": [
+      {
+        "title": "Emergency Detected",
+        "desc": "Our sensors detect unusual activity and instantly send a signal to the cloud system."
+      },
+      {
+        "title": "SECOM's Control Center",
+        "desc": "The cloud alerts both you and SECOM's 24/7 Control Center, which will notify you and assign response team to your location.<br><b>*If necessary, SECOM will also notify local police or fire services.</b>"
+      },
+      {
+        "title": "SECOM's Physical Response Team",
+        "desc": "If there's a real threat, SECOM dispatches a trained physical response team to check your property and report live updates, giving you peace of mind even when you're away."
+      }
+    ],
+    "btnCTA": {
+      "text": "CONSULT NOW",
+      "href": "/#",
+      "target": "_self"
+    }
+  },
+  "AlarmProduct": {
+    "title": "Advanced Technology, Trusted Protection",
+    "desc": "Explore SECOM's full range of advanced security products designed to protect your business, assets, and people.",
+    "products": [
+      {
+        "title": "Control Panel",
+        "desc": "The main device that connects all sensors and alarms to SECOM's team that standby 24/7.",
+        "image": "/img/temp/product-1.png",
+        "link": "#1"
+      },
+      {
+        "title": "Remote Control",
+        "desc": "A small device to turn the alarm system on or off from a distance.",
+        "image": "/img/temp/product-2.png",
+        "link": "#2"
+      },
+      {
+        "title": "Keypad",
+        "desc": "A panel where you enter your personal code to control the alarm system.",
+        "image": "/img/temp/product-1.png",
+        "link": "#3"
+      },
+      {
+        "title": "Siren Box",
+        "desc": "A loud sound that goes off when there's a danger, like someone breaking in.",
+        "link": "#4"
+      },
+      {
+        "title": "Smart Video Camera",
+        "desc": "See and interact with unexpected visitors, vehicles coming and going and more, even when you can't be there.",
+        "image": "/img/temp/product-1.png",
+        "link": "#5"
+      },
+      {
+        "title": "Door Contact",
+        "desc": "Detects when a door or window is opened. Sends an alert if something unusual happens.",
+        "image": "/img/temp/product-2.png",
+        "link": "#6"
+      },
+      {
+        "title": "PIR Camera Indoor",
+        "desc": "A camera inside the house that takes pictures or video when it senses movement.",
+        "image": "/img/temp/product-1.png",
+        "link": "#7"
+      },
+      {
+        "title": "PIR Indoor",
+        "desc": "A sensor that detects movement inside your home and triggers the alarm if needed.",
+        "image": "/img/temp/product-2.png",
+        "link": "#8"
+      },
+      {
+        "title": "Smoke Detector",
+        "desc": "Detects smoke early to help prevent fires.",
+        "image": "/img/temp/product-2.png",
+        "link": "#8"
+      },
+      {
+        "title": "Panic Button",
+        "desc": "A button you press in an emergency to get help from SECOM right away.",
+        "image": "/img/temp/product-2.png",
+        "link": "#8"
+      }
+    ]
+  },
+  "AlarmCorners": {
+    "title": "Protect Every Corner of Your Business",
+    "desc": "Explore SECOM's full range of advanced security products designed to protect your business, assets, and people.",
+    "btnConsult": {
+      "text": "CONSULT WITH US NOW",
+      "href": "/#",
+      "target": "_self"
+    },
+    "image": "/img/temp/alarm/Product-Placement-Business.png",
+    "items": [
+      {
+        "positionX": "49%",
+        "positionY": "24%",
+        "image": "/img/temp/product-1.png",
+        "title": "Control Panel",
+        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
+      },
+      {
+        "positionX": "64%",
+        "positionY": "25%",
+        "image": "/img/temp/product-2.png",
+        "title": "#2Control Panel",
+        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
+      },
+      {
+        "positionX": "68%",
+        "positionY": "30%",
+        "image": "/img/temp/product-1.png",
+        "title": "#3Control Panel",
+        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
+      },
+      {
+        "positionX": "60%",
+        "positionY": "46%",
+        "image": "/img/temp/product-2.png",
+        "title": "#4Control Panel",
+        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
+      },
+      {
+        "positionX": "36%",
+        "positionY": "49%",
+        "image": "/img/temp/product-1.png",
+        "title": "#5Control Panel",
+        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
+      },
+      {
+        "positionX": "55%",
+        "positionY": "64%",
+        "image": "/img/temp/product-2.png",
+        "title": "#6Control Panel",
+        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
+      },
+      {
+        "positionX": "41%",
+        "positionY": "82%",
+        "image": "/img/temp/product-2.png",
+        "title": "#6Control Panel",
+        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
+      }
+    ]
+  },
+  "AlarmApps": {
+    "title": "Stay in Control. Anytime. Anywhere.",
+    "desc": "Manage your business security anytime with the SECOM App, from arming the system to live camera checks. For advanced settings, use the SECOM Smart Security portal. Your data stays private, SECOM only accesses footage during verified emergencies.",
+    "image": "/img/temp/phone-img.png",
+    "items": [
+      {
+        "title": "Live Monitoring",
+        "desc": "Watch real-time footage of your business anytime, from anywhere.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Video Real Time.svg"
+      },
+      {
+        "title": "Arm & Disarm",
+        "desc": "Easily activate or deactivate your alarm system with just a tap.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Active Non Active.svg"
+      },
+      {
+        "title": "Instant Notifications",
+        "desc": "Get alerts right away when something happens at home.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Instan Notif.svg"
+      },
+      {
+        "title": "History",
+        "desc": "Check what happened and when. All activity is recorded for your peace of mind.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Log.svg"
+      },
+      {
+        "title": "Manage Multiple Sites",
+        "desc": "Check and control more than one site from the same app.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
+      },
+      {
+        "title": "Activity Reports",
+        "desc": "View simple reports to keep track of what's going on",
+        "icon": "/img/temp/alarm/Icon App Benefits-Report.svg"
+      }
+    ],
+    "download": [
+      {
+        "link": "#",
+        "image": "/img/temp/googleplay.svg"
+      },
+      {
+        "link": "#",
+        "image": "/img/temp/appstore.svg"
+      }
+    ]
+  },
+  "AlarmTrusted": {
+    "title": "Your Business Deserves More Than Basic Security",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    "logoSecom": "/img/secom-logo.png",
+    "table": [
+      {
+        "feature": "24/7 Monitoring",
+        "secom": true,
+        "other": "unavailable"
+      },
+      {
+        "feature": "Response Team",
+        "secom": true,
+        "other": "unavailable"
+      },
+      {
+        "feature": "Mobile App Access",
+        "secom": true,
+        "other": "limited"
+      },
+      {
+        "feature": "Local Support in Indonesia",
+        "secom": true,
+        "other": "limited"
+      },
+      {
+        "feature": "Installation by Experts",
+        "secom": true,
+        "other": "unavailable"
+      },
+      {
+        "feature": "Customizable for Every Family",
+        "secom": true,
+        "other": "limited"
+      }
+    ]
+  },
+  "AlarmPackage": {
+    "title": "Tailored Security Plans for Every Business Type",
+    "desc": "From small shops to large facilities, our packages offer scalable protection to keep your operations safe and secure.",
+    "tabs": [
+      {
+        "title": "RENTAL",
+        "desc": "Qui ipsorum lingua Celtae,"
+      },
+      {
+        "title": "Buy",
+        "desc": "Qui ipsorum lingua Celtae,"
+      }
+    ],
+    "items": [
+      {
+        "title": "Business",
+        "price": "1,065,000",
+        "serviceFee": "",
+        "desc": "A simple and affordable rental package for small businesses or offices. Includes essential security devices to get you started.",
+        "device": "8",
+        "image": "/img/temp/alarm/Business.png",
+        "isRent": true
+      },
+      {
+        "title": "Business PRO",
+        "price": "1,464,000",
+        "serviceFee": "",
+        "desc": "Comprehensive protection with advanced security features and added safety features, ideal for high-risk areas. ",
+        "device": "12",
+        "image": "/img/temp/alarm/BusinessPro.png",
+        "isRent": true
+      },
+
+      {
+        "title": "Business",
+        "price": "18,282,000",
+        "serviceFee": [
+          {
+            "text": "Service fee 24/7 monitoring only",
+            "fee": "446,000"
+          },
+          {
+            "text": "Service fee 24/7 monitoring + dispatch",
+            "fee": "668,000"
+          }
+        ],
+        "desc": "A one-time purchase package for small businesses or offices. Includes essential security devices to get you started. Simple, affordable, and fully yours.",
+        "device": "8",
+        "image": "/img/temp/package-1.png",
+        "isRent": false
+      },
+      {
+        "title": "Business PRO",
+        "price": "25,955,000",
+        "serviceFee": [
+          {
+            "text": "Service fee 24/7 monitoring only",
+            "fee": "465,000"
+          },
+          {
+            "text": "Service fee 24/7 monitoring + dispatch",
+            "fee": "687,000"
+          }
+        ],
+        "desc": "Own a complete security system with advanced protection and added safety features, ideal for high-risk areas and long-term business security.",
+        "device": "12",
+        "image": "/img/temp/package-1.png",
+        "isRent": false
+      }
+    ]
+  },
+  "AlarmDifferences": {
+    "title": "See The Differences",
+    "hint": "Hide Information",
+    "note": "*Phasellus laoreet lorem vel dolor tempus vehicula. Gallia est omnis divisa in partes tres, quarum. Praeterea iter est quasdam res quas ex communi. Contra legem facit qui id facit quod lex prohibet. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
+    "items": [
+      {
+        "device": "Control Panel",
+        "image": "/img/temp/product-1.png",
+        "basic": "1",
+        "pro": "1"
+      },
+      {
+        "device": "2Control Panel",
+        "image": "/img/temp/product-1.png",
+        "basic": "1",
+        "pro": "1"
+      },
+      {
+        "device": "3Control Panel",
+        "image": "/img/temp/product-1.png",
+        "basic": "1",
+        "pro": "1"
+      },
+      {
+        "device": "4Control Panel",
+        "image": "/img/temp/product-1.png",
+        "basic": "1",
+        "pro": "1"
+      },
+      {
+        "device": "5Control Panel",
+        "image": "/img/temp/product-2.png",
+        "basic": "1",
+        "pro": "1"
+      }
+    ],
+    "price": {
+      "home": "5.000.000",
+      "pro": "8.000.000"
+    },
+    "serviceTitle": "Service Fee",
+    "serviceFee": [
+      {
+        "name": "Service fee 24/7 monitoring only",
+        "priceHome": "446,000",
+        "pricePro": "465,000"
+      },
+      {
+        "name": "Service fee 24/7 monitoring + dispatch",
+        "priceHome": "668,000",
+        "pricePro": "687,000"
+      }
+    ]
+  },
+  "AlarmFAQ": {
+    "title": "Frequently Asked Questions",
+    "desc": "Whether you're exploring our security packages or already using our business solutions, this FAQ is here to help you better understand how SECOM's Smart Security service works in your industry",
+    "buttonCTA": {
+      "text": "More FAQs",
+      "href": "/#",
+      "target": "_self"
+    },
+    "items": [
+      {
+        "question": "What is the function of SECOM Smart Security Web Portal and Mobile App? ",
+        "answer": "Allow business owners to monitor and manage their security systems anytime, anywhere. You can arm or disarm alarms, view live camera footage, receive real-time alerts. You also can set user management and activity logs, ensuring full visibility and control over your business security."
+      },
+      {
+        "question": "What happens when the alarm is triggered at my business location?",
+        "answer": "You'll receive instant notifications through the SECOM Smart Security App. This ensures you're always informed of any unusual activity, no matter where you are. SECOM's 24/7 monitoring team will also respond immediately to verify the situation and take necessary action."
+      },
+      {
+        "question": "Will my business data and privacy will be protected with the cloud video storage?",
+        "answer": "Yes. <b>Your privacy is our top priority.</b> All video footage is securely encrypted and stored in the cloud. Only you can access your recordings. SECOM can only view your video footage during verified emergencies and only to ensure your safety. Outside of that, your data remains completely private."
+      },
+      {
+        "question": "Can I monitor my business branches via SECOM Smart Security App?",
+        "answer": "Yes. You can monitor and manage multiple business branches under one account. You can easily switch between locations to view live camera feeds, receive alerts, arm or disarm alarms, and manage settings, anytime, anywhere. It's a convenient way to stay in control of all your business sites remotely."
+      }
+    ]
+  },
+
+  "ProductDetails": [
+    {
+      "title": "Control Panel",
+      "subtitle": "The main device that connects all sensors and alarms to SECOM's team that standby 24/7.",
+      "image": "/img/temp/products/Control-Panel.png",
+      "link": "#1",
+      "positionX": "49%",
+      "positionY": "24%"
+    },
+    {
+      "title": "Remote Control",
+      "subtitle": "A small device to turn the alarm system on or off from a distance.",
+      "image": "/img/temp/products/Remote-Control.png",
+      "link": "#2",
+      "positionX": "64%",
+      "positionY": "25%"
+    },
+    {
+      "title": "Keypad",
+      "subtitle": "A panel where you enter your personal code to control the alarm system.",
+      "image": "/img/temp/products/Keypad.png",
+      "link": "#3",
+      "positionX": "64%",
+      "positionY": "25%"
+    },
+    {
+      "title": "Siren Box",
+      "subtitle": "A loud sound that goes off when there's a danger, like someone breaking in.",
+      "image": "/img/temp/products/Siren-Box.png",
+      "link": "#4",
+      "positionX": "64%",
+      "positionY": "25%"
+    },
+    {
+      "title": "Smart Video Camera",
+      "subtitle": "See and interact with unexpected visitors, vehicles coming and going and more, even when you can't be there.",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "link": "#5",
+      "positionX": "41%",
+      "positionY": "58%"
+    },
+    {
+      "title": "Door Contact",
+      "subtitle": "Detects when a door or window is opened. Sends an alert if something unusual happens.",
+      "image": "/img/temp/products/Door-Contact.png",
+      "link": "#6",
+      "positionX": "64%",
+      "positionY": "25%"
+    },
+    {
+      "title": "PIR Camera Indoor",
+      "subtitle": "A camera inside the house that takes pictures or video when it senses movement.",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
+      "link": "#7",
+      "positionX": "49%",
+      "positionY": "43.5%"
+    },
+    {
+      "title": "PIR Indoor",
+      "subtitle": "A sensor that detects movement inside your home and triggers the alarm if needed.",
+      "image": "/img/temp/products/PIR-Indoor.png",
+      "link": "#8",
+      "positionX": "64%",
+      "positionY": "25%"
+    },
+    {
+      "title": "Smoke Detector",
+      "subtitle": "Detects smoke early to help prevent fires.",
+      "image": "/img/temp/products/Smoke-Detector.png",
+      "link": "#9",
+      "positionX": "64%",
+      "positionY": "25%"
+    },
+    {
+      "title": "Panic Button",
+      "subtitle": "A button you press in an emergency to get help from SECOM right away.",
+      "image": "/img/temp/products/Panic-Button.png",
+      "link": "#10",
+      "positionX": "61%",
+      "positionY": "82.5%"
+    }
+  ],
+  "Packages": [
+    {
+      "title": "Business",
+      "price": "1,065,000",
+      "serviceFee": "",
+      "desc": "Paket sewa yang sederhana dan terjangkau untuk bisnis kecil atau kantor. Dilengkapi perangkat keamanan esensial untuk memulai perlindungan.",
+      "device": "8",
+      "image": "/img/temp/alarm/Business.png",
+      "isRent": true
+    },
+    {
+      "title": "Business PRO",
+      "price": "1,464,000",
+      "serviceFee": "",
+      "desc": "Perlindungan menyeluruh dengan fitur keamanan canggih dan tambahan fitur keselamatan, ideal untuk area dengan risiko tinggi.",
+      "device": "12",
+      "image": "/img/temp/alarm/BusinessPro.png",
+      "isRent": true
+    },
+
+    {
+      "title": "Business",
+      "price": "18,282,000",
+      "serviceFee": [
+        {
+          "text": "Service fee 24/7 monitoring only",
+          "fee": "446,000"
+        },
+        {
+          "text": "Service fee 24/7 monitoring + dispatch",
+          "fee": "668,000"
+        }
+      ],
+      "desc": "Paket pembelian satu kali untuk bisnis kecil atau kantor. Termasuk perangkat keamanan penting untuk memulai. Sederhana, terjangkau, dan sepenuhnya milik Anda.",
+      "device": "8",
+      "image": "/img/temp/package-1.png",
+      "isRent": false
+    },
+    {
+      "title": "Business PRO",
+      "price": "25,955,000",
+      "serviceFee": [
+        {
+          "text": "Service fee 24/7 monitoring only",
+          "fee": "465,000"
+        },
+        {
+          "text": "Service fee 24/7 monitoring + dispatch",
+          "fee": "687,000"
+        }
+      ],
+      "desc": "Miliki sistem keamanan lengkap dengan perlindungan canggih dan fitur keselamatan tambahan. Ideal untuk area berisiko tinggi dan keamanan jangka panjang bisnis Anda.",
+      "device": "12",
+      "image": "/img/temp/package-1.png",
+      "isRent": false
+    }
+  ]
+}

@@ -1,11 +1,14 @@
 "use client";
 
-import { AlarmTrusted } from "@/constants-temp/data";
 import Image from "next/image";
 import React from "react";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
+import { useTranslations } from "next-intl";
 
 const AmTrusted = () => {
+  const t = useTranslations();
+  const AlarmTrusted = t.raw("AlarmTrusted");
+
   const isDesktop = useIsDesktop(1023); // 1023px sesuai dengan lg breakpoint Tailwind
 
   return (

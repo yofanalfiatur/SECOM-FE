@@ -1,8 +1,11 @@
 "use client";
-import { AlarmFAQ } from "@/constants-temp/data";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const AmFAQ = () => {
+  const t = useTranslations();
+  const AlarmFAQ = t.raw("AlarmFAQ");
+
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {

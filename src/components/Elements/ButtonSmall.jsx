@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 const ButtonSmall = (props) => {
   const { href, target, children, className } = props;

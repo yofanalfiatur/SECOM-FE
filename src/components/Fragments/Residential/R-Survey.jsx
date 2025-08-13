@@ -1,12 +1,14 @@
 "use client";
 
-import { ReSurvey } from "@/constants-temp/data";
-
 import ButtonPrimary from "@/components/Elements/ButtonPrimary";
 import React, { useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const ResSurvey = () => {
+  const t = useTranslations();
+  const ReSurvey = t.raw("ReSurvey");
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [showResult, setShowResult] = useState(false);

@@ -1,12 +1,14 @@
 "use client";
 
-import { FormValue } from "@/constants-temp/data";
-
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, Loader2 } from "lucide-react";
 
 const ContactForm = () => {
+  const t = useTranslations();
+  const FormValue = t.raw("FormValue");
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",

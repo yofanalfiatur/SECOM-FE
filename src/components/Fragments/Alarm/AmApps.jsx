@@ -1,11 +1,14 @@
 "use client";
 
-import { AlarmApps } from "@/constants-temp/data";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
 
 const AmApps = () => {
+  const t = useTranslations();
+  const AlarmApps = t.raw("AlarmApps");
+
   return (
     <section className="pb-10 lg:pb-14">
       <div className="container mx-auto relative flex flex-row justify-end">
@@ -67,9 +70,15 @@ const AmApps = () => {
                     width={45}
                     height={37}
                   />
-                  <p className="text-white text-xs lg:text-[16px]">
-                    {item.title}
-                  </p>
+                  <div className="flex flex-col gap-1">
+                    <p className="text-white text-xs lg:text-lg font-medium">
+                      {item.title}
+                    </p>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: item.desc }}
+                      className="text-white text-xs lg:text-[16px]"
+                    />
+                  </div>
                 </motion.li>
               ))}
             </ul>
@@ -83,7 +92,12 @@ const AmApps = () => {
             >
               {AlarmApps.download.map((item, index) => (
                 <Link key={index} href={item.link}>
-                  <Image src={item.image} width={120} height={40} />
+                  <Image
+                    src={item.image}
+                    alt="download button"
+                    width={120}
+                    height={40}
+                  />
                 </Link>
               ))}
             </motion.div>

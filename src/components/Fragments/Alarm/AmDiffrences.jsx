@@ -1,9 +1,12 @@
 "use client";
-import { AlarmDifferences } from "@/constants-temp/data";
 import Image from "next/image";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const AmDiffrences = () => {
+  const t = useTranslations();
+  const AlarmDifferences = t.raw("AlarmDifferences");
+  const Packages = t.raw("Packages");
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleContent = () => {
@@ -89,7 +92,7 @@ const AmDiffrences = () => {
                     {/* Home */}
                     <div className="col-span-4 flex flex-col items-center justify-center border-r-[1px] border-[#0000001A]">
                       <p className=" font-raleway lg:text-xl font-normal">
-                        {item.home}
+                        {item.basic}
                       </p>
                     </div>
                     {/* Home Pro */}
@@ -108,6 +111,7 @@ const AmDiffrences = () => {
                       Price
                     </p>
                   </div>
+
                   <div className="py-4 lg:py-6 col-span-4 flex flex-col items-center justify-center">
                     <p className="text-white text-[13px] lg:text-xl font-bold uppercase">
                       RP {AlarmDifferences.price.home}

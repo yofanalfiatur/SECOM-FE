@@ -1,16 +1,11 @@
 "use client";
 
-import {
-  FooterContent,
-  FooterMenu,
-  FooterSocMed,
-  FooterDropdown,
-} from "@/constants-temp/data";
+import { useTranslations } from "next-intl";
 
 import { useEffect, useState } from "react";
 
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import {
   FaFacebookF,
   FaLinkedinIn,
@@ -23,6 +18,12 @@ import Starfield from "../Elements/Starfield";
 import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const t = useTranslations();
+  const FooterContent = t.raw("FooterContent");
+  const FooterMenu = t.raw("FooterMenu");
+  const FooterSocMed = t.raw("FooterSocMed");
+  const FooterDropdown = t.raw("FooterDropdown");
+
   const [shouldHideFooterTop, setShouldHideFooterTop] = useState(false);
 
   const pathname = usePathname();

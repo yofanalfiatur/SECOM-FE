@@ -1,10 +1,12 @@
 import ButtonPrimary from "@/components/Elements/ButtonPrimary";
-import { ReAbout } from "@/constants-temp/data";
-
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const ResAbout = () => {
+  const t = useTranslations();
+  const ReAbout = t.raw("ReAbout");
+
   return (
     <section className="flex flex-col relative overflow-hidden pb-9 lg:pb-0">
       <div className="w-full border-b-1 border-[#13223333]">

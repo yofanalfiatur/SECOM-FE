@@ -1,11 +1,14 @@
 "use client";
-import { ReTestimonial } from "@/constants-temp/data";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import BackgroundDots from "@/components/Elements/BackgroundDots";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
+import { useTranslations } from "next-intl";
 
 const ResTesti = () => {
+  const t = useTranslations();
+  const ReTestimonial = t.raw("ReTestimonial");
+
   const isDesktop = useIsDesktop();
   const [current, setCurrent] = useState(0);
   const testimonials = ReTestimonial.items;
