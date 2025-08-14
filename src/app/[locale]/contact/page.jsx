@@ -4,10 +4,12 @@ import { useTranslations } from "next-intl";
 import ContactForm from "@/components/Fragments/Contact/ContactForm";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import useIsDesktop from "@/components/Hooks/useIsDesktop";
 
 const Contact = () => {
   const t = useTranslations();
   const ContactPage = t.raw("ContactPage");
+  const isDesktop = useIsDesktop();
 
   return (
     <>
@@ -19,7 +21,7 @@ const Contact = () => {
           className="flex flex-col relative lg:absolute top-0 left-0 w-full h-auto lg:h-full lg:w-[45vw]"
         >
           <Image
-            src={ContactPage.photo}
+            src={isDesktop ? ContactPage.photo : ContactPage.photoMd}
             width={630}
             height={1091}
             alt="Contact"

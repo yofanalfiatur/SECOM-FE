@@ -13,10 +13,10 @@ const MenuDesktop = () => {
       <nav className="pl-6 pr-8 flex flex-row justify-between items-center border-x-1 border-[#ffffff33] header__nav">
         <ul className=" flex flex-row gap-10 header__type">
           {MenuType.map(({ icon, text, href, subMenu }, index) => (
-            <li className="relative header__type__item" key={index}>
+            <li className="relative header__type__item group" key={index}>
               <Link
                 href={`${href}`}
-                className=" flex flex-row py-5 gap-2 items-center justify-center group relative header__type__link"
+                className=" flex flex-row py-5 gap-2 items-center justify-center relative header__type__link"
               >
                 <Image src={icon} alt="Business" width={20} height={20} />
                 <span className="text-navyblue header__type__text uppercase tracking-[2px] font-medium font-raleway leading-none">
@@ -36,28 +36,27 @@ const MenuDesktop = () => {
                     />
                   </svg>
                 )}
-
-                {/* Submenu */}
-                {subMenu && subMenu.length > 0 && (
-                  <div className="flex flex-col ease top-full absolute ease duration-300 invisible opacity-0 group-hover:visible group-hover:opacity-100 z-50 ">
-                    <div className="absolute z-[3] top-[-14px] left-[46%] -translate-x-1/2 -translate-y-1/2 flex">
-                      <div className="absolute top-[-2px] w-[20px] h-[20px] border-t-[20px] border-navyblue border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent scale-[82%] rotate-180"></div>
-                    </div>
-                    <ul className="bg-navyblue shadow-lg flex flex-col min-w-[180px] submenu__type">
-                      {subMenu.map(({ subMenuText, subMenuHref }, subIdx) => (
-                        <li key={subIdx}>
-                          <Link
-                            href={subMenuHref}
-                            className="block px-4 py-2 text-white font-raleway"
-                          >
-                            {subMenuText}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
               </Link>
+              {/* Submenu */}
+              {subMenu && subMenu.length > 0 && (
+                <div className="flex flex-col ease top-full absolute ease duration-300 invisible opacity-0 group-hover:visible group-hover:opacity-100 z-50 ">
+                  <div className="absolute z-[3] top-[-14px] left-[46%] -translate-x-1/2 -translate-y-1/2 flex">
+                    <div className="absolute top-[-2px] w-[20px] h-[20px] border-t-[20px] border-navyblue border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent scale-[82%] rotate-180"></div>
+                  </div>
+                  <ul className="bg-navyblue shadow-lg flex flex-col min-w-[180px] submenu__type">
+                    {subMenu.map(({ subMenuText, subMenuHref }, subIdx) => (
+                      <li key={subIdx}>
+                        <Link
+                          href={subMenuHref}
+                          className="block px-4 py-2 text-white font-raleway"
+                        >
+                          {subMenuText}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </li>
           ))}
         </ul>

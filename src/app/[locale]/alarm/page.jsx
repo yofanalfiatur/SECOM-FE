@@ -26,7 +26,7 @@ const AlarmLanding = () => {
       <AmApps />
       <AmTrusted />
       <AmPackage />
-      <AmDiffrences />
+      {/* <AmDiffrences /> */}
       <AmFAQ />
     </>
   );

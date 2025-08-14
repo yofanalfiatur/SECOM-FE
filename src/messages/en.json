@@ -13,15 +13,15 @@
       "href": "/#",
       "subMenu": [
         {
-          "subMenuText": "Solution",
-          "subMenuHref": "/solution"
+          "subMenuText": "Solutions",
+          "subMenuHref": "/solutions"
         }
       ]
     },
     {
       "icon": "/img/menu-type-2.svg",
       "text": "Residential",
-      "href": "/residential",
+      "href": "/",
       "subMenu": [
         {
           "subMenuText": "Alarm",
@@ -80,7 +80,7 @@
     },
     {
       "text": "Residential",
-      "href": "/residential",
+      "href": "/",
       "icon": "/img/menu-type-2.svg",
       "subMenu": [
         {
@@ -115,10 +115,10 @@
     }
   },
   "FooterContent": {
-    "FtTitle": "Let's Start Protecting Your Home and Your Loved Ones",
-    "FtDescription": "EN# ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur. Curabitur blandit tempus ardua ridiculus sed magna.",
+    "FtTitle": "Start Protecting What Matters The Most",
+    "FtDescription": "With SECOM, you get more than security, you get peace of mind. Protect what matters most, starting today.",
     "FtButtonText": "Free Consultation",
-    "FtButtonHref": "/#free-consultation",
+    "FtButtonHref": "/contact",
     "FtButtonTarget": "_self",
     "FtAddressText": "Mangkuluhur City Tower 1, 8th Floor, Jl. Jend. Gatot Subroto Kav. 1-3, Jakarta Selatan 12930",
     "FtAddressLink": "https://goo.gl/maps/3Z1b5d7z8x2k9f4cA"
@@ -407,8 +407,9 @@
   },
   "ContactPage": {
     "title": "Get Your Free Consultation",
-    "desc": "Talk to our expert today and find the right solution for your home.",
-    "photo": "/img/temp/contact-image.jpg"
+    "desc": "We’ll assess your specific needs and recommend the best-fit solution with accuracy and efficiency.",
+    "photo": "/img/temp/Free Consultation.jpg",
+    "photoMd": "/img/temp/Free Consultation Mobile.jpg"
   },
   "FormValue": {
     "locationType": [
@@ -439,12 +440,20 @@
         "label": "Google"
       },
       {
-        "value": "Facebook",
-        "label": "Facebook"
+        "value": "Media Sosial",
+        "label": "Media Sosial (IG, FB, Tiktok, Youtube, LinkedIn)"
       },
       {
-        "value": "Instagram",
-        "label": "Instagram"
+        "value": "Artikel Berita",
+        "label": "Artikel Berita"
+      },
+      {
+        "value": "Brosur",
+        "label": "Brosur"
+      },
+      {
+        "value": "Rekomendasi",
+        "label": "Rekomendasi Teman/Keluarga/Kerabat"
       },
       {
         "value": "Others",
@@ -840,42 +849,6 @@
     "title": "See The Differences",
     "hint": "Hide Information",
     "note": "*Phasellus laoreet lorem vel dolor tempus vehicula. Gallia est omnis divisa in partes tres, quarum. Praeterea iter est quasdam res quas ex communi. Contra legem facit qui id facit quod lex prohibet. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
-    "items": [
-      {
-        "device": "Control Panel",
-        "image": "/img/temp/product-1.png",
-        "basic": "1",
-        "pro": "1"
-      },
-      {
-        "device": "2Control Panel",
-        "image": "/img/temp/product-1.png",
-        "basic": "1",
-        "pro": "1"
-      },
-      {
-        "device": "3Control Panel",
-        "image": "/img/temp/product-1.png",
-        "basic": "1",
-        "pro": "1"
-      },
-      {
-        "device": "4Control Panel",
-        "image": "/img/temp/product-1.png",
-        "basic": "1",
-        "pro": "1"
-      },
-      {
-        "device": "5Control Panel",
-        "image": "/img/temp/product-2.png",
-        "basic": "1",
-        "pro": "1"
-      }
-    ],
-    "price": {
-      "home": "5.000.000",
-      "pro": "8.000.000"
-    },
     "serviceTitle": "Service Fee",
     "serviceFee": [
       {
@@ -1055,6 +1028,70 @@
       "device": "12",
       "image": "/img/temp/package-1.png",
       "isRent": false
+    }
+  ],
+  "SoPackagesBuy": [
+    {
+      "device": "Control Panel",
+      "image": "/img/temp/product-1.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "2Control Panel",
+      "image": "/img/temp/product-1.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "3Control Panel",
+      "image": "/img/temp/product-1.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "4Control Panel",
+      "image": "/img/temp/product-1.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "5Control Panel",
+      "image": "/img/temp/product-2.png",
+      "basic": "1",
+      "pro": "1"
+    }
+  ],
+  "SoPackagesRent": [
+    {
+      "device": "Control Panel",
+      "image": "/img/temp/product-1.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "2Control Panel",
+      "image": "/img/temp/product-1.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "3Control Panel",
+      "image": "/img/temp/product-1.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "4Control Panel",
+      "image": "/img/temp/product-1.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "5Control Panel",
+      "image": "/img/temp/product-2.png",
+      "basic": "1",
+      "pro": "1"
     }
   ]
 }
