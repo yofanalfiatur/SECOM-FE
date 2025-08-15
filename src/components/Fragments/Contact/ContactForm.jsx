@@ -2,12 +2,15 @@
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, Loader2 } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import { useRouter, usePathname } from "next/navigation";
 
 const ContactForm = () => {
   const t = useTranslations();
   const FormValue = t.raw("FormValue");
+  const router = useRouter();
+  const pathname = usePathname();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -19,70 +22,43 @@ const ContactForm = () => {
     message: "",
   });
 
-  const [errors, setErrors] = useState({}); // Added missing errors state
+  const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [isSent, setIsSent] = useState(false);
 
-  // Options for dropdowns
   const locationOptions = FormValue.locationType;
   const howDidYouKnowOptions = FormValue.howDidYouKnow;
 
-  // Validation function
   const validateForm = () => {
     const newErrors = {};
-
-    // Name validation
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required !";
-    }
-
-    // Email validation
+    if (!formData.name.trim()) newErrors.name = "Name is required !";
     if (!formData.email) {
       newErrors.email = "Email is required !";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Please enter a valid email !";
     }
-
-    // Phone validation
     if (!formData.phone) {
       newErrors.phone = "Phone number is required !";
     } else if (!/^\d{8,15}$/.test(formData.phone.replace(/\s+/g, ""))) {
       newErrors.phone = "Please enter a valid phone number !";
     }
-
-    // Location validation
-    if (!formData.location) {
-      newErrors.location = "Location is required !";
-    }
-
-    // Company validation
-    if (!formData.company.trim()) {
+    if (!formData.location) newErrors.location = "Location is required !";
+    if (!formData.company.trim())
       newErrors.company = "Company name is required !";
-    }
-
-    // How did you know validation
-    if (!formData.howDidYouKnow) {
+    if (!formData.howDidYouKnow)
       newErrors.howDidYouKnow = "Please select how you know us !";
-    }
-
-    // Message validation
-    if (!formData.message.trim()) {
-      newErrors.message = "Message is required !";
-    }
+    if (!formData.message.trim()) newErrors.message = "Message is required !";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
-
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
@@ -91,7 +67,6 @@ const ContactForm = () => {
     }
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
@@ -103,9 +78,7 @@ const ContactForm = () => {
       const res = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        {
-          ...formData,
-        },
+        { ...formData },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
 
@@ -120,7 +93,14 @@ const ContactForm = () => {
           howDidYouKnow: "",
           message: "",
         });
-        setTimeout(() => setIsSent(false), 3000); // reset after 3 sec
+
+        setTimeout(() => {
+          if (pathname.startsWith("/en")) {
+            router.push("/en/thankyou");
+          } else {
+            router.push("/thankyou");
+          }
+        }, 500);
       }
     } catch (error) {
       console.error("EmailJS Error:", error);
