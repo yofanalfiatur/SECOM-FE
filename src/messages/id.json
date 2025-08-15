@@ -458,7 +458,9 @@
         "value": "Others",
         "label": "Others"
       }
-    ]
+    ],
+    "textBtnSend": "Kirim Pesan",
+    "textBtnSuccess": "Terkirim"
   },
   "ThankYouPage": {
     "title": "Thank You",

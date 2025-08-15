@@ -1,9 +1,9 @@
 "use client";
-
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, Loader2 } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const t = useTranslations();
@@ -18,13 +18,13 @@ const ContactForm = () => {
     howDidYouKnow: "",
     message: "",
   });
-  const [errors, setErrors] = useState({});
+
+  const [errors, setErrors] = useState({}); // Added missing errors state
   const [isLoading, setIsLoading] = useState(false);
+  const [isSent, setIsSent] = useState(false);
 
   // Options for dropdowns
-
   const locationOptions = FormValue.locationType;
-
   const howDidYouKnowOptions = FormValue.howDidYouKnow;
 
   // Validation function
@@ -46,7 +46,7 @@ const ContactForm = () => {
     // Phone validation
     if (!formData.phone) {
       newErrors.phone = "Phone number is required !";
-    } else if (!/^\d{10,15}$/.test(formData.phone.replace(/\s+/g, ""))) {
+    } else if (!/^\d{8,15}$/.test(formData.phone.replace(/\s+/g, ""))) {
       newErrors.phone = "Please enter a valid phone number !";
     }
 
@@ -68,8 +68,6 @@ const ContactForm = () => {
     // Message validation
     if (!formData.message.trim()) {
       newErrors.message = "Message is required !";
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = "Message must be at least 10 characters !";
     }
 
     setErrors(newErrors);
@@ -96,37 +94,36 @@ const ContactForm = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!validateForm()) return;
 
     setIsLoading(true);
+    setIsSent(false);
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      const res = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        {
+          ...formData,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
 
-      // Here you would typically make your API call to Laravel backend
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData)
-      // });
-
-      console.log("Contact form submission:", formData);
-
-      // Handle success
-      alert("Message sent successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        location: "",
-        company: "",
-        howDidYouKnow: "",
-        message: "",
-      });
+      if (res.status === 200) {
+        setIsSent(true);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          location: "",
+          company: "",
+          howDidYouKnow: "",
+          message: "",
+        });
+        setTimeout(() => setIsSent(false), 3000); // reset after 3 sec
+      }
     } catch (error) {
-      console.error("Contact form error:", error);
+      console.error("EmailJS Error:", error);
       setErrors({ submit: "Failed to send message. Please try again." });
     } finally {
       setIsLoading(false);
@@ -458,39 +455,24 @@ const ContactForm = () => {
             </motion.p>
           )}
 
-          {/* Submit Error */}
-          {errors.submit && (
-            <motion.p
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-red-500 text-sm text-center mb-4"
-            >
-              {errors.submit}
-            </motion.p>
-          )}
-
           {/* Submit Button */}
           <motion.button
             type="submit"
             disabled={isLoading}
-            whileHover={{ scale: isLoading ? 1 : 1.02 }}
-            whileTap={{ scale: isLoading ? 1 : 0.98 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-            className={`cursor-pointer w-full py-3 lg:py-4 mt-1 lg:mt-4 rounded-[5px] tracking-[5px] font-raleway text-white text-sm lg:text-xl transition-all duration-200 ${
-              isLoading
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-tosca hover:bg-teal-600 active:bg-teal-700"
-            }`}
+            className="cursor-pointer w-full py-3 lg:py-4 mt-1 lg:mt-4 rounded-[5px] tracking-[5px] font-raleway text-white text-sm lg:text-xl transition-all duration-200 bg-tosca hover:bg-teal-600 active:bg-teal-700 uppercase"
           >
             {isLoading ? (
-              <div className="flex items-center justify-center space-x-2">
-                <Loader2 className="w-4 h-4 animate-spin" />
-                <span>SENDING MESSAGE...</span>
-              </div>
+              <motion.div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+            ) : isSent ? (
+              <motion.span
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                ✅ {FormValue.textBtnSuccess}
+              </motion.span>
             ) : (
-              "SEND MESSAGE"
+              FormValue.textBtnSend
             )}
           </motion.button>
         </div>

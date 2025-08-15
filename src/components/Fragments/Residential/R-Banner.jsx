@@ -5,6 +5,7 @@ import "@splidejs/react-splide/css";
 import Image from "next/image";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 const ResBanner = () => {
   const t = useTranslations();

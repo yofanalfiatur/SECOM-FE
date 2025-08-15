@@ -407,7 +407,7 @@
   },
   "ContactPage": {
     "title": "Get Your Free Consultation",
-    "desc": "We’ll assess your specific needs and recommend the best-fit solution with accuracy and efficiency.",
+    "desc": "We'll assess your specific needs and recommend the best-fit solution with accuracy and efficiency.",
     "photo": "/img/temp/Free Consultation.jpg",
     "photoMd": "/img/temp/Free Consultation Mobile.jpg"
   },
@@ -459,8 +459,11 @@
         "value": "Others",
         "label": "Others"
       }
-    ]
+    ],
+    "textBtnSend": "Send Message",
+    "textBtnSuccess": "Sent"
   },
+
   "ThankYouPage": {
     "title": "Thank You",
     "title2": "ForYour Message",
