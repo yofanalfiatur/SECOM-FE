@@ -35,9 +35,9 @@ const AmProducts = () => {
                 >
                   <Link
                     href={item.link}
-                    className="flex flex-col h-full bg-[#012146] pt-12 pb-6 px-8 m-1 relative z-[1]"
+                    className="flex flex-col h-full bg-[#012146] pt-12 pb-6 px-8 m-1 relative z-[1] group"
                   >
-                    <RadialGridCard />
+                    <RadialGridCard className="group-hover:!rounded-full" />
                     <div className="flex flex-col items-center">
                       <p className="text-white text-[25px] font-raleway text-center">
                         {item.title}

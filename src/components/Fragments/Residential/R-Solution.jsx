@@ -12,8 +12,8 @@ const ResSolution = () => {
 
   return (
     <section className="pt-11 pb-19 lg:py-11 res-sol bg-navyblue overflow-hidden">
-      <div className="container mx-auto flex flex-col lg:flex-row justify-between gap-8">
-        <div className="flex flex-col justify-center w-full lg:w-[45%] z-10 bg-navyblue relative before:content-[''] before:absolute before:h-full before:bottom-0 before:right-[-2rem] before:bg-navyblue before:-z-10 before:[width:calc(150%+(100vw-1320px+0rem)/2)]">
+      <div className="container mx-auto flex flex-col lg:flex-row justify-between gap-8 lg:gap-2">
+        <div className="flex flex-col justify-center w-full lg:w-[45%] z-10 bg-navyblue relative lg:pr-6 before:content-[''] before:absolute before:h-full before:bottom-0 before:right-[-2rem] before:bg-navyblue before:-z-10 before:[width:calc(150%+(100vw-1320px+0rem)/2)]">
           <p className="text-sm lg:text-xl text-white font-raleway tracking-[5px] font-light opacity-80 uppercase">
             {ReSolution.hint}
           </p>
@@ -31,7 +31,7 @@ const ResSolution = () => {
           </ButtonSecondary>
         </div>
 
-        <div className="relative w-full lg:w-[52%] flex flex-col justify-center py-1 res-sol__wrap-slider">
+        <div className="relative w-full lg:w-[55%] flex flex-col justify-center py-1 lg:pl-6 res-sol__wrap-slider">
           <Splide
             options={{
               type: "loop",
@@ -47,8 +47,8 @@ const ResSolution = () => {
             hasTrack={false}
           >
             {/* Custom Arrow Buttons */}
-            <div className="splide__arrows absolute w-full z-[1] !top-[calc(100%+40px)] lg:!top-[50%] ">
-              <button className="splide__arrow splide__arrow--prev !border-white lg:!border-tosca !bg-transparent lg:!bg-white !border-[1px] !rounded-none !w-[36px] !h-[36px] !left-[38%] lg:!left-[-18px]">
+            <div className="splide__arrows absolute w-full z-10 !top-[calc(100%+40px)] lg:!top-[50%] ">
+              <button className="splide__arrow splide__arrow--prev !border-white lg:!border-tosca !bg-transparent lg:!bg-white !border-[1px] !opacity-100 !rounded-none !w-[36px] !h-[36px] !left-[38%] lg:!left-[-18px]">
                 <svg
                   width="22"
                   height="15"
@@ -64,7 +64,7 @@ const ResSolution = () => {
                   />
                 </svg>
               </button>
-              <button className="splide__arrow splide__arrow--next !border-white lg:!border-tosca !bg-transparent lg:!bg-white !border-[1px] !rounded-none !w-[36px] !h-[36px] !right-[38%] lg:!right-[-18px]">
+              <button className="splide__arrow splide__arrow--next !border-white lg:!border-tosca !bg-transparent lg:!bg-white !border-[1px] !opacity-100 !rounded-none !w-[36px] !h-[36px] !right-[38%] lg:!right-[-18px]">
                 <svg
                   width="22"
                   height="15"

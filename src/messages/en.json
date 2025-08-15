@@ -10,7 +10,7 @@
     {
       "icon": "/img/menu-type-1.svg",
       "text": "Business",
-      "href": "/#",
+      "href": "",
       "subMenu": [
         {
           "subMenuText": "Solutions",
@@ -158,29 +158,60 @@
   },
   "FooterDropdown": [
     {
-      "FtDropValue": "secom-global-network",
-      "FtDropText": "SECOM Global Network",
-      "FtDropHref": "#"
+      "text": "SECOM Global Network",
+      "href": ""
     },
     {
-      "FtDropValue": "secom-global-network-2",
-      "FtDropText": "SECOM Global Network 2",
-      "FtDropHref": "#"
+      "text": "Japan",
+      "href": "https://www.secom.co.jp/english/"
     },
     {
-      "FtDropValue": "secom-global-network-3",
-      "FtDropText": "SECOM Global Network 3",
-      "FtDropHref": "#"
+      "text": "Korea",
+      "href": "https://www.s1.co.kr/en"
     },
     {
-      "FtDropValue": "secom-global-network-4",
-      "FtDropText": "SECOM Global Network 4",
-      "FtDropHref": "#"
+      "text": "China",
+      "href": "https://www.secom.cn/"
     },
     {
-      "FtDropValue": "secom-global-network-5",
-      "FtDropText": "SECOM Global Network 5",
-      "FtDropHref": "#"
+      "text": "Taiwan",
+      "href": "https://www.secom.com.tw/"
+    },
+    {
+      "text": "Thailand",
+      "href": "https://www.secom.co.th/en/"
+    },
+    {
+      "text": "Vietnam",
+      "href": "https://www.secom.vn/en/"
+    },
+    {
+      "text": "Malaysia",
+      "href": "https://www.secom.com.my/"
+    },
+    {
+      "text": "Singapore",
+      "href": "https://www.secom.com.sg/"
+    },
+    {
+      "text": "Indonesia",
+      "href": "https://secom.co.id/"
+    },
+    {
+      "text": "Australia",
+      "href": "https://secom.com.au/"
+    },
+    {
+      "text": "New Zealand",
+      "href": "https://secom.co.nz/"
+    },
+    {
+      "text": "United Kingdom",
+      "href": "https://www.secom.plc.uk/"
+    },
+    {
+      "text": "Turkey",
+      "href": "https://secomtr.com/"
     }
   ],
   "ReBanner": {
@@ -265,30 +296,33 @@
     "result": [
       {
         "icon": "/img/survey-h-risk.png",
-        "text": "High Risk",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Magna pars studiorum, prodita quaerimus. dolore magna aliqua. Magna pars studiorum, prodita quaerimus.",
+        "title": "HIGH RISK",
+        "subtitle": "Your Home is at High Risk!",
+        "desc": "Your current protection isn't enough. Find out the system that gives your family real peace of mind.",
         "btn": {
-          "text": "CHECK OUR PACKAGES",
-          "href": "/#packages",
+          "text": "Discover Now",
+          "href": "/alarm",
           "target": "_self"
         }
       },
       {
         "icon": "/img/survey-m-risk.png",
-        "text": "Moderate Risk",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Magna pars studiorum, prodita quaerimus. dolore magna aliqua. Magna pars studiorum, prodita quaerimus.",
+        "title": "MODERATE RISK",
+        "subtitle": "Your Home May Be at Risk!",
+        "desc": "Your home is not fully protected. Find out what it's missing and how SECOM can help.",
         "btn": {
-          "text": "CHECK OUR PACKAGES",
+          "text": "Discover Now",
           "href": "/#packages",
           "target": "_self"
         }
       },
       {
         "icon": "/img/survey-l-risk.png",
-        "text": "Low Risk",
+        "title": "LOW RISK",
+        "subtitle": "Lorem Ipsum",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Magna pars studiorum, prodita quaerimus. dolore magna aliqua. Magna pars studiorum, prodita quaerimus.",
         "btn": {
-          "text": "CHECK OUR PACKAGES",
+          "text": "Discover Now",
           "href": "/#packages",
           "target": "_self"
         }
@@ -466,18 +500,18 @@
 
   "ThankYouPage": {
     "title": "Thank You",
-    "title2": "ForYour Message",
-    "desc": "Idque Caesaris facere voluntate liceret: sese habere. Ut enim ad minim veniam, quis nostrud exercitation. Tu quoque, Brute, fili mi, nihil timor populi, nihil!",
+    "title2": "for your inquiry!",
+    "desc": "A SECOM professional consultant will be in touch shortly to understand your needs and provide the best recommendation.",
     "logo": "/img/logo-thankyou.svg",
     "buttonCTA": {
-      "text": "Back to Homepage",
+      "text": "Back to Home",
       "href": "/",
       "target": "_self"
     }
   },
   "ErrorPage": {
-    "title": "The Page You're Looking For Didn't Exist",
-    "description": "Idque Caesaris facere voluntate liceret: sese habere. Ut enim ad minim veniam, quis nostrud exercitation. Tu quoque, Brute, fili mi, nihil timor populi, nihil!",
+    "title": "Page not found.",
+    "description": "Sorry, the page you're looking for has been moved or no longer exists.",
     "buttonCTA": {
       "text": "Back to Home",
       "href": "/",

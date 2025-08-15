@@ -17,9 +17,9 @@ const AmProtect = () => {
   return (
     <section className="relative pt-9 pb-13 lg:pb-23 lg:pt-17 overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:lg:h-10/12 after:h-full after:bg-[linear-gradient(0deg,_#ffffff_30%,_rgba(255,255,255,0)_60%)]">
       <BackgroundDots
-        dotSize={isDesktop ? 5 : 4}
-        dotsX={isDesktop ? 25 : 12}
-        dotsY={isDesktop ? 20 : 15}
+        dotSize={isDesktop ? 2.5 : 2}
+        dotsX={isDesktop ? 35 : 15}
+        dotsY={isDesktop ? 30 : 50}
       />
       <div className="container mx-auto relative z-[3] flex flex-col justify-center items-center">
         <h2 className="text-[25px] lg:text-[40px] lg:text-center font-raleway font-medium">
@@ -34,7 +34,7 @@ const AmProtect = () => {
           alt="Alarm Protect"
           width={1321}
           height={1000}
-          className="max-w-full h-auto lg:mb-7"
+          className="max-w-full h-auto mb-5 mt-2 lg:mb-7"
         />
 
         <div className="relative w-full flex flex-col justify-center py-1">

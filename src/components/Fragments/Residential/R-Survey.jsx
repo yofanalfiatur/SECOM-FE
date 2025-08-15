@@ -92,7 +92,7 @@ const ResSurvey = () => {
             </div>
 
             {/* Survey */}
-            <div className="flex flex-col items-center justify-center lg:min-h-[440px] w-full">
+            <div className="flex flex-col items-center justify-center lg:min-h-[440px] w-full px-4">
               {!showResult ? (
                 <div
                   className={`flex flex-col items-center w-full survey-question transition-all duration-300 ease-in-out ${
@@ -109,7 +109,7 @@ const ResSurvey = () => {
                       (answer, index) => (
                         <button
                           key={index}
-                          className="py-3 lg:py-4 px-6 bg-tosca text-sm lg:text-xl tracking-[4px] text-white rounded-[5px] hover:bg-tosca-dark transition-colors duration-300 uppercase cursor-pointer hover:shadow-sm hover:bg-[#166368]"
+                          className="py-3 lg:py-4 px-6 bg-tosca text-sm lg:text-xl tracking-[4px] text-white rounded-[5px] hover:bg-tosca-dark transition-colors duration-300 text-center uppercase cursor-pointer hover:shadow-sm hover:bg-[#166368]"
                           onClick={() => handleAnswer(answer.value)}
                           disabled={isTransitioning}
                         >
@@ -135,14 +135,18 @@ const ResSurvey = () => {
                     className="mt-4 lg:mt-8 w-[80px] h-[80px] lg:w-[120px] lg:h-[120px]"
                   />
                   <p className="text-navyblue font-normal text-[25px] lg:text-6xl text-center mb-2 lg:mb-4">
-                    {getResult().text}
+                    {getResult().title}
                   </p>
+                  <p className="text-navyblue font-medium leading-[1.7] lg:leading-[1.5] text-sm lg:text-xl text-center w-[90%] md:w-[70%]">
+                    {getResult().subtitle}
+                  </p>
+
                   <p className="text-navyblue leading-[1.7] lg:leading-[1.5] text-sm lg:text-xl text-center w-[90%] md:w-[70%] mb-4 lg:mb-6">
                     {getResult().desc}
                   </p>
                   <div className="flex flex-row res-survey__wrap-btn gap-4 mb-5">
                     <ButtonPrimary
-                      className=""
+                      className="!text-center"
                       target={getResult().btn.target}
                       href={getResult().btn.href}
                     >

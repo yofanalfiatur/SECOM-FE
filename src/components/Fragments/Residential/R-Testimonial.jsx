@@ -25,9 +25,9 @@ const ResTesti = () => {
   return (
     <section className="pt-8 lg:pt-16 pb-25 lg:pb-21 res-testi relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-4/12 before:z-[1] before:bg-[linear-gradient(0deg,_#ffffff,_rgba(255,255,255,0)_60%)]">
       <BackgroundDots
-        dotSize={isDesktop ? 5 : 3}
-        dotsX={isDesktop ? 25 : 12}
-        dotsY={isDesktop ? 15 : 15}
+        dotSize={isDesktop ? 2.5 : 2}
+        dotsX={isDesktop ? 35 : 15}
+        dotsY={isDesktop ? 25 : 35}
       />
       <div className="container mx-auto flex flex-col items-center">
         <h2 className="text-center text-[25px] lg:text-[45px] font-raleway font-normal text-darkblue">

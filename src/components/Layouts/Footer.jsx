@@ -100,14 +100,19 @@ const Footer = () => {
                   name="f-dropdown"
                   id="f-dropdown"
                   className="text-[12px] lg:text-[14px] max-w-max py-2 pl-3 pr-10 lg:py-2.5 lg:pl-3 lg:pr-16 relative border-1 border-[#ffffffb3] appearance-none text-[#ffffffb3] f-dropdown"
+                  onChange={(e) => {
+                    if (e.target.value) {
+                      window.open(e.target.value, "_blank");
+                    }
+                  }}
                 >
-                  {FooterDropdown.map(({ FtDropText, FtDropValue }, index) => (
+                  {FooterDropdown.map((item, index) => (
                     <option
-                      value={FtDropValue}
                       key={index}
-                      className="text-white f-dropdown__option"
+                      value={item.href}
+                      className="text-black f-dropdown__option"
                     >
-                      {FtDropText}
+                      {item.text}
                     </option>
                   ))}
                 </select>
