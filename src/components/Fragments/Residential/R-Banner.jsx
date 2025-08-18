@@ -22,15 +22,26 @@ const ResBanner = () => {
           }}
         >
           <div className="mx-auto items-center container flex flex-col h-full relative z-[11] lg:z-1">
-            <h1 className="mt-4 lg:mt-28 lg:w-[80%] leading-[1.2] font-medium text-white font-raleway text-[23px] lg:text-[50px] text-center ">
+            <motion.h1
+              animate={{ y: "0%", opacity: 1 }}
+              initial={{ y: "-100%", opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="mt-4 lg:mt-28 lg:w-[80%] leading-[1.2] font-medium text-white font-raleway text-[23px] lg:text-[50px] text-center "
+            >
               {ReBanner.title}
-            </h1>
+            </motion.h1>
           </div>
           {isDesktop && (
             <>
               <ul className="absolute w-full h-full z-[2]">
                 {ReBanner.items.map((item, index) => (
-                  <li
+                  <motion.li
+                    animate={{ y: "0%", opacity: 1 }}
+                    initial={{ y: "100%", opacity: 0 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: index * 0.3,
+                    }}
                     key={index}
                     style={{
                       top: item.top,
@@ -45,7 +56,7 @@ const ResBanner = () => {
                         {item.text}
                       </p>
                     </div>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </>

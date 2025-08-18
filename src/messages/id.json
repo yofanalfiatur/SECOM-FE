@@ -12,8 +12,8 @@
       "href": "",
       "subMenu": [
         {
-          "subMenuText": "Solutions",
-          "subMenuHref": "/solutions"
+          "subMenuText": "Alarm",
+          "subMenuHref": "/alarm"
         }
       ]
     },
@@ -21,10 +21,11 @@
       "icon": "/img/menu-type-2.svg",
       "text": "Residential",
       "href": "/",
+
       "subMenu": [
         {
-          "subMenuText": "Alarm",
-          "subMenuHref": "/alarm"
+          "subMenuText": "Solutions",
+          "subMenuHref": "/solutions"
         }
       ]
     }
@@ -125,27 +126,11 @@
   "FooterMenu": [
     {
       "FtMenuText": "SECOM For Home",
-      "FtMenuLink": "/#secom-for-home"
+      "FtMenuLink": "/solutions"
     },
     {
       "FtMenuText": "SECOM For Business",
-      "FtMenuLink": "/#secom-for-business"
-    },
-    {
-      "FtMenuText": "About Us",
-      "FtMenuLink": "/#about"
-    },
-    {
-      "FtMenuText": "Blog",
-      "FtMenuLink": "/#blog"
-    },
-    {
-      "FtMenuText": "Career",
-      "FtMenuLink": "/#career"
-    },
-    {
-      "FtMenuText": "FAQ",
-      "FtMenuLink": "/#faq"
+      "FtMenuLink": "/alarm"
     }
   ],
   "FooterSocMed": {
@@ -733,7 +718,7 @@
   "SolDifferences": {
     "title": "See The Differences",
     "hint": "Hide Information",
-    "note": "*Phasellus laoreet lorem vel dolor tempus vehicula. Gallia est omnis divisa in partes tres, quarum. Praeterea iter est quasdam res quas ex communi. Contra legem facit qui id facit quod lex prohibet. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
+    "note": "*Syarat&Ketentuan<br><ul><li>Paket dapat disesuaikan dengan kebutuhan rumah Anda.</li><li>Harga belum termasuk PPN.</li><li>Harga belum termasuk biaya instalasi profesional.</li></ul>",
     "serviceTitle": "Service Fee"
   },
   "SolFAQ": {
@@ -951,7 +936,7 @@
   "AlarmDifferences": {
     "title": "See The Differences",
     "hint": "Hide Information",
-    "note": "*Phasellus laoreet lorem vel dolor tempus vehicula. Gallia est omnis divisa in partes tres, quarum. Praeterea iter est quasdam res quas ex communi. Contra legem facit qui id facit quod lex prohibet. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
+    "note": "*Syarat&Ketentuan<br><ul><li>Paket dapat disesuaikan dengan kebutuhan rumah Anda.</li><li>Harga belum termasuk PPN.</li><li>Harga belum termasuk biaya instalasi profesional.</li></ul>",
     "serviceTitle": "Service Fee"
   },
   "AlarmFAQ": {
@@ -984,7 +969,8 @@
       "image": "/img/temp/products/Control-Panel.png",
       "link": "#1",
       "positionX": "49%",
-      "positionY": "24%"
+      "positionY": "24%",
+      "type": "business"
     },
     {
       "title": "Remote Control",
@@ -992,7 +978,8 @@
       "image": "/img/temp/products/Remote-Control.png",
       "link": "#2",
       "positionX": "64%",
-      "positionY": "25%"
+      "positionY": "25%",
+      "type": "business"
     },
     {
       "title": "Keypad",
@@ -1000,7 +987,8 @@
       "image": "/img/temp/products/Keypad.png",
       "link": "#3",
       "positionX": "64%",
-      "positionY": "25%"
+      "positionY": "25%",
+      "type": "business"
     },
     {
       "title": "Siren Box",
@@ -1008,7 +996,8 @@
       "image": "/img/temp/products/Siren-Box.png",
       "link": "#4",
       "positionX": "32.5%",
-      "positionY": "50.5%"
+      "positionY": "50.5%",
+      "type": "business"
     },
     {
       "title": "Smart Video Camera",
@@ -1016,7 +1005,8 @@
       "image": "/img/temp/products/Smart-Video-Camera.png",
       "link": "#5",
       "positionX": "41%",
-      "positionY": "58%"
+      "positionY": "58%",
+      "type": "business"
     },
     {
       "title": "Door Contact",
@@ -1024,7 +1014,8 @@
       "image": "/img/temp/products/Door-Contact.png",
       "link": "#6",
       "positionX": "64%",
-      "positionY": "25%"
+      "positionY": "25%",
+      "type": "business"
     },
     {
       "title": "PIR Camera Indoor",
@@ -1032,7 +1023,8 @@
       "image": "/img/temp/products/PIR-Camera-Indoor.png",
       "link": "#7",
       "positionX": "49%",
-      "positionY": "43.5%"
+      "positionY": "43.5%",
+      "type": "business"
     },
     {
       "title": "PIR Indoor",
@@ -1040,7 +1032,8 @@
       "image": "/img/temp/products/PIR-Indoor.png",
       "link": "#8",
       "positionX": "64%",
-      "positionY": "25%"
+      "positionY": "25%",
+      "type": "business"
     },
     {
       "title": "Smoke Detector",
@@ -1048,22 +1041,32 @@
       "image": "/img/temp/products/Smoke-Detector.png",
       "link": "#9",
       "positionX": "64%",
-      "positionY": "25%"
+      "positionY": "25%",
+      "type": "business"
+    },
+    {
+      "title": "Heat Sensor",
+      "subtitle": "Mendeteksi suhu lebih awal untuk mencegah kebakaran.",
+      "image": "/img/temp/products/Heat-Sensor.png",
+      "link": "#10",
+      "positionX": "61%",
+      "positionY": "82.5%",
+      "type": "business"
     },
     {
       "title": "Panic Button",
       "subtitle": "Tombol yang dapat ditekan saat keadaan darurat untuk segera meminta bantuan dari SECOM.",
       "image": "/img/temp/products/Keypad.png",
-      "link": "#10",
+      "link": "#11",
       "positionX": "61%",
-      "positionY": "82.5%"
+      "positionY": "82.5%",
+      "type": "business"
     }
   ],
-
-  "Packages": [
+  "BusinessPackages": [
     {
       "title": "Business",
-      "price": "1,065,000",
+      "price": "1.065.000",
       "serviceFee": "",
       "desc": "Paket sewa yang sederhana dan terjangkau untuk bisnis kecil atau kantor. Dilengkapi perangkat keamanan esensial untuk memulai perlindungan.",
       "device": "8",
@@ -1072,7 +1075,7 @@
     },
     {
       "title": "Business PRO",
-      "price": "1,464,000",
+      "price": "1.464.000",
       "serviceFee": "",
       "desc": "Perlindungan menyeluruh dengan fitur keamanan canggih dan tambahan fitur keselamatan, ideal untuk area dengan risiko tinggi.",
       "device": "12",
@@ -1082,15 +1085,15 @@
 
     {
       "title": "Business",
-      "price": "18,282,000",
+      "price": "18.282.000",
       "serviceFee": [
         {
           "text": "Service fee 24/7 monitoring only",
-          "fee": "446,000"
+          "fee": "446.000"
         },
         {
           "text": "Service fee 24/7 monitoring + dispatch",
-          "fee": "668,000"
+          "fee": "668.000"
         }
       ],
       "desc": "Paket pembelian satu kali untuk bisnis kecil atau kantor. Termasuk perangkat keamanan penting untuk memulai. Sederhana, terjangkau, dan sepenuhnya milik Anda.",
@@ -1100,19 +1103,19 @@
     },
     {
       "title": "Business PRO",
-      "price": "25,955,000",
+      "price": "25.955.000",
       "feeService": {
-        "monitorOnly": "465,000",
-        "monitorDispatch": "687,000"
+        "monitorOnly": "465.000",
+        "monitorDispatch": "687.000"
       },
       "serviceFee": [
         {
           "text": "Service fee 24/7 monitoring only",
-          "fee": "465,000"
+          "fee": "465.000"
         },
         {
           "text": "Service fee 24/7 monitoring + dispatch",
-          "fee": "687,000"
+          "fee": "687.000"
         }
       ],
       "desc": "Miliki sistem keamanan lengkap dengan perlindungan canggih dan fitur keselamatan tambahan. Ideal untuk area berisiko tinggi dan keamanan jangka panjang bisnis Anda.",
@@ -1121,7 +1124,70 @@
       "isRent": false
     }
   ],
-  "SoPackagesBuy": [
+
+  "HomePackages": [
+    {
+      "title": "Home",
+      "price": "928.000",
+      "serviceFee": "",
+      "desc": "Keamanan dasar untuk rumah dengan alarm, sensor, dan respons 24/7 dari SECOM.",
+      "device": "9",
+      "image": "/img/temp/solutions/package-home.png",
+      "isRent": true
+    },
+    {
+      "title": "Home PRO",
+      "price": "1.400.000",
+      "serviceFee": "",
+      "desc": "Perlindungan maksimal dengan cakupan dalam dan luar rumah, deteksi pintar, serta sistem peringatan dini.",
+      "device": "9",
+      "image": "/img/temp/solutions/package-homepro.png",
+      "isRent": true
+    },
+
+    {
+      "title": "Home",
+      "price": "17.135.000",
+      "serviceFee": [
+        {
+          "text": "Biaya Layanan Pemantauan 24/7",
+          "fee": "346,000"
+        },
+        {
+          "text": "Biaya Layanan Pemantauan 24/7 + Respon Fisik",
+          "fee": "568,000"
+        }
+      ],
+      "desc": "Solusi keamanan yang pintar dan andal dengan perlindungan esensial serta pemantauan 24/7, kini tersedia untuk dimiliki.",
+      "device": "9",
+      "image": "/img/temp/solutions/package-home.png",
+      "isRent": false
+    },
+    {
+      "title": "Home PRO",
+      "price": "28.948.000",
+      "feeService": {
+        "monitorOnly": "465,000",
+        "monitorDispatch": "687,000"
+      },
+      "serviceFee": [
+        {
+          "text": "Biaya Layanan Pemantauan 24/7",
+          "fee": "375,000"
+        },
+        {
+          "text": "Biaya Layanan Pemantauan 24/7 + Respon Fisik",
+          "fee": "597,000"
+        }
+      ],
+      "desc": "Perlindungan total untuk rumah Anda mencakup dalam dan luar ruangan, deteksi canggih, dan pemantauan 24/7, kini bisa Anda miliki sepenuhnya.",
+      "device": "9",
+      "image": "/img/temp/solutions/package-homepro.png",
+      "isRent": false
+    }
+  ],
+
+  "HomePackagesBuy": [
     {
       "device": "Control Panel",
       "image": "/img/temp/products/Control-Panel.png",
@@ -1129,31 +1195,61 @@
       "pro": "1"
     },
     {
-      "device": "2Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "device": "PIR Camera",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "3Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "device": "Panic Button",
+      "image": "/img/temp/products/Panic-Button.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "4Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "device": "Door Control",
+      "image": "/img/temp/products/Door-Contact.png",
+      "basic": "3",
+      "pro": "5"
+    },
+    {
+      "device": "Motion Sensor",
+      "image": "/img/temp/products/PIR-Indoor.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "5Control Panel",
+      "device": "Outdoor CCTV",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Siren",
+      "image": "/img/temp/products/Siren-Box.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Remote Control",
+      "image": "/img/temp/products/Remote-Control.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Smoke Detector",
+      "image": "/img/temp/products/Smoke-Detector.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Keypad",
       "image": "/img/temp/products/Keypad.png",
-      "basic": "1",
+      "basic": "-",
       "pro": "1"
     }
   ],
-  "SoPackagesRent": [
+  "HomePackagesRent": [
     {
       "device": "Control Panel",
       "image": "/img/temp/products/Control-Panel.png",
@@ -1161,27 +1257,57 @@
       "pro": "1"
     },
     {
-      "device": "2Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "device": "PIR Camera",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "3Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "device": "Panic Button",
+      "image": "/img/temp/products/Panic-Button.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "4Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "device": "Door Control",
+      "image": "/img/temp/products/Door-Contact.png",
+      "basic": "3",
+      "pro": "5"
+    },
+    {
+      "device": "Motion Sensor",
+      "image": "/img/temp/products/PIR-Indoor.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "5Control Panel",
+      "device": "Outdoor CCTV",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Siren",
+      "image": "/img/temp/products/Siren-Box.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Remote Control",
+      "image": "/img/temp/products/Remote-Control.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Smoke Detector",
+      "image": "/img/temp/products/Smoke-Detector.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Keypad",
       "image": "/img/temp/products/Keypad.png",
-      "basic": "1",
+      "basic": "-",
       "pro": "1"
     }
   ]

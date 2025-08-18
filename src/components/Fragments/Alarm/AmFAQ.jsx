@@ -31,7 +31,7 @@ const AmFAQ = ({ translationKey }) => {
                   {/* Question */}
                   <button
                     onClick={() => toggleAccordion(index)}
-                    className={`w-full px-4 lg:px-8 py-3 lg:py-4 flex justify-between items-center border-[#13223333] gap-4 ${
+                    className={`w-full px-4 lg:px-8 py-3 lg:py-4 flex justify-between items-center cursor-pointer border-[#13223333] gap-4 ${
                       isOpen ? "border-b-[1px]" : "border-0"
                     } `}
                   >

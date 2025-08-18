@@ -99,7 +99,7 @@ const Footer = () => {
                 <select
                   name="f-dropdown"
                   id="f-dropdown"
-                  className="text-[12px] lg:text-[14px] max-w-max py-2 pl-3 pr-10 lg:py-2.5 lg:pl-3 lg:pr-16 relative border-1 border-[#ffffffb3] appearance-none text-[#ffffffb3] f-dropdown"
+                  className="text-[12px] lg:text-[14px] max-w-max py-2 pl-3 pr-10 lg:py-2.5 lg:pl-3 lg:pr-16 relative border-1 border-[#ffffffb3] appearance-none text-[#ffffffb3] cursor-pointer f-dropdown"
                   onChange={(e) => {
                     if (e.target.value) {
                       window.open(e.target.value, "_blank");
@@ -127,6 +127,7 @@ const Footer = () => {
               <Link
                 className="text-white leading-[1.7] lg:leading-[1.2] font-semibold text-[15px] lg:text-xl w-full lg:w-2/3"
                 href={FooterContent.FtAddressLink}
+                target="_blank"
               >
                 {FooterContent.FtAddressText}
               </Link>
@@ -145,7 +146,7 @@ const Footer = () => {
                       >
                         <Link
                           href={FtMenuLink}
-                          className="f-sitemap__list__item__link text-[14px] lg:text-lg text-white max-w-max"
+                          className="f-sitemap__list__item__link text-[14px] lg:text-lg text-white max-w-max transition-all ease duration-200 hover:opacity-60"
                         >
                           {FtMenuText}
                         </Link>

@@ -90,9 +90,9 @@ const ResSolution = () => {
                       alt={item.title}
                       width={693}
                       height={524}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover aspect-[693/524]"
                     />
-                    <div className="flex flex-col lg:p-6 lg:absolute lg:bottom-0 lg:left-0 w-full">
+                    <div className="flex flex-col lg:py-6 lg:px-7 lg:absolute lg:bottom-0 lg:left-0 w-full">
                       <div className="bg-tosca p-4 lg:py-5 lg:px-6 flex flex-col gap-1 w-full">
                         <p className="text-white text-sm lg:text-lg font-medium leading-[1.7] lg:leading-[1.5]">
                           {item.title}

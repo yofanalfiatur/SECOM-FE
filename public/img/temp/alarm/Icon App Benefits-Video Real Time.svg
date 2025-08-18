@@ -3,8 +3,8 @@
   <!-- Generator: Adobe Illustrator 29.6.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 9)  -->
   <defs>
     <linearGradient id="linear-gradient" x1="0" y1="37.5" x2="75" y2="37.5" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0063ac"/>
-      <stop offset="1" stop-color="#00c0cd"/>
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#ffffff"/>
     </linearGradient>
   </defs>
   <path d="M71.67,19.13c.46,0,.83.37.83.83v35.08c0,.46-.37.83-.83.83H3.33c-.46,0-.83-.37-.83-.83V19.96c0-.46.37-.83.83-.83h68.34M71.67,16.63H3.33c-1.84,0-3.33,1.49-3.33,3.33v35.08c0,1.84,1.49,3.33,3.33,3.33h68.34c1.84,0,3.33-1.49,3.33-3.33V19.96c0-1.84-1.49-3.33-3.33-3.33h0ZM10.11,25.98h2.91v20.06h9.62v2.44h-12.52v-22.5ZM28.77,25.98v22.5h-2.91v-22.5h2.91ZM38.79,48.49l-7.34-22.5h3.14l3.51,11.08c.97,3.04,1.8,5.78,2.4,8.41h.07c.63-2.6,1.57-5.44,2.57-8.38l3.81-11.12h3.1l-8.05,22.5h-3.21ZM64.12,37.94h-8.75v8.11h9.75v2.44h-12.65v-22.5h12.15v2.44h-9.25v7.11h8.75v2.4Z" fill="url(#linear-gradient)"/>

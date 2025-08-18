@@ -15,8 +15,8 @@ const AmPackage = (props) => {
   } = props;
 
   const t = useTranslations();
-  const AlarmPackage = t.raw(translationKey);
-  const AlarmDifferences = t.raw(differences);
+  const PackageInfo = t.raw(translationKey);
+  const DifferncesInfo = t.raw(differences);
   const Packages = t.raw(listPackages);
   const SoPackagesBuy = t.raw(packagesBuy);
   const SoPackagesRent = t.raw(packagesRent);
@@ -65,7 +65,7 @@ const AmPackage = (props) => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-darkblue text-[25px] lg:text-[40px] lg:text-center font-normal"
         >
-          {AlarmPackage.title}
+          {PackageInfo.title}
         </motion.h2>
 
         <motion.p
@@ -74,7 +74,7 @@ const AmPackage = (props) => {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="text-darkblue text-sm lg:text-lg lg:text-center lg:w-[40%] mt-3 mb-6 lg:mt-3 lg:mb-8"
         >
-          {AlarmPackage.desc}
+          {PackageInfo.desc}
         </motion.p>
 
         {/* Tabs for Rent and Buy */}
@@ -85,7 +85,7 @@ const AmPackage = (props) => {
           className="flex flex-col border-1 border-[#00000033] w-full lg:w-10/12 rounded-[5px] overflow-hidden"
         >
           <div className="flex flex-row relative border-b-[1px] border-[#00000033]">
-            {AlarmPackage.tabs.map((tab, index) => (
+            {PackageInfo.tabs.map((tab, index) => (
               <div
                 className="w-1/2 relative first:border-r-[1px] first:border-[#00000033]"
                 key={index}
@@ -231,7 +231,7 @@ const AmPackage = (props) => {
                 }`}
               >
                 <span className="text-white font-raleway text-sm lg:text-xl lg:font-semibold tracking-[4px] uppercase">
-                  {AlarmDifferences.title}
+                  {DifferncesInfo.title}
                 </span>
                 <svg
                   width="15"
@@ -349,13 +349,15 @@ const AmPackage = (props) => {
                     </div>
                     <div className="bg-navyblue py-4 lg:py-6 flex flex-col items-center justify-center">
                       <p className="text-white text-sm lg:text-xl font-raleway font-semibold uppercase">
-                        {AlarmDifferences.serviceTitle}
+                        {DifferncesInfo.serviceTitle}
                       </p>
                     </div>
 
                     {/* Service Fee */}
                     {Packages.find(
-                      (pkg) => !pkg.isRent && pkg.title === "Business"
+                      (pkg) =>
+                        (!pkg.isRent && pkg.title === "Business") ||
+                        (!pkg.isRent && pkg.title === "Home")
                     ).serviceFee.map((service, index) => (
                       <div
                         key={index}
@@ -373,7 +375,9 @@ const AmPackage = (props) => {
                             RP{" "}
                             {
                               Packages.find(
-                                (pkg) => !pkg.isRent && pkg.title === "Business"
+                                (pkg) =>
+                                  (!pkg.isRent && pkg.title === "Business") ||
+                                  (!pkg.isRent && pkg.title === "Home")
                               ).serviceFee[index].fee
                             }
                           </p>
@@ -388,7 +392,9 @@ const AmPackage = (props) => {
                             {
                               Packages.find(
                                 (pkg) =>
-                                  !pkg.isRent && pkg.title === "Business PRO"
+                                  (!pkg.isRent &&
+                                    pkg.title === "Business PRO") ||
+                                  (!pkg.isRent && pkg.title === "Home PRO")
                               ).serviceFee[index].fee
                             }
                           </p>
@@ -412,7 +418,7 @@ const AmPackage = (props) => {
                   className=" text-tosca text-sm font-semibold mt-16 lg:mt-8 uppercase cursor-pointer flex flex-row justify-center items-center gap-2 self-center"
                 >
                   <p className="font-raleway font-normal text-xs tracking-[2px]">
-                    {AlarmDifferences.hint}
+                    {DifferncesInfo.hint}
                   </p>
                   <svg
                     width="15"
@@ -433,9 +439,10 @@ const AmPackage = (props) => {
               )}
 
               {/* Hint */}
-              <p className="text-[#13223399] mt-7 lg:mt-10 text-sm lg:text-[16px]">
-                {AlarmDifferences.note}
-              </p>
+              <div
+                className="text-[#13223399] mt-7 lg:mt-10 text-sm lg:text-[16px]"
+                dangerouslySetInnerHTML={{ __html: DifferncesInfo.note }}
+              />
             </div>
           </div>
         )}
@@ -452,7 +459,7 @@ const AmPackage = (props) => {
                 }`}
               >
                 <span className="text-white font-raleway text-sm lg:text-xl lg:font-semibold tracking-[4px] uppercase">
-                  {AlarmDifferences.title}
+                  {DifferncesInfo.title}
                 </span>
                 <svg
                   width="15"
@@ -574,7 +581,7 @@ const AmPackage = (props) => {
                   className=" text-tosca text-sm font-semibold mt-16 lg:mt-8 uppercase cursor-pointer flex flex-row justify-center items-center gap-2 self-center"
                 >
                   <p className="font-raleway font-normal text-xs tracking-[2px]">
-                    {AlarmDifferences.hint}
+                    {DifferncesInfo.hint}
                   </p>
                   <svg
                     width="15"
@@ -595,9 +602,10 @@ const AmPackage = (props) => {
               )}
 
               {/* Hint */}
-              <p className="text-[#13223399] mt-7 lg:mt-10 text-sm lg:text-[16px]">
-                {AlarmDifferences.note}
-              </p>
+              <div
+                className="text-[#13223399] mt-7 lg:mt-10 text-sm lg:text-[16px] package-note"
+                dangerouslySetInnerHTML={{ __html: DifferncesInfo.note }}
+              />
             </div>
           </div>
         )}

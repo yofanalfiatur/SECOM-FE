@@ -4,6 +4,7 @@ import ButtonPrimary from "@/components/Elements/ButtonPrimary";
 import React, { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 const ResSurvey = () => {
   const t = useTranslations();
@@ -68,7 +69,12 @@ const ResSurvey = () => {
       <div className="container mx-auto flex flex-col relative">
         <div className="flex flex-col relative w-full">
           <div className="flex bg-white pt-[1.9rem] lg:pt-[2.3rem] pb-8 lg:pb-6 flex-col items-center justify-center relative z-[1] m-[3px] md:m-1 res-survey__wrap">
-            <div className="res-survey__wrap-decor absolute top-0 left-[50%] transform -translate-1/2 w-[63px] h-[63px] rounded-[50%] flex flex-col items-center justify-center bg-tosca scale-70 lg:scale-100">
+            <motion.div
+              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+              className="res-survey__wrap-decor absolute top-0 left-[50%] transform -translate-1/2 w-[63px] h-[63px] rounded-[50%] flex flex-col items-center justify-center bg-tosca scale-70 lg:scale-100"
+            >
               <svg
                 width="26"
                 height="33"
@@ -81,14 +87,24 @@ const ResSurvey = () => {
                   fill="white"
                 />
               </svg>
-            </div>
+            </motion.div>
             <div className="flex flex-col w-full border-b-1 border-[#00529C33] pb-5 px-6">
-              <p className="text-navyblue text-center font-bold text-[13px] md:text-lg lg:text-[25px] font-raleway">
+              <motion.p
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="text-navyblue text-center font-bold text-[13px] md:text-lg lg:text-[25px] font-raleway"
+              >
                 {ReSurvey.title}
-              </p>
-              <p className="text-[13px] md:text-lg  lg:text-[25px] text-center font-normal text-navyblue font-raleway mt-1 lg:mt-0">
+              </motion.p>
+              <motion.p
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                transition={{ duration: 0.3, delay: 0.4 }}
+                className="text-[13px] md:text-lg  lg:text-[25px] text-center font-normal text-navyblue font-raleway mt-1 lg:mt-0"
+              >
                 {ReSurvey.desc}
-              </p>
+              </motion.p>
             </div>
 
             {/* Survey */}

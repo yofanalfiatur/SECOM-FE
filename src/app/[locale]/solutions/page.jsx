@@ -25,9 +25,9 @@ const SolutionsPage = () => {
       <AmPackage
         translationKey="SolPackage"
         differences="SolDifferences"
-        listPackages="Packages"
-        packagesBuy="SoPackagesBuy"
-        packagesRent="SoPackagesRent"
+        listPackages="HomePackages"
+        packagesBuy="HomePackagesBuy"
+        packagesRent="HomePackagesRent"
       />
       <AmFAQ translationKey="SolFAQ" />
     </>

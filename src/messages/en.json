@@ -13,8 +13,8 @@
       "href": "",
       "subMenu": [
         {
-          "subMenuText": "Solutions",
-          "subMenuHref": "/solutions"
+          "subMenuText": "Alarm",
+          "subMenuHref": "/alarm"
         }
       ]
     },
@@ -22,10 +22,11 @@
       "icon": "/img/menu-type-2.svg",
       "text": "Residential",
       "href": "/",
+
       "subMenu": [
         {
-          "subMenuText": "Alarm",
-          "subMenuHref": "/alarm"
+          "subMenuText": "Solutions",
+          "subMenuHref": "/solutions"
         }
       ]
     }
@@ -126,27 +127,11 @@
   "FooterMenu": [
     {
       "FtMenuText": "SECOM For Home",
-      "FtMenuLink": "/#secom-for-home"
+      "FtMenuLink": "/solutions"
     },
     {
       "FtMenuText": "SECOM For Business",
-      "FtMenuLink": "/#secom-for-business"
-    },
-    {
-      "FtMenuText": "About Us",
-      "FtMenuLink": "/#about"
-    },
-    {
-      "FtMenuText": "Blog",
-      "FtMenuLink": "/#blog"
-    },
-    {
-      "FtMenuText": "Career",
-      "FtMenuLink": "/#career"
-    },
-    {
-      "FtMenuText": "FAQ",
-      "FtMenuLink": "/#faq"
+      "FtMenuLink": "/alarm"
     }
   ],
   "FooterSocMed": {
@@ -222,13 +207,13 @@
       {
         "text": "If I leave food too long in the microwave, the smoke detector will alert us.",
         "top": "45%",
-        "left": "15%",
+        "left": "11%",
         "maxWidth": "314px",
         "icon": "/img/temp/h-banner-ibu.png"
       },
       {
         "text": "If someone knocks, I don't have to be scared anymore. ",
-        "top": "36%",
+        "top": "33%",
         "left": "41%",
         "maxWidth": "200px",
         "icon": "/img/temp/h-banner-anak.png"
@@ -243,7 +228,7 @@
       {
         "text": "If anyone tries to break in, I know my family and home are still protected.",
         "top": "50%",
-        "left": "70.5%",
+        "left": "72%",
         "maxWidth": "314px",
         "icon": "/img/temp/h-banner-bapak.png"
       }
@@ -734,7 +719,7 @@
   "SolDifferences": {
     "title": "See The Differences",
     "hint": "Hide Information",
-    "note": "*Phasellus laoreet lorem vel dolor tempus vehicula. Gallia est omnis divisa in partes tres, quarum. Praeterea iter est quasdam res quas ex communi. Contra legem facit qui id facit quod lex prohibet. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
+    "note": "*Terms & Conditions<br><ul><li>The package can be customized based on your home needs.</li><li>Prices are excluding VAT.</li><li>Prices are excluding professional installation fees.</li>",
     "serviceTitle": "Service Fee"
   },
   "SolFAQ": {
@@ -960,7 +945,7 @@
   "AlarmDifferences": {
     "title": "See The Differences",
     "hint": "Hide Information",
-    "note": "*Phasellus laoreet lorem vel dolor tempus vehicula. Gallia est omnis divisa in partes tres, quarum. Praeterea iter est quasdam res quas ex communi. Contra legem facit qui id facit quod lex prohibet. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
+    "note": "*Terms & Conditions<br><ul><li>The package can be customized based on your home needs.</li><li>Prices are excluding VAT.</li><li>Prices are excluding professional installation fees.</li>",
     "serviceTitle": "Service Fee"
   },
   "AlarmFAQ": {
@@ -998,7 +983,8 @@
       "image": "/img/temp/products/Control-Panel.png",
       "link": "#1",
       "positionX": "49%",
-      "positionY": "24%"
+      "positionY": "24%",
+      "type": "business"
     },
     {
       "title": "Remote Control",
@@ -1006,7 +992,8 @@
       "image": "/img/temp/products/Remote-Control.png",
       "link": "#2",
       "positionX": "64%",
-      "positionY": "25%"
+      "positionY": "25%",
+      "type": "business"
     },
     {
       "title": "Keypad",
@@ -1014,7 +1001,8 @@
       "image": "/img/temp/products/Keypad.png",
       "link": "#3",
       "positionX": "64%",
-      "positionY": "25%"
+      "positionY": "25%",
+      "type": "business"
     },
     {
       "title": "Siren Box",
@@ -1022,7 +1010,8 @@
       "image": "/img/temp/products/Siren-Box.png",
       "link": "#4",
       "positionX": "64%",
-      "positionY": "25%"
+      "positionY": "25%",
+      "type": "business"
     },
     {
       "title": "Smart Video Camera",
@@ -1030,7 +1019,8 @@
       "image": "/img/temp/products/Smart-Video-Camera.png",
       "link": "#5",
       "positionX": "41%",
-      "positionY": "58%"
+      "positionY": "58%",
+      "type": "business"
     },
     {
       "title": "Door Contact",
@@ -1038,7 +1028,8 @@
       "image": "/img/temp/products/Door-Contact.png",
       "link": "#6",
       "positionX": "64%",
-      "positionY": "25%"
+      "positionY": "25%",
+      "type": "business"
     },
     {
       "title": "PIR Camera Indoor",
@@ -1046,7 +1037,8 @@
       "image": "/img/temp/products/PIR-Camera-Indoor.png",
       "link": "#7",
       "positionX": "49%",
-      "positionY": "43.5%"
+      "positionY": "43.5%",
+      "type": "business"
     },
     {
       "title": "PIR Indoor",
@@ -1054,7 +1046,8 @@
       "image": "/img/temp/products/PIR-Indoor.png",
       "link": "#8",
       "positionX": "64%",
-      "positionY": "25%"
+      "positionY": "25%",
+      "type": "business"
     },
     {
       "title": "Smoke Detector",
@@ -1062,18 +1055,29 @@
       "image": "/img/temp/products/Smoke-Detector.png",
       "link": "#9",
       "positionX": "64%",
-      "positionY": "25%"
+      "positionY": "25%",
+      "type": "business"
+    },
+    {
+      "title": "Heat Sensor",
+      "subtitle": "Detects heat early to help prevent fires.",
+      "image": "/img/temp/products/Heat-Sensor.png",
+      "link": "#10",
+      "positionX": "61%",
+      "positionY": "82.5%",
+      "type": "business"
     },
     {
       "title": "Panic Button",
       "subtitle": "A button you press in an emergency to get help from SECOM right away.",
       "image": "/img/temp/products/Panic-Button.png",
-      "link": "#10",
+      "link": "#11",
       "positionX": "61%",
-      "positionY": "82.5%"
+      "positionY": "82.5%",
+      "type": "business"
     }
   ],
-  "Packages": [
+  "BusinessPackages": [
     {
       "title": "Business",
       "price": "1,065,000",
@@ -1108,7 +1112,7 @@
       ],
       "desc": "Paket pembelian satu kali untuk bisnis kecil atau kantor. Termasuk perangkat keamanan penting untuk memulai. Sederhana, terjangkau, dan sepenuhnya milik Anda.",
       "device": "8",
-      "image": "/img/temp/package-1.png",
+      "image": "/img/temp/alarm/Business.png",
       "isRent": false
     },
     {
@@ -1126,11 +1130,73 @@
       ],
       "desc": "Miliki sistem keamanan lengkap dengan perlindungan canggih dan fitur keselamatan tambahan. Ideal untuk area berisiko tinggi dan keamanan jangka panjang bisnis Anda.",
       "device": "12",
-      "image": "/img/temp/package-1.png",
+      "image": "/img/temp/alarm/BusinessPro.png",
       "isRent": false
     }
   ],
-  "SoPackagesBuy": [
+  "HomePackages": [
+    {
+      "title": "Home",
+      "price": "928,000",
+      "serviceFee": "",
+      "desc": "Essential home safety with alarms, sensors, and 24/7 SECOM response.",
+      "device": "9",
+      "image": "/img/temp/solutions/package-home.png",
+      "isRent": true
+    },
+    {
+      "title": "Home PRO",
+      "price": "1,400,000",
+      "serviceFee": "",
+      "desc": "Maximum protection with complete indoor and outdoor coverage, smart detection, and early warning systems.",
+      "device": "9",
+      "image": "/img/temp/solutions/package-homepro.png",
+      "isRent": true
+    },
+
+    {
+      "title": "Home",
+      "price": "17,135,000",
+      "serviceFee": [
+        {
+          "text": "Service fee 24/7 monitoring only",
+          "fee": "346,000"
+        },
+        {
+          "text": "Service fee 24/7 monitoring + dispatch",
+          "fee": "568,000"
+        }
+      ],
+      "desc": "A smart and reliable security solution with essential protection and 24/7 monitoring, now available for purchase.",
+      "device": "9",
+      "image": "/img/temp/solutions/package-home.png",
+      "isRent": false
+    },
+    {
+      "title": "Home PRO",
+      "price": "28,948,000",
+      "feeService": {
+        "monitorOnly": "465,000",
+        "monitorDispatch": "687,000"
+      },
+      "serviceFee": [
+        {
+          "text": "Service fee 24/7 monitoring only",
+          "fee": "375,000"
+        },
+        {
+          "text": "Service fee 24/7 monitoring + dispatch",
+          "fee": "597,000"
+        }
+      ],
+      "desc": "Complete home protection with full indoor and outdoor coverage, advanced detection, and 24/7 monitoring, now yours to own.",
+      "device": "15",
+      "image": "/img/temp/solutions/package-homepro.png",
+      "isRent": false
+    }
+  ],
+
+  "HomePackagesBuy": [
     {
       "device": "Control Panel",
       "image": "/img/temp/products/Control-Panel.png",
@@ -1138,31 +1204,61 @@
       "pro": "1"
     },
     {
-      "device": "2Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "device": "PIR Camera",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "3Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "device": "Panic Button",
+      "image": "/img/temp/products/Panic-Button.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "4Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "device": "Door Control",
+      "image": "/img/temp/products/Door-Contact.png",
+      "basic": "3",
+      "pro": "5"
+    },
+    {
+      "device": "Motion Sensor",
+      "image": "/img/temp/products/PIR-Indoor.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "5Control Panel",
+      "device": "Outdoor CCTV",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Siren",
+      "image": "/img/temp/products/Siren-Box.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Remote Control",
+      "image": "/img/temp/products/Remote-Control.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Smoke Detector",
+      "image": "/img/temp/products/Smoke-Detector.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Keypad",
       "image": "/img/temp/products/Keypad.png",
-      "basic": "1",
+      "basic": "-",
       "pro": "1"
     }
   ],
-  "SoPackagesRent": [
+  "HomePackagesRent": [
     {
       "device": "Control Panel",
       "image": "/img/temp/products/Control-Panel.png",
@@ -1170,27 +1266,57 @@
       "pro": "1"
     },
     {
-      "device": "2Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "device": "PIR Camera",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "3Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "device": "Panic Button",
+      "image": "/img/temp/products/Panic-Button.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "4Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "device": "Door Control",
+      "image": "/img/temp/products/Door-Contact.png",
+      "basic": "3",
+      "pro": "5"
+    },
+    {
+      "device": "Motion Sensor",
+      "image": "/img/temp/products/PIR-Indoor.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "5Control Panel",
+      "device": "Outdoor CCTV",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Siren",
+      "image": "/img/temp/products/Siren-Box.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Remote Control",
+      "image": "/img/temp/products/Remote-Control.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Smoke Detector",
+      "image": "/img/temp/products/Smoke-Detector.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Keypad",
       "image": "/img/temp/products/Keypad.png",
-      "basic": "1",
+      "basic": "-",
       "pro": "1"
     }
   ]

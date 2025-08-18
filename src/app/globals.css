@@ -805,3 +805,11 @@ main {
 .gnext.gbtn {
   display: none !important;
 }
+
+.package-note ul {
+  list-style-type: disc;
+  margin: unset;
+}
+.package-note ul li {
+  margin-left: 30px;
+}
