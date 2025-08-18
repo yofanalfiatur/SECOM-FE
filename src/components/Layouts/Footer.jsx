@@ -16,6 +16,7 @@ import {
 import ButtonSecondary from "../Elements/ButtonSecondary";
 import Starfield from "../Elements/Starfield";
 import { usePathname } from "next/navigation";
+import PromotionDeals from "../Elements/PromotionDeals";
 
 const Footer = () => {
   const t = useTranslations();
@@ -81,6 +82,8 @@ const Footer = () => {
               </div>
             </div>
           </section>
+
+          <PromotionDeals />
         </>
       )}
 

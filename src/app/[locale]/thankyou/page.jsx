@@ -7,7 +7,7 @@ const ThankYou = () => {
 
   return (
     <>
-      <section className="">
+      <section className="ty-page hide__footer__top">
         <div className="container mx-auto flex flex-row">
           <div className="w-full lg:w-2/3 border-r-0 lg:border-r-[1px] pt-13 pb-13 lg:pt-20 lg:pb-26 lg:border-[#13223322]">
             <h1 className="text-[33px] lg:text-[95px] font-open-sans font-semibold relative max-w-full leading-[1.1]">

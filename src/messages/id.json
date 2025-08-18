@@ -3,6 +3,18 @@
     "title": "Hallo Halo",
     "description": "test deskripsi indoo ceunah"
   },
+  "promoFloat": {
+    "text": "25% Off for your first step in Smart Security Solutions",
+    "btn": {
+      "text": "View Details",
+      "href": "/#promotions",
+      "target": "_self"
+    }
+  },
+  "floatChat": {
+    "email": "mailto:leads@secom.co.id",
+    "whatsapp": "https://wa.me/628123456789"
+  },
 
   "langIdentifier": "Indonesian",
   "MenuType": [
