@@ -221,27 +221,27 @@
       {
         "text": "Jika saya meninggalkan makanan terlalu lama di pemanas, detektor asap akan memberi peringatan.",
         "top": "45%",
-        "left": "15%",
+        "left": "10%",
         "maxWidth": "314px",
         "icon": "/img/temp/h-banner-ibu.png"
       },
       {
         "text": "Jika ada seseorang yang mengetuk pintu, saya tidak perlu takut lagi.",
-        "top": "36%",
-        "left": "41%",
-        "maxWidth": "200px",
+        "top": "29%",
+        "left": "40%",
+        "maxWidth": "190px",
         "icon": "/img/temp/h-banner-anak.png"
       },
       {
         "text": "Jika saya di rumah sendirian, saya tahu bahwa bantuan cukup satu tombol saja.",
-        "top": "37%",
+        "top": "33%",
         "left": "57%",
         "maxWidth": "314px",
         "icon": "/img/temp/h-banner-nenek.png"
       },
       {
         "text": "Jika ada seseorang yang coba masuk, saya tahu keluarga dan rumah saya tetap terlindungi.",
-        "top": "50%",
+        "top": "48%",
         "left": "70.5%",
         "maxWidth": "314px",
         "icon": "/img/temp/h-banner-bapak.png"
@@ -519,6 +519,246 @@
   "LoginDummy": {
     "title": "Login to Your Account"
   },
+
+  "SolBanner": {
+    "title": ["Keamanan yang Dapat Diandalkan, Untuk ", "Semua Keluarga"],
+    "background": "/img/temp/solutions/solutions-banner.jpg",
+    "backgroundMd": "/img/temp/solutions/solutions-banner.jpg"
+  },
+
+  "SolOverview": {
+    "desc": "Rumah Anda adalah awal dari segalanya. Tempat anak tumbuh, kenangan tercipta, dan rasa aman yang seharusnya tak pernah diragukan. <br>SECOM hadir dengan solusi keamanan</br> yang kami sesuaikan untuk setiap keluarga, agar Anda merasa tenang dan yakin, rumah selalu terlindungi.",
+    "items": [
+      {
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "title": "Sistem Keamanan Terintegrasi"
+      },
+      {
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
+        "title": "Pemantauan 24/7"
+      },
+      {
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You BE.svg",
+        "title": "Tim Respon Fisik Terlatih"
+      }
+    ]
+  },
+  "SolReason": {
+    "title": "Bagaimana SECOM Bekerja?",
+    "items": [
+      {
+        "image": "/img/temp/alarm/solutions-how-secom-works-1.jpg",
+        "title": "Mulai dari Mendengarkan",
+        "desc": "Tim SECOM akan menilai kondisi rumah Anda dan merekomendasikan solusi yang sesuai dengan kebutuhan serta gaya hidup Anda."
+      },
+      {
+        "image": "/img/temp/alarm/solutions-how-secom-works-2.jpg",
+        "title": "Desain Cerdas, Perlindungan Menyeluruh",
+        "desc": "Kami merencanakan dengan cermat penempatan setiap sensor dan kamera, untuk memastikan setiap sudut rumah Anda terlindungi."
+      },
+      {
+        "image": "/img/temp/alarm/solutions-how-secom-works-3.jpg",
+        "title": "Pemasangan Anti Ribet",
+        "desc": "Tim teknisi kami memasang sistem dengan cepat, rapi, dan tanpa mengganggu kenyamanan rumah Anda."
+      },
+      {
+        "image": "/img/temp/alarm/solutions-how-secom-works-4.jpg",
+        "title": "Selalu Aktif, Selalu Siaga",
+        "desc": "Sistem Anda terhubung langsung ke Control Center SECOM, siap merespons keadaan darurat kapan pun dibutuhkan."
+      },
+      {
+        "image": "/img/temp/alarm/solutions-how-secom-works-5.jpg",
+        "title": "Perlindungan yang Tahan Lama",
+        "desc": "Kami menyediakan pengecekan dan perawatan rutin agar sistem Anda tetap andal, tahun demi tahun."
+      }
+    ]
+  },
+  "SolProtect": {
+    "title": "Perlindungan Menyeluruh untuk Keamanan Anda",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    "image": "/img/temp/solutions/Circle-of-Service-Sol.png",
+    "imageMobile": "/img/temp/solutions/Circle-of-Service-Mobile-Sol.png",
+    "items": [
+      {
+        "title": "Deteksi Darurat",
+        "desc": "Sensor kami mendeteksi aktivitas yang tidak biasa dan langsung mengirim sinyal ke sistem cloud."
+      },
+      {
+        "title": "Tim Pemantauan SECOM",
+        "desc": "Sistem <b>cloud</b> akan mengirimkan peringatan kepada Anda dan Pusat Kontrol SECOM yang siaga 24/7. Tim kami akan menghubungi Anda dan segera menugaskan tim respons ke lokasi Anda.<br><b>*Jika diperlukan, SECOM juga akan menghubungi pihak kepolisian atau pemadam kebakaran setempat.</b>"
+      },
+      {
+        "title": "Tim Respon Fisik SECOM",
+        "desc": "Jika ancaman terkonfirmasi, SECOM akan mengirim tim respons fisik terlatih untuk memeriksa properti Anda dan memberikan laporan langsung, memberi ketenangan, bahkan saat Anda sedang tidak di lokasi."
+      }
+    ],
+    "btnCTA": {
+      "text": "Konsultasi Sekarang.",
+      "href": "/#",
+      "target": "_self"
+    }
+  },
+  "SolProduct": {
+    "title": "Our Products",
+    "desc": "Jelajahi rangkaian produk keamanan dari SECOM yang dirancang untuk melindungi bisnis, aset, dan karyawan Anda."
+  },
+  "SolCorners": {
+    "title": "Setiap Ruangan. Setiap Akses. Terlindungi Sepenuhnya.",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse.",
+    "btnConsult": {
+      "text": "CONSULT WITH US NOW",
+      "href": "/#",
+      "target": "_self"
+    },
+    "image": "/img/temp/residential/protect-bg.png"
+  },
+  "SolApps": {
+    "title": "Selalu Terhubung. Selalu Terlindungi",
+    "desc": "Kendalikan keamanan rumah Anda kapan saja, di mana saja dengan Aplikasi SECOM. Jelajahi pengaturan lebih lanjut melalui portal SECOM Smart Security di website kami. Data Anda tetap pribadi dan aman, karena SECOM hanya dapat mengakses rekaman video saat terjadi keadaan darurat yang terverifikasi, demi memastikan keselamatan Anda.",
+    "image": "/img/temp/phone-img.png",
+    "items": [
+      {
+        "title": "Video Real-Time",
+        "desc": "Lihat rekaman langsung dari rumah Anda kapan saja, di mana saja.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Video Real Time.svg"
+      },
+      {
+        "title": "Aktif & Non-Aktif",
+        "desc": "Aktifkan atau nonaktifkan sistem alarm dengan sekali sentuhan.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Active Non Active.svg"
+      },
+      {
+        "title": "Notifikasi Langsung",
+        "desc": "Dapatkan peringatan langsung saat ada kejadian di rumah.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Instan Notif.svg"
+      },
+      {
+        "title": "Riwayat Aktivitas",
+        "desc": "Lihat apa yang terjadi dan kapan. Semua tercatat demi ketenangan Anda.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Log.svg"
+      },
+      {
+        "title": "Kelola Banyak Cabang",
+        "desc": "Pantau dan kendalikan lebih dari satu lokasi melalui satu aplikasi.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
+      },
+      {
+        "title": "Laporan Aktivitas",
+        "desc": "Lihat ringkasan aktivitas harian dengan laporan yang mudah dipahami.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Report.svg"
+      }
+    ],
+    "download": [
+      {
+        "link": "#",
+        "image": "/img/temp/googleplay.svg"
+      },
+      {
+        "link": "#",
+        "image": "/img/temp/appstore.svg"
+      }
+    ]
+  },
+  "SolTrusted": {
+    "title": "Mengapa SECOM Lebih dari Kamera",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    "logoSecom": "/img/secom-logo.png",
+    "table": [
+      {
+        "feature": "Pemantauan 24/7",
+        "secom": true,
+        "other": "unavailable"
+      },
+      {
+        "feature": "Tim Respon Fisik",
+        "secom": true,
+        "other": "unavailable"
+      },
+      {
+        "feature": "Aplikasi Ponsel",
+        "secom": true,
+        "other": "Aplikasi Dasar"
+      },
+      {
+        "feature": "Instalasi & Pemeliharaan",
+        "secom": true,
+        "other": "unavailable"
+      },
+      {
+        "feature": "Penyimpanan Cloud",
+        "secom": true,
+        "other": "Berlangganan Tambahan"
+      },
+      {
+        "feature": "Nirkabel",
+        "secom": true,
+        "other": "unavailable"
+      },
+      {
+        "feature": "Manajemen Banyak Lokasi",
+        "secom": true,
+        "other": "unavailable"
+      },
+      {
+        "feature": "Integrasi Pintar",
+        "secom": true,
+        "other": "Hanya Kamera"
+      },
+      {
+        "feature": "Keamanan Data",
+        "secom": true,
+        "other": "Rentan Diretas"
+      },
+      {
+        "feature": "Ketenangan Pikiran",
+        "secom": true,
+        "other": "Hanya Rekam, Tanpa Tindakan"
+      }
+    ]
+  },
+  "SolPackage": {
+    "title": "Paket Keamanan yang Disesuaikan untuk Setiap Jenis Bisnis",
+    "desc": "Mulai dari toko kecil hingga fasilitas besar, paket kami dirancang fleksibel untuk memberikan perlindungan optimal bagi kelangsungan operasional bisnis Anda.",
+    "tabs": [
+      {
+        "title": "RENT",
+        "desc": "Qui ipsorum lingua Celtae,"
+      },
+      {
+        "title": "Buy",
+        "desc": "Qui ipsorum lingua Celtae,"
+      }
+    ]
+  },
+  "SolDifferences": {
+    "title": "See The Differences",
+    "hint": "Hide Information",
+    "note": "*Phasellus laoreet lorem vel dolor tempus vehicula. Gallia est omnis divisa in partes tres, quarum. Praeterea iter est quasdam res quas ex communi. Contra legem facit qui id facit quod lex prohibet. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
+    "serviceTitle": "Service Fee"
+  },
+  "SolFAQ": {
+    "title": "Pertanyaan Umum",
+    "desc": "Untuk Anda yang sedang mengeksplorasi paket keamanan kami, maupun sudah menggunakan solusi SECOM, kami hadir untuk membantu Anda memahami lebih dalam cara kerja layanan SECOM Smart Security untuk bisnis Anda.",
+    "items": [
+      {
+        "question": "Apa fungsi SECOM Smart Security Web Portal dan Aplikasi Mobile?",
+        "answer": "SECOM Smart Security Web Portal dan Aplikasi Mobile memungkinkan Anda mengelola sistem keamanan kapan saja, di mana saja. Kedua platform dirancang untuk memberi Anda kendali penuh atas keamanan rumah, dengan perlindungan data pribadi yang maksimal.<ul><li><strong>Melalui Aplikasi:</strong> Anda bisa mengaktifkan atau menonaktifkan alarm, melihat rekaman kamera secara langsung, dan menerima notifikasi instan..</li><li><strong>Melalui Web Portal</strong>: Anda dapat mengakses fitur-fitur lanjutan seperti pengaturan perangkat, pengelolaan akses pengguna, dan log aktivitas secara detail.</li></ul>"
+      },
+      {
+        "question": "Apakah saya akan menerima notifikasi jika alarm mendeteksi ancaman saat saya tidak di rumah?",
+        "answer": "Ya. Jika alarm Anda aktif saat Anda sedang tidak di rumah, Anda akan langsung menerima notifikasi melalui Aplikasi SECOM Smart Security. Tim monitoring SECOM yang siaga 24/7 juga akan segera merespons untuk memverifikasi situasi dan mengambil tindakan yang diperlukan."
+      },
+      {
+        "question": "Apakah privasi saya akan terlindungi dengan penyimpanan video di cloud?",
+        "answer": "Ya. <b>Privasi Anda adalah prioritas utama kami.</b> Seluruh rekaman video dienkripsi dengan aman dan disimpan di cloud. Hanya Anda yang dapat mengakses rekaman tersebut. SECOM hanya dapat melihat rekaman video Anda dalam situasi darurat yang telah diverifikasi, semata-mata untuk memastikan keselamatan Anda. Di luar kondisi tersebut, data Anda tetap sepenuhnya bersifat pribadi."
+      },
+      {
+        "question": "Bisakah saya melihat rekaman dari beberapa properti dalam satu aplikasi?",
+        "answer": "Ya. Aplikasi SECOM Smart Security memungkinkan Anda memantau beberapa properti dalam satu akun. Anda bisa dengan mudah beralih antar lokasi untuk melihat rekaman langsung, memeriksa notifikasi, dan mengelola sistem keamanan masing-masing properti, semuanya dari satu aplikasi."
+      }
+    ]
+  },
+
   "AlarmBanner": {
     "title": ["Sistem Alarm Andal untuk Lindungi Bisnis Anda ", "24/7."],
     "background": "/img/temp/alarm/alarm-banner.jpg",
@@ -598,69 +838,7 @@
   },
   "AlarmProduct": {
     "title": "Our Products",
-    "desc": "Jelajahi rangkaian produk keamanan dari SECOM yang dirancang untuk melindungi bisnis, aset, dan karyawan Anda.",
-    "products": [
-      {
-        "title": "Control Panel",
-        "desc": "Perangkat utama yang menghubungkan semua sensor dan alarm ke tim SECOM yang siaga 24/7.",
-        "image": "/img/temp/product-1.png",
-        "link": "#1"
-      },
-      {
-        "title": "Remote Control",
-        "desc": "Perangkat kecil untuk mengaktifkan atau menonaktifkan sistem alarm dari jarak jauh.",
-        "image": "/img/temp/product-2.png",
-        "link": "#2"
-      },
-      {
-        "title": "Keypad",
-        "desc": "Panel tempat Anda memasukkan kode pribadi untuk mengontrol sistem alarm.",
-        "image": "/img/temp/product-1.png",
-        "link": "#3"
-      },
-      {
-        "title": "Siren Box",
-        "desc": "Suara keras yang akan berbunyi saat terjadi keadaan darurat, seperti upaya pembobolan.",
-        "image": "/img/temp/product-2.png",
-        "link": "#4"
-      },
-      {
-        "title": "Smart Video Camera",
-        "desc": "Pantau dan berinteraksi dengan tamu tak terduga, kendaraan yang keluar masuk, dan lainnya. Bahkan saat Anda tidak berada di lokasi.",
-        "image": "/img/temp/product-1.png",
-        "link": "#5"
-      },
-      {
-        "title": "Door Contact",
-        "desc": "Mendeteksi saat pintu atau jendela dibuka. Mengirimkan peringatan jika terjadi hal yang tidak biasa.",
-        "image": "/img/temp/product-2.png",
-        "link": "#6"
-      },
-      {
-        "title": "PIR Camera Indoor",
-        "desc": "Kamera di dalam lokasi Anda yang akan memicu alarm dan mengambil gambar saat mendeteksi gerakan.",
-        "image": "/img/temp/product-1.png",
-        "link": "#7"
-      },
-      {
-        "title": "PIR Indoor",
-        "desc": "Sensor yang mendeteksi pergerakan di dalam lokasi Anda dan memicu alarm jika diperlukan.",
-        "image": "/img/temp/product-2.png",
-        "link": "#8"
-      },
-      {
-        "title": "Smoke Detector",
-        "desc": "Mendeteksi asap sejak dini untuk membantu mencegah kebakaran.",
-        "image": "/img/temp/product-2.png",
-        "link": "#9"
-      },
-      {
-        "title": "Panic Button",
-        "desc": "Tombol yang dapat ditekan saat keadaan darurat untuk segera meminta bantuan dari SECOM.",
-        "image": "/img/temp/product-2.png",
-        "link": "#10"
-      }
-    ]
+    "desc": "Jelajahi rangkaian produk keamanan dari SECOM yang dirancang untuk melindungi bisnis, aset, dan karyawan Anda."
   },
   "AlarmCorners": {
     "title": "Lindungi Setiap Sudut Bisnis Anda ",
@@ -670,58 +848,7 @@
       "href": "/#",
       "target": "_self"
     },
-    "image": "/img/temp/alarm/Product-Placement-Business.png",
-    "items": [
-      {
-        "positionX": "49%",
-        "positionY": "24%",
-        "image": "/img/temp/product-1.png",
-        "title": "Control Panel",
-        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
-      },
-      {
-        "positionX": "64%",
-        "positionY": "25%",
-        "image": "/img/temp/product-2.png",
-        "title": "#2Control Panel",
-        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
-      },
-      {
-        "positionX": "68%",
-        "positionY": "30%",
-        "image": "/img/temp/product-1.png",
-        "title": "#3Control Panel",
-        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
-      },
-      {
-        "positionX": "60%",
-        "positionY": "46%",
-        "image": "/img/temp/product-2.png",
-        "title": "#4Control Panel",
-        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
-      },
-      {
-        "positionX": "36%",
-        "positionY": "49%",
-        "image": "/img/temp/product-1.png",
-        "title": "#5Control Panel",
-        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
-      },
-      {
-        "positionX": "55%",
-        "positionY": "64%",
-        "image": "/img/temp/product-2.png",
-        "title": "#6Control Panel",
-        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
-      },
-      {
-        "positionX": "41%",
-        "positionY": "82%",
-        "image": "/img/temp/product-2.png",
-        "title": "#6Control Panel",
-        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
-      }
-    ]
+    "image": "/img/temp/alarm/Product-Placement-Business.png"
   },
   "AlarmApps": {
     "title": "Selalu Terhubung. Selalu Terlindungi",
@@ -812,71 +939,12 @@
     "desc": "Mulai dari toko kecil hingga fasilitas besar, paket kami dirancang fleksibel untuk memberikan perlindungan optimal bagi kelangsungan operasional bisnis Anda.",
     "tabs": [
       {
-        "title": "RENTAL",
+        "title": "RENT",
         "desc": "Qui ipsorum lingua Celtae,"
       },
       {
         "title": "Buy",
         "desc": "Qui ipsorum lingua Celtae,"
-      }
-    ],
-    "items": [
-      {
-        "title": "Business",
-        "price": "1,065,000",
-        "serviceFee": "",
-        "desc": "Paket sewa yang sederhana dan terjangkau untuk bisnis kecil atau kantor. Dilengkapi perangkat keamanan esensial untuk memulai perlindungan.",
-        "device": "8",
-        "image": "/img/temp/alarm/Business.png",
-        "isRent": true
-      },
-      {
-        "title": "Business PRO",
-        "price": "1,464,000",
-        "serviceFee": "",
-        "desc": "Perlindungan menyeluruh dengan fitur keamanan canggih dan tambahan fitur keselamatan, ideal untuk area dengan risiko tinggi.",
-        "device": "12",
-        "image": "/img/temp/alarm/BusinessPro.png",
-        "isRent": true
-      },
-
-      {
-        "title": "Business",
-        "price": "18,282,000",
-        "serviceFee": "",
-        "serviceFee2": [
-          {
-            "text": "Service fee 24/7 monitoring only",
-            "fee": "446,000"
-          },
-          {
-            "text": "Service fee 24/7 monitoring + dispatch",
-            "fee": "668,000"
-          }
-        ],
-        "desc": "Paket pembelian satu kali untuk bisnis kecil atau kantor. Termasuk perangkat keamanan penting untuk memulai. Sederhana, terjangkau, dan sepenuhnya milik Anda.",
-        "device": "8",
-        "image": "/img/temp/package-1.png",
-        "isRent": false
-      },
-      {
-        "title": "Business PRO",
-        "price": "25,955,000",
-        "serviceFee": "",
-        "serviceFee2": [
-          {
-            "text": "Service fee 24/7 monitoring only",
-            "fee": "465,000"
-          },
-          {
-            "text": "Service fee 24/7 monitoring + dispatch",
-            "fee": "687,000"
-          }
-        ],
-        "desc": "Miliki sistem keamanan lengkap dengan perlindungan canggih dan fitur keselamatan tambahan. Ideal untuk area berisiko tinggi dan keamanan jangka panjang bisnis Anda.",
-        "device": "12",
-        "image": "/img/temp/package-1.png",
-        "isRent": false
       }
     ]
   },
@@ -884,21 +952,8 @@
     "title": "See The Differences",
     "hint": "Hide Information",
     "note": "*Phasellus laoreet lorem vel dolor tempus vehicula. Gallia est omnis divisa in partes tres, quarum. Praeterea iter est quasdam res quas ex communi. Contra legem facit qui id facit quod lex prohibet. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
-    "serviceTitle": "Service Fee",
-    "serviceFee": [
-      {
-        "name": "Service fee 24/7 monitoring only",
-        "priceHome": "446,000",
-        "pricePro": "465,000"
-      },
-      {
-        "name": "Service fee 24/7 monitoring + dispatch",
-        "priceHome": "668,000",
-        "pricePro": "687,000"
-      }
-    ]
+    "serviceTitle": "Service Fee"
   },
-
   "AlarmFAQ": {
     "title": "Pertanyaan Umum",
     "desc": "Untuk Anda yang sedang mengeksplorasi paket keamanan kami, maupun sudah menggunakan solusi SECOM, kami hadir untuk membantu Anda memahami lebih dalam cara kerja layanan SECOM Smart Security untuk bisnis Anda.",
@@ -921,6 +976,7 @@
       }
     ]
   },
+
   "ProductDetails": [
     {
       "title": "Control Panel",
@@ -997,7 +1053,7 @@
     {
       "title": "Panic Button",
       "subtitle": "Tombol yang dapat ditekan saat keadaan darurat untuk segera meminta bantuan dari SECOM.",
-      "image": "/img/temp/product-2.png",
+      "image": "/img/temp/products/Keypad.png",
       "link": "#10",
       "positionX": "61%",
       "positionY": "82.5%"
@@ -1068,31 +1124,31 @@
   "SoPackagesBuy": [
     {
       "device": "Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "2Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "3Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "4Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "5Control Panel",
-      "image": "/img/temp/product-2.png",
+      "image": "/img/temp/products/Keypad.png",
       "basic": "1",
       "pro": "1"
     }
@@ -1100,31 +1156,31 @@
   "SoPackagesRent": [
     {
       "device": "Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "2Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "3Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "4Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "5Control Panel",
-      "image": "/img/temp/product-2.png",
+      "image": "/img/temp/products/Keypad.png",
       "basic": "1",
       "pro": "1"
     }

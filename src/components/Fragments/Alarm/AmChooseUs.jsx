@@ -7,9 +7,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const AmChoose = () => {
+const AmChoose = ({ translationKey }) => {
   const t = useTranslations();
-  const AlarmReason = t.raw("AlarmReason");
+  const AlarmReason = t.raw(translationKey);
 
   const [current, setCurrent] = useState(0);
   const total = AlarmReason.items.length;

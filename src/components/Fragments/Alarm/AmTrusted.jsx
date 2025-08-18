@@ -5,11 +5,11 @@ import React from "react";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import { useTranslations } from "next-intl";
 
-const AmTrusted = () => {
+const AmTrusted = ({ translationKey }) => {
   const t = useTranslations();
-  const AlarmTrusted = t.raw("AlarmTrusted");
+  const AlarmTrusted = t.raw(translationKey);
 
-  const isDesktop = useIsDesktop(1023); // 1023px sesuai dengan lg breakpoint Tailwind
+  const isDesktop = useIsDesktop();
 
   return (
     <section className="pt-6 pb-10 lg:pb-0 lg:pt-14 relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:lg:h-[85%] before:bg-tosca before:z-[-1] am-trusted">
@@ -82,16 +82,16 @@ const AmTrusted = () => {
                       <div className="flex items-center justify-center mx-auto">
                         <CheckIcon />
                       </div>
-                    ) : row.other === "limited" ? (
-                      <div className="flex flex-col lg:flex-row gap-2 lg:gap-3 items-center justify-center mx-auto">
-                        <LimitIcon />{" "}
-                        <span className="font-raleway font-medium lg:text-xl text-darkblue">
-                          Limited
-                        </span>
-                      </div>
-                    ) : (
+                    ) : row.other === "unavailable" ? (
                       <div className="flex items-center justify-center mx-auto">
                         <CrossIcon />
+                      </div>
+                    ) : (
+                      <div className="flex flex-col lg:flex-row gap-2 lg:gap-3 items-center justify-center mx-auto">
+                        <LimitIcon />{" "}
+                        <span className="font-raleway font-medium lg:text-xl text-darkblue capitalize">
+                          {row.other}
+                        </span>
                       </div>
                     )}
                   </div>

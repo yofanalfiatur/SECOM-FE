@@ -5,9 +5,9 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
 
-const AmApps = () => {
+const AmApps = ({ translationKey }) => {
   const t = useTranslations();
-  const AlarmApps = t.raw("AlarmApps");
+  const AlarmApps = t.raw(translationKey);
 
   return (
     <section className="pb-10 lg:pb-14">
@@ -32,7 +32,7 @@ const AmApps = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="lg:w-[90%] flex flex-col lg:flex-row relative z-[1] bg-navyblue lg:pt-11 pb-8 lg:pb-12 lg:pr-10"
+          className="lg:w-[90%] flex flex-col lg:flex-row relative z-[1] bg-navyblue lg:pt-11 pb-8 lg:pb-12 lg:pr-15"
         >
           <div className="w-full h-[160px] lg:w-[35%]"></div>
           <div className="w-full lg:w-[65%] flex flex-col px-6 lg:px-0">
@@ -54,7 +54,7 @@ const AmApps = () => {
             >
               {AlarmApps.desc}
             </motion.p>
-            <ul className="grid grid-cols-12 gap-x-3 gap-y-3 lg:gap-x-8 lg:gap-y-8">
+            <ul className="grid grid-cols-12 gap-x-3 gap-y-3 lg:gap-x-8 lg:gap-y-6">
               {AlarmApps.items.map((item, index) => (
                 <motion.li
                   initial={{ opacity: 0, y: 20 }}

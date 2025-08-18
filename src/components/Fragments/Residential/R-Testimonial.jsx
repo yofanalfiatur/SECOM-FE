@@ -68,7 +68,7 @@ const ResTesti = () => {
                 >
                   <div className="relative z-10 flex flex-col items-center wrap-testi">
                     <div
-                      className={`flex flex-col items-center bg-white py-6 px-8 lg:p-8 relative z-[1] min-h-[376px] ${
+                      className={`flex flex-col items-center justify-center bg-white py-6 px-8 lg:py8 lg:px-20 relative z-[1] min-h-[376px] ${
                         position === 0 ? "m-1" : "m-[16px]"
                       } `}
                     >
@@ -78,7 +78,7 @@ const ResTesti = () => {
                         viewBox="0 0 60 47"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
-                        className="scale-75 lg:scale-100"
+                        className="scale-75 lg:scale-100 lg:mt-4"
                       >
                         <path
                           d="M21.7337 0L17.6471 22.3113H25.0774V47H0V21.9455L6.6873 0H21.7337ZM56.6564 0L52.5697 22.3113H60V47H34.9226V21.9455L41.6099 0H56.6564Z"

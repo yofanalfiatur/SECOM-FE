@@ -521,6 +521,250 @@
   "LoginDummy": {
     "title": "Login to Your Account"
   },
+
+  "SolBanner": {
+    "title": ["Reliable Security for ", "Every Family"],
+    "background": "/img/temp/solutions/solutions-banner.jpg",
+    "backgroundMd": "/img/temp/solutions/solutions-banner.jpg"
+  },
+  "SolOverview": {
+    "desc": "Your home is where life happens, where children grow, memories are made, and safety should never be in question. <br>At SECOM, we provide personalized security solutions</b> to help you protect your home with confidence and care.",
+    "items": [
+      {
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "title": "Integrated Security System"
+      },
+      {
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
+        "title": "24/7 Monitoring"
+      },
+      {
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You BE.svg",
+        "title": "Trained Response Team"
+      }
+    ]
+  },
+  "SolReason": {
+    "title": "Why Choose Us?",
+    "items": [
+      {
+        "image": "/img/temp/alarm/solutions-how-secom-works-1.jpg",
+        "title": "We Listen First",
+        "desc": "Our security experts assess your space and recommend a tailored solution that fits your needs and lifestyle."
+      },
+      {
+        "image": "/img/temp/alarm/solutions-how-secom-works-2.jpg",
+        "title": "Smart Design, Full Coverage",
+        "desc": "We carefully plan where each alarm, sensor, and camera goes, ensuring every corner is protected."
+      },
+      {
+        "image": "/img/temp/alarm/solutions-how-secom-works-3.jpg",
+        "title": "Seamless Setup",
+        "desc": "Our professional team installs your system quickly, cleanly, and with minimal disruption to your home."
+      },
+      {
+        "image": "/img/temp/alarm/solutions-how-secom-works-4.jpg",
+        "title": "Always On, Always Watching",
+        "desc": "Your system is linked to SECOM's Control Center, ready to respond to emergencies at any hour."
+      },
+      {
+        "image": "/img/temp/alarm/solutions-how-secom-works-5.jpg",
+        "title": "Protection That Lasts",
+        "desc": "We provide routine maintenance checks and service so your system stays reliable, year after year."
+      }
+    ]
+  },
+  "SolProtect": {
+    "title": "Circle of Care for Your Safety",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    "image": "/img/temp/solutions/Circle-of-Service-Sol.png",
+    "imageMobile": "/img/temp/solutions/Circle-of-Service-Mobile-Sol.png",
+    "items": [
+      {
+        "title": "Emergency Detected",
+        "desc": "Our sensors detect unusual activity and instantly send a signal to the cloud system."
+      },
+      {
+        "title": "SECOM's Control Center",
+        "desc": "The cloud alerts both you and SECOM's 24/7 Control Center, which will notify you and assign response team to your location.<br><b>*If necessary, SECOM will also notify local police or fire services.</b>"
+      },
+      {
+        "title": "SECOM's Physical Response Team",
+        "desc": "If there's a real threat, SECOM dispatches a trained physical response team to check your property and report live updates, giving you peace of mind even when you're away."
+      }
+    ],
+    "btnCTA": {
+      "text": "CONSULT NOW",
+      "href": "/#",
+      "target": "_self"
+    }
+  },
+  "SolProduct": {
+    "title": "Advanced Technology, Trusted Protection",
+    "desc": "Explore SECOM's full range of advanced security products designed to protect your business, assets, and people."
+  },
+  "SolCorners": {
+    "title": "Every Room. Every Access. Fully Protected",
+    "desc": "Explore SECOM's full range of advanced security products designed to protect your business, assets, and people.",
+    "btnConsult": {
+      "text": "CONSULT WITH US NOW",
+      "href": "/#",
+      "target": "_self"
+    },
+    "image": "/img/temp/residential/protect-bg.png"
+  },
+  "SolApps": {
+    "title": "Always Connected. Always Protected",
+    "desc": "Stay in control anytime, anywhere with SECOM App. Explore advanced settings via SECOM Smart Security portal on our website. Your data stays private and secure, SECOM can only access your video footage during verified emergencies to ensure your safety.",
+    "image": "/img/temp/phone-img.png",
+    "items": [
+      {
+        "title": "Live Monitoring",
+        "desc": "Watch real-time footage of your home anytime, from anywhere.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Video Real Time.svg"
+      },
+      {
+        "title": "Arm & Disarm",
+        "desc": "Easily activate or deactivate your alarm system with just a tap.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Active Non Active.svg"
+      },
+      {
+        "title": "Instant Notifications",
+        "desc": "Get alerts right away when something happens at home.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Instan Notif.svg"
+      },
+      {
+        "title": "History",
+        "desc": "Check what happened and when. All activity is recorded for your peace of mind.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Log.svg"
+      },
+      {
+        "title": "Manage Multiple Sites",
+        "desc": "Check and control more than one house from the same app.",
+        "icon": "/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
+      },
+      {
+        "title": "Activity Reports",
+        "desc": "View simple reports to keep track of what's going on",
+        "icon": "/img/temp/alarm/Icon App Benefits-Report.svg"
+      }
+    ],
+    "download": [
+      {
+        "link": "#",
+        "image": "/img/temp/googleplay.svg"
+      },
+      {
+        "link": "#",
+        "image": "/img/temp/appstore.svg"
+      }
+    ]
+  },
+  "SolTrusted": {
+    "title": "Your Business Deserves More Than Basic Security",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    "logoSecom": "/img/secom-logo.png",
+    "table": [
+      {
+        "feature": "24/7 Monitoring",
+        "secom": true,
+        "other": "unavailable"
+      },
+      {
+        "feature": "Emergency Response Team",
+        "secom": true,
+        "other": "unavailable"
+      },
+      {
+        "feature": "Intelligence Mobile App",
+        "secom": true,
+        "other": "Basic App"
+      },
+      {
+        "feature": "Installation & Maintenance",
+        "secom": true,
+        "other": "unavailable"
+      },
+      {
+        "feature": "Cloud Storage",
+        "secom": true,
+        "other": "Need Extra Subscription"
+      },
+      {
+        "feature": "Plug-Free Setup",
+        "secom": true,
+        "other": "unavailable"
+      },
+      {
+        "feature": "Multi-Site Management",
+        "secom": true,
+        "other": "unavailable"
+      },
+      {
+        "feature": "Smart Integration",
+        "secom": true,
+        "other": "Cameras Only"
+      },
+      {
+        "feature": "Data Security",
+        "secom": true,
+        "other": "Vulnerable to hacking"
+      },
+      {
+        "feature": "Peace of Mind",
+        "secom": true,
+        "other": "Record only, No Action Taken"
+      }
+    ]
+  },
+  "SolPackage": {
+    "title": "Flexible Security Packages for Every Need",
+    "desc": "Every family has different needs, that’s why we offer flexibility, easy-to-choose security packages. Protect your home with smart solutions made for real life.",
+    "tabs": [
+      {
+        "title": "RENT",
+        "desc": "Qui ipsorum lingua Celtae,"
+      },
+      {
+        "title": "Buy",
+        "desc": "Qui ipsorum lingua Celtae,"
+      }
+    ]
+  },
+  "SolDifferences": {
+    "title": "See The Differences",
+    "hint": "Hide Information",
+    "note": "*Phasellus laoreet lorem vel dolor tempus vehicula. Gallia est omnis divisa in partes tres, quarum. Praeterea iter est quasdam res quas ex communi. Contra legem facit qui id facit quod lex prohibet. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
+    "serviceTitle": "Service Fee"
+  },
+  "SolFAQ": {
+    "title": "Frequently Asked Questions",
+    "desc": "Whether you're exploring our security packages or already using our business solutions, this FAQ is here to help you better understand how SECOM's Smart Security service works in your industry",
+    "buttonCTA": {
+      "text": "More FAQs",
+      "href": "/#",
+      "target": "_self"
+    },
+    "items": [
+      {
+        "question": "What is the function of SECOM Smart Security Web Portal and Mobile App? ",
+        "answer": "The SECOM Smart Security Web Portal and Mobile App allow you to manage your security system anytime, anywhere. Through the app, you can arm or disarm your alarm, view live camera footage, and receive instant notifications. For more advanced features, like device settings, user access, and detailed activity logs, you can use the web portal. Both platforms are designed to give you full control over your security while keeping your data private and secure."
+      },
+      {
+        "question": "Will I receive alerts if the alarm goes off when I'm not home?",
+        "answer": "Yes. If your alarm is triggered while you're away, you'll receive instant notifications through the SECOM Smart Security App. This ensures you're always informed of any unusual activity, no matter where you are. SECOM's 24/7 monitoring team will also respond immediately to verify the situation and take necessary action."
+      },
+      {
+        "question": "Will my privacy be protected with the cloud video storage?",
+        "answer": "Yes. <b>Your privacy is our top priority.</b> All video footage is securely encrypted and stored in the cloud. Only you can access your recordings. SECOM can only view your video footage during verified emergencies and only to ensure your safety. Outside of that, your data remains completely private."
+      },
+      {
+        "question": "Can I view footage from multiple properties in one app?",
+        "answer": "Yes. The SECOM Smart Security App allows you to monitor multiple properties under one account. You can easily switch between locations to view live footage, check alerts, and manage each site's security system, all from a single app."
+      }
+    ]
+  },
+
   "AlarmBanner": {
     "title": [
       "Introduce SECOM's alarm sensor solutions specifically tailored for Business ",
@@ -603,68 +847,7 @@
   },
   "AlarmProduct": {
     "title": "Advanced Technology, Trusted Protection",
-    "desc": "Explore SECOM's full range of advanced security products designed to protect your business, assets, and people.",
-    "products": [
-      {
-        "title": "Control Panel",
-        "desc": "The main device that connects all sensors and alarms to SECOM's team that standby 24/7.",
-        "image": "/img/temp/product-1.png",
-        "link": "#1"
-      },
-      {
-        "title": "Remote Control",
-        "desc": "A small device to turn the alarm system on or off from a distance.",
-        "image": "/img/temp/product-2.png",
-        "link": "#2"
-      },
-      {
-        "title": "Keypad",
-        "desc": "A panel where you enter your personal code to control the alarm system.",
-        "image": "/img/temp/product-1.png",
-        "link": "#3"
-      },
-      {
-        "title": "Siren Box",
-        "desc": "A loud sound that goes off when there's a danger, like someone breaking in.",
-        "link": "#4"
-      },
-      {
-        "title": "Smart Video Camera",
-        "desc": "See and interact with unexpected visitors, vehicles coming and going and more, even when you can't be there.",
-        "image": "/img/temp/product-1.png",
-        "link": "#5"
-      },
-      {
-        "title": "Door Contact",
-        "desc": "Detects when a door or window is opened. Sends an alert if something unusual happens.",
-        "image": "/img/temp/product-2.png",
-        "link": "#6"
-      },
-      {
-        "title": "PIR Camera Indoor",
-        "desc": "A camera inside the house that takes pictures or video when it senses movement.",
-        "image": "/img/temp/product-1.png",
-        "link": "#7"
-      },
-      {
-        "title": "PIR Indoor",
-        "desc": "A sensor that detects movement inside your home and triggers the alarm if needed.",
-        "image": "/img/temp/product-2.png",
-        "link": "#8"
-      },
-      {
-        "title": "Smoke Detector",
-        "desc": "Detects smoke early to help prevent fires.",
-        "image": "/img/temp/product-2.png",
-        "link": "#8"
-      },
-      {
-        "title": "Panic Button",
-        "desc": "A button you press in an emergency to get help from SECOM right away.",
-        "image": "/img/temp/product-2.png",
-        "link": "#8"
-      }
-    ]
+    "desc": "Explore SECOM's full range of advanced security products designed to protect your business, assets, and people."
   },
   "AlarmCorners": {
     "title": "Protect Every Corner of Your Business",
@@ -674,58 +857,7 @@
       "href": "/#",
       "target": "_self"
     },
-    "image": "/img/temp/alarm/Product-Placement-Business.png",
-    "items": [
-      {
-        "positionX": "49%",
-        "positionY": "24%",
-        "image": "/img/temp/product-1.png",
-        "title": "Control Panel",
-        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
-      },
-      {
-        "positionX": "64%",
-        "positionY": "25%",
-        "image": "/img/temp/product-2.png",
-        "title": "#2Control Panel",
-        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
-      },
-      {
-        "positionX": "68%",
-        "positionY": "30%",
-        "image": "/img/temp/product-1.png",
-        "title": "#3Control Panel",
-        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
-      },
-      {
-        "positionX": "60%",
-        "positionY": "46%",
-        "image": "/img/temp/product-2.png",
-        "title": "#4Control Panel",
-        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
-      },
-      {
-        "positionX": "36%",
-        "positionY": "49%",
-        "image": "/img/temp/product-1.png",
-        "title": "#5Control Panel",
-        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
-      },
-      {
-        "positionX": "55%",
-        "positionY": "64%",
-        "image": "/img/temp/product-2.png",
-        "title": "#6Control Panel",
-        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
-      },
-      {
-        "positionX": "41%",
-        "positionY": "82%",
-        "image": "/img/temp/product-2.png",
-        "title": "#6Control Panel",
-        "desc": "Pusat penerima sinyal keamanan dari sensor yang akan memberi tahu Anda dan control center SECOM."
-      }
-    ]
+    "image": "/img/temp/alarm/Product-Placement-Business.png"
   },
   "AlarmApps": {
     "title": "Stay in Control. Anytime. Anywhere.",
@@ -753,8 +885,8 @@
         "icon": "/img/temp/alarm/Icon App Benefits-Log.svg"
       },
       {
-        "title": "Manage Multiple Sites",
-        "desc": "Check and control more than one site from the same app.",
+        "title": "Manage Multiple Homes",
+        "desc": "Check and control more than one house from the same app.",
         "icon": "/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
       },
       {
@@ -816,69 +948,12 @@
     "desc": "From small shops to large facilities, our packages offer scalable protection to keep your operations safe and secure.",
     "tabs": [
       {
-        "title": "RENTAL",
+        "title": "RENT",
         "desc": "Qui ipsorum lingua Celtae,"
       },
       {
         "title": "Buy",
         "desc": "Qui ipsorum lingua Celtae,"
-      }
-    ],
-    "items": [
-      {
-        "title": "Business",
-        "price": "1,065,000",
-        "serviceFee": "",
-        "desc": "A simple and affordable rental package for small businesses or offices. Includes essential security devices to get you started.",
-        "device": "8",
-        "image": "/img/temp/alarm/Business.png",
-        "isRent": true
-      },
-      {
-        "title": "Business PRO",
-        "price": "1,464,000",
-        "serviceFee": "",
-        "desc": "Comprehensive protection with advanced security features and added safety features, ideal for high-risk areas. ",
-        "device": "12",
-        "image": "/img/temp/alarm/BusinessPro.png",
-        "isRent": true
-      },
-
-      {
-        "title": "Business",
-        "price": "18,282,000",
-        "serviceFee": [
-          {
-            "text": "Service fee 24/7 monitoring only",
-            "fee": "446,000"
-          },
-          {
-            "text": "Service fee 24/7 monitoring + dispatch",
-            "fee": "668,000"
-          }
-        ],
-        "desc": "A one-time purchase package for small businesses or offices. Includes essential security devices to get you started. Simple, affordable, and fully yours.",
-        "device": "8",
-        "image": "/img/temp/package-1.png",
-        "isRent": false
-      },
-      {
-        "title": "Business PRO",
-        "price": "25,955,000",
-        "serviceFee": [
-          {
-            "text": "Service fee 24/7 monitoring only",
-            "fee": "465,000"
-          },
-          {
-            "text": "Service fee 24/7 monitoring + dispatch",
-            "fee": "687,000"
-          }
-        ],
-        "desc": "Own a complete security system with advanced protection and added safety features, ideal for high-risk areas and long-term business security.",
-        "device": "12",
-        "image": "/img/temp/package-1.png",
-        "isRent": false
       }
     ]
   },
@@ -886,19 +961,7 @@
     "title": "See The Differences",
     "hint": "Hide Information",
     "note": "*Phasellus laoreet lorem vel dolor tempus vehicula. Gallia est omnis divisa in partes tres, quarum. Praeterea iter est quasdam res quas ex communi. Contra legem facit qui id facit quod lex prohibet. Morbi fringilla convallis sapien, id pulvinar odio volutpat.",
-    "serviceTitle": "Service Fee",
-    "serviceFee": [
-      {
-        "name": "Service fee 24/7 monitoring only",
-        "priceHome": "446,000",
-        "pricePro": "465,000"
-      },
-      {
-        "name": "Service fee 24/7 monitoring + dispatch",
-        "priceHome": "668,000",
-        "pricePro": "687,000"
-      }
-    ]
+    "serviceTitle": "Service Fee"
   },
   "AlarmFAQ": {
     "title": "Frequently Asked Questions",
@@ -1070,31 +1133,31 @@
   "SoPackagesBuy": [
     {
       "device": "Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "2Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "3Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "4Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "5Control Panel",
-      "image": "/img/temp/product-2.png",
+      "image": "/img/temp/products/Keypad.png",
       "basic": "1",
       "pro": "1"
     }
@@ -1102,31 +1165,31 @@
   "SoPackagesRent": [
     {
       "device": "Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "2Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "3Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "4Control Panel",
-      "image": "/img/temp/product-1.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "5Control Panel",
-      "image": "/img/temp/product-2.png",
+      "image": "/img/temp/products/Keypad.png",
       "basic": "1",
       "pro": "1"
     }

@@ -8,11 +8,11 @@ import BackgroundDots from "@/components/Elements/BackgroundDots";
 import ButtonPrimary from "@/components/Elements/ButtonPrimary";
 import { useTranslations } from "next-intl";
 
-const AmProtect = () => {
+const AmProtect = ({ translationKey }) => {
   const t = useTranslations();
-  const AlarmProtect = t.raw("AlarmProtect");
+  const AlarmProtect = t.raw(translationKey);
 
-  const isDesktop = useIsDesktop(); // breakpoint >1023px
+  const isDesktop = useIsDesktop();
 
   return (
     <section className="relative pt-9 pb-13 lg:pb-23 lg:pt-17 overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:lg:h-10/12 after:h-full after:bg-[linear-gradient(0deg,_#ffffff_30%,_rgba(255,255,255,0)_60%)]">

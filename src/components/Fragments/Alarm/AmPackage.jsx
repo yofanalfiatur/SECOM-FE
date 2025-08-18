@@ -5,13 +5,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import { useTranslations } from "next-intl";
 
-const AmPackage = () => {
+const AmPackage = (props) => {
+  const {
+    translationKey,
+    differences,
+    listPackages,
+    packagesBuy,
+    packagesRent,
+  } = props;
+
   const t = useTranslations();
-  const AlarmPackage = t.raw("AlarmPackage");
-  const AlarmDifferences = t.raw("AlarmDifferences");
-  const Packages = t.raw("Packages");
-  const SoPackagesBuy = t.raw("SoPackagesBuy");
-  const SoPackagesRent = t.raw("SoPackagesRent");
+  const AlarmPackage = t.raw(translationKey);
+  const AlarmDifferences = t.raw(differences);
+  const Packages = t.raw(listPackages);
+  const SoPackagesBuy = t.raw(packagesBuy);
+  const SoPackagesRent = t.raw(packagesRent);
 
   const isDesktop = useIsDesktop();
   const [activeTab, setActiveTab] = useState(0); // 0 = Rent, 1 = Buy

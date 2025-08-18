@@ -2,9 +2,9 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-const AmOverview = () => {
+const AmOverview = ({ translationKey }) => {
   const t = useTranslations();
-  const AlarmOverview = t.raw("AlarmOverview");
+  const AlarmOverview = t.raw(translationKey);
 
   return (
     <section className="pt-9 pb-14 lg:pt-24 lg:pb-24 am-value">

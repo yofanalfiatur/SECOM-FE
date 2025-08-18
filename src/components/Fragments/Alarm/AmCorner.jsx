@@ -8,10 +8,11 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useTranslations } from "next-intl";
 
-const AmCorner = () => {
+const AmCorner = (props) => {
+  const { translationKey, listProducts } = props;
   const t = useTranslations();
-  const AlarmCorners = t.raw("AlarmCorners");
-  const ProductDetails = t.raw("ProductDetails");
+  const AlarmCorners = t.raw(translationKey);
+  const ProductDetails = t.raw(listProducts);
 
   const isDesktop = useIsDesktop();
   const [activeIndex, setActiveIndex] = useState(null); // index of hovered pin
@@ -139,7 +140,7 @@ const AmCorner = () => {
                   className="w-full h-auto relative z-0"
                 />
                 <div className="absolute top-0 left-0 w-full h-full z-1">
-                  {AlarmCorners.items.map((item, index) => (
+                  {ProductDetails.map((item, index) => (
                     <div
                       className="z-[1] bg-tosca rounded-full w-[20px] h-[20px] flex items-center justify-center cursor-pointer absolute"
                       style={{
@@ -183,7 +184,7 @@ const AmCorner = () => {
                     onMove={(splide, newIndex) => setActiveIndexMd(newIndex)}
                   >
                     <SplideTrack>
-                      {AlarmCorners.items.map((item, index) => (
+                      {ProductDetails.map((item, index) => (
                         <SplideSlide
                           key={index}
                           className="flex flex-col w-full"

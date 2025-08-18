@@ -11,7 +11,7 @@ const ResSolution = () => {
   const ReSolution = t.raw("ReSolution");
 
   return (
-    <section className="pt-11 pb-19 lg:py-11 res-sol bg-navyblue overflow-hidden">
+    <section className="pt-11 pb-19 lg:py-10 res-sol bg-navyblue overflow-hidden">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between gap-8 lg:gap-2">
         <div className="flex flex-col justify-center w-full lg:w-[45%] z-10 bg-navyblue relative lg:pr-6 before:content-[''] before:absolute before:h-full before:bottom-0 before:right-[-2rem] before:bg-navyblue before:-z-10 before:[width:calc(150%+(100vw-1320px+0rem)/2)]">
           <p className="text-sm lg:text-xl text-white font-raleway tracking-[5px] font-light opacity-80 uppercase">
@@ -41,7 +41,7 @@ const ResSolution = () => {
               pauseOnHover: true,
               arrows: true,
               pagination: false,
-              gap: "30px",
+              gap: "25px",
             }}
             className="res-sol__slider"
             hasTrack={false}

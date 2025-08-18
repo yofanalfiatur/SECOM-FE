@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 
-const AmFAQ = () => {
+const AmFAQ = ({ translationKey }) => {
   const t = useTranslations();
-  const AlarmFAQ = t.raw("AlarmFAQ");
+  const AlarmFAQ = t.raw(translationKey);
 
   const [activeIndex, setActiveIndex] = useState(null);
 

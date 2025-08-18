@@ -4,9 +4,9 @@ import { useTranslations } from "next-intl";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import Image from "next/image";
 
-const AmBanner = () => {
+const AmBanner = ({ translationKey }) => {
   const t = useTranslations();
-  const AlarmBanner = t.raw("AlarmBanner");
+  const AlarmBanner = t.raw(translationKey);
   const isDesktop = useIsDesktop();
 
   return (

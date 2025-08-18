@@ -8,11 +8,11 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useTranslations } from "next-intl";
 
-const AmProducts = () => {
+const AmProducts = ({ translationKey, listProducts }) => {
   const isDesktop = useIsDesktop();
   const t = useTranslations();
-  const ProductDetails = t.raw("ProductDetails");
-  const AlarmProduct = t.raw("AlarmProduct");
+  const ProductDetails = t.raw(listProducts);
+  const AlarmProduct = t.raw(translationKey);
 
   return (
     <section className="pt-10 pb-6 lg:pt-20 lg:pb-26 bg-navyblue">

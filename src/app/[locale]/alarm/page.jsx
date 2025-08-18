@@ -12,22 +12,26 @@ import AmProducts from "@/components/Fragments/Alarm/AmProducts";
 import AmProtect from "@/components/Fragments/Alarm/AmProtect";
 import AmTrusted from "@/components/Fragments/Alarm/AmTrusted";
 import AmOverview from "@/components/Fragments/Alarm/AmOverview";
-import AmDiffrences from "@/components/Fragments/Alarm/AmDiffrences";
 
 const AlarmLanding = () => {
   return (
     <>
-      <AmBanner />
-      <AmOverview />
-      <AmChoose />
-      <AmProtect />
-      <AmProducts />
-      <AmCorner />
-      <AmApps />
-      <AmTrusted />
-      <AmPackage />
-      {/* <AmDiffrences /> */}
-      <AmFAQ />
+      <AmBanner translationKey="AlarmBanner" />
+      <AmOverview translationKey="AlarmOverview" />
+      <AmChoose translationKey="AlarmReason" />
+      <AmProtect translationKey="AlarmProtect" />
+      <AmProducts translationKey="AlarmProduct" listProducts="ProductDetails" />
+      <AmCorner translationKey="AlarmCorners" listProducts="ProductDetails" />
+      <AmApps translationKey="AlarmApps" />
+      <AmTrusted translationKey="AlarmTrusted" />
+      <AmPackage
+        translationKey="AlarmPackage"
+        differences="AlarmDifferences"
+        listPackages="Packages"
+        packagesBuy="SoPackagesBuy"
+        packagesRent="SoPackagesRent"
+      />
+      <AmFAQ translationKey="AlarmFAQ" />
     </>
   );
 };
