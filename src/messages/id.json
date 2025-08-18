@@ -370,7 +370,7 @@
     ],
     "btnSolution": {
       "text": "Selengkapnya",
-      "href": "/#",
+      "href": "/solutions",
       "target": "_self"
     }
   },
@@ -419,7 +419,7 @@
     "image": "/img/temp/h-promotion.jpg",
     "btnPromotion": {
       "text": "Konsultasi Gratis",
-      "href": "/#",
+      "href": "/contact",
       "target": "_self"
     }
   },
@@ -427,7 +427,15 @@
     "title": "Konsultasi Gratis Sekarang.",
     "desc": "Kami akan menganalisis kebutuhan spesifik Anda dan merekomendasikan solusi yang paling tepat secara akurat dan efisien.",
     "photo": "/img/temp/Free Consultation.jpg",
-    "photoMd": "/img/temp/Free Consultation Mobile.jpg"
+    "photoMd": "/img/temp/Free Consultation Mobile.jpg",
+    "LabelInput": {
+      "name": "Nama Lengkap",
+      "email": "Alamat Email",
+      "phone": "No Telepon",
+      "location": "Tipe Lokasi",
+      "howDidYouKnow": "Dari mana Anda mengetahui SECOM?",
+      "message": "Pesan"
+    }
   },
   "FormValue": {
     "locationType": [
@@ -970,7 +978,8 @@
       "link": "#1",
       "positionX": "49%",
       "positionY": "24%",
-      "type": "business"
+      "type": "business",
+      "pinned": true
     },
     {
       "title": "Remote Control",
@@ -979,7 +988,8 @@
       "link": "#2",
       "positionX": "64%",
       "positionY": "25%",
-      "type": "business"
+      "type": "business",
+      "pinned": true
     },
     {
       "title": "Keypad",
@@ -988,7 +998,8 @@
       "link": "#3",
       "positionX": "64%",
       "positionY": "25%",
-      "type": "business"
+      "type": "business",
+      "pinned": true
     },
     {
       "title": "Siren Box",
@@ -997,7 +1008,8 @@
       "link": "#4",
       "positionX": "32.5%",
       "positionY": "50.5%",
-      "type": "business"
+      "type": "business",
+      "pinned": true
     },
     {
       "title": "Smart Video Camera",
@@ -1006,7 +1018,8 @@
       "link": "#5",
       "positionX": "41%",
       "positionY": "58%",
-      "type": "business"
+      "type": "business",
+      "pinned": true
     },
     {
       "title": "Door Contact",
@@ -1015,7 +1028,8 @@
       "link": "#6",
       "positionX": "64%",
       "positionY": "25%",
-      "type": "business"
+      "type": "business",
+      "pinned": true
     },
     {
       "title": "PIR Camera Indoor",
@@ -1024,7 +1038,8 @@
       "link": "#7",
       "positionX": "49%",
       "positionY": "43.5%",
-      "type": "business"
+      "type": "business",
+      "pinned": true
     },
     {
       "title": "PIR Indoor",
@@ -1033,7 +1048,8 @@
       "link": "#8",
       "positionX": "64%",
       "positionY": "25%",
-      "type": "business"
+      "type": "business",
+      "pinned": true
     },
     {
       "title": "Smoke Detector",
@@ -1042,7 +1058,8 @@
       "link": "#9",
       "positionX": "64%",
       "positionY": "25%",
-      "type": "business"
+      "type": "business",
+      "pinned": true
     },
     {
       "title": "Heat Sensor",
@@ -1051,7 +1068,8 @@
       "link": "#10",
       "positionX": "61%",
       "positionY": "82.5%",
-      "type": "business"
+      "type": "business",
+      "pinned": true
     },
     {
       "title": "Panic Button",
@@ -1060,7 +1078,8 @@
       "link": "#11",
       "positionX": "61%",
       "positionY": "82.5%",
-      "type": "business"
+      "type": "business",
+      "pinned": true
     }
   ],
   "BusinessPackages": [
@@ -1098,7 +1117,7 @@
       ],
       "desc": "Paket pembelian satu kali untuk bisnis kecil atau kantor. Termasuk perangkat keamanan penting untuk memulai. Sederhana, terjangkau, dan sepenuhnya milik Anda.",
       "device": "8",
-      "image": "/img/temp/package-1.png",
+      "image": "/img/temp/alarm/Business.png",
       "isRent": false
     },
     {
@@ -1120,7 +1139,7 @@
       ],
       "desc": "Miliki sistem keamanan lengkap dengan perlindungan canggih dan fitur keselamatan tambahan. Ideal untuk area berisiko tinggi dan keamanan jangka panjang bisnis Anda.",
       "device": "12",
-      "image": "/img/temp/package-1.png",
+      "image": "/img/temp/alarm/BusinessPro.png",
       "isRent": false
     }
   ],

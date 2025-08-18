@@ -1,4 +1,3 @@
-import ButtonPrimary from "@/components/Elements/ButtonPrimary";
 import Image from "next/image";
 import React from "react";
 import { useTranslations } from "next-intl";
@@ -53,13 +52,6 @@ const ResAbout = () => {
               </div>
             ))}
           </div>
-          <ButtonPrimary
-            href={ReAbout.btnAbout.href}
-            target={ReAbout.btnAbout.target}
-            className=""
-          >
-            {ReAbout.btnAbout.text}
-          </ButtonPrimary>
         </div>
       </div>
     </section>

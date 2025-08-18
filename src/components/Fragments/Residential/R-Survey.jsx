@@ -117,7 +117,7 @@ const ResSurvey = () => {
                       : "opacity-100 transform translate-y-0"
                   }`}
                 >
-                  <p className="text-navyblue text-[25px] md:text-3xl lg:text-6xl text-center w-[95%] lg:w-[70%] my-5 lg:my-10">
+                  <p className="text-navyblue text-[25px] md:text-3xl lg:text-6xl text-center w-[95%] lg:w-[70%] my-5 lg:my-10 leading-[1.2]">
                     {ReSurvey.survey[currentQuestion]?.question}
                   </p>
                   <div className="flex flex-col md:flex-row res-survey__wrap-btn gap-3 lg:gap-4">
