@@ -110,6 +110,8 @@ const ContactForm = () => {
     }
   };
 
+  console.log("SERVICE ID:", process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID);
+
   return (
     <div className="w-full mx-auto rounded-lg form__wrap">
       <form
