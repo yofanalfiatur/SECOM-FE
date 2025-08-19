@@ -8,11 +8,14 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useTranslations } from "next-intl";
 
-const AmCorner = (props) => {
-  const { translationKey, listProducts } = props;
+const AmPlacement = (props) => {
+  const { translationKey, listProducts, pinPlacement } = props;
   const t = useTranslations();
   const AlarmCorners = t.raw(translationKey);
   const ProductDetails = t.raw(listProducts);
+  const filteredProducts = ProductDetails.filter(
+    (item) => item[pinPlacement] === true
+  );
 
   const isDesktop = useIsDesktop();
   const [activeIndex, setActiveIndex] = useState(null); // index of hovered pin
@@ -59,7 +62,7 @@ const AmCorner = (props) => {
                 height={700}
                 className="w-full h-auto relative z-0"
               />
-              {ProductDetails.map((item, index) => (
+              {filteredProducts.map((item, index) => (
                 <div
                   key={index}
                   className={`absolute flex flex-col max-w-max -translate-x-1/2 -translate-y-1/2 ${
@@ -67,7 +70,10 @@ const AmCorner = (props) => {
                       ? "z-10"
                       : "z-0"
                   }`}
-                  style={{ top: item.positionX, left: item.positionY }}
+                  style={{
+                    top: item[`${pinPlacement}Y`],
+                    left: item[`${pinPlacement}X`],
+                  }}
                   onMouseLeave={() => {
                     setActiveIndex(null);
                     setCardEnabled(null);
@@ -140,12 +146,12 @@ const AmCorner = (props) => {
                   className="w-full h-auto relative z-0"
                 />
                 <div className="absolute top-0 left-0 w-full h-full z-1">
-                  {ProductDetails.map((item, index) => (
+                  {filteredProducts.map((item, index) => (
                     <div
                       className="z-[1] bg-tosca rounded-full w-[20px] h-[20px] flex items-center justify-center cursor-pointer absolute"
                       style={{
-                        top: `calc(${item.positionX} - 10px)`,
-                        left: `calc(${item.positionY} - 10px)`,
+                        top: `calc(${item[`${pinPlacement}Y`]} - 10px)`,
+                        left: `calc(${item[`${pinPlacement}X`]} - 10px)`,
                       }}
                       key={index}
                     >
@@ -184,7 +190,7 @@ const AmCorner = (props) => {
                     onMove={(splide, newIndex) => setActiveIndexMd(newIndex)}
                   >
                     <SplideTrack>
-                      {ProductDetails.map((item, index) => (
+                      {filteredProducts.map((item, index) => (
                         <SplideSlide
                           key={index}
                           className="flex flex-col w-full"
@@ -248,4 +254,4 @@ const AmCorner = (props) => {
   );
 };
 
-export default AmCorner;
+export default AmPlacement;

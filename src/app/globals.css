@@ -785,6 +785,21 @@ main {
     opacity: 0;
   }
 }
+/*
+  Changes for screens with a maximum width of 1024px.
+*/
+@media (max-width: 1024px) {
+  @keyframes pulsecircle {
+    0% {
+      scale: 1;
+      opacity: 1;
+    }
+    100% {
+      scale: 2.1;
+      opacity: 0;
+    }
+  }
+}
 
 /* Alarm corner pin */
 .am-corner .pulse-one {
@@ -811,4 +826,23 @@ main {
 }
 .package-note ul li {
   margin-left: 30px;
+}
+
+.am-prod ul.splide__pagination {
+  bottom: -25px;
+  gap: 6px;
+}
+
+.am-prod li .splide__pagination__page {
+  margin: unset;
+  background-color: white;
+  opacity: 100%;
+  width: 10px;
+  height: 10px;
+}
+
+.am-prod li .splide__pagination__page.is-active {
+  margin: unset;
+  background-color: #00aaad;
+  transform: unset;
 }

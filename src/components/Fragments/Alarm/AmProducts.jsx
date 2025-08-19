@@ -8,14 +8,15 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useTranslations } from "next-intl";
 
-const AmProducts = ({ translationKey, listProducts }) => {
+const AmProducts = (props) => {
+  const { translationKey, listProducts, typeProduct } = props;
   const isDesktop = useIsDesktop();
   const t = useTranslations();
   const ProductDetails = t.raw(listProducts);
   const AlarmProduct = t.raw(translationKey);
-
+  const TypeProduct = typeProduct;
   return (
-    <section className="pt-10 pb-6 lg:pt-20 lg:pb-26 bg-navyblue">
+    <section className="pt-10 pb-12 lg:pt-20 lg:pb-26 bg-navyblue am-prod">
       <div className="container mx-auto flex flex-col items-center">
         <h2 className="text-[25px] lg:text-4xl font-raleway font-medium text-white text-center">
           {AlarmProduct.title}
@@ -28,7 +29,9 @@ const AmProducts = ({ translationKey, listProducts }) => {
         {isDesktop ? (
           <div className="flex flex-col am-products__grid">
             <ul className="flex flex-row flex-wrap justify-center gap-4">
-              {ProductDetails.map((item, index) => (
+              {ProductDetails.filter((item) =>
+                item.type.includes(TypeProduct)
+              ).map((item, index) => (
                 <li
                   key={index}
                   className="w-[32.5%] relative flex flex-col min-h-[500px] group"
@@ -77,7 +80,9 @@ const AmProducts = ({ translationKey, listProducts }) => {
               className="[&_.splide__track]:!overflow-visible w-full"
             >
               <SplideTrack>
-                {ProductDetails.map((item, index) => (
+                {ProductDetails.filter((item) =>
+                  item.type.includes(TypeProduct)
+                ).map((item, index) => (
                   <SplideSlide key={index}>
                     <div className="relative flex flex-col group min-h-[350px] bg-[#012146] pt-7 pb-6 px-8">
                       <Link
