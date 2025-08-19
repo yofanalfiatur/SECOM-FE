@@ -212,7 +212,7 @@ const AmPlacement = (props) => {
                     </SplideTrack>
                     {/* Custom Arrow Buttons */}
                     <div className="splide__arrows absolute top-[35px] w-full z-10">
-                      <button className="splide__arrow splide__arrow--prev !bg-white !opacity-100 !border-tosca !border-[1px] !rounded-none !left-[37%] ">
+                      <button className="splide__arrow splide__arrow--prev !bg-white !opacity-100 !border-tosca !border-[1px] !rounded-none !left-[38%] ">
                         <svg
                           width="22"
                           height="15"
@@ -227,7 +227,7 @@ const AmPlacement = (props) => {
                           />
                         </svg>
                       </button>
-                      <button className="splide__arrow splide__arrow--next !bg-white !opacity-100 !border-tosca !border-[1px] !rounded-none !right-[37%]">
+                      <button className="splide__arrow splide__arrow--next !bg-white !opacity-100 !border-tosca !border-[1px] !rounded-none !right-[38%]">
                         <svg
                           width="22"
                           height="15"

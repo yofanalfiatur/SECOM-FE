@@ -12,6 +12,7 @@ import AmProtect from "@/components/Fragments/Alarm/AmProtect";
 import AmTrusted from "@/components/Fragments/Alarm/AmTrusted";
 import AmOverview from "@/components/Fragments/Alarm/AmOverview";
 import AmPlacement from "@/components/Fragments/Alarm/AmPlacement";
+import AmReason from "@/components/Fragments/Alarm/AmReason";
 
 const AlarmLanding = () => {
   return (
@@ -19,7 +20,8 @@ const AlarmLanding = () => {
       {/* business */}
       <AmBanner translationKey="AlarmBanner" />
       <AmOverview translationKey="AlarmOverview" />
-      <AmChoose translationKey="AlarmReason" />
+      {/* <AmChoose translationKey="AlarmReason" /> */}
+      <AmReason translationKey="AlarmReason" />
       <AmProtect translationKey="AlarmProtect" />
       <AmProducts
         translationKey="AlarmProduct"

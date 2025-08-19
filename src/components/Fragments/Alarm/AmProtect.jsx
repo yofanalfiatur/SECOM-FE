@@ -15,7 +15,7 @@ const AmProtect = ({ translationKey }) => {
   const isDesktop = useIsDesktop();
 
   return (
-    <section className="relative pt-9 pb-13 lg:pb-23 lg:pt-17 overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:lg:h-10/12 after:h-full after:bg-[linear-gradient(0deg,_#ffffff_30%,_rgba(255,255,255,0)_60%)]">
+    <section className="relative pt-9 pb-13 mt-[-3px] lg:mt-0 lg:pb-23 lg:pt-17 overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:lg:h-10/12 after:h-full after:bg-[linear-gradient(0deg,_#ffffff_30%,_rgba(255,255,255,0)_60%)]">
       <BackgroundDots
         dotSize={isDesktop ? 2.5 : 2}
         dotsX={isDesktop ? 35 : 15}

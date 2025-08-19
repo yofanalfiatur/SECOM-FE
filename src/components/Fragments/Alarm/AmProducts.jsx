@@ -89,7 +89,8 @@ const AmProducts = (props) => {
                         href={item.link}
                         className="flex flex-col h-full relative z-[1]"
                       >
-                        <div className="flex flex-col items-center">
+                        <RadialGridCard className="!rounded-full" />
+                        <div className="flex flex-col items-center relative z-[1]">
                           <p className="text-white font-raleway text-center font-medium">
                             {item.title}
                           </p>

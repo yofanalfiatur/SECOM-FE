@@ -10,6 +10,7 @@ import AmProtect from "@/components/Fragments/Alarm/AmProtect";
 import AmTrusted from "@/components/Fragments/Alarm/AmTrusted";
 import AmOverview from "@/components/Fragments/Alarm/AmOverview";
 import AmPlacement from "@/components/Fragments/Alarm/AmPlacement";
+import AmReason from "@/components/Fragments/Alarm/AmReason";
 
 const SolutionsPage = () => {
   return (
@@ -17,7 +18,8 @@ const SolutionsPage = () => {
       {/* home */}
       <AmBanner translationKey="SolBanner" />
       <AmOverview translationKey="SolOverview" />
-      <AmChoose translationKey="SolReason" />
+      {/* <AmChoose translationKey="SolReason" /> */}
+      <AmReason translationKey="AlarmReason" />
       <AmProtect translationKey="SolProtect" />
       <AmProducts
         translationKey="SolProduct"
