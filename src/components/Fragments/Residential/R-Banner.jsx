@@ -44,17 +44,18 @@ const ResBanner = () => {
                     }}
                     key={index}
                     style={{
-                      top: item.top,
-                      left: item.left,
                       position: "absolute",
                       maxWidth: item.maxWidth,
+                      top: item.top,
+                      left: item.left,
                     }}
-                    className="flex flex-col res-banner__card overflow-hidden rounded-[0px]"
+                    className={`flex flex-col res-banner__card overflow-hidden rounded-[0px]`}
                   >
-                    <div className="flex flex-col res-banner__card-wrap">
-                      <p className="text-navyblue py-4 px-4 rounded-[0px] overflow-hidden font-raleway leading-6 text-[16px] bg-white/70">
+                    <div className="flex flex-col res-banner__card-wrap relative overflow-hidden rounded-[10px]">
+                      <p className="text-navyblue py-4 px-4 rounded-[8px] overflow-hidden font-raleway leading-6 text-[16px] bg-[#d6e2ea] m-[3px] relative z-1">
                         {item.text}
                       </p>
+                      <div class="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg transition-all duration-200 ease opacity-100"></div>
                     </div>
                   </motion.li>
                 ))}

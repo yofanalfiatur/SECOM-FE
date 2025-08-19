@@ -218,8 +218,8 @@
       {
         "text": "Jika saya meninggalkan makanan terlalu lama di pemanas, detektor asap akan memberi peringatan.",
         "top": "45%",
-        "left": "10%",
-        "maxWidth": "314px",
+        "left": "11%",
+        "maxWidth": "340px",
         "icon": "/img/temp/h-banner-ibu.png"
       },
       {
@@ -441,17 +441,18 @@
     "title": "Konsultasi Gratis Sekarang.",
     "desc": "Kami akan menganalisis kebutuhan spesifik Anda dan merekomendasikan solusi yang paling tepat secara akurat dan efisien.",
     "photo": "/img/temp/Free Consultation.jpg",
-    "photoMd": "/img/temp/Free Consultation Mobile.jpg",
-    "LabelInput": {
-      "name": "Nama Lengkap",
-      "email": "Alamat Email",
-      "phone": "No Telepon",
-      "location": "Tipe Lokasi",
-      "howDidYouKnow": "Dari mana Anda mengetahui SECOM?",
-      "message": "Pesan"
-    }
+    "photoMd": "/img/temp/Free Consultation Mobile.jpg"
   },
   "FormValue": {
+    "LabelInput": {
+      "name": "NAMA LENGKAP",
+      "email": "ALAMAT EMAIL",
+      "phone": "NO TELEPON",
+      "location": "TIPE LOKASI",
+      "company": "NAMA PERUSAHAAN",
+      "howDidYouKnow": "DARI MANA ANDA MENGETAHUI SECOM?",
+      "message": "PESAN"
+    },
     "locationType": [
       {
         "value": "",
@@ -462,12 +463,8 @@
         "label": "Residential"
       },
       {
-        "value": "Commercial",
-        "label": "Commercial"
-      },
-      {
-        "value": "Industrial",
-        "label": "Industrial"
+        "value": "Business",
+        "label": "Business"
       }
     ],
     "howDidYouKnow": [
@@ -622,7 +619,7 @@
   "SolApps": {
     "title": "Selalu Terhubung. Selalu Terlindungi",
     "desc": "Kendalikan keamanan rumah Anda kapan saja, di mana saja dengan Aplikasi SECOM. Jelajahi pengaturan lebih lanjut melalui portal SECOM Smart Security di website kami. Data Anda tetap pribadi dan aman, karena SECOM hanya dapat mengakses rekaman video saat terjadi keadaan darurat yang terverifikasi, demi memastikan keselamatan Anda.",
-    "image": "/img/temp/phone-img.png",
+    "image": "/img/temp/mockup-app.png",
     "items": [
       {
         "title": "Video Real-Time",
@@ -860,7 +857,7 @@
   "AlarmApps": {
     "title": "Selalu Terhubung. Selalu Terlindungi",
     "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja dengan Aplikasi SECOM. Jelajahi pengaturan lebih lanjut melalui portal SECOM Smart Security di website kami. Data Anda tetap pribadi dan aman, karena SECOM hanya dapat mengakses rekaman video saat terjadi keadaan darurat yang terverifikasi, demi memastikan keselamatan Anda.",
-    "image": "/img/temp/phone-img.png",
+    "image": "/img/temp/mockup-app.png",
     "items": [
       {
         "title": "Video Real-Time",
@@ -1088,7 +1085,7 @@
     {
       "title": "Panic Button",
       "subtitle": "Tombol yang dapat ditekan saat keadaan darurat untuk segera meminta bantuan dari SECOM.",
-      "image": "/img/temp/products/Keypad.png",
+      "image": "/img/temp/products/Panic-Button.png",
       "link": "#11",
       "positionX": "61%",
       "positionY": "82.5%",

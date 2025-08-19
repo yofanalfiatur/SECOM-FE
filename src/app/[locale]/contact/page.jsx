@@ -13,7 +13,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className="flex flex-col items-center justify-center pt-0 pb-5 lg:pt-15 lg:pb-15 relative overflow-hidden hide__footer__top">
+      <section className="flex flex-col items-center justify-center pt-0 pb-5 lg:pt-10 lg:pb-10 relative overflow-hidden hide__footer__top">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

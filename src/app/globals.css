@@ -533,7 +533,7 @@ main {
   z-index: 0;
 }
 
-.res-banner .res-banner__card-wrap {
+/* .res-banner .res-banner__card-wrap {
   border: 3px solid;
   border-image-source: radial-gradient(
     45.66% 102.95% at 63.16% 45.66%,
@@ -542,7 +542,7 @@ main {
     #00529c 100%
   );
   border-image-slice: 10;
-}
+} */
 
 /* Background Dots Styles */
 .dots-bg-container {

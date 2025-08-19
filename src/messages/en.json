@@ -220,8 +220,8 @@
       {
         "text": "If I leave food too long in the microwave, the smoke detector will alert us.",
         "top": "45%",
-        "left": "11%",
-        "maxWidth": "314px",
+        "left": "10%",
+        "maxWidth": "340px",
         "icon": "/img/temp/h-banner-ibu.png"
       },
       {
@@ -442,18 +442,19 @@
     "title": "Get Your Free Consultation",
     "desc": "We'll assess your specific needs and recommend the best-fit solution with accuracy and efficiency.",
     "photo": "/img/temp/Free Consultation.jpg",
-    "photoMd": "/img/temp/Free Consultation Mobile.jpg",
-    "LabelInput": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "location": "Location Type",
-      "howDidYouKnow": "How did you know SECOM?",
-      "message": "Message"
-    }
+    "photoMd": "/img/temp/Free Consultation Mobile.jpg"
   },
 
   "FormValue": {
+    "LabelInput": {
+      "name": "FULL NAME",
+      "email": "EMAIL ADDRESS",
+      "phone": "PHONE NUMBER",
+      "location": "LOCATION TYPE",
+      "company": "COMPANY NAME",
+      "howDidYouKnow": "HOW DID YOU KNOW SECOM?",
+      "message": "MESSAGE"
+    },
     "locationType": [
       {
         "value": "",
@@ -464,12 +465,8 @@
         "label": "Residential"
       },
       {
-        "value": "Commercial",
-        "label": "Commercial"
-      },
-      {
-        "value": "Industrial",
-        "label": "Industrial"
+        "value": "Business",
+        "label": "Business"
       }
     ],
     "howDidYouKnow": [
@@ -624,7 +621,7 @@
   "SolApps": {
     "title": "Always Connected. Always Protected",
     "desc": "Stay in control anytime, anywhere with SECOM App. Explore advanced settings via SECOM Smart Security portal on our website. Your data stays private and secure, SECOM can only access your video footage during verified emergencies to ensure your safety.",
-    "image": "/img/temp/phone-img.png",
+    "image": "/img/temp/mockup-app.png",
     "items": [
       {
         "title": "Live Monitoring",
@@ -870,7 +867,7 @@
   "AlarmApps": {
     "title": "Stay in Control. Anytime. Anywhere.",
     "desc": "Manage your business security anytime with the SECOM App, from arming the system to live camera checks. For advanced settings, use the SECOM Smart Security portal. Your data stays private, SECOM only accesses footage during verified emergencies.",
-    "image": "/img/temp/phone-img.png",
+    "image": "/img/temp/mockup-app.png",
     "items": [
       {
         "title": "Live Monitoring",

@@ -253,11 +253,11 @@ const AmPackage = (props) => {
               {/* Accordion Content */}
               <div
                 className={`flex flex-col relative transition-all duration-500 ease-in-out overflow-hidden rounded-b-[5px] shadow-[0px_4px_10px_0px_#00000026] ${
-                  isOpenBuy ? "max-h-[2000px]" : "max-h-0"
+                  isOpenBuy ? "max-h-[3000px]" : "max-h-0"
                 }`}
               >
                 <div className="md:overflow-visible overflow-x-auto flex flex-col bg-white mx-1 mb-1 relative z-[1] am-diff__wrap">
-                  <div className="relative z-[1] h-full rounded-b-[3px] w-full min-w-[400px] md:min-w-[600px] lg:min-w-0">
+                  <div className="relative z-[1] h-full rounded-b-[3px] w-full">
                     {/* Head Content */}
                     <div className="grid grid-cols-12 border-b-[1px] border-[#0000001A]">
                       <div className="py-3 lg:py-6 border-r-[1px] border-[#0000001A] col-span-4 flex flex-col items-center justify-center">
@@ -295,7 +295,7 @@ const AmPackage = (props) => {
                             alt="secom"
                             width={88}
                             height={88}
-                            className="w-[75px] h-[75px] lg:w-[88px] lg:h-[88px]"
+                            className="w-[55px] h-[55px] lg:w-[88px] lg:h-[88px]"
                           />
                           <p className="font-raleway text-center lg:text-start text-sm lg:text-xl font-normal">
                             {item.device}
@@ -415,7 +415,7 @@ const AmPackage = (props) => {
               {isOpenBuy && (
                 <button
                   onClick={toggleBuyContent}
-                  className=" text-tosca text-sm font-semibold mt-16 lg:mt-8 uppercase cursor-pointer flex flex-row justify-center items-center gap-2 self-center"
+                  className=" text-tosca text-sm font-semibold mt-8 lg:mt-8 uppercase cursor-pointer flex flex-row justify-center items-center gap-2 self-center"
                 >
                   <p className="font-raleway font-normal text-xs tracking-[2px]">
                     {DifferncesInfo.hint}
@@ -481,11 +481,11 @@ const AmPackage = (props) => {
               {/* Accordion Content */}
               <div
                 className={`flex flex-col relative transition-all duration-500 ease-in-out overflow-hidden rounded-b-[5px] shadow-[0px_4px_10px_0px_#00000026] ${
-                  isOpenRent ? "max-h-[2000px]" : "max-h-0"
+                  isOpenRent ? "max-h-[3000px]" : "max-h-0"
                 }`}
               >
                 <div className="md:overflow-visible overflow-x-auto flex flex-col bg-white mx-1 mb-1 relative z-[1] am-diff__wrap">
-                  <div className="relative z-[1] h-full rounded-b-[3px] w-full min-w-[400px] md:min-w-[600px] lg:min-w-0">
+                  <div className="relative z-[1] h-full rounded-b-[3px] w-full">
                     {/* Head Content */}
                     <div className="grid grid-cols-12 border-b-[1px] border-[#0000001A]">
                       <div className="py-3 lg:py-6 border-r-[1px] border-[#0000001A] col-span-4 flex flex-col items-center justify-center">
@@ -524,7 +524,7 @@ const AmPackage = (props) => {
                             alt="secom"
                             width={88}
                             height={88}
-                            className="w-[75px] h-[75px] lg:w-[88px] lg:h-[88px]"
+                            className="w-[55px] h-[55px] lg:w-[88px] lg:h-[88px]"
                           />
                           <p className="font-raleway text-center lg:text-start text-sm lg:text-xl font-normal">
                             {item.device}
@@ -578,7 +578,7 @@ const AmPackage = (props) => {
               {isOpenRent && (
                 <button
                   onClick={toggleRentContent}
-                  className=" text-tosca text-sm font-semibold mt-16 lg:mt-8 uppercase cursor-pointer flex flex-row justify-center items-center gap-2 self-center"
+                  className=" text-tosca text-sm font-semibold mt-8 lg:mt-8 uppercase cursor-pointer flex flex-row justify-center items-center gap-2 self-center"
                 >
                   <p className="font-raleway font-normal text-xs tracking-[2px]">
                     {DifferncesInfo.hint}
