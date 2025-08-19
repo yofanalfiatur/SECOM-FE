@@ -7,13 +7,13 @@
     "text": "25% Off for your first step in Smart Security Solutions",
     "btn": {
       "text": "View Details",
-      "href": "/#promotions",
+      "href": "/#res-prom",
       "target": "_self"
     }
   },
   "floatChat": {
-    "email": "mailto:leads@secom.co.id",
-    "whatsapp": "https://wa.me/628123456789"
+    "email": "csc@secom.co.id",
+    "whatsapp": "62817117326"
   },
 
   "langIdentifier": "Indonesian",
@@ -146,11 +146,11 @@
     }
   ],
   "FooterSocMed": {
-    "FtFacebook": "https://www.facebook.com/",
-    "FtLinkedin": "https://www.linkedin.com/",
-    "FtInstagram": "https://www.instagram.com/",
-    "FtYoutube": "https://www.youtube.com/",
-    "FtTiktok": "https://www.tiktok.com/"
+    "FtFacebook": "https://www.facebook.com/secomindonesia",
+    "FtLinkedin": "https://www.linkedin.com/company/secomindonesia/",
+    "FtInstagram": "https://www.instagram.com/secomindonesia/",
+    "FtYoutube": "https://www.youtube.com/@secom.indonesia",
+    "FtTiktok": "https://www.tiktok.com/@secomindonesia"
   },
   "FooterDropdown": [
     {
@@ -212,7 +212,7 @@
   ],
   "ReBanner": {
     "title": "Semua Anggota Keluarga Anda, Layak Merasa Aman",
-    "photo": "/img/temp/h-banner-front.png",
+    "photo": "/img/temp/residential/front-min.png",
     "background": "/img/temp/h-banner-bg.jpg",
     "items": [
       {
@@ -248,6 +248,8 @@
   "ReSurvey": {
     "title": "Apakah Rumah Saya Aman?",
     "desc": "Jawab 3 pertanyaan singkat ini untuk temukan solusi dari kami",
+    "descResult": "Berikut Hasil Survei Keamanan Anda",
+
     "survey": [
       {
         "question": "Seberapa sering rumah Anda ditinggal kosong?",
@@ -266,12 +268,12 @@
         "question": "Apakah Anda tinggal bersama anak-anak, orang lanjut usia, atau anggota keluarga dengan kebutuhan khusus?",
         "options": [
           {
-            "text": "Ya",
-            "value": "yes"
+            "text": "A. Ya",
+            "value": "a"
           },
           {
-            "text": "Tidak",
-            "value": "no"
+            "text": "B. Tidak",
+            "value": "b"
           }
         ]
       },
@@ -325,9 +327,9 @@
       }
     ],
     "resultCombinations": {
-      "high": ["a-yes-a", "a-no-a", "b-yes-a"],
-      "moderate": ["a-yes-b", "a-no-b", "b-yes-b"],
-      "low": ["b-no-a", "b-no-b"]
+      "high": ["a-a-a", "a-b-a", "b-a-a"],
+      "moderate": ["a-a-b", "a-b-b", "b-a-b"],
+      "low": ["b-b-a", "b-b-b"]
     }
   },
   "ReAbout": {
@@ -527,12 +529,12 @@
 
   "SolBanner": {
     "title": ["Keamanan yang Dapat Diandalkan, Untuk ", "Semua Keluarga"],
-    "background": "/img/temp/solutions/solutions-banner.jpg",
-    "backgroundMd": "/img/temp/solutions/solutions-banner.jpg"
+    "background": "/img/temp/solutions/sol-bg-2x.jpg",
+    "backgroundMd": "/img/temp/solutions/sol-bg-2x.jpg"
   },
 
   "SolOverview": {
-    "desc": "Rumah Anda adalah awal dari segalanya. Tempat anak tumbuh, kenangan tercipta, dan rasa aman yang seharusnya tak pernah diragukan. <br>SECOM hadir dengan solusi keamanan</br> yang kami sesuaikan untuk setiap keluarga, agar Anda merasa tenang dan yakin, rumah selalu terlindungi.",
+    "desc": "<b>Rumah Anda adalah awal dari segalanya</b>. Tempat anak tumbuh, kenangan tercipta, dan rasa aman yang seharusnya tak pernah diragukan. <b>SECOM hadir dengan solusi keamanan</b> yang kami sesuaikan untuk setiap keluarga, agar Anda merasa tenang dan yakin, rumah selalu terlindungi.",
     "items": [
       {
         "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
@@ -655,11 +657,11 @@
     ],
     "download": [
       {
-        "link": "#",
+        "link": "https://play.google.com/store/apps/details?id=jp.co.secom.secomalarm",
         "image": "/img/temp/googleplay.svg"
       },
       {
-        "link": "#",
+        "link": "https://apps.apple.com/id/app/secom-smart-security/id1522939072",
         "image": "/img/temp/appstore.svg"
       }
     ]
@@ -893,11 +895,11 @@
     ],
     "download": [
       {
-        "link": "#",
+        "link": "https://play.google.com/store/apps/details?id=jp.co.secom.secomalarm",
         "image": "/img/temp/googleplay.svg"
       },
       {
-        "link": "#",
+        "link": "https://apps.apple.com/id/app/secom-smart-security/id1522939072",
         "image": "/img/temp/appstore.svg"
       }
     ]

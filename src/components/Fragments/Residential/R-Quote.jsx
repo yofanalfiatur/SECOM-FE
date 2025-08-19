@@ -51,7 +51,7 @@ const ResQuote = () => {
   }, []);
 
   return (
-    <section className="pb-20 lg:pb-0 flex flex-col lg:flex-row bg-tosca relative overflow-hidden res-quote">
+    <section className="pb-0 flex flex-col lg:flex-row bg-tosca relative overflow-hidden res-quote">
       {/* IMAGE SLIDER */}
       <div className="w-full lg:w-[60%] relative z-[1] flex flex-col">
         <Splide
@@ -128,7 +128,7 @@ const ResQuote = () => {
                       alt={`Quote ${index + 1}`}
                       className="w-full h-full object-cover absolute top-0 left-0 opacity-100"
                     />
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-[87px] z-0 triangle-shape">
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-[87px] z-0 triangle-shape scale-60 md:scale-100">
                       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 triangle-shape animated-gradient-bg"></div>
 
                       <div className="bg-white triangle-shape absolute z-1 w-full h-full scale-[83%] top-1/2 left-[47%] transform -translate-x-1/2 -translate-y-1/2"></div>
@@ -159,7 +159,7 @@ const ResQuote = () => {
           >
             {ReQuote.map((item, index) => (
               <SplideSlide key={index} className="!h-full">
-                <div className="flex flex-col justify-center items-start pt-6 pb-4 px-0 lg:py-8 lg:pl-16 lg:pr-20 h-full">
+                <div className="flex flex-col justify-center items-start py-15 px-0 lg:py-8 lg:pl-16 lg:pr-20 h-full">
                   <svg
                     width="60"
                     height="47"

@@ -17,6 +17,7 @@ import ButtonSecondary from "../Elements/ButtonSecondary";
 import Starfield from "../Elements/Starfield";
 import { usePathname } from "next/navigation";
 import PromotionDeals from "../Elements/PromotionDeals";
+import FloatButton from "../Elements/FloatButton";
 
 const Footer = () => {
   const t = useTranslations();
@@ -52,12 +53,13 @@ const Footer = () => {
       <div className="radial two"></div>
       <div className="radial three"></div>
       <Starfield />
+      <FloatButton />
 
       {!shouldHideFooterTop && (
         <>
           <section className=" relative z-10 flex flex-col border-b-1 border-[#ffffff66] w-full footer__top">
             <div className="relative z-[1] container w-full mx-auto">
-              <div className="w-[90%] lg:w-3/4 border-r-1 py-3 lg:pt-22 lg:pb-16 border-[#ffffff66] flex flex-col items-center">
+              <div className="w-[90%] lg:w-3/4 border-r-1 py-3 lg:pt-19 lg:pb-19 border-[#ffffff66] flex flex-col items-center">
                 <h2 className="text-white text-[25px] lg:text-[60px] pr-4 lg:pl-0 py-3">
                   {FooterContent.FtTitle}
                 </h2>
@@ -69,7 +71,7 @@ const Footer = () => {
           <section className=" relative z-10 flex flex-col w-full footer__cta">
             <div className="container relative z-[1] w-full mx-auto flex flex-row">
               <div className="w-[15%] lg:w-1/4"></div>
-              <div className="w-[85%] lg:w-3/4 flex flex-col gap-y-8 lg:gap-y-6 border-[#ffffff66] border-l-1 pl-8 py-6 lg:pl-26 lg:pt-18 lg:pb-24">
+              <div className="w-[85%] lg:w-3/4 flex flex-col gap-y-8 lg:gap-y-6 border-[#ffffff66] border-l-1 pl-8 py-6 lg:pl-26 lg:pt-21 lg:pb-21">
                 <p className="text-white text-[13px] lg:text-lg lg:text-[25px]">
                   {FooterContent.FtDescription}
                 </p>
@@ -138,10 +140,10 @@ const Footer = () => {
             <div className=" f-info relative lg:pl-26 flex flex-row w-full border-t-[1px] border-[#ffffff66] lg:border-none">
               <div className="mt-6 lg:mt-8 mb-11 lg:mb-20 flex flex-col lg:flex-row w-full px-[1rem] lg:px-0 gap-y-6 lg:gap-0">
                 <div className="f-sitemap w-full lg:w-2/3">
-                  <p className="f-hint text-white text-[12px] lg:text-[14px] font-bold mb-3 lg:mb-4">
+                  <p className="f-hint text-white text-[12px] lg:text-[14px] font-semibold mb-3 lg:mb-3">
                     SITEMAPS
                   </p>
-                  <ul className="f-sitemap__list flex flex-col flex-wrap max-h-[105px] lg:max-h-[80px] max-w-max gap-[15px] lg:gap-[20px]">
+                  <ul className="f-sitemap__list flex flex-col flex-wrap max-h-[105px] lg:max-h-[80px] max-w-max gap-[15px] lg:gap-3">
                     {FooterMenu.map(({ FtMenuText, FtMenuLink }, index) => (
                       <li
                         className="f-sitemap__list__item flex flex-col max-w-max"
@@ -149,7 +151,7 @@ const Footer = () => {
                       >
                         <Link
                           href={FtMenuLink}
-                          className="f-sitemap__list__item__link text-[14px] lg:text-lg text-white max-w-max transition-all ease duration-200 hover:opacity-60"
+                          className="f-sitemap__list__item__link text-[14px] lg:text-base text-white max-w-max transition-all ease duration-200 hover:opacity-60"
                         >
                           {FtMenuText}
                         </Link>
@@ -158,7 +160,7 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div className="f-socmed w-full lg:w-1/3">
-                  <p className="f-hint text-white text-[12px] lg:text-[14px] font-bold mb-3 lg:mb-8">
+                  <p className="f-hint text-white text-[12px] lg:text-[14px] font-semibold mb-3 lg:mb-3">
                     STAY CONNECTED
                   </p>
                   <div className="f-socmed__list flex flex-row gap-6 lg:gap-8 ">

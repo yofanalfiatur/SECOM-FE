@@ -79,7 +79,7 @@ const HeaderTop = () => {
 
   return (
     <>
-      <div className="pr-8 flex flex-row justify-end border-b-1 border-[#00529C33] gap-6 header__wrap-top">
+      <div className="pr-8 flex flex-row justify-end border-b-1 border-[#00529C33] gap-6 h-full header__wrap-top">
         <div className="flex flex-row items-center">
           <ul
             className={`relative lang-list ${isHovered ? "expand-lang" : ""}`}
@@ -95,16 +95,16 @@ const HeaderTop = () => {
               >
                 <button
                   onClick={() => handleLanguageChange(localeCode)}
-                  className="flex flex-row items-center gap-2 lang-link cursor-pointer"
+                  className="flex flex-row items-center justify-center gap-2 lang-link cursor-pointer"
                   disabled={isLanguageActive(localeCode)}
                   title={`Switch to ${getLocaleDisplayName(localeCode)}`}
                 >
-                  <Image
+                  {/* <Image
                     src={getLocaleFlag(localeCode)}
                     alt={getLocaleDisplayName(localeCode)}
                     width={20}
                     height={14}
-                  />
+                  /> */}
                   <span className="font-raleway text-[14px] text-darkblue">
                     {getLocaleDisplayName(localeCode)}
                   </span>

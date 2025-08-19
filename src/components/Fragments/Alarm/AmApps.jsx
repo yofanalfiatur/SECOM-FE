@@ -41,7 +41,7 @@ const AmApps = ({ translationKey }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-white text-[25px] lg:text-[40px] font-raleway font-medium"
+              className="text-white text-[25px] lg:text-[35px] font-raleway font-medium"
             >
               {AlarmApps.title}
             </motion.h2>
@@ -50,11 +50,11 @@ const AmApps = ({ translationKey }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="text-white text-sm lg:text-lg leading-[1.7] lg:leading-[1.5] mt-2 lg:mt-0 mb-4 lg:mb-8"
+              className="text-white text-sm lg:text-base leading-[1.7] lg:leading-[1.5] mt-2 lg:mt-0 mb-4 lg:mb-8"
             >
               {AlarmApps.desc}
             </motion.p>
-            <ul className="grid grid-cols-12 gap-x-3 gap-y-3 lg:gap-x-8 lg:gap-y-6">
+            <ul className="grid grid-cols-12 gap-x-3 gap-y-3 lg:gap-x-4 lg:gap-y-5">
               {AlarmApps.items.map((item, index) => (
                 <motion.li
                   initial={{ opacity: 0, y: 20 }}
@@ -71,12 +71,12 @@ const AmApps = ({ translationKey }) => {
                     height={37}
                   />
                   <div className="flex flex-col gap-1">
-                    <p className="text-white text-xs lg:text-lg font-medium">
+                    <p className="text-white text-xs lg:text-base font-medium">
                       {item.title}
                     </p>
                     <div
                       dangerouslySetInnerHTML={{ __html: item.desc }}
-                      className="text-white text-xs lg:text-[16px]"
+                      className="text-white text-xs lg:text-[14px]"
                     />
                   </div>
                 </motion.li>
@@ -91,12 +91,12 @@ const AmApps = ({ translationKey }) => {
               className="flex flex-row mt-6 lg:mt-11 gap-3"
             >
               {AlarmApps.download.map((item, index) => (
-                <Link key={index} href={item.link}>
+                <Link key={index} href={item.link} target="_blank">
                   <Image
                     src={item.image}
                     alt="download button"
-                    width={120}
-                    height={40}
+                    width={150}
+                    height={50}
                   />
                 </Link>
               ))}

@@ -4,7 +4,7 @@ import RadialGridCard from "@/components/Elements/RadialGridCard";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useTranslations } from "next-intl";
 
@@ -73,34 +73,37 @@ const AmProducts = ({ translationKey, listProducts }) => {
                 arrows: false,
                 pagination: true,
               }}
+              hasTrack={false}
               className="[&_.splide__track]:!overflow-visible w-full"
             >
-              {ProductDetails.map((item, index) => (
-                <SplideSlide key={index}>
-                  <div className="relative flex flex-col group min-h-[350px] bg-[#012146] pt-7 pb-6 px-8">
-                    <Link
-                      href={item.link}
-                      className="flex flex-col h-full relative z-[1]"
-                    >
-                      <div className="flex flex-col items-center">
-                        <p className="text-white font-raleway text-center">
-                          {item.title}
-                        </p>
-                        <p className="text-white text-center mt-1 mb-8 w-[80%] text-sm">
-                          {item.subtitle}
-                        </p>
-                        <Image
-                          src={item.image}
-                          alt={item.title}
-                          width={147}
-                          height={147}
-                          className="group-hover:scale-110 transition-all duration-200 ease-in-out"
-                        />
-                      </div>
-                    </Link>
-                  </div>
-                </SplideSlide>
-              ))}
+              <SplideTrack>
+                {ProductDetails.map((item, index) => (
+                  <SplideSlide key={index}>
+                    <div className="relative flex flex-col group min-h-[350px] bg-[#012146] pt-7 pb-6 px-8">
+                      <Link
+                        href={item.link}
+                        className="flex flex-col h-full relative z-[1]"
+                      >
+                        <div className="flex flex-col items-center">
+                          <p className="text-white font-raleway text-center font-medium">
+                            {item.title}
+                          </p>
+                          <p className="text-white text-center mt-1 mb-8 w-[80%] text-sm">
+                            {item.subtitle}
+                          </p>
+                          <Image
+                            src={item.image}
+                            alt={item.title}
+                            width={147}
+                            height={147}
+                            className="group-hover:scale-110 transition-all duration-200 ease-in-out"
+                          />
+                        </div>
+                      </Link>
+                    </div>
+                  </SplideSlide>
+                ))}
+              </SplideTrack>
             </Splide>
           </>
         )}

@@ -27,11 +27,11 @@ const AmTrusted = ({ translationKey }) => {
         <div className="shadow-[0px_4px_20px_0px_#0000001A] lg:rounded-[5px] overflow-hidden">
           <div className="bg-white">
             {/* Table Header */}
-            <div className="bg-navyblue text-white grid grid-cols-12">
-              <div className="flex flex-col justify-center text-left py-3 lg:py-[22px] px-4 lg:px-8 text-xs lg:text-xl font-semibold font-raleway col-span-6">
+            <div className="bg-navyblue text-white flex flex-row">
+              <div className="flex flex-col justify-center text-left py-3 lg:py-[22px] px-4 lg:px-8 text-xs lg:text-xl font-semibold font-raleway w-[40%] lg:w-1/2">
                 FEATURE
               </div>
-              <div className="text-center py-3 lg:py-[22px] px-0 lg:px-8 flex flex-col items-center justify-center col-span-3">
+              <div className="text-center py-3 lg:py-[22px] px-0 lg:px-8 flex flex-col items-center justify-center w-[30%] lg:w-1/4">
                 <Image
                   src={AlarmTrusted.logoSecom}
                   alt="secom"
@@ -40,7 +40,7 @@ const AmTrusted = ({ translationKey }) => {
                   className="w-[66px] my-auto h-[28px] lg:w-max lg:h-auto object-contain"
                 />
               </div>
-              <div className="text-center py-3 lg:py-[22px] px-8 text-xs lg:text-xl font-semibold font-raleway col-span-3">
+              <div className="text-center py-3 lg:py-[22px] px-8 text-xs lg:text-xl font-semibold font-raleway w-[30%] lg:w-1/4">
                 OTHER BRAND
               </div>
             </div>
@@ -50,21 +50,21 @@ const AmTrusted = ({ translationKey }) => {
               className={`${
                 isDesktop
                   ? "max-h-full overflow-auto"
-                  : "max-h-[320px] overflow-y-scroll custom-scrollbar"
+                  : "max-h-[320px] w-full overflow-y-scroll custom-scrollbar"
               }`}
             >
               {AlarmTrusted.table.map((row, index) => (
                 <div
                   key={index}
-                  className="bg-white border-b-[1px] border-[#0000001A] last:border-0 grid grid-cols-12"
+                  className="bg-white border-b-[1px] border-[#0000001A] last:border-0 flex flex-row w-full"
                 >
                   {/* Feature Column */}
-                  <div className="py-3 lg:py-[18px] px-4 lg:px-8 text-gray-800 font-medium text-[15px] leading-[1.8] lg:leading-[1.3] lg:text-xl font-raleway col-span-6">
+                  <div className="py-3 lg:py-[18px] px-4 lg:px-8 text-gray-800 font-medium text-[15px] leading-[1.8] lg:leading-[1.3] lg:text-xl font-raleway w-[40%] lg:w-1/2 flex flex-col justify-center">
                     {row.feature}
                   </div>
 
                   {/* SECOM Column */}
-                  <div className="lg:py-[18px] text-center bg-[#E0FEFF] flex items-center justify-center col-span-3">
+                  <div className="lg:py-[18px] text-center bg-[#E0FEFF] flex items-center justify-center w-[30%] lg:w-1/4">
                     {row.secom ? (
                       <div className="flex items-center justify-center mx-8 lg:mx-auto">
                         <CheckIcon />
@@ -77,7 +77,7 @@ const AmTrusted = ({ translationKey }) => {
                   </div>
 
                   {/* OTHER Column */}
-                  <div className="lg:py-[18px] text-center flex items-center justify-center col-span-3">
+                  <div className="p-2 lg:py-[18px] lg:px-4 text-center flex items-center justify-center w-[30%] lg:w-1/4">
                     {row.other === "available" ? (
                       <div className="flex items-center justify-center mx-auto">
                         <CheckIcon />
@@ -89,7 +89,7 @@ const AmTrusted = ({ translationKey }) => {
                     ) : (
                       <div className="flex flex-col lg:flex-row gap-2 lg:gap-3 items-center justify-center mx-auto">
                         <LimitIcon />{" "}
-                        <span className="font-raleway font-medium lg:text-xl text-darkblue capitalize">
+                        <span className="font-raleway font-medium text-xs lg:text-xl text-darkblue capitalize w-full max-w-max">
                           {row.other}
                         </span>
                       </div>

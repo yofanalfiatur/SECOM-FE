@@ -13,18 +13,18 @@ const AmOverview = ({ translationKey }) => {
           className="w-full lg:w-10/12 text-xl lg:text-[45px] text-start lg:text-center font-medium self-center font-raleway am-value__desc"
           dangerouslySetInnerHTML={{ __html: AlarmOverview.desc }}
         />
-        <ul className="flex flex-col lg:flex-row gap-6 lg:gap-8 justify-between">
+        <ul className="flex flex-col lg:flex-row gap-6 lg:gap-35 justify-center">
           {AlarmOverview.items.map((item, index) => (
             <li
               key={index}
-              className="flex flex-row gap-6 items-center w-full lg:w-[30%]"
+              className="flex flex-row gap-6 items-center w-full lg:w-max"
             >
               <Image
                 src={item.icon}
                 alt={item.title}
-                width={63}
+                width={55}
                 height={52}
-                className="w-[44px] lg:w-[63px] lg:h-auto"
+                className="w-[44px] lg:w-[55px] lg:h-auto"
               />
               <p className="text-sm lg:text-xl">{item.title}</p>
             </li>

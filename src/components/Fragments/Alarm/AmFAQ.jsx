@@ -18,7 +18,7 @@ const AmFAQ = ({ translationKey }) => {
         <h2 className="text-[25px] lg:text-[40px] font-normal lg:font-medium font-raleway w-full text-center text-darkblue">
           {AlarmFAQ.title}
         </h2>
-        <p className="text-sm leading-[1.7] lg:leading-[1.3] font-normal text-darkblue lg:text-lg w-full lg:w-6/12 text-center mt-3  mb-9 lg:mb-8">
+        <p className="text-sm leading-[1.7] lg:leading-[1.5] text-darkblue lg:text-lg w-full lg:w-6/12 text-center mt-3  mb-9 lg:mb-8">
           {AlarmFAQ.desc}
         </p>
 

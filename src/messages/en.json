@@ -9,13 +9,13 @@
     "text": "25% Off for your first step in Smart Security Solutions",
     "btn": {
       "text": "View Details",
-      "href": "/#promotions",
+      "href": "/#res-prom",
       "target": "_self"
     }
   },
   "floatChat": {
-    "email": "mailto:leads@secom.co.id",
-    "whatsapp": "https://wa.me/628123456789"
+    "email": "csc@secom.co.id",
+    "whatsapp": "62817117326"
   },
 
   "langIdentifier": "English",
@@ -148,11 +148,11 @@
     }
   ],
   "FooterSocMed": {
-    "FtFacebook": "https://www.facebook.com/",
-    "FtLinkedin": "https://www.linkedin.com/",
-    "FtInstagram": "https://www.instagram.com/",
-    "FtYoutube": "https://www.youtube.com/",
-    "FtTiktok": "https://www.tiktok.com/"
+    "FtFacebook": "https://www.facebook.com/secomindonesia",
+    "FtLinkedin": "https://www.linkedin.com/company/secomindonesia/",
+    "FtInstagram": "https://www.instagram.com/secomindonesia/",
+    "FtYoutube": "https://www.youtube.com/@secom.indonesia",
+    "FtTiktok": "https://www.tiktok.com/@secomindonesia"
   },
   "FooterDropdown": [
     {
@@ -214,7 +214,7 @@
   ],
   "ReBanner": {
     "title": "Every Member of Your Family Deserves To Be Safe",
-    "photo": "/img/temp/h-banner-front.png",
+    "photo": "/img/temp/residential/front-min.png",
     "background": "/img/temp/h-banner-bg.jpg",
     "items": [
       {
@@ -250,6 +250,7 @@
   "ReSurvey": {
     "title": "How Safe Is My Home?",
     "desc": "3 quick questions to find out our solution",
+    "descResult": "Here are the results of your security survey",
     "survey": [
       {
         "question": "How often is your home left empty?",
@@ -268,12 +269,12 @@
         "question": "Do you live with children, elderly parents, or loved ones with special needs?",
         "options": [
           {
-            "text": "Yes",
-            "value": "yes"
+            "text": "A. Yes",
+            "value": "a"
           },
           {
-            "text": "No",
-            "value": "no"
+            "text": "B. No",
+            "value": "b"
           }
         ]
       },
@@ -327,9 +328,9 @@
       }
     ],
     "resultCombinations": {
-      "high": ["a-yes-a", "a-no-a", "b-yes-a"],
-      "moderate": ["a-yes-b", "a-no-b", "b-yes-b"],
-      "low": ["b-no-a", "b-no-b"]
+      "high": ["a-a-a", "a-b-a", "b-a-a"],
+      "moderate": ["a-a-b", "a-b-b", "b-a-b"],
+      "low": ["b-b-a", "b-b-b"]
     }
   },
   "ReAbout": {
@@ -531,11 +532,11 @@
 
   "SolBanner": {
     "title": ["Reliable Security for ", "Every Family"],
-    "background": "/img/temp/solutions/solutions-banner.jpg",
-    "backgroundMd": "/img/temp/solutions/solutions-banner.jpg"
+    "background": "/img/temp/solutions/sol-bg-2x.jpg",
+    "backgroundMd": "/img/temp/solutions/sol-bg-2x.jpg"
   },
   "SolOverview": {
-    "desc": "Your home is where life happens, where children grow, memories are made, and safety should never be in question. <br>At SECOM, we provide personalized security solutions</b> to help you protect your home with confidence and care.",
+    "desc": "<b>Your home is where life happens</b>, where children grow, memories are made, and safety should never be in question. <b>At SECOM, we provide personalized security solutions</b> to help you protect your home with confidence and care.",
     "items": [
       {
         "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
@@ -658,11 +659,11 @@
     ],
     "download": [
       {
-        "link": "#",
+        "link": "https://play.google.com/store/apps/details?id=jp.co.secom.secomalarm",
         "image": "/img/temp/googleplay.svg"
       },
       {
-        "link": "#",
+        "link": "https://apps.apple.com/id/app/secom-smart-security/id1522939072",
         "image": "/img/temp/appstore.svg"
       }
     ]
@@ -904,11 +905,11 @@
     ],
     "download": [
       {
-        "link": "#",
+        "link": "https://play.google.com/store/apps/details?id=jp.co.secom.secomalarm",
         "image": "/img/temp/googleplay.svg"
       },
       {
-        "link": "#",
+        "link": "https://apps.apple.com/id/app/secom-smart-security/id1522939072",
         "image": "/img/temp/appstore.svg"
       }
     ]

@@ -66,7 +66,7 @@ const MenuDesktop = () => {
           <ButtonPrimary
             href={HeaderButton.HeaderBtnHref}
             target={HeaderButton.HeaderBtnTarget}
-            className="!text-[12px] !px-6 !py-3.5 !bg-navyblue"
+            className="!text-[12px] !px-6 !py-3.5 !bg-navyblue hover:!bg-tosca"
           >
             {HeaderButton.HeaderBtnText}
           </ButtonPrimary>

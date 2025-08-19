@@ -48,7 +48,7 @@ const ResSolution = () => {
           >
             {/* Custom Arrow Buttons */}
             <div className="splide__arrows absolute w-full z-10 !top-[calc(100%+40px)] lg:!top-[50%] ">
-              <button className="splide__arrow splide__arrow--prev !border-white lg:!border-tosca !bg-transparent lg:!bg-white !border-[1px] !opacity-100 !rounded-none !w-[36px] !h-[36px] !left-[38%] lg:!left-[-18px]">
+              <button className="splide__arrow splide__arrow--prev !border-white lg:!border-white !bg-transparent lg:!bg-white !border-[1px] !opacity-100 !rounded-none !w-[36px] !h-[36px] !left-[38%] lg:!left-[-18px]">
                 <svg
                   width="22"
                   height="15"
@@ -64,7 +64,7 @@ const ResSolution = () => {
                   />
                 </svg>
               </button>
-              <button className="splide__arrow splide__arrow--next !border-white lg:!border-tosca !bg-transparent lg:!bg-white !border-[1px] !opacity-100 !rounded-none !w-[36px] !h-[36px] !right-[38%] lg:!right-[-18px]">
+              <button className="splide__arrow splide__arrow--next !border-white lg:!border-white !bg-transparent lg:!bg-white !border-[1px] !opacity-100 !rounded-none !w-[36px] !h-[36px] !right-[38%] lg:!right-[-18px]">
                 <svg
                   width="22"
                   height="15"

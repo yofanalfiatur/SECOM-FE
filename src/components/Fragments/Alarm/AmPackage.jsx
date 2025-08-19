@@ -72,7 +72,7 @@ const AmPackage = (props) => {
           initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="text-darkblue text-sm lg:text-lg lg:text-center lg:w-[40%] mt-3 mb-6 lg:mt-3 lg:mb-8"
+          className="text-darkblue text-sm lg:text-lg lg:text-center lg:w-[70%] mt-3 mb-6 lg:mt-3 lg:mb-8"
         >
           {PackageInfo.desc}
         </motion.p>
@@ -92,7 +92,7 @@ const AmPackage = (props) => {
               >
                 <button
                   onClick={() => handleTabClick(index)}
-                  className={`w-full pt-4 pb-3 lg:px-6 lg:pb-5 lg:pt-8 flex flex-col items-center cursor-pointer relative z-10 border-b-[4px] lg:border-b-[9px] hover:bg-[#00AAAD33] transition-all duration-200 ease ${
+                  className={`w-full pt-4 pb-3 lg:px-6 lg:pb-5 lg:pt-8 flex flex-col items-center cursor-pointer relative z-10 border-b-[4px] lg:border-b-[9px] hover:bg-[#00AAAD33] transition-all duration-200 ease mb-[-1px]  ${
                     activeTab === index
                       ? " border-[#00AAAD]"
                       : "bg-transparent border-transparent"
@@ -158,7 +158,7 @@ const AmPackage = (props) => {
                           {item.title}
                         </p>
                         <div className="flex flex-col lg:flex-row items-center mb-2 gap-3">
-                          <div className="flex flex-row items-start">
+                          <div className="flex flex-row items-start lg:w-[40%]">
                             <span className="text-xs lg:text-sm font-bold text-navyblue leading-[1] mt-1 mr-1">
                               IDR{" "}
                             </span>
@@ -190,7 +190,7 @@ const AmPackage = (props) => {
                                       fill="white"
                                     />
                                   </svg>
-                                  <span className="text-[10px] leading-[1] mb-1">
+                                  <span className="text-[10px] leading-[1] mb-1 text-center">
                                     {sub.text}
                                   </span>
                                   <div className="flex flex-row items-start">
@@ -230,7 +230,7 @@ const AmPackage = (props) => {
                   isOpenBuy ? "rounded-t-[5px]" : "rounded-[5px]"
                 }`}
               >
-                <span className="text-white font-raleway text-sm lg:text-xl lg:font-semibold tracking-[4px] uppercase">
+                <span className="text-white font-raleway text-sm lg:text-xl lg:font-normal tracking-[4px] uppercase">
                   {DifferncesInfo.title}
                 </span>
                 <svg
@@ -458,7 +458,7 @@ const AmPackage = (props) => {
                   isOpenRent ? "rounded-t-[5px]" : "rounded-[5px]"
                 }`}
               >
-                <span className="text-white font-raleway text-sm lg:text-xl lg:font-semibold tracking-[4px] uppercase">
+                <span className="text-white font-raleway text-sm lg:text-xl lg:font-normal tracking-[4px] uppercase">
                   {DifferncesInfo.title}
                 </span>
                 <svg

@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <>
       <header className="flex flex-col items-center justify-center max-w-screen z-[999] top-0 sticky bg-white shadow-sm lg:shadow-none lg:border-b-1 lg:border-[#00529C33] h-[60px] lg:h-[95px] header">
-        <div className="w-full max-w-screen flex flex-row items-center justify-between header__wrap">
+        <div className="w-full h-full max-w-screen flex flex-row items-center justify-between header__wrap">
           <div className="w-[220px] pl-[1rem] lg:pl-0 items-start lg:items-center flex flex-col justify-center header__logo lg:border-r-1 border-[#00529C33] h-full">
             <Link
               href="/"
@@ -49,7 +49,7 @@ const Header = () => {
           </div>
           {isDesktop ? (
             <>
-              <div className="w-[90%] hidden lg:flex flex-col justify-end header__wrap-right">
+              <div className="w-[90%] hidden lg:flex flex-col justify-end h-full header__wrap-right">
                 <HeaderTop />
                 <MenuDesktop />
               </div>

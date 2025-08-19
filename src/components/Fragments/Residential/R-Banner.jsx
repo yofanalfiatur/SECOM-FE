@@ -16,7 +16,7 @@ const ResBanner = () => {
     <>
       <section className="overflow-hidden res-banner">
         <div
-          className="relative w-full aspect-[200/115] bg-cover bg-bottom bg-no-repeat flex flex-col overflow-hidden res-banner__wrap"
+          className="relative w-full aspect-[320/326] sm:aspect-[200/115] bg-cover bg-bottom bg-no-repeat flex flex-col overflow-hidden res-banner__wrap"
           style={{
             backgroundImage: `url('${ReBanner.background}')`,
           }}
@@ -26,7 +26,7 @@ const ResBanner = () => {
               animate={{ y: "0%", opacity: 1 }}
               initial={{ y: "-100%", opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="mt-4 lg:mt-28 lg:w-[80%] leading-[1.2] font-medium text-white font-raleway text-[23px] lg:text-[50px] text-center "
+              className="mt-16 lg:mt-28 lg:w-[80%] leading-[1.2] font-medium text-white font-raleway text-[23px] lg:text-[50px] text-center "
             >
               {ReBanner.title}
             </motion.h1>
@@ -52,7 +52,7 @@ const ResBanner = () => {
                     className="flex flex-col res-banner__card overflow-hidden rounded-[0px]"
                   >
                     <div className="flex flex-col res-banner__card-wrap">
-                      <p className="text-navyblue py-4 px-4 rounded-[0px] overflow-hidden font-raleway leading-6 text-[16px]">
+                      <p className="text-navyblue py-4 px-4 rounded-[0px] overflow-hidden font-raleway leading-6 text-[16px] bg-white/70">
                         {item.text}
                       </p>
                     </div>
@@ -66,7 +66,7 @@ const ResBanner = () => {
             alt="Banner Image"
             width={1920}
             height={1374}
-            className="absolute w-full z-[2] lg:z-10 scale-[102.5%] bottom-[3px] sm:bottom-[5px] md:bottom-[8px] lg:bottom-[13px] translate-x[-50%] pointer-events-none"
+            className="absolute w-full z-[2] lg:z-10 scale-100 sm:scale-[102.5%] bottom-[0px] sm:bottom-[0px] md:bottom-[0px] lg:bottom-[0px] translate-x[-50%] pointer-events-none aspect-[320/326] sm:aspect-[200/115] object-cover sm:object-contain"
           />
         </div>
       </section>

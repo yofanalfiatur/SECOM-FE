@@ -8,7 +8,7 @@ const ResPromotion = () => {
   const RePromotion = t.raw("RePromotion");
 
   return (
-    <section className="pt-6 pb-13 lg:pt-24 lg:pb-24 res-prom">
+    <section className="pt-6 pb-13 lg:pt-24 lg:pb-24 res-prom" id="res-prom">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between">
         <div className="flex flex-col w-full lg:w-[55%]">
           <Image

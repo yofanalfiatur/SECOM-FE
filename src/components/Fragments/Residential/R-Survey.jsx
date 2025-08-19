@@ -68,7 +68,7 @@ const ResSurvey = () => {
     <section className="relative res-survey mt-[-50px] lg:mt-[-4rem] z-10">
       <div className="container mx-auto flex flex-col relative">
         <div className="flex flex-col relative w-full">
-          <div className="flex bg-white pt-[1.9rem] lg:pt-[2.3rem] pb-8 lg:pb-6 flex-col items-center justify-center relative z-[1] m-[3px] md:m-1 res-survey__wrap">
+          <div className="flex bg-white pt-[1.9rem] lg:pt-[2.3rem] flex-col items-center justify-center relative z-[1] m-[3px] md:m-1 res-survey__wrap">
             <motion.div
               animate={{ opacity: 1 }}
               initial={{ opacity: 0 }}
@@ -103,12 +103,12 @@ const ResSurvey = () => {
                 transition={{ duration: 0.3, delay: 0.4 }}
                 className="text-[13px] md:text-lg  lg:text-[25px] text-center font-normal text-navyblue font-raleway mt-1 lg:mt-0"
               >
-                {ReSurvey.desc}
+                {showResult ? ReSurvey.descResult : ReSurvey.desc}
               </motion.p>
             </div>
 
             {/* Survey */}
-            <div className="flex flex-col items-center justify-center lg:min-h-[440px] w-full px-4">
+            <div className="flex flex-col items-center justify-center lg:min-h-[440px] w-full px-4 pt-8 pb-10 lg:pt-6 lg:pb-9">
               {!showResult ? (
                 <div
                   className={`flex flex-col items-center w-full survey-question transition-all duration-300 ease-in-out ${
@@ -117,15 +117,15 @@ const ResSurvey = () => {
                       : "opacity-100 transform translate-y-0"
                   }`}
                 >
-                  <p className="text-navyblue text-[25px] md:text-3xl lg:text-6xl text-center w-[95%] lg:w-[70%] my-5 lg:my-10 leading-[1.2]">
+                  <p className="text-navyblue text-[25px] md:text-3xl lg:text-6xl text-center w-[95%] lg:w-[70%] mb-5 lg:mb-10 leading-[1.15]">
                     {ReSurvey.survey[currentQuestion]?.question}
                   </p>
-                  <div className="flex flex-col md:flex-row res-survey__wrap-btn gap-3 lg:gap-4">
+                  <div className="flex flex-col items-center md:items-start md:flex-row res-survey__wrap-btn gap-3 lg:gap-4">
                     {ReSurvey.survey[currentQuestion]?.options.map(
                       (answer, index) => (
                         <button
                           key={index}
-                          className="py-3 lg:py-4 px-6 bg-tosca text-sm lg:text-xl tracking-[4px] text-white rounded-[5px] hover:bg-tosca-dark transition-colors duration-300 text-center uppercase cursor-pointer hover:shadow-sm hover:bg-[#166368]"
+                          className="py-3 lg:py-4 pl-6 pr-[22px] bg-tosca text-sm lg:text-base tracking-[4px] text-white rounded-[5px] hover:bg-tosca-dark transition-colors duration-300 text-center uppercase cursor-pointer flex flex-col items-center justify-center w-full lg:w-max hover:bg-navyblue"
                           onClick={() => handleAnswer(answer.value)}
                           disabled={isTransitioning}
                         >
@@ -148,7 +148,7 @@ const ResSurvey = () => {
                     alt="Survey Result"
                     width={120}
                     height={120}
-                    className="mt-4 lg:mt-8 w-[80px] h-[80px] lg:w-[120px] lg:h-[120px]"
+                    className="w-[80px] h-[80px] lg:w-[120px] lg:h-[120px]"
                   />
                   <p className="text-navyblue font-normal text-[25px] lg:text-6xl text-center mb-2 lg:mb-4">
                     {getResult().title}
