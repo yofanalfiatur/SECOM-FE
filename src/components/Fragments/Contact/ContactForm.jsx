@@ -147,7 +147,7 @@ const ContactForm = () => {
               />
               <label
                 htmlFor="name"
-                className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[16px] lg:left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[16px] transition-all duration-200 ease-in-out ${
+                className={`text-navyblue text-[12px] lg:text-xl tracking-[3px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[16px] lg:left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[16px] transition-all duration-200 ease-in-out ${
                   formData.name
                     ? "!text-[8px] lg:!text-[10px] top-[15px] lg:top-[16px]"
                     : ""
@@ -191,7 +191,7 @@ const ContactForm = () => {
                 />
                 <label
                   htmlFor="email"
-                  className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[16px] lg:left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[16px] transition-all duration-200 ease-in-out ${
+                  className={`text-navyblue text-[12px] lg:text-xl tracking-[3px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[16px] lg:left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[16px] transition-all duration-200 ease-in-out ${
                     formData.email
                       ? "!text-[8px] lg:!text-[10px] top-[15px] lg:top-[16px]"
                       : ""
@@ -233,7 +233,7 @@ const ContactForm = () => {
                 />
                 <label
                   htmlFor="phone"
-                  className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[16px] lg:left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[16px] transition-all duration-200 ease-in-out ${
+                  className={`text-navyblue text-[12px] lg:text-xl tracking-[3px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[16px] lg:left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[16px] transition-all duration-200 ease-in-out ${
                     formData.phone
                       ? "!text-[8px] lg:!text-[10px] top-[15px] lg:top-[16px]"
                       : ""
@@ -283,7 +283,7 @@ const ContactForm = () => {
               </select>
               <label
                 htmlFor="location"
-                className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[16px] lg:left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[16px] transition-all duration-200 ease-in-out ${
+                className={`text-navyblue text-[12px] lg:text-xl tracking-[3px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[16px] lg:left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[16px] transition-all duration-200 ease-in-out ${
                   formData.location
                     ? "!text-[8px] lg:!text-[10px] top-[15px] lg:top-[16px]"
                     : ""
@@ -328,7 +328,7 @@ const ContactForm = () => {
                 />
                 <label
                   htmlFor="company"
-                  className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[16px] lg:left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[16px] transition-all duration-200 ease-in-out ${
+                  className={`text-navyblue text-[12px] lg:text-xl tracking-[3px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[16px] lg:left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[16px] transition-all duration-200 ease-in-out ${
                     formData.company
                       ? "!text-[8px] lg:!text-[10px] top-[15px] lg:top-[16px]"
                       : ""
@@ -377,7 +377,7 @@ const ContactForm = () => {
               </select>
               <label
                 htmlFor="howDidYouKnow"
-                className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[16px] lg:left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[16px] transition-all duration-200 ease-in-out ${
+                className={`text-navyblue text-[12px] lg:text-xl tracking-[3px] absolute top-1/2 transform -translate-y-1/2 pointer-events-none left-[16px] lg:left-[18px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:top-[15px] lg:peer-focus:top-[16px] transition-all duration-200 ease-in-out ${
                   formData.howDidYouKnow
                     ? "!text-[8px] lg:!text-[10px] top-[15px] lg:top-[16px]"
                     : ""
@@ -419,7 +419,7 @@ const ContactForm = () => {
               />
               <label
                 htmlFor="message"
-                className={`text-navyblue text-[12px] lg:text-xl tracking-[2px] absolute pt-[12px] lg:pt-[12px] pointer-events-none w-[98%] left-[3px] top-[3px] pl-[14px] lg:pl-[16px] pb-1 rounded-[5px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:pt-[12px] lg:peer-focus:pt-[12px] transition-all duration-200 ease-in-out bg-white ${
+                className={`text-navyblue text-[12px] lg:text-xl tracking-[3px] absolute pt-[12px] lg:pt-[12px] pointer-events-none w-[98%] left-[3px] top-[3px] pl-[14px] lg:pl-[16px] pb-1 rounded-[5px] peer-focus:text-[8px] lg:peer-focus:text-[10px] peer-focus:pt-[12px] lg:peer-focus:pt-[12px] transition-all duration-200 ease-in-out bg-white ${
                   formData.message
                     ? "!text-[8px] lg:!text-[10px] pt-[12px] lg:pt-[12px]"
                     : ""

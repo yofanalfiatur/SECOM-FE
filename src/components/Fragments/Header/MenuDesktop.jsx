@@ -47,20 +47,21 @@ const MenuDesktop = () => {
                   <div className="absolute z-[3] top-[-14px] left-[46%] -translate-x-1/2 -translate-y-1/2 flex">
                     <div className="absolute top-[-2px] w-[20px] h-[20px] border-t-[20px] border-navyblue border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent scale-[82%] rotate-180"></div>
                   </div>
-                  <ul className="bg-navyblue shadow-lg flex flex-col min-w-[210px] submenu__type py-2">
+                  <ul className="bg-navyblue shadow-lg flex flex-col min-w-[210px] w-max submenu__type py-2">
                     {subMenu.map(({ subMenuText, subMenuHref }, subIdx) => (
                       <li key={subIdx}>
                         <Link
                           href={subMenuHref}
-                          className="px-4 py-2 text-white font-raleway flex flex-row items-center gap-2 transition-all ease duration-200 hover:gap-4 text-sm"
+                          className="px-4 py-2 text-white font-raleway flex flex-row items-center transition-all ease duration-200 relative text-sm w-max"
                         >
-                          {subMenuText}
+                          <p className="flex w-max peer">{subMenuText}</p>
                           <svg
                             width="14"
                             height="10"
                             viewBox="0 0 14 10"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
+                            className="absolute top-1/2 right-[-5px] -translate-y-1/2 peer-hover:right-[-10px] transition-all ease duration-200"
                           >
                             <path
                               d="M1 5L13 5M13 5L8.5 9.5M13 5L8.5 0.5"

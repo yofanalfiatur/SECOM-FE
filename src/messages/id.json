@@ -24,7 +24,7 @@
       "href": "",
       "subMenu": [
         {
-          "subMenuText": "Business Overview",
+          "subMenuText": "SECOM Smart Security",
           "subMenuHref": "/alarm"
         }
       ]
@@ -37,6 +37,10 @@
       "subMenu": [
         {
           "subMenuText": "Residential Overview",
+          "subMenuHref": "/"
+        },
+        {
+          "subMenuText": "Solution",
           "subMenuHref": "/solutions"
         }
       ]
@@ -85,7 +89,7 @@
       "icon": "/img/menu-type-1.svg",
       "subMenu": [
         {
-          "subMenuText": "Business Overview",
+          "subMenuText": "SECOM Smart Security",
           "subMenuHref": "/alarm"
         }
       ]
@@ -97,6 +101,10 @@
       "subMenu": [
         {
           "subMenuText": "Residential Overview",
+          "subMenuHref": "/"
+        },
+        {
+          "subMenuText": "Solution",
           "subMenuHref": "/solutions"
         }
       ]
@@ -1191,7 +1199,7 @@
       "price": "1.400.000",
       "serviceFee": "",
       "desc": "Perlindungan maksimal dengan cakupan dalam dan luar rumah, deteksi pintar, serta sistem peringatan dini.",
-      "device": "9",
+      "device": "15",
       "image": "/img/temp/solutions/package-homepro.png",
       "isRent": true
     },
@@ -1232,7 +1240,7 @@
         }
       ],
       "desc": "Perlindungan total untuk rumah Anda mencakup dalam dan luar ruangan, deteksi canggih, dan pemantauan 24/7, kini bisa Anda miliki sepenuhnya.",
-      "device": "9",
+      "device": "15",
       "image": "/img/temp/solutions/package-homepro.png",
       "isRent": false
     }

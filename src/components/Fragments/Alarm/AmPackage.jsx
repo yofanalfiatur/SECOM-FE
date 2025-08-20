@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { act, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const AmPackage = (props) => {
   const {
@@ -21,9 +21,7 @@ const AmPackage = (props) => {
   const SoPackagesBuy = t.raw(packagesBuy);
   const SoPackagesRent = t.raw(packagesRent);
 
-  const locale = useTranslations();
-  const perMonth = locale === "en" ? "month" : "bulan";
-  const textPrice = locale === "en" ? "PRICE" : "HARGA";
+  const locale = useLocale();
 
   const isDesktop = useIsDesktop();
   const [activeTab, setActiveTab] = useState(0); // 0 = Rent, 1 = Buy
@@ -325,7 +323,7 @@ const AmPackage = (props) => {
                     <div className="grid grid-cols-12 bg-tosca">
                       <div className="py-4 lg:py-6 col-span-4 flex flex-col items-center justify-center">
                         <p className="text-white text-[13px] lg:text-xl font-bold uppercase">
-                          {textPrice}
+                          {locale === "en" ? "price" : "harga"}
                         </p>
                       </div>
 
@@ -388,7 +386,7 @@ const AmPackage = (props) => {
                           </p>
                           <p className="text-[13px] lg:text-lg text-darkblue">
                             {"/"}
-                            {perMonth}
+                            {locale === "en" ? "month" : "bulan"}
                           </p>
                         </div>
                         {/* Pro */}
@@ -406,7 +404,7 @@ const AmPackage = (props) => {
                           </p>
                           <p className="text-[13px] lg:text-lg text-darkblue">
                             {"/"}
-                            {perMonth}
+                            {locale === "en" ? "month" : "bulan"}
                           </p>
                         </div>
                       </div>
@@ -556,7 +554,7 @@ const AmPackage = (props) => {
                     <div className="grid grid-cols-12 bg-tosca">
                       <div className="py-4 lg:py-6 col-span-4 flex flex-col items-center justify-center">
                         <p className="text-white text-[13px] lg:text-xl font-bold uppercase">
-                          {textPrice}
+                          {locale === "en" ? "price" : "harga"}
                         </p>
                       </div>
 

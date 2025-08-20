@@ -26,7 +26,7 @@
       "href": "",
       "subMenu": [
         {
-          "subMenuText": "Business Overview",
+          "subMenuText": "SECOM Smart Security",
           "subMenuHref": "/alarm"
         }
       ]
@@ -39,6 +39,10 @@
       "subMenu": [
         {
           "subMenuText": "Residential Overview",
+          "subMenuHref": "/"
+        },
+        {
+          "subMenuText": "Solution",
           "subMenuHref": "/solutions"
         }
       ]
@@ -87,8 +91,8 @@
       "icon": "/img/menu-type-1.svg",
       "subMenu": [
         {
-          "subMenuText": "Solution",
-          "subMenuHref": "/solution"
+          "subMenuText": "SECOM Smart Security",
+          "subMenuHref": "/alarm"
         }
       ]
     },
@@ -98,8 +102,12 @@
       "icon": "/img/menu-type-2.svg",
       "subMenu": [
         {
-          "subMenuText": "Alarm",
-          "subMenuHref": "/alarm"
+          "subMenuText": "Residential Overview",
+          "subMenuHref": "/"
+        },
+        {
+          "subMenuText": "Solution",
+          "subMenuHref": "/solutions"
         }
       ]
     }
@@ -570,7 +578,7 @@
   "SolProtect": {
     "title": "Circle of Care for Your Safety",
     "desc": "",
-    "image": "/img/temp/solutions/Circle-of-Service-Sol.png",
+    "image": "/img/temp/solutions/protect-en-min.png",
     "imageMobile": "/img/temp/solutions/Circle-of-Service-Mobile-Sol.png",
     "items": [
       {
@@ -1201,7 +1209,7 @@
       "price": "1,400,000",
       "serviceFee": "",
       "desc": "Maximum protection with complete indoor and outdoor coverage, smart detection, and early warning systems.",
-      "device": "9",
+      "device": "15",
       "image": "/img/temp/solutions/package-homepro.png",
       "isRent": true
     },

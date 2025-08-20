@@ -48,7 +48,7 @@ const Footer = () => {
   }, [pathname]);
 
   return (
-    <footer className="max-w-screen items-center justify-center flex flex-col bg-[#00529c] footer overflow-hidden relative">
+    <footer className="max-w-screen items-center justify-center flex flex-col bg-[#00529c] footer overflow-hidden relative z-0">
       <div className="radial one"></div>
       <div className="radial two"></div>
       <div className="radial three"></div>
@@ -84,8 +84,6 @@ const Footer = () => {
               </div>
             </div>
           </section>
-
-          <PromotionDeals />
         </>
       )}
 

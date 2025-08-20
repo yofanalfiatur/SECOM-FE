@@ -1,3 +1,5 @@
+"use client";
+import PromotionDeals from "@/components/Elements/PromotionDeals";
 import ResAbout from "@/components/Fragments/Residential/R-About";
 import ResBanner from "@/components/Fragments/Residential/R-Banner";
 import ResPromotion from "@/components/Fragments/Residential/R-Promotion";
@@ -17,6 +19,7 @@ export default async function HomePage() {
       <ResTesti />
       <ResQuote />
       <ResPromotion />
+      <PromotionDeals />
     </>
   );
 }
