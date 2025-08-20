@@ -4,7 +4,6 @@
 
 import AmApps from "@/components/Fragments/Alarm/AmApps";
 import AmBanner from "@/components/Fragments/Alarm/AmBanner";
-import AmChoose from "@/components/Fragments/Alarm/AmChooseUs";
 import AmFAQ from "@/components/Fragments/Alarm/AmFAQ";
 import AmPackage from "@/components/Fragments/Alarm/AmPackage";
 import AmProducts from "@/components/Fragments/Alarm/AmProducts";
@@ -20,11 +19,6 @@ const AlarmLanding = () => {
       {/* business */}
       <AmBanner translationKey="AlarmBanner" />
       <AmOverview translationKey="AlarmOverview" />
-      {/* {isDesktop ? (
-        <AmReason translationKey="AlarmReason" />
-      ) : (
-        <AmChoose translationKey="AlarmReason" />
-      )} */}
       <AmReason translationKey="AlarmReason" />
       <AmProtect translationKey="AlarmProtect" />
       <AmProducts

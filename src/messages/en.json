@@ -521,7 +521,7 @@
     "backgroundMd": "/img/temp/solutions/sol-bg-2x.jpg"
   },
   "SolOverview": {
-    "desc": "<b>Your home is where life happens</b>, where children grow, memories are made, and safety should never be in question. <b>At SECOM, we provide personalized security solutions</b> to help you protect your home with confidence and care.",
+    "desc": "<b>Your home is where life happens</b>, where children grow, memories are made, and safety should never be in question. <b>At SECOM, we provide personalized security solutions</b> to help you <b>protect your home with confidence and care.</b>",
     "items": [
       {
         "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
@@ -767,7 +767,7 @@
     "backgroundMd": "/img/temp/alarm/alarm-banner-mobile.jpg"
   },
   "AlarmOverview": {
-    "desc": "Your business is where goals are achieved, teams grow, and futures are built. <b>At SECOM, we provide personalized security solutions</b> to help you protect what you've worked hard to build, with confidence, care, and cutting-edge technology.",
+    "desc": "<b>Your business is where goals are achieved</b>, teams grow, and futures are built. <b>At SECOM, we provide personalized security solutions</b> to help you protect what you've worked hard to build, with <b>confidence, care, and cutting-edge technology.</b>",
     "items": [
       {
         "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",

@@ -25,7 +25,7 @@ const AmOverview = ({ translationKey }) => {
       {
         root: null,
         threshold: 0,
-        rootMargin: "-40% 0px -20% 0px",
+        rootMargin: "-40% 0px -40% 0px",
       }
     );
 

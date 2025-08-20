@@ -519,7 +519,7 @@
   },
 
   "SolOverview": {
-    "desc": "<b>Rumah Anda adalah awal dari segalanya</b>. Tempat anak tumbuh, kenangan tercipta, dan rasa aman yang seharusnya tak pernah diragukan. <b>SECOM hadir dengan solusi keamanan</b> yang kami sesuaikan untuk setiap keluarga, agar Anda merasa tenang dan yakin, rumah selalu terlindungi.",
+    "desc": "<b>Rumah Anda adalah awal dari segalanya</b>. Tempat anak tumbuh, kenangan tercipta, dan rasa aman yang seharusnya tak pernah diragukan. <b>SECOM hadir dengan solusi keamanan</b> yang kami sesuaikan untuk setiap keluarga, agar Anda merasa tenang dan yakin, <b>rumah selalu terlindungi.</b>",
     "items": [
       {
         "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
@@ -757,7 +757,7 @@
     "backgroundMd": "/img/temp/alarm/alarm-banner-mobile.jpg"
   },
   "AlarmOverview": {
-    "desc": "Bisnis Anda adalah tempat di mana tujuan dicapai, tim berkembang, dan masa depan dibangun. <b>Di SECOM, kami menghadirkan solusi keamanan</b> yang disesuaikan untuk melindungi apa yang telah Anda bangun dengan keyakinan, kepedulian, dan teknologi terkini.",
+    "desc": "<b>Bisnis Anda adalah tempat di mana tujuan dicapai</b>, tim berkembang, dan masa depan dibangun. <b>Di SECOM, kami menghadirkan solusi keamanan</b> yang disesuaikan untuk melindungi apa yang telah Anda bangun dengan <b>keyakinan, kepedulian, dan teknologi terkini.</b>",
     "items": [
       {
         "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
