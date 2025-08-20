@@ -12,6 +12,8 @@ const AmReason = ({ translationKey }) => {
 
   const [current, setCurrent] = useState(0);
   const bgSplideRef = useRef(null);
+  const sectionRef = useRef(null);
+  const wheelLockRef = useRef(false);
   const total = AlarmReason.items.length;
 
   // Sinkronisasi dari Splide → Card stack
@@ -36,8 +38,56 @@ const AmReason = ({ translationKey }) => {
     }
   }, [current]);
 
+  // Pin section and navigate slides on wheel scroll (one-by-one), then release at ends
+  useEffect(() => {
+    const el = sectionRef.current;
+    const splideInst = bgSplideRef.current?.splide;
+    if (!el || !splideInst) return;
+
+    const onWheel = (e) => {
+      const rect = el.getBoundingClientRect();
+      // Only activate when the middle of the section is near the middle of the viewport
+      const sectionMid = rect.top + rect.height / 2;
+      const viewportMid = window.innerHeight / 2;
+      const tolerance = Math.min(120, window.innerHeight * 0.1); // ~10% of viewport or max 120px
+      const aligned = Math.abs(sectionMid - viewportMid) <= tolerance;
+      if (!aligned) return;
+
+      const delta = e.deltaY;
+      const atFirst = current === 0;
+      const atLast = current === total - 1;
+
+      // Trap scroll only when we can move within slides
+      if ((delta > 0 && !atLast) || (delta < 0 && !atFirst)) {
+        e.preventDefault();
+        if (wheelLockRef.current) return; // wait for slide to finish
+        wheelLockRef.current = true;
+
+        if (delta > 0 && !atLast) {
+          setCurrent((c) => Math.min(c + 1, total - 1));
+        } else if (delta < 0 && !atFirst) {
+          setCurrent((c) => Math.max(c - 1, 0));
+        }
+      }
+      // If at edges, allow normal page scrolling
+    };
+
+    const unlock = () => {
+      wheelLockRef.current = false;
+    };
+
+    window.addEventListener("wheel", onWheel, { passive: false });
+    splideInst.on("moved", unlock);
+
+    return () => {
+      window.removeEventListener("wheel", onWheel);
+      splideInst.off("moved", unlock);
+    };
+  }, [current, total]);
+
   return (
     <section
+      ref={sectionRef}
       className="flex flex-col relative am-reason"
       id="am-reason-section"
     >
@@ -50,9 +100,7 @@ const AmReason = ({ translationKey }) => {
             perPage: 1,
             arrows: false,
             pagination: false,
-            wheel: true,
-            wheelMinThreshold: 1,
-            releaseWheel: true,
+            wheel: false,
             direction: "ttb",
             height: "80vh",
           }}
