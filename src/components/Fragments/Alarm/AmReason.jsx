@@ -14,7 +14,13 @@ const AmReason = ({ translationKey }) => {
   const bgSplideRef = useRef(null);
   const sectionRef = useRef(null);
   const wheelLockRef = useRef(false);
+  const scrollAccumulator = useRef(0);
+  const isInSection = useRef(false);
+  const lastScrollTime = useRef(0);
   const total = AlarmReason.items.length;
+  
+  const SCROLL_THRESHOLD = 100; // Minimum scroll delta to trigger slide change
+  const SCROLL_RESET_DELAY = 150; // Reset accumulator after this delay (ms)
 
   // Sinkronisasi dari Splide → Card stack
   useEffect(() => {
@@ -38,50 +44,156 @@ const AmReason = ({ translationKey }) => {
     }
   }, [current]);
 
-  // Pin section and navigate slides on wheel scroll (one-by-one), then release at ends
+  // Enhanced scroll navigation with threshold and section snapping
   useEffect(() => {
     const el = sectionRef.current;
     const splideInst = bgSplideRef.current?.splide;
     if (!el || !splideInst) return;
 
-    const onWheel = (e) => {
+    const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
+    
+    const smoothScrollTo = (targetOffset, duration = 400) => {
+      const startTime = performance.now();
+      const startScrollTop = window.pageYOffset;
+      
+      const animateScroll = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easedProgress = easeOutQuart(progress);
+        
+        window.scrollTo(0, startScrollTop + targetOffset * easedProgress);
+        
+        if (progress < 1) {
+          requestAnimationFrame(animateScroll);
+        }
+      };
+      
+      requestAnimationFrame(animateScroll);
+    };
+
+    const snapToSection = () => {
       const rect = el.getBoundingClientRect();
-      // Only activate when the middle of the section is near the middle of the viewport
       const sectionMid = rect.top + rect.height / 2;
       const viewportMid = window.innerHeight / 2;
-      const tolerance = Math.min(120, window.innerHeight * 0.1); // ~10% of viewport or max 120px
+      const tolerance = Math.min(120, window.innerHeight * 0.1);
       const aligned = Math.abs(sectionMid - viewportMid) <= tolerance;
-      if (!aligned) return;
+      
+      if (!aligned && isInSection.current) {
+        // Snap section to center when leaving
+        const scrollOffset = sectionMid - viewportMid;
+        smoothScrollTo(scrollOffset);
+      }
+      
+      return aligned;
+    };
 
+    const onWheel = (e) => {
+      const rect = el.getBoundingClientRect();
+      const sectionMid = rect.top + rect.height / 2;
+      const viewportMid = window.innerHeight / 2;
+      const tolerance = Math.min(120, window.innerHeight * 0.1);
+      const aligned = Math.abs(sectionMid - viewportMid) <= tolerance;
+      
+      const currentTime = Date.now();
       const delta = e.deltaY;
       const atFirst = current === 0;
       const atLast = current === total - 1;
-
-      // Trap scroll only when we can move within slides
-      if ((delta > 0 && !atLast) || (delta < 0 && !atFirst)) {
-        e.preventDefault();
-        if (wheelLockRef.current) return; // wait for slide to finish
-        wheelLockRef.current = true;
-
-        if (delta > 0 && !atLast) {
-          setCurrent((c) => Math.min(c + 1, total - 1));
-        } else if (delta < 0 && !atFirst) {
-          setCurrent((c) => Math.max(c - 1, 0));
+      
+      // Reset accumulator if too much time has passed
+      if (currentTime - lastScrollTime.current > SCROLL_RESET_DELAY) {
+        scrollAccumulator.current = 0;
+      }
+      lastScrollTime.current = currentTime;
+      
+      // Check if we're at boundaries and trying to scroll beyond
+      const tryingToScrollUp = delta < 0;
+      const tryingToScrollDown = delta > 0;
+      const atTopBoundary = atFirst && tryingToScrollUp;
+      const atBottomBoundary = atLast && tryingToScrollDown;
+      
+      // If at boundaries, completely disable section control and allow normal scroll
+      if (aligned && (atTopBoundary || atBottomBoundary)) {
+        isInSection.current = false;
+        scrollAccumulator.current = 0;
+        // Don't prevent default - allow normal page scrolling
+        return;
+      }
+      
+      // If approaching section but not aligned and not at boundaries, snap to it first
+      if (!aligned && !isInSection.current && !atTopBoundary && !atBottomBoundary) {
+        const distanceToSection = Math.abs(sectionMid - viewportMid);
+        if (distanceToSection < window.innerHeight * 0.3) {
+          e.preventDefault();
+          const scrollOffset = sectionMid - viewportMid;
+          smoothScrollTo(scrollOffset);
+          isInSection.current = true;
+          return;
         }
       }
-      // If at edges, allow normal page scrolling
+      
+      // Section is aligned and we can navigate slides
+      if (aligned && !atTopBoundary && !atBottomBoundary) {
+        isInSection.current = true;
+        
+        // Check if we can navigate in the scroll direction
+        const canNavigateDown = delta > 0 && !atLast;
+        const canNavigateUp = delta < 0 && !atFirst;
+        
+        if (canNavigateDown || canNavigateUp) {
+          // We can navigate slides - trap the scroll
+          e.preventDefault();
+          if (wheelLockRef.current) return;
+          
+          // Accumulate scroll delta
+          scrollAccumulator.current += Math.abs(delta);
+          
+          // Only trigger slide change when threshold is reached
+          if (scrollAccumulator.current >= SCROLL_THRESHOLD) {
+            wheelLockRef.current = true;
+            scrollAccumulator.current = 0;
+            
+            if (canNavigateDown) {
+              setCurrent((c) => Math.min(c + 1, total - 1));
+            } else if (canNavigateUp) {
+              setCurrent((c) => Math.max(c - 1, 0));
+            }
+          }
+        }
+      } else if (!aligned) {
+        isInSection.current = false;
+        scrollAccumulator.current = 0;
+      }
     };
 
     const unlock = () => {
       wheelLockRef.current = false;
     };
 
+    // Handle scroll end to snap section if needed (but not at boundaries)
+    let scrollTimeout;
+    const onScroll = () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        if (!wheelLockRef.current) {
+          const atFirst = current === 0;
+          const atLast = current === total - 1;
+          // Only snap if not at boundaries
+          if (!atFirst && !atLast) {
+            snapToSection();
+          }
+        }
+      }, 150);
+    };
+
     window.addEventListener("wheel", onWheel, { passive: false });
+    window.addEventListener("scroll", onScroll, { passive: true });
     splideInst.on("moved", unlock);
 
     return () => {
       window.removeEventListener("wheel", onWheel);
+      window.removeEventListener("scroll", onScroll);
       splideInst.off("moved", unlock);
+      clearTimeout(scrollTimeout);
     };
   }, [current, total]);
 
