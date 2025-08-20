@@ -1194,6 +1194,142 @@
       "isRent": false
     }
   ],
+  "BusinessPackagesBuy": [
+    {
+      "device": "Control Panel",
+      "image": "/img/temp/products/Control-Panel.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "PIR Camera",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "Panic Button",
+      "image": "/img/temp/products/Panic-Button.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Door Control",
+      "image": "/img/temp/products/Door-Contact.png",
+      "basic": "3",
+      "pro": "3"
+    },
+    {
+      "device": "PIR Indoor",
+      "image": "/img/temp/products/PIR-Indoor.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Outdoor CCTV",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "basic": "-",
+      "pro": "-"
+    },
+    {
+      "device": "Indoor CCTV",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Siren",
+      "image": "/img/temp/products/Siren-Box.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "Remote Control",
+      "image": "/img/temp/products/Remote-Control.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "Smoke Detector",
+      "image": "/img/temp/products/Smoke-Detector.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Keypad",
+      "image": "/img/temp/products/Keypad.png",
+      "basic": "1",
+      "pro": "1"
+    }
+  ],
+  "BusinessPackagesRent": [
+    {
+      "device": "Control Panel",
+      "image": "/img/temp/products/Control-Panel.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "PIR Camera",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "Panic Button",
+      "image": "/img/temp/products/Panic-Button.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Door Control",
+      "image": "/img/temp/products/Door-Contact.png",
+      "basic": "3",
+      "pro": "3"
+    },
+    {
+      "device": "PIR Indoor",
+      "image": "/img/temp/products/PIR-Indoor.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Outdoor CCTV",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "basic": "-",
+      "pro": "-"
+    },
+    {
+      "device": "Indoor CCTV",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Siren",
+      "image": "/img/temp/products/Siren-Box.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "Remote Control",
+      "image": "/img/temp/products/Remote-Control.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "Smoke Detector",
+      "image": "/img/temp/products/Smoke-Detector.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Keypad",
+      "image": "/img/temp/products/Keypad.png",
+      "basic": "1",
+      "pro": "1"
+    }
+  ],
   "HomePackages": [
     {
       "title": "Home",
@@ -1255,7 +1391,6 @@
       "isRent": false
     }
   ],
-
   "HomePackagesBuy": [
     {
       "device": "Control Panel",

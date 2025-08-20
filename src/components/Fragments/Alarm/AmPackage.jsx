@@ -161,9 +161,9 @@ const AmPackage = (props) => {
                         </p>
                         <div className="flex flex-col lg:flex-row items-center mb-2 gap-3">
                           <div className="flex flex-row items-start lg:w-max">
-                            <span className="text-xs lg:text-sm font-bold text-navyblue leading-[1] mt-1 mr-1">
+                            {/* <span className="text-xs lg:text-sm font-bold text-navyblue leading-[1] mt-1 mr-1">
                               IDR{" "}
-                            </span>
+                            </span> */}
                             <p className="text-[25px] lg:text-[30px] font-bold text-navyblue leading-[1] w-full flex flex-row gap-1">
                               <span>Rp </span>
                               {item.price}
@@ -198,7 +198,7 @@ const AmPackage = (props) => {
                                   </span>
                                   <div className="flex flex-row items-start">
                                     <span className="text-[8px] leading-[1] mr-[1px] mt-[1px]">
-                                      IDR
+                                      Rp
                                     </span>
                                     <span className="text-sm leading-[1] font-bold">
                                       {sub.fee}

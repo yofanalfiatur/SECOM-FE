@@ -37,8 +37,8 @@ const AlarmLanding = () => {
         translationKey="AlarmPackage"
         differences="AlarmDifferences"
         listPackages="BusinessPackages"
-        packagesBuy="HomePackagesBuy"
-        packagesRent="HomePackagesRent"
+        packagesBuy="BusinessPackagesBuy"
+        packagesRent="BusinessPackagesRent"
       />
       <AmFAQ translationKey="AlarmFAQ" />
     </>

@@ -6,9 +6,9 @@ const PrivacyPolicy = () => {
   const locale = useLocale();
 
   return (
-    <section className="flex flex-col privacy-policy">
+    <section className="pt-8 pb-15 lg:pb-22 flex flex-col privacy-policy">
       {locale === "en" ? (
-        <div className="py-6 container flex flex-col mx-auto items-center">
+        <div className=" container flex flex-col mx-auto items-center">
           <div className="w-full lg:w-10/12 flex flex-col">
             <h1>Privacy Policy</h1>
             <p>Effective Date: 17 October 2024</p>
@@ -189,7 +189,7 @@ const PrivacyPolicy = () => {
           </div>
         </div>
       ) : (
-        <div className="py-6 container flex flex-col mx-auto items-center">
+        <div className=" container flex flex-col mx-auto items-center">
           <div className="w-full lg:w-10/12 flex flex-col">
             <h1>Kebijakan Privasi</h1>
             <p>Tanggal Berlaku: 17 Oktober 2024</p>

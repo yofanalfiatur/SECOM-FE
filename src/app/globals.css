@@ -311,6 +311,21 @@
     animation: animatedgradient 3s ease alternate infinite;
   }
 
+  .animated-bg2 {
+    background: linear-gradient(
+      to right,
+      #009fa7,
+      #004697,
+      #01f3ff,
+      #004697,
+      #009fa7,
+      #009fa7
+    );
+    /* background-clip: text; */
+    animation: shine 6s linear infinite;
+    background-size: 200% 200%;
+  }
+
   .triangle-shape {
     clip-path: polygon(0% 0%, 0% 100%, 100% 50%);
   }
@@ -653,17 +668,18 @@ main {
   height: calc(100% + var(--borderWidth) * 2);
   width: calc(100% + var(--borderWidth) * 2);
   background: linear-gradient(
-    60deg,
-    #009fa7 20%,
-    #004697 40%,
-    #009fa7 60%,
-    #004697 80%,
-    #009fa7 100%
+    to right,
+    #009fa7,
+    #004697,
+    #009fa7,
+    #004697,
+    #009fa7,
+    #009fa7
   );
+  animation: shine 5s linear infinite;
+  background-size: 200% 200%;
   border-radius: 5px;
   z-index: -1;
-  animation: animatedgradient 5s ease alternate infinite;
-  background-size: 300% 300%;
   opacity: 0;
   transition: all ease 0.3s;
 }
