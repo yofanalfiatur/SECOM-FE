@@ -581,7 +581,7 @@
   },
   "SolProtect": {
     "title": "Circle of Care for Your Safety",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    "desc": "",
     "image": "/img/temp/solutions/Circle-of-Service-Sol.png",
     "imageMobile": "/img/temp/solutions/Circle-of-Service-Mobile-Sol.png",
     "items": [
@@ -610,7 +610,7 @@
   },
   "SolCorners": {
     "title": "Every Room. Every Access. Fully Protected",
-    "desc": "Explore SECOM's full range of advanced security products designed to protect your business, assets, and people.",
+    "desc": "",
     "btnConsult": {
       "text": "CONSULT WITH US NOW",
       "href": "/#",
@@ -667,7 +667,7 @@
   },
   "SolTrusted": {
     "title": "Your Business Deserves More Than Basic Security",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    "desc": "",
     "logoSecom": "/img/secom-logo.png",
     "table": [
       {
@@ -827,7 +827,7 @@
   },
   "AlarmProtect": {
     "title": "Integrated Security for Your Business",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    "desc": "",
     "image": "/img/temp/alarm/Circle-of-Service.png",
     "imageMobile": "/img/temp/alarm/Circle-of-Service-Mobile.png",
     "items": [
@@ -856,7 +856,7 @@
   },
   "AlarmCorners": {
     "title": "Protect Every Corner of Your Business",
-    "desc": "Explore SECOM's full range of advanced security products designed to protect your business, assets, and people.",
+    "desc": "",
     "btnConsult": {
       "text": "CONSULT WITH US NOW",
       "href": "/#",
@@ -913,7 +913,7 @@
   },
   "AlarmTrusted": {
     "title": "Your Business Deserves More Than Basic Security",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    "desc": "",
     "logoSecom": "/img/secom-logo.png",
     "table": [
       {

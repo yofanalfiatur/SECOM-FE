@@ -579,7 +579,7 @@
   },
   "SolProtect": {
     "title": "Perlindungan Menyeluruh untuk Keamanan Anda",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    "desc": "",
     "image": "/img/temp/solutions/Circle-of-Service-Sol.png",
     "imageMobile": "/img/temp/solutions/Circle-of-Service-Mobile-Sol.png",
     "items": [
@@ -608,7 +608,7 @@
   },
   "SolCorners": {
     "title": "Setiap Ruangan. Setiap Akses. Terlindungi Sepenuhnya.",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse.",
+    "desc": "",
     "btnConsult": {
       "text": "CONSULT WITH US NOW",
       "href": "/#",
@@ -665,7 +665,7 @@
   },
   "SolTrusted": {
     "title": "Mengapa SECOM Lebih dari Kamera",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    "desc": "",
     "logoSecom": "/img/secom-logo.png",
     "table": [
       {
@@ -817,7 +817,7 @@
   },
   "AlarmProtect": {
     "title": "Keamanan Terintegrasi untuk Bisnis Anda",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    "desc": "",
     "image": "/img/temp/alarm/Circle-of-Service.png",
     "imageMobile": "/img/temp/alarm/Circle-of-Service-Mobile.png",
     "items": [
@@ -846,7 +846,7 @@
   },
   "AlarmCorners": {
     "title": "Lindungi Setiap Sudut Bisnis Anda ",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse.",
+    "desc": "",
     "btnConsult": {
       "text": "CONSULT WITH US NOW",
       "href": "/#",
@@ -903,7 +903,7 @@
   },
   "AlarmTrusted": {
     "title": "Bukan Sekadar Keamanan Biasa. Untuk Bisnis Anda.",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
+    "desc": "",
     "logoSecom": "/img/secom-logo.png",
     "table": [
       {
