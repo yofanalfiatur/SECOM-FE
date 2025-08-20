@@ -7,6 +7,7 @@ import { Link } from "@/i18n/navigation";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useTranslations } from "next-intl";
+import RadialCardHover from "@/components/Elements/RadialCardHover";
 
 const AmProducts = (props) => {
   const { translationKey, listProducts, typeProduct } = props;
@@ -40,8 +41,13 @@ const AmProducts = (props) => {
                     href={item.link}
                     className="flex flex-col h-full bg-[#012146] pt-12 pb-6 px-8 m-1 relative z-[1] group"
                   >
-                    <RadialGridCard className="group-hover:!rounded-full" />
-                    <div className="flex flex-col items-center">
+                    <RadialCardHover
+                      dotSize="1px"
+                      spacing="11px"
+                      opacity={0.2}
+                      hoverRadius={300}
+                    />
+                    <div className="flex flex-col items-center pointer-events-none relative z-10">
                       <p className="text-white text-[25px] font-raleway text-center">
                         {item.title}
                       </p>
@@ -53,7 +59,7 @@ const AmProducts = (props) => {
                         alt={item.title}
                         width={216}
                         height={216}
-                        className="group-hover:scale-110 transition-all duration-200 ease-in-out"
+                        className="transition-all duration-200 ease-in-out"
                       />
                     </div>
                   </Link>
@@ -85,12 +91,13 @@ const AmProducts = (props) => {
                 ).map((item, index) => (
                   <SplideSlide key={index}>
                     <div className="relative flex flex-col group min-h-[350px] bg-[#012146] pt-7 pb-6 px-8">
+                      <RadialGridCard />
+
                       <Link
                         href={item.link}
-                        className="flex flex-col h-full relative z-[1]"
+                        className="flex flex-col h-full relative z-[1] group"
                       >
-                        <RadialGridCard className="!rounded-full" />
-                        <div className="flex flex-col items-center relative z-[1]">
+                        <div className="flex flex-col items-center relative z-10">
                           <p className="text-white font-raleway text-center font-medium">
                             {item.title}
                           </p>

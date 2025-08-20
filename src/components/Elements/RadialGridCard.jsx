@@ -9,7 +9,7 @@ const RadialGridCard = ({
 }) => {
   return (
     <div
-      className={`absolute inset-0 w-full h-full rounded-[0%] overflow-hidden ${className}`}
+      className={`absolute inset-0 w-full h-full rounded-full overflow-hidden z-0 ${className}`}
     >
       <div
         className="absolute inset-0"
