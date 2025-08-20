@@ -713,8 +713,13 @@ main {
     background-position: 200% 200%;
   }
 }
-.am-value .am-value__desc b {
-  color: transparent;
+
+.am-value .am-value__desc b,
+.am-value .am-value__desc strong {
+  color: black; /* default dulu */
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  transition: color 0.3s ease;
   background: linear-gradient(
     to right,
     #01f3ff,
@@ -727,8 +732,11 @@ main {
   background-clip: text;
   animation: shine 5s linear infinite;
   background-size: 200% 200%;
-  font-weight: 500;
-  font-family: "Raleway", sans-serif;
+}
+
+.am-value .am-value__desc b.active,
+.am-value .am-value__desc strong.active {
+  color: transparent;
 }
 
 .am-trusted .custom-scrollbar::-webkit-scrollbar {

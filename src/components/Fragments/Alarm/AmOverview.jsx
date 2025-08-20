@@ -1,10 +1,40 @@
 "use client";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useEffect } from "react";
 
 const AmOverview = ({ translationKey }) => {
   const t = useTranslations();
   const AlarmOverview = t.raw(translationKey);
+
+  useEffect(() => {
+    const boldElements = document.querySelectorAll(
+      ".am-value__desc b, .am-value__desc strong"
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          } else {
+            entry.target.classList.remove("active");
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0,
+        rootMargin: "-40% 0px -20% 0px",
+      }
+    );
+
+    boldElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      boldElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
 
   return (
     <section className="pt-9 pb-14 lg:pt-24 lg:pb-24 am-value">
