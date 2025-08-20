@@ -1,3 +1,4 @@
+"use client";
 import FloatButton from "@/components/Elements/FloatButton";
 import { Link } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
