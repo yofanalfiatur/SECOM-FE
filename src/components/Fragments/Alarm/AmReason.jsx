@@ -5,8 +5,10 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import useIsDesktop from "@/components/Hooks/useIsDesktop";
 
 const AmReason = ({ translationKey }) => {
+  const isDesktop = useIsDesktop();
   const t = useTranslations();
   const AlarmReason = t.raw(translationKey);
 
@@ -18,9 +20,9 @@ const AmReason = ({ translationKey }) => {
   const isInSection = useRef(false);
   const lastScrollTime = useRef(0);
   const total = AlarmReason.items.length;
-  
-  const SCROLL_THRESHOLD = 100; // Minimum scroll delta to trigger slide change
-  const SCROLL_RESET_DELAY = 150; // Reset accumulator after this delay (ms)
+
+  const SCROLL_THRESHOLD = 100;
+  const SCROLL_RESET_DELAY = 150;
 
   // Sinkronisasi dari Splide → Card stack
   useEffect(() => {
@@ -44,30 +46,33 @@ const AmReason = ({ translationKey }) => {
     }
   }, [current]);
 
-  // Enhanced scroll navigation with threshold and section snapping
+  // Enhanced scroll navigation - HANYA untuk desktop
   useEffect(() => {
+    // Early return jika bukan desktop
+    if (!isDesktop) return;
+
     const el = sectionRef.current;
     const splideInst = bgSplideRef.current?.splide;
     if (!el || !splideInst) return;
 
     const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
-    
+
     const smoothScrollTo = (targetOffset, duration = 400) => {
       const startTime = performance.now();
       const startScrollTop = window.pageYOffset;
-      
+
       const animateScroll = (currentTime) => {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
         const easedProgress = easeOutQuart(progress);
-        
+
         window.scrollTo(0, startScrollTop + targetOffset * easedProgress);
-        
+
         if (progress < 1) {
           requestAnimationFrame(animateScroll);
         }
       };
-      
+
       requestAnimationFrame(animateScroll);
     };
 
@@ -77,13 +82,12 @@ const AmReason = ({ translationKey }) => {
       const viewportMid = window.innerHeight / 2;
       const tolerance = Math.min(120, window.innerHeight * 0.1);
       const aligned = Math.abs(sectionMid - viewportMid) <= tolerance;
-      
+
       if (!aligned && isInSection.current) {
-        // Snap section to center when leaving
         const scrollOffset = sectionMid - viewportMid;
         smoothScrollTo(scrollOffset);
       }
-      
+
       return aligned;
     };
 
@@ -93,34 +97,34 @@ const AmReason = ({ translationKey }) => {
       const viewportMid = window.innerHeight / 2;
       const tolerance = Math.min(120, window.innerHeight * 0.1);
       const aligned = Math.abs(sectionMid - viewportMid) <= tolerance;
-      
+
       const currentTime = Date.now();
       const delta = e.deltaY;
       const atFirst = current === 0;
       const atLast = current === total - 1;
-      
-      // Reset accumulator if too much time has passed
+
       if (currentTime - lastScrollTime.current > SCROLL_RESET_DELAY) {
         scrollAccumulator.current = 0;
       }
       lastScrollTime.current = currentTime;
-      
-      // Check if we're at boundaries and trying to scroll beyond
+
       const tryingToScrollUp = delta < 0;
       const tryingToScrollDown = delta > 0;
       const atTopBoundary = atFirst && tryingToScrollUp;
       const atBottomBoundary = atLast && tryingToScrollDown;
-      
-      // If at boundaries, completely disable section control and allow normal scroll
+
       if (aligned && (atTopBoundary || atBottomBoundary)) {
         isInSection.current = false;
         scrollAccumulator.current = 0;
-        // Don't prevent default - allow normal page scrolling
         return;
       }
-      
-      // If approaching section but not aligned and not at boundaries, snap to it first
-      if (!aligned && !isInSection.current && !atTopBoundary && !atBottomBoundary) {
+
+      if (
+        !aligned &&
+        !isInSection.current &&
+        !atTopBoundary &&
+        !atBottomBoundary
+      ) {
         const distanceToSection = Math.abs(sectionMid - viewportMid);
         if (distanceToSection < window.innerHeight * 0.3) {
           e.preventDefault();
@@ -130,28 +134,23 @@ const AmReason = ({ translationKey }) => {
           return;
         }
       }
-      
-      // Section is aligned and we can navigate slides
+
       if (aligned && !atTopBoundary && !atBottomBoundary) {
         isInSection.current = true;
-        
-        // Check if we can navigate in the scroll direction
+
         const canNavigateDown = delta > 0 && !atLast;
         const canNavigateUp = delta < 0 && !atFirst;
-        
+
         if (canNavigateDown || canNavigateUp) {
-          // We can navigate slides - trap the scroll
           e.preventDefault();
           if (wheelLockRef.current) return;
-          
-          // Accumulate scroll delta
+
           scrollAccumulator.current += Math.abs(delta);
-          
-          // Only trigger slide change when threshold is reached
+
           if (scrollAccumulator.current >= SCROLL_THRESHOLD) {
             wheelLockRef.current = true;
             scrollAccumulator.current = 0;
-            
+
             if (canNavigateDown) {
               setCurrent((c) => Math.min(c + 1, total - 1));
             } else if (canNavigateUp) {
@@ -169,7 +168,6 @@ const AmReason = ({ translationKey }) => {
       wheelLockRef.current = false;
     };
 
-    // Handle scroll end to snap section if needed (but not at boundaries)
     let scrollTimeout;
     const onScroll = () => {
       clearTimeout(scrollTimeout);
@@ -177,7 +175,6 @@ const AmReason = ({ translationKey }) => {
         if (!wheelLockRef.current) {
           const atFirst = current === 0;
           const atLast = current === total - 1;
-          // Only snap if not at boundaries
           if (!atFirst && !atLast) {
             snapToSection();
           }
@@ -195,7 +192,7 @@ const AmReason = ({ translationKey }) => {
       splideInst.off("moved", unlock);
       clearTimeout(scrollTimeout);
     };
-  }, [current, total]);
+  }, [current, total, isDesktop]); // Tambahkan isDesktop sebagai dependency
 
   return (
     <section
@@ -213,8 +210,18 @@ const AmReason = ({ translationKey }) => {
             arrows: false,
             pagination: false,
             wheel: false,
-            direction: "ttb",
-            height: "80vh",
+            direction: isDesktop ? "ttb" : "ltr", // Desktop: vertical, Mobile: horizontal
+            height: isDesktop ? "80vh" : "auto", // Auto height untuk mobile
+            // Tambah opsi khusus mobile untuk swipe
+            ...(isDesktop
+              ? {}
+              : {
+                  drag: true, // Enable drag/swipe di mobile
+                  swipe: true, // Enable swipe gesture
+                  touchMove: true, // Enable touch move
+                  flickPower: 600, // Sensitivitas flick
+                  flickMaxPages: 1, // Max pages per flick
+                }),
           }}
           className="w-full h-full"
         >
@@ -237,7 +244,7 @@ const AmReason = ({ translationKey }) => {
       </div>
 
       {/* Card stack float */}
-      <div className="absolute bottom-0 lg:bottom-[unset] w-full h-[380px] sm:h-[300px] lg:h-full pointer-events-none z-1">
+      <div className="mt-[-40px] lg:mt-[unset] lg:absolute bottom-0 lg:bottom-[unset] w-full h-[315px] sm:h-[300px] lg:h-full lg:pointer-events-none z-1">
         <div className="container h-full flex flex-row justify-end items-center mx-auto">
           <div className="w-full lg:w-5/12 h-full lg:h-[60%] relative flex flex-col justify-center items-start">
             <AnimatePresence initial={false} mode="popLayout">
@@ -248,7 +255,7 @@ const AmReason = ({ translationKey }) => {
                 return (
                   <motion.div
                     key={index}
-                    className="absolute w-full  h-full"
+                    className="absolute w-full h-full"
                     initial={{ opacity: 0, scale: 0.95, y: 20 }}
                     animate={{
                       opacity: 1,
@@ -280,7 +287,11 @@ const AmReason = ({ translationKey }) => {
             </AnimatePresence>
 
             {/* Pagination dots */}
-            <div className="flex flex-col gap-1 mt-6 absolute top-1/2 right-5 transform -translate-y-1/2 z-10 pointer-events-auto">
+            <div
+              className={`flex gap-1 mt-6 absolute z-10 pointer-events-auto flex-col top-1/2 right-5 transform -translate-y-1/2 ${
+                isDesktop ? "" : ""
+              }`}
+            >
               {AlarmReason.items.map((_, index) => (
                 <button
                   key={index}

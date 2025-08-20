@@ -17,7 +17,10 @@ const AmProducts = (props) => {
   const AlarmProduct = t.raw(translationKey);
   const TypeProduct = typeProduct;
   return (
-    <section className="pt-10 pb-12 lg:pt-20 lg:pb-26 bg-navyblue am-prod">
+    <section
+      className="pt-10 pb-12 lg:pt-20 lg:pb-26 bg-navyblue am-prod"
+      id="am-prod"
+    >
       <div className="container mx-auto flex flex-col items-center">
         <h2 className="text-[25px] lg:text-4xl font-raleway font-medium text-white text-center">
           {AlarmProduct.title}
@@ -39,6 +42,10 @@ const AmProducts = (props) => {
                 >
                   <Link
                     href={item.link}
+                    //temp
+                    onClick={(e) => {
+                      e.preventDefault();
+                    }}
                     className="flex flex-col h-full bg-[#012146] pt-12 pb-6 px-8 m-1 relative z-[1] group"
                   >
                     <RadialCardHover
@@ -95,6 +102,10 @@ const AmProducts = (props) => {
 
                       <Link
                         href={item.link}
+                        //temp
+                        onClick={(e) => {
+                          e.preventDefault();
+                        }}
                         className="flex flex-col h-full relative z-[1] group"
                       >
                         <div className="flex flex-col items-center relative z-10">

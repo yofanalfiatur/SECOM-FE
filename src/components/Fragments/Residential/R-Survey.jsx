@@ -44,8 +44,6 @@ const ResSurvey = () => {
             return ReSurvey.result[0];
           case "moderate":
             return ReSurvey.result[1];
-          case "low":
-            return ReSurvey.result[2];
           default:
             return ReSurvey.result[1]; // Default to moderate
         }

@@ -26,7 +26,7 @@
       "href": "",
       "subMenu": [
         {
-          "subMenuText": "Alarm",
+          "subMenuText": "Business Overview",
           "subMenuHref": "/alarm"
         }
       ]
@@ -34,11 +34,11 @@
     {
       "icon": "/img/menu-type-2.svg",
       "text": "Residential",
-      "href": "/",
+      "href": "",
 
       "subMenu": [
         {
-          "subMenuText": "Solutions",
+          "subMenuText": "Residential Overview",
           "subMenuHref": "/solutions"
         }
       ]
@@ -214,14 +214,14 @@
   ],
   "ReBanner": {
     "title": "Every Member of Your Family Deserves To Be Safe",
-    "photo": "/img/temp/residential/front-min.png",
+    "photo": "/img/temp/residential/front-upscale-min.png",
     "background": "/img/temp/h-banner-bg.jpg",
     "items": [
       {
         "text": "If I leave food too long in the microwave, the smoke detector will alert us.",
         "top": "45%",
-        "left": "10%",
-        "maxWidth": "340px",
+        "left": "10.5%",
+        "maxWidth": "345px",
         "icon": "/img/temp/h-banner-ibu.png"
       },
       {
@@ -311,26 +311,14 @@
         "desc": "Your home is not fully protected. Find out what it's missing and how SECOM can help.",
         "btn": {
           "text": "Discover Now",
-          "href": "/#packages",
-          "target": "_self"
-        }
-      },
-      {
-        "icon": "/img/survey-l-risk.png",
-        "title": "LOW RISK",
-        "subtitle": "Lorem Ipsum",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Magna pars studiorum, prodita quaerimus. dolore magna aliqua. Magna pars studiorum, prodita quaerimus.",
-        "btn": {
-          "text": "Discover Now",
-          "href": "/#packages",
+          "href": "/solutions/#am-prod",
           "target": "_self"
         }
       }
     ],
     "resultCombinations": {
       "high": ["a-a-a", "a-b-a", "b-a-a"],
-      "moderate": ["a-a-b", "a-b-b", "b-a-b"],
-      "low": ["b-b-a", "b-b-b"]
+      "moderate": ["a-a-b", "a-b-b", "b-a-b", "b-b-a", "b-b-b"]
     }
   },
   "ReAbout": {
@@ -599,8 +587,8 @@
       }
     ],
     "btnCTA": {
-      "text": "CONSULT NOW",
-      "href": "/#",
+      "text": "CONSULT WITH US NOW",
+      "href": "/contact",
       "target": "_self"
     }
   },
@@ -724,15 +712,15 @@
   },
   "SolPackage": {
     "title": "Flexible Security Packages for Every Need",
-    "desc": "Every family has different needs, that’s why we offer flexibility, easy-to-choose security packages. Protect your home with smart solutions made for real life.",
+    "desc": "Every family has different needs, that's why we offer flexibility, easy-to-choose security packages. Protect your home with smart solutions made for real life.",
     "tabs": [
       {
         "title": "RENT",
-        "desc": "Qui ipsorum lingua Celtae,"
+        "desc": ""
       },
       {
         "title": "Buy",
-        "desc": "Qui ipsorum lingua Celtae,"
+        "desc": ""
       }
     ]
   },
@@ -845,8 +833,8 @@
       }
     ],
     "btnCTA": {
-      "text": "CONSULT NOW",
-      "href": "/#",
+      "text": "CONSULT WITH US NOW",
+      "href": "/contact",
       "target": "_self"
     }
   },

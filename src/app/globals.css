@@ -854,3 +854,109 @@ main {
   background-color: #00aaad;
   transform: unset;
 }
+
+/* PRIVACY POLICY STYLING */
+.privacy-policy {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.7;
+  color: #222;
+}
+
+/* Headings */
+.privacy-policy h1,
+.privacy-policy h2,
+.privacy-policy h3,
+.privacy-policy h4,
+.privacy-policy h5 {
+  color: #00529c;
+  font-weight: 600;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+/* Heading sizes (desktop default) */
+.privacy-policy h1 {
+  font-size: 35px;
+}
+.privacy-policy h2 {
+  font-size: 28px;
+}
+.privacy-policy h3 {
+  font-size: 22px;
+}
+.privacy-policy h4 {
+  font-size: 18px;
+}
+.privacy-policy h5 {
+  font-size: 16px;
+}
+
+/* Responsive < 1024px */
+@media (max-width: 1024px) {
+  .privacy-policy h1 {
+    font-size: 25px;
+  }
+  .privacy-policy h2 {
+    font-size: 22px;
+  }
+  .privacy-policy h3 {
+    font-size: 18px;
+  }
+  .privacy-policy h4 {
+    font-size: 16px;
+  }
+  .privacy-policy h5 {
+    font-size: 14px;
+  }
+}
+
+/* Paragraphs */
+.privacy-policy p {
+  margin-bottom: 1rem;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Links */
+.privacy-policy a {
+  color: #00529c;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.privacy-policy a:hover {
+  color: #00a2ff;
+}
+
+/* Lists */
+.privacy-policy ul {
+  list-style: disc;
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding-left: 1rem;
+}
+.privacy-policy ul li {
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 0.5rem;
+  color: #444;
+}
+
+/* Nested lists */
+.privacy-policy ul ul {
+  list-style: circle;
+  margin-top: 0.5rem;
+}
+.privacy-policy ul ul li {
+  color: #555;
+}
+
+/* Optional: Ordered lists (if used later) */
+.privacy-policy ol {
+  list-style: decimal;
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding-left: 1rem;
+}
+.privacy-policy ol li {
+  margin-bottom: 0.6rem;
+  color: #444;
+}

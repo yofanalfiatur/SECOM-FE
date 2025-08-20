@@ -24,7 +24,7 @@
       "href": "",
       "subMenu": [
         {
-          "subMenuText": "Alarm",
+          "subMenuText": "Business Overview",
           "subMenuHref": "/alarm"
         }
       ]
@@ -32,11 +32,11 @@
     {
       "icon": "/img/menu-type-2.svg",
       "text": "Residential",
-      "href": "/",
+      "href": "",
 
       "subMenu": [
         {
-          "subMenuText": "Solutions",
+          "subMenuText": "Residential Overview",
           "subMenuHref": "/solutions"
         }
       ]
@@ -85,25 +85,25 @@
       "icon": "/img/menu-type-1.svg",
       "subMenu": [
         {
-          "subMenuText": "Solutions",
-          "subMenuHref": "/solutions"
+          "subMenuText": "Business Overview",
+          "subMenuHref": "/alarm"
         }
       ]
     },
     {
       "text": "Residential",
-      "href": "/",
+      "href": "/#",
       "icon": "/img/menu-type-2.svg",
       "subMenu": [
         {
-          "subMenuText": "Alarm",
-          "subMenuHref": "/alarm"
+          "subMenuText": "Residential Overview",
+          "subMenuHref": "/solutions"
         }
       ]
     }
   ],
   "HeaderButton": {
-    "HeaderBtnText": "Free Consultation",
+    "HeaderBtnText": "Konsultasi Gratis",
     "HeaderBtnHref": "/contact",
     "HeaderBtnTarget": "_self"
   },
@@ -212,7 +212,7 @@
   ],
   "ReBanner": {
     "title": "Semua Anggota Keluarga Anda, Layak Merasa Aman",
-    "photo": "/img/temp/residential/front-min.png",
+    "photo": "/img/temp/residential/front-upscale-min.png",
     "background": "/img/temp/h-banner-bg.jpg",
     "items": [
       {
@@ -299,7 +299,7 @@
         "desc": "Perlindungan saat ini belum cukup. Temukan sistem keamanan yang memberi rasa aman bagi keluarga Anda.",
         "btn": {
           "text": "Temukan Solusinya",
-          "href": "/#packages",
+          "href": "/solutions/#am-prod",
           "target": "_self"
         }
       },
@@ -310,26 +310,14 @@
         "desc": "Keamanan rumah Anda belum maksimal. Cari tahu apa yang kurang dan bagaimana SECOM bisa membantu.",
         "btn": {
           "text": "Temukan Solusinya",
-          "href": "/#packages",
-          "target": "_self"
-        }
-      },
-      {
-        "icon": "/img/survey-l-risk.png",
-        "title": "RISIKO KECIL",
-        "subtitle": "Lorem Ipsum",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Magna pars studiorum, prodita quaerimus. dolore magna aliqua. Magna pars studiorum, prodita quaerimus.",
-        "btn": {
-          "text": "Temukan Solusinya",
-          "href": "/#packages",
+          "href": "/solutions/#am-prod",
           "target": "_self"
         }
       }
     ],
     "resultCombinations": {
       "high": ["a-a-a", "a-b-a", "b-a-a"],
-      "moderate": ["a-a-b", "a-b-b", "b-a-b"],
-      "low": ["b-b-a", "b-b-b"]
+      "moderate": ["a-a-b", "a-b-b", "b-a-b", "b-b-a", "b-b-b"]
     }
   },
   "ReAbout": {
@@ -598,7 +586,7 @@
     ],
     "btnCTA": {
       "text": "Konsultasi Sekarang",
-      "href": "/#",
+      "href": "/contact",
       "target": "_self"
     }
   },
@@ -611,7 +599,7 @@
     "desc": "",
     "btnConsult": {
       "text": "CONSULT WITH US NOW",
-      "href": "/#",
+      "href": "/contact",
       "target": "_self"
     },
     "image": "/img/temp/residential/protect-bg.png"
@@ -726,11 +714,11 @@
     "tabs": [
       {
         "title": "RENT",
-        "desc": "Qui ipsorum lingua Celtae,"
+        "desc": ""
       },
       {
         "title": "Buy",
-        "desc": "Qui ipsorum lingua Celtae,"
+        "desc": ""
       }
     ]
   },
@@ -836,7 +824,7 @@
     ],
     "btnCTA": {
       "text": "Konsultasi Sekarang",
-      "href": "/#",
+      "href": "/contact",
       "target": "_self"
     }
   },
@@ -848,8 +836,8 @@
     "title": "Lindungi Setiap Sudut Bisnis Anda ",
     "desc": "",
     "btnConsult": {
-      "text": "CONSULT WITH US NOW",
-      "href": "/#",
+      "text": "Konsultasi Sekarang",
+      "href": "/contact",
       "target": "_self"
     },
     "image": "/img/temp/alarm/Product-Placement-Business.png"
@@ -1214,11 +1202,11 @@
       "serviceFee": [
         {
           "text": "Biaya Layanan Pemantauan 24/7",
-          "fee": "346,000"
+          "fee": "346.000"
         },
         {
           "text": "Biaya Layanan Pemantauan 24/7 + Respon Fisik",
-          "fee": "568,000"
+          "fee": "568.000"
         }
       ],
       "desc": "Solusi keamanan yang pintar dan andal dengan perlindungan esensial serta pemantauan 24/7, kini tersedia untuk dimiliki.",
@@ -1230,17 +1218,17 @@
       "title": "Home PRO",
       "price": "28.948.000",
       "feeService": {
-        "monitorOnly": "465,000",
-        "monitorDispatch": "687,000"
+        "monitorOnly": "465.000",
+        "monitorDispatch": "687.000"
       },
       "serviceFee": [
         {
           "text": "Biaya Layanan Pemantauan 24/7",
-          "fee": "375,000"
+          "fee": "375.000"
         },
         {
           "text": "Biaya Layanan Pemantauan 24/7 + Respon Fisik",
-          "fee": "597,000"
+          "fee": "597.000"
         }
       ],
       "desc": "Perlindungan total untuk rumah Anda mencakup dalam dan luar ruangan, deteksi canggih, dan pemantauan 24/7, kini bisa Anda miliki sepenuhnya.",

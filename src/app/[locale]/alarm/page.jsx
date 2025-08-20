@@ -20,7 +20,11 @@ const AlarmLanding = () => {
       {/* business */}
       <AmBanner translationKey="AlarmBanner" />
       <AmOverview translationKey="AlarmOverview" />
-      {/* <AmChoose translationKey="AlarmReason" /> */}
+      {/* {isDesktop ? (
+        <AmReason translationKey="AlarmReason" />
+      ) : (
+        <AmChoose translationKey="AlarmReason" />
+      )} */}
       <AmReason translationKey="AlarmReason" />
       <AmProtect translationKey="AlarmProtect" />
       <AmProducts

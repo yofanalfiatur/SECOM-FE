@@ -16,6 +16,10 @@ const MenuDesktop = () => {
             <li className="relative header__type__item group" key={index}>
               <Link
                 href={`${href}`}
+                // temp
+                onClick={(e) => {
+                  e.preventDefault();
+                }}
                 className=" flex flex-row py-5 gap-2 items-center justify-center relative header__type__link"
               >
                 <Image src={icon} alt="Business" width={20} height={20} />
@@ -43,14 +47,28 @@ const MenuDesktop = () => {
                   <div className="absolute z-[3] top-[-14px] left-[46%] -translate-x-1/2 -translate-y-1/2 flex">
                     <div className="absolute top-[-2px] w-[20px] h-[20px] border-t-[20px] border-navyblue border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent scale-[82%] rotate-180"></div>
                   </div>
-                  <ul className="bg-navyblue shadow-lg flex flex-col min-w-[180px] submenu__type">
+                  <ul className="bg-navyblue shadow-lg flex flex-col min-w-[210px] submenu__type py-2">
                     {subMenu.map(({ subMenuText, subMenuHref }, subIdx) => (
                       <li key={subIdx}>
                         <Link
                           href={subMenuHref}
-                          className="block px-4 py-2 text-white font-raleway"
+                          className="px-4 py-2 text-white font-raleway flex flex-row items-center gap-2 transition-all ease duration-200 hover:gap-4 text-sm"
                         >
                           {subMenuText}
+                          <svg
+                            width="14"
+                            height="10"
+                            viewBox="0 0 14 10"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1 5L13 5M13 5L8.5 9.5M13 5L8.5 0.5"
+                              stroke="white"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
                         </Link>
                       </li>
                     ))}
