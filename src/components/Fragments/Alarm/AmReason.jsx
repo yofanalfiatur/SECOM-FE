@@ -244,7 +244,7 @@ const AmReason = ({ translationKey }) => {
       </div>
 
       {/* Card stack float */}
-      <div className="mt-[-40px] lg:mt-[unset] lg:absolute bottom-0 lg:bottom-[unset] w-full h-[315px] sm:h-[300px] lg:h-full lg:pointer-events-none z-1">
+      <div className="mt-[-40px] lg:mt-[unset] lg:absolute bottom-0 lg:bottom-[unset] w-full h-[315px] sm:h-[300px] lg:h-full pointer-events-auto lg:pointer-events-none z-1">
         <div className="container h-full flex flex-row justify-end items-center mx-auto">
           <div className="w-full lg:w-5/12 h-full lg:h-[60%] relative flex flex-col justify-center items-start">
             <AnimatePresence initial={false} mode="popLayout">
@@ -265,19 +265,43 @@ const AmReason = ({ translationKey }) => {
                     }}
                     exit={{ opacity: 0, scale: 0.95, y: -20 }}
                     transition={{ duration: 0.4 }}
+                    // ✅ Tambahan: enable swipe di mobile
+                    drag={!isDesktop ? "x" : false}
+                    dragConstraints={{ left: 0, right: 0 }}
+                    onDragEnd={(e, info) => {
+                      if (!isDesktop) {
+                        if (info.offset.x < -50 && current < total - 1) {
+                          setCurrent((c) => Math.min(c + 1, total - 1));
+                        } else if (info.offset.x > 50 && current > 0) {
+                          setCurrent((c) => Math.max(c - 1, 0));
+                        }
+                      }
+                    }}
                   >
                     <div
-                      className={`py-10 pl-7 pr-12 lg:py-8 lg:pl-10 lg:pr-18 flex flex-col justify-center h-full ${
+                      className={`py-10 pl-7 pr-12 lg:py-8 lg:pl-10 lg:pr-18 flex flex-col justify-center h-full transition-all ease duration-200 ${
                         position === 0 ? "bg-navyblue" : "bg-tosca"
                       }`}
                     >
-                      <p className="text-[#ffffff99] uppercase text-sm lg:text-lg tracking-[2px] font-raleway mb-3 lg:mb-4">
+                      <p
+                        className={`text-[#ffffff99] uppercase text-sm lg:text-lg tracking-[2px] font-raleway mb-3 lg:mb-4 transition-all ease duration-200 ${
+                          position === 0 ? "opacity-100" : "opacity-0"
+                        }`}
+                      >
                         {AlarmReason.title}
                       </p>
-                      <p className="text-[25px] lg:text-[45px] font-raleway font-normal text-white lg:leading-[1.1]">
+                      <p
+                        className={`text-[25px] lg:text-[45px] font-raleway font-normal text-white lg:leading-[1.1] transition-all ease duration-200 ${
+                          position === 0 ? "opacity-100" : "opacity-0"
+                        }`}
+                      >
                         {item.title}
                       </p>
-                      <p className="leading-[1.7] lg:leading-[1.5] lg:text-lg text-white opacity-80 mt-3">
+                      <p
+                        className={`leading-[1.7] lg:leading-[1.5] lg:text-lg text-white opacity-80 mt-3 transition-all ease duration-200 ${
+                          position === 0 ? "opacity-100" : "opacity-0"
+                        }`}
+                      >
                         {item.desc}
                       </p>
                     </div>

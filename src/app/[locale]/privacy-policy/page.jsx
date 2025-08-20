@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 import React from "react";
 
@@ -8,1087 +9,370 @@ const PrivacyPolicy = () => {
     <section className="flex flex-col privacy-policy">
       {locale === "en" ? (
         <div className="py-6 container flex flex-col mx-auto items-center">
-          <div className="w-full lg:w-10/12">
+          <div className="w-full lg:w-10/12 flex flex-col">
             <h1>Privacy Policy</h1>
-            <p>Last updated: August 20, 2025</p>
+            <p>Effective Date: 17 October 2024</p>
+
             <p>
-              This Privacy Policy describes Our policies and procedures on the
-              collection, use and disclosure of Your information when You use
-              the Service and tells You about Your privacy rights and how the
-              law protects You.
+              PT SECOM INDONESIA ("Company", "we", "our", or "us") is committed
+              to protecting the privacy and personal data of individuals in
+              accordance with applicable laws and regulations, including
+              Indonesia's Personal Data Protection Law (Law No. 27 of 2022) and
+              international standards such as ISO/IEC 27001.
             </p>
+
             <p>
-              We use Your Personal data to provide and improve the Service. By
-              using the Service, You agree to the collection and use of
-              information in accordance with this Privacy Policy. This Privacy
-              Policy has been created with the help of the{" "}
-              <a
-                href="https://www.termsfeed.com/privacy-policy-generator/"
-                target="_blank"
-              >
-                Privacy Policy Generator
-              </a>
-              .
+              This Privacy Policy outlines how we collect, use, disclose, and
+              safeguard personal data in the course of our business operations.
             </p>
-            <h2>Interpretation and Definitions</h2>
-            <h3>Interpretation</h3>
+
+            <h2>1. Purpose</h2>
             <p>
-              The words of which the initial letter is capitalized have meanings
-              defined under the following conditions. The following definitions
-              shall have the same meaning regardless of whether they appear in
-              singular or in plural.
+              This Policy establishes our principles and practices for the
+              protection of personal and sensitive data. It reflects our
+              commitment to ensuring the confidentiality, integrity, and
+              availability of personal data processed by the Company and its
+              subsidiaries.
             </p>
-            <h3>Definitions</h3>
-            <p>For the purposes of this Privacy Policy:</p>
+
+            <h2>2. Scope</h2>
+            <p>
+              This Policy applies to all employees, management, contractors,
+              vendors, and authorized users who access or process personal data
+              on behalf of the Company. It covers data collected from customers,
+              employees, business partners, and other stakeholders.
+            </p>
+
+            <h2>3. Principles of Data Protection</h2>
             <ul>
               <li>
-                <p>
-                  <strong>Account</strong> means a unique account created for
-                  You to access our Service or parts of our Service.
-                </p>
+                Lawfulness, Fairness, and Transparency: Data is processed
+                lawfully, fairly, and in a transparent manner.
               </li>
               <li>
-                <p>
-                  <strong>Affiliate</strong> means an entity that controls, is
-                  controlled by or is under common control with a party, where
-                  &quot;control&quot; means ownership of 50% or more of the
-                  shares, equity interest or other securities entitled to vote
-                  for election of directors or other managing authority.
-                </p>
+                Purpose Limitation: Data is collected for specified, explicit,
+                and legitimate purposes.
               </li>
               <li>
-                <p>
-                  <strong>Company</strong> (referred to as either &quot;the
-                  Company&quot;, &quot;We&quot;, &quot;Us&quot; or
-                  &quot;Our&quot; in this Agreement) refers to Secom,
-                  Mangkuluhur City Tower 1, 8th Floor Jl. Jend. Gatot Subroto
-                  Kav. 1-3 Jakarta Selatan 12930.
-                </p>
+                Data Minimization: Only data necessary for the intended purpose
+                is collected.
               </li>
               <li>
-                <p>
-                  <strong>Cookies</strong> are small files that are placed on
-                  Your computer, mobile device or any other device by a website,
-                  containing the details of Your browsing history on that
-                  website among its many uses.
-                </p>
+                Accuracy: Reasonable steps are taken to ensure data is accurate
+                and up to date.
               </li>
               <li>
-                <p>
-                  <strong>Country</strong> refers to: Indonesia
-                </p>
+                Storage Limitation: Data is retained only as long as necessary
+                for the purposes for which it was collected.
               </li>
               <li>
-                <p>
-                  <strong>Device</strong> means any device that can access the
-                  Service such as a computer, a cellphone or a digital tablet.
-                </p>
+                Integrity and Confidentiality: Data is secured against
+                unauthorized access, loss, or destruction.
               </li>
               <li>
-                <p>
-                  <strong>Personal Data</strong> is any information that relates
-                  to an identified or identifiable individual.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>Service</strong> refers to the Website.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>Service Provider</strong> means any natural or legal
-                  person who processes the data on behalf of the Company. It
-                  refers to third-party companies or individuals employed by the
-                  Company to facilitate the Service, to provide the Service on
-                  behalf of the Company, to perform services related to the
-                  Service or to assist the Company in analyzing how the Service
-                  is used.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>Usage Data</strong> refers to data collected
-                  automatically, either generated by the use of the Service or
-                  from the Service infrastructure itself (for example, the
-                  duration of a page visit).
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>Website</strong> refers to Secom, accessible from{" "}
-                  <a
-                    href="https://secom.co.id"
-                    rel="external nofollow noopener"
-                    target="_blank"
-                  >
-                    https://secom.co.id
-                  </a>
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>You</strong> means the individual accessing or using
-                  the Service, or the company, or other legal entity on behalf
-                  of which such individual is accessing or using the Service, as
-                  applicable.
-                </p>
+                Accountability: We are responsible for and able to demonstrate
+                compliance with data protection obligations.
               </li>
             </ul>
-            <h2>Collecting and Using Your Personal Data</h2>
-            <h3>Types of Data Collected</h3>
-            <h4>Personal Data</h4>
+
+            <h2>4. Legal Basis for Processing</h2>
+            <ol>
+              <li>Consent from the data subject</li>
+              <li>Performance of a contract</li>
+              <li>Compliance with legal obligations</li>
+              <li>Protection of vital interests</li>
+              <li>Legitimate interests pursued by the Company</li>
+            </ol>
+
+            <h2>5. Data Collection and Consent</h2>
+            <ol>
+              <li>
+                We obtain clear and informed consent where required by law.
+              </li>
+              <li>
+                Special care is taken when processing data of children or
+                minors, including obtaining parental or guardian consent as
+                necessary.
+              </li>
+            </ol>
+
+            <h2>6. Data Subject Rights</h2>
+            <p>Under applicable laws, individuals have the right to:</p>
+            <ol>
+              <li>Access their personal data</li>
+              <li>
+                Request correction or deletion of inaccurate or outdated data
+              </li>
+              <li>Object to or restrict processing under certain conditions</li>
+              <li>Withdraw consent at any time</li>
+              <li>
+                Request data portability in a structured, commonly used, and
+                machine-readable format
+              </li>
+            </ol>
             <p>
-              While using Our Service, We may ask You to provide Us with certain
-              personally identifiable information that can be used to contact or
-              identify You. Personally identifiable information may include, but
-              is not limited to:
+              Requests can be submitted to our Data Protection Officer (contact
+              details below).
             </p>
+
+            <h2>7. Data Security and Breach Response</h2>
             <ul>
+              <li>Encryption and access controls</li>
+              <li>Regular security assessments</li>
               <li>
-                <p>Email address</p>
-              </li>
-              <li>
-                <p>First name and last name</p>
-              </li>
-              <li>
-                <p>Phone number</p>
-              </li>
-              <li>
-                <p>Address, State, Province, ZIP/Postal code, City</p>
-              </li>
-              <li>
-                <p>Usage Data</p>
+                Incident response and breach notification procedures in
+                compliance with legal requirements
               </li>
             </ul>
-            <h4>Usage Data</h4>
-            <p>Usage Data is collected automatically when using the Service.</p>
+
+            <h2>8. Third-Party Processors</h2>
             <p>
-              Usage Data may include information such as Your Device's Internet
-              Protocol address (e.g. IP address), browser type, browser version,
-              the pages of our Service that You visit, the time and date of Your
-              visit, the time spent on those pages, unique device identifiers
-              and other diagnostic data.
+              When engaging third-party service providers to process personal
+              data on our behalf, we ensure:
             </p>
+            <ol>
+              <li>Binding agreements are in place</li>
+              <li>Compliance with applicable data protection laws</li>
+              <li>Adequate safeguards are implemented</li>
+            </ol>
+
+            <h2>9. Training and Awareness</h2>
             <p>
-              When You access the Service by or through a mobile device, We may
-              collect certain information automatically, including, but not
-              limited to, the type of mobile device You use, Your mobile device
-              unique ID, the IP address of Your mobile device, Your mobile
-              operating system, the type of mobile Internet browser You use,
-              unique device identifiers and other diagnostic data.
+              We provide regular training to employees, contractors, and
+              relevant stakeholders to ensure awareness and compliance with data
+              protection obligations.
             </p>
-            <p>
-              We may also collect information that Your browser sends whenever
-              You visit our Service or when You access the Service by or through
-              a mobile device.
-            </p>
-            <h4>Tracking Technologies and Cookies</h4>
-            <p>
-              We use Cookies and similar tracking technologies to track the
-              activity on Our Service and store certain information. Tracking
-              technologies used are beacons, tags, and scripts to collect and
-              track information and to improve and analyze Our Service. The
-              technologies We use may include:
-            </p>
-            <ul>
+
+            <h2>10. Roles and Responsibilities</h2>
+            <ol>
               <li>
-                <strong>Cookies or Browser Cookies.</strong> A cookie is a small
-                file placed on Your Device. You can instruct Your browser to
-                refuse all Cookies or to indicate when a Cookie is being sent.
-                However, if You do not accept Cookies, You may not be able to
-                use some parts of our Service. Unless you have adjusted Your
-                browser setting so that it will refuse Cookies, our Service may
-                use Cookies.
+                Data Protection Officer (DPO): Oversees compliance, manages data
+                protection risks, and serves as the point of contact for data
+                subjects and regulators.
               </li>
               <li>
-                <strong>Web Beacons.</strong> Certain sections of our Service
-                and our emails may contain small electronic files known as web
-                beacons (also referred to as clear gifs, pixel tags, and
-                single-pixel gifs) that permit the Company, for example, to
-                count users who have visited those pages or opened an email and
-                for other related website statistics (for example, recording the
-                popularity of a certain section and verifying system and server
-                integrity).
+                Employees and Users: Must comply with this Policy and report any
+                data protection concerns or incidents.
               </li>
-            </ul>
+            </ol>
+
+            <h2>11. Compliance and Enforcement</h2>
             <p>
-              Cookies can be &quot;Persistent&quot; or &quot;Session&quot;
-              Cookies. Persistent Cookies remain on Your personal computer or
-              mobile device when You go offline, while Session Cookies are
-              deleted as soon as You close Your web browser. You can learn more
-              about cookies on{" "}
-              <a
-                href="https://www.termsfeed.com/blog/cookies/#What_Are_Cookies"
-                target="_blank"
-              >
-                TermsFeed website
-              </a>{" "}
-              article.
+              Non-compliance with this Policy may result in disciplinary action
+              and legal consequences in accordance with applicable laws and
+              internal regulations.
             </p>
+
+            <h2>12. Policy Review</h2>
             <p>
-              We use both Session and Persistent Cookies for the purposes set
-              out below:
+              This Policy is reviewed annually or as needed to reflect changes
+              in legal, regulatory, or operational requirements. Updates will be
+              communicated to all relevant parties.
             </p>
-            <ul>
-              <li>
-                <p>
-                  <strong>Necessary / Essential Cookies</strong>
-                </p>
-                <p>Type: Session Cookies</p>
-                <p>Administered by: Us</p>
-                <p>
-                  Purpose: These Cookies are essential to provide You with
-                  services available through the Website and to enable You to
-                  use some of its features. They help to authenticate users and
-                  prevent fraudulent use of user accounts. Without these
-                  Cookies, the services that You have asked for cannot be
-                  provided, and We only use these Cookies to provide You with
-                  those services.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>Cookies Policy / Notice Acceptance Cookies</strong>
-                </p>
-                <p>Type: Persistent Cookies</p>
-                <p>Administered by: Us</p>
-                <p>
-                  Purpose: These Cookies identify if users have accepted the use
-                  of cookies on the Website.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>Functionality Cookies</strong>
-                </p>
-                <p>Type: Persistent Cookies</p>
-                <p>Administered by: Us</p>
-                <p>
-                  Purpose: These Cookies allow us to remember choices You make
-                  when You use the Website, such as remembering your login
-                  details or language preference. The purpose of these Cookies
-                  is to provide You with a more personal experience and to avoid
-                  You having to re-enter your preferences every time You use the
-                  Website.
-                </p>
-              </li>
-            </ul>
-            <p>
-              For more information about the cookies we use and your choices
-              regarding cookies, please visit our Cookies Policy or the Cookies
-              section of our Privacy Policy.
-            </p>
-            <h3>Use of Your Personal Data</h3>
-            <p>The Company may use Personal Data for the following purposes:</p>
-            <ul>
-              <li>
-                <p>
-                  <strong>To provide and maintain our Service</strong>,
-                  including to monitor the usage of our Service.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>To manage Your Account:</strong> to manage Your
-                  registration as a user of the Service. The Personal Data You
-                  provide can give You access to different functionalities of
-                  the Service that are available to You as a registered user.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>For the performance of a contract:</strong> the
-                  development, compliance and undertaking of the purchase
-                  contract for the products, items or services You have
-                  purchased or of any other contract with Us through the
-                  Service.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>To contact You:</strong> To contact You by email,
-                  telephone calls, SMS, or other equivalent forms of electronic
-                  communication, such as a mobile application's push
-                  notifications regarding updates or informative communications
-                  related to the functionalities, products or contracted
-                  services, including the security updates, when necessary or
-                  reasonable for their implementation.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>To provide You</strong> with news, special offers and
-                  general information about other goods, services and events
-                  which we offer that are similar to those that you have already
-                  purchased or enquired about unless You have opted not to
-                  receive such information.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>To manage Your requests:</strong> To attend and manage
-                  Your requests to Us.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>For business transfers:</strong> We may use Your
-                  information to evaluate or conduct a merger, divestiture,
-                  restructuring, reorganization, dissolution, or other sale or
-                  transfer of some or all of Our assets, whether as a going
-                  concern or as part of bankruptcy, liquidation, or similar
-                  proceeding, in which Personal Data held by Us about our
-                  Service users is among the assets transferred.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>For other purposes</strong>: We may use Your
-                  information for other purposes, such as data analysis,
-                  identifying usage trends, determining the effectiveness of our
-                  promotional campaigns and to evaluate and improve our Service,
-                  products, services, marketing and your experience.
-                </p>
-              </li>
-            </ul>
-            <p>
-              We may share Your personal information in the following
-              situations:
-            </p>
-            <ul>
-              <li>
-                <strong>With Service Providers:</strong> We may share Your
-                personal information with Service Providers to monitor and
-                analyze the use of our Service, to contact You.
-              </li>
-              <li>
-                <strong>For business transfers:</strong> We may share or
-                transfer Your personal information in connection with, or during
-                negotiations of, any merger, sale of Company assets, financing,
-                or acquisition of all or a portion of Our business to another
-                company.
-              </li>
-              <li>
-                <strong>With Affiliates:</strong> We may share Your information
-                with Our affiliates, in which case we will require those
-                affiliates to honor this Privacy Policy. Affiliates include Our
-                parent company and any other subsidiaries, joint venture
-                partners or other companies that We control or that are under
-                common control with Us.
-              </li>
-              <li>
-                <strong>With business partners:</strong> We may share Your
-                information with Our business partners to offer You certain
-                products, services or promotions.
-              </li>
-              <li>
-                <strong>With other users:</strong> when You share personal
-                information or otherwise interact in the public areas with other
-                users, such information may be viewed by all users and may be
-                publicly distributed outside.
-              </li>
-              <li>
-                <strong>With Your consent</strong>: We may disclose Your
-                personal information for any other purpose with Your consent.
-              </li>
-            </ul>
-            <h3>Retention of Your Personal Data</h3>
-            <p>
-              The Company will retain Your Personal Data only for as long as is
-              necessary for the purposes set out in this Privacy Policy. We will
-              retain and use Your Personal Data to the extent necessary to
-              comply with our legal obligations (for example, if we are required
-              to retain your data to comply with applicable laws), resolve
-              disputes, and enforce our legal agreements and policies.
-            </p>
-            <p>
-              The Company will also retain Usage Data for internal analysis
-              purposes. Usage Data is generally retained for a shorter period of
-              time, except when this data is used to strengthen the security or
-              to improve the functionality of Our Service, or We are legally
-              obligated to retain this data for longer time periods.
-            </p>
-            <h3>Transfer of Your Personal Data</h3>
-            <p>
-              Your information, including Personal Data, is processed at the
-              Company's operating offices and in any other places where the
-              parties involved in the processing are located. It means that this
-              information may be transferred to — and maintained on — computers
-              located outside of Your state, province, country or other
-              governmental jurisdiction where the data protection laws may
-              differ than those from Your jurisdiction.
-            </p>
-            <p>
-              Your consent to this Privacy Policy followed by Your submission of
-              such information represents Your agreement to that transfer.
-            </p>
-            <p>
-              The Company will take all steps reasonably necessary to ensure
-              that Your data is treated securely and in accordance with this
-              Privacy Policy and no transfer of Your Personal Data will take
-              place to an organization or a country unless there are adequate
-              controls in place including the security of Your data and other
-              personal information.
-            </p>
-            <h3>Delete Your Personal Data</h3>
-            <p>
-              You have the right to delete or request that We assist in deleting
-              the Personal Data that We have collected about You.
-            </p>
-            <p>
-              Our Service may give You the ability to delete certain information
-              about You from within the Service.
-            </p>
-            <p>
-              You may update, amend, or delete Your information at any time by
-              signing in to Your Account, if you have one, and visiting the
-              account settings section that allows you to manage Your personal
-              information. You may also contact Us to request access to,
-              correct, or delete any personal information that You have provided
-              to Us.
-            </p>
-            <p>
-              Please note, however, that We may need to retain certain
-              information when we have a legal obligation or lawful basis to do
-              so.
-            </p>
-            <h3>Disclosure of Your Personal Data</h3>
-            <h4>Business Transactions</h4>
-            <p>
-              If the Company is involved in a merger, acquisition or asset sale,
-              Your Personal Data may be transferred. We will provide notice
-              before Your Personal Data is transferred and becomes subject to a
-              different Privacy Policy.
-            </p>
-            <h4>Law enforcement</h4>
-            <p>
-              Under certain circumstances, the Company may be required to
-              disclose Your Personal Data if required to do so by law or in
-              response to valid requests by public authorities (e.g. a court or
-              a government agency).
-            </p>
-            <h4>Other legal requirements</h4>
-            <p>
-              The Company may disclose Your Personal Data in the good faith
-              belief that such action is necessary to:
-            </p>
-            <ul>
-              <li>Comply with a legal obligation</li>
-              <li>Protect and defend the rights or property of the Company</li>
-              <li>
-                Prevent or investigate possible wrongdoing in connection with
-                the Service
-              </li>
-              <li>
-                Protect the personal safety of Users of the Service or the
-                public
-              </li>
-              <li>Protect against legal liability</li>
-            </ul>
-            <h3>Security of Your Personal Data</h3>
-            <p>
-              The security of Your Personal Data is important to Us, but
-              remember that no method of transmission over the Internet, or
-              method of electronic storage is 100% secure. While We strive to
-              use commercially acceptable means to protect Your Personal Data,
-              We cannot guarantee its absolute security.
-            </p>
-            <h2>Children's Privacy</h2>
-            <p>
-              Our Service does not address anyone under the age of 13. We do not
-              knowingly collect personally identifiable information from anyone
-              under the age of 13. If You are a parent or guardian and You are
-              aware that Your child has provided Us with Personal Data, please
-              contact Us. If We become aware that We have collected Personal
-              Data from anyone under the age of 13 without verification of
-              parental consent, We take steps to remove that information from
-              Our servers.
-            </p>
-            <p>
-              If We need to rely on consent as a legal basis for processing Your
-              information and Your country requires consent from a parent, We
-              may require Your parent's consent before We collect and use that
-              information.
-            </p>
-            <h2>Links to Other Websites</h2>
-            <p>
-              Our Service may contain links to other websites that are not
-              operated by Us. If You click on a third party link, You will be
-              directed to that third party's site. We strongly advise You to
-              review the Privacy Policy of every site You visit.
-            </p>
-            <p>
-              We have no control over and assume no responsibility for the
-              content, privacy policies or practices of any third party sites or
-              services.
-            </p>
-            <h2>Changes to this Privacy Policy</h2>
-            <p>
-              We may update Our Privacy Policy from time to time. We will notify
-              You of any changes by posting the new Privacy Policy on this page.
-            </p>
-            <p>
-              We will let You know via email and/or a prominent notice on Our
-              Service, prior to the change becoming effective and update the
-              &quot;Last updated&quot; date at the top of this Privacy Policy.
-            </p>
-            <p>
-              You are advised to review this Privacy Policy periodically for any
-              changes. Changes to this Privacy Policy are effective when they
-              are posted on this page.
-            </p>
+
             <h2>Contact Us</h2>
             <p>
-              If you have any questions about this Privacy Policy, You can
-              contact us:
+              For questions or concerns regarding this Policy or your personal
+              data, please contact our Data Protection Officer at:
             </p>
-            <ul>
-              <li>
-                <p>
-                  By visiting this page on our website:{" "}
-                  <a
-                    href="https://secom.co.id/contact-us/"
-                    rel="external nofollow noopener"
-                    target="_blank"
-                  >
-                    https://secom.co.id/contact-us/
-                  </a>
-                </p>
-              </li>
-              <li>
-                <p>By phone number: 021 - 572 3001</p>
-              </li>
-            </ul>{" "}
+            <Link
+              className="mb-4"
+              href="mailto:legal@secom.co.id"
+              target="_blank"
+            >
+              Email: legal@secom.co.id
+            </Link>
+            <p>
+              Address: Mangkuluhur City Tower One, 8th Floor, Jl. Jend. Gatot
+              Subroto Kav. 1-3, Jakarta Selatan 12930, Indonesia
+            </p>
           </div>
         </div>
       ) : (
         <div className="py-6 container flex flex-col mx-auto items-center">
-          <div className="w-full lg:w-10/12">
+          <div className="w-full lg:w-10/12 flex flex-col">
             <h1>Kebijakan Privasi</h1>
-            <p>Pembaruan terakhir: 20 Agustus 2025</p>
+            <p>Tanggal Berlaku: 17 Oktober 2024</p>
+
             <p>
-              Kebijakan Privasi ini menjelaskan kebijakan dan prosedur Kami
-              mengenai pengumpulan, penggunaan, dan pengungkapan informasi Anda
-              ketika Anda menggunakan Layanan serta memberi tahu Anda tentang
-              hak privasi Anda dan bagaimana hukum melindungi Anda.
-            </p>
-            <p>
-              Kami menggunakan Data Pribadi Anda untuk menyediakan dan
-              meningkatkan Layanan. Dengan menggunakan Layanan, Anda menyetujui
-              pengumpulan dan penggunaan informasi sesuai dengan Kebijakan
-              Privasi ini. Kebijakan Privasi ini dibuat dengan bantuan{" "}
-              <a
-                href="https://www.termsfeed.com/privacy-policy-generator/"
-                target="_blank"
-              >
-                Privacy Policy Generator
-              </a>
-              .
+              PT SECOM INDONESIA ("Perusahaan", "kami", "kita", atau "milik
+              kami") berkomitmen untuk melindungi privasi dan data pribadi
+              individu sesuai dengan hukum dan peraturan yang berlaku, termasuk
+              Undang-Undang Pelindungan Data Pribadi Indonesia (Undang-Undang
+              No. 27 Tahun 2022) dan standar internasional seperti ISO/IEC
+              27001.
             </p>
 
-            <h2>Interpretasi dan Definisi</h2>
-            <h3>Interpretasi</h3>
             <p>
-              Kata-kata yang huruf awalnya ditulis dengan huruf kapital memiliki
-              arti yang didefinisikan pada ketentuan berikut. Definisi berikut
-              memiliki arti yang sama terlepas apakah ditulis dalam bentuk
-              tunggal atau jamak.
+              Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan,
+              menggunakan, mengungkapkan, dan melindungi data pribadi dalam
+              kegiatan bisnis kami.
             </p>
 
-            <h3>Definisi</h3>
-            <p>Untuk tujuan Kebijakan Privasi ini:</p>
+            <h2>1. Tujuan</h2>
+            <p>
+              Kebijakan ini menetapkan prinsip dan praktik kami untuk
+              pelindungan data pribadi dan sensitif. Ini mencerminkan komitmen
+              kami untuk memastikan kerahasiaan, integritas, dan ketersediaan
+              data pribadi yang diproses oleh Perusahaan dan anak perusahaannya.
+            </p>
+
+            <h2>2. Cakupan</h2>
+            <p>
+              Kebijakan ini berlaku untuk semua karyawan, manajemen, kontraktor,
+              vendor, dan pengguna yang berwenang yang mengakses atau memproses
+              data pribadi atas nama Perusahaan. Ini mencakup data yang
+              dikumpulkan dari pelanggan, karyawan, mitra bisnis, dan pemangku
+              kepentingan lainnya.
+            </p>
+
+            <h2>3. Prinsip Pelindungan Data</h2>
             <ul>
               <li>
-                <strong>Akun</strong> berarti akun unik yang dibuat untuk Anda
-                agar dapat mengakses Layanan kami atau sebagian dari Layanan
-                kami.
+                Kewajaran, Keterbukaan, dan Transparansi: Data diproses secara
+                sah, adil, dan transparan.
               </li>
               <li>
-                <strong>Afiliasi</strong> berarti entitas yang mengendalikan,
-                dikendalikan oleh, atau berada di bawah kendali bersama dengan
-                suatu pihak, di mana “kendali” berarti kepemilikan 50% atau
-                lebih saham, kepentingan ekuitas, atau sekuritas lain yang
-                berhak memberikan suara dalam pemilihan direksi atau otoritas
-                pengelola lainnya.
+                Pembatasan Tujuan: Data dikumpulkan untuk tujuan yang
+                ditentukan, eksplisit, dan sah.
               </li>
               <li>
-                <strong>Perusahaan</strong> (disebut sebagai “Perusahaan”,
-                “Kami”, “Kita” atau “Milik Kami” dalam Perjanjian ini) merujuk
-                pada Secom, Mangkuluhur City Tower 1, Lantai 8 Jl. Jend. Gatot
-                Subroto Kav. 1-3 Jakarta Selatan 12930.
+                Minimalisasi Data: Hanya data yang diperlukan untuk tujuan yang
+                dimaksud yang dikumpulkan.
               </li>
               <li>
-                <strong>Cookie</strong> adalah file kecil yang ditempatkan pada
-                komputer, perangkat seluler, atau perangkat lain oleh sebuah
-                situs web, berisi detail riwayat penelusuran Anda di situs web
-                tersebut untuk berbagai kegunaan.
+                Akurasi: Langkah-langkah yang wajar diambil untuk memastikan
+                data akurat dan terbaru.
               </li>
               <li>
-                <strong>Negara</strong> merujuk pada: Indonesia
+                Pembatasan Penyimpanan: Data disimpan hanya selama diperlukan
+                untuk tujuan pengumpulannya.
               </li>
               <li>
-                <strong>Perangkat</strong> berarti perangkat apa pun yang dapat
-                mengakses Layanan seperti komputer, ponsel, atau tablet digital.
+                Integritas dan Kerahasiaan: Data dilindungi dari akses,
+                kehilangan, atau penghancuran yang tidak sah.
               </li>
               <li>
-                <strong>Data Pribadi</strong> adalah informasi apa pun yang
-                berkaitan dengan individu yang dapat diidentifikasi.
-              </li>
-              <li>
-                <strong>Layanan</strong> merujuk pada Situs Web.
-              </li>
-              <li>
-                <strong>Penyedia Layanan</strong> berarti orang perorangan atau
-                badan hukum yang memproses data atas nama Perusahaan. Ini
-                merujuk pada pihak ketiga yang disewa oleh Perusahaan untuk
-                memfasilitasi Layanan, menyediakan Layanan atas nama Perusahaan,
-                melakukan layanan terkait Layanan, atau membantu Perusahaan
-                dalam menganalisis bagaimana Layanan digunakan.
-              </li>
-              <li>
-                <strong>Data Penggunaan</strong> merujuk pada data yang
-                dikumpulkan secara otomatis, baik yang dihasilkan dari
-                penggunaan Layanan atau dari infrastruktur Layanan itu sendiri
-                (misalnya durasi kunjungan halaman).
-              </li>
-              <li>
-                <strong>Situs Web</strong> merujuk pada Secom, dapat diakses
-                dari{" "}
-                <a
-                  href="https://secom.co.id"
-                  rel="external nofollow noopener"
-                  target="_blank"
-                >
-                  https://secom.co.id
-                </a>
-              </li>
-              <li>
-                <strong>Anda</strong> berarti individu yang mengakses atau
-                menggunakan Layanan, atau perusahaan atau entitas hukum lain
-                atas nama siapa individu tersebut mengakses atau menggunakan
-                Layanan, sesuai konteks.
+                Akuntabilitas: Kami bertanggung jawab dan mampu menunjukkan
+                kepatuhan terhadap kewajiban pelindungan data.
               </li>
             </ul>
 
-            <h2>Mengumpulkan dan Menggunakan Data Pribadi Anda</h2>
-            <h3>Jenis Data yang Dikumpulkan</h3>
-            <h4>Data Pribadi</h4>
-            <p>
-              Saat menggunakan Layanan Kami, Kami mungkin meminta Anda
-              memberikan informasi identitas pribadi tertentu yang dapat
-              digunakan untuk menghubungi atau mengidentifikasi Anda. Informasi
-              identitas pribadi dapat mencakup, namun tidak terbatas pada:
-            </p>
-            <ul>
-              <li>Alamat email</li>
-              <li>Nama depan dan nama belakang</li>
-              <li>Nomor telepon</li>
-              <li>Alamat, Provinsi, Kode Pos, Kota</li>
-              <li>Data Penggunaan</li>
-            </ul>
+            <h2>4. Dasar Hukum untuk Pemrosesan</h2>
+            <ol>
+              <li>Persetujuan dari subjek data</li>
+              <li>Pelaksanaan kontrak</li>
+              <li>Kepatuhan terhadap kewajiban hukum</li>
+              <li>Pelindungan kepentingan vital</li>
+              <li>Kepentingan sah yang dikejar oleh Perusahaan</li>
+            </ol>
 
-            <h4>Data Penggunaan</h4>
-            <p>
-              Data Penggunaan dikumpulkan secara otomatis ketika menggunakan
-              Layanan.
-            </p>
-            <p>
-              Data Penggunaan dapat mencakup informasi seperti alamat IP
-              perangkat Anda, jenis browser, versi browser, halaman Layanan kami
-              yang Anda kunjungi, waktu dan tanggal kunjungan Anda, waktu yang
-              dihabiskan pada halaman-halaman tersebut, pengenal perangkat unik,
-              serta data diagnostik lainnya.
-            </p>
-            <p>
-              Ketika Anda mengakses Layanan melalui perangkat seluler, Kami
-              dapat mengumpulkan informasi tertentu secara otomatis, termasuk
-              namun tidak terbatas pada, jenis perangkat seluler yang Anda
-              gunakan, ID unik perangkat seluler Anda, alamat IP perangkat
-              seluler Anda, sistem operasi seluler Anda, jenis browser internet
-              seluler yang Anda gunakan, serta data diagnostik lainnya.
-            </p>
-            <p>
-              Kami juga dapat mengumpulkan informasi yang dikirimkan browser
-              Anda setiap kali Anda mengunjungi Layanan kami atau saat Anda
-              mengakses Layanan melalui perangkat seluler.
-            </p>
+            <h2>5. Pengumpulan Data dan Persetujuan</h2>
+            <ol>
+              <li>
+                Kami memperoleh persetujuan yang jelas dan terinformasi jika
+                diwajibkan oleh hukum.
+              </li>
+              <li>
+                Perhatian khusus diberikan saat memproses data anak-anak atau
+                minor, termasuk memperoleh persetujuan orang tua atau wali jika
+                diperlukan.
+              </li>
+            </ol>
 
-            <h4>Teknologi Pelacakan dan Cookie</h4>
+            <h2>6. Hak Subjek Data</h2>
+            <p>Berdasarkan hukum yang berlaku, individu memiliki hak untuk:</p>
+            <ol>
+              <li>Mengakses data pribadi mereka</li>
+              <li>
+                Meminta koreksi atau penghapusan data yang tidak akurat atau
+                usang
+              </li>
+              <li>Menolak atau membatasi pemrosesan dalam kondisi tertentu</li>
+              <li>Menarik persetujuan kapan saja</li>
+              <li>
+                Meminta portabilitas data dalam format yang terstruktur, umum
+                digunakan, dan dapat dibaca mesin
+              </li>
+            </ol>
             <p>
-              Kami menggunakan Cookie dan teknologi pelacakan serupa untuk
-              melacak aktivitas di Layanan Kami dan menyimpan informasi
-              tertentu. Teknologi pelacakan yang digunakan termasuk beacon, tag,
-              dan skrip untuk mengumpulkan dan melacak informasi serta
-              meningkatkan dan menganalisis Layanan Kami. Teknologi yang Kami
-              gunakan mungkin mencakup:
-            </p>
-            <ul>
-              <li>
-                <strong>Cookie atau Browser Cookie.</strong> Cookie adalah file
-                kecil yang ditempatkan pada Perangkat Anda. Anda dapat mengatur
-                browser Anda untuk menolak semua Cookie atau memberi tahu Anda
-                ketika sebuah Cookie dikirim. Namun, jika Anda tidak menerima
-                Cookie, Anda mungkin tidak dapat menggunakan beberapa bagian
-                dari Layanan kami. Kecuali Anda telah menyesuaikan pengaturan
-                browser untuk menolak Cookie, Layanan kami dapat menggunakan
-                Cookie.
-              </li>
-              <li>
-                <strong>Web Beacon.</strong> Bagian tertentu dari Layanan kami
-                dan email kami dapat berisi file elektronik kecil yang dikenal
-                sebagai web beacon (juga disebut clear gifs, pixel tags, dan
-                single-pixel gifs) yang memungkinkan Perusahaan, misalnya,
-                menghitung pengguna yang telah mengunjungi halaman tersebut atau
-                membuka email, serta untuk statistik situs terkait lainnya
-                (misalnya mencatat popularitas suatu bagian dan memverifikasi
-                integritas sistem dan server).
-              </li>
-            </ul>
-            <p>
-              Cookie dapat berupa “Persistent” atau “Session” Cookie. Persistent
-              Cookie tetap ada di komputer pribadi atau perangkat seluler Anda
-              saat Anda offline, sedangkan Session Cookie akan dihapus segera
-              setelah Anda menutup browser web Anda. Anda dapat mempelajari
-              lebih lanjut tentang cookie di artikel{" "}
-              <a
-                href="https://www.termsfeed.com/blog/cookies/#What_Are_Cookies"
-                target="_blank"
-              >
-                situs web TermsFeed
-              </a>
-              .
-            </p>
-            <p>
-              Kami menggunakan Cookie Session dan Persistent untuk tujuan
-              berikut:
-            </p>
-            <ul>
-              <li>
-                <strong>Cookie yang Diperlukan / Esensial</strong>
-                <br />
-                Jenis: Session Cookie
-                <br />
-                Dikelola oleh: Kami
-                <br />
-                Tujuan: Cookie ini penting untuk menyediakan layanan melalui
-                Situs Web dan memungkinkan Anda menggunakan beberapa fiturnya.
-                Cookie ini membantu mengautentikasi pengguna dan mencegah
-                penggunaan akun secara curang.
-              </li>
-              <li>
-                <strong>Cookie Kebijakan / Penerimaan Pemberitahuan</strong>
-                <br />
-                Jenis: Persistent Cookie
-                <br />
-                Dikelola oleh: Kami
-                <br />
-                Tujuan: Cookie ini mengidentifikasi apakah pengguna telah
-                menerima penggunaan cookie di Situs Web.
-              </li>
-              <li>
-                <strong>Cookie Fungsionalitas</strong>
-                <br />
-                Jenis: Persistent Cookie
-                <br />
-                Dikelola oleh: Kami
-                <br />
-                Tujuan: Cookie ini memungkinkan Kami mengingat pilihan yang Anda
-                buat saat menggunakan Situs Web, seperti detail login atau
-                preferensi bahasa Anda. Tujuannya adalah untuk memberi Anda
-                pengalaman yang lebih personal dan menghindari Anda harus
-                memasukkan kembali preferensi setiap kali menggunakan Situs Web.
-              </li>
-            </ul>
-            <p>
-              Untuk informasi lebih lanjut tentang cookie yang kami gunakan dan
-              pilihan Anda terkait cookie, silakan kunjungi Kebijakan Cookie
-              kami atau bagian Cookie dalam Kebijakan Privasi ini.
+              Permintaan dapat diajukan kepada Petugas Pelindungan Data kami
+              (detail kontak di bawah).
             </p>
 
-            <h3>Penggunaan Data Pribadi Anda</h3>
-            <p>
-              Perusahaan dapat menggunakan Data Pribadi untuk tujuan berikut:
-            </p>
+            <h2>7. Keamanan Data dan Tanggapan Pelanggaran</h2>
             <ul>
+              <li>Enkripsi dan kontrol akses</li>
+              <li>Penilaian keamanan secara berkala</li>
               <li>
-                <strong>Untuk menyediakan dan memelihara Layanan kami</strong>,
-                termasuk memantau penggunaan Layanan kami.
-              </li>
-              <li>
-                <strong>Untuk mengelola Akun Anda:</strong> untuk mengelola
-                pendaftaran Anda sebagai pengguna Layanan. Data Pribadi yang
-                Anda berikan dapat memberi Anda akses ke berbagai fitur Layanan
-                yang tersedia bagi Anda sebagai pengguna terdaftar.
-              </li>
-              <li>
-                <strong>Untuk pelaksanaan kontrak:</strong> pengembangan,
-                kepatuhan, dan pelaksanaan kontrak pembelian produk, barang,
-                atau layanan yang telah Anda beli atau kontrak lain dengan Kami
-                melalui Layanan.
-              </li>
-              <li>
-                <strong>Untuk menghubungi Anda:</strong> Menghubungi Anda
-                melalui email, panggilan telepon, SMS, atau bentuk komunikasi
-                elektronik lain, seperti notifikasi aplikasi seluler, terkait
-                pembaruan atau komunikasi informatif mengenai fitur, produk,
-                atau layanan yang dikontrak, termasuk pembaruan keamanan jika
-                diperlukan atau wajar untuk pelaksanaannya.
-              </li>
-              <li>
-                <strong>Untuk memberikan Anda</strong> berita, penawaran khusus,
-                dan informasi umum tentang barang, layanan, dan acara lain yang
-                Kami tawarkan yang serupa dengan yang telah Anda beli atau
-                tanyakan, kecuali jika Anda memilih untuk tidak menerima
-                informasi tersebut.
-              </li>
-              <li>
-                <strong>Untuk mengelola permintaan Anda:</strong> Menangani dan
-                mengelola permintaan Anda kepada Kami.
-              </li>
-              <li>
-                <strong>Untuk transfer bisnis:</strong> Kami dapat menggunakan
-                informasi Anda untuk mengevaluasi atau melakukan merger,
-                divestasi, restrukturisasi, reorganisasi, pembubaran, atau
-                penjualan atau transfer sebagian atau seluruh aset Kami, baik
-                sebagai perusahaan yang berjalan maupun sebagai bagian dari
-                kebangkrutan, likuidasi, atau proses serupa, di mana Data
-                Pribadi yang Kami miliki tentang pengguna Layanan termasuk dalam
-                aset yang ditransfer.
-              </li>
-              <li>
-                <strong>Untuk tujuan lain:</strong> Kami dapat menggunakan
-                informasi Anda untuk tujuan lain, seperti analisis data,
-                mengidentifikasi tren penggunaan, menentukan efektivitas
-                kampanye promosi kami, serta mengevaluasi dan meningkatkan
-                Layanan, produk, layanan, pemasaran, dan pengalaman Anda.
+                Prosedur tanggapan insiden dan pemberitahuan pelanggaran sesuai
+                dengan persyaratan hukum
               </li>
             </ul>
 
+            <h2>8. Pemroses Pihak Ketiga</h2>
             <p>
-              Kami dapat membagikan informasi pribadi Anda dalam situasi
-              berikut:
+              Saat melibatkan penyedia layanan pihak ketiga untuk memproses data
+              pribadi atas nama kami, kami memastikan:
             </p>
-            <ul>
+            <ol>
+              <li>Perjanjian yang mengikat ada</li>
+              <li>Kepatuhan terhadap hukum pelindungan data yang berlaku</li>
+              <li>Pengamanan yang memadai diterapkan</li>
+            </ol>
+
+            <h2>9. Pelatihan dan Kesadaran</h2>
+            <p>
+              Kami menyediakan pelatihan rutin kepada karyawan, kontraktor, dan
+              pemangku kepentingan yang relevan untuk memastikan kesadaran dan
+              kepatuhan terhadap kewajiban pelindungan data.
+            </p>
+
+            <h2>10. Peran dan Tanggung Jawab</h2>
+            <ol>
               <li>
-                <strong>Dengan Penyedia Layanan:</strong> Kami dapat membagikan
-                informasi pribadi Anda dengan Penyedia Layanan untuk memantau
-                dan menganalisis penggunaan Layanan kami, atau untuk menghubungi
-                Anda.
+                Petugas Pelindungan Data (DPO): Mengawasi kepatuhan, mengelola
+                risiko pelindungan data, dan menjadi titik kontak untuk subjek
+                data dan regulator.
               </li>
               <li>
-                <strong>Untuk transfer bisnis:</strong> Kami dapat membagikan
-                atau mentransfer informasi pribadi Anda sehubungan dengan, atau
-                selama negosiasi merger, penjualan aset Perusahaan, pembiayaan,
-                atau akuisisi seluruh atau sebagian bisnis Kami oleh perusahaan
-                lain.
+                Karyawan dan Pengguna: Harus mematuhi Kebijakan ini dan
+                melaporkan setiap kekhawatiran atau insiden pelindungan data.
               </li>
-              <li>
-                <strong>Dengan Afiliasi:</strong> Kami dapat membagikan
-                informasi Anda dengan afiliasi Kami, dalam hal ini Kami akan
-                mewajibkan afiliasi tersebut untuk menghormati Kebijakan Privasi
-                ini. Afiliasi mencakup perusahaan induk dan anak perusahaan,
-                mitra usaha patungan, atau perusahaan lain yang Kami kendalikan
-                atau berada di bawah kendali bersama dengan Kami.
-              </li>
-              <li>
-                <strong>Dengan mitra bisnis:</strong> Kami dapat membagikan
-                informasi Anda dengan mitra bisnis Kami untuk menawarkan produk,
-                layanan, atau promosi tertentu kepada Anda.
-              </li>
-              <li>
-                <strong>Dengan pengguna lain:</strong> ketika Anda membagikan
-                informasi pribadi atau berinteraksi di area publik dengan
-                pengguna lain, informasi tersebut dapat dilihat oleh semua
-                pengguna dan dapat didistribusikan secara publik di luar.
-              </li>
-              <li>
-                <strong>Dengan persetujuan Anda:</strong> Kami dapat
-                mengungkapkan informasi pribadi Anda untuk tujuan lain dengan
-                persetujuan Anda.
-              </li>
-            </ul>
+            </ol>
 
-            <h3>Retensi Data Pribadi Anda</h3>
+            <h2>11. Kepatuhan dan Penegakan</h2>
             <p>
-              Perusahaan hanya akan menyimpan Data Pribadi Anda selama
-              diperlukan untuk tujuan yang ditetapkan dalam Kebijakan Privasi
-              ini. Kami akan menyimpan dan menggunakan Data Pribadi Anda sejauh
-              yang diperlukan untuk mematuhi kewajiban hukum (misalnya, jika
-              kami diwajibkan menyimpan data Anda untuk mematuhi undang-undang
-              yang berlaku), menyelesaikan sengketa, dan menegakkan perjanjian
-              serta kebijakan hukum kami.
-            </p>
-            <p>
-              Perusahaan juga akan menyimpan Data Penggunaan untuk tujuan
-              analisis internal. Data Penggunaan umumnya disimpan untuk periode
-              yang lebih singkat, kecuali data ini digunakan untuk memperkuat
-              keamanan atau meningkatkan fungsionalitas Layanan Kami, atau jika
-              kami diwajibkan secara hukum untuk menyimpan data ini untuk
-              periode waktu yang lebih lama.
+              Ketidakpatuhan terhadap Kebijakan ini dapat mengakibatkan tindakan
+              disipliner dan konsekuensi hukum sesuai dengan hukum yang berlaku
+              dan peraturan internal.
             </p>
 
-            <h3>Transfer Data Pribadi Anda</h3>
+            <h2>12. Tinjauan Kebijakan</h2>
             <p>
-              Informasi Anda, termasuk Data Pribadi, diproses di kantor
-              operasional Perusahaan dan di lokasi lain tempat pihak-pihak yang
-              terlibat dalam pemrosesan berada. Artinya, informasi ini dapat
-              ditransfer ke — dan disimpan di — komputer yang berada di luar
-              negara bagian, provinsi, atau yurisdiksi pemerintahan Anda di mana
-              undang-undang perlindungan data mungkin berbeda dari yurisdiksi
-              Anda.
-            </p>
-            <p>
-              Persetujuan Anda terhadap Kebijakan Privasi ini, diikuti dengan
-              pengiriman informasi tersebut, menunjukkan persetujuan Anda atas
-              transfer tersebut.
-            </p>
-            <p>
-              Perusahaan akan mengambil semua langkah yang wajar untuk
-              memastikan bahwa data Anda diperlakukan dengan aman dan sesuai
-              dengan Kebijakan Privasi ini dan tidak akan ada transfer Data
-              Pribadi Anda ke organisasi atau negara kecuali terdapat
-              pengendalian yang memadai, termasuk keamanan data Anda dan
-              informasi pribadi lainnya.
-            </p>
-
-            <h3>Menghapus Data Pribadi Anda</h3>
-            <p>
-              Anda memiliki hak untuk menghapus atau meminta Kami membantu
-              menghapus Data Pribadi yang telah Kami kumpulkan tentang Anda.
-            </p>
-            <p>
-              Layanan Kami mungkin memberi Anda kemampuan untuk menghapus
-              informasi tertentu tentang Anda dari dalam Layanan.
-            </p>
-            <p>
-              Anda dapat memperbarui, mengubah, atau menghapus informasi Anda
-              kapan saja dengan masuk ke Akun Anda (jika Anda memilikinya) dan
-              mengunjungi bagian pengaturan akun yang memungkinkan Anda
-              mengelola informasi pribadi Anda. Anda juga dapat menghubungi Kami
-              untuk meminta akses, memperbaiki, atau menghapus informasi pribadi
-              apa pun yang telah Anda berikan kepada Kami.
-            </p>
-            <p>
-              Namun perlu dicatat, Kami mungkin perlu menyimpan informasi
-              tertentu ketika Kami memiliki kewajiban hukum atau dasar hukum
-              yang sah untuk melakukannya.
-            </p>
-
-            <h3>Pengungkapan Data Pribadi Anda</h3>
-            <h4>Transaksi Bisnis</h4>
-            <p>
-              Jika Perusahaan terlibat dalam merger, akuisisi, atau penjualan
-              aset, Data Pribadi Anda dapat ditransfer. Kami akan memberikan
-              pemberitahuan sebelum Data Pribadi Anda ditransfer dan tunduk pada
-              Kebijakan Privasi yang berbeda.
-            </p>
-
-            <h4>Penegakan Hukum</h4>
-            <p>
-              Dalam keadaan tertentu, Perusahaan mungkin diwajibkan untuk
-              mengungkapkan Data Pribadi Anda jika diwajibkan oleh hukum atau
-              sebagai tanggapan terhadap permintaan yang sah dari otoritas
-              publik (misalnya pengadilan atau lembaga pemerintah).
-            </p>
-
-            <h4>Kebutuhan Hukum Lain</h4>
-            <p>
-              Perusahaan dapat mengungkapkan Data Pribadi Anda dengan itikad
-              baik bahwa tindakan tersebut diperlukan untuk:
-            </p>
-            <ul>
-              <li>Mematuhi kewajiban hukum</li>
-              <li>Melindungi dan membela hak atau properti Perusahaan</li>
-              <li>
-                Mencegah atau menyelidiki kemungkinan pelanggaran terkait
-                Layanan
-              </li>
-              <li>
-                Melindungi keselamatan pribadi Pengguna Layanan atau publik
-              </li>
-              <li>Melindungi dari tanggung jawab hukum</li>
-            </ul>
-
-            <h3>Keamanan Data Pribadi Anda</h3>
-            <p>
-              Keamanan Data Pribadi Anda penting bagi Kami, tetapi harap diingat
-              bahwa tidak ada metode transmisi melalui Internet atau metode
-              penyimpanan elektronik yang 100% aman. Meskipun Kami berusaha
-              menggunakan cara yang dapat diterima secara komersial untuk
-              melindungi Data Pribadi Anda, Kami tidak dapat menjamin keamanan
-              absolutnya.
-            </p>
-
-            <h2>Privasi Anak</h2>
-            <p>
-              Layanan Kami tidak ditujukan untuk siapa pun di bawah usia 13
-              tahun. Kami tidak dengan sengaja mengumpulkan informasi identitas
-              pribadi dari siapa pun di bawah usia 13 tahun. Jika Anda adalah
-              orang tua atau wali dan mengetahui bahwa anak Anda telah
-              memberikan Data Pribadi kepada Kami, silakan hubungi Kami. Jika
-              Kami mengetahui bahwa Kami telah mengumpulkan Data Pribadi dari
-              siapa pun di bawah usia 13 tahun tanpa verifikasi persetujuan
-              orang tua, Kami akan mengambil langkah untuk menghapus informasi
-              tersebut dari server Kami.
-            </p>
-            <p>
-              Jika Kami perlu mengandalkan persetujuan sebagai dasar hukum untuk
-              memproses informasi Anda dan negara Anda mewajibkan persetujuan
-              orang tua, Kami dapat memerlukan persetujuan orang tua Anda
-              sebelum Kami mengumpulkan dan menggunakan informasi tersebut.
-            </p>
-
-            <h2>Tautan ke Situs Web Lain</h2>
-            <p>
-              Layanan Kami dapat berisi tautan ke situs web lain yang tidak
-              dioperasikan oleh Kami. Jika Anda mengeklik tautan pihak ketiga,
-              Anda akan diarahkan ke situs pihak ketiga tersebut. Kami sangat
-              menyarankan Anda meninjau Kebijakan Privasi setiap situs yang Anda
-              kunjungi.
-            </p>
-            <p>
-              Kami tidak memiliki kendali atas dan tidak bertanggung jawab atas
-              konten, kebijakan privasi, atau praktik situs atau layanan pihak
-              ketiga mana pun.
-            </p>
-
-            <h2>Perubahan pada Kebijakan Privasi ini</h2>
-            <p>
-              Kami dapat memperbarui Kebijakan Privasi kami dari waktu ke waktu.
-              Kami akan memberi tahu Anda tentang setiap perubahan dengan
-              memposting Kebijakan Privasi baru di halaman ini.
-            </p>
-            <p>
-              Kami akan memberi tahu Anda melalui email dan/atau pemberitahuan
-              yang jelas di Layanan Kami, sebelum perubahan berlaku dan
-              memperbarui tanggal “Pembaruan terakhir” di bagian atas Kebijakan
-              Privasi ini.
-            </p>
-            <p>
-              Anda disarankan untuk meninjau Kebijakan Privasi ini secara
-              berkala untuk mengetahui setiap perubahan. Perubahan pada
-              Kebijakan Privasi ini berlaku saat diposting di halaman ini.
+              Kebijakan ini ditinjau setiap tahun atau sesuai kebutuhan untuk
+              mencerminkan perubahan dalam persyaratan hukum, peraturan, atau
+              operasional. Pembaruan akan dikomunikasikan kepada semua pihak
+              yang relevan.
             </p>
 
             <h2>Hubungi Kami</h2>
             <p>
-              Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini, Anda
-              dapat menghubungi kami melalui:
+              Untuk pertanyaan atau kekhawatiran mengenai Kebijakan ini atau
+              data pribadi Anda, silakan hubungi Petugas Pelindungan Data kami
+              di:
             </p>
-            <ul>
-              <li>
-                Dengan mengunjungi halaman ini di situs web kami:{" "}
-                <a
-                  href="https://secom.co.id/contact-us/"
-                  rel="external nofollow noopener"
-                  target="_blank"
-                >
-                  https://secom.co.id/contact-us/
-                </a>
-              </li>
-              <li>Melalui nomor telepon: 021 - 572 3001</li>
-            </ul>
+            <Link
+              className="mb-4"
+              href="mailto:legal@secom.co.id"
+              target="_blank"
+            >
+              Email: legal@secom.co.id
+            </Link>
+            <p>
+              Alamat: Mangkuluhur City Tower One, Lantai 8, Jl. Jend. Gatot
+              Subroto Kav. 1-3, Jakarta Selatan 12930, Indonesia
+            </p>
           </div>
         </div>
       )}
