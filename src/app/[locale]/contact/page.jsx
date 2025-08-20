@@ -5,6 +5,7 @@ import ContactForm from "@/components/Fragments/Contact/ContactForm";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
+import FloatButton from "@/components/Elements/FloatButton";
 
 const Contact = () => {
   const t = useTranslations();
@@ -47,6 +48,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <FloatButton />
     </>
   );
 };

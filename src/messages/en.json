@@ -457,11 +457,11 @@
         "label": ""
       },
       {
-        "value": "Residential",
+        "value": "residential",
         "label": "Residential"
       },
       {
-        "value": "Business",
+        "value": "business",
         "label": "Business"
       }
     ],
@@ -596,7 +596,7 @@
     ],
     "btnCTA": {
       "text": "CONSULT WITH US NOW",
-      "href": "/contact",
+      "href": "/contact/?location=residential",
       "target": "_self"
     }
   },
@@ -609,7 +609,7 @@
     "desc": "",
     "btnConsult": {
       "text": "CONSULT WITH US NOW",
-      "href": "/#",
+      "href": "/contact/?location=residential",
       "target": "_self"
     },
     "image": "/img/temp/residential/protect-bg.png"
@@ -842,7 +842,7 @@
     ],
     "btnCTA": {
       "text": "CONSULT WITH US NOW",
-      "href": "/contact",
+      "href": "/contact/?location=business",
       "target": "_self"
     }
   },
@@ -855,7 +855,7 @@
     "desc": "",
     "btnConsult": {
       "text": "CONSULT WITH US NOW",
-      "href": "/#",
+      "href": "/contact/?location=business",
       "target": "_self"
     },
     "image": "/img/temp/alarm/Product-Placement-Business.png"

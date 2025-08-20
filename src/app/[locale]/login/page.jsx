@@ -5,6 +5,7 @@ import RadialGrid from "@/components/Elements/RadialGrid";
 import React from "react";
 import { motion } from "framer-motion";
 import LoginForm from "@/components/Fragments/Login/LoginForm";
+import FloatButton from "@/components/Elements/FloatButton";
 
 const LoginPage = () => {
   const t = useTranslations();
@@ -36,6 +37,7 @@ const LoginPage = () => {
           </div>
         </div>
       </motion.section>
+      <FloatButton />
     </>
   );
 };

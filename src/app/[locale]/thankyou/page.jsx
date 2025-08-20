@@ -2,6 +2,7 @@
 import ButtonPrimary from "@/components/Elements/ButtonPrimary";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import FloatButton from "@/components/Elements/FloatButton";
 
 const ThankYou = () => {
   const t = useTranslations();
@@ -87,6 +88,7 @@ const ThankYou = () => {
           </div>
         </div>
       </section>
+      <FloatButton />
     </>
   );
 };

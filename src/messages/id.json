@@ -455,11 +455,11 @@
         "label": ""
       },
       {
-        "value": "Residential",
+        "value": "residential",
         "label": "Residential"
       },
       {
-        "value": "Business",
+        "value": "business",
         "label": "Business"
       }
     ],
@@ -594,7 +594,7 @@
     ],
     "btnCTA": {
       "text": "Konsultasi Sekarang",
-      "href": "/contact",
+      "href": "/contact/?location=residential",
       "target": "_self"
     }
   },
@@ -606,8 +606,8 @@
     "title": "Setiap Ruangan. Setiap Akses. Terlindungi Sepenuhnya.",
     "desc": "",
     "btnConsult": {
-      "text": "CONSULT WITH US NOW",
-      "href": "/contact",
+      "text": "Konsultasi Sekarang",
+      "href": "/contact/?location=residential",
       "target": "_self"
     },
     "image": "/img/temp/residential/protect-bg.png"
@@ -832,7 +832,7 @@
     ],
     "btnCTA": {
       "text": "Konsultasi Sekarang",
-      "href": "/contact",
+      "href": "/contact/?location=business",
       "target": "_self"
     }
   },
@@ -845,7 +845,7 @@
     "desc": "",
     "btnConsult": {
       "text": "Konsultasi Sekarang",
-      "href": "/contact",
+      "href": "/contact/?location=business",
       "target": "_self"
     },
     "image": "/img/temp/alarm/Product-Placement-Business.png"

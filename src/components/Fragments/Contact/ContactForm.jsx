@@ -1,6 +1,7 @@
 "use client";
 import { useTranslations } from "next-intl";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import emailjs from "@emailjs/browser";
@@ -28,6 +29,19 @@ const ContactForm = () => {
 
   const locationOptions = FormValue.locationType;
   const howDidYouKnowOptions = FormValue.howDidYouKnow;
+
+  const searchParams = useSearchParams();
+
+  // Auto-set location dari query param
+  useEffect(() => {
+    const locationParam = searchParams.get("location"); // ex: business / residential
+    if (locationParam) {
+      setFormData((prev) => ({
+        ...prev,
+        location: locationParam.toLowerCase(),
+      }));
+    }
+  }, [searchParams]);
 
   const validateForm = () => {
     const newErrors = {};

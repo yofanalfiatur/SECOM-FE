@@ -12,6 +12,7 @@ import AmTrusted from "@/components/Fragments/Alarm/AmTrusted";
 import AmOverview from "@/components/Fragments/Alarm/AmOverview";
 import AmPlacement from "@/components/Fragments/Alarm/AmPlacement";
 import AmReason from "@/components/Fragments/Alarm/AmReason";
+import FloatButton from "@/components/Elements/FloatButton";
 
 const AlarmLanding = () => {
   return (
@@ -41,6 +42,7 @@ const AlarmLanding = () => {
         packagesRent="BusinessPackagesRent"
       />
       <AmFAQ translationKey="AlarmFAQ" />
+      <FloatButton />
     </>
   );
 };

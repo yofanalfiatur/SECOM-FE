@@ -53,8 +53,6 @@ const Footer = () => {
       <div className="radial two"></div>
       <div className="radial three"></div>
       <Starfield />
-      <FloatButton />
-
       {!shouldHideFooterTop && (
         <>
           <section className=" relative z-10 flex flex-col border-b-1 border-[#ffffff66] w-full footer__top">
