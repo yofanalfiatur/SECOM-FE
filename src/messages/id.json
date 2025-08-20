@@ -735,10 +735,10 @@
     ]
   },
   "SolDifferences": {
-    "title": "See The Differences",
-    "hint": "Hide Information",
+    "title": "Lihat Perbedaan",
+    "hint": "Sembunyikan Informasi",
     "note": "*Syarat&Ketentuan<br><ul><li>Paket dapat disesuaikan dengan kebutuhan rumah Anda.</li><li>Harga belum termasuk PPN.</li><li>Harga belum termasuk biaya instalasi profesional.</li></ul>",
-    "serviceTitle": "Service Fee"
+    "serviceTitle": "Biaya Servis"
   },
   "SolFAQ": {
     "title": "Pertanyaan Umum",
@@ -953,10 +953,10 @@
     ]
   },
   "AlarmDifferences": {
-    "title": "See The Differences",
-    "hint": "Hide Information",
+    "title": "Lihat Perbedaan",
+    "hint": "Sembunyikan Informasi",
     "note": "*Syarat&Ketentuan<br><ul><li>Paket dapat disesuaikan dengan kebutuhan rumah Anda.</li><li>Harga belum termasuk PPN.</li><li>Harga belum termasuk biaya instalasi profesional.</li></ul>",
-    "serviceTitle": "Service Fee"
+    "serviceTitle": "Biaya Servis"
   },
   "AlarmFAQ": {
     "title": "Pertanyaan Umum",
