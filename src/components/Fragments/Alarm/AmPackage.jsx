@@ -21,6 +21,10 @@ const AmPackage = (props) => {
   const SoPackagesBuy = t.raw(packagesBuy);
   const SoPackagesRent = t.raw(packagesRent);
 
+  const locale = useTranslations();
+  const perMonth = locale === "en" ? "month" : "bulan";
+  const textPrice = locale === "en" ? "PRICE" : "HARGA";
+
   const isDesktop = useIsDesktop();
   const [activeTab, setActiveTab] = useState(0); // 0 = Rent, 1 = Buy
 
@@ -163,7 +167,7 @@ const AmPackage = (props) => {
                               IDR{" "}
                             </span>
                             <span className="text-[25px] lg:text-[30px] font-bold text-navyblue leading-[1]">
-                              RP {item.price}
+                              Rp {item.price}
                             </span>
                           </div>
 
@@ -320,7 +324,7 @@ const AmPackage = (props) => {
                     <div className="grid grid-cols-12 bg-tosca">
                       <div className="py-4 lg:py-6 col-span-4 flex flex-col items-center justify-center">
                         <p className="text-white text-[13px] lg:text-xl font-bold uppercase">
-                          Price
+                          {textPrice}
                         </p>
                       </div>
 
@@ -331,8 +335,8 @@ const AmPackage = (props) => {
                               key={index}
                               className="py-4 lg:py-6 col-span-4 flex flex-col items-center justify-center"
                             >
-                              <p className="text-white text-[13px] lg:text-xl font-bold uppercase">
-                                RP {item.price}
+                              <p className="text-white text-[13px] lg:text-xl font-bold">
+                                Rp {item.price}
                               </p>
                             </div>
                           )
@@ -372,7 +376,7 @@ const AmPackage = (props) => {
                         {/* Basic */}
                         <div className="col-span-4 p-4 flex flex-col items-center justify-center border-r-[1px] border-[#0000001A]">
                           <p className="text-[13px] lg:text-xl text-darkblue font-bold">
-                            RP{" "}
+                            Rp{" "}
                             {
                               Packages.find(
                                 (pkg) =>
@@ -382,13 +386,14 @@ const AmPackage = (props) => {
                             }
                           </p>
                           <p className="text-[13px] lg:text-lg text-darkblue">
-                            /month
+                            {"/"}
+                            {perMonth}
                           </p>
                         </div>
                         {/* Pro */}
                         <div className="col-span-4 p-4 flex flex-col items-center justify-center">
                           <p className="text-[13px] lg:text-xl font-bold text-darkblue">
-                            RP{" "}
+                            Rp{" "}
                             {
                               Packages.find(
                                 (pkg) =>
@@ -399,7 +404,8 @@ const AmPackage = (props) => {
                             }
                           </p>
                           <p className="text-[13px] lg:text-lg text-darkblue">
-                            /month
+                            {"/"}
+                            {perMonth}
                           </p>
                         </div>
                       </div>
@@ -549,7 +555,7 @@ const AmPackage = (props) => {
                     <div className="grid grid-cols-12 bg-tosca">
                       <div className="py-4 lg:py-6 col-span-4 flex flex-col items-center justify-center">
                         <p className="text-white text-[13px] lg:text-xl font-bold uppercase">
-                          Price
+                          {textPrice}
                         </p>
                       </div>
 
@@ -560,8 +566,8 @@ const AmPackage = (props) => {
                               key={index}
                               className="py-4 lg:py-6 col-span-4 flex flex-col items-center justify-center"
                             >
-                              <p className="text-white text-[13px] lg:text-xl font-bold uppercase">
-                                RP {item.price}
+                              <p className="text-white text-[13px] lg:text-xl font-bold">
+                                Rp {item.price}
                               </p>
                             </div>
                           )
