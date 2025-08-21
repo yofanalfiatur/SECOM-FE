@@ -522,8 +522,8 @@
 
   "SolBanner": {
     "title": ["Keamanan yang Dapat Diandalkan, Untuk ", "Semua Keluarga"],
-    "background": "/img/temp/solutions/sol-bg-2x.jpg",
-    "backgroundMd": "/img/temp/solutions/sol-bg-2x.jpg"
+    "background": "/img/temp/solutions/sol-bg-high.jpg",
+    "backgroundMd": "/img/temp/solutions/sol-bg-high.jpg"
   },
 
   "SolOverview": {

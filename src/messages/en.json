@@ -525,8 +525,8 @@
 
   "SolBanner": {
     "title": ["Reliable Security for ", "Every Family"],
-    "background": "/img/temp/solutions/sol-bg-2x.jpg",
-    "backgroundMd": "/img/temp/solutions/sol-bg-2x.jpg"
+    "background": "/img/temp/solutions/sol-bg-high.jpg",
+    "backgroundMd": "/img/temp/solutions/sol-bg-high.jpg"
   },
   "SolOverview": {
     "desc": "<b>Your home is where life happens</b>, where children grow, memories are made, and safety should never be in question. <b>At SECOM, we provide personalized security solutions</b> to help you <b>protect your home with confidence and care.</b>",
