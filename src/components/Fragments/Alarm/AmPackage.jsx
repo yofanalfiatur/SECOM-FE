@@ -237,7 +237,7 @@ const AmPackage = (props) => {
       </div>
 
       {/* see the differences */}
-      <div className="flex flex-col pb-9 pt-6 lg:pt-8 lg:pb-20  am-diff">
+      <div className="flex flex-col pt-6 lg:pt-8 am-diff">
         {/* BUY */}
         {activeTab === 1 && (
           <div className="container mx-auto flex flex-col items-center am-dif__buy">
@@ -458,12 +458,6 @@ const AmPackage = (props) => {
                   </svg>
                 </button>
               )}
-
-              {/* Hint */}
-              <div
-                className="text-[#13223399] mt-7 lg:mt-10 text-sm lg:text-[16px]"
-                dangerouslySetInnerHTML={{ __html: DifferncesInfo.note }}
-              />
             </div>
           </div>
         )}
@@ -621,15 +615,18 @@ const AmPackage = (props) => {
                   </svg>
                 </button>
               )}
-
-              {/* Hint */}
-              <div
-                className="text-[#13223399] mt-7 lg:mt-10 text-sm lg:text-[16px] package-note"
-                dangerouslySetInnerHTML={{ __html: DifferncesInfo.note }}
-              />
             </div>
           </div>
         )}
+      </div>
+      <div className="flex flex-col container mx-auto items-center">
+        <div className="w-full lg:w-10/12 flex flex-col pb-9 lg:pb-20">
+          {/* Hint */}
+          <div
+            className="text-[#13223399] mt-7 lg:mt-10 text-sm lg:text-[16px] package-note"
+            dangerouslySetInnerHTML={{ __html: DifferncesInfo.note }}
+          />
+        </div>
       </div>
     </section>
   );
