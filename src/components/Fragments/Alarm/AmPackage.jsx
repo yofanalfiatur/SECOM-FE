@@ -169,7 +169,9 @@ const AmPackage = (props) => {
                               <span className="font-bold">{item.price}</span>
 
                               {activeTab === 0 && (
-                                <span>/{locale === "en" ? "mo" : "bulan"}</span>
+                                <span>
+                                  /{locale === "en" ? "month" : "bulan"}
+                                </span>
                               )}
                             </p>
                           </div>
@@ -209,7 +211,7 @@ const AmPackage = (props) => {
                                         {sub.fee}
                                       </span>
                                       <span>
-                                        /{locale === "en" ? "mo" : "bulan"}
+                                        /{locale === "en" ? "month" : "bulan"}
                                       </span>
                                     </p>
                                   </div>
@@ -395,7 +397,7 @@ const AmPackage = (props) => {
                           </p>
                           <p className="text-[13px] lg:text-lg text-darkblue">
                             {"/"}
-                            {locale === "en" ? "mo" : "bulan"}
+                            {locale === "en" ? "month" : "bulan"}
                           </p>
                         </div>
                         {/* Pro */}
