@@ -165,7 +165,7 @@ const AmPackage = (props) => {
                               IDR{" "}
                             </span> */}
                             <p className="text-[25px] lg:text-[30px] font-bold text-navyblue leading-[1] w-full flex flex-row gap-1">
-                              <span>Rp </span>
+                              <span>IDR </span>
                               {item.price}
                             </p>
                           </div>
@@ -198,7 +198,7 @@ const AmPackage = (props) => {
                                   </span>
                                   <div className="flex flex-row items-start">
                                     <span className="text-[8px] leading-[1] mr-[1px] mt-[1px]">
-                                      Rp
+                                      IDR
                                     </span>
                                     <span className="text-sm leading-[1] font-bold">
                                       {sub.fee}
@@ -335,7 +335,7 @@ const AmPackage = (props) => {
                               className="py-4 lg:py-6 col-span-4 flex flex-col items-center justify-center"
                             >
                               <p className="text-white text-[13px] lg:text-xl font-bold">
-                                Rp {item.price}
+                                IDR {item.price}
                               </p>
                             </div>
                           )
@@ -375,7 +375,7 @@ const AmPackage = (props) => {
                         {/* Basic */}
                         <div className="col-span-4 p-4 flex flex-col items-center justify-center border-r-[1px] border-[#0000001A]">
                           <p className="text-[13px] lg:text-xl text-darkblue font-bold">
-                            Rp{" "}
+                            IDR{" "}
                             {
                               Packages.find(
                                 (pkg) =>
@@ -392,7 +392,7 @@ const AmPackage = (props) => {
                         {/* Pro */}
                         <div className="col-span-4 p-4 flex flex-col items-center justify-center">
                           <p className="text-[13px] lg:text-xl font-bold text-darkblue">
-                            Rp{" "}
+                            IDR{" "}
                             {
                               Packages.find(
                                 (pkg) =>
@@ -566,7 +566,7 @@ const AmPackage = (props) => {
                               className="py-4 lg:py-6 col-span-4 flex flex-col items-center justify-center"
                             >
                               <p className="text-white text-[13px] lg:text-xl font-bold">
-                                Rp {item.price}
+                                IDR {item.price}
                               </p>
                             </div>
                           )
