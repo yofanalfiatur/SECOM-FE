@@ -244,7 +244,7 @@ const AmReason = ({ translationKey }) => {
       </div>
 
       {/* Card stack float */}
-      <div className="mt-[-40px] lg:mt-[unset] lg:absolute bottom-0 lg:bottom-[unset] w-full h-[315px] sm:h-[300px] lg:h-full pointer-events-auto lg:pointer-events-none z-1">
+      <div className="mt-[-40px] lg:mt-[unset] lg:absolute bottom-0 lg:bottom-[unset] w-full h-[365px] sm:h-[300px] lg:h-full pointer-events-auto lg:pointer-events-none z-1">
         <div className="container h-full flex flex-row justify-end items-center mx-auto">
           <div className="w-full lg:w-5/12 h-full lg:h-[60%] relative flex flex-col justify-center items-start">
             <AnimatePresence initial={false} mode="popLayout">
@@ -279,7 +279,7 @@ const AmReason = ({ translationKey }) => {
                     }}
                   >
                     <div
-                      className={`py-10 pl-7 pr-12 lg:py-8 lg:pl-10 lg:pr-18 flex flex-col justify-center h-full transition-all ease duration-200 ${
+                      className={`py-10 pl-7 pr-7 lg:py-8 lg:pl-10 lg:pr-18 flex flex-col justify-center h-full transition-all ease duration-200 ${
                         position === 0 ? "bg-navyblue" : "bg-tosca"
                       }`}
                     >
