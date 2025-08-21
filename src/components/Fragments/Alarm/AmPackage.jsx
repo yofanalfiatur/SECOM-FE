@@ -164,9 +164,13 @@ const AmPackage = (props) => {
                             {/* <span className="text-xs lg:text-sm font-bold text-navyblue leading-[1] mt-1 mr-1">
                               IDR{" "}
                             </span> */}
-                            <p className="text-[25px] lg:text-[30px] font-bold text-navyblue leading-[1] w-full flex flex-row gap-1">
-                              <span>IDR </span>
-                              {item.price}
+                            <p className="text-[25px] lg:text-[30px] text-navyblue leading-[1] w-full flex flex-row gap-2">
+                              <span className="font-bold">IDR </span>
+                              <span className="font-bold">{item.price}</span>
+
+                              {activeTab === 0 && (
+                                <span>/{locale === "en" ? "mo" : "bulan"}</span>
+                              )}
                             </p>
                           </div>
 
@@ -197,12 +201,17 @@ const AmPackage = (props) => {
                                     {sub.text}
                                   </span>
                                   <div className="flex flex-row items-start">
-                                    <span className="text-[8px] leading-[1] mr-[1px] mt-[1px]">
+                                    <p className="text-[8px] leading-[1] mr-[1px] mt-[1px]">
                                       IDR
-                                    </span>
-                                    <span className="text-sm leading-[1] font-bold">
-                                      {sub.fee}
-                                    </span>
+                                    </p>
+                                    <p className="text-sm leading-[1] flex flex-row gap-1">
+                                      <span className="font-bold">
+                                        {sub.fee}
+                                      </span>
+                                      <span>
+                                        /{locale === "en" ? "mo" : "bulan"}
+                                      </span>
+                                    </p>
                                   </div>
                                 </div>
                               ))}
@@ -386,7 +395,7 @@ const AmPackage = (props) => {
                           </p>
                           <p className="text-[13px] lg:text-lg text-darkblue">
                             {"/"}
-                            {locale === "en" ? "month" : "bulan"}
+                            {locale === "en" ? "mo" : "bulan"}
                           </p>
                         </div>
                         {/* Pro */}

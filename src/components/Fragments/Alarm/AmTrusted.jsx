@@ -32,7 +32,7 @@ const AmTrusted = ({ translationKey }) => {
               <div className="flex flex-col justify-center text-left py-3 lg:py-[22px] px-4 lg:px-8 text-xs lg:text-xl font-semibold font-raleway w-[40%] lg:w-1/2">
                 {locale === "en" ? "FEATURE" : "FITUR"}
               </div>
-              <div className="text-center py-3 lg:py-[22px] px-0 lg:px-8 flex flex-col items-center justify-center w-[30%] lg:w-1/4">
+              <div className="text-center py-3 lg:py-[22px] px-0 lg:px-8 flex flex-col lg:flex-row gap-1 lg:gap-3 items-center justify-center w-[30%] lg:w-1/4">
                 <Image
                   src={AlarmTrusted.logoSecom}
                   alt="secom"
@@ -40,8 +40,11 @@ const AmTrusted = ({ translationKey }) => {
                   height={28}
                   className="w-[66px] my-auto h-[28px] lg:w-max lg:h-auto object-contain"
                 />
+                <p className="text-white text-xs lg:text-xl font-semibold uppercase">
+                  {AlarmTrusted.textSecom}
+                </p>
               </div>
-              <div className="text-center py-3 lg:py-[22px] px-8 text-xs lg:text-xl font-semibold font-raleway w-[30%] lg:w-1/4">
+              <div className="text-center py-3 lg:py-[22px] px-1 lg:px-8 text-xs lg:text-xl font-semibold font-raleway w-[30%] lg:w-1/4 uppercase flex flex-col justify-center">
                 {AlarmTrusted.textOther}
               </div>
             </div>

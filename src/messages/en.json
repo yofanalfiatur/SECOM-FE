@@ -583,8 +583,8 @@
   "SolProtect": {
     "title": "Circle of Care for Your Safety",
     "desc": "",
-    "image": "/img/temp/solutions/protect-en-min.png",
-    "imageMobile": "/img/temp/solutions/Circle-of-Service-Mobile-Sol.png",
+    "image": "/img/temp/solutions/Circle-of-Service-ENG.png",
+    "imageMobile": "/img/temp/solutions/Circle-of-Service-Mobile-ENG.png",
     "items": [
       {
         "title": "Emergency Detected",
@@ -606,8 +606,8 @@
     }
   },
   "SolProduct": {
-    "title": "Advanced Technology, Trusted Protection",
-    "desc": "Explore SECOM's full range of advanced security products designed to protect your business, assets, and people."
+    "title": "Your Peace of Mind Starts with the Right Security",
+    "desc": "Explore SECOM's range of smart security products designed to keep your home and family safe. Anytime, anywhere."
   },
   "SolCorners": {
     "title": "Every Room. Every Access. Fully Protected",
@@ -645,7 +645,7 @@
         "icon": "/img/temp/alarm/Icon App Benefits-Log.svg"
       },
       {
-        "title": "Manage Multiple Sites",
+        "title": "Manage Multiple Homes",
         "desc": "Check and control more than one house from the same app.",
         "icon": "/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
       },
@@ -667,9 +667,10 @@
     ]
   },
   "SolTrusted": {
-    "title": "Your Business Deserves More Than Basic Security",
+    "title": "Why SECOM Is More Than Just a Camera.",
     "desc": "",
     "logoSecom": "/img/secom-logo.png",
+    "textSecom": "Smart Security",
     "textOther": "CCTV Only",
     "table": [
       {
@@ -832,8 +833,8 @@
   "AlarmProtect": {
     "title": "Integrated Security for Your Business",
     "desc": "",
-    "image": "/img/temp/alarm/Circle-of-Service.png",
-    "imageMobile": "/img/temp/alarm/Circle-of-Service-Mobile.png",
+    "image": "/img/temp/solutions/Circle-of-Service-ENG.png",
+    "imageMobile": "/img/temp/solutions/Circle-of-Service-Mobile-ENG.png",
     "items": [
       {
         "title": "Emergency Detected",
@@ -856,7 +857,7 @@
   },
   "AlarmProduct": {
     "title": "Advanced Technology, Trusted Protection",
-    "desc": "Explore SECOM's full range of advanced security products designed to protect your business, assets, and people."
+    "desc": "Explore SECOM's full range of security products designed to protect your business, assets, and employees."
   },
   "AlarmCorners": {
     "title": "Protect Every Corner of Your Business",
@@ -894,7 +895,7 @@
         "icon": "/img/temp/alarm/Icon App Benefits-Log.svg"
       },
       {
-        "title": "Manage Multiple Homes",
+        "title": "Manage Multiple Sites",
         "desc": "Check and control more than one house from the same app.",
         "icon": "/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
       },
@@ -919,6 +920,7 @@
     "title": "Your Business Deserves More Than Basic Security",
     "desc": "",
     "logoSecom": "/img/secom-logo.png",
+    "textSecom": "",
     "textOther": "Other Company",
     "table": [
       {
@@ -1408,9 +1410,9 @@
       "pro": "1"
     },
     {
-      "device": "PIR Camera",
+      "device": "PIR Camera Indoor",
       "image": "/img/temp/products/PIR-Camera-Indoor.png",
-      "basic": "1",
+      "basic": "-",
       "pro": "1"
     },
     {
@@ -1426,9 +1428,9 @@
       "pro": "5"
     },
     {
-      "device": "Motion Sensor",
+      "device": "PIR Indoor",
       "image": "/img/temp/products/PIR-Indoor.png",
-      "basic": "1",
+      "basic": "-",
       "pro": "1"
     },
     {
@@ -1438,15 +1440,21 @@
       "pro": "1"
     },
     {
+      "device": "Heat Sensor",
+      "image": "/img/temp/products/Heat-Sensor.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
       "device": "Siren",
       "image": "/img/temp/products/Siren-Box.png",
-      "basic": "-",
+      "basic": "1",
       "pro": "1"
     },
     {
       "device": "Remote Control",
       "image": "/img/temp/products/Remote-Control.png",
-      "basic": "-",
+      "basic": "1",
       "pro": "1"
     },
     {
@@ -1458,7 +1466,7 @@
     {
       "device": "Keypad",
       "image": "/img/temp/products/Keypad.png",
-      "basic": "-",
+      "basic": "1",
       "pro": "1"
     }
   ],
@@ -1470,9 +1478,9 @@
       "pro": "1"
     },
     {
-      "device": "PIR Camera",
+      "device": "PIR Camera Indoor",
       "image": "/img/temp/products/PIR-Camera-Indoor.png",
-      "basic": "1",
+      "basic": "-",
       "pro": "1"
     },
     {
@@ -1488,9 +1496,9 @@
       "pro": "5"
     },
     {
-      "device": "Motion Sensor",
+      "device": "PIR Indoor",
       "image": "/img/temp/products/PIR-Indoor.png",
-      "basic": "1",
+      "basic": "-",
       "pro": "1"
     },
     {
@@ -1500,15 +1508,21 @@
       "pro": "1"
     },
     {
+      "device": "Heat Sensor",
+      "image": "/img/temp/products/Heat-Sensor.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
       "device": "Siren",
       "image": "/img/temp/products/Siren-Box.png",
-      "basic": "-",
+      "basic": "1",
       "pro": "1"
     },
     {
       "device": "Remote Control",
       "image": "/img/temp/products/Remote-Control.png",
-      "basic": "-",
+      "basic": "1",
       "pro": "1"
     },
     {
@@ -1520,7 +1534,7 @@
     {
       "device": "Keypad",
       "image": "/img/temp/products/Keypad.png",
-      "basic": "-",
+      "basic": "1",
       "pro": "1"
     }
   ]

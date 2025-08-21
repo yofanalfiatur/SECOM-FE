@@ -107,15 +107,12 @@ const ResQuote = () => {
           {/* Image Slides */}
           <SplideTrack className="res-quote__track">
             {ReQuote.map((item, index) => (
-              <SplideSlide
-                key={index}
-                className="h-[300px] lg:h-[600px] flex flex-col"
-              >
+              <SplideSlide key={index} className="h-max flex flex-col">
                 <div className="flex justify-center h-full items-center w-full bg-gray-200">
                   <Link
                     key={index}
                     href={item.linkVideo}
-                    className="glightbox w-full h-full relative"
+                    className="glightbox w-full h-full relative flex flex-col justify-center items-center"
                   >
                     <Image
                       src={
@@ -126,7 +123,7 @@ const ResQuote = () => {
                       width={1840}
                       height={1200}
                       alt={`Quote ${index + 1}`}
-                      className="w-full h-full object-cover absolute top-0 left-0 opacity-100"
+                      className="w-full h-auto object-center top-0 left-0 opacity-100"
                     />
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-[87px] z-0 triangle-shape scale-60 md:scale-100">
                       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 triangle-shape animated-gradient-bg"></div>

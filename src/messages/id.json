@@ -643,7 +643,7 @@
         "icon": "/img/temp/alarm/Icon App Benefits-Log.svg"
       },
       {
-        "title": "Kelola Banyak Cabang",
+        "title": "Kelola Banyak Rumah",
         "desc": "Pantau dan kendalikan lebih dari satu lokasi melalui satu aplikasi.",
         "icon": "/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
       },
@@ -668,6 +668,7 @@
     "title": "Mengapa SECOM Lebih dari Kamera",
     "desc": "",
     "logoSecom": "/img/secom-logo.png",
+    "textSecom": "Smart Security",
     "textOther": "Hanya CCTV",
     "table": [
       {
@@ -723,11 +724,11 @@
     ]
   },
   "SolPackage": {
-    "title": "Paket Keamanan yang Disesuaikan untuk Setiap Jenis Bisnis",
-    "desc": "Mulai dari toko kecil hingga fasilitas besar, paket kami dirancang fleksibel untuk memberikan perlindungan optimal bagi kelangsungan operasional bisnis Anda.",
+    "title": "Paket Keamanan Fleksibel untuk Segala Kebutuhan",
+    "desc": "Setiap keluarga punya kebutuhan yang berbeda. SECOM hadir dengan pilihan paket keamanan yang fleksibel dan mudah dipilih. Lindungi rumah Anda dengan solusi pintar yang dirancang untuk kehidupan nyata.",
     "tabs": [
       {
-        "title": "RENTAL",
+        "title": "SEWA",
         "desc": ""
       },
       {
@@ -912,6 +913,7 @@
     "title": "Bukan Sekadar Keamanan Biasa. Untuk Bisnis Anda.",
     "desc": "",
     "logoSecom": "/img/secom-logo.png",
+    "textSecom": "",
     "textOther": "Perusahaan Lain",
     "table": [
       {
@@ -951,7 +953,7 @@
     "desc": "Mulai dari toko kecil hingga fasilitas besar, paket kami dirancang fleksibel untuk memberikan perlindungan optimal bagi kelangsungan operasional bisnis Anda.",
     "tabs": [
       {
-        "title": "RENTAL",
+        "title": "SEWA",
         "desc": ""
       },
       {
@@ -1402,9 +1404,9 @@
       "pro": "1"
     },
     {
-      "device": "PIR Camera",
+      "device": "PIR Camera Indoor",
       "image": "/img/temp/products/PIR-Camera-Indoor.png",
-      "basic": "1",
+      "basic": "-",
       "pro": "1"
     },
     {
@@ -1420,9 +1422,9 @@
       "pro": "5"
     },
     {
-      "device": "Motion Sensor",
+      "device": "PIR Indoor",
       "image": "/img/temp/products/PIR-Indoor.png",
-      "basic": "1",
+      "basic": "-",
       "pro": "1"
     },
     {
@@ -1432,15 +1434,21 @@
       "pro": "1"
     },
     {
+      "device": "Heat Sensor",
+      "image": "/img/temp/products/Heat-Sensor.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
       "device": "Siren",
       "image": "/img/temp/products/Siren-Box.png",
-      "basic": "-",
+      "basic": "1",
       "pro": "1"
     },
     {
       "device": "Remote Control",
       "image": "/img/temp/products/Remote-Control.png",
-      "basic": "-",
+      "basic": "1",
       "pro": "1"
     },
     {
@@ -1452,7 +1460,7 @@
     {
       "device": "Keypad",
       "image": "/img/temp/products/Keypad.png",
-      "basic": "-",
+      "basic": "1",
       "pro": "1"
     }
   ],
@@ -1464,9 +1472,9 @@
       "pro": "1"
     },
     {
-      "device": "PIR Camera",
+      "device": "PIR Camera Indoor",
       "image": "/img/temp/products/PIR-Camera-Indoor.png",
-      "basic": "1",
+      "basic": "-",
       "pro": "1"
     },
     {
@@ -1482,9 +1490,9 @@
       "pro": "5"
     },
     {
-      "device": "Motion Sensor",
+      "device": "PIR Indoor",
       "image": "/img/temp/products/PIR-Indoor.png",
-      "basic": "1",
+      "basic": "-",
       "pro": "1"
     },
     {
@@ -1494,15 +1502,21 @@
       "pro": "1"
     },
     {
+      "device": "Heat Sensor",
+      "image": "/img/temp/products/Heat-Sensor.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
       "device": "Siren",
       "image": "/img/temp/products/Siren-Box.png",
-      "basic": "-",
+      "basic": "1",
       "pro": "1"
     },
     {
       "device": "Remote Control",
       "image": "/img/temp/products/Remote-Control.png",
-      "basic": "-",
+      "basic": "1",
       "pro": "1"
     },
     {
@@ -1514,7 +1528,7 @@
     {
       "device": "Keypad",
       "image": "/img/temp/products/Keypad.png",
-      "basic": "-",
+      "basic": "1",
       "pro": "1"
     }
   ]
