@@ -3,10 +3,11 @@
 import Image from "next/image";
 import React from "react";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const AmTrusted = ({ translationKey }) => {
   const t = useTranslations();
+  const locale = useLocale();
   const AlarmTrusted = t.raw(translationKey);
 
   const isDesktop = useIsDesktop();
@@ -29,7 +30,7 @@ const AmTrusted = ({ translationKey }) => {
             {/* Table Header */}
             <div className="bg-navyblue text-white flex flex-row">
               <div className="flex flex-col justify-center text-left py-3 lg:py-[22px] px-4 lg:px-8 text-xs lg:text-xl font-semibold font-raleway w-[40%] lg:w-1/2">
-                FEATURE
+                {locale === "en" ? "FEATURE" : "FITUR"}
               </div>
               <div className="text-center py-3 lg:py-[22px] px-0 lg:px-8 flex flex-col items-center justify-center w-[30%] lg:w-1/4">
                 <Image
@@ -41,7 +42,7 @@ const AmTrusted = ({ translationKey }) => {
                 />
               </div>
               <div className="text-center py-3 lg:py-[22px] px-8 text-xs lg:text-xl font-semibold font-raleway w-[30%] lg:w-1/4">
-                OTHER BRAND
+                {AlarmTrusted.textOther}
               </div>
             </div>
 

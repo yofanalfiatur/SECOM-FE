@@ -670,6 +670,7 @@
     "title": "Your Business Deserves More Than Basic Security",
     "desc": "",
     "logoSecom": "/img/secom-logo.png",
+    "textOther": "CCTV Only",
     "table": [
       {
         "feature": "24/7 Monitoring",
@@ -918,6 +919,7 @@
     "title": "Your Business Deserves More Than Basic Security",
     "desc": "",
     "logoSecom": "/img/secom-logo.png",
+    "textOther": "Other Company",
     "table": [
       {
         "feature": "24/7 Monitoring",
@@ -957,11 +959,11 @@
     "tabs": [
       {
         "title": "RENT",
-        "desc": "Qui ipsorum lingua Celtae,"
+        "desc": ""
       },
       {
         "title": "Buy",
-        "desc": "Qui ipsorum lingua Celtae,"
+        "desc": ""
       }
     ]
   },

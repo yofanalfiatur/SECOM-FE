@@ -668,6 +668,7 @@
     "title": "Mengapa SECOM Lebih dari Kamera",
     "desc": "",
     "logoSecom": "/img/secom-logo.png",
+    "textOther": "Hanya CCTV",
     "table": [
       {
         "feature": "Pemantauan 24/7",
@@ -911,6 +912,7 @@
     "title": "Bukan Sekadar Keamanan Biasa. Untuk Bisnis Anda.",
     "desc": "",
     "logoSecom": "/img/secom-logo.png",
+    "textOther": "Perusahaan Lain",
     "table": [
       {
         "feature": "Pemantauan 24/7",
@@ -925,12 +927,12 @@
       {
         "feature": "Akses Aplikasi Ponsel",
         "secom": true,
-        "other": "limited"
+        "other": "Terbatas"
       },
       {
         "feature": "Dukungan Lokal di Indonesia",
         "secom": true,
-        "other": "limited"
+        "other": "Terbatas"
       },
       {
         "feature": "Instalasi oleh Tim Profesional",
@@ -940,7 +942,7 @@
       {
         "feature": "Disesuaikan untuk Setiap Bisnis",
         "secom": true,
-        "other": "limited"
+        "other": "Terbatas"
       }
     ]
   },
