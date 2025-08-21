@@ -308,7 +308,7 @@
         "desc": "Your current protection isn't enough. Find out the system that gives your family real peace of mind.",
         "btn": {
           "text": "Discover Now",
-          "href": "/alarm",
+          "href": "/solutions/#am-prod",
           "target": "_self"
         }
       },
