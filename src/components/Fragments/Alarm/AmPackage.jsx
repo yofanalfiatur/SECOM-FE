@@ -140,7 +140,7 @@ const AmPackage = (props) => {
                     <div className="w-full lg:w-[30%] flex flex-col">
                       <div className="opacity-100 translate-y-0 transition duration-300 flex flex-col items-center">
                         <p className="bg-navyblue text-sm lg:text-lg text-white text-center py-2 rounded-b-[10px] w-[150px]">
-                          {item.device} Device
+                          {item.device} Devices
                         </p>
                       </div>
                       <div className="relative">
