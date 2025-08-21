@@ -66,8 +66,8 @@ const MenuDesktop = () => {
                             <path
                               d="M1 5L13 5M13 5L8.5 9.5M13 5L8.5 0.5"
                               stroke="white"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             />
                           </svg>
                         </Link>

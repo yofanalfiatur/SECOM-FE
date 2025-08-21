@@ -524,7 +524,7 @@
   },
 
   "SolBanner": {
-    "title": ["Reliable Security for ", "Every Family"],
+    "title": "Reliable Security for <b>Every Family</b>",
     "background": "/img/temp/solutions/sol-bg-high.jpg",
     "backgroundMd": "/img/temp/solutions/sol-bg-high.jpg"
   },
@@ -550,26 +550,31 @@
     "items": [
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-1.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-1.jpg",
         "title": "We Listen First",
         "desc": "Our security experts assess your space and recommend a tailored solution that fits your needs and lifestyle."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-2.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-2.jpg",
         "title": "Smart Design, Full Coverage",
         "desc": "We carefully plan where each alarm, sensor, and camera goes, ensuring every corner is protected."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-3.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-3.jpg",
         "title": "Seamless Setup",
         "desc": "Our professional team installs your system quickly, cleanly, and with minimal disruption to your home."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-4.jpeg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-4.jpg",
         "title": "Always On, Always Watching",
         "desc": "Your system is linked to SECOM's Control Center, ready to respond to emergencies at any hour."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-5.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-5.jpg",
         "title": "Protection That Lasts",
         "desc": "We provide routine maintenance checks and service so your system stays reliable, year after year."
       }
@@ -767,10 +772,7 @@
   },
 
   "AlarmBanner": {
-    "title": [
-      "Introduce SECOM's alarm sensor solutions specifically tailored for Business ",
-      "24/7."
-    ],
+    "title": "Introduce <b>SECOM's</b> alarm sensor solutions specifically tailored for <b>Business 24/7.</b>",
     "background": "/img/temp/alarm/alarm-banner.jpg",
     "backgroundMd": "/img/temp/alarm/alarm-banner-mobile.jpg"
   },
@@ -796,26 +798,31 @@
     "items": [
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-1.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-1.jpg",
         "title": "Start with Understanding",
         "desc": "Our security specialists take time to assess your business site and operations, recommending a solution tailored to your industry needs"
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-2.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-2.jpg",
         "title": "Strategic Design, Complete Coverage",
         "desc": "We design the layout with precision. Placing sensors, alarms, and cameras where they matter most to protect every critical area."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-3.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-3.jpg",
         "title": "Efficient, Professional Installation",
         "desc": "Our expert technicians ensure a smooth setup process with minimal disruption to your business activities."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-4.jpeg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-4.jpg",
         "title": "24/7 Monitoring, Always On",
         "desc": "Your system is connected to SECOM's Control Center, providing real-time monitoring and rapid emergency response at any time of day."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-5.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-5.jpg",
         "title": "Ongoing Support",
         "desc": "We deliver regular system checks and proactive service, ensuring your security system remains dependable as your business grows."
       }

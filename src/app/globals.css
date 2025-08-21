@@ -730,6 +730,17 @@ main {
   }
 }
 
+.am-banner__title .highlighted {
+  color: inherit;
+  font-weight: inherit;
+  padding-bottom: 2px;
+
+  background-image: linear-gradient(#009fa7, #009fa7);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 4px;
+}
+
 .am-value .am-value__desc b,
 .am-value .am-value__desc strong {
   color: black; /* default dulu */

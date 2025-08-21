@@ -231,7 +231,7 @@ const AmReason = ({ translationKey }) => {
               className="relative z-1 w-full h-max lg:h-full"
             >
               <Image
-                src={item.image}
+                src={isDesktop ? item.image : item.imageMd}
                 alt=""
                 width={1920}
                 height={693}

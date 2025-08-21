@@ -521,7 +521,7 @@
   },
 
   "SolBanner": {
-    "title": ["Keamanan yang Dapat Diandalkan, Untuk ", "Semua Keluarga"],
+    "title": "Keamanan yang Dapat Diandalkan, <b>Untuk Semua Keluarga</b>",
     "background": "/img/temp/solutions/sol-bg-high.jpg",
     "backgroundMd": "/img/temp/solutions/sol-bg-high.jpg"
   },
@@ -548,26 +548,31 @@
     "items": [
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-1.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-1.jpg",
         "title": "Mulai dari Mendengarkan",
         "desc": "Tim SECOM akan menilai kondisi rumah Anda dan merekomendasikan solusi yang sesuai dengan kebutuhan serta gaya hidup Anda."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-2.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-2.jpg",
         "title": "Desain Cerdas, Perlindungan Menyeluruh",
         "desc": "Kami merencanakan dengan cermat penempatan setiap sensor dan kamera, untuk memastikan setiap sudut rumah Anda terlindungi."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-3.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-3.jpg",
         "title": "Pemasangan Anti Ribet",
         "desc": "Tim teknisi kami memasang sistem dengan cepat, rapi, dan tanpa mengganggu kenyamanan rumah Anda."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-4.jpeg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-4.jpg",
         "title": "Selalu Aktif, Selalu Siaga",
         "desc": "Sistem Anda terhubung langsung ke Control Center SECOM, siap merespons keadaan darurat kapan pun dibutuhkan."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-5.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-5.jpg",
         "title": "Perlindungan yang Tahan Lama",
         "desc": "Kami menyediakan pengecekan dan perawatan rutin agar sistem Anda tetap andal, tahun demi tahun."
       }
@@ -760,7 +765,7 @@
   },
 
   "AlarmBanner": {
-    "title": ["Sistem Alarm Andal untuk Lindungi Bisnis Anda ", "24/7."],
+    "title": "Sistem Alarm Andal untuk Lindungi <b>Bisnis Anda 24/7</b>",
     "background": "/img/temp/alarm/alarm-banner.jpg",
     "backgroundMd": "/img/temp/alarm/alarm-banner-mobile.jpg"
   },
@@ -786,26 +791,31 @@
     "items": [
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-1.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-1.jpg",
         "title": "Dimulai dengan Pemahaman",
         "desc": "Tim SECOM akan mempelajari lokasi dan operasional bisnis Anda secara menyeluruh, lalu merekomendasikan solusi yang sesuai dengan kebutuhan industri Anda."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-2.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-2.jpg",
         "title": "Desain Strategis, Perlindungan Menyeluruh",
         "desc": "Kami merancang tata letak dengan presisi. Menempatkan sensor, alarm, dan kamera di titik-titik paling krusial untuk melindungi setiap area penting bisnis Anda."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-3.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-3.jpg",
         "title": "Efisien, Instalasi Profesional",
         "desc": "Teknisi kami memastikan proses pemasangan berjalan lancar dengan gangguan seminimal mungkin terhadap aktivitas bisnis Anda."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-4.jpeg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-4.jpg",
         "title": "Pemantauan 24/7. Selalu Siaga.",
         "desc": "Sistem Anda terhubung langsung ke Pusat Kontrol SECOM, memberikan pemantauan real-time dan respons cepat terhadap keadaan darurat kapan saja."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-5.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-5.jpg",
         "title": "Dukungan Berkelanjutan",
         "desc": "Kami melakukan pengecekan rutin dan layanan proaktif agar sistem keamanan Anda tetap andal, seiring pertumbuhan bisnis Anda."
       }
