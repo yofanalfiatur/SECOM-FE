@@ -313,7 +313,9 @@ const AmReason = ({ translationKey }) => {
             {/* Pagination dots */}
             <div
               className={`flex gap-1 mt-6 absolute z-10 pointer-events-auto flex-col top-1/2 right-5 transform -translate-y-1/2 ${
-                isDesktop ? "" : ""
+                isDesktop
+                  ? ""
+                  : "flex-row right-[unset] left-1/2 transform -translate-x-1/2 bottom-3 top-[unset]"
               }`}
             >
               {AlarmReason.items.map((_, index) => (
