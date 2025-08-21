@@ -3,12 +3,13 @@
 import ButtonPrimary from "@/components/Elements/ButtonPrimary";
 import React, { useState } from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
 const ResSurvey = () => {
   const t = useTranslations();
   const ReSurvey = t.raw("ReSurvey");
+  const locale = useLocale();
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -167,13 +168,14 @@ const ResSurvey = () => {
                       {getResult().btn.text}
                     </ButtonPrimary>
                   </div>
-                  <button
+                  {/* hide temp */}
+                  {/* <button
                     onClick={resetSurvey}
                     className="text-navyblue text-lg underline hover:text-tosca transition-colors duration-300 cursor-pointer"
                     disabled={isTransitioning}
                   >
-                    Take Survey Again
-                  </button>
+                    {locale === "en" ? "Take Survey Again" : "Ulangi Survey"}
+                  </button> */}
                 </div>
               )}
             </div>
