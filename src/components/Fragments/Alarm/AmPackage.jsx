@@ -159,6 +159,11 @@ const AmPackage = (props) => {
                         <p className="text-center lg:text-start lg:text-[25px] font-bold font-raleway text-darkblue mb-2">
                           {item.title}
                         </p>
+                        {activeTab === 0 && (
+                          <p className="text-xs lg:text-base font-bold text-navyblue leading-[1] mb-1 text-center lg:text-start">
+                            {locale === "en" ? "Starting from" : "Mulai dari"}
+                          </p>
+                        )}
                         <div className="flex flex-col lg:flex-row items-center mb-2 gap-3">
                           <div className="flex flex-row items-start lg:w-max">
                             {/* <span className="text-xs lg:text-sm font-bold text-navyblue leading-[1] mt-1 mr-1">

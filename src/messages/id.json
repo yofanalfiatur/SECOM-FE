@@ -1161,11 +1161,11 @@
       "price": "18.282.000",
       "serviceFee": [
         {
-          "text": "Service fee 24/7 monitoring only",
+          "text": "Biaya Layanan Pemantauan 24/7",
           "fee": "446.000"
         },
         {
-          "text": "Service fee 24/7 monitoring + dispatch",
+          "text": "Biaya Layanan Pemantauan 24/7 + Respon Fisik",
           "fee": "668.000"
         }
       ],
@@ -1183,11 +1183,11 @@
       },
       "serviceFee": [
         {
-          "text": "Service fee 24/7 monitoring only",
+          "text": "Biaya Layanan Pemantauan 24/7",
           "fee": "465.000"
         },
         {
-          "text": "Service fee 24/7 monitoring + dispatch",
+          "text": "Biaya Layanan Pemantauan 24/7 + Respon Fisik",
           "fee": "687.000"
         }
       ],

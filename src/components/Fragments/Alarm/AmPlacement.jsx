@@ -180,6 +180,8 @@ const AmPlacement = (props) => {
                   <Splide
                     options={{
                       type: "loop",
+                      autoplay: { isDesktop: false, isMobile: true },
+                      interval: 4000,
                       perPage: 1,
                       perMove: 1,
                       gap: "20px",

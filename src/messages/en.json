@@ -600,7 +600,7 @@
       }
     ],
     "btnCTA": {
-      "text": "CONSULT WITH US NOW",
+      "text": "CONSULT NOW",
       "href": "/contact/?location=residential",
       "target": "_self"
     }
@@ -613,7 +613,7 @@
     "title": "Every Room. Every Access. Fully Protected",
     "desc": "",
     "btnConsult": {
-      "text": "CONSULT WITH US NOW",
+      "text": "CONSULT NOW",
       "href": "/contact/?location=residential",
       "target": "_self"
     },
@@ -774,7 +774,7 @@
   },
 
   "AlarmBanner": {
-    "title": "Introduce <b>SECOM's</b> alarm sensor solutions specifically tailored for <b>Business 24/7.</b>",
+    "title": "Reliable Alarm Systems to <b>Protect Your Business 24/7</b>",
     "background": "/img/temp/alarm/alarm-banner.jpg",
     "backgroundMd": "/img/temp/alarm/alarm-banner-mobile.jpg"
   },
@@ -796,7 +796,7 @@
     ]
   },
   "AlarmReason": {
-    "title": "Why Choose Us?",
+    "title": "How Secom Works",
     "items": [
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-1.jpg",
@@ -850,20 +850,20 @@
       }
     ],
     "btnCTA": {
-      "text": "CONSULT WITH US NOW",
+      "text": "CONSULT NOW",
       "href": "/contact/?location=business",
       "target": "_self"
     }
   },
   "AlarmProduct": {
     "title": "Advanced Technology, Trusted Protection",
-    "desc": "Explore SECOM's full range of security products designed to protect your business, assets, and employees."
+    "desc": "Explore SECOM's full range of advanced security products designed to protect your business, assets, and people."
   },
   "AlarmCorners": {
     "title": "Protect Every Corner of Your Business",
     "desc": "",
     "btnConsult": {
-      "text": "CONSULT WITH US NOW",
+      "text": "CONSULT NOW",
       "href": "/contact/?location=business",
       "target": "_self"
     },
@@ -896,7 +896,7 @@
       },
       {
         "title": "Manage Multiple Sites",
-        "desc": "Check and control more than one house from the same app.",
+        "desc": "Check and control more than one site from the same app.",
         "icon": "/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
       },
       {
@@ -949,7 +949,7 @@
         "other": "unavailable"
       },
       {
-        "feature": "Customizable for Every Family",
+        "feature": "Customizable for Every Business",
         "secom": true,
         "other": "limited"
       }
@@ -1153,7 +1153,7 @@
       "title": "Business",
       "price": "1,065,000",
       "serviceFee": "",
-      "desc": "Paket sewa yang sederhana dan terjangkau untuk bisnis kecil atau kantor. Dilengkapi perangkat keamanan esensial untuk memulai perlindungan.",
+      "desc": "A simple and affordable rental package for small businesses or offices. Includes essential security devices to get you started.",
       "device": "8",
       "image": "/img/temp/alarm/Business.png",
       "isRent": true
@@ -1162,7 +1162,7 @@
       "title": "Business PRO",
       "price": "1,464,000",
       "serviceFee": "",
-      "desc": "Perlindungan menyeluruh dengan fitur keamanan canggih dan tambahan fitur keselamatan, ideal untuk area dengan risiko tinggi.",
+      "desc": "Comprehensive protection with advanced security features and added safety features, ideal for high-risk areas.",
       "device": "12",
       "image": "/img/temp/alarm/BusinessPro.png",
       "isRent": true
@@ -1181,7 +1181,7 @@
           "fee": "668,000"
         }
       ],
-      "desc": "Paket pembelian satu kali untuk bisnis kecil atau kantor. Termasuk perangkat keamanan penting untuk memulai. Sederhana, terjangkau, dan sepenuhnya milik Anda.",
+      "desc": "A one-time purchase package for small businesses or offices. Includes essential security devices to get you started. Simple, affordable, and fully yours.",
       "device": "8",
       "image": "/img/temp/alarm/Business.png",
       "isRent": false
@@ -1199,7 +1199,7 @@
           "fee": "687,000"
         }
       ],
-      "desc": "Miliki sistem keamanan lengkap dengan perlindungan canggih dan fitur keselamatan tambahan. Ideal untuk area berisiko tinggi dan keamanan jangka panjang bisnis Anda.",
+      "desc": "Own a complete security system with advanced protection and added safety features, ideal for high-risk areas and long-term business security.",
       "device": "12",
       "image": "/img/temp/alarm/BusinessPro.png",
       "isRent": false
