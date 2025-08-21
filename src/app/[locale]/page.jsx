@@ -1,6 +1,6 @@
 "use client";
 import FloatButton from "@/components/Elements/FloatButton";
-import PromotionDeals from "@/components/Elements/PromotionDeals";
+// import PromotionDeals from "@/components/Elements/PromotionDeals";
 import ResAbout from "@/components/Fragments/Residential/R-About";
 import ResBanner from "@/components/Fragments/Residential/R-Banner";
 import ResPromotion from "@/components/Fragments/Residential/R-Promotion";
@@ -19,8 +19,8 @@ export default async function HomePage() {
       <ResSolution />
       <ResTesti />
       <ResQuote />
-      <ResPromotion />
-      <PromotionDeals />
+      {/* <ResPromotion /> */}
+      {/* <PromotionDeals /> */}
       <FloatButton />
     </>
   );

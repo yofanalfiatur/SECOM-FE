@@ -622,7 +622,7 @@
   "SolApps": {
     "title": "Always Connected. Always Protected",
     "desc": "Stay in control anytime, anywhere with SECOM App. Explore advanced settings via SECOM Smart Security portal on our website. Your data stays private and secure, SECOM can only access your video footage during verified emergencies to ensure your safety.",
-    "image": "/img/temp/mockup-app.png",
+    "image": "/img/temp/mockup-app-new.png",
     "items": [
       {
         "title": "Live Monitoring",
@@ -872,7 +872,7 @@
   "AlarmApps": {
     "title": "Stay in Control. Anytime. Anywhere.",
     "desc": "Manage your business security anytime with the SECOM App, from arming the system to live camera checks. For advanced settings, use the SECOM Smart Security portal. Your data stays private, SECOM only accesses footage during verified emergencies.",
-    "image": "/img/temp/mockup-app.png",
+    "image": "/img/temp/mockup-app-new.png",
     "items": [
       {
         "title": "Live Monitoring",

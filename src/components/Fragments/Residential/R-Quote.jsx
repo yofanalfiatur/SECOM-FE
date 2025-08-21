@@ -51,7 +51,7 @@ const ResQuote = () => {
   }, []);
 
   return (
-    <section className="pb-0 flex flex-col lg:flex-row bg-tosca relative overflow-hidden res-quote">
+    <section className="pb-0 mb-6 lg:mb-24 flex flex-col lg:flex-row bg-tosca relative overflow-hidden res-quote">
       {/* IMAGE SLIDER */}
       <div className="w-full lg:w-[60%] relative z-[1] flex flex-col">
         <Splide
