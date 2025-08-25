@@ -84,7 +84,7 @@
   ],
   "MenuHeaderMd": [
     {
-      "text": "Business",
+      "text": "Bisnis",
       "href": "/#",
       "icon": "/img/menu-type-1.svg",
       "subMenu": [
@@ -95,16 +95,16 @@
       ]
     },
     {
-      "text": "Residential",
+      "text": "Residensial",
       "href": "/#",
       "icon": "/img/menu-type-2.svg",
       "subMenu": [
         {
-          "subMenuText": "Residential Overview",
+          "subMenuText": "Sekilas",
           "subMenuHref": "/"
         },
         {
-          "subMenuText": "Solution",
+          "subMenuText": "Solusi",
           "subMenuHref": "/solutions"
         }
       ]
@@ -219,35 +219,47 @@
     }
   ],
   "ReBanner": {
-    "title": "Semua Anggota Keluarga Anda, Layak Merasa Aman",
+    "title": "Semua Anggota Keluarga Anda,<br>Layak Merasa Aman",
     "photo": "/img/temp/residential/front-upscale-min.png",
     "background": "/img/temp/h-banner-bg.jpg",
     "items": [
       {
         "text": "Jika saya meninggalkan makanan terlalu lama di pemanas, detektor asap akan memberi peringatan.",
         "top": "45%",
-        "left": "11%",
+        "bottom": "",
+        "left": "",
+        "right": "67%",
+        "zIndex": "1",
         "maxWidth": "340px",
         "icon": "/img/temp/h-banner-ibu.png"
       },
       {
         "text": "Jika ada seseorang yang mengetuk pintu, saya tidak perlu takut lagi.",
-        "top": "29%",
-        "left": "40%",
+        "top": "",
+        "bottom": "53%",
+        "left": "40.3%",
+        "right": "",
+        "zIndex": "1",
         "maxWidth": "190px",
         "icon": "/img/temp/h-banner-anak.png"
       },
       {
         "text": "Jika saya di rumah sendirian, saya tahu bahwa bantuan cukup satu tombol saja.",
         "top": "33%",
+        "bottom": "",
         "left": "57%",
+        "right": "",
+        "zIndex": "1",
         "maxWidth": "314px",
         "icon": "/img/temp/h-banner-nenek.png"
       },
       {
         "text": "Jika ada seseorang yang coba masuk, saya tahu keluarga dan rumah saya tetap terlindungi.",
         "top": "48%",
+        "bottom": "",
         "left": "70.5%",
+        "right": "",
+        "zIndex": "1",
         "maxWidth": "314px",
         "icon": "/img/temp/h-banner-bapak.png"
       }
@@ -330,20 +342,20 @@
   },
   "ReAbout": {
     "title": "Bagaimana SECOM Melindungi Anda?",
-    "desc": "SECOM bukan sekadar alarm.<br>Kami menggabungkan teknologi pintar dengan respons manusia untuk benar-benar melindungi hal-hal yang paling berarti bagi Anda.",
+    "desc": "Kami hadir dengan teknologi dan respons untuk melindungi yang paling berarti bagi Anda.",
     "photo": "/img/temp/residential/Residence-How-SECOM-Protects-You.jpg",
     "items": [
       {
         "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
-        "title": "Secara instan mendeteksi intrusi, kebakaran, atau aktivitas mencurigakan, bahkan saat Anda tidak di rumah."
+        "title": "Deteksi intrusi, kebakaran, atau aktivitas mencurigakan."
       },
       {
         "icon": "/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
-        "title": "Kami hanya memantau video secara langsung saat darurat, memastikan keamanan tanpa mengorbankan privasi Anda."
+        "title": "Kami hanya memantau saat darurat, menjaga privasi Anda."
       },
       {
         "icon": "/img/temp/alarm/Residence How SECOM Protects You BE.svg",
-        "title": "Dalam situasi darurat, kami tidak menunggu. Tim respons fisik kami segera turun ke lokasi. Cepat dan sigap."
+        "title": "Tim respons fisik segera turun ke lokasi."
       }
     ],
     "btnAbout": {
@@ -456,11 +468,11 @@
       },
       {
         "value": "residential",
-        "label": "Residential"
+        "label": "Residensial (Home)"
       },
       {
         "value": "business",
-        "label": "Business"
+        "label": "Bisnis"
       }
     ],
     "howDidYouKnow": [
@@ -473,24 +485,24 @@
         "label": "Google"
       },
       {
-        "value": "Social Media",
-        "label": "Social Media (IG, FB, Tiktok, Youtube, LinkedIn)"
+        "value": "Media Sosial",
+        "label": "Media Sosial (IG, FB, Tiktok, Youtube, LinkedIn)"
       },
       {
-        "value": "News Article",
-        "label": "News Article"
+        "value": "Artikel Berita",
+        "label": "Artikel Berita"
       },
       {
-        "value": "Flyer / Brochure",
-        "label": "Flyer / Brochure"
+        "value": "Brosur",
+        "label": "Brosur"
       },
       {
-        "value": "Referral",
-        "label": "Referral"
+        "value": "Rekomendasi",
+        "label": "Rekomendasi Teman/Keluarga/Kerabat"
       },
       {
-        "value": "Others",
-        "label": "Others"
+        "value": "Lainnya",
+        "label": "Lainnya"
       }
     ],
     "textBtnSend": "Kirim Pesan",
@@ -586,15 +598,15 @@
     "items": [
       {
         "title": "Deteksi Darurat",
-        "desc": "Sensor kami mendeteksi aktivitas yang tidak biasa dan langsung mengirim sinyal ke sistem cloud."
+        "desc": "Sensor kami mendeteksi aktivitas yang tidak biasa dan langsung mengirim sinyal ke sistem <i>cloud</i>."
       },
       {
         "title": "Tim Pemantauan SECOM",
-        "desc": "Sistem cloud mengirimkan peringatan ke Anda dan Pusat Kontrol SECOM 24/7. Tim kami menghubungi Anda dan segera menugaskan tim respons ke lokasi Anda.<br><b>*Jika diperlukan, SECOM menghubungi pihak kepolisian atau pemadam kebakaran.</b>"
+        "desc": "Sistem <i>cloud</i> mengirimkan peringatan ke Anda dan Pusat Kontrol SECOM 24/7. Tim kami menghubungi Anda dan segera menugaskan tim respons ke lokasi Anda.<br><b>*Jika diperlukan, SECOM menghubungi pihak kepolisian atau pemadam kebakaran.</b>"
       },
       {
         "title": "Tim Respon Fisik SECOM",
-        "desc": "Jika ancaman terkonfirmasi, SECOM akan mengirim tim respons fisik terlatih untuk memeriksa properti Anda dan memberikan laporan langsung, memberi ketenangan, bahkan saat Anda sedang tidak di lokasi."
+        "desc": "Jika ancaman terkonfirmasi, SECOM mengirim tim responsuntuk memeriksa properti dan memberi laporan langsung."
       }
     ],
     "btnCTA": {
@@ -605,7 +617,7 @@
   },
   "SolProduct": {
     "title": "Ketenangan Anda Dimulai dari Sistem Keamanan yang Tepat",
-    "desc": "Jelajahi rangkaian produk keamanan dari SECOM yang dirancang untuk melindungi bisnis, aset, dan karyawan Anda."
+    "desc": "Jelajahi berbagai produk keamanan pintar dari SECOM yang dirancang untuk menjaga rumah dan keluarga Anda. Kapan saja, di mana saja."
   },
   "SolCorners": {
     "title": "Setiap Ruangan. Setiap Akses. Terlindungi Sepenuhnya.",
@@ -614,7 +626,7 @@
   },
   "SolApps": {
     "title": "Selalu Terhubung. Selalu Terlindungi",
-    "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman.<br><b>*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.</b>",
+    "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman*<br><b>*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.</b>",
     "image": "/img/temp/mockup-app-new.png",
     "items": [
       {
@@ -660,7 +672,7 @@
     ]
   },
   "SolTrusted": {
-    "title": "Mengapa SECOM Lebih dari Kamera",
+    "title": "Mengapa SECOM Lebih dari CCTV",
     "desc": "",
     "logoSecom": "/img/secom-logo.png",
     "textSecom": "SECOM Smart Security",
@@ -720,7 +732,7 @@
   },
   "SolPackage": {
     "title": "Paket Keamanan Fleksibel untuk Segala Kebutuhan",
-    "desc": "Setiap keluarga punya kebutuhan yang berbeda. SECOM hadir dengan pilihan paket keamanan yang fleksibel dan mudah dipilih. Lindungi rumah Anda dengan solusi pintar yang dirancang untuk kehidupan nyata.",
+    "desc": "Pilih paket keamanan sesuai kebutuhan rumah Anda.",
     "tabs": [
       {
         "title": "SEWA",
@@ -751,7 +763,7 @@
         "answer": "Ya. Jika alarm Anda aktif saat Anda sedang tidak di rumah, Anda akan langsung menerima notifikasi melalui Aplikasi SECOM Smart Security. Tim monitoring SECOM yang siaga 24/7 juga akan segera merespons untuk memverifikasi situasi dan mengambil tindakan yang diperlukan."
       },
       {
-        "question": "Apakah privasi saya akan terlindungi dengan penyimpanan video di cloud?",
+        "question": "Apakah privasi saya akan terlindungi dengan penyimpanan video di <i>cloud</i>?",
         "answer": "Ya. <b>Privasi Anda adalah prioritas utama kami.</b> Seluruh rekaman video dienkripsi dengan aman dan disimpan di cloud. Hanya Anda yang dapat mengakses rekaman tersebut. SECOM hanya dapat melihat rekaman video Anda dalam situasi darurat yang telah diverifikasi, semata-mata untuk memastikan keselamatan Anda. Di luar kondisi tersebut, data Anda tetap sepenuhnya bersifat pribadi."
       },
       {
@@ -826,11 +838,11 @@
     "items": [
       {
         "title": "Deteksi Darurat",
-        "desc": "Sensor kami mendeteksi aktivitas yang tidak biasa dan langsung mengirim sinyal ke sistem cloud."
+        "desc": "Sensor kami mendeteksi aktivitas yang tidak biasa dan langsung mengirim sinyal ke sistem <i>cloud</i>."
       },
       {
         "title": "Tim Pemantauan SECOM",
-        "desc": "Sistem cloud mengirimkan peringatan ke Anda dan Pusat Kontrol SECOM 24/7. Tim kami menghubungi Anda dan segera menugaskan tim respons ke lokasi Anda.<br><b>*Jika diperlukan, SECOM menghubungi pihak kepolisian atau pemadam kebakaran.</b>"
+        "desc": "Sistem <i>cloud</i> mengirimkan peringatan ke Anda dan Pusat Kontrol SECOM 24/7. Tim kami menghubungi Anda dan segera menugaskan tim respons ke lokasi Anda.<br><b>*Jika diperlukan, SECOM menghubungi pihak kepolisian atau pemadam kebakaran.</b>"
       },
       {
         "title": "Tim Respon Fisik SECOM",
@@ -854,7 +866,7 @@
   },
   "AlarmApps": {
     "title": "Selalu Terhubung. Selalu Terlindungi",
-    "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman.<br><b>*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.</b>",
+    "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman*<br><b>*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.</b>",
     "image": "/img/temp/mockup-app-new.png",
     "items": [
       {
@@ -971,8 +983,8 @@
         "answer": "Ya. Jika alarm Anda aktif saat Anda sedang tidak di rumah, Anda akan langsung menerima notifikasi melalui Aplikasi SECOM Smart Security. Tim monitoring SECOM yang siaga 24/7 juga akan segera merespons untuk memverifikasi situasi dan mengambil tindakan yang diperlukan."
       },
       {
-        "question": "Apakah privasi saya akan terlindungi dengan penyimpanan video di cloud?",
-        "answer": "Ya. <b>Privasi Anda adalah prioritas utama kami.</b> Seluruh rekaman video dienkripsi dengan aman dan disimpan di cloud. Hanya Anda yang dapat mengakses rekaman tersebut. SECOM hanya dapat melihat rekaman video Anda dalam situasi darurat yang telah diverifikasi, semata-mata untuk memastikan keselamatan Anda. Di luar kondisi tersebut, data Anda tetap sepenuhnya bersifat pribadi."
+        "question": "Apakah privasi saya akan terlindungi dengan penyimpanan video di <i>cloud</i>?",
+        "answer": "Ya. <b>Privasi Anda adalah prioritas utama kami.</b> Seluruh rekaman video dienkripsi dengan aman dan disimpan di <i>cloud</i>. Hanya Anda yang dapat mengakses rekaman tersebut. SECOM hanya dapat melihat rekaman video Anda dalam situasi darurat yang telah diverifikasi, semata-mata untuk memastikan keselamatan Anda. Di luar kondisi tersebut, data Anda tetap sepenuhnya bersifat pribadi."
       },
       {
         "question": "Bisakah saya melihat rekaman dari beberapa properti dalam satu aplikasi?",
@@ -984,20 +996,22 @@
   "ProductDetails": [
     {
       "title": "Smart Video Camera",
-      "subtitle": "Pantau dan berinteraksi dengan tamu tak terduga, kendaraan yang keluar masuk, dan lainnya. Bahkan saat Anda tidak berada di lokasi.",
+      "subtitleHome": "Pantau dan berinteraksi dengan tamu tak terduga, kendaraan yang keluar masuk, dan lainnya. Bahkan saat Anda tidak berada di rumah.",
+      "subtitleBusiness": "Pantau dan berinteraksi dengan tamu tak terduga, kendaraan yang keluar masuk, dan lainnya. Bahkan saat Anda tidak berada di lokasi.",
       "image": "/img/temp/products/Smart-Video-Camera.png",
       "link": "#5",
       "type": ["home", "business"],
       "pinBusiness": true,
-      "pinBusinessX": "58%",
-      "pinBusinessY": "41%",
+      "pinBusinessX": "70%",
+      "pinBusinessY": "32%",
       "pinHome": true,
       "pinHomeX": "86%",
       "pinHomeY": "38%"
     },
     {
       "title": "PIR Camera Indoor",
-      "subtitle": "Kamera di dalam lokasi Anda yang akan memicu alarm dan mengambil gambar saat mendeteksi gerakan.",
+      "subtitleHome": "Kamera di dalam rumah yang akan memicu alarm dan mengambil gambar saat mendeteksi gerakan.",
+      "subtitleBusiness": "Kamera di dalam lokasi Anda yang akan memicu alarm dan mengambil gambar saat mendeteksi gerakan.",
       "image": "/img/temp/products/PIR-Camera-Indoor.png",
       "link": "#7",
       "type": ["home", "business"],
@@ -1010,7 +1024,8 @@
     },
     {
       "title": "PIR Indoor",
-      "subtitle": "Sensor yang mendeteksi pergerakan di dalam lokasi Anda dan memicu alarm jika diperlukan.",
+      "subtitleHome": "Sensor yang mendeteksi pergerakan di dalam rumah Anda dan memicu alarm.",
+      "subtitleBusiness": "Sensor yang mendeteksi pergerakan di dalam lokasi Anda dan memicu alarm jika diperlukan.",
       "image": "/img/temp/products/PIR-Indoor.png",
       "link": "#8",
       "type": ["home", "business"],
@@ -1023,7 +1038,8 @@
     },
     {
       "title": "Door Contact",
-      "subtitle": "Mendeteksi saat pintu atau jendela dibuka. Mengirimkan peringatan jika terjadi hal yang tidak biasa.",
+      "subtitleHome": "Mendeteksi saat pintu atau jendela dibuka. Mengirimkan peringatan jika terjadi hal yang tidak biasa.",
+      "subtitleBusiness": "Mendeteksi saat pintu atau jendela dibuka. Mengirimkan peringatan jika terjadi hal yang tidak biasa.",
       "image": "/img/temp/products/Door-Contact.png",
       "link": "#6",
       "type": ["home", "business"],
@@ -1036,7 +1052,8 @@
     },
     {
       "title": "Siren Box",
-      "subtitle": "Suara keras yang akan berbunyi saat terjadi keadaan darurat, seperti upaya pembobolan.",
+      "subtitleHome": "Suara keras akan berbunyi saat terjadi keadaan darurat, seperti upaya pembobolan.",
+      "subtitleBusiness": "Suara keras yang akan berbunyi saat terjadi keadaan darurat, seperti upaya pembobolan.",
       "image": "/img/temp/products/Siren-Box.png",
       "link": "#4",
       "type": ["home", "business"],
@@ -1049,7 +1066,8 @@
     },
     {
       "title": "Smoke Detector",
-      "subtitle": "Mendeteksi asap sejak dini untuk membantu mencegah kebakaran.",
+      "subtitleHome": "Mendeteksi asap lebih awal untuk mencegah kebakaran.",
+      "subtitleBusiness": "Mendeteksi asap sejak dini untuk membantu mencegah kebakaran.",
       "image": "/img/temp/products/Smoke-Detector.png",
       "link": "#9",
       "type": ["home", "business"],
@@ -1062,7 +1080,8 @@
     },
     {
       "title": "Heat Sensor",
-      "subtitle": "Mendeteksi suhu lebih awal untuk mencegah kebakaran.",
+      "subtitleHome": "Mendeteksi suhu lebih awal untuk mencegah kebakaran.",
+      "subtitleBusiness": "Mendeteksi suhu lebih awal untuk mencegah kebakaran.",
       "image": "/img/temp/products/Heat-Sensor.png",
       "link": "#10",
       "type": ["home"],
@@ -1075,7 +1094,8 @@
     },
     {
       "title": "Panic Button",
-      "subtitle": "Tombol yang dapat ditekan saat keadaan darurat untuk segera meminta bantuan dari SECOM.",
+      "subtitleHome": "Tombol yang dapat ditekan saat keadaan darurat untuk segera meminta bantuan dari SECOM.",
+      "subtitleBusiness": "Tombol yang dapat ditekan saat keadaan darurat untuk segera meminta bantuan dari SECOM.",
       "image": "/img/temp/products/Panic-Button.png",
       "link": "#11",
       "type": ["home", "business"],
@@ -1088,7 +1108,8 @@
     },
     {
       "title": "Control Panel",
-      "subtitle": "Perangkat utama yang menghubungkan semua sensor dan alarm ke tim SECOM yang siaga 24/7.",
+      "subtitleHome": "Perangkat utama yang menghubungkan semua sensor dan alarm ke tim SECOM yang siaga 24/7.",
+      "subtitleBusiness": "Perangkat utama yang menghubungkan semua sensor dan alarm ke tim SECOM yang siaga 24/7.",
       "image": "/img/temp/products/Control-Panel.png",
       "link": "#1",
       "type": ["home", "business"],
@@ -1101,7 +1122,8 @@
     },
     {
       "title": "Remote Control",
-      "subtitle": "Perangkat kecil untuk mengaktifkan atau menonaktifkan sistem alarm dari jarak jauh.",
+      "subtitleHome": "Perangkat kecil untuk mengaktifkan atau menonaktifkan sistem alarm dari jarak jauh.",
+      "subtitleBusiness": "Perangkat kecil untuk mengaktifkan atau menonaktifkan sistem alarm dari jarak jauh.",
       "image": "/img/temp/products/Remote-Control.png",
       "link": "#2",
       "type": ["home", "business"],
@@ -1114,7 +1136,8 @@
     },
     {
       "title": "Keypad",
-      "subtitle": "Panel tempat Anda memasukkan kode pribadi untuk mengontrol sistem alarm.",
+      "subtitleHome": "Panel tempat Anda memasukkan kode pribadi untuk mengontrol sistem alarm.",
+      "subtitleBusiness": "Panel tempat Anda memasukkan kode pribadi untuk mengontrol sistem alarm.",
       "image": "/img/temp/products/Keypad.png",
       "link": "#3",
       "type": ["home", "business"],

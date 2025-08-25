@@ -27,13 +27,12 @@ const ResBanner = () => {
               initial={{ y: "-100%", opacity: 0 }}
               transition={{ duration: 0.3 }}
               className="mt-16 lg:mt-28 lg:w-[80%] leading-[1.2] font-medium text-white font-raleway text-[23px] lg:text-[50px] text-center "
-            >
-              {ReBanner.title}
-            </motion.h1>
+              dangerouslySetInnerHTML={{ __html: ReBanner.title }}
+            />
           </div>
           {isDesktop && (
             <>
-              <ul className="absolute w-full h-full z-[2]">
+              <ul className="absolute w-full h-full">
                 {ReBanner.items.map((item, index) => (
                   <motion.li
                     animate={{ y: "0%", opacity: 1 }}
@@ -46,8 +45,11 @@ const ResBanner = () => {
                     style={{
                       position: "absolute",
                       maxWidth: item.maxWidth,
-                      top: item.top,
-                      left: item.left,
+                      ...(item.top && { top: item.top }),
+                      ...(item.left && { left: item.left }),
+                      ...(item.bottom && { bottom: item.bottom }),
+                      ...(item.right && { right: item.right }),
+                      ...(item.zIndex && { zIndex: item.zIndex }),
                     }}
                     className={`flex flex-col res-banner__card overflow-hidden rounded-[0px]`}
                   >

@@ -221,35 +221,47 @@
     }
   ],
   "ReBanner": {
-    "title": "Every Member of Your Family Deserves To Be Safe",
+    "title": "Every Member of Your Family<br>Deserves To Be Safe",
     "photo": "/img/temp/residential/front-upscale-min.png",
     "background": "/img/temp/h-banner-bg.jpg",
     "items": [
       {
         "text": "If I leave food too long in the microwave, the smoke detector will alert us.",
         "top": "45%",
-        "left": "10.5%",
+        "bottom": "",
+        "left": "",
+        "right": "66%",
+        "zIndex": "1",
         "maxWidth": "345px",
         "icon": "/img/temp/h-banner-ibu.png"
       },
       {
         "text": "If someone knocks, I don't have to be scared anymore. ",
-        "top": "33%",
+        "top": "",
+        "bottom": "53%",
         "left": "41%",
+        "right": "",
+        "zIndex": "1",
         "maxWidth": "200px",
         "icon": "/img/temp/h-banner-anak.png"
       },
       {
         "text": "Even if I'm home alone, I know help is just one button away.",
         "top": "37%",
+        "bottom": "",
         "left": "57%",
+        "right": "",
+        "zIndex": "1",
         "maxWidth": "314px",
         "icon": "/img/temp/h-banner-nenek.png"
       },
       {
         "text": "If anyone tries to break in, I know my family and home are still protected.",
         "top": "50%",
+        "bottom": "",
         "left": "72%",
+        "right": "",
+        "zIndex": "1",
         "maxWidth": "314px",
         "icon": "/img/temp/h-banner-bapak.png"
       }
@@ -458,7 +470,7 @@
       },
       {
         "value": "residential",
-        "label": "Residential"
+        "label": "Residential (Home)"
       },
       {
         "value": "business",
@@ -475,20 +487,20 @@
         "label": "Google"
       },
       {
-        "value": "Media Sosial",
-        "label": "Media Sosial (IG, FB, Tiktok, Youtube, LinkedIn)"
+        "value": "Social Media",
+        "label": "Social Media (IG, FB, Tiktok, Youtube, LinkedIn)"
       },
       {
-        "value": "Artikel Berita",
-        "label": "Artikel Berita"
+        "value": "News Article",
+        "label": "News Article"
       },
       {
-        "value": "Brosur",
-        "label": "Brosur"
+        "value": "Flyer / Brochure",
+        "label": "Flyer / Brochure"
       },
       {
-        "value": "Rekomendasi",
-        "label": "Rekomendasi Teman/Keluarga/Kerabat"
+        "value": "Referral",
+        "label": "Referral"
       },
       {
         "value": "Others",
@@ -557,7 +569,7 @@
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-2.jpg",
         "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-2.jpg",
-        "title": "Smart Design, Full Coverage",
+        "title": "Smart and Secure",
         "desc": "We carefully plan where each alarm, sensor, and camera goes, ensuring every corner is protected."
       },
       {
@@ -569,7 +581,7 @@
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-4.jpeg",
         "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-4.jpg",
-        "title": "Always On, Always Watching",
+        "title": "Always On",
         "desc": "Your system is linked to SECOM's Control Center, ready to respond to emergencies at any hour."
       },
       {
@@ -592,7 +604,7 @@
       },
       {
         "title": "SECOM's Control Center",
-        "desc": "The cloud alerts both you and SECOM's 24/7 Control Center, which will notify you and assign response team to your location.<br><b>*If necessary, SECOM will also notify local police or fire services.</b>"
+        "desc": "The cloud alerts both you and SECOM's 24/7 Control Center, which will notify you and assign response team to your location.<br><b>*If necessary, SECOM also notify local police or fire services.</b>"
       },
       {
         "title": "SECOM's Physical Response Team",
@@ -616,7 +628,7 @@
   },
   "SolApps": {
     "title": "Always Connected. Always Protected",
-    "desc": "Stay in control anytime, anywhere with SECOM App. Explore advanced settings via SECOM Smart Security portal on our website. Your data stays private and secure, SECOM can only access your video footage during verified emergencies to ensure your safety.",
+    "desc": "Control your home security anytime, anywhere through the SECOM Smart Security app.<br><b>*Recordings are only accessed during verified emergencies to ensure your safety.</b>",
     "image": "/img/temp/mockup-app-new.png",
     "items": [
       {
@@ -802,7 +814,7 @@
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-2.jpg",
         "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-2.jpg",
-        "title": "Strategic Design, Complete Coverage",
+        "title": "Complete Design & Coverage",
         "desc": "We design the layout with precision. Placing sensors, alarms, and cameras where they matter most to protect every critical area."
       },
       {
@@ -828,8 +840,8 @@
   "AlarmProtect": {
     "title": "Integrated Security for Your Business",
     "desc": "",
-    "image": "/img/temp/solutions/Circle-of-Service-ENG.png",
-    "imageMobile": "/img/temp/solutions/Circle-of-Service-Mobile-ENG.png",
+    "image": "/img/temp/alarm/Circle of Service-13.png",
+    "imageMobile": "/img/temp/alarm/Circle of Service-14.png",
     "items": [
       {
         "title": "Emergency Detected",
@@ -996,20 +1008,22 @@
   "ProductDetails": [
     {
       "title": "Smart Video Camera",
-      "subtitle": "See and interact with unexpected visitors, vehicles coming and going and more, even when you can't be there.",
+      "subtitleHome": "See and interact with unexpected visitors, vehicles coming and going and more, even when you can’t be there.",
+      "subtitleBusiness": "See and interact with unexpected visitors, vehicles coming and going and more, even when you can’t be there.",
       "image": "/img/temp/products/Smart-Video-Camera.png",
       "link": "#5",
       "type": ["home", "business"],
       "pinBusiness": true,
-      "pinBusinessX": "58%",
-      "pinBusinessY": "41%",
+      "pinBusinessX": "70%",
+      "pinBusinessY": "32%",
       "pinHome": true,
       "pinHomeX": "86%",
       "pinHomeY": "38%"
     },
     {
       "title": "PIR Camera Indoor",
-      "subtitle": "A camera inside the house that takes pictures or video when it senses movement.",
+      "subtitleHome": "A camera inside the house that triggers the alarm and capture pictures when it senses movement.",
+      "subtitleBusiness": "A camera inside the house that takes pictures or video when it senses movement.",
       "image": "/img/temp/products/PIR-Camera-Indoor.png",
       "link": "#7",
       "type": ["home", "business"],
@@ -1022,7 +1036,8 @@
     },
     {
       "title": "PIR Indoor",
-      "subtitle": "A sensor that detects movement inside your home and triggers the alarm if needed.",
+      "subtitleHome": "A sensor that detects movement inside your home and triggers the alarm if needed.",
+      "subtitleBusiness": "A sensor that detects movement inside your home and triggers the alarm if needed.",
       "image": "/img/temp/products/PIR-Indoor.png",
       "link": "#8",
       "type": ["home", "business"],
@@ -1035,7 +1050,8 @@
     },
     {
       "title": "Door Contact",
-      "subtitle": "Detects when a door or window is opened. Sends an alert if something unusual happens.",
+      "subtitleHome": "Detects when a door or window is opened. Sends an alert if something unusual happens.",
+      "subtitleBusiness": "Detects when a door or window is opened. Sends an alert if something unusual happens.",
       "image": "/img/temp/products/Door-Contact.png",
       "link": "#6",
       "type": ["home", "business"],
@@ -1048,7 +1064,8 @@
     },
     {
       "title": "Siren Box",
-      "subtitle": "A loud sound that goes off when there's a danger, like someone breaking in.",
+      "subtitleHome": "A loud sound that goes off when there’s an emergency, like someone breaking in.",
+      "subtitleBusiness": "A loud sound that goes off when there’s a danger, like someone breaking in.",
       "image": "/img/temp/products/Siren-Box.png",
       "link": "#4",
       "type": ["home", "business"],
@@ -1061,7 +1078,8 @@
     },
     {
       "title": "Smoke Detector",
-      "subtitle": "Detects smoke early to help prevent fires.",
+      "subtitleHome": "Detects smoke early to help prevent fires.",
+      "subtitleBusiness": "Detects smoke early to help prevent fires.",
       "image": "/img/temp/products/Smoke-Detector.png",
       "link": "#9",
       "type": ["home", "business"],
@@ -1074,7 +1092,8 @@
     },
     {
       "title": "Heat Sensor",
-      "subtitle": "Detects heat early to help prevent fires.",
+      "subtitleHome": "Detects heat early to help prevent fires.",
+      "subtitleBusiness": "Detects heat early to help prevent fires.",
       "image": "/img/temp/products/Heat-Sensor.png",
       "link": "#10",
       "type": ["home"],
@@ -1087,7 +1106,8 @@
     },
     {
       "title": "Panic Button",
-      "subtitle": "A button you press in an emergency to get help from SECOM right away.",
+      "subtitleHome": "A button you press in an emergency to get help from SECOM right away.",
+      "subtitleBusiness": "A button you press in an emergency to get help from SECOM right away.",
       "image": "/img/temp/products/Panic-Button.png",
       "link": "#11",
       "type": ["home", "business"],
@@ -1100,7 +1120,8 @@
     },
     {
       "title": "Control Panel",
-      "subtitle": "The main device that connects all sensors and alarms to SECOM's team that standby 24/7.",
+      "subtitleHome": "The main device that connects all sensors and alarms to SECOM’s team that standby 24/7.",
+      "subtitleBusiness": "The main device that connects all sensors and alarms to SECOM’s team that standby 24/7.",
       "image": "/img/temp/products/Control-Panel.png",
       "link": "#1",
       "type": ["home", "business"],
@@ -1113,7 +1134,8 @@
     },
     {
       "title": "Remote Control",
-      "subtitle": "A small device to turn the alarm system on or off from a distance.",
+      "subtitleHome": "A small device to turn the alarm system on or off from a distance.",
+      "subtitleBusiness": "A small device to turn the alarm system on or off from a distance.",
       "image": "/img/temp/products/Remote-Control.png",
       "link": "#2",
       "type": ["home", "business"],
@@ -1126,7 +1148,8 @@
     },
     {
       "title": "Keypad",
-      "subtitle": "A panel where you enter your personal code to control the alarm system.",
+      "subtitleHome": "A panel where you enter your personal code to control the alarm system.",
+      "subtitleBusiness": "A panel where you enter your personal code to control the alarm system.",
       "image": "/img/temp/products/Keypad.png",
       "link": "#3",
       "type": ["home", "business"],

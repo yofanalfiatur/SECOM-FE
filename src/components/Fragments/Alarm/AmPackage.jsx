@@ -350,6 +350,21 @@ const AmPackage = (props) => {
                       )}
                     </div>
 
+                    {/* Icon Plus */}
+                    <div className="w-full flex flex-col justify-center items-center">
+                      <div className="my-3 lg:my-5 flex flex-col items-center w-[42px] h-[42px] lg:w-[70px] lg:h-[70px] justify-center  bg-navyblue rounded-full">
+                        <div className="relative w-[14px] h-[14px] lg:w-[22px] lg:h-[22px]">
+                          <span className="absolute left-1/2 top-0 h-full w-[3px] lg:w-[5px] bg-white -translate-x-1/2" />
+                          <span className="absolute top-1/2 left-0 w-full h-[3px] lg:h-[5px] bg-white -translate-y-1/2" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-navyblue py-4 lg:py-6 flex flex-col items-center justify-center">
+                      <p className="text-white text-sm lg:text-xl font-raleway font-semibold uppercase">
+                        {DifferncesInfo.serviceTitle}
+                      </p>
+                    </div>
+
                     {/* Service Fee */}
                     {Packages.find(
                       (pkg) =>
