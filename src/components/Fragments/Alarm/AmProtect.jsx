@@ -33,8 +33,8 @@ const AmProtect = ({ translationKey }) => {
           src={isDesktop ? AlarmProtect.image : AlarmProtect.imageMobile}
           alt="Alarm Protect"
           width={1321}
-          height={1000}
-          className="max-w-full h-auto mb-5 mt-2 lg:mb-7"
+          height={671}
+          className="max-w-full w-[100%] h-auto mb-5 mt-2 lg:mb-7"
         />
 
         <div className="relative w-full flex flex-col justify-center py-1">

@@ -45,15 +45,14 @@ const AmApps = ({ translationKey }) => {
             >
               {AlarmApps.title}
             </motion.h2>
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.7 }}
               className="text-white text-sm lg:text-base leading-[1.7] lg:leading-[1.5] mt-2 lg:mt-0 mb-4 lg:mb-8"
-            >
-              {AlarmApps.desc}
-            </motion.p>
+              dangerouslySetInnerHTML={{ __html: AlarmApps.desc }}
+            />
             <ul className="grid grid-cols-12 gap-x-3 gap-y-3 lg:gap-x-4 lg:gap-y-5">
               {AlarmApps.items.map((item, index) => (
                 <motion.li

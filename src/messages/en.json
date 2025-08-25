@@ -612,7 +612,7 @@
   "SolCorners": {
     "title": "Every Room. Every Access. Fully Protected",
     "desc": "",
-    "image": "/img/temp/residential/protect-bg.png"
+    "image": "/img/temp/residential/Product-Placement-Home.jpg"
   },
   "SolApps": {
     "title": "Always Connected. Always Protected",
@@ -857,7 +857,7 @@
   "AlarmCorners": {
     "title": "Protect Every Corner of Your Business",
     "desc": "",
-    "image": "/img/temp/alarm/Product-Placement-Business.png"
+    "image": "/img/temp/alarm/Product-Placement-Business.jpg"
   },
   "AlarmApps": {
     "title": "Stay in Control. Anytime. Anywhere.",
@@ -995,6 +995,110 @@
 
   "ProductDetails": [
     {
+      "title": "Smart Video Camera",
+      "subtitle": "See and interact with unexpected visitors, vehicles coming and going and more, even when you can't be there.",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "link": "#5",
+      "type": ["home", "business"],
+      "pinBusiness": true,
+      "pinBusinessX": "58%",
+      "pinBusinessY": "41%",
+      "pinHome": true,
+      "pinHomeX": "86%",
+      "pinHomeY": "38%"
+    },
+    {
+      "title": "PIR Camera Indoor",
+      "subtitle": "A camera inside the house that takes pictures or video when it senses movement.",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
+      "link": "#7",
+      "type": ["home", "business"],
+      "pinBusiness": true,
+      "pinBusinessX": "43.5%",
+      "pinBusinessY": "49.5%",
+      "pinHome": true,
+      "pinHomeX": "22%",
+      "pinHomeY": "68%"
+    },
+    {
+      "title": "PIR Indoor",
+      "subtitle": "A sensor that detects movement inside your home and triggers the alarm if needed.",
+      "image": "/img/temp/products/PIR-Indoor.png",
+      "link": "#8",
+      "type": ["home", "business"],
+      "pinBusiness": false,
+      "pinBusinessX": "0%",
+      "pinBusinessY": "0%",
+      "pinHome": false,
+      "pinHomeX": "0%",
+      "pinHomeY": "0%"
+    },
+    {
+      "title": "Door Contact",
+      "subtitle": "Detects when a door or window is opened. Sends an alert if something unusual happens.",
+      "image": "/img/temp/products/Door-Contact.png",
+      "link": "#6",
+      "type": ["home", "business"],
+      "pinBusiness": true,
+      "pinBusinessX": "27%",
+      "pinBusinessY": "51%",
+      "pinHome": true,
+      "pinHomeX": "49%",
+      "pinHomeY": "33%"
+    },
+    {
+      "title": "Siren Box",
+      "subtitle": "A loud sound that goes off when there's a danger, like someone breaking in.",
+      "image": "/img/temp/products/Siren-Box.png",
+      "link": "#4",
+      "type": ["home", "business"],
+      "pinBusiness": true,
+      "pinBusinessX": "50.5%",
+      "pinBusinessY": "32.5%",
+      "pinHome": true,
+      "pinHomeX": "66%",
+      "pinHomeY": "57%"
+    },
+    {
+      "title": "Smoke Detector",
+      "subtitle": "Detects smoke early to help prevent fires.",
+      "image": "/img/temp/products/Smoke-Detector.png",
+      "link": "#9",
+      "type": ["home", "business"],
+      "pinBusiness": false,
+      "pinBusinessX": "0%",
+      "pinBusinessY": "0%",
+      "pinHome": true,
+      "pinHomeX": "45%",
+      "pinHomeY": "65%"
+    },
+    {
+      "title": "Heat Sensor",
+      "subtitle": "Detects heat early to help prevent fires.",
+      "image": "/img/temp/products/Heat-Sensor.png",
+      "link": "#10",
+      "type": ["home"],
+      "pinBusiness": true,
+      "pinBusinessX": "71%",
+      "pinBusinessY": "41.5%",
+      "pinHome": false,
+      "pinHomeX": "0%",
+      "pinHomeY": "0%"
+    },
+    {
+      "title": "Panic Button",
+      "subtitle": "A button you press in an emergency to get help from SECOM right away.",
+      "image": "/img/temp/products/Panic-Button.png",
+      "link": "#11",
+      "type": ["home", "business"],
+      "pinBusiness": true,
+      "pinBusinessX": "82.5%",
+      "pinBusinessY": "61%",
+      "pinHome": true,
+      "pinHomeX": "20%",
+      "pinHomeY": "48%"
+    },
+    {
       "title": "Control Panel",
       "subtitle": "The main device that connects all sensors and alarms to SECOM's team that standby 24/7.",
       "image": "/img/temp/products/Control-Panel.png",
@@ -1004,8 +1108,8 @@
       "pinBusinessX": "0%",
       "pinBusinessY": "0%",
       "pinHome": true,
-      "pinHomeX": "30%",
-      "pinHomeY": "68%"
+      "pinHomeX": "28%",
+      "pinHomeY": "74%"
     },
     {
       "title": "Remote Control",
@@ -1032,110 +1136,6 @@
       "pinHome": false,
       "pinHomeX": "0%",
       "pinHomeY": "0%"
-    },
-    {
-      "title": "Siren Box",
-      "subtitle": "A loud sound that goes off when there's a danger, like someone breaking in.",
-      "image": "/img/temp/products/Siren-Box.png",
-      "link": "#4",
-      "type": ["home", "business"],
-      "pinBusiness": true,
-      "pinBusinessX": "50.5%",
-      "pinBusinessY": "32.5%",
-      "pinHome": true,
-      "pinHomeX": "64%",
-      "pinHomeY": "56%"
-    },
-    {
-      "title": "Smart Video Camera",
-      "subtitle": "See and interact with unexpected visitors, vehicles coming and going and more, even when you can't be there.",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
-      "link": "#5",
-      "type": ["home", "business"],
-      "pinBusiness": true,
-      "pinBusinessX": "58%",
-      "pinBusinessY": "41%",
-      "pinHome": true,
-      "pinHomeX": "82%",
-      "pinHomeY": "41%"
-    },
-    {
-      "title": "Door Contact",
-      "subtitle": "Detects when a door or window is opened. Sends an alert if something unusual happens.",
-      "image": "/img/temp/products/Door-Contact.png",
-      "link": "#6",
-      "type": ["home", "business"],
-      "pinBusiness": true,
-      "pinBusinessX": "27%",
-      "pinBusinessY": "51%",
-      "pinHome": true,
-      "pinHomeX": "49%",
-      "pinHomeY": "38%"
-    },
-    {
-      "title": "PIR Camera Indoor",
-      "subtitle": "A camera inside the house that takes pictures or video when it senses movement.",
-      "image": "/img/temp/products/PIR-Camera-Indoor.png",
-      "link": "#7",
-      "type": ["home", "business"],
-      "pinBusiness": true,
-      "pinBusinessX": "43.5%",
-      "pinBusinessY": "49.5%",
-      "pinHome": true,
-      "pinHomeX": "25%",
-      "pinHomeY": "64%"
-    },
-    {
-      "title": "PIR Indoor",
-      "subtitle": "A sensor that detects movement inside your home and triggers the alarm if needed.",
-      "image": "/img/temp/products/PIR-Indoor.png",
-      "link": "#8",
-      "type": ["home", "business"],
-      "pinBusiness": false,
-      "pinBusinessX": "0%",
-      "pinBusinessY": "0%",
-      "pinHome": false,
-      "pinHomeX": "0%",
-      "pinHomeY": "0%"
-    },
-    {
-      "title": "Smoke Detector",
-      "subtitle": "Detects smoke early to help prevent fires.",
-      "image": "/img/temp/products/Smoke-Detector.png",
-      "link": "#9",
-      "type": ["home", "business"],
-      "pinBusiness": false,
-      "pinBusinessX": "0%",
-      "pinBusinessY": "0%",
-      "pinHome": true,
-      "pinHomeX": "45%",
-      "pinHomeY": "61%"
-    },
-    {
-      "title": "Heat Sensor",
-      "subtitle": "Detects heat early to help prevent fires.",
-      "image": "/img/temp/products/Heat-Sensor.png",
-      "link": "#10",
-      "type": ["home"],
-      "pinBusiness": true,
-      "pinBusinessX": "71%",
-      "pinBusinessY": "41.5%",
-      "pinHome": false,
-      "pinHomeX": "0%",
-      "pinHomeY": "0%"
-    },
-    {
-      "title": "Panic Button",
-      "subtitle": "A button you press in an emergency to get help from SECOM right away.",
-      "image": "/img/temp/products/Panic-Button.png",
-      "link": "#11",
-      "type": ["home", "business"],
-      "pinBusiness": true,
-      "pinBusinessX": "82.5%",
-      "pinBusinessY": "61%",
-      "pinHome": true,
-      "pinHomeX": "23.5%",
-      "pinHomeY": "49%"
     }
   ],
   "BusinessPackages": [

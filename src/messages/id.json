@@ -555,7 +555,7 @@
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-2.jpg",
         "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-2.jpg",
-        "title": "Desain Cerdas, Perlindungan Menyeluruh",
+        "title": "Desain Cerdas & Menyeluruh",
         "desc": "Kami merencanakan dengan cermat penempatan setiap sensor dan kamera, untuk memastikan setiap sudut rumah Anda terlindungi."
       },
       {
@@ -567,13 +567,13 @@
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-4.jpeg",
         "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-4.jpg",
-        "title": "Selalu Aktif, Selalu Siaga",
+        "title": "Selalu Siaga",
         "desc": "Sistem Anda terhubung langsung ke Control Center SECOM, siap merespons keadaan darurat kapan pun dibutuhkan."
       },
       {
         "image": "/img/temp/alarm/solutions-how-secom-works-5.jpg",
         "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-5.jpg",
-        "title": "Perlindungan yang Tahan Lama",
+        "title": "Perlindungan Tahan Lama",
         "desc": "Kami menyediakan pengecekan dan perawatan rutin agar sistem Anda tetap andal, tahun demi tahun."
       }
     ]
@@ -590,7 +590,7 @@
       },
       {
         "title": "Tim Pemantauan SECOM",
-        "desc": "Sistem <b>cloud</b> akan mengirimkan peringatan kepada Anda dan Pusat Kontrol SECOM yang siaga 24/7. Tim kami akan menghubungi Anda dan segera menugaskan tim respons ke lokasi Anda.<br><b>*Jika diperlukan, SECOM juga akan menghubungi pihak kepolisian atau pemadam kebakaran setempat.</b>"
+        "desc": "Sistem cloud mengirimkan peringatan ke Anda dan Pusat Kontrol SECOM 24/7. Tim kami menghubungi Anda dan segera menugaskan tim respons ke lokasi Anda.<br><b>*Jika diperlukan, SECOM menghubungi pihak kepolisian atau pemadam kebakaran.</b>"
       },
       {
         "title": "Tim Respon Fisik SECOM",
@@ -610,11 +610,11 @@
   "SolCorners": {
     "title": "Setiap Ruangan. Setiap Akses. Terlindungi Sepenuhnya.",
     "desc": "",
-    "image": "/img/temp/residential/protect-bg.png"
+    "image": "/img/temp/residential/Product-Placement-Home.jpg"
   },
   "SolApps": {
     "title": "Selalu Terhubung. Selalu Terlindungi",
-    "desc": "Kendalikan keamanan rumah Anda kapan saja, di mana saja dengan Aplikasi SECOM. Jelajahi pengaturan lebih lanjut melalui portal SECOM Smart Security di website kami. Data Anda tetap pribadi dan aman, karena SECOM hanya dapat mengakses rekaman video saat terjadi keadaan darurat yang terverifikasi, demi memastikan keselamatan Anda.",
+    "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman.<br><b>*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.</b>",
     "image": "/img/temp/mockup-app-new.png",
     "items": [
       {
@@ -850,11 +850,11 @@
   "AlarmCorners": {
     "title": "Lindungi Setiap Sudut Bisnis Anda ",
     "desc": "",
-    "image": "/img/temp/alarm/Product-Placement-Business.png"
+    "image": "/img/temp/alarm/Product-Placement-Business.jpg"
   },
   "AlarmApps": {
     "title": "Selalu Terhubung. Selalu Terlindungi",
-    "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja dengan Aplikasi SECOM. Jelajahi pengaturan lebih lanjut melalui portal SECOM Smart Security di website kami. Data Anda tetap pribadi dan aman, karena SECOM hanya dapat mengakses rekaman video saat terjadi keadaan darurat yang terverifikasi, demi memastikan keselamatan Anda.",
+    "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman.<br><b>*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.</b>",
     "image": "/img/temp/mockup-app-new.png",
     "items": [
       {
@@ -983,6 +983,110 @@
 
   "ProductDetails": [
     {
+      "title": "Smart Video Camera",
+      "subtitle": "Pantau dan berinteraksi dengan tamu tak terduga, kendaraan yang keluar masuk, dan lainnya. Bahkan saat Anda tidak berada di lokasi.",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "link": "#5",
+      "type": ["home", "business"],
+      "pinBusiness": true,
+      "pinBusinessX": "58%",
+      "pinBusinessY": "41%",
+      "pinHome": true,
+      "pinHomeX": "86%",
+      "pinHomeY": "38%"
+    },
+    {
+      "title": "PIR Camera Indoor",
+      "subtitle": "Kamera di dalam lokasi Anda yang akan memicu alarm dan mengambil gambar saat mendeteksi gerakan.",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
+      "link": "#7",
+      "type": ["home", "business"],
+      "pinBusiness": true,
+      "pinBusinessX": "43.5%",
+      "pinBusinessY": "49.5%",
+      "pinHome": true,
+      "pinHomeX": "22%",
+      "pinHomeY": "68%"
+    },
+    {
+      "title": "PIR Indoor",
+      "subtitle": "Sensor yang mendeteksi pergerakan di dalam lokasi Anda dan memicu alarm jika diperlukan.",
+      "image": "/img/temp/products/PIR-Indoor.png",
+      "link": "#8",
+      "type": ["home", "business"],
+      "pinBusiness": false,
+      "pinBusinessX": "0%",
+      "pinBusinessY": "0%",
+      "pinHome": false,
+      "pinHomeX": "0%",
+      "pinHomeY": "0%"
+    },
+    {
+      "title": "Door Contact",
+      "subtitle": "Mendeteksi saat pintu atau jendela dibuka. Mengirimkan peringatan jika terjadi hal yang tidak biasa.",
+      "image": "/img/temp/products/Door-Contact.png",
+      "link": "#6",
+      "type": ["home", "business"],
+      "pinBusiness": true,
+      "pinBusinessX": "27%",
+      "pinBusinessY": "51%",
+      "pinHome": true,
+      "pinHomeX": "49%",
+      "pinHomeY": "33%"
+    },
+    {
+      "title": "Siren Box",
+      "subtitle": "Suara keras yang akan berbunyi saat terjadi keadaan darurat, seperti upaya pembobolan.",
+      "image": "/img/temp/products/Siren-Box.png",
+      "link": "#4",
+      "type": ["home", "business"],
+      "pinBusiness": true,
+      "pinBusinessX": "50.5%",
+      "pinBusinessY": "32.5%",
+      "pinHome": true,
+      "pinHomeX": "66%",
+      "pinHomeY": "57%"
+    },
+    {
+      "title": "Smoke Detector",
+      "subtitle": "Mendeteksi asap sejak dini untuk membantu mencegah kebakaran.",
+      "image": "/img/temp/products/Smoke-Detector.png",
+      "link": "#9",
+      "type": ["home", "business"],
+      "pinBusiness": false,
+      "pinBusinessX": "0%",
+      "pinBusinessY": "0%",
+      "pinHome": true,
+      "pinHomeX": "45%",
+      "pinHomeY": "65%"
+    },
+    {
+      "title": "Heat Sensor",
+      "subtitle": "Mendeteksi suhu lebih awal untuk mencegah kebakaran.",
+      "image": "/img/temp/products/Heat-Sensor.png",
+      "link": "#10",
+      "type": ["home"],
+      "pinBusiness": true,
+      "pinBusinessX": "71%",
+      "pinBusinessY": "41.5%",
+      "pinHome": false,
+      "pinHomeX": "0%",
+      "pinHomeY": "0%"
+    },
+    {
+      "title": "Panic Button",
+      "subtitle": "Tombol yang dapat ditekan saat keadaan darurat untuk segera meminta bantuan dari SECOM.",
+      "image": "/img/temp/products/Panic-Button.png",
+      "link": "#11",
+      "type": ["home", "business"],
+      "pinBusiness": true,
+      "pinBusinessX": "82.5%",
+      "pinBusinessY": "61%",
+      "pinHome": true,
+      "pinHomeX": "20%",
+      "pinHomeY": "48%"
+    },
+    {
       "title": "Control Panel",
       "subtitle": "Perangkat utama yang menghubungkan semua sensor dan alarm ke tim SECOM yang siaga 24/7.",
       "image": "/img/temp/products/Control-Panel.png",
@@ -992,8 +1096,8 @@
       "pinBusinessX": "0%",
       "pinBusinessY": "0%",
       "pinHome": true,
-      "pinHomeX": "30%",
-      "pinHomeY": "68%"
+      "pinHomeX": "28%",
+      "pinHomeY": "74%"
     },
     {
       "title": "Remote Control",
@@ -1020,110 +1124,6 @@
       "pinHome": false,
       "pinHomeX": "0%",
       "pinHomeY": "0%"
-    },
-    {
-      "title": "Siren Box",
-      "subtitle": "Suara keras yang akan berbunyi saat terjadi keadaan darurat, seperti upaya pembobolan.",
-      "image": "/img/temp/products/Siren-Box.png",
-      "link": "#4",
-      "type": ["home", "business"],
-      "pinBusiness": true,
-      "pinBusinessX": "50.5%",
-      "pinBusinessY": "32.5%",
-      "pinHome": true,
-      "pinHomeX": "64%",
-      "pinHomeY": "56%"
-    },
-    {
-      "title": "Smart Video Camera",
-      "subtitle": "Pantau dan berinteraksi dengan tamu tak terduga, kendaraan yang keluar masuk, dan lainnya. Bahkan saat Anda tidak berada di lokasi.",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
-      "link": "#5",
-      "type": ["home", "business"],
-      "pinBusiness": true,
-      "pinBusinessX": "58%",
-      "pinBusinessY": "41%",
-      "pinHome": true,
-      "pinHomeX": "82%",
-      "pinHomeY": "41%"
-    },
-    {
-      "title": "Door Contact",
-      "subtitle": "Mendeteksi saat pintu atau jendela dibuka. Mengirimkan peringatan jika terjadi hal yang tidak biasa.",
-      "image": "/img/temp/products/Door-Contact.png",
-      "link": "#6",
-      "type": ["home", "business"],
-      "pinBusiness": true,
-      "pinBusinessX": "27%",
-      "pinBusinessY": "51%",
-      "pinHome": true,
-      "pinHomeX": "49%",
-      "pinHomeY": "38%"
-    },
-    {
-      "title": "PIR Camera Indoor",
-      "subtitle": "Kamera di dalam lokasi Anda yang akan memicu alarm dan mengambil gambar saat mendeteksi gerakan.",
-      "image": "/img/temp/products/PIR-Camera-Indoor.png",
-      "link": "#7",
-      "type": ["home", "business"],
-      "pinBusiness": true,
-      "pinBusinessX": "43.5%",
-      "pinBusinessY": "49.5%",
-      "pinHome": true,
-      "pinHomeX": "25%",
-      "pinHomeY": "64%"
-    },
-    {
-      "title": "PIR Indoor",
-      "subtitle": "Sensor yang mendeteksi pergerakan di dalam lokasi Anda dan memicu alarm jika diperlukan.",
-      "image": "/img/temp/products/PIR-Indoor.png",
-      "link": "#8",
-      "type": ["home", "business"],
-      "pinBusiness": false,
-      "pinBusinessX": "0%",
-      "pinBusinessY": "0%",
-      "pinHome": false,
-      "pinHomeX": "0%",
-      "pinHomeY": "0%"
-    },
-    {
-      "title": "Smoke Detector",
-      "subtitle": "Mendeteksi asap sejak dini untuk membantu mencegah kebakaran.",
-      "image": "/img/temp/products/Smoke-Detector.png",
-      "link": "#9",
-      "type": ["home", "business"],
-      "pinBusiness": false,
-      "pinBusinessX": "0%",
-      "pinBusinessY": "0%",
-      "pinHome": true,
-      "pinHomeX": "45%",
-      "pinHomeY": "61%"
-    },
-    {
-      "title": "Heat Sensor",
-      "subtitle": "Mendeteksi suhu lebih awal untuk mencegah kebakaran.",
-      "image": "/img/temp/products/Heat-Sensor.png",
-      "link": "#10",
-      "type": ["home"],
-      "pinBusiness": true,
-      "pinBusinessX": "71%",
-      "pinBusinessY": "41.5%",
-      "pinHome": false,
-      "pinHomeX": "0%",
-      "pinHomeY": "0%"
-    },
-    {
-      "title": "Panic Button",
-      "subtitle": "Tombol yang dapat ditekan saat keadaan darurat untuk segera meminta bantuan dari SECOM.",
-      "image": "/img/temp/products/Panic-Button.png",
-      "link": "#11",
-      "type": ["home", "business"],
-      "pinBusiness": true,
-      "pinBusinessX": "82.5%",
-      "pinBusinessY": "61%",
-      "pinHome": true,
-      "pinHomeX": "23.5%",
-      "pinHomeY": "49%"
     }
   ],
   "BusinessPackages": [
