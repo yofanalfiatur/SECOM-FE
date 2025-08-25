@@ -26,7 +26,10 @@ const AmFAQ = ({ translationKey }) => {
           {AlarmFAQ.items.map((item, index) => {
             const isOpen = activeIndex === index;
             return (
-              <div key={index} className="flex flex-col relative">
+              <div
+                key={index}
+                className="flex flex-col relative overflow-hidden"
+              >
                 <div className="relative z-[1] m-1 bg-white">
                   {/* Question */}
                   <button
@@ -35,7 +38,7 @@ const AmFAQ = ({ translationKey }) => {
                       isOpen ? "border-b-[1px]" : "border-0"
                     } `}
                   >
-                    <span className="font-raleway font-normal lg:text-xl text-left">
+                    <span className="font-raleway font-normal lg:text-xl text-left text-darkblue">
                       {item.question}
                     </span>
                     <svg
@@ -57,18 +60,20 @@ const AmFAQ = ({ translationKey }) => {
 
                   {/* Answer */}
                   <div
-                    className={`transition-all duration-500 ease-in-out overflow-hidden px-4 lg:px-8 text-sm lg:text-xl ${
+                    className={`transition-all duration-500 ease-in-out overflow-hidden px-4 lg:px-8 text-sm lg:text-xl text-darkblue ${
                       isOpen ? "max-h-[400px] py-5 lg:pt-5 lg:pb-8" : "max-h-0"
                     }`}
                     dangerouslySetInnerHTML={{ __html: item.answer }}
                   />
                 </div>
 
-                {isOpen ? (
-                  <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg2 transition-all duration-200 ease opacity-100" />
-                ) : (
-                  <div className="absolute top-0 left-0 w-full h-full z-0 bg-white border-[1px] border-[#13223333] transition-all duration-200 ease opacity-100"></div>
-                )}
+                <div
+                  className={`absolute top-0 left-0 w-full h-full z-0 transition-all duration-[1ms] cubic-bezier(0.4, 0, 0.2, 1) opacity-100 ${
+                    isOpen
+                      ? "animated-gradient-bg2 border-transparent"
+                      : "bg-white border-[1px] border-[#13223333]"
+                  }`}
+                />
               </div>
             );
           })}

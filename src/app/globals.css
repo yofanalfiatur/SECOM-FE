@@ -285,7 +285,22 @@
 }
 
 @layer utilities {
-  .animated-gradient-bg {
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  @keyframes spinner {
+    from {
+      --angle: 0deg;
+    }
+    to {
+      --angle: 360deg;
+    }
+  }
+
+  /* .animated-gradient-bg {
     background: linear-gradient(
       60deg,
       #009fa7 20%,
@@ -296,34 +311,19 @@
     );
     background-size: 200% 200%;
     animation: animatedgradient 3s ease alternate infinite;
-  }
+  } */
 
   .animated-gradient-bg2 {
-    background: linear-gradient(
-      60deg,
-      #01f3ff 20%,
-      #004697 40%,
-      #01f3ff 60%,
-      #004697 80%,
-      #01f3ff 100%
-    );
-    background-size: 200% 200%;
-    animation: animatedgradient 3s ease alternate infinite;
-  }
-
-  .animated-bg2 {
-    background: linear-gradient(
-      to right,
-      #009fa7,
-      #004697,
+    background-image: conic-gradient(
+      from var(--angle),
       #01f3ff,
       #004697,
-      #009fa7,
-      #009fa7
+      #01f3ff
     );
-    /* background-clip: text; */
-    animation: shine 6s linear infinite;
-    background-size: 200% 200%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    animation: 4s spinner linear infinite;
   }
 
   .triangle-shape {
@@ -748,7 +748,7 @@ main {
 
 .am-value .am-value__desc b,
 .am-value .am-value__desc strong {
-  color: black; /* default dulu */
+  color: #132233;
   font-weight: 500;
   font-family: "Raleway", sans-serif;
   transition: color 0.3s ease;
@@ -763,7 +763,6 @@ main {
   );
   background-clip: text;
   animation: shine 5s linear infinite;
-  background-size: 200% 200%;
 }
 
 .am-value .am-value__desc b.active,
@@ -818,11 +817,30 @@ main {
 @keyframes pulsecircle {
   0% {
     scale: 1;
-    opacity: 1;
+    opacity: 0.9;
+  }
+  50% {
+    scale: 1.8;
+    opacity: 0;
   }
   100% {
-    scale: 1.5;
+    scale: 1;
+    opacity: 0.9;
+  }
+}
+
+@keyframes pulsecirclebg {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.3);
     opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
   }
 }
 /*
@@ -843,15 +861,23 @@ main {
 
 /* Alarm corner pin */
 .am-corner .pulse-one {
-  animation: pulsecircle 2s ease-in-out infinite;
+  animation: pulsecircle 3s ease-in-out infinite;
+  transition: all 0.3s ease;
 }
-.am-corner .pulse-two {
-  animation: pulsecircle 2s ease-in-out infinite;
-  animation-delay: 0.5s;
+/* .am-corner .pulse-two {
+  animation: pulsecircle 3s ease-in-out infinite;
+  animation-delay: 1s;
 }
 .am-corner .pulse-three {
-  animation: pulsecircle 2s ease-in-out infinite;
-  animation-delay: 1s;
+  animation: pulsecircle 3s ease-in-out infinite;
+  animation-delay: 2s;
+} */
+
+.am-corner__pin__bg {
+  animation: pulsecirclebg 3s ease infinite;
+  animation-delay: 0s;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 /* Glightbox styling */

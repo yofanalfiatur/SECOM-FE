@@ -46,7 +46,7 @@ const AmProducts = (props) => {
                     onClick={(e) => {
                       e.preventDefault();
                     }}
-                    className="flex flex-col h-full bg-[#012146] pt-12 pb-6 px-8 m-1 relative z-[1] group"
+                    className="flex flex-col h-full bg-[#012146] pt-12 pb-6 px-8 m-1 relative z-[1] group !cursor-default"
                   >
                     <RadialCardHover
                       dotSize="1px"
@@ -71,7 +71,7 @@ const AmProducts = (props) => {
                     </div>
                   </Link>
                   <div className="absolute top-0 left-0 w-full h-full z-0 bg-[#012146] transition-all duration-200 ease opacity-100 group-hover:opacity-0"></div>
-                  <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg transition-all duration-200 ease opacity-0 group-hover:opacity-100"></div>
+                  <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg2 transition-all duration-200 ease opacity-0 group-hover:opacity-100"></div>
                 </li>
               ))}
             </ul>
@@ -106,7 +106,7 @@ const AmProducts = (props) => {
                         onClick={(e) => {
                           e.preventDefault();
                         }}
-                        className="flex flex-col h-full relative z-[1] group"
+                        className="flex flex-col h-full relative z-[1] !cursor-default group"
                       >
                         <div className="flex flex-col items-center relative z-10">
                           <p className="text-white font-raleway text-center font-medium">

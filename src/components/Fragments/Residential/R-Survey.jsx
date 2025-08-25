@@ -67,7 +67,7 @@ const ResSurvey = () => {
     <section className="relative res-survey mt-[-50px] lg:mt-[-4rem] z-10">
       <div className="container mx-auto flex flex-col relative">
         <div className="flex flex-col relative w-full">
-          <div className="flex bg-white pt-[1.9rem] lg:pt-[2.3rem] flex-col items-center justify-center relative z-[1] m-[3px] md:m-1 res-survey__wrap">
+          <div className="flex bg-white pt-[1.9rem] lg:pt-[2.3rem] flex-col items-center justify-center relative z-[1] m-[3px] md:m-[5px] res-survey__wrap">
             <motion.div
               animate={{ opacity: 1 }}
               initial={{ opacity: 0 }}
@@ -181,7 +181,7 @@ const ResSurvey = () => {
             </div>
             {/* End Survey */}
           </div>
-          <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg transition-all duration-200 ease opacity-100"></div>
+          <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg2 transition-all duration-200 ease opacity-100"></div>
         </div>
       </div>
     </section>

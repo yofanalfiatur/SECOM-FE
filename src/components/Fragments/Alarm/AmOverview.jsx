@@ -40,7 +40,7 @@ const AmOverview = ({ translationKey }) => {
     <section className="pt-9 pb-14 lg:pt-24 lg:pb-24 am-value">
       <div className="container mx-auto flex flex-col gap-6 lg:gap-9">
         <div
-          className="w-full lg:w-10/12 text-xl lg:text-[45px] text-start lg:text-center font-medium self-center font-raleway am-value__desc"
+          className="w-full lg:w-10/12 text-xl lg:text-[45px] text-start lg:text-center font-medium self-center font-raleway am-value__desc text-darkblue"
           dangerouslySetInnerHTML={{ __html: AlarmOverview.desc }}
         />
         <ul className="flex flex-col lg:flex-row gap-6 lg:gap-35 justify-center">

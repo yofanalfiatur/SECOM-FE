@@ -20,7 +20,7 @@
   "MenuType": [
     {
       "icon": "/img/menu-type-1.svg",
-      "text": "Business",
+      "text": "Bisnis",
       "href": "",
       "subMenu": [
         {
@@ -31,16 +31,16 @@
     },
     {
       "icon": "/img/menu-type-2.svg",
-      "text": "Residential",
+      "text": "Residensial",
       "href": "",
 
       "subMenu": [
         {
-          "subMenuText": "Residential Overview",
+          "subMenuText": "Sekilas",
           "subMenuHref": "/"
         },
         {
-          "subMenuText": "Solution",
+          "subMenuText": "Solusi",
           "subMenuHref": "/solutions"
         }
       ]
@@ -141,7 +141,7 @@
     "FtButtonHref": "/contact",
     "FtButtonTarget": "_self",
     "FtAddressText": "Mangkuluhur City Tower 1, 8th Floor, Jl. Jend. Gatot Subroto Kav. 1-3, Jakarta Selatan 12930",
-    "FtAddressLink": "https://goo.gl/maps/3Z1b5d7z8x2k9f4cA"
+    "FtAddressLink": "https://maps.app.goo.gl/ukAjeDbw15K2u6Aq8"
   },
   "FooterMenu": [
     {
@@ -263,11 +263,11 @@
         "question": "Seberapa sering rumah Anda ditinggal kosong?",
         "options": [
           {
-            "text": "A. Hampir setiap hari",
+            "text": "Hampir setiap hari",
             "value": "a"
           },
           {
-            "text": "B. Beberapa jam saja setiap harinya",
+            "text": "Beberapa jam saja setiap harinya",
             "value": "b"
           }
         ]
@@ -276,11 +276,11 @@
         "question": "Apakah Anda tinggal bersama anak-anak, orang lanjut usia, atau anggota keluarga dengan kebutuhan khusus?",
         "options": [
           {
-            "text": "A. Ya",
+            "text": "Ya",
             "value": "a"
           },
           {
-            "text": "B. Tidak",
+            "text": "Tidak",
             "value": "b"
           }
         ]
@@ -289,11 +289,11 @@
         "question": "Sistem keamanan apa yang saat ini sudah terpasang di rumah Anda?",
         "options": [
           {
-            "text": "A. Belum ada",
+            "text": "Belum ada",
             "value": "a"
           },
           {
-            "text": "B. CCTV yang dipasang sendiri",
+            "text": "CCTV yang dipasang sendiri",
             "value": "b"
           }
         ]
@@ -307,7 +307,7 @@
         "desc": "Perlindungan saat ini belum cukup. Temukan sistem keamanan yang memberi rasa aman bagi keluarga Anda.",
         "btn": {
           "text": "Temukan Solusinya",
-          "href": "/solutions/#am-prod",
+          "href": "/solutions/#am-packages",
           "target": "_self"
         }
       },
@@ -318,7 +318,7 @@
         "desc": "Keamanan rumah Anda belum maksimal. Cari tahu apa yang kurang dan bagaimana SECOM bisa membantu.",
         "btn": {
           "text": "Temukan Solusinya",
-          "href": "/solutions/#am-prod",
+          "href": "/solutions/#am-packages",
           "target": "_self"
         }
       }
@@ -393,7 +393,7 @@
   ],
   "ReTestimonial": {
     "title": "Mereka Memilih SECOM. Ini Alasannya",
-    "desc": "Setiap keluarga berhak merasa aman di rumah. Dengarkan bagaimana SECOM menghadirkan ketenangan bagi keluarga di seluruh Indonesia. Kisah nyata dari mereka yang mempercayakan keamanannya kepada kami setiap hari.",
+    "desc": "",
     "items": [
       {
         "testimony": "Saat saya dan istri di kantor, anak-anak di rumah bersama pengasuh. Dengan SECOM, saya bisa memantau kapan saja, jadi tetap tenang dan merasa dekat dengan keluarga.",
@@ -517,7 +517,7 @@
     }
   },
   "LoginDummy": {
-    "title": "Login to Your Account"
+    "title": "Masuk ke Akun Anda"
   },
 
   "SolBanner": {
@@ -610,11 +610,6 @@
   "SolCorners": {
     "title": "Setiap Ruangan. Setiap Akses. Terlindungi Sepenuhnya.",
     "desc": "",
-    "btnConsult": {
-      "text": "Konsultasi Sekarang",
-      "href": "/contact/?location=residential",
-      "target": "_self"
-    },
     "image": "/img/temp/residential/protect-bg.png"
   },
   "SolApps": {
@@ -668,7 +663,7 @@
     "title": "Mengapa SECOM Lebih dari Kamera",
     "desc": "",
     "logoSecom": "/img/secom-logo.png",
-    "textSecom": "Smart Security",
+    "textSecom": "SECOM Smart Security",
     "textOther": "Hanya CCTV",
     "table": [
       {
@@ -855,11 +850,6 @@
   "AlarmCorners": {
     "title": "Lindungi Setiap Sudut Bisnis Anda ",
     "desc": "",
-    "btnConsult": {
-      "text": "Konsultasi Sekarang",
-      "href": "/contact/?location=business",
-      "target": "_self"
-    },
     "image": "/img/temp/alarm/Product-Placement-Business.png"
   },
   "AlarmApps": {
@@ -913,7 +903,7 @@
     "title": "Bukan Sekadar Keamanan Biasa. Untuk Bisnis Anda.",
     "desc": "",
     "logoSecom": "/img/secom-logo.png",
-    "textSecom": "",
+    "textSecom": "SECOM",
     "textOther": "Perusahaan Lain",
     "table": [
       {

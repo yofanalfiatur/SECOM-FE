@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import { useEffect, useState } from "react";
 
@@ -25,6 +25,7 @@ const Footer = () => {
   const FooterMenu = t.raw("FooterMenu");
   const FooterSocMed = t.raw("FooterSocMed");
   const FooterDropdown = t.raw("FooterDropdown");
+  const locale = useLocale();
 
   const [shouldHideFooterTop, setShouldHideFooterTop] = useState(false);
 
@@ -96,34 +97,12 @@ const Footer = () => {
                 height={62}
                 className="max-w-[205px] lg:max-w-full object-contain"
               />
-              <div className="flex flex-col f-wrap-dropdown relative max-w-max max-h-max">
-                <select
-                  name="f-dropdown"
-                  id="f-dropdown"
-                  className="text-[12px] lg:text-[14px] max-w-max py-2 pl-3 pr-10 lg:py-2.5 lg:pl-3 lg:pr-16 relative border-1 border-[#ffffffb3] appearance-none text-[#ffffffb3] cursor-pointer f-dropdown"
-                  onChange={(e) => {
-                    if (e.target.value) {
-                      window.open(e.target.value, "_blank");
-                    }
-                  }}
-                >
-                  {FooterDropdown.map((item, index) => (
-                    <option
-                      key={index}
-                      value={item.href}
-                      className="text-black f-dropdown__option"
-                    >
-                      {item.text}
-                    </option>
-                  ))}
-                </select>
-              </div>
             </div>
           </div>
           <div className="w-full lg:w-3/4 lg:border-l-1 border-[#ffffff66] flex flex-col">
             <div className="f-wrap-address lg:pl-26 pt-6 pb-7 lg:py-6 flex flex-col gap-y-2 px-[1rem] lg:px-0">
               <p className="f-address__text text-white text-[12px] lg:text-[14px]">
-                ADDRESS
+                {locale === "en" ? "ADDRESS" : "ALAMAT"}
               </p>
               <Link
                 className="text-white leading-[1.7] lg:leading-[1.2] font-semibold text-[15px] lg:text-xl w-full lg:w-2/3"
@@ -137,7 +116,7 @@ const Footer = () => {
               <div className="mt-6 lg:mt-8 mb-11 lg:mb-20 flex flex-col lg:flex-row w-full px-[1rem] lg:px-0 gap-y-6 lg:gap-0">
                 <div className="f-sitemap w-full lg:w-2/3">
                   <p className="f-hint text-white text-[12px] lg:text-[14px] font-semibold mb-3 lg:mb-3">
-                    SITEMAPS
+                    {locale === "en" ? "SITEMAP" : "MENU"}
                   </p>
                   <ul className="f-sitemap__list flex flex-col flex-wrap max-h-[105px] lg:max-h-[80px] max-w-max gap-[15px] lg:gap-3">
                     {FooterMenu.map(({ FtMenuText, FtMenuLink }, index) => (
@@ -157,7 +136,7 @@ const Footer = () => {
                 </div>
                 <div className="f-socmed w-full lg:w-1/3">
                   <p className="f-hint text-white text-[12px] lg:text-[14px] font-semibold mb-3 lg:mb-3">
-                    STAY CONNECTED
+                    {locale === "en" ? "STAY CONNECTED" : "TETAP TERHUBUNG"}
                   </p>
                   <div className="f-socmed__list flex flex-row gap-6 lg:gap-8 ">
                     <Link
@@ -205,18 +184,43 @@ const Footer = () => {
 
       <section className=" relative z-10 flex flex-col w-full footer__bottom">
         <div className="lg:container !pt-[1.5rem] !pb-[1.5rem] lg:pt-[2rem] lg:pb-[2rem] px-[1rem] lg:px-0 gap-1 lg:gap-0 flex flex-col lg:flex-row w-full mx-auto">
-          <div className="w-full lg:w-1/6">
-            <p className="text-white text-[12px] lg:text-[14px]">
-              © {new Date().getFullYear()} PT. SECOM Indonesia
-            </p>
-          </div>
-          <div className="w-full lg:w-5/6 flex flex-col items-start lg:items-end">
+          <div className="w-full lg:w-3/6 flex flex-row items-center">
+            <div className=" flex flex-row relative text-[12px] after:content-[''] after:w-[1px] after: h-max  after:bg-white after:mx-3">
+              <p className="text-white lg:text-[14px] leading-[1.2]">
+                {" "}
+                © {new Date().getFullYear()} PT. SECOM Indonesia
+              </p>
+            </div>
             <Link
               href="/privacy-policy"
-              className="float-right text-white text-[12px] lg:text-[14px]"
+              className="float-right text-white text-[12px] lg:text-[14px] hover:opacity-70 transition-all ease duration-200 leading-[1.2]"
             >
-              Privacy Policy
+              {locale === "en" ? "Privacy Policy" : "Kebijakan Privasi"}
             </Link>
+          </div>
+          <div className="w-full lg:w-3/6 flex flex-col items-start lg:items-end lg:pr-20">
+            <div className="flex flex-col f-wrap-dropdown relative max-w-max max-h-max">
+              <select
+                name="f-dropdown"
+                id="f-dropdown"
+                className="text-[12px] lg:text-[14px] max-w-max py-2 pl-3 pr-10 lg:py-2.5 lg:pl-3 lg:pr-16 relative border-1 border-[#ffffffb3] appearance-none text-[#ffffffb3] cursor-pointer f-dropdown"
+                onChange={(e) => {
+                  if (e.target.value) {
+                    window.open(e.target.value, "_blank");
+                  }
+                }}
+              >
+                {FooterDropdown.map((item, index) => (
+                  <option
+                    key={index}
+                    value={item.href}
+                    className="text-black f-dropdown__option"
+                  >
+                    {item.text}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
       </section>

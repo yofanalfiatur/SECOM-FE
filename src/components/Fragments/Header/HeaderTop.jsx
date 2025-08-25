@@ -131,7 +131,7 @@ const HeaderTop = () => {
 
         <Link
           href={HTop.login.href}
-          className="flex flex-row  gap-2 lg:py-1 lg:px-[12px] items-center justify-center bg-tosca"
+          className="flex flex-row  gap-2 lg:py-1 lg:px-[12px] items-center justify-center bg-tosca min-w-[242px]"
           target={HTop.login.target}
         >
           <svg

@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import ContactForm from "@/components/Fragments/Contact/ContactForm";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -9,6 +9,7 @@ import FloatButton from "@/components/Elements/FloatButton";
 
 const Contact = () => {
   const t = useTranslations();
+  const locale = useLocale();
   const ContactPage = t.raw("ContactPage");
   const isDesktop = useIsDesktop();
 
@@ -38,8 +39,9 @@ const Contact = () => {
             <p className="text-darkblue font-open-sans text-sm lg:text-lg">
               {ContactPage.desc}
             </p>
-            <p className="text-[14px] flex flex-row mb-6">
-              <span className="text-red-500">* </span>Required
+            <p className="text-[14px] text-darkblue flex flex-row mt-4 mb-6">
+              <span className="text-red-500">* </span>
+              {locale === "en" ? "Required" : "Harus Diisi"}
             </p>
 
             <div className="flex flex-col w-full mb-6 ct__wrap-form">

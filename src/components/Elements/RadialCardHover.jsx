@@ -43,7 +43,7 @@ const RadialCardHover = ({
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      style={{ cursor: "pointer" }}
+      style={{ cursor: "default" }}
     >
       {/* Base layer - dots dengan warna default */}
       <div

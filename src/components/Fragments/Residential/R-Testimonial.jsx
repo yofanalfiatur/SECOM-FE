@@ -45,7 +45,7 @@ const ResTesti = () => {
               if (position > 2) return null;
               const bgClass =
                 position === 0
-                  ? "animated-gradient-bg"
+                  ? "animated-gradient-bg2"
                   : position === 1
                   ? "bg-navyblue"
                   : "bg-tosca";

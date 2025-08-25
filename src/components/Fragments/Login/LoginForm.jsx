@@ -3,8 +3,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Eye, EyeOff, Loader2 } from "lucide-react";
+import { useLocale } from "next-intl";
 
 const LoginForm = () => {
+  const locale = useLocale();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -154,7 +156,7 @@ const LoginForm = () => {
                   : ""
               }`}
             >
-              PASSWORD
+              {locale === "en" ? "PASSWORD" : "KATA SANDI"}
             </label>
 
             <button
@@ -190,7 +192,7 @@ const LoginForm = () => {
             className="text-white text-sm lg:text-lg hover:text-blue-200 transition-colors duration-200 font-raleway"
             onClick={() => console.log("Forgot password clicked")}
           >
-            Forgot password?
+            {locale === "en" ? "Forgot password?" : "Lupa kata sandi?"}
           </motion.button>
         </div>
 
@@ -226,8 +228,10 @@ const LoginForm = () => {
               <Loader2 className="w-4 h-4 animate-spin" />
               <span>LOGGING IN...</span>
             </div>
-          ) : (
+          ) : locale === "en" ? (
             "LOGIN"
+          ) : (
+            "MASUK"
           )}
         </motion.button>
       </div>

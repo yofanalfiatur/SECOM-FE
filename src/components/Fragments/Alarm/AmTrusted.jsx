@@ -13,7 +13,10 @@ const AmTrusted = ({ translationKey }) => {
   const isDesktop = useIsDesktop();
 
   return (
-    <section className="pt-6 pb-10 lg:pb-0 lg:pt-14 relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:lg:h-[85%] before:bg-tosca before:z-[-1] am-trusted">
+    <section
+      className="pt-6 pb-10 lg:pb-0 lg:pt-14 relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:lg:h-[85%] before:bg-tosca before:z-[-1] am-trusted"
+      id="am-trusted"
+    >
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center">
           <h2 className="text-white text-[25px] lg:text-[40px] text-center">
@@ -33,13 +36,6 @@ const AmTrusted = ({ translationKey }) => {
                 {locale === "en" ? "FEATURE" : "FITUR"}
               </div>
               <div className="text-center py-3 lg:py-[22px] px-0 lg:px-8 flex flex-col lg:flex-row gap-1 lg:gap-3 items-center justify-center w-[30%] lg:w-1/4">
-                <Image
-                  src={AlarmTrusted.logoSecom}
-                  alt="secom"
-                  width={112}
-                  height={28}
-                  className="w-[66px] my-auto h-[28px] lg:w-max lg:h-auto object-contain"
-                />
                 <p className="text-white text-xs lg:text-xl font-semibold uppercase">
                   {AlarmTrusted.textSecom}
                 </p>
@@ -81,7 +77,9 @@ const AmTrusted = ({ translationKey }) => {
                   </div>
 
                   {/* OTHER Column */}
-                  <div className="p-2 lg:py-[18px] lg:px-4 text-center flex items-center justify-center w-[30%] lg:w-1/4">
+                  <div
+                    className={`p-2 lg:py-[18px] lg:px-4 text-center flex w-[30%] lg:w-1/4 items-center justify-center lg:justify-start`}
+                  >
                     {row.other === "available" ? (
                       <div className="flex items-center justify-center mx-auto">
                         <CheckIcon />
@@ -91,9 +89,9 @@ const AmTrusted = ({ translationKey }) => {
                         <CrossIcon />
                       </div>
                     ) : (
-                      <div className="flex flex-col lg:flex-row gap-2 lg:gap-3 items-center justify-center mx-auto">
+                      <div className="flex flex-col lg:flex-row gap-2 lg:gap-3 items-center lg:mx-4 2xl:mx-8">
                         <LimitIcon />{" "}
-                        <span className="font-raleway font-medium text-xs lg:text-xl text-darkblue capitalize w-full max-w-max">
+                        <span className="font-raleway font-medium text-xs lg:text-xl text-darkblue capitalize w-full max-w-max lg:text-start">
                           {row.other}
                         </span>
                       </div>

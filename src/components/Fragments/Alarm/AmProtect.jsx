@@ -22,7 +22,7 @@ const AmProtect = ({ translationKey }) => {
         dotsY={isDesktop ? 30 : 50}
       />
       <div className="container mx-auto relative z-[3] flex flex-col justify-center items-center">
-        <h2 className="text-[25px] lg:text-[40px] lg:text-center font-raleway font-medium">
+        <h2 className="text-[25px] lg:text-[40px] text-darkblue lg:text-center font-raleway font-medium">
           {AlarmProtect.title}
         </h2>
         <p className="text-sm lg:text-lg lg:text-center mt-3 leading-[1.7] lg:leading-[1.5] lg:mt-4 lg:mb-10 w-full lg:w-[65%]">
@@ -119,7 +119,7 @@ const AmProtect = ({ translationKey }) => {
                   <p className="text-3xl font-semibold text-white mb-2 group-nth-[1]:bg-[#CE2129] group-nth-[2]:bg-navyblue group-nth-[3]:bg-tosca w-[52px] h-[52px] flex flex-col items-center justify-center rounded-full font-raleway">
                     {index + 1}
                   </p>
-                  <p className="text-[25px] font-raleway font-semibold mt-2 mb-1 w-full xl:w-10/12">
+                  <p className="text-[25px] text-darkblue font-raleway font-semibold mt-2 mb-1 w-full xl:w-10/12">
                     {item.title}
                   </p>
                   <div

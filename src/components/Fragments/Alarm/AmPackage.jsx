@@ -59,33 +59,18 @@ const AmPackage = (props) => {
   };
 
   return (
-    <section className="pt-7 lg:pt-13">
+    <section className="pt-7 lg:pt-13 am-packages" id="am-packages">
       <div className="container mx-auto flex flex-col lg:items-center">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-darkblue text-[25px] lg:text-[40px] lg:text-center font-normal"
-        >
+        <h2 className="text-darkblue text-[25px] lg:text-[40px] lg:text-center font-normal">
           {PackageInfo.title}
-        </motion.h2>
+        </h2>
 
-        <motion.p
-          initial={{ opacity: 0, y: -15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="text-darkblue text-sm lg:text-lg lg:text-center lg:w-[70%] mt-3 mb-6 lg:mt-3 lg:mb-8"
-        >
+        <p className="text-darkblue text-sm lg:text-lg lg:text-center lg:w-[70%] mt-3 mb-6 lg:mt-3 lg:mb-8">
           {PackageInfo.desc}
-        </motion.p>
+        </p>
 
         {/* Tabs for Rent and Buy */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          className="flex flex-col border-1 border-[#00000033] w-full lg:w-10/12 rounded-[5px] overflow-hidden"
-        >
+        <div className="flex flex-col border-1 border-[#00000033] w-full lg:w-10/12 rounded-[5px] overflow-hidden">
           <div className="flex flex-row relative border-b-[1px] border-[#00000033]">
             {PackageInfo.tabs.map((tab, index) => (
               <div
@@ -233,7 +218,7 @@ const AmPackage = (props) => {
               </motion.div>
             </AnimatePresence>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* see the differences */}
@@ -429,7 +414,7 @@ const AmPackage = (props) => {
                 </div>
 
                 {/* gradient border */}
-                <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg transition-all duration-200 ease opacity-100" />
+                <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg2 transition-all duration-200 ease opacity-100" />
               </div>
 
               {/* Hide Information Button - untuk BUY */}
@@ -533,7 +518,7 @@ const AmPackage = (props) => {
                         className="grid grid-cols-12 border-b-[1px] border-[#0000001A]"
                       >
                         {/* device */}
-                        <div className="col-span-4 flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-6 border-r-[1px] border-[#0000001A] lg:min-h-[130px] p-5 lg:p-2">
+                        <div className="col-span-4 flex flex-col lg:flex-row items-center gap-2 lg:gap-6 border-r-[1px] border-[#0000001A] lg:min-h-[130px] p-5 lg:py-2 lg:px-10">
                           <Image
                             src={item.image}
                             alt="secom"
@@ -586,7 +571,7 @@ const AmPackage = (props) => {
                 </div>
 
                 {/* gradient border */}
-                <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg transition-all duration-200 ease opacity-100" />
+                <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg2 transition-all duration-200 ease opacity-100" />
               </div>
 
               {/* Hide Information Button - untuk RENT */}

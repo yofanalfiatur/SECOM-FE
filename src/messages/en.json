@@ -38,7 +38,7 @@
 
       "subMenu": [
         {
-          "subMenuText": "Residential Overview",
+          "subMenuText": "Overview",
           "subMenuHref": "/"
         },
         {
@@ -143,7 +143,7 @@
     "FtButtonHref": "/contact",
     "FtButtonTarget": "_self",
     "FtAddressText": "Mangkuluhur City Tower 1, 8th Floor, Jl. Jend. Gatot Subroto Kav. 1-3, Jakarta Selatan 12930",
-    "FtAddressLink": "https://goo.gl/maps/3Z1b5d7z8x2k9f4cA"
+    "FtAddressLink": "https://maps.app.goo.gl/ukAjeDbw15K2u6Aq8"
   },
   "FooterMenu": [
     {
@@ -264,11 +264,11 @@
         "question": "How often is your home left empty?",
         "options": [
           {
-            "text": "A. Most Days",
+            "text": "Most Days",
             "value": "a"
           },
           {
-            "text": "B. Few Hours A Day",
+            "text": "Few Hours A Day",
             "value": "b"
           }
         ]
@@ -277,11 +277,11 @@
         "question": "Do you live with children, elderly parents, or loved ones with special needs?",
         "options": [
           {
-            "text": "A. Yes",
+            "text": "Yes",
             "value": "a"
           },
           {
-            "text": "B. No",
+            "text": "No",
             "value": "b"
           }
         ]
@@ -290,11 +290,11 @@
         "question": "What security systems do you currently have installed?",
         "options": [
           {
-            "text": "A. None",
+            "text": "None",
             "value": "a"
           },
           {
-            "text": "B. Self-Installed CCTV",
+            "text": "Self-Installed CCTV",
             "value": "b"
           }
         ]
@@ -308,7 +308,7 @@
         "desc": "Your current protection isn't enough. Find out the system that gives your family real peace of mind.",
         "btn": {
           "text": "Discover Now",
-          "href": "/solutions/#am-prod",
+          "href": "/solutions/#am-packages",
           "target": "_self"
         }
       },
@@ -319,7 +319,7 @@
         "desc": "Your home is not fully protected. Find out what it's missing and how SECOM can help.",
         "btn": {
           "text": "Discover Now",
-          "href": "/solutions/#am-prod",
+          "href": "/solutions/#am-packages",
           "target": "_self"
         }
       }
@@ -330,7 +330,7 @@
     }
   },
   "ReAbout": {
-    "title": "How SECOM Protects You",
+    "title": "How SECOM Protects You ?",
     "desc": "SECOM goes beyond alarms.<br>We combine smart technology with human response to truly protect what matters most.",
     "photo": "/img/temp/residential/Residence-How-SECOM-Protects-You.jpg",
     "items": [
@@ -394,7 +394,7 @@
   ],
   "ReTestimonial": {
     "title": "They Chose SECOM. Here's Why",
-    "desc": "Every family deserves to feel safe at home. Hear how SECOM has brought peace of mind to families across Indonesia. Real stories from those who trust us every day.",
+    "desc": "",
     "items": [
       {
         "testimony": "When me and my wife are at work, the kids stay home with our nanny. With SECOM, I can check in anytime. It helps me stay connected and calm throughout the day.",
@@ -612,11 +612,6 @@
   "SolCorners": {
     "title": "Every Room. Every Access. Fully Protected",
     "desc": "",
-    "btnConsult": {
-      "text": "CONSULT NOW",
-      "href": "/contact/?location=residential",
-      "target": "_self"
-    },
     "image": "/img/temp/residential/protect-bg.png"
   },
   "SolApps": {
@@ -670,7 +665,7 @@
     "title": "Why SECOM Is More Than Just a Camera.",
     "desc": "",
     "logoSecom": "/img/secom-logo.png",
-    "textSecom": "Smart Security",
+    "textSecom": "SECOM Smart Security",
     "textOther": "CCTV Only",
     "table": [
       {
@@ -862,11 +857,6 @@
   "AlarmCorners": {
     "title": "Protect Every Corner of Your Business",
     "desc": "",
-    "btnConsult": {
-      "text": "CONSULT NOW",
-      "href": "/contact/?location=business",
-      "target": "_self"
-    },
     "image": "/img/temp/alarm/Product-Placement-Business.png"
   },
   "AlarmApps": {
@@ -920,7 +910,7 @@
     "title": "Your Business Deserves More Than Basic Security",
     "desc": "",
     "logoSecom": "/img/secom-logo.png",
-    "textSecom": "",
+    "textSecom": "SECOM",
     "textOther": "Other Company",
     "table": [
       {

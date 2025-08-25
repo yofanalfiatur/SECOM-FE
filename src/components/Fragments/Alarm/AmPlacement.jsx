@@ -37,7 +37,7 @@ const AmPlacement = (props) => {
   }, [activeIndex]);
 
   return (
-    <section className="pt-10 lg:pt-19 pb-35 lg:pb-8 am-corner">
+    <section className="pt-10 lg:pt-19 pb-35 lg:pb-8 am-corner" id="am-corner">
       <div className="container mx-auto flex flex-col items-center">
         <h2 className="text-darkblue font-normal text-[25px] lg:text-[40px] font-raleway lg:text-center">
           {AlarmCorners.title}
@@ -45,13 +45,6 @@ const AmPlacement = (props) => {
         <p className="text-darkblue text-sm lg:text-lg mt-2 lg:mt-5 lg:text-center w-full lg:w-7/12">
           {AlarmCorners.desc}
         </p>
-        <ButtonPrimary
-          href={AlarmCorners.btnConsult.href}
-          target={AlarmCorners.btnConsult.target}
-          className="mt-6 !py-5 order-1 lg:order-[unset]"
-        >
-          {AlarmCorners.btnConsult.text}
-        </ButtonPrimary>
         <div className="relative flex flex-col w-full mt-2 lg:mt-10">
           {isDesktop ? (
             <>
@@ -81,7 +74,7 @@ const AmPlacement = (props) => {
                 >
                   {/* Pin */}
                   <div
-                    className="z-[1] bg-tosca rounded-full w-[50px] h-[50px] flex items-center justify-center cursor-pointer am-corner__pin"
+                    className="z-[1] rounded-full w-[50px] h-[50px] flex items-center justify-center cursor-pointer am-corner__pin"
                     onMouseEnter={() => setActiveIndex(index)}
                   >
                     <Image
@@ -89,16 +82,19 @@ const AmPlacement = (props) => {
                       alt={item.title}
                       width={30}
                       height={30}
+                      className="relative z-[1]"
                     />
+                    <div className="absolute w-[50px] h-[50px] z-0 bg-tosca rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 am-corner__pin__bg"></div>
+
                     <div className="absolute wrapper-pulse">
-                      <div className="absolute w-[50px] h-[50px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-one" />
-                      <div className="absolute w-[50px] h-[50px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-two" />
-                      <div className="absolute w-[50px] h-[50px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-three" />
+                      <div className="absolute w-[50px] h-[50px] border-tosca border-[2px] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-one" />
+                      {/* <div className="absolute w-[50px] h-[50px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-two" />
+                      <div className="absolute w-[50px] h-[50px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-three" /> */}
                     </div>
                   </div>
                   {/* Card */}
                   <div
-                    className={`flex flex-col absolute min-w-[330px] z-[2] -translate-x-1/2 -translate-y-1/2 top-[-160%] left-[50%] transition-all duration-300 ${
+                    className={`flex flex-col absolute min-w-[170px] z-[2] -translate-x-1/2 -translate-y-1/2 top-[-200%] left-[50%] transition-all duration-300 ${
                       activeIndex === index || cardEnabled === index
                         ? "opacity-100 visible pointer-events-auto"
                         : "opacity-0 invisible pointer-events-none"
@@ -107,27 +103,22 @@ const AmPlacement = (props) => {
                       if (cardEnabled === index) setActiveIndex(index);
                     }}
                   >
-                    <div className="flex flex-row bg-white m-[2px] relative z-[1] py-2 px-6">
-                      <div className="flex flex-col w-[40%] py-4 pr-6">
-                        <Image
-                          src={item.image}
-                          alt={item.title}
-                          width={80}
-                          height={80}
-                          className="w-[44px] lg:w-max lg:h-auto"
-                        />
-                      </div>
-                      <div className="w-[60%] flex flex-col justify-center">
-                        <p className="text-darkblue text-sm font-raleway mb-2">
-                          {item.title}
-                        </p>
-                        <p className="text-darkblue text-xs">{item.subtitle}</p>
-                      </div>
+                    <div className="flex flex-col items-center bg-white m-[2px] min-h-[179px] relative z-[1] py-6 px-4">
+                      <p className="text-darkblue font-medium text-center  font-raleway mb-2 leading-[1.3]">
+                        {item.title}
+                      </p>
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        width={80}
+                        height={80}
+                        className="w-[44px] lg:w-max lg:h-auto"
+                      />
                     </div>
 
                     {/* Background & Triangle */}
-                    <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg"></div>
-                    <div className="absolute z-[3] bottom-[2px] left-[46%] -translate-x-1/2 -translate-y-1/2 flex">
+                    <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg2"></div>
+                    <div className="absolute z-[3] bottom-[2px] left-[42%] -translate-x-1/2 -translate-y-1/2 flex">
                       <div className="absolute w-[20px] h-[20px] border-t-[20px] border-tosca border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent"></div>
                       <div className="absolute top-[-2px] w-[20px] h-[20px] border-t-[20px] border-white border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent scale-[82%]"></div>
                     </div>
@@ -148,7 +139,7 @@ const AmPlacement = (props) => {
                 <div className="absolute top-0 left-0 w-full h-full z-1">
                   {filteredProducts.map((item, index) => (
                     <div
-                      className="z-[1] bg-tosca rounded-full w-[20px] h-[20px] flex items-center justify-center cursor-pointer absolute"
+                      className="z-[1] rounded-full w-[20px] h-[20px] flex items-center justify-center cursor-pointer absolute"
                       style={{
                         top: `calc(${item[`${pinPlacement}Y`]} - 10px)`,
                         left: `calc(${item[`${pinPlacement}X`]} - 10px)`,
@@ -160,15 +151,21 @@ const AmPlacement = (props) => {
                         alt={item.title}
                         width={10}
                         height={10}
+                        className="relative z-[1]"
                       />
+                      <div
+                        className={`absolute w-[20px] h-[20px] z-0 bg-tosca rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${
+                          activeIndexMd === index ? "am-corner__pin__bg" : ""
+                        }`}
+                      ></div>
                       <div
                         className={`absolute wrapper-pulse transition-opacity duration-300 ${
                           activeIndexMd === index ? "opacity-100" : "opacity-0"
                         }`}
                       >
                         <div className="absolute w-[20px] h-[20px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-one" />
-                        <div className="absolute w-[20px] h-[20px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-two" />
-                        <div className="absolute w-[20px] h-[20px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-three" />
+                        {/* <div className="absolute w-[20px] h-[20px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-two" />
+                        <div className="absolute w-[20px] h-[20px] border-tosca border rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pulse-three" /> */}
                       </div>
                     </div>
                   ))}
@@ -198,7 +195,7 @@ const AmPlacement = (props) => {
                           className="flex flex-col w-full"
                         >
                           <div className="relative p-1  min-h-[240px] mt-8">
-                            <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg"></div>
+                            <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg2"></div>
                             <div className="flex flex-col justify-center items-center w-full h-full relative z-[1] bg-white gap-3">
                               <p className="font-normal mt-2">{item.title}</p>
                               <Image
