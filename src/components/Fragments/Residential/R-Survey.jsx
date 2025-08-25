@@ -119,12 +119,12 @@ const ResSurvey = () => {
                   <p className="text-navyblue text-[25px] md:text-3xl lg:text-6xl text-center w-[95%] lg:w-[70%] mb-5 lg:mb-10 leading-[1.15]">
                     {ReSurvey.survey[currentQuestion]?.question}
                   </p>
-                  <div className="flex flex-col items-center md:items-start md:flex-row res-survey__wrap-btn gap-3 lg:gap-4">
+                  <div className="flex flex-col items-center md:items-start res-survey__wrap-btn gap-3 lg:gap-4 max-w-max">
                     {ReSurvey.survey[currentQuestion]?.options.map(
                       (answer, index) => (
                         <button
                           key={index}
-                          className="py-3 lg:py-4 pl-6 pr-[22px] bg-tosca text-sm lg:text-base tracking-[4px] text-white rounded-[5px] hover:bg-tosca-dark transition-colors duration-300 text-center uppercase cursor-pointer flex flex-col items-center justify-center w-full lg:w-max hover:bg-navyblue"
+                          className="py-3 lg:py-4 pl-6 pr-[22px] bg-tosca text-sm lg:text-base tracking-[4px] text-white rounded-[5px] hover:bg-tosca-dark transition-colors duration-300 text-center uppercase cursor-pointer flex flex-col items-center justify-center w-full hover:bg-navyblue"
                           onClick={() => handleAnswer(answer.value)}
                           disabled={isTransitioning}
                         >

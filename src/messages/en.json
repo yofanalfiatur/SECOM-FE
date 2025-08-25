@@ -330,7 +330,7 @@
     }
   },
   "ReAbout": {
-    "title": "How SECOM Protects You ?",
+    "title": "How SECOM Protects You?",
     "desc": "SECOM goes beyond alarms.<br>We combine smart technology with human response to truly protect what matters most.",
     "photo": "/img/temp/residential/Residence-How-SECOM-Protects-You.jpg",
     "items": [
@@ -1142,7 +1142,16 @@
     {
       "title": "Business",
       "price": "1,065,000",
-      "serviceFee": "",
+      "serviceFee": [
+        {
+          "text": "Service fee 24/7 monitoring only",
+          "fee": "1,065,000"
+        },
+        {
+          "text": "Service fee 24/7 monitoring + dispatch",
+          "fee": "1,287,000"
+        }
+      ],
       "desc": "A simple and affordable rental package for small businesses or offices. Includes essential security devices to get you started.",
       "device": "8",
       "image": "/img/temp/alarm/Business.png",
@@ -1151,7 +1160,16 @@
     {
       "title": "Business PRO",
       "price": "1,464,000",
-      "serviceFee": "",
+      "serviceFee": [
+        {
+          "text": "Service fee 24/7 monitoring only",
+          "fee": "1,464,000"
+        },
+        {
+          "text": "Service fee 24/7 monitoring + dispatch",
+          "fee": "1,686,000"
+        }
+      ],
       "desc": "Comprehensive protection with advanced security features and added safety features, ideal for high-risk areas.",
       "device": "12",
       "image": "/img/temp/alarm/BusinessPro.png",
@@ -1335,7 +1353,16 @@
     {
       "title": "Home",
       "price": "928,000",
-      "serviceFee": "",
+      "serviceFee": [
+        {
+          "text": "Service fee 24/7 monitoring only",
+          "fee": "928,000"
+        },
+        {
+          "text": "Service fee 24/7 monitoring + dispatch",
+          "fee": "1,150,000"
+        }
+      ],
       "desc": "Essential home safety with alarms, sensors, and 24/7 SECOM response.",
       "device": "9",
       "image": "/img/temp/solutions/package-home.png",
@@ -1344,7 +1371,16 @@
     {
       "title": "Home PRO",
       "price": "1,400,000",
-      "serviceFee": "",
+      "serviceFee": [
+        {
+          "text": "Service fee 24/7 monitoring only",
+          "fee": "1,400,000"
+        },
+        {
+          "text": "Service fee 24/7 monitoring + dispatch",
+          "fee": "1,622,000"
+        }
+      ],
       "desc": "Maximum protection with complete indoor and outdoor coverage, smart detection, and early warning systems.",
       "device": "15",
       "image": "/img/temp/solutions/package-homepro.png",
@@ -1372,10 +1408,6 @@
     {
       "title": "Home PRO",
       "price": "28,948,000",
-      "feeService": {
-        "monitorOnly": "465,000",
-        "monitorDispatch": "687,000"
-      },
       "serviceFee": [
         {
           "text": "Service fee 24/7 monitoring only",

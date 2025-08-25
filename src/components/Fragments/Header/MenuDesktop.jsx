@@ -52,16 +52,18 @@ const MenuDesktop = () => {
                       <li key={subIdx}>
                         <Link
                           href={subMenuHref}
-                          className="px-4 py-2 text-white font-raleway flex flex-row items-center transition-all ease duration-200 relative text-sm w-max"
+                          className="px-4 py-2 text-white font-raleway flex flex-row items-center transition-all ease duration-200 relative text-sm w-max !cursor-default"
                         >
-                          <p className="flex w-max peer">{subMenuText}</p>
+                          <p className="flex w-max hover:opacity-40 transition-all ease duration-200 cursor-pointer peer">
+                            {subMenuText}
+                          </p>
                           <svg
                             width="14"
                             height="10"
                             viewBox="0 0 14 10"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            className="absolute top-1/2 right-[-5px] -translate-y-1/2 peer-hover:right-[-10px] transition-all ease duration-200"
+                            className="absolute top-1/2 right-[-5px] -translate-y-1/2 peer-hover:right-[-10px] peer-hover:opacity-40 transition-all ease duration-200 cursor-pointer"
                           >
                             <path
                               d="M1 5L13 5M13 5L8.5 9.5M13 5L8.5 0.5"
