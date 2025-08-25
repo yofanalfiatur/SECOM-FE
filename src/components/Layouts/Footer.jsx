@@ -183,9 +183,9 @@ const Footer = () => {
       </section>
 
       <section className=" relative z-10 flex flex-col w-full footer__bottom">
-        <div className="lg:container !pt-[1.5rem] !pb-[1.5rem] lg:pt-[2rem] lg:pb-[2rem] px-[1rem] lg:px-0 gap-1 lg:gap-0 flex flex-col lg:flex-row w-full mx-auto">
-          <div className="w-full lg:w-3/6 flex flex-row items-center">
-            <div className=" flex flex-row relative text-[12px] after:content-[''] after:w-[1px] after: h-max  after:bg-white after:mx-3">
+        <div className="lg:container !pt-[1.5rem] !pb-[1.5rem] lg:pt-[2rem] lg:pb-[2rem] px-[1rem] lg:px-0 gap-1 lg:gap-0 flex flex-col-reverse lg:flex-row w-full mx-auto">
+          <div className="w-full lg:w-3/6 flex flex-col lg:flex-row lg:items-center">
+            <div className=" flex flex-row relative text-[12px] after:content-[unset]  after:lg:content-[''] after:w-[1px] after: h-max  after:bg-white after:mx-3">
               <p className="text-white lg:text-[14px] leading-[1.2]">
                 {" "}
                 © {new Date().getFullYear()} PT. SECOM Indonesia

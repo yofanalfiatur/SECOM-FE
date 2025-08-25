@@ -331,20 +331,20 @@
   },
   "ReAbout": {
     "title": "How SECOM Protects You?",
-    "desc": "SECOM goes beyond alarms.<br>We combine smart technology with human response to truly protect what matters most.",
+    "desc": "We combine smart technology with human response to truly protect what matters most.",
     "photo": "/img/temp/residential/Residence-How-SECOM-Protects-You.jpg",
     "items": [
       {
         "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
-        "title": "Instantly spots intrusions, fire, or suspicious activity, even when you're not home."
+        "title": "Instantly spots intrusions, fire, or suspicious activity."
       },
       {
         "icon": "/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
-        "title": "We only view live video during emergencies, ensuring safety without compromising your privacy."
+        "title": "We only view live video during emergencies, protecting your privacy."
       },
       {
         "icon": "/img/temp/alarm/Residence How SECOM Protects You BE.svg",
-        "title": "In a emergency, we don't wait. Our physical response personnel is on the ground. Fast."
+        "title": "In a emergency, our physical response personnel is on the ground."
       }
     ],
     "btnAbout": {
