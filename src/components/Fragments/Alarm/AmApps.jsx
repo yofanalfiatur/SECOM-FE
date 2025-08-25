@@ -22,9 +22,9 @@ const AmApps = ({ translationKey }) => {
           <Image
             src={AlarmApps.image}
             alt="apps"
-            width={477}
-            height={477}
-            className="w-[240px] lg:w-[477px] "
+            width={540}
+            height={345}
+            className="w-[330px] lg:w-[480px] 2xl:w-[540px] "
           />
         </motion.div>
         <motion.div

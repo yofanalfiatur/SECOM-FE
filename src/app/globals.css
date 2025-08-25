@@ -832,7 +832,7 @@ main {
 @keyframes pulsecirclebg {
   0% {
     transform: scale(1);
-    opacity: 0.9;
+    opacity: 1;
   }
   50% {
     transform: scale(1.3);
@@ -840,7 +840,7 @@ main {
   }
   100% {
     transform: scale(1);
-    opacity: 0.9;
+    opacity: 1;
   }
 }
 /*
@@ -850,11 +850,15 @@ main {
   @keyframes pulsecircle {
     0% {
       scale: 1;
-      opacity: 1;
+      opacity: 0.9;
     }
-    100% {
+    50% {
       scale: 2.1;
       opacity: 0;
+    }
+    100% {
+      scale: 1;
+      opacity: 0.9;
     }
   }
 }
@@ -874,8 +878,7 @@ main {
 } */
 
 .am-corner__pin__bg {
-  animation: pulsecirclebg 3s ease infinite;
-  animation-delay: 0s;
+  animation: pulsecirclebg 3s ease-in-out infinite;
   opacity: 0;
   transition: all 0.3s ease;
 }

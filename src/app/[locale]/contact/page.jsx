@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import FloatButton from "@/components/Elements/FloatButton";
+import ButtonPrimary from "@/components/Elements/ButtonPrimary";
+import ButtonSecondary from "@/components/Elements/ButtonSecondary";
 
 const Contact = () => {
   const t = useTranslations();
