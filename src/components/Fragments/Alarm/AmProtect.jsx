@@ -35,6 +35,7 @@ const AmProtect = ({ translationKey }) => {
           width={1321}
           height={671}
           className="max-w-full w-[100%] h-auto mb-5 mt-2 lg:mb-7"
+          quality={100}
         />
 
         <div className="relative w-full flex flex-col justify-center py-1">

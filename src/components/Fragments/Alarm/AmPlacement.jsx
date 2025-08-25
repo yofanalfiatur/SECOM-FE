@@ -94,7 +94,7 @@ const AmPlacement = (props) => {
                   </div>
                   {/* Card */}
                   <div
-                    className={`flex flex-col absolute min-w-[170px] z-[2] -translate-x-1/2 -translate-y-1/2 top-[-200%] left-[50%] transition-all duration-300 ${
+                    className={`flex flex-col absolute min-w-[170px] z-[2] -translate-x-1/2 -translate-y-1/2 top-[-240%] left-[50%] transition-all duration-300 ${
                       activeIndex === index || cardEnabled === index
                         ? "opacity-100 visible pointer-events-auto"
                         : "opacity-0 invisible pointer-events-none"

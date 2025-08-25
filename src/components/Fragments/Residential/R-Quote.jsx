@@ -123,6 +123,7 @@ const ResQuote = () => {
                       width={1840}
                       height={1200}
                       alt={`Quote ${index + 1}`}
+                      quality={100}
                       className="w-full h-auto object-center top-0 left-0 opacity-100"
                     />
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-[87px] z-0 triangle-shape scale-60 md:scale-100">

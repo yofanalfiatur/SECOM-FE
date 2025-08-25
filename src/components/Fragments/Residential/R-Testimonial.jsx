@@ -53,7 +53,7 @@ const ResTesti = () => {
               return (
                 <motion.div
                   key={index}
-                  className={`absolute w-full ${
+                  className={`absolute w-full overflow-hidden ${
                     position === 0 ? "current-card" : ""
                   }`}
                   initial={{ opacity: 0, scale: 0.95, y: 20 }}

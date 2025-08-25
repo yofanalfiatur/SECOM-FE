@@ -67,6 +67,7 @@ const ResBanner = () => {
             alt="Banner Image"
             width={1920}
             height={1374}
+            quality={100}
             className="absolute w-full z-[2] lg:z-10 scale-100 sm:scale-[102.5%] bottom-[0px] sm:bottom-[0px] md:bottom-[0px] lg:bottom-[0px] translate-x[-50%] pointer-events-none aspect-[320/326] sm:aspect-[200/115] object-cover sm:object-contain"
           />
         </div>

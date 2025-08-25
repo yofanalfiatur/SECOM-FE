@@ -40,6 +40,7 @@ const AmBanner = ({ translationKey }) => {
         alt="Banner background"
         width={1200}
         height={900}
+        quality={100}
         className="object-cover absolute top-0 right-0 w-full lg:w-[65%] h-full"
       />
 

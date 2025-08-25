@@ -59,7 +59,10 @@ const AmPackage = (props) => {
   };
 
   return (
-    <section className="pt-7 lg:pt-13 am-packages" id="am-packages">
+    <section
+      className="pt-7 lg:pt-13 scroll-mt-16 lg:scroll-mt-24 am-packages"
+      id="am-packages"
+    >
       <div className="container mx-auto flex flex-col lg:items-center">
         <h2 className="text-darkblue text-[25px] lg:text-[40px] lg:text-center font-normal">
           {PackageInfo.title}
@@ -134,6 +137,7 @@ const AmPackage = (props) => {
                           alt={item.title}
                           width={239}
                           height={156}
+                          quality={100}
                           className="mx-auto pt-6 lg:pt-5 lg:pb-12"
                         />
                       </div>

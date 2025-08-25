@@ -24,6 +24,7 @@ const AmApps = ({ translationKey }) => {
             alt="apps"
             width={540}
             height={345}
+            quality={100}
             className="w-[330px] lg:w-[480px] 2xl:w-[540px] "
           />
         </motion.div>

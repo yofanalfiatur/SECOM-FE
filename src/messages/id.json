@@ -1422,12 +1422,6 @@
       "pro": "1"
     },
     {
-      "device": "PIR Camera Indoor",
-      "image": "/img/temp/products/PIR-Camera-Indoor.png",
-      "basic": "-",
-      "pro": "1"
-    },
-    {
       "device": "Panic Button",
       "image": "/img/temp/products/Panic-Button.png",
       "basic": "1",
@@ -1438,18 +1432,6 @@
       "image": "/img/temp/products/Door-Contact.png",
       "basic": "3",
       "pro": "5"
-    },
-    {
-      "device": "PIR Indoor",
-      "image": "/img/temp/products/PIR-Indoor.png",
-      "basic": "-",
-      "pro": "1"
-    },
-    {
-      "device": "Outdoor CCTV",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
-      "basic": "-",
-      "pro": "1"
     },
     {
       "device": "Heat Sensor",
@@ -1470,15 +1452,33 @@
       "pro": "1"
     },
     {
-      "device": "Smoke Detector",
-      "image": "/img/temp/products/Smoke-Detector.png",
+      "device": "Keypad",
+      "image": "/img/temp/products/Keypad.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "PIR Camera Indoor",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
       "basic": "-",
       "pro": "1"
     },
     {
-      "device": "Keypad",
-      "image": "/img/temp/products/Keypad.png",
-      "basic": "1",
+      "device": "PIR Indoor",
+      "image": "/img/temp/products/PIR-Indoor.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Outdoor CCTV",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Smoke Detector",
+      "image": "/img/temp/products/Smoke-Detector.png",
+      "basic": "-",
       "pro": "1"
     }
   ],
@@ -1490,12 +1490,6 @@
       "pro": "1"
     },
     {
-      "device": "PIR Camera Indoor",
-      "image": "/img/temp/products/PIR-Camera-Indoor.png",
-      "basic": "-",
-      "pro": "1"
-    },
-    {
       "device": "Panic Button",
       "image": "/img/temp/products/Panic-Button.png",
       "basic": "1",
@@ -1506,18 +1500,6 @@
       "image": "/img/temp/products/Door-Contact.png",
       "basic": "3",
       "pro": "5"
-    },
-    {
-      "device": "PIR Indoor",
-      "image": "/img/temp/products/PIR-Indoor.png",
-      "basic": "-",
-      "pro": "1"
-    },
-    {
-      "device": "Outdoor CCTV",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
-      "basic": "-",
-      "pro": "1"
     },
     {
       "device": "Heat Sensor",
@@ -1538,15 +1520,33 @@
       "pro": "1"
     },
     {
-      "device": "Smoke Detector",
-      "image": "/img/temp/products/Smoke-Detector.png",
+      "device": "Keypad",
+      "image": "/img/temp/products/Keypad.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "PIR Camera Indoor",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
       "basic": "-",
       "pro": "1"
     },
     {
-      "device": "Keypad",
-      "image": "/img/temp/products/Keypad.png",
-      "basic": "1",
+      "device": "PIR Indoor",
+      "image": "/img/temp/products/PIR-Indoor.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Outdoor CCTV",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Smoke Detector",
+      "image": "/img/temp/products/Smoke-Detector.png",
+      "basic": "-",
       "pro": "1"
     }
   ]

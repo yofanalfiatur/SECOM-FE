@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { Link } from "@/i18n/navigation";
 
 const ResSurvey = () => {
   const t = useTranslations();
@@ -160,13 +161,13 @@ const ResSurvey = () => {
                     {getResult().desc}
                   </p>
                   <div className="flex flex-row res-survey__wrap-btn gap-4 mb-5">
-                    <ButtonPrimary
-                      className="!text-center"
+                    <Link
                       target={getResult().btn.target}
-                      href={getResult().btn.href}
+                      href="/solutions/#am-packages"
+                      className="flex flex-col items-center w-full max-w-full sm:max-w-max sm:max-h-max font-raleway bg-tosca text-white text-sm lg:text-base px-4 py-4 lg:px-5 lg:py-5 rounded-[5px] tracking-[4px] leading-none uppercase transition-all ease duration-200 hover:bg-navyblue !text-center"
                     >
                       {getResult().btn.text}
-                    </ButtonPrimary>
+                    </Link>
                   </div>
                   {/* hide temp */}
                   {/* <button

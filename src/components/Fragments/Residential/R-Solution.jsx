@@ -90,6 +90,7 @@ const ResSolution = () => {
                       alt={item.title}
                       width={693}
                       height={524}
+                      quality={100}
                       className="w-full h-full object-cover aspect-[693/524]"
                     />
                     <div className="flex flex-col lg:py-6 lg:px-7 lg:absolute lg:bottom-0 lg:left-0 w-full">

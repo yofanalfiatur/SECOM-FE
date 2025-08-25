@@ -235,6 +235,7 @@ const AmReason = ({ translationKey }) => {
                 alt=""
                 width={1920}
                 height={693}
+                quality={100}
                 className="object-cover object-left lg:object-center w-full aspect-[320/328] lg:aspect-[unset] h-auto lg:h-full"
                 sizes="100vw"
               />

@@ -25,6 +25,7 @@ const ResAbout = () => {
             height={550}
             alt="About"
             className="pt-7 pb-8 lg:pt-16 lg:pb-16 lg:pr-16 w-full h-auto object-cover"
+            quality={100}
           />
         </div>
         <div className="w-full lg:w-[55%] relative flex flex-col justify-center pt-6 lg:pt-16 lg:pb-16 lg:pl-16 lg:pr-2 after:content-[''] after:lg:content-none after:absolute after:w-[200%] after:h-[1px] after:bg-[#13223333] after:top-[0%] after:left-[-50%] after:-translate-y-1/2">
