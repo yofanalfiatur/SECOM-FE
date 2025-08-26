@@ -38,9 +38,10 @@ const AmFAQ = ({ translationKey }) => {
                       isOpen ? "border-b-[1px]" : "border-0"
                     } `}
                   >
-                    <span className="font-raleway font-normal lg:text-xl text-left text-darkblue">
-                      {item.question}
-                    </span>
+                    <div
+                      className="font-raleway font-normal lg:text-xl text-left text-darkblue"
+                      dangerouslySetInnerHTML={{ __html: item.question }}
+                    />
                     <svg
                       className={`transform transition-transform duration-300 ${
                         isOpen ? "rotate-0" : "rotate-180"

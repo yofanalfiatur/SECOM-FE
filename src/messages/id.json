@@ -606,7 +606,7 @@
       },
       {
         "title": "Tim Respon Fisik SECOM",
-        "desc": "Jika ancaman terkonfirmasi, SECOM mengirim tim responsuntuk memeriksa properti dan memberi laporan langsung."
+        "desc": "Jika ancaman terkonfirmasi, SECOM mengirim tim respons untuk memeriksa properti dan memberi laporan langsung."
       }
     ],
     "btnCTA": {
@@ -967,7 +967,7 @@
   "AlarmDifferences": {
     "title": "Lihat Perbedaan",
     "hint": "Sembunyikan Informasi",
-    "note": "*Syarat&Ketentuan<br><ul><li>Paket dapat disesuaikan dengan kebutuhan rumah Anda.</li><li>Harga belum termasuk PPN.</li><li>Harga belum termasuk biaya instalasi profesional.</li></ul>",
+    "note": "*Syarat&Ketentuan<br><ul><li>Paket dapat disesuaikan dengan kebutuhan bisnis Anda.</li><li>Harga belum termasuk PPN.</li><li>Harga belum termasuk biaya instalasi profesional.</li></ul>",
     "serviceTitle": "Biaya Servis"
   },
   "AlarmFAQ": {

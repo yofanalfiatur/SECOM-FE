@@ -974,7 +974,7 @@
   "AlarmDifferences": {
     "title": "See The Differences",
     "hint": "Hide Information",
-    "note": "*Terms & Conditions<br><ul><li>The package can be customized based on your home needs.</li><li>Prices are excluding VAT.</li><li>Prices are excluding professional installation fees.</li>",
+    "note": "*Terms & Conditions<br><ul><li>The package can be customized based on your business needs.</li><li>Prices are excluding VAT.</li><li>Prices are excluding professional installation fees.</li>",
     "serviceTitle": "Service Fee"
   },
   "AlarmFAQ": {

@@ -63,7 +63,7 @@ const MenuDesktop = () => {
                             viewBox="0 0 14 10"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            className="absolute top-1/2 right-[-5px] -translate-y-1/2 peer-hover:right-[-10px] peer-hover:opacity-40 transition-all ease duration-200 cursor-pointer"
+                            className="absolute top-1/2 right-[-5px] -translate-y-1/2 peer-hover:right-[-10px] opacity-40 transition-all ease duration-200 cursor-pointer"
                           >
                             <path
                               d="M1 5L13 5M13 5L8.5 9.5M13 5L8.5 0.5"
