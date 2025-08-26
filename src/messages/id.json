@@ -626,7 +626,8 @@
   },
   "SolApps": {
     "title": "Selalu Terhubung. Selalu Terlindungi",
-    "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman*<br><b>*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.</b>",
+    "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman*",
+    "descBottom": "*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.",
     "image": "/img/temp/mockup-app-new.png",
     "items": [
       {
@@ -866,7 +867,8 @@
   },
   "AlarmApps": {
     "title": "Selalu Terhubung. Selalu Terlindungi",
-    "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman*<br><b>*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.</b>",
+    "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman*",
+    "descBottom": "*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.",
     "image": "/img/temp/mockup-app-new.png",
     "items": [
       {

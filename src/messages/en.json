@@ -628,7 +628,8 @@
   },
   "SolApps": {
     "title": "Always Connected. Always Protected",
-    "desc": "Control your home security anytime, anywhere through the SECOM Smart Security app.<br><b>*Recordings are only accessed during verified emergencies to ensure your safety.</b>",
+    "desc": "Control your home security anytime, anywhere through the SECOM Smart Security app.",
+    "descBottom": "*Recordings are only accessed during verified emergencies to ensure your safety.",
     "image": "/img/temp/mockup-app-new.png",
     "items": [
       {

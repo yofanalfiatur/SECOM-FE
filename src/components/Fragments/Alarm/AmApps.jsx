@@ -82,6 +82,14 @@ const AmApps = ({ translationKey }) => {
                 </motion.li>
               ))}
             </ul>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="text-white font-medium text-sm lg:text-base leading-[1.7] lg:leading-[1.5] mt-2 lg:mt-6 mb-2"
+              dangerouslySetInnerHTML={{ __html: AlarmApps.descBottom }}
+            />
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
