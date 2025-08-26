@@ -222,6 +222,8 @@
     "title": "Semua Anggota Keluarga Anda,<br>Layak Merasa Aman",
     "photo": "/img/temp/residential/front-upscale-min.png",
     "background": "/img/temp/h-banner-bg.jpg",
+    "bgImage": "/img/temp/residential/Residence LP Hero ID.jpg",
+    "bgImageMd": "/img/temp/residential/Residence LP Hero ID Mobile.jpg",
     "items": [
       {
         "text": "Jika saya meninggalkan makanan terlalu lama di pemanas, detektor asap akan memberi peringatan.",

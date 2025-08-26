@@ -224,6 +224,8 @@
     "title": "Every Member of Your Family<br>Deserves To Be Safe",
     "photo": "/img/temp/residential/front-upscale-min.png",
     "background": "/img/temp/h-banner-bg.jpg",
+    "bgImage": "/img/temp/residential/Residence LP Hero ENG.jpg",
+    "bgImageMd": "/img/temp/residential/Residence LP Hero ENG Mobile.jpg",
     "items": [
       {
         "text": "If I leave food too long in the microwave, the smoke detector will alert us.",
