@@ -5,9 +5,10 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  basePath: '/alarm',
   allowedDevOrigins: [
     "http://localhost:3000",
-    "https://secom.madebystucel.com",
+    "http://secom.co.id/alarm",
     "https://secom-fe.vercel.app/",
   ],
   experimental: {
