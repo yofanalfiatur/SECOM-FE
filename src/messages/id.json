@@ -145,11 +145,11 @@
   },
   "FooterMenu": [
     {
-      "FtMenuText": "SECOM For Home",
+      "FtMenuText": "Residensial",
       "FtMenuLink": "/solutions"
     },
     {
-      "FtMenuText": "SECOM For Business",
+      "FtMenuText": "Bisnis",
       "FtMenuLink": "/alarm"
     }
   ],
@@ -595,8 +595,8 @@
   "SolProtect": {
     "title": "Perlindungan Menyeluruh untuk Keamanan Anda",
     "desc": "",
-    "image": "/img/temp/solutions/Circle-of-Service-Sol.png",
-    "imageMobile": "/img/temp/solutions/Circle-of-Service-Mobile-Sol.png",
+    "image": "/img/temp/residential/Circle of Service RES ID.png",
+    "imageMobile": "/img/temp/residential/Circle of Service RES ID Mobile.png",
     "items": [
       {
         "title": "Deteksi Darurat",

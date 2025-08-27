@@ -147,11 +147,11 @@
   },
   "FooterMenu": [
     {
-      "FtMenuText": "SECOM For Home",
+      "FtMenuText": "Residential",
       "FtMenuLink": "/solutions"
     },
     {
-      "FtMenuText": "SECOM For Business",
+      "FtMenuText": "Business",
       "FtMenuLink": "/alarm"
     }
   ],
@@ -597,8 +597,8 @@
   "SolProtect": {
     "title": "Circle of Care for Your Safety",
     "desc": "",
-    "image": "/img/temp/solutions/Circle-of-Service-ENG.png",
-    "imageMobile": "/img/temp/solutions/Circle-of-Service-Mobile-ENG.png",
+    "image": "/img/temp/residential/Circle of Service RES ENG.png",
+    "imageMobile": "/img/temp/residential/Circle of Service RES ENG Mobile.png",
     "items": [
       {
         "title": "Emergency Detected",

@@ -89,11 +89,11 @@ const AmTrusted = ({ translationKey }) => {
                         <CrossIcon />
                       </div>
                     ) : (
-                      <div className="flex flex-col lg:flex-row gap-2 lg:gap-3 items-center lg:mx-4 2xl:mx-8">
+                      <div className="flex flex-col lg:flex-row gap-2 lg:gap-3 items-center">
                         <LimitIcon />{" "}
-                        <span className="font-raleway font-medium text-xs lg:text-xl text-darkblue capitalize w-full max-w-max lg:text-start">
-                          {row.other}
-                        </span>
+                        <div className="font-raleway font-medium text-xs lg:text-xl text-darkblue capitalize lg:text-start flex flex-col">
+                          <p>{row.other}</p>
+                        </div>
                       </div>
                     )}
                   </div>
