@@ -28,6 +28,7 @@ const Footer = () => {
   const locale = useLocale();
 
   const [shouldHideFooterTop, setShouldHideFooterTop] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const pathname = usePathname();
 
@@ -47,6 +48,27 @@ const Footer = () => {
 
     return () => clearTimeout(timeout);
   }, [pathname]);
+
+  // Handle click outside to close dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest(".f-wrap-dropdown")) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    if (isDropdownOpen) {
+      document.addEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isDropdownOpen]);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   return (
     <footer className="max-w-screen items-center justify-center flex flex-col bg-[#00529c] footer overflow-hidden relative z-0">
@@ -199,27 +221,37 @@ const Footer = () => {
             </Link>
           </div>
           <div className="w-full lg:w-3/6 flex flex-col items-start lg:items-end lg:pr-20">
-            <div className="flex flex-col f-wrap-dropdown relative max-w-max max-h-max">
-              <select
-                name="f-dropdown"
-                id="f-dropdown"
-                className="text-[12px] lg:text-[14px] max-w-max py-2 pl-3 pr-10 lg:py-2.5 lg:pl-3 lg:pr-16 relative border-1 border-[#ffffffb3] appearance-none text-[#ffffffb3] cursor-pointer f-dropdown"
-                onChange={(e) => {
-                  if (e.target.value) {
-                    window.open(e.target.value, "_blank");
-                  }
-                }}
+            <div
+              className={`flex flex-col relative max-w-max max-h-max transition-all ease duration-200 f-wrap-dropdown after:top-[4px] after:lg:top-[8px] ${
+                isDropdownOpen
+                  ? "after:rotate-180 after:!top-[8px] after:lg:!top-[10px]"
+                  : ""
+              }`}
+            >
+              <button
+                onClick={toggleDropdown}
+                className={`text-[12px] lg:text-[14px] max-w-max py-2 pl-3 pr-10 lg:py-2.5 lg:pl-3 lg:pr-16 relative border-1 border-[#ffffffb3] appearance-none text-[#ffffffb3] cursor-pointer transition-all ease duration-200 f-dropdown`}
               >
-                {FooterDropdown.map((item, index) => (
-                  <option
-                    key={index}
-                    value={item.href}
-                    className="text-black f-dropdown__option"
-                  >
-                    {item.text}
-                  </option>
-                ))}
-              </select>
+                <p className="text-white relative z-20">SECOM Global Network</p>
+                <div
+                  className={`flex flex-col absolute left-0 w-full bg-white p-3 gap-2 z-10 f-wrap-item-dp transition-all duration-300 ease-in-out ${
+                    isDropdownOpen
+                      ? "opacity-100 visible top-[-381px]"
+                      : "opacity-0 invisible top-[-370px]"
+                  }`}
+                >
+                  {FooterDropdown.map((item, index) => (
+                    <Link
+                      key={index}
+                      href={item.href}
+                      target="_blank"
+                      className="text-black cursor-pointer text-sm hover:text-navyblue"
+                    >
+                      {item.text}
+                    </Link>
+                  ))}
+                </div>
+              </button>
             </div>
           </div>
         </div>

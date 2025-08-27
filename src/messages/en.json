@@ -164,10 +164,6 @@
   },
   "FooterDropdown": [
     {
-      "text": "SECOM Global Network",
-      "href": ""
-    },
-    {
       "text": "Japan",
       "href": "https://www.secom.co.jp/english/"
     },
@@ -322,7 +318,7 @@
         "desc": "Your current protection isn't enough. Find out the system that gives your family real peace of mind.",
         "btn": {
           "text": "Discover Now",
-          "href": "/solutions/#am-packages",
+          "href": "/solutions/",
           "target": "_self"
         }
       },
@@ -333,7 +329,7 @@
         "desc": "Your home is not fully protected. Find out what it's missing and how SECOM can help.",
         "btn": {
           "text": "Discover Now",
-          "href": "/solutions/#am-packages",
+          "href": "/solutions/",
           "target": "_self"
         }
       }
@@ -1252,35 +1248,12 @@
       "basic": "1",
       "pro": "1"
     },
-    {
-      "device": "Panic Button",
-      "image": "/img/temp/products/Panic-Button.png",
-      "basic": "-",
-      "pro": "1"
-    },
+
     {
       "device": "Door Control",
       "image": "/img/temp/products/Door-Contact.png",
       "basic": "3",
       "pro": "3"
-    },
-    {
-      "device": "PIR Indoor",
-      "image": "/img/temp/products/PIR-Indoor.png",
-      "basic": "-",
-      "pro": "1"
-    },
-    {
-      "device": "Outdoor CCTV",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
-      "basic": "-",
-      "pro": "-"
-    },
-    {
-      "device": "Indoor CCTV",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
-      "basic": "-",
-      "pro": "1"
     },
     {
       "device": "Siren",
@@ -1295,16 +1268,40 @@
       "pro": "1"
     },
     {
+      "device": "Keypad",
+      "image": "/img/temp/products/Keypad.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "Panic Button",
+      "image": "/img/temp/products/Panic-Button.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "PIR Indoor",
+      "image": "/img/temp/products/PIR-Indoor.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Indoor CCTV",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
       "device": "Smoke Detector",
       "image": "/img/temp/products/Smoke-Detector.png",
       "basic": "-",
       "pro": "1"
     },
     {
-      "device": "Keypad",
-      "image": "/img/temp/products/Keypad.png",
-      "basic": "1",
-      "pro": "1"
+      "device": "Outdoor CCTV",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "basic": "-",
+      "pro": "-"
     }
   ],
   "BusinessPackagesRent": [
@@ -1320,35 +1317,12 @@
       "basic": "1",
       "pro": "1"
     },
-    {
-      "device": "Panic Button",
-      "image": "/img/temp/products/Panic-Button.png",
-      "basic": "-",
-      "pro": "1"
-    },
+
     {
       "device": "Door Control",
       "image": "/img/temp/products/Door-Contact.png",
       "basic": "3",
       "pro": "3"
-    },
-    {
-      "device": "PIR Indoor",
-      "image": "/img/temp/products/PIR-Indoor.png",
-      "basic": "-",
-      "pro": "1"
-    },
-    {
-      "device": "Outdoor CCTV",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
-      "basic": "-",
-      "pro": "-"
-    },
-    {
-      "device": "Indoor CCTV",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
-      "basic": "-",
-      "pro": "1"
     },
     {
       "device": "Siren",
@@ -1363,18 +1337,43 @@
       "pro": "1"
     },
     {
+      "device": "Keypad",
+      "image": "/img/temp/products/Keypad.png",
+      "basic": "1",
+      "pro": "1"
+    },
+    {
+      "device": "Panic Button",
+      "image": "/img/temp/products/Panic-Button.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "PIR Indoor",
+      "image": "/img/temp/products/PIR-Indoor.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
+      "device": "Indoor CCTV",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "basic": "-",
+      "pro": "1"
+    },
+    {
       "device": "Smoke Detector",
       "image": "/img/temp/products/Smoke-Detector.png",
       "basic": "-",
       "pro": "1"
     },
     {
-      "device": "Keypad",
-      "image": "/img/temp/products/Keypad.png",
-      "basic": "1",
-      "pro": "1"
+      "device": "Outdoor CCTV",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "basic": "-",
+      "pro": "-"
     }
   ],
+
   "HomePackages": [
     {
       "title": "Home",

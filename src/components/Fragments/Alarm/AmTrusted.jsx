@@ -32,15 +32,15 @@ const AmTrusted = ({ translationKey }) => {
           <div className="bg-white">
             {/* Table Header */}
             <div className="bg-navyblue text-white flex flex-row">
-              <div className="flex flex-col justify-center text-left py-3 lg:py-[22px] px-4 lg:px-8 text-xs lg:text-xl font-semibold font-raleway w-[40%] lg:w-1/2">
+              <div className="flex flex-col justify-center text-left py-3 lg:py-[22px] px-4 lg:px-8 text-xs lg:text-xl font-semibold font-raleway w-[40%]">
                 {locale === "en" ? "FEATURE" : "FITUR"}
               </div>
-              <div className="text-center py-3 lg:py-[22px] px-0 lg:px-8 flex flex-col lg:flex-row gap-1 lg:gap-3 items-center justify-center w-[30%] lg:w-1/4">
+              <div className="text-center py-3 lg:py-[22px] px-0 lg:px-8 flex flex-col lg:flex-row gap-1 lg:gap-3 items-center justify-center w-[30%]">
                 <p className="text-white text-xs lg:text-xl font-semibold uppercase">
                   {AlarmTrusted.textSecom}
                 </p>
               </div>
-              <div className="text-center py-3 lg:py-[22px] px-1 lg:px-8 text-xs lg:text-xl font-semibold font-raleway w-[30%] lg:w-1/4 uppercase flex flex-col justify-center">
+              <div className="text-center py-3 lg:py-[22px] px-1 lg:px-8 text-xs lg:text-xl font-semibold font-raleway w-[30%] uppercase flex flex-col justify-center">
                 {AlarmTrusted.textOther}
               </div>
             </div>
@@ -59,12 +59,12 @@ const AmTrusted = ({ translationKey }) => {
                   className="bg-white border-b-[1px] border-[#0000001A] last:border-0 flex flex-row w-full"
                 >
                   {/* Feature Column */}
-                  <div className="py-3 lg:py-[18px] px-4 lg:px-8 text-gray-800 font-medium text-[15px] leading-[1.8] lg:leading-[1.3] lg:text-xl font-raleway w-[40%] lg:w-1/2 flex flex-col justify-center">
+                  <div className="py-3 lg:py-[18px] px-4 lg:px-8 text-gray-800 font-medium text-[15px] leading-[1.8] lg:leading-[1.3] lg:text-xl font-raleway w-[40%] flex flex-col justify-center">
                     {row.feature}
                   </div>
 
                   {/* SECOM Column */}
-                  <div className="lg:py-[18px] text-center bg-[#E0FEFF] flex items-center justify-center w-[30%] lg:w-1/4">
+                  <div className="lg:py-[18px] text-center bg-[#E0FEFF] flex items-center justify-center w-[30%]">
                     {row.secom ? (
                       <div className="flex items-center justify-center mx-8 lg:mx-auto">
                         <CheckIcon />
@@ -78,7 +78,7 @@ const AmTrusted = ({ translationKey }) => {
 
                   {/* OTHER Column */}
                   <div
-                    className={`p-2 lg:py-[18px] lg:px-4 text-center flex w-[30%] lg:w-1/4 items-center justify-center lg:justify-start`}
+                    className={`p-2 lg:py-[18px] lg:px-4 text-center flex w-[30%] items-center justify-center lg:justify-center`}
                   >
                     {row.other === "available" ? (
                       <div className="flex items-center justify-center mx-auto">
@@ -89,10 +89,14 @@ const AmTrusted = ({ translationKey }) => {
                         <CrossIcon />
                       </div>
                     ) : (
-                      <div className="flex flex-col lg:flex-row gap-2 lg:gap-3 items-center">
-                        <LimitIcon />{" "}
-                        <div className="font-raleway font-medium text-xs lg:text-xl text-darkblue capitalize lg:text-start flex flex-col">
-                          <p>{row.other}</p>
+                      <div className="flex flex-col justify-center items-start w-full max-w-[290px]">
+                        <div className="flex flex-col lg:flex-row gap-2 w-full items-center">
+                          <div className="flex flex-col lg:w-[15%]">
+                            <LimitIcon />
+                          </div>
+                          <div className="lg:w-[85%] font-raleway font-medium text-xs lg:text-xl text-darkblue capitalize lg:text-start flex flex-col">
+                            <p>{row.other}</p>
+                          </div>
                         </div>
                       </div>
                     )}

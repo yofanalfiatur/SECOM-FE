@@ -163,7 +163,7 @@ const ResSurvey = () => {
                   <div className="flex flex-row res-survey__wrap-btn gap-4 mb-5">
                     <Link
                       target={getResult().btn.target}
-                      href="/solutions/#am-packages"
+                      href={getResult().btn.href}
                       className="flex flex-col items-center w-full max-w-full sm:max-w-max sm:max-h-max font-raleway bg-tosca text-white text-sm lg:text-base px-4 py-4 lg:px-5 lg:py-5 rounded-[5px] tracking-[4px] leading-none uppercase transition-all ease duration-200 hover:bg-navyblue !text-center"
                     >
                       {getResult().btn.text}
