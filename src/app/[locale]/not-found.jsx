@@ -18,7 +18,7 @@ const NotFound = () => {
           className="flex-col flex w-screen h-full absolute top-0 left-0 transform-x-[50%]"
         >
           <Image
-            src="/alarm/img/404.svg"
+            src="/img/404.svg"
             alt="Error Page"
             width={1000}
             height={1000}

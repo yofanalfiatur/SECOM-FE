@@ -118,7 +118,7 @@ const ResQuote = () => {
                       src={
                         item.thumb && item.thumb.trim() !== ""
                           ? item.thumb
-                          : "/alarm/img/thumb-default-blue.jpg"
+                          : "/img/thumb-default-blue.jpg"
                       }
                       width={1840}
                       height={1200}

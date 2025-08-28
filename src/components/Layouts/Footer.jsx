@@ -113,7 +113,7 @@ const Footer = () => {
           <div className="w-full lg:w-1/4 flex flex-col justify-center border-b-1 border-[#ffffff66] lg:border-none">
             <div className="lg:max-w-max pt-8 pb-8 lg:pt-0 lg:pb-0 flex items-center lg:items-start flex-col gap-9">
               <Image
-                src="/alarm/img/secom-logo.png"
+                src="/img/secom-logo.png"
                 alt="logo"
                 width={248}
                 height={62}
