@@ -154,7 +154,7 @@ const AmPackage = (props) => {
                             {locale === "en" ? "Starting from" : "Mulai dari"}
                           </p>
                         )}
-                        <div className="flex flex-col lg:flex-row items-center mb-2 gap-3">
+                        <div className="flex flex-col lg:flex-row items-center mb-2 gap-3 lg:gap-10">
                           <div className="flex flex-row items-start lg:w-max">
                             <p className="text-[25px] lg:text-[30px] text-navyblue leading-[1] w-full flex flex-row gap-2">
                               <span className="font-bold">
@@ -174,6 +174,26 @@ const AmPackage = (props) => {
                             item.serviceFee.length > 0 &&
                             activeTab === 1 && (
                               <div className="bg-[#CE2129] relative z-[1] text-white px-3 py-[4px] rounded text-sm flex flex-col items-center">
+                                <svg
+                                  width="13"
+                                  height="13"
+                                  viewBox="0 0 13 13"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="absolute top-1/2 -translate-y-1/2 left-[-25px] scale-[180%]"
+                                >
+                                  <circle
+                                    cx="6.30964"
+                                    cy="6.30964"
+                                    r="6.30964"
+                                    fill="#00529C"
+                                  />
+                                  <path
+                                    d="M8.43516 6.06586V6.97445H6.94608V8.58972H5.93654V6.97445H4.44746V6.06586H5.93654V4.45059H6.94608V6.06586H8.43516Z"
+                                    fill="white"
+                                  />
+                                </svg>
+
                                 <span className="text-[10px] leading-[1] mb-1 text-center">
                                   {locale === "en"
                                     ? "Service Fee starting from"
