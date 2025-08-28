@@ -21,7 +21,7 @@
   "langIdentifier": "English",
   "MenuType": [
     {
-      "icon": "/img/menu-type-1.svg",
+      "icon": "/alarm/img/menu-type-1.svg",
       "text": "Business",
       "href": "",
       "subMenu": [
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "icon": "/img/menu-type-2.svg",
+      "icon": "/alarm/img/menu-type-2.svg",
       "text": "Residential",
       "href": "",
 
@@ -88,7 +88,7 @@
     {
       "text": "Business",
       "href": "/#",
-      "icon": "/img/menu-type-1.svg",
+      "icon": "/alarm/img/menu-type-1.svg",
       "subMenu": [
         {
           "subMenuText": "SECOM Smart Security",
@@ -99,7 +99,7 @@
     {
       "text": "Residential",
       "href": "/",
-      "icon": "/img/menu-type-2.svg",
+      "icon": "/alarm/img/menu-type-2.svg",
       "subMenu": [
         {
           "subMenuText": "Residential Overview",
@@ -122,12 +122,12 @@
       {
         "text": "EN",
         "href": "/",
-        "icon": "/img/flag-en.svg"
+        "icon": "/alarm/img/flag-en.svg"
       },
       {
         "text": "ID",
         "href": "/id",
-        "icon": "/img/flag-id.svg"
+        "icon": "/alarm/img/flag-id.svg"
       }
     ],
     "login": {
@@ -218,10 +218,10 @@
   ],
   "ReBanner": {
     "title": "Every Member of Your Family<br>Deserves To Be Safe",
-    "photo": "/img/temp/residential/front-upscale-min.png",
-    "background": "/img/temp/h-banner-bg.jpg",
-    "bgImage": "/img/temp/residential/Residence LP Hero ENG.jpg",
-    "bgImageMd": "/img/temp/residential/Residence LP Hero ENG Mobile.jpg",
+    "photo": "/alarm/img/temp/residential/front-upscale-min.png",
+    "background": "/alarm/img/temp/h-banner-bg.jpg",
+    "bgImage": "/alarm/img/temp/residential/Residence LP Hero ENG.jpg",
+    "bgImageMd": "/alarm/img/temp/residential/Residence LP Hero ENG Mobile.jpg",
     "items": [
       {
         "text": "If I leave food too long in the microwave, the smoke detector will alert us.",
@@ -231,7 +231,7 @@
         "right": "66%",
         "zIndex": "1",
         "maxWidth": "345px",
-        "icon": "/img/temp/h-banner-ibu.png"
+        "icon": "/alarm/img/temp/h-banner-ibu.png"
       },
       {
         "text": "If someone knocks, I don't have to be scared anymore. ",
@@ -241,7 +241,7 @@
         "right": "",
         "zIndex": "1",
         "maxWidth": "200px",
-        "icon": "/img/temp/h-banner-anak.png"
+        "icon": "/alarm/img/temp/h-banner-anak.png"
       },
       {
         "text": "Even if I'm home alone, I know help is just one button away.",
@@ -251,7 +251,7 @@
         "right": "",
         "zIndex": "1",
         "maxWidth": "314px",
-        "icon": "/img/temp/h-banner-nenek.png"
+        "icon": "/alarm/img/temp/h-banner-nenek.png"
       },
       {
         "text": "If anyone tries to break in, I know my family and home are still protected.",
@@ -261,7 +261,7 @@
         "right": "",
         "zIndex": "1",
         "maxWidth": "314px",
-        "icon": "/img/temp/h-banner-bapak.png"
+        "icon": "/alarm/img/temp/h-banner-bapak.png"
       }
     ]
   },
@@ -312,7 +312,7 @@
     ],
     "result": [
       {
-        "icon": "/img/survey-h-risk.png",
+        "icon": "/alarm/img/survey-h-risk.png",
         "title": "HIGH RISK",
         "subtitle": "Your Home is at High Risk!",
         "desc": "Your current protection isn't enough. Find out the system that gives your family real peace of mind.",
@@ -323,7 +323,7 @@
         }
       },
       {
-        "icon": "/img/survey-m-risk.png",
+        "icon": "/alarm/img/survey-m-risk.png",
         "title": "MODERATE RISK",
         "subtitle": "Your Home May Be at Risk!",
         "desc": "Your home is not fully protected. Find out what it's missing and how SECOM can help.",
@@ -342,18 +342,18 @@
   "ReAbout": {
     "title": "How SECOM Protects You?",
     "desc": "We combine smart technology with human response to truly protect what matters most.",
-    "photo": "/img/temp/residential/Residence-How-SECOM-Protects-You.jpg",
+    "photo": "/alarm/img/temp/residential/Residence-How-SECOM-Protects-You.jpg",
     "items": [
       {
-        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
         "title": "Instantly spots intrusions, fire, or suspicious activity."
       },
       {
-        "icon": "/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
+        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
         "title": "We only view live video during emergencies, protecting your privacy."
       },
       {
-        "icon": "/img/temp/alarm/Residence How SECOM Protects You BE.svg",
+        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You BE.svg",
         "title": "In a emergency, our physical response personnel is on the ground."
       }
     ],
@@ -369,22 +369,22 @@
     "desc": "Each room has different risks. SECOM helps you place the right protection in the right place.",
     "itemSlider": [
       {
-        "photo": "/img/temp/residential/Residence Solution Landing Page 1.jpg",
+        "photo": "/alarm/img/temp/residential/Residence Solution Landing Page 1.jpg",
         "title": "Smart Video Camera - Outdoor",
         "desc": "Monitor your gates, garage, and yard with smart detection and two-way audio."
       },
       {
-        "photo": "/img/temp/residential/Residence Solution Landing Page 2.jpg",
+        "photo": "/alarm/img/temp/residential/Residence Solution Landing Page 2.jpg",
         "title": "PIR Cam Indoor - Living Room",
         "desc": "Watch over your home's central space with reliable motion-sensing protection."
       },
       {
-        "photo": "/img/temp/residential/Residence Solution Landing Page 3.jpg",
+        "photo": "/alarm/img/temp/residential/Residence Solution Landing Page 3.jpg",
         "title": "Door Contact - Windows",
         "desc": "Protect windows from silent entry with smart magnetic sensors."
       },
       {
-        "photo": "/img/temp/residential/Residence Solution Landing Page 4.jpg",
+        "photo": "/alarm/img/temp/residential/Residence Solution Landing Page 4.jpg",
         "title": "Smoke Detector - Clean Kitchen",
         "desc": "Even in the cleanest kitchens, accidents can happen. Stay alert with a smoke detector."
       }
@@ -397,7 +397,7 @@
   },
   "ReQuote": [
     {
-      "thumb": "/img/temp/quote-thumb.jpg",
+      "thumb": "/alarm/img/temp/quote-thumb.jpg",
       "linkVideo": "https://youtu.be/euM9kW0ZRWg",
       "text": "I wasn't just looking for a security system, I wanted to feel really safe. SECOM gave me both."
     }
@@ -437,7 +437,7 @@
     "hint": "Promotion",
     "title": "Because home is where they should always feel safe",
     "desc": "With SECOM, you get more than security, you get peace of mind. Protect what matters most, starting today.",
-    "image": "/img/temp/h-promotion.jpg",
+    "image": "/alarm/img/temp/h-promotion.jpg",
     "btnPromotion": {
       "text": "FREE CONSULTATION",
       "href": "/contact",
@@ -447,8 +447,8 @@
   "ContactPage": {
     "title": "Get Your Free Consultation",
     "desc": "We'll assess your specific needs and recommend the best-fit solution with accuracy and efficiency.",
-    "photo": "/img/temp/Free Consultation.jpg",
-    "photoMd": "/img/temp/Free Consultation Mobile.jpg"
+    "photo": "/alarm/img/temp/Free Consultation.jpg",
+    "photoMd": "/alarm/img/temp/Free Consultation Mobile.jpg"
   },
 
   "FormValue": {
@@ -513,7 +513,7 @@
     "title": "Thank You",
     "title2": "for your inquiry!",
     "desc": "A SECOM professional consultant will be in touch shortly to understand your needs and provide the best recommendation.",
-    "logo": "/img/logo-thankyou.svg",
+    "logo": "/alarm/img/logo-thankyou.svg",
     "buttonCTA": {
       "text": "Back to Home",
       "href": "/",
@@ -535,22 +535,22 @@
 
   "SolBanner": {
     "title": "Reliable Security for <b>Every Family</b>",
-    "background": "/img/temp/solutions/sol-bg-high.jpg",
-    "backgroundMd": "/img/temp/solutions/sol-bg-high.jpg"
+    "background": "/alarm/img/temp/solutions/sol-bg-high.jpg",
+    "backgroundMd": "/alarm/img/temp/solutions/sol-bg-high.jpg"
   },
   "SolOverview": {
     "desc": "<b>Your home is where life happens</b>, where children grow, memories are made, and safety should never be in question. <b>At SECOM, we provide personalized security solutions</b> to help you <b>protect your home with confidence and care.</b>",
     "items": [
       {
-        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
         "title": "Integrated Security System"
       },
       {
-        "icon": "/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
+        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
         "title": "24/7 Monitoring"
       },
       {
-        "icon": "/img/temp/alarm/Residence How SECOM Protects You BE.svg",
+        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You BE.svg",
         "title": "Trained Response Team"
       }
     ]
@@ -559,32 +559,32 @@
     "title": "How Secom Works?",
     "items": [
       {
-        "image": "/img/temp/alarm/solutions-how-secom-works-1.jpg",
-        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-1.jpg",
+        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-1.jpg",
+        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-1.jpg",
         "title": "We Listen First",
         "desc": "Our security experts assess your space and recommend a tailored solution that fits your needs and lifestyle."
       },
       {
-        "image": "/img/temp/alarm/solutions-how-secom-works-2.jpg",
-        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-2.jpg",
+        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-2.jpg",
+        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-2.jpg",
         "title": "Smart and Secure",
         "desc": "We carefully plan where each alarm, sensor, and camera goes, ensuring every corner is protected."
       },
       {
-        "image": "/img/temp/alarm/solutions-how-secom-works-3.jpg",
-        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-3.jpg",
+        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-3.jpg",
+        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-3.jpg",
         "title": "Seamless Setup",
         "desc": "Our professional team installs your system quickly, cleanly, and with minimal disruption to your home."
       },
       {
-        "image": "/img/temp/alarm/solutions-how-secom-works-4.jpeg",
-        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-4.jpg",
+        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-4.jpeg",
+        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-4.jpg",
         "title": "Always On",
         "desc": "Your system is linked to SECOM's Control Center, ready to respond to emergencies at any hour."
       },
       {
-        "image": "/img/temp/alarm/solutions-how-secom-works-5.jpg",
-        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-5.jpg",
+        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-5.jpg",
+        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-5.jpg",
         "title": "Protection That Lasts",
         "desc": "We provide routine maintenance checks and service so your system stays reliable, year after year."
       }
@@ -593,8 +593,8 @@
   "SolProtect": {
     "title": "Circle of Care for Your Safety",
     "desc": "",
-    "image": "/img/temp/residential/Circle of Service RES ENG.png",
-    "imageMobile": "/img/temp/residential/Circle of Service RES ENG Mobile.png",
+    "image": "/alarm/img/temp/residential/Circle of Service RES ENG.png",
+    "imageMobile": "/alarm/img/temp/residential/Circle of Service RES ENG Mobile.png",
     "items": [
       {
         "title": "Emergency Detected",
@@ -622,54 +622,54 @@
   "SolCorners": {
     "title": "Every Room. Every Access. Fully Protected",
     "desc": "",
-    "image": "/img/temp/residential/Product-Placement-Home.jpg"
+    "image": "/alarm/img/temp/residential/Product-Placement-Home.jpg"
   },
   "SolApps": {
     "title": "Always Connected.<br>Always Protected",
     "desc": "Control your home security anytime, anywhere through the SECOM Smart Security app.",
     "descBottom": "*Recordings are only accessed during verified emergencies to ensure your safety.",
-    "image": "/img/temp/mockup-app-new.png",
-    "logo": "/img/temp/logo-secom-red.png",
+    "image": "/alarm/img/temp/mockup-app-new.png",
+    "logo": "/alarm/img/temp/logo-secom-red.png",
     "items": [
       {
         "title": "Live Monitoring",
         "desc": "Watch real-time footage of your home anytime, from anywhere.",
-        "icon": "/img/temp/alarm/Icon App Benefits-Video Real Time.svg"
+        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Video Real Time.svg"
       },
       {
         "title": "Arm & Disarm",
         "desc": "Easily activate or deactivate your alarm system with just a tap.",
-        "icon": "/img/temp/alarm/Icon App Benefits-Active Non Active.svg"
+        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Active Non Active.svg"
       },
       {
         "title": "Instant Notifications",
         "desc": "Get alerts right away when something happens at home.",
-        "icon": "/img/temp/alarm/Icon App Benefits-Instan Notif.svg"
+        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Instan Notif.svg"
       },
       {
         "title": "History",
         "desc": "Check what happened and when. All activity is recorded for your peace of mind.",
-        "icon": "/img/temp/alarm/Icon App Benefits-Log.svg"
+        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Log.svg"
       },
       {
         "title": "Manage Multiple Homes",
         "desc": "Check and control more than one house from the same app.",
-        "icon": "/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
+        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
       },
       {
         "title": "Activity Reports",
         "desc": "View simple reports to keep track of what's going on",
-        "icon": "/img/temp/alarm/Icon App Benefits-Report.svg"
+        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Report.svg"
       }
     ],
     "download": [
       {
         "link": "https://play.google.com/store/apps/details?id=jp.co.secom.secomalarm",
-        "image": "/img/temp/googleplay.svg"
+        "image": "/alarm/img/temp/googleplay.svg"
       },
       {
         "link": "https://apps.apple.com/id/app/secom-smart-security/id1522939072",
-        "image": "/img/temp/appstore.svg"
+        "image": "/alarm/img/temp/appstore.svg"
       }
     ]
   },
@@ -782,22 +782,22 @@
 
   "AlarmBanner": {
     "title": "Reliable Alarm Systems to <b>Protect Your Business 24/7</b>",
-    "background": "/img/temp/alarm/alarm-banner.jpg",
-    "backgroundMd": "/img/temp/alarm/alarm-banner-mobile.jpg"
+    "background": "/alarm/img/temp/alarm/alarm-banner.jpg",
+    "backgroundMd": "/alarm/img/temp/alarm/alarm-banner-mobile.jpg"
   },
   "AlarmOverview": {
     "desc": "<b>Your business is where goals are achieved</b>, teams grow, and futures are built. <b>At SECOM, we provide personalized security solutions</b> to help you protect what you've worked hard to build, with <b>confidence, care, and cutting-edge technology.</b>",
     "items": [
       {
-        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
         "title": "Integrated Security System"
       },
       {
-        "icon": "/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
+        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
         "title": "24/7 Monitoring"
       },
       {
-        "icon": "/img/temp/alarm/Residence How SECOM Protects You BE.svg",
+        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You BE.svg",
         "title": "Trained Response Team"
       }
     ]
@@ -806,32 +806,32 @@
     "title": "How Secom Works?",
     "items": [
       {
-        "image": "/img/temp/alarm/solutions-how-secom-works-1.jpg",
-        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-1.jpg",
+        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-1.jpg",
+        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-1.jpg",
         "title": "Start with Understanding",
         "desc": "Our security specialists take time to assess your business site and operations, recommending a solution tailored to your industry needs"
       },
       {
-        "image": "/img/temp/alarm/solutions-how-secom-works-2.jpg",
-        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-2.jpg",
+        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-2.jpg",
+        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-2.jpg",
         "title": "Complete Design & Coverage",
         "desc": "We design the layout with precision. Placing sensors, alarms, and cameras where they matter most to protect every critical area."
       },
       {
-        "image": "/img/temp/alarm/solutions-how-secom-works-3.jpg",
-        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-3.jpg",
+        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-3.jpg",
+        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-3.jpg",
         "title": "Efficient, Professional Installation",
         "desc": "Our expert technicians ensure a smooth setup process with minimal disruption to your business activities."
       },
       {
-        "image": "/img/temp/alarm/solutions-how-secom-works-4.jpeg",
-        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-4.jpg",
+        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-4.jpeg",
+        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-4.jpg",
         "title": "24/7 Monitoring, Always On",
         "desc": "Your system is connected to SECOM's Control Center, providing real-time monitoring and rapid emergency response at any time of day."
       },
       {
-        "image": "/img/temp/alarm/solutions-how-secom-works-5.jpg",
-        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-5.jpg",
+        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-5.jpg",
+        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-5.jpg",
         "title": "Ongoing Support",
         "desc": "We deliver regular system checks and proactive service, ensuring your security system remains dependable as your business grows."
       }
@@ -840,8 +840,8 @@
   "AlarmProtect": {
     "title": "Integrated Security for Your Business",
     "desc": "",
-    "image": "/img/temp/alarm/Circle of Service-13.png",
-    "imageMobile": "/img/temp/alarm/Circle of Service-14.png",
+    "image": "/alarm/img/temp/alarm/Circle of Service-13.png",
+    "imageMobile": "/alarm/img/temp/alarm/Circle of Service-14.png",
     "items": [
       {
         "title": "Emergency Detected",
@@ -869,60 +869,60 @@
   "AlarmCorners": {
     "title": "Protect Every Corner of Your Business",
     "desc": "",
-    "image": "/img/temp/alarm/Product-Placement-Business.jpg"
+    "image": "/alarm/img/temp/alarm/Product-Placement-Business.jpg"
   },
   "AlarmApps": {
     "title": "Always Connected.<br>Always Protected",
     "desc": "Manage your business security anytime with the SECOM App, from arming the system to live camera checks. For advanced settings, use the SECOM Smart Security portal. Your data stays private, SECOM only accesses footage during verified emergencies.",
-    "image": "/img/temp/mockup-app-new.png",
-    "logo": "/img/temp/logo-secom-red.png",
+    "image": "/alarm/img/temp/mockup-app-new.png",
+    "logo": "/alarm/img/temp/logo-secom-red.png",
     "items": [
       {
         "title": "Live Monitoring",
         "desc": "Watch real-time footage of your business anytime, from anywhere.",
-        "icon": "/img/temp/alarm/Icon App Benefits-Video Real Time.svg"
+        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Video Real Time.svg"
       },
       {
         "title": "Arm & Disarm",
         "desc": "Easily activate or deactivate your alarm system with just a tap.",
-        "icon": "/img/temp/alarm/Icon App Benefits-Active Non Active.svg"
+        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Active Non Active.svg"
       },
       {
         "title": "Instant Notifications",
         "desc": "Get alerts right away when something happens at home.",
-        "icon": "/img/temp/alarm/Icon App Benefits-Instan Notif.svg"
+        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Instan Notif.svg"
       },
       {
         "title": "History",
         "desc": "Check what happened and when. All activity is recorded for your peace of mind.",
-        "icon": "/img/temp/alarm/Icon App Benefits-Log.svg"
+        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Log.svg"
       },
       {
         "title": "Manage Multiple Sites",
         "desc": "Check and control more than one site from the same app.",
-        "icon": "/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
+        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
       },
       {
         "title": "Activity Reports",
         "desc": "View simple reports to keep track of what's going on",
-        "icon": "/img/temp/alarm/Icon App Benefits-Report.svg"
+        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Report.svg"
       }
     ],
     "download": [
       {
         "link": "https://play.google.com/store/apps/details?id=jp.co.secom.secomalarm",
-        "image": "/img/temp/googleplay.svg"
+        "image": "/alarm/img/temp/googleplay.svg"
       },
       {
         "link": "https://apps.apple.com/id/app/secom-smart-security/id1522939072",
-        "image": "/img/temp/appstore.svg"
+        "image": "/alarm/img/temp/appstore.svg"
       }
     ]
   },
   "AlarmTrusted": {
     "title": "Your Business Deserves More Than Basic Security",
     "desc": "",
-    "logoSecom": "/img/secom-logo.png",
+    "logoSecom": "/alarm/img/secom-logo.png",
     "textSecom": "",
     "textOther": "Other Company",
     "table": [
@@ -1011,7 +1011,7 @@
       "title": "Smart Video Camera",
       "subtitleHome": "See and interact with unexpected visitors, vehicles coming and going and more, even when you can’t be there.",
       "subtitleBusiness": "See and interact with unexpected visitors, vehicles coming and going and more, even when you can’t be there.",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "image": "/alarm/img/temp/products/Smart-Video-Camera.png",
       "link": "#5",
       "type": ["home", "business"],
       "pinBusiness": true,
@@ -1025,7 +1025,7 @@
       "title": "PIR Camera Indoor",
       "subtitleHome": "A camera inside the house that triggers the alarm and capture pictures when it senses movement.",
       "subtitleBusiness": "A camera inside the house that takes pictures or video when it senses movement.",
-      "image": "/img/temp/products/PIR-Camera-Indoor.png",
+      "image": "/alarm/img/temp/products/PIR-Camera-Indoor.png",
       "link": "#7",
       "type": ["home", "business"],
       "pinBusiness": true,
@@ -1039,7 +1039,7 @@
       "title": "PIR Indoor",
       "subtitleHome": "A sensor that detects movement inside your home and triggers the alarm if needed.",
       "subtitleBusiness": "A sensor that detects movement inside your home and triggers the alarm if needed.",
-      "image": "/img/temp/products/PIR-Indoor.png",
+      "image": "/alarm/img/temp/products/PIR-Indoor.png",
       "link": "#8",
       "type": ["home", "business"],
       "pinBusiness": false,
@@ -1053,7 +1053,7 @@
       "title": "Door Contact",
       "subtitleHome": "Detects when a door or window is opened. Sends an alert if something unusual happens.",
       "subtitleBusiness": "Detects when a door or window is opened. Sends an alert if something unusual happens.",
-      "image": "/img/temp/products/Door-Contact.png",
+      "image": "/alarm/img/temp/products/Door-Contact.png",
       "link": "#6",
       "type": ["home", "business"],
       "pinBusiness": true,
@@ -1067,7 +1067,7 @@
       "title": "Siren Box",
       "subtitleHome": "A loud sound that goes off when there’s an emergency, like someone breaking in.",
       "subtitleBusiness": "A loud sound that goes off when there’s a danger, like someone breaking in.",
-      "image": "/img/temp/products/Siren-Box.png",
+      "image": "/alarm/img/temp/products/Siren-Box.png",
       "link": "#4",
       "type": ["home", "business"],
       "pinBusiness": true,
@@ -1081,7 +1081,7 @@
       "title": "Smoke Detector",
       "subtitleHome": "Detects smoke early to help prevent fires.",
       "subtitleBusiness": "Detects smoke early to help prevent fires.",
-      "image": "/img/temp/products/Smoke-Detector.png",
+      "image": "/alarm/img/temp/products/Smoke-Detector.png",
       "link": "#9",
       "type": ["home", "business"],
       "pinBusiness": true,
@@ -1095,7 +1095,7 @@
       "title": "Heat Sensor",
       "subtitleHome": "Detects heat early to help prevent fires.",
       "subtitleBusiness": "Detects heat early to help prevent fires.",
-      "image": "/img/temp/products/Heat-Sensor.png",
+      "image": "/alarm/img/temp/products/Heat-Sensor.png",
       "link": "#10",
       "type": ["home"],
       "pinBusiness": false,
@@ -1109,7 +1109,7 @@
       "title": "Panic Button",
       "subtitleHome": "A button you press in an emergency to get help from SECOM right away.",
       "subtitleBusiness": "A button you press in an emergency to get help from SECOM right away.",
-      "image": "/img/temp/products/Panic-Button.png",
+      "image": "/alarm/img/temp/products/Panic-Button.png",
       "link": "#11",
       "type": ["home", "business"],
       "pinBusiness": true,
@@ -1123,7 +1123,7 @@
       "title": "Control Panel",
       "subtitleHome": "The main device that connects all sensors and alarms to SECOM’s team that standby 24/7.",
       "subtitleBusiness": "The main device that connects all sensors and alarms to SECOM’s team that standby 24/7.",
-      "image": "/img/temp/products/Control-Panel.png",
+      "image": "/alarm/img/temp/products/Control-Panel.png",
       "link": "#1",
       "type": ["home", "business"],
       "pinBusiness": false,
@@ -1137,7 +1137,7 @@
       "title": "Remote Control",
       "subtitleHome": "A small device to turn the alarm system on or off from a distance.",
       "subtitleBusiness": "A small device to turn the alarm system on or off from a distance.",
-      "image": "/img/temp/products/Remote-Control.png",
+      "image": "/alarm/img/temp/products/Remote-Control.png",
       "link": "#2",
       "type": ["home", "business"],
       "pinBusiness": false,
@@ -1151,7 +1151,7 @@
       "title": "Keypad",
       "subtitleHome": "A panel where you enter your personal code to control the alarm system.",
       "subtitleBusiness": "A panel where you enter your personal code to control the alarm system.",
-      "image": "/img/temp/products/Keypad.png",
+      "image": "/alarm/img/temp/products/Keypad.png",
       "link": "#3",
       "type": ["home", "business"],
       "pinBusiness": false,
@@ -1178,7 +1178,7 @@
       ],
       "desc": "A simple and affordable rental package for small businesses or offices. Includes essential security devices to get you started.",
       "device": "8",
-      "image": "/img/temp/alarm/Business.png",
+      "image": "/alarm/img/temp/alarm/Business.png",
       "isRent": true
     },
     {
@@ -1196,7 +1196,7 @@
       ],
       "desc": "Comprehensive protection with advanced security features and added safety features, ideal for high-risk areas.",
       "device": "12",
-      "image": "/img/temp/alarm/BusinessPro.png",
+      "image": "/alarm/img/temp/alarm/BusinessPro.png",
       "isRent": true
     },
 
@@ -1215,7 +1215,7 @@
       ],
       "desc": "A one-time purchase package for small businesses or offices. Includes essential security devices to get you started. Simple, affordable, and fully yours.",
       "device": "8",
-      "image": "/img/temp/alarm/Business.png",
+      "image": "/alarm/img/temp/alarm/Business.png",
       "isRent": false
     },
     {
@@ -1233,69 +1233,69 @@
       ],
       "desc": "Own a complete security system with advanced protection and added safety features, ideal for high-risk areas and long-term business security.",
       "device": "12",
-      "image": "/img/temp/alarm/BusinessPro.png",
+      "image": "/alarm/img/temp/alarm/BusinessPro.png",
       "isRent": false
     }
   ],
   "BusinessPackagesBuy": [
     {
       "device": "Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "image": "/alarm/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "PIR Camera",
-      "image": "/img/temp/products/PIR-Camera-Indoor.png",
+      "image": "/alarm/img/temp/products/PIR-Camera-Indoor.png",
       "basic": "1",
       "pro": "1"
     },
 
     {
       "device": "Door Control",
-      "image": "/img/temp/products/Door-Contact.png",
+      "image": "/alarm/img/temp/products/Door-Contact.png",
       "basic": "3",
       "pro": "3"
     },
     {
       "device": "Siren",
-      "image": "/img/temp/products/Siren-Box.png",
+      "image": "/alarm/img/temp/products/Siren-Box.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Remote Control",
-      "image": "/img/temp/products/Remote-Control.png",
+      "image": "/alarm/img/temp/products/Remote-Control.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Keypad",
-      "image": "/img/temp/products/Keypad.png",
+      "image": "/alarm/img/temp/products/Keypad.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Panic Button",
-      "image": "/img/temp/products/Panic-Button.png",
+      "image": "/alarm/img/temp/products/Panic-Button.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smart Video Camera Indoor",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "image": "/alarm/img/temp/products/Smart-Video-Camera.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smoke Detector",
-      "image": "/img/temp/products/Smoke-Detector.png",
+      "image": "/alarm/img/temp/products/Smoke-Detector.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "PIR Indoor",
-      "image": "/img/temp/products/PIR-Indoor.png",
+      "image": "/alarm/img/temp/products/PIR-Indoor.png",
       "basic": "-",
       "pro": "1"
     }
@@ -1303,62 +1303,62 @@
   "BusinessPackagesRent": [
     {
       "device": "Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "image": "/alarm/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "PIR Camera",
-      "image": "/img/temp/products/PIR-Camera-Indoor.png",
+      "image": "/alarm/img/temp/products/PIR-Camera-Indoor.png",
       "basic": "1",
       "pro": "1"
     },
 
     {
       "device": "Door Control",
-      "image": "/img/temp/products/Door-Contact.png",
+      "image": "/alarm/img/temp/products/Door-Contact.png",
       "basic": "3",
       "pro": "3"
     },
     {
       "device": "Siren",
-      "image": "/img/temp/products/Siren-Box.png",
+      "image": "/alarm/img/temp/products/Siren-Box.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Remote Control",
-      "image": "/img/temp/products/Remote-Control.png",
+      "image": "/alarm/img/temp/products/Remote-Control.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Keypad",
-      "image": "/img/temp/products/Keypad.png",
+      "image": "/alarm/img/temp/products/Keypad.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Panic Button",
-      "image": "/img/temp/products/Panic-Button.png",
+      "image": "/alarm/img/temp/products/Panic-Button.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smart Video Camera Indoor",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "image": "/alarm/img/temp/products/Smart-Video-Camera.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smoke Detector",
-      "image": "/img/temp/products/Smoke-Detector.png",
+      "image": "/alarm/img/temp/products/Smoke-Detector.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "PIR Indoor",
-      "image": "/img/temp/products/PIR-Indoor.png",
+      "image": "/alarm/img/temp/products/PIR-Indoor.png",
       "basic": "-",
       "pro": "1"
     }
@@ -1380,7 +1380,7 @@
       ],
       "desc": "Essential home safety with alarms, sensors, and 24/7 SECOM response.",
       "device": "9",
-      "image": "/img/temp/solutions/package-home.png",
+      "image": "/alarm/img/temp/solutions/package-home.png",
       "isRent": true
     },
     {
@@ -1398,7 +1398,7 @@
       ],
       "desc": "Maximum protection with complete indoor and outdoor coverage, smart detection, and early warning systems.",
       "device": "15",
-      "image": "/img/temp/solutions/package-homepro.png",
+      "image": "/alarm/img/temp/solutions/package-homepro.png",
       "isRent": true
     },
 
@@ -1417,7 +1417,7 @@
       ],
       "desc": "A smart and reliable security solution with essential protection and 24/7 monitoring, now available for purchase.",
       "device": "9",
-      "image": "/img/temp/solutions/package-home.png",
+      "image": "/alarm/img/temp/solutions/package-home.png",
       "isRent": false
     },
     {
@@ -1435,74 +1435,74 @@
       ],
       "desc": "Complete home protection with full indoor and outdoor coverage, advanced detection, and 24/7 monitoring, now yours to own.",
       "device": "15",
-      "image": "/img/temp/solutions/package-homepro.png",
+      "image": "/alarm/img/temp/solutions/package-homepro.png",
       "isRent": false
     }
   ],
   "HomePackagesBuy": [
     {
       "device": "Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "image": "/alarm/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Panic Button",
-      "image": "/img/temp/products/Panic-Button.png",
+      "image": "/alarm/img/temp/products/Panic-Button.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Door Control",
-      "image": "/img/temp/products/Door-Contact.png",
+      "image": "/alarm/img/temp/products/Door-Contact.png",
       "basic": "3",
       "pro": "5"
     },
     {
       "device": "Heat Sensor",
-      "image": "/img/temp/products/Heat-Sensor.png",
+      "image": "/alarm/img/temp/products/Heat-Sensor.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Siren",
-      "image": "/img/temp/products/Siren-Box.png",
+      "image": "/alarm/img/temp/products/Siren-Box.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Remote Control",
-      "image": "/img/temp/products/Remote-Control.png",
+      "image": "/alarm/img/temp/products/Remote-Control.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Keypad",
-      "image": "/img/temp/products/Keypad.png",
+      "image": "/alarm/img/temp/products/Keypad.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "PIR Camera Indoor",
-      "image": "/img/temp/products/PIR-Camera-Indoor.png",
+      "image": "/alarm/img/temp/products/PIR-Camera-Indoor.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "PIR Indoor",
-      "image": "/img/temp/products/PIR-Indoor.png",
+      "image": "/alarm/img/temp/products/PIR-Indoor.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smart Video Camera Outdoor",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "image": "/alarm/img/temp/products/Smart-Video-Camera.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smoke Detector",
-      "image": "/img/temp/products/Smoke-Detector.png",
+      "image": "/alarm/img/temp/products/Smoke-Detector.png",
       "basic": "-",
       "pro": "1"
     }
@@ -1510,67 +1510,67 @@
   "HomePackagesRent": [
     {
       "device": "Control Panel",
-      "image": "/img/temp/products/Control-Panel.png",
+      "image": "/alarm/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Panic Button",
-      "image": "/img/temp/products/Panic-Button.png",
+      "image": "/alarm/img/temp/products/Panic-Button.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Door Control",
-      "image": "/img/temp/products/Door-Contact.png",
+      "image": "/alarm/img/temp/products/Door-Contact.png",
       "basic": "3",
       "pro": "5"
     },
     {
       "device": "Heat Sensor",
-      "image": "/img/temp/products/Heat-Sensor.png",
+      "image": "/alarm/img/temp/products/Heat-Sensor.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Siren",
-      "image": "/img/temp/products/Siren-Box.png",
+      "image": "/alarm/img/temp/products/Siren-Box.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Remote Control",
-      "image": "/img/temp/products/Remote-Control.png",
+      "image": "/alarm/img/temp/products/Remote-Control.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Keypad",
-      "image": "/img/temp/products/Keypad.png",
+      "image": "/alarm/img/temp/products/Keypad.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "PIR Camera Indoor",
-      "image": "/img/temp/products/PIR-Camera-Indoor.png",
+      "image": "/alarm/img/temp/products/PIR-Camera-Indoor.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "PIR Indoor",
-      "image": "/img/temp/products/PIR-Indoor.png",
+      "image": "/alarm/img/temp/products/PIR-Indoor.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smart Video Camera Outdoor",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "image": "/alarm/img/temp/products/Smart-Video-Camera.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smoke Detector",
-      "image": "/img/temp/products/Smoke-Detector.png",
+      "image": "/alarm/img/temp/products/Smoke-Detector.png",
       "basic": "-",
       "pro": "1"
     }
