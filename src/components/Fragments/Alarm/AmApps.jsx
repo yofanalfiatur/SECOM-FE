@@ -122,7 +122,7 @@ const AmApps = ({ translationKey }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="text-white text-xs lg:text-sm leading-[1.7] lg:leading-[1.5] mt-2 lg:mt-6 mb-2"
+              className="text-white text-[10px] lg:text-xs leading-[1.7] lg:leading-[1.5] mt-4 lg:mt-6 mb-2"
               dangerouslySetInnerHTML={{ __html: AlarmApps.descBottom }}
             />
 
