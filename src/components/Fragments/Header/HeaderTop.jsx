@@ -26,9 +26,9 @@ const HeaderTop = () => {
 
   // Function to get locale flag
   const getLocaleFlag = (localeCode) => {
-    if (localeCode === "id") return "/alarm/img/flag-id.svg";
-    if (localeCode === "en") return "/alarm/img/flag-en.svg";
-    return "/alarm/img/flag-en.svg";
+    if (localeCode === "id") return "/img/flag-id.svg";
+    if (localeCode === "en") return "/img/flag-en.svg";
+    return "/img/flag-en.svg";
   };
 
   // Function to handle language change

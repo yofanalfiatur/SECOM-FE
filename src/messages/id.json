@@ -19,7 +19,7 @@
   "langIdentifier": "Indonesian",
   "MenuType": [
     {
-      "icon": "/alarm/img/menu-type-1.svg",
+      "icon": "/img/menu-type-1.svg",
       "text": "Bisnis",
       "href": "",
       "subMenu": [
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "icon": "/alarm/img/menu-type-2.svg",
+      "icon": "/img/menu-type-2.svg",
       "text": "Residensial",
       "href": "",
 
@@ -86,7 +86,7 @@
     {
       "text": "Bisnis",
       "href": "/#",
-      "icon": "/alarm/img/menu-type-1.svg",
+      "icon": "/img/menu-type-1.svg",
       "subMenu": [
         {
           "subMenuText": "SECOM Smart Security",
@@ -97,7 +97,7 @@
     {
       "text": "Residensial",
       "href": "/#",
-      "icon": "/alarm/img/menu-type-2.svg",
+      "icon": "/img/menu-type-2.svg",
       "subMenu": [
         {
           "subMenuText": "Sekilas",
@@ -120,12 +120,12 @@
       {
         "text": "EN",
         "href": "/",
-        "icon": "/alarm/img/flag-en.svg"
+        "icon": "/img/flag-en.svg"
       },
       {
         "text": "ID",
         "href": "/id",
-        "icon": "/alarm/img/flag-id.svg"
+        "icon": "/img/flag-id.svg"
       }
     ],
     "login": {
@@ -216,10 +216,10 @@
   ],
   "ReBanner": {
     "title": "Semua Anggota Keluarga Anda,<br>Layak Merasa Aman",
-    "photo": "/alarm/img/temp/residential/front-upscale-min.png",
-    "background": "/alarm/img/temp/h-banner-bg.jpg",
-    "bgImage": "/alarm/img/temp/residential/Residence LP Hero ID.jpg",
-    "bgImageMd": "/alarm/img/temp/residential/Residence LP Hero ID Mobile.jpg",
+    "photo": "/img/temp/residential/front-upscale-min.png",
+    "background": "/img/temp/h-banner-bg.jpg",
+    "bgImage": "/img/temp/residential/Residence LP Hero ID.jpg",
+    "bgImageMd": "/img/temp/residential/Residence LP Hero ID Mobile.jpg",
     "items": [
       {
         "text": "Jika saya meninggalkan makanan terlalu lama di pemanas, detektor asap akan memberi peringatan.",
@@ -229,7 +229,7 @@
         "right": "67%",
         "zIndex": "1",
         "maxWidth": "340px",
-        "icon": "/alarm/img/temp/h-banner-ibu.png"
+        "icon": "/img/temp/h-banner-ibu.png"
       },
       {
         "text": "Jika ada seseorang yang mengetuk pintu, saya tidak perlu takut lagi.",
@@ -239,7 +239,7 @@
         "right": "",
         "zIndex": "1",
         "maxWidth": "190px",
-        "icon": "/alarm/img/temp/h-banner-anak.png"
+        "icon": "/img/temp/h-banner-anak.png"
       },
       {
         "text": "Jika saya di rumah sendirian, saya tahu bahwa bantuan cukup satu tombol saja.",
@@ -249,7 +249,7 @@
         "right": "",
         "zIndex": "1",
         "maxWidth": "314px",
-        "icon": "/alarm/img/temp/h-banner-nenek.png"
+        "icon": "/img/temp/h-banner-nenek.png"
       },
       {
         "text": "Jika ada seseorang yang coba masuk, saya tahu keluarga dan rumah saya tetap terlindungi.",
@@ -259,7 +259,7 @@
         "right": "",
         "zIndex": "1",
         "maxWidth": "314px",
-        "icon": "/alarm/img/temp/h-banner-bapak.png"
+        "icon": "/img/temp/h-banner-bapak.png"
       }
     ]
   },
@@ -311,7 +311,7 @@
     ],
     "result": [
       {
-        "icon": "/alarm/img/survey-h-risk.png",
+        "icon": "/img/survey-h-risk.png",
         "title": "Risiko Tinggi",
         "subtitle": "Rumah Anda dalam Risiko Tinggi!",
         "desc": "Perlindungan saat ini belum cukup. Temukan sistem keamanan yang memberi rasa aman bagi keluarga Anda.",
@@ -322,7 +322,7 @@
         }
       },
       {
-        "icon": "/alarm/img/survey-m-risk.png",
+        "icon": "/img/survey-m-risk.png",
         "title": "RISIKO SEDANG",
         "subtitle": "Rumah Anda Mungkin dalam Risiko!",
         "desc": "Keamanan rumah Anda belum maksimal. Cari tahu apa yang kurang dan bagaimana SECOM bisa membantu.",
@@ -341,18 +341,18 @@
   "ReAbout": {
     "title": "Bagaimana SECOM Melindungi Anda?",
     "desc": "Kami hadir dengan teknologi dan respons untuk melindungi yang paling berarti bagi Anda.",
-    "photo": "/alarm/img/temp/residential/Residence-How-SECOM-Protects-You.jpg",
+    "photo": "/img/temp/residential/Residence-How-SECOM-Protects-You.jpg",
     "items": [
       {
-        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
         "title": "Deteksi intrusi, kebakaran, atau aktivitas mencurigakan."
       },
       {
-        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
         "title": "Kami hanya memantau saat darurat, menjaga privasi Anda."
       },
       {
-        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You BE.svg",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You BE.svg",
         "title": "Tim respons fisik segera turun ke lokasi."
       }
     ],
@@ -368,22 +368,22 @@
     "desc": "Setiap ruangan memiliki risiko yang berbeda. SECOM membantu Anda memberikan perlindungan yang tepat di tempat yang tepat.",
     "itemSlider": [
       {
-        "photo": "/alarm/img/temp/residential/Residence Solution Landing Page 1.jpg",
+        "photo": "/img/temp/residential/Residence Solution Landing Page 1.jpg",
         "title": "Smart Video Camera - Luar Ruangan",
         "desc": "Pantau gerbang, garasi, dan halaman Anda dengan deteksi pintar dan audio dua arah."
       },
       {
-        "photo": "/alarm/img/temp/residential/Residence Solution Landing Page 2.jpg",
+        "photo": "/img/temp/residential/Residence Solution Landing Page 2.jpg",
         "title": "PIR Camera Indoor - Ruang Tamu",
         "desc": "Awasi area utama rumah Anda dengan perlindungan sensor gerak yang andal."
       },
       {
-        "photo": "/alarm/img/temp/residential/Residence Solution Landing Page 3.jpg",
+        "photo": "/img/temp/residential/Residence Solution Landing Page 3.jpg",
         "title": "Door Contact - Jendela",
         "desc": "Lindungi jendela dari upaya masuk tanpa suara dengan sensor magnetik pintar."
       },
       {
-        "photo": "/alarm/img/temp/residential/Residence Solution Landing Page 4.jpg",
+        "photo": "/img/temp/residential/Residence Solution Landing Page 4.jpg",
         "title": "Smoke Detector - Dapur Bersih",
         "desc": "Bahkan di dapur, kecelakaan bisa saja terjadi. Tetap waspada dengan detektor asap."
       }
@@ -396,7 +396,7 @@
   },
   "ReQuote": [
     {
-      "thumb": "/alarm/img/temp/quote-thumb.jpg",
+      "thumb": "/img/temp/quote-thumb.jpg",
       "linkVideo": "https://youtu.be/euM9kW0ZRWg",
       "text": "Bukan soal sistem keamanan yang memadai saja, yang saya cari juga rasa tenang. SECOM kasih keduanya."
     }
@@ -436,7 +436,7 @@
     "hint": "Promotion",
     "title": "Lindungi Yang Paling Berarti, Mulai dari Rumah Anda",
     "desc": "Bersama SECOM, Anda mendapatkan lebih dari sekadar keamanan, yaitu termasuk ketenangan. Lindungi yang paling berharga, mulai hari ini.",
-    "image": "/alarm/img/temp/h-promotion.jpg",
+    "image": "/img/temp/h-promotion.jpg",
     "btnPromotion": {
       "text": "Konsultasi Gratis",
       "href": "/contact",
@@ -446,8 +446,8 @@
   "ContactPage": {
     "title": "Konsultasi Gratis Sekarang.",
     "desc": "Kami akan menganalisis kebutuhan spesifik Anda dan merekomendasikan solusi yang paling tepat secara akurat dan efisien.",
-    "photo": "/alarm/img/temp/Free Consultation.jpg",
-    "photoMd": "/alarm/img/temp/Free Consultation Mobile.jpg"
+    "photo": "/img/temp/Free Consultation.jpg",
+    "photoMd": "/img/temp/Free Consultation Mobile.jpg"
   },
   "FormValue": {
     "LabelInput": {
@@ -510,7 +510,7 @@
     "title": "Terima kasih",
     "title2": "atas permintaan Anda!",
     "desc": "Konsultan profesional SECOM akan segera menghubungi Anda untuk memahami kebutuhan Anda dan memberikan rekomendasi terbaik.",
-    "logo": "/alarm/img/logo-thankyou.svg",
+    "logo": "/img/logo-thankyou.svg",
     "buttonCTA": {
       "text": "Kembali ke Beranda",
       "href": "/",
@@ -532,23 +532,23 @@
 
   "SolBanner": {
     "title": "Keamanan yang Dapat Diandalkan, <b>Untuk Semua Keluarga</b>",
-    "background": "/alarm/img/temp/solutions/sol-bg-high.jpg",
-    "backgroundMd": "/alarm/img/temp/solutions/sol-bg-high.jpg"
+    "background": "/img/temp/solutions/sol-bg-high.jpg",
+    "backgroundMd": "/img/temp/solutions/sol-bg-high.jpg"
   },
 
   "SolOverview": {
     "desc": "<b>Rumah Anda adalah awal dari segalanya</b>. Tempat anak tumbuh, kenangan tercipta, dan rasa aman yang seharusnya tak pernah diragukan. <b>SECOM hadir dengan solusi keamanan</b> yang kami sesuaikan untuk setiap keluarga, agar Anda merasa tenang dan yakin, <b>rumah selalu terlindungi.</b>",
     "items": [
       {
-        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
         "title": "Sistem Keamanan Terintegrasi"
       },
       {
-        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
         "title": "Pemantauan 24/7"
       },
       {
-        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You BE.svg",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You BE.svg",
         "title": "Tim Respon Fisik Terlatih"
       }
     ]
@@ -557,32 +557,32 @@
     "title": "Bagaimana SECOM Bekerja?",
     "items": [
       {
-        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-1.jpg",
-        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-1.jpg",
+        "image": "/img/temp/alarm/solutions-how-secom-works-1.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-1.jpg",
         "title": "Mulai dari Mendengarkan",
         "desc": "Tim SECOM akan menilai kondisi rumah Anda dan merekomendasikan solusi yang sesuai dengan kebutuhan serta gaya hidup Anda."
       },
       {
-        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-2.jpg",
-        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-2.jpg",
+        "image": "/img/temp/alarm/solutions-how-secom-works-2.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-2.jpg",
         "title": "Desain Cerdas & Menyeluruh",
         "desc": "Kami merencanakan dengan cermat penempatan setiap sensor dan kamera, untuk memastikan setiap sudut rumah Anda terlindungi."
       },
       {
-        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-3.jpg",
-        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-3.jpg",
+        "image": "/img/temp/alarm/solutions-how-secom-works-3.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-3.jpg",
         "title": "Pemasangan Anti Ribet",
         "desc": "Tim teknisi kami memasang sistem dengan cepat, rapi, dan tanpa mengganggu kenyamanan rumah Anda."
       },
       {
-        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-4.jpeg",
-        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-4.jpg",
+        "image": "/img/temp/alarm/solutions-how-secom-works-4.jpeg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-4.jpg",
         "title": "Selalu Siaga",
         "desc": "Sistem Anda terhubung langsung ke Control Center SECOM, siap merespons keadaan darurat kapan pun dibutuhkan."
       },
       {
-        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-5.jpg",
-        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-5.jpg",
+        "image": "/img/temp/alarm/solutions-how-secom-works-5.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-5.jpg",
         "title": "Perlindungan Tahan Lama",
         "desc": "Kami menyediakan pengecekan dan perawatan rutin agar sistem Anda tetap andal, tahun demi tahun."
       }
@@ -591,8 +591,8 @@
   "SolProtect": {
     "title": "Perlindungan Menyeluruh untuk Keamanan Anda",
     "desc": "",
-    "image": "/alarm/img/temp/residential/Circle of Service RES ID.png",
-    "imageMobile": "/alarm/img/temp/residential/Circle of Service RES ID Mobile.png",
+    "image": "/img/temp/residential/Circle of Service RES ID.png",
+    "imageMobile": "/img/temp/residential/Circle of Service RES ID Mobile.png",
     "items": [
       {
         "title": "Deteksi Darurat",
@@ -620,54 +620,54 @@
   "SolCorners": {
     "title": "Setiap Ruangan. Setiap Akses. Terlindungi Sepenuhnya.",
     "desc": "",
-    "image": "/alarm/img/temp/residential/Product-Placement-Home.jpg"
+    "image": "/img/temp/residential/Product-Placement-Home.jpg"
   },
   "SolApps": {
     "title": "Selalu Terhubung.<br>Selalu Terlindungi",
     "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman*",
     "descBottom": "*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.",
-    "image": "/alarm/img/temp/mockup-app-new.png",
-    "logo": "/alarm/img/temp/logo-secom-red.png",
+    "image": "/img/temp/mockup-app-new.png",
+    "logo": "/img/temp/logo-secom-red.png",
     "items": [
       {
         "title": "Video Real-Time",
         "desc": "Lihat rekaman langsung dari rumah Anda kapan saja, di mana saja.",
-        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Video Real Time.svg"
+        "icon": "/img/temp/alarm/Icon App Benefits-Video Real Time.svg"
       },
       {
         "title": "Aktif & Non-Aktif",
         "desc": "Aktifkan atau nonaktifkan sistem alarm dengan sekali sentuhan.",
-        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Active Non Active.svg"
+        "icon": "/img/temp/alarm/Icon App Benefits-Active Non Active.svg"
       },
       {
         "title": "Notifikasi Langsung",
         "desc": "Dapatkan peringatan langsung saat ada kejadian di rumah.",
-        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Instan Notif.svg"
+        "icon": "/img/temp/alarm/Icon App Benefits-Instan Notif.svg"
       },
       {
         "title": "Riwayat Aktivitas",
         "desc": "Lihat apa yang terjadi dan kapan. Semua tercatat demi ketenangan Anda.",
-        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Log.svg"
+        "icon": "/img/temp/alarm/Icon App Benefits-Log.svg"
       },
       {
         "title": "Kelola Banyak Rumah",
         "desc": "Pantau dan kendalikan lebih dari satu lokasi melalui satu aplikasi.",
-        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
+        "icon": "/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
       },
       {
         "title": "Laporan Aktivitas",
         "desc": "Lihat ringkasan aktivitas harian dengan laporan yang mudah dipahami.",
-        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Report.svg"
+        "icon": "/img/temp/alarm/Icon App Benefits-Report.svg"
       }
     ],
     "download": [
       {
         "link": "https://play.google.com/store/apps/details?id=jp.co.secom.secomalarm",
-        "image": "/alarm/img/temp/googleplay.svg"
+        "image": "/img/temp/googleplay.svg"
       },
       {
         "link": "https://apps.apple.com/id/app/secom-smart-security/id1522939072",
-        "image": "/alarm/img/temp/appstore.svg"
+        "image": "/img/temp/appstore.svg"
       }
     ]
   },
@@ -775,22 +775,22 @@
 
   "AlarmBanner": {
     "title": "Sistem Alarm Andal untuk Lindungi <b>Bisnis Anda 24/7</b>",
-    "background": "/alarm/img/temp/alarm/alarm-banner.jpg",
-    "backgroundMd": "/alarm/img/temp/alarm/alarm-banner-mobile.jpg"
+    "background": "/img/temp/alarm/alarm-banner.jpg",
+    "backgroundMd": "/img/temp/alarm/alarm-banner-mobile.jpg"
   },
   "AlarmOverview": {
     "desc": "<b>Bisnis Anda adalah tempat di mana tujuan dicapai</b>, tim berkembang, dan masa depan dibangun. <b>Di SECOM, kami menghadirkan solusi keamanan</b> yang disesuaikan untuk melindungi apa yang telah Anda bangun dengan <b>keyakinan, kepedulian, dan teknologi terkini.</b>",
     "items": [
       {
-        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
         "title": "Sistem Keamanan Terintegrasi"
       },
       {
-        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Control Center.svg",
         "title": "Pemantauan 24/7"
       },
       {
-        "icon": "/alarm/img/temp/alarm/Residence How SECOM Protects You BE.svg",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You BE.svg",
         "title": "Tim Respon Fisik Terlatih"
       }
     ]
@@ -799,32 +799,32 @@
     "title": "Bagaimana SECOM Bekerja?",
     "items": [
       {
-        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-1.jpg",
-        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-1.jpg",
+        "image": "/img/temp/alarm/solutions-how-secom-works-1.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-1.jpg",
         "title": "Dimulai dengan Pemahaman",
         "desc": "Tim SECOM akan mempelajari lokasi dan operasional bisnis Anda secara menyeluruh, lalu merekomendasikan solusi yang sesuai dengan kebutuhan industri Anda."
       },
       {
-        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-2.jpg",
-        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-2.jpg",
+        "image": "/img/temp/alarm/solutions-how-secom-works-2.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-2.jpg",
         "title": "Desain Strategis, Perlindungan Menyeluruh",
         "desc": "Kami merancang tata letak dengan presisi. Menempatkan sensor, alarm, dan kamera di titik-titik paling krusial untuk melindungi setiap area penting bisnis Anda."
       },
       {
-        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-3.jpg",
-        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-3.jpg",
+        "image": "/img/temp/alarm/solutions-how-secom-works-3.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-3.jpg",
         "title": "Efisien, Instalasi Profesional",
         "desc": "Teknisi kami memastikan proses pemasangan berjalan lancar dengan gangguan seminimal mungkin terhadap aktivitas bisnis Anda."
       },
       {
-        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-4.jpeg",
-        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-4.jpg",
+        "image": "/img/temp/alarm/solutions-how-secom-works-4.jpeg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-4.jpg",
         "title": "Pemantauan 24/7. Selalu Siaga.",
         "desc": "Sistem Anda terhubung langsung ke Pusat Kontrol SECOM, memberikan pemantauan real-time dan respons cepat terhadap keadaan darurat kapan saja."
       },
       {
-        "image": "/alarm/img/temp/alarm/solutions-how-secom-works-5.jpg",
-        "imageMd": "/alarm/img/temp/alarm/solutions-how-secom-works-md-5.jpg",
+        "image": "/img/temp/alarm/solutions-how-secom-works-5.jpg",
+        "imageMd": "/img/temp/alarm/solutions-how-secom-works-md-5.jpg",
         "title": "Dukungan Berkelanjutan",
         "desc": "Kami melakukan pengecekan rutin dan layanan proaktif agar sistem keamanan Anda tetap andal, seiring pertumbuhan bisnis Anda."
       }
@@ -833,8 +833,8 @@
   "AlarmProtect": {
     "title": "Keamanan Terintegrasi untuk Bisnis Anda",
     "desc": "",
-    "image": "/alarm/img/temp/alarm/Circle-of-Service.png",
-    "imageMobile": "/alarm/img/temp/alarm/Circle-of-Service-Mobile.png",
+    "image": "/img/temp/alarm/Circle-of-Service.png",
+    "imageMobile": "/img/temp/alarm/Circle-of-Service-Mobile.png",
     "items": [
       {
         "title": "Deteksi Darurat",
@@ -862,61 +862,61 @@
   "AlarmCorners": {
     "title": "Lindungi Setiap Sudut Bisnis Anda ",
     "desc": "",
-    "image": "/alarm/img/temp/alarm/Product-Placement-Business.jpg"
+    "image": "/img/temp/alarm/Product-Placement-Business.jpg"
   },
   "AlarmApps": {
     "title": "Selalu Terhubung.<br>Selalu Terlindungi",
     "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman*",
     "descBottom": "*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.",
-    "image": "/alarm/img/temp/mockup-app-new.png",
-    "logo": "/alarm/img/temp/logo-secom-red.png",
+    "image": "/img/temp/mockup-app-new.png",
+    "logo": "/img/temp/logo-secom-red.png",
     "items": [
       {
         "title": "Video Real-Time",
         "desc": "Lihat rekaman langsung lokasi Anda kapan saja, di mana saja.",
-        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Video Real Time.svg"
+        "icon": "/img/temp/alarm/Icon App Benefits-Video Real Time.svg"
       },
       {
         "title": "Aktif & Non-Aktif",
         "desc": "Aktifkan atau nonaktifkan sistem alarm dengan sekali sentuhan.",
-        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Active Non Active.svg"
+        "icon": "/img/temp/alarm/Icon App Benefits-Active Non Active.svg"
       },
       {
         "title": "Notifikasi Langsung",
         "desc": "Dapatkan peringatan langsung saat ada kejadian di lokasi.",
-        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Instan Notif.svg"
+        "icon": "/img/temp/alarm/Icon App Benefits-Instan Notif.svg"
       },
       {
         "title": "Riwayat Aktivitas",
         "desc": "Lihat apa yang terjadi dan kapan. Semua tercatat demi ketenangan Anda.",
-        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Log.svg"
+        "icon": "/img/temp/alarm/Icon App Benefits-Log.svg"
       },
       {
         "title": "Kelola Banyak Cabang",
         "desc": "Pantau dan kendalikan lebih dari satu lokasi melalui satu aplikasi.",
-        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
+        "icon": "/img/temp/alarm/Icon App Benefits-Banyak Rumah.svg"
       },
       {
         "title": "Laporan Aktivitas",
         "desc": "Lihat ringkasan aktivitas harian dengan laporan yang mudah dipahami.",
-        "icon": "/alarm/img/temp/alarm/Icon App Benefits-Report.svg"
+        "icon": "/img/temp/alarm/Icon App Benefits-Report.svg"
       }
     ],
     "download": [
       {
         "link": "https://play.google.com/store/apps/details?id=jp.co.secom.secomalarm",
-        "image": "/alarm/img/temp/googleplay.svg"
+        "image": "/img/temp/googleplay.svg"
       },
       {
         "link": "https://apps.apple.com/id/app/secom-smart-security/id1522939072",
-        "image": "/alarm/img/temp/appstore.svg"
+        "image": "/img/temp/appstore.svg"
       }
     ]
   },
   "AlarmTrusted": {
     "title": "Bukan Sekadar Keamanan Biasa. Untuk Bisnis Anda.",
     "desc": "",
-    "logoSecom": "/alarm/img/secom-logo.png",
+    "logoSecom": "/img/secom-logo.png",
     "textSecom": "",
     "textOther": "Perusahaan Lain",
     "table": [
@@ -1000,7 +1000,7 @@
       "title": "Smart Video Camera",
       "subtitleHome": "Pantau dan berinteraksi dengan tamu tak terduga, kendaraan yang keluar masuk, dan lainnya. Bahkan saat Anda tidak berada di rumah.",
       "subtitleBusiness": "Pantau dan berinteraksi dengan tamu tak terduga, kendaraan yang keluar masuk, dan lainnya. Bahkan saat Anda tidak berada di lokasi.",
-      "image": "/alarm/img/temp/products/Smart-Video-Camera.png",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
       "link": "#5",
       "type": ["home", "business"],
       "pinBusiness": true,
@@ -1014,7 +1014,7 @@
       "title": "PIR Camera Indoor",
       "subtitleHome": "Kamera di dalam rumah yang akan memicu alarm dan mengambil gambar saat mendeteksi gerakan.",
       "subtitleBusiness": "Kamera di dalam lokasi Anda yang akan memicu alarm dan mengambil gambar saat mendeteksi gerakan.",
-      "image": "/alarm/img/temp/products/PIR-Camera-Indoor.png",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
       "link": "#7",
       "type": ["home", "business"],
       "pinBusiness": true,
@@ -1028,7 +1028,7 @@
       "title": "PIR Indoor",
       "subtitleHome": "Sensor yang mendeteksi pergerakan di dalam rumah Anda dan memicu alarm.",
       "subtitleBusiness": "Sensor yang mendeteksi pergerakan di dalam lokasi Anda dan memicu alarm jika diperlukan.",
-      "image": "/alarm/img/temp/products/PIR-Indoor.png",
+      "image": "/img/temp/products/PIR-Indoor.png",
       "link": "#8",
       "type": ["home", "business"],
       "pinBusiness": false,
@@ -1042,7 +1042,7 @@
       "title": "Door Contact",
       "subtitleHome": "Mendeteksi saat pintu atau jendela dibuka. Mengirimkan peringatan jika terjadi hal yang tidak biasa.",
       "subtitleBusiness": "Mendeteksi saat pintu atau jendela dibuka. Mengirimkan peringatan jika terjadi hal yang tidak biasa.",
-      "image": "/alarm/img/temp/products/Door-Contact.png",
+      "image": "/img/temp/products/Door-Contact.png",
       "link": "#6",
       "type": ["home", "business"],
       "pinBusiness": true,
@@ -1056,7 +1056,7 @@
       "title": "Siren Box",
       "subtitleHome": "Suara keras akan berbunyi saat terjadi keadaan darurat, seperti upaya pembobolan.",
       "subtitleBusiness": "Suara keras yang akan berbunyi saat terjadi keadaan darurat, seperti upaya pembobolan.",
-      "image": "/alarm/img/temp/products/Siren-Box.png",
+      "image": "/img/temp/products/Siren-Box.png",
       "link": "#4",
       "type": ["home", "business"],
       "pinBusiness": true,
@@ -1070,7 +1070,7 @@
       "title": "Smoke Detector",
       "subtitleHome": "Mendeteksi asap lebih awal untuk mencegah kebakaran.",
       "subtitleBusiness": "Mendeteksi asap sejak dini untuk membantu mencegah kebakaran.",
-      "image": "/alarm/img/temp/products/Smoke-Detector.png",
+      "image": "/img/temp/products/Smoke-Detector.png",
       "link": "#9",
       "type": ["home", "business"],
       "pinBusiness": true,
@@ -1084,9 +1084,9 @@
       "title": "Heat Sensor",
       "subtitleHome": "Mendeteksi suhu lebih awal untuk mencegah kebakaran.",
       "subtitleBusiness": "Mendeteksi suhu lebih awal untuk mencegah kebakaran.",
-      "image": "/alarm/img/temp/products/Heat-Sensor.png",
+      "image": "/img/temp/products/Heat-Sensor.png",
       "link": "#10",
-      "type": ["home"],
+      "type": ["home", "business"],
       "pinBusiness": false,
       "pinBusinessX": "0%",
       "pinBusinessY": "0%",
@@ -1098,7 +1098,7 @@
       "title": "Panic Button",
       "subtitleHome": "Tombol yang dapat ditekan saat keadaan darurat untuk segera meminta bantuan dari SECOM.",
       "subtitleBusiness": "Tombol yang dapat ditekan saat keadaan darurat untuk segera meminta bantuan dari SECOM.",
-      "image": "/alarm/img/temp/products/Panic-Button.png",
+      "image": "/img/temp/products/Panic-Button.png",
       "link": "#11",
       "type": ["home", "business"],
       "pinBusiness": true,
@@ -1112,7 +1112,7 @@
       "title": "Control Panel",
       "subtitleHome": "Perangkat utama yang menghubungkan semua sensor dan alarm ke tim SECOM yang siaga 24/7.",
       "subtitleBusiness": "Perangkat utama yang menghubungkan semua sensor dan alarm ke tim SECOM yang siaga 24/7.",
-      "image": "/alarm/img/temp/products/Control-Panel.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "link": "#1",
       "type": ["home", "business"],
       "pinBusiness": false,
@@ -1126,7 +1126,7 @@
       "title": "Remote Control",
       "subtitleHome": "Perangkat kecil untuk mengaktifkan atau menonaktifkan sistem alarm dari jarak jauh.",
       "subtitleBusiness": "Perangkat kecil untuk mengaktifkan atau menonaktifkan sistem alarm dari jarak jauh.",
-      "image": "/alarm/img/temp/products/Remote-Control.png",
+      "image": "/img/temp/products/Remote-Control.png",
       "link": "#2",
       "type": ["home", "business"],
       "pinBusiness": false,
@@ -1140,7 +1140,7 @@
       "title": "Keypad",
       "subtitleHome": "Panel tempat Anda memasukkan kode pribadi untuk mengontrol sistem alarm.",
       "subtitleBusiness": "Panel tempat Anda memasukkan kode pribadi untuk mengontrol sistem alarm.",
-      "image": "/alarm/img/temp/products/Keypad.png",
+      "image": "/img/temp/products/Keypad.png",
       "link": "#3",
       "type": ["home", "business"],
       "pinBusiness": false,
@@ -1167,7 +1167,7 @@
       ],
       "desc": "Paket sewa yang sederhana dan terjangkau untuk bisnis kecil atau kantor. Dilengkapi perangkat keamanan esensial untuk memulai perlindungan.",
       "device": "8",
-      "image": "/alarm/img/temp/alarm/Business.png",
+      "image": "/img/temp/alarm/Business.png",
       "isRent": true
     },
     {
@@ -1185,7 +1185,7 @@
       ],
       "desc": "Perlindungan menyeluruh dengan fitur keamanan canggih dan tambahan fitur keselamatan, ideal untuk area dengan risiko tinggi.",
       "device": "12",
-      "image": "/alarm/img/temp/alarm/BusinessPro.png",
+      "image": "/img/temp/alarm/BusinessPro.png",
       "isRent": true
     },
 
@@ -1204,7 +1204,7 @@
       ],
       "desc": "Paket pembelian satu kali untuk bisnis kecil atau kantor. Termasuk perangkat keamanan penting untuk memulai. Sederhana, terjangkau, dan sepenuhnya milik Anda.",
       "device": "8",
-      "image": "/alarm/img/temp/alarm/Business.png",
+      "image": "/img/temp/alarm/Business.png",
       "isRent": false
     },
     {
@@ -1222,69 +1222,69 @@
       ],
       "desc": "Miliki sistem keamanan lengkap dengan perlindungan canggih dan fitur keselamatan tambahan. Ideal untuk area berisiko tinggi dan keamanan jangka panjang bisnis Anda.",
       "device": "12",
-      "image": "/alarm/img/temp/alarm/BusinessPro.png",
+      "image": "/img/temp/alarm/BusinessPro.png",
       "isRent": false
     }
   ],
   "BusinessPackagesBuy": [
     {
       "device": "Control Panel",
-      "image": "/alarm/img/temp/products/Control-Panel.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "PIR Camera",
-      "image": "/alarm/img/temp/products/PIR-Camera-Indoor.png",
+      "device": "PIR Camera Indoor",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
       "basic": "1",
       "pro": "1"
     },
 
     {
-      "device": "Door Control",
-      "image": "/alarm/img/temp/products/Door-Contact.png",
+      "device": "Door Contact",
+      "image": "/img/temp/products/Door-Contact.png",
       "basic": "3",
       "pro": "3"
     },
     {
-      "device": "Siren",
-      "image": "/alarm/img/temp/products/Siren-Box.png",
+      "device": "Siren Box",
+      "image": "/img/temp/products/Siren-Box.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Remote Control",
-      "image": "/alarm/img/temp/products/Remote-Control.png",
+      "image": "/img/temp/products/Remote-Control.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Keypad",
-      "image": "/alarm/img/temp/products/Keypad.png",
+      "image": "/img/temp/products/Keypad.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Panic Button",
-      "image": "/alarm/img/temp/products/Panic-Button.png",
+      "image": "/img/temp/products/Panic-Button.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smart Video Camera Indoor",
-      "image": "/alarm/img/temp/products/Smart-Video-Camera.png",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smoke Detector",
-      "image": "/alarm/img/temp/products/Smoke-Detector.png",
+      "image": "/img/temp/products/Smoke-Detector.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "PIR Indoor",
-      "image": "/alarm/img/temp/products/PIR-Indoor.png",
+      "image": "/img/temp/products/PIR-Indoor.png",
       "basic": "-",
       "pro": "1"
     }
@@ -1292,62 +1292,62 @@
   "BusinessPackagesRent": [
     {
       "device": "Control Panel",
-      "image": "/alarm/img/temp/products/Control-Panel.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "PIR Camera",
-      "image": "/alarm/img/temp/products/PIR-Camera-Indoor.png",
+      "device": "PIR Camera Indoor",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
       "basic": "1",
       "pro": "1"
     },
 
     {
-      "device": "Door Control",
-      "image": "/alarm/img/temp/products/Door-Contact.png",
+      "device": "Door Contact",
+      "image": "/img/temp/products/Door-Contact.png",
       "basic": "3",
       "pro": "3"
     },
     {
-      "device": "Siren",
-      "image": "/alarm/img/temp/products/Siren-Box.png",
+      "device": "Siren Box",
+      "image": "/img/temp/products/Siren-Box.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Remote Control",
-      "image": "/alarm/img/temp/products/Remote-Control.png",
+      "image": "/img/temp/products/Remote-Control.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Keypad",
-      "image": "/alarm/img/temp/products/Keypad.png",
+      "image": "/img/temp/products/Keypad.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Panic Button",
-      "image": "/alarm/img/temp/products/Panic-Button.png",
+      "image": "/img/temp/products/Panic-Button.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smart Video Camera Indoor",
-      "image": "/alarm/img/temp/products/Smart-Video-Camera.png",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smoke Detector",
-      "image": "/alarm/img/temp/products/Smoke-Detector.png",
+      "image": "/img/temp/products/Smoke-Detector.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "PIR Indoor",
-      "image": "/alarm/img/temp/products/PIR-Indoor.png",
+      "image": "/img/temp/products/PIR-Indoor.png",
       "basic": "-",
       "pro": "1"
     }
@@ -1369,7 +1369,7 @@
       ],
       "desc": "Keamanan dasar untuk rumah dengan alarm, sensor, dan respons 24/7 dari SECOM.",
       "device": "9",
-      "image": "/alarm/img/temp/solutions/package-home.png",
+      "image": "/img/temp/solutions/package-home.png",
       "isRent": true
     },
     {
@@ -1387,7 +1387,7 @@
       ],
       "desc": "Perlindungan maksimal dengan cakupan dalam dan luar rumah, deteksi pintar, serta sistem peringatan dini.",
       "device": "15",
-      "image": "/alarm/img/temp/solutions/package-homepro.png",
+      "image": "/img/temp/solutions/package-homepro.png",
       "isRent": true
     },
 
@@ -1406,7 +1406,7 @@
       ],
       "desc": "Solusi keamanan yang pintar dan andal dengan perlindungan esensial serta pemantauan 24/7, kini tersedia untuk dimiliki.",
       "device": "9",
-      "image": "/alarm/img/temp/solutions/package-home.png",
+      "image": "/img/temp/solutions/package-home.png",
       "isRent": false
     },
     {
@@ -1424,7 +1424,7 @@
       ],
       "desc": "Perlindungan total untuk rumah Anda mencakup dalam dan luar ruangan, deteksi canggih, dan pemantauan 24/7, kini bisa Anda miliki sepenuhnya.",
       "device": "15",
-      "image": "/alarm/img/temp/solutions/package-homepro.png",
+      "image": "/img/temp/solutions/package-homepro.png",
       "isRent": false
     }
   ],
@@ -1432,67 +1432,67 @@
   "HomePackagesBuy": [
     {
       "device": "Control Panel",
-      "image": "/alarm/img/temp/products/Control-Panel.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Panic Button",
-      "image": "/alarm/img/temp/products/Panic-Button.png",
+      "image": "/img/temp/products/Panic-Button.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "Door Control",
-      "image": "/alarm/img/temp/products/Door-Contact.png",
+      "device": "Door Contact",
+      "image": "/img/temp/products/Door-Contact.png",
       "basic": "3",
       "pro": "5"
     },
     {
       "device": "Heat Sensor",
-      "image": "/alarm/img/temp/products/Heat-Sensor.png",
+      "image": "/img/temp/products/Heat-Sensor.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "Siren",
-      "image": "/alarm/img/temp/products/Siren-Box.png",
+      "device": "Siren Box",
+      "image": "/img/temp/products/Siren-Box.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Remote Control",
-      "image": "/alarm/img/temp/products/Remote-Control.png",
+      "image": "/img/temp/products/Remote-Control.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Keypad",
-      "image": "/alarm/img/temp/products/Keypad.png",
+      "image": "/img/temp/products/Keypad.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "PIR Camera Indoor",
-      "image": "/alarm/img/temp/products/PIR-Camera-Indoor.png",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "PIR Indoor",
-      "image": "/alarm/img/temp/products/PIR-Indoor.png",
+      "image": "/img/temp/products/PIR-Indoor.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smart Video Camera Outdoor",
-      "image": "/alarm/img/temp/products/Smart-Video-Camera.png",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smoke Detector",
-      "image": "/alarm/img/temp/products/Smoke-Detector.png",
+      "image": "/img/temp/products/Smoke-Detector.png",
       "basic": "-",
       "pro": "1"
     }
@@ -1500,67 +1500,67 @@
   "HomePackagesRent": [
     {
       "device": "Control Panel",
-      "image": "/alarm/img/temp/products/Control-Panel.png",
+      "image": "/img/temp/products/Control-Panel.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Panic Button",
-      "image": "/alarm/img/temp/products/Panic-Button.png",
+      "image": "/img/temp/products/Panic-Button.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "Door Control",
-      "image": "/alarm/img/temp/products/Door-Contact.png",
+      "device": "Door Contact",
+      "image": "/img/temp/products/Door-Contact.png",
       "basic": "3",
       "pro": "5"
     },
     {
       "device": "Heat Sensor",
-      "image": "/alarm/img/temp/products/Heat-Sensor.png",
+      "image": "/img/temp/products/Heat-Sensor.png",
       "basic": "1",
       "pro": "1"
     },
     {
-      "device": "Siren",
-      "image": "/alarm/img/temp/products/Siren-Box.png",
+      "device": "Siren Box",
+      "image": "/img/temp/products/Siren-Box.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Remote Control",
-      "image": "/alarm/img/temp/products/Remote-Control.png",
+      "image": "/img/temp/products/Remote-Control.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "Keypad",
-      "image": "/alarm/img/temp/products/Keypad.png",
+      "image": "/img/temp/products/Keypad.png",
       "basic": "1",
       "pro": "1"
     },
     {
       "device": "PIR Camera Indoor",
-      "image": "/alarm/img/temp/products/PIR-Camera-Indoor.png",
+      "image": "/img/temp/products/PIR-Camera-Indoor.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "PIR Indoor",
-      "image": "/alarm/img/temp/products/PIR-Indoor.png",
+      "image": "/img/temp/products/PIR-Indoor.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smart Video Camera Outdoor",
-      "image": "/alarm/img/temp/products/Smart-Video-Camera.png",
+      "image": "/img/temp/products/Smart-Video-Camera.png",
       "basic": "-",
       "pro": "1"
     },
     {
       "device": "Smoke Detector",
-      "image": "/alarm/img/temp/products/Smoke-Detector.png",
+      "image": "/img/temp/products/Smoke-Detector.png",
       "basic": "-",
       "pro": "1"
     }

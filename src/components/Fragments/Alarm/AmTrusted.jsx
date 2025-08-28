@@ -47,7 +47,7 @@ const AmTrusted = ({ translationKey }) => {
                     alt="Secom Logo"
                     width={112}
                     height={28}
-                    className=""
+                    className="w-[60px] h-auto lg:w-[112px]"
                   />
                 )}
               </div>

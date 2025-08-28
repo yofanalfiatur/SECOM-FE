@@ -117,7 +117,11 @@ const AmProducts = (props) => {
                             {item.title}
                           </p>
                           <p className="text-white text-center mt-1 mb-8 w-[80%] text-sm">
-                            {item.subtitle}
+                            {TypeProduct === "home" ? (
+                              <>{item.subtitleHome}</>
+                            ) : (
+                              <>{item.subtitleBusiness}</>
+                            )}
                           </p>
                           <Image
                             src={item.image}
