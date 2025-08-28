@@ -629,6 +629,7 @@
     "desc": "Control your home security anytime, anywhere through the SECOM Smart Security app.",
     "descBottom": "*Recordings are only accessed during verified emergencies to ensure your safety.",
     "image": "/img/temp/mockup-app-new.png",
+    "logo": "/img/temp/logo-secom-red.png",
     "items": [
       {
         "title": "Live Monitoring",
@@ -874,6 +875,7 @@
     "title": "Stay in Control. Anytime. Anywhere.",
     "desc": "Manage your business security anytime with the SECOM App, from arming the system to live camera checks. For advanced settings, use the SECOM Smart Security portal. Your data stays private, SECOM only accesses footage during verified emergencies.",
     "image": "/img/temp/mockup-app-new.png",
+    "logo": "/img/temp/logo-secom-red.png",
     "items": [
       {
         "title": "Live Monitoring",
@@ -1280,13 +1282,7 @@
       "pro": "1"
     },
     {
-      "device": "PIR Indoor",
-      "image": "/img/temp/products/PIR-Indoor.png",
-      "basic": "-",
-      "pro": "1"
-    },
-    {
-      "device": "Indoor CCTV",
+      "device": "Smart Vide Camera Indoor",
       "image": "/img/temp/products/Smart-Video-Camera.png",
       "basic": "-",
       "pro": "1"
@@ -1298,10 +1294,10 @@
       "pro": "1"
     },
     {
-      "device": "Outdoor CCTV",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "device": "PIR Indoor",
+      "image": "/img/temp/products/PIR-Indoor.png",
       "basic": "-",
-      "pro": "-"
+      "pro": "1"
     }
   ],
   "BusinessPackagesRent": [
@@ -1349,13 +1345,7 @@
       "pro": "1"
     },
     {
-      "device": "PIR Indoor",
-      "image": "/img/temp/products/PIR-Indoor.png",
-      "basic": "-",
-      "pro": "1"
-    },
-    {
-      "device": "Indoor CCTV",
+      "device": "Smart Vide Camera Indoor",
       "image": "/img/temp/products/Smart-Video-Camera.png",
       "basic": "-",
       "pro": "1"
@@ -1367,10 +1357,10 @@
       "pro": "1"
     },
     {
-      "device": "Outdoor CCTV",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "device": "PIR Indoor",
+      "image": "/img/temp/products/PIR-Indoor.png",
       "basic": "-",
-      "pro": "-"
+      "pro": "1"
     }
   ],
 

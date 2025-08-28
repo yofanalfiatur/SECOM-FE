@@ -627,6 +627,7 @@
     "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman*",
     "descBottom": "*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.",
     "image": "/img/temp/mockup-app-new.png",
+    "logo": "/img/temp/logo-secom-red.png",
     "items": [
       {
         "title": "Video Real-Time",
@@ -868,6 +869,7 @@
     "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman*",
     "descBottom": "*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.",
     "image": "/img/temp/mockup-app-new.png",
+    "logo": "/img/temp/logo-secom-red.png",
     "items": [
       {
         "title": "Video Real-Time",
@@ -1269,13 +1271,7 @@
       "pro": "1"
     },
     {
-      "device": "PIR Indoor",
-      "image": "/img/temp/products/PIR-Indoor.png",
-      "basic": "-",
-      "pro": "1"
-    },
-    {
-      "device": "Indoor CCTV",
+      "device": "Smart Vide Camera Indoor",
       "image": "/img/temp/products/Smart-Video-Camera.png",
       "basic": "-",
       "pro": "1"
@@ -1287,10 +1283,10 @@
       "pro": "1"
     },
     {
-      "device": "Outdoor CCTV",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "device": "PIR Indoor",
+      "image": "/img/temp/products/PIR-Indoor.png",
       "basic": "-",
-      "pro": "-"
+      "pro": "1"
     }
   ],
   "BusinessPackagesRent": [
@@ -1338,13 +1334,7 @@
       "pro": "1"
     },
     {
-      "device": "PIR Indoor",
-      "image": "/img/temp/products/PIR-Indoor.png",
-      "basic": "-",
-      "pro": "1"
-    },
-    {
-      "device": "Indoor CCTV",
+      "device": "Smart Vide Camera Indoor",
       "image": "/img/temp/products/Smart-Video-Camera.png",
       "basic": "-",
       "pro": "1"
@@ -1356,10 +1346,10 @@
       "pro": "1"
     },
     {
-      "device": "Outdoor CCTV",
-      "image": "/img/temp/products/Smart-Video-Camera.png",
+      "device": "PIR Indoor",
+      "image": "/img/temp/products/PIR-Indoor.png",
       "basic": "-",
-      "pro": "-"
+      "pro": "1"
     }
   ],
 

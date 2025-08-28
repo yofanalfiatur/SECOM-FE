@@ -4,10 +4,12 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
+import useIsDesktop from "@/components/Hooks/useIsDesktop";
 
 const AmApps = ({ translationKey }) => {
   const t = useTranslations();
   const AlarmApps = t.raw(translationKey);
+  const isDesktop = useIsDesktop();
 
   return (
     <section className="pb-10 lg:pb-14">
@@ -37,21 +39,54 @@ const AmApps = ({ translationKey }) => {
         >
           <div className="w-full h-[160px] lg:w-[35%]"></div>
           <div className="w-full lg:w-[65%] flex flex-col px-6 lg:px-0">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-white text-[25px] lg:text-[35px] font-raleway font-medium"
-            >
-              {AlarmApps.title}
-            </motion.h2>
+            <div className="flex flex-row gap-4 lg:items-center">
+              {isDesktop && (
+                <Image
+                  src={AlarmApps.logo}
+                  alt="logo"
+                  width={180}
+                  height={180}
+                  className="w-[90px] h-[90px]"
+                />
+              )}
+              <div className="flex flex-col">
+                <div className="flex flex-row gap-3 lg:gap-0 mb-2 lg:mb-0 items-center">
+                  {!isDesktop && (
+                    <Image
+                      src={AlarmApps.logo}
+                      alt="logo"
+                      width={180}
+                      height={180}
+                      className="w-[61px] h-[61px]"
+                    />
+                  )}
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.5, delay: 0.6 }}
+                    className="text-white uppercase text-sm lg:text-base lg:mt-2 tracking-[4px] lg:tracking-[3px]"
+                  >
+                    SECOM SMART SECURITY APP
+                  </motion.p>
+                </div>
+                <motion.h2
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                  className="text-white text-[25px] lg:text-[35px] font-raleway font-medium"
+                >
+                  {AlarmApps.title}
+                </motion.h2>
+              </div>
+            </div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="text-white text-sm lg:text-base leading-[1.7] lg:leading-[1.5] mt-2 lg:mt-0 mb-4 lg:mb-8"
+              className="text-white text-sm lg:text-base leading-[1.7] lg:leading-[1.5] mt-2 lg:mt-3 mb-2 lg:mb-4"
               dangerouslySetInnerHTML={{ __html: AlarmApps.desc }}
             />
             <ul className="grid grid-cols-12 gap-x-3 gap-y-3 lg:gap-x-4 lg:gap-y-5">
@@ -96,7 +131,7 @@ const AmApps = ({ translationKey }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="flex flex-row mt-6 lg:mt-11 gap-3"
+              className="flex flex-row mt-6 gap-3"
             >
               {AlarmApps.download.map((item, index) => (
                 <Link key={index} href={item.link} target="_blank">

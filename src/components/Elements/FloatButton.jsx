@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const FloatButton = () => {
   const t = useTranslations();
   const floatChat = t.raw("floatChat");
+  const locale = useLocale();
 
   return (
     <>
@@ -29,9 +30,9 @@ const FloatButton = () => {
               fill="white"
             />
           </svg>
-          <div className="shadow-[0px_4px_10px_0px_#0000001A] bg-white flex flex-col items-center justify-center float-text rounded-[5px] absolute left-[-90%] opacity-0 invisible transition-all ease duration-300 translate-x-[-50%] group-hover:opacity-100 group-hover:visible group-hover:left-[-110%]">
+          <div className="shadow-[0px_4px_10px_0px_#0000001A] w-[120px] bg-white flex flex-col items-center justify-center float-text rounded-[5px] absolute left-[-90%] opacity-0 invisible transition-all ease duration-300 translate-x-[-50%] group-hover:opacity-100 group-hover:visible group-hover:left-[-135%]">
             <p className="uppercase font-raleway font-normal text-navyblue tracking-[1px] leading-[1] px-2 py-2 text-xs">
-              Whatsapp
+              {locale === "en" ? "Contact Us" : "Hubungi Kami"}
             </p>
             <div
               style={{ clipPath: "polygon(0 0, 0% 100%, 100% 50%)" }}
