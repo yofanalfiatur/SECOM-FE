@@ -17,7 +17,7 @@ const AmTrusted = ({ translationKey }) => {
       className="pt-6 pb-10 lg:pb-0 lg:pt-14 relative before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:lg:h-[85%] before:bg-tosca before:z-[-1] am-trusted"
       id="am-trusted"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 flex flex-col items-center">
         <div className="flex flex-col items-center justify-center">
           <h2 className="text-white text-[25px] lg:text-[40px] text-center">
             {AlarmTrusted.title}
@@ -28,7 +28,7 @@ const AmTrusted = ({ translationKey }) => {
         </div>
 
         {/* Comparison Table using DIV */}
-        <div className="shadow-[0px_4px_20px_0px_#0000001A] lg:rounded-[5px] overflow-hidden">
+        <div className="shadow-[0px_4px_20px_0px_#0000001A] lg:rounded-[5px] overflow-hidden w-full max-w-[1000px]">
           <div className="bg-white">
             {/* Table Header */}
             <div className="bg-navyblue text-white flex flex-row">
@@ -89,12 +89,12 @@ const AmTrusted = ({ translationKey }) => {
                         <CrossIcon />
                       </div>
                     ) : (
-                      <div className="flex flex-col justify-center items-start w-full max-w-[290px]">
+                      <div className="flex flex-col justify-center items-start w-full max-w-[200px]">
                         <div className="flex flex-col lg:flex-row gap-2 w-full items-center">
-                          <div className="flex flex-col lg:w-[15%]">
+                          <div className="flex flex-col lg:w-[35px]">
                             <LimitIcon />
                           </div>
-                          <div className="lg:w-[85%] font-raleway font-medium text-xs lg:text-xl text-darkblue capitalize lg:text-start flex flex-col">
+                          <div className="lg:w-[85%] lg:max-w-max font-raleway font-medium text-xs lg:text-xl text-darkblue capitalize lg:text-start flex flex-col">
                             <p>{row.other}</p>
                           </div>
                         </div>
