@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: '/alarm',
+  assetPrefix: '/alarm',
   allowedDevOrigins: [
     "http://localhost:3000",
     "http://secom.co.id/alarm",
