@@ -46,7 +46,7 @@ const AmApps = ({ translationKey }) => {
                   alt="logo"
                   width={180}
                   height={180}
-                  className="w-[90px] h-[90px]"
+                  className="w-[105px] h-[105px]"
                 />
               )}
               <div className="flex flex-col">
@@ -75,10 +75,9 @@ const AmApps = ({ translationKey }) => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="text-white text-[25px] lg:text-[35px] font-raleway font-medium"
-                >
-                  {AlarmApps.title}
-                </motion.h2>
+                  className="text-white text-[25px] lg:text-[35px] font-raleway font-medium leading-[1.4] lg:leading-[1.2]"
+                  dangerouslySetInnerHTML={{ __html: AlarmApps.title }}
+                />
               </div>
             </div>
             <motion.div
@@ -86,7 +85,7 @@ const AmApps = ({ translationKey }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="text-white text-sm lg:text-base leading-[1.7] lg:leading-[1.5] mt-2 lg:mt-3 mb-2 lg:mb-4"
+              className="text-white text-sm lg:text-base leading-[1.7] lg:leading-[1.5] mt-2 lg:mt-4 mb-2 lg:mb-4"
               dangerouslySetInnerHTML={{ __html: AlarmApps.desc }}
             />
             <ul className="grid grid-cols-12 gap-x-3 gap-y-3 lg:gap-x-4 lg:gap-y-5">

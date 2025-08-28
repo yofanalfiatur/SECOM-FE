@@ -814,6 +814,10 @@ main {
 @keyframes pulsecircle {
   0% {
     scale: 1;
+    opacity: 0;
+  }
+  50% {
+    scale: 1.8;
     opacity: 0.9;
   }
   100% {
@@ -825,6 +829,10 @@ main {
 @keyframes pulsecirclebg {
   0% {
     transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.3);
     opacity: 1;
   }
   100% {
@@ -839,6 +847,10 @@ main {
   @keyframes pulsecircle {
     0% {
       scale: 1;
+      opacity: 0;
+    }
+    50% {
+      scale: 2.1;
       opacity: 0.9;
     }
     100% {

@@ -15,7 +15,7 @@
   },
   "floatChat": {
     "email": "csc@secom.co.id",
-    "whatsapp": "62817117326"
+    "whatsapp": "https://api.whatsapp.com/send?phone=+62817117326&text=Hello,%20there%27s%20something%20i%20want%20to%20ask"
   },
 
   "langIdentifier": "English",
@@ -625,7 +625,7 @@
     "image": "/img/temp/residential/Product-Placement-Home.jpg"
   },
   "SolApps": {
-    "title": "Always Connected. Always Protected",
+    "title": "Always Connected.<br>Always Protected",
     "desc": "Control your home security anytime, anywhere through the SECOM Smart Security app.",
     "descBottom": "*Recordings are only accessed during verified emergencies to ensure your safety.",
     "image": "/img/temp/mockup-app-new.png",
@@ -676,7 +676,7 @@
   "SolTrusted": {
     "title": "Why SECOM Is More Than Just a Camera.",
     "desc": "",
-    "logoSecom": "/img/secom-logo.png",
+    "logoSecom": "",
     "textSecom": "SECOM Smart Security",
     "textOther": "CCTV Only",
     "table": [
@@ -872,7 +872,7 @@
     "image": "/img/temp/alarm/Product-Placement-Business.jpg"
   },
   "AlarmApps": {
-    "title": "Stay in Control. Anytime. Anywhere.",
+    "title": "Always Connected.<br>Always Protected",
     "desc": "Manage your business security anytime with the SECOM App, from arming the system to live camera checks. For advanced settings, use the SECOM Smart Security portal. Your data stays private, SECOM only accesses footage during verified emergencies.",
     "image": "/img/temp/mockup-app-new.png",
     "logo": "/img/temp/logo-secom-red.png",
@@ -923,7 +923,7 @@
     "title": "Your Business Deserves More Than Basic Security",
     "desc": "",
     "logoSecom": "/img/secom-logo.png",
-    "textSecom": "SECOM",
+    "textSecom": "",
     "textOther": "Other Company",
     "table": [
       {
@@ -1084,9 +1084,9 @@
       "image": "/img/temp/products/Smoke-Detector.png",
       "link": "#9",
       "type": ["home", "business"],
-      "pinBusiness": false,
-      "pinBusinessX": "0%",
-      "pinBusinessY": "0%",
+      "pinBusiness": true,
+      "pinBusinessX": "71%",
+      "pinBusinessY": "41.5%",
       "pinHome": true,
       "pinHomeX": "45%",
       "pinHomeY": "65%"
@@ -1098,9 +1098,9 @@
       "image": "/img/temp/products/Heat-Sensor.png",
       "link": "#10",
       "type": ["home"],
-      "pinBusiness": true,
-      "pinBusinessX": "71%",
-      "pinBusinessY": "41.5%",
+      "pinBusiness": false,
+      "pinBusinessX": "0%",
+      "pinBusinessY": "0%",
       "pinHome": false,
       "pinHomeX": "0%",
       "pinHomeY": "0%"

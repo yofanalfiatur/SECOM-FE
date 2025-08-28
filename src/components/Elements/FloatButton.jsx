@@ -13,7 +13,7 @@ const FloatButton = () => {
       <div className="flex flex-col fixed z-[100] bottom-[30px] right-[30px] float-button">
         {/* Float Default Button */}
         <Link
-          href={`https://wa.me/${floatChat.whatsapp}`}
+          href={floatChat.whatsapp}
           target="_blank"
           className={`bg-tosca w-[42px] h-[42px] lg:w-[52px] lg:h-[52px] flex flex-col items-center justify-center rounded-full cursor-pointer relative bottom-0 right-0 shadow-[0px_4px_10px_0px_#0000001A] float-default transition-all duration-300 group`}
         >

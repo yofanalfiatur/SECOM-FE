@@ -35,10 +35,21 @@ const AmTrusted = ({ translationKey }) => {
               <div className="flex flex-col justify-center text-left py-3 lg:py-[22px] px-4 lg:px-8 text-xs lg:text-xl font-semibold font-raleway w-[40%]">
                 {locale === "en" ? "FEATURE" : "FITUR"}
               </div>
-              <div className="text-center py-3 lg:py-[22px] px-0 lg:px-8 flex flex-col lg:flex-row gap-1 lg:gap-3 items-center justify-center w-[30%]">
-                <p className="text-white text-xs lg:text-xl font-semibold uppercase">
-                  {AlarmTrusted.textSecom}
-                </p>
+              <div className="text-center py-3 lg:py-[22px] px-0 lg:px-6 flex flex-col lg:flex-row gap-1 lg:gap-3 items-center justify-center w-[30%]">
+                {AlarmTrusted.textSecom && (
+                  <p className="text-white text-xs lg:text-xl font-semibold uppercase">
+                    {AlarmTrusted.textSecom}
+                  </p>
+                )}
+                {AlarmTrusted.logoSecom && (
+                  <Image
+                    src={AlarmTrusted.logoSecom}
+                    alt="Secom Logo"
+                    width={112}
+                    height={28}
+                    className=""
+                  />
+                )}
               </div>
               <div className="text-center py-3 lg:py-[22px] px-1 lg:px-8 text-xs lg:text-xl font-semibold font-raleway w-[30%] uppercase flex flex-col justify-center">
                 {AlarmTrusted.textOther}

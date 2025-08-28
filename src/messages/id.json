@@ -13,7 +13,7 @@
   },
   "floatChat": {
     "email": "csc@secom.co.id",
-    "whatsapp": "62817117326"
+    "whatsapp": "https://api.whatsapp.com/send?phone=+62817117326&text=Hai,%20ada%20yang%20ingin%20saya%20tanyakan"
   },
 
   "langIdentifier": "Indonesian",
@@ -623,7 +623,7 @@
     "image": "/img/temp/residential/Product-Placement-Home.jpg"
   },
   "SolApps": {
-    "title": "Selalu Terhubung. Selalu Terlindungi",
+    "title": "Selalu Terhubung.<br>Selalu Terlindungi",
     "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman*",
     "descBottom": "*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.",
     "image": "/img/temp/mockup-app-new.png",
@@ -674,7 +674,7 @@
   "SolTrusted": {
     "title": "Mengapa SECOM Lebih dari CCTV",
     "desc": "",
-    "logoSecom": "/img/secom-logo.png",
+    "logoSecom": "",
     "textSecom": "SECOM Smart Security",
     "textOther": "Hanya CCTV",
     "table": [
@@ -748,7 +748,7 @@
     "title": "Lihat Perbedaan",
     "hint": "Sembunyikan Informasi",
     "note": "*Syarat&Ketentuan<br><ul><li>Paket dapat disesuaikan dengan kebutuhan rumah Anda.</li><li>Harga belum termasuk PPN.</li><li>Harga belum termasuk biaya instalasi profesional.</li></ul>",
-    "serviceTitle": "Biaya Servis"
+    "serviceTitle": "Biaya Layanan"
   },
   "SolFAQ": {
     "title": "Pertanyaan Umum",
@@ -865,7 +865,7 @@
     "image": "/img/temp/alarm/Product-Placement-Business.jpg"
   },
   "AlarmApps": {
-    "title": "Selalu Terhubung. Selalu Terlindungi",
+    "title": "Selalu Terhubung.<br>Selalu Terlindungi",
     "desc": "Kendalikan keamanan bisnis Anda kapan saja, di mana saja lewat aplikasi SECOM Smart Security. Data tetap aman*",
     "descBottom": "*Rekaman hanya diakses saat darurat terverifikasi untuk memastikan keselamatan Anda.",
     "image": "/img/temp/mockup-app-new.png",
@@ -917,7 +917,7 @@
     "title": "Bukan Sekadar Keamanan Biasa. Untuk Bisnis Anda.",
     "desc": "",
     "logoSecom": "/img/secom-logo.png",
-    "textSecom": "SECOM",
+    "textSecom": "",
     "textOther": "Perusahaan Lain",
     "table": [
       {
@@ -970,7 +970,7 @@
     "title": "Lihat Perbedaan",
     "hint": "Sembunyikan Informasi",
     "note": "*Syarat&Ketentuan<br><ul><li>Paket dapat disesuaikan dengan kebutuhan bisnis Anda.</li><li>Harga belum termasuk PPN.</li><li>Harga belum termasuk biaya instalasi profesional.</li></ul>",
-    "serviceTitle": "Biaya Servis"
+    "serviceTitle": "Biaya Layanan"
   },
   "AlarmFAQ": {
     "title": "Pertanyaan Umum",
@@ -1073,9 +1073,9 @@
       "image": "/img/temp/products/Smoke-Detector.png",
       "link": "#9",
       "type": ["home", "business"],
-      "pinBusiness": false,
-      "pinBusinessX": "0%",
-      "pinBusinessY": "0%",
+      "pinBusiness": true,
+      "pinBusinessX": "71%",
+      "pinBusinessY": "41.5%",
       "pinHome": true,
       "pinHomeX": "45%",
       "pinHomeY": "65%"
@@ -1087,9 +1087,9 @@
       "image": "/img/temp/products/Heat-Sensor.png",
       "link": "#10",
       "type": ["home"],
-      "pinBusiness": true,
-      "pinBusinessX": "71%",
-      "pinBusinessY": "41.5%",
+      "pinBusiness": false,
+      "pinBusinessX": "0%",
+      "pinBusinessY": "0%",
       "pinHome": false,
       "pinHomeX": "0%",
       "pinHomeY": "0%"
