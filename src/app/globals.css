@@ -760,6 +760,7 @@ main {
   );
   background-clip: text;
   animation: shine 5s linear infinite;
+  background-size: 200% 200%;
 }
 
 .am-value .am-value__desc b.active,
