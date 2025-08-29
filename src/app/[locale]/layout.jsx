@@ -22,7 +22,7 @@ export default async function LocaleLayout({ children, params }) {
       <head>
         <title>SECOM</title>
         <meta name="description" content="Website for SECOM" />
-        <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
       </head>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
