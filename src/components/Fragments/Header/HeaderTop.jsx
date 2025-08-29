@@ -79,8 +79,8 @@ const HeaderTop = () => {
 
   return (
     <>
-      <div className="pr-8 flex flex-row justify-end border-b-1 border-[#00529C33] gap-6 h-full header__wrap-top">
-        <div className="flex flex-row items-center">
+      <div className="pr-8 flex flex-row justify-end border-b-1 border-[#00529C33] gap-3 h-full header__wrap-top">
+        <div className="flex flex-row items-center relative">
           <ul
             className={`relative lang-list ${isHovered ? "expand-lang" : ""}`}
             onMouseEnter={() => setIsHovered(true)}
@@ -89,7 +89,7 @@ const HeaderTop = () => {
             {availableLocales.map((localeCode, index) => (
               <li
                 className={`lang-option ${
-                  isLanguageActive(localeCode) ? "active" : ""
+                  isLanguageActive(localeCode) ? "w-[50px] active" : ""
                 }`}
                 key={index}
               >
@@ -118,7 +118,7 @@ const HeaderTop = () => {
             viewBox="0 0 12 7"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={`transition-transform duration-200 ${
+            className={`transition-transform duration-200 relative right-[20px] z-10 pointer-events-none ${
               isHovered ? "rotate-180" : ""
             }`}
           >

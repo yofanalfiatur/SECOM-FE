@@ -127,11 +127,16 @@ const Footer = () => {
                 {locale === "en" ? "ADDRESS" : "ALAMAT"}
               </p>
               <Link
-                className="text-white leading-[1.7] lg:leading-[1.2] font-semibold text-[15px] lg:text-xl w-full lg:w-2/3"
+                className="text-white leading-[1.7] lg:leading-[1.2] font-semibold text-[15px] lg:text-xl w-full lg:w-2/3 hover:opacity-70 transition-all duration-200 ease-in-out"
                 href={FooterContent.FtAddressLink}
                 target="_blank"
               >
-                {FooterContent.FtAddressText}
+                <p
+                  className="text-white leading-[1.7] lg:leading-[1.3] font-semibold text-[15px] lg:text-xl"
+                  dangerouslySetInnerHTML={{
+                    __html: FooterContent.FtAddressText,
+                  }}
+                />
               </Link>
             </div>
             <div className=" f-info relative lg:pl-26 flex flex-row w-full border-t-[1px] border-[#ffffff66] lg:border-none">
@@ -234,10 +239,10 @@ const Footer = () => {
               >
                 <p className="text-white relative z-20">SECOM Global Network</p>
                 <div
-                  className={`flex flex-col absolute left-0 w-full bg-white p-3 gap-2 z-10 f-wrap-item-dp transition-all duration-300 ease-in-out ${
+                  className={`flex flex-col absolute left-0 w-full bg-white p-3 lg:px-3 lg:pt-3 gap-2 z-10 f-wrap-item-dp transition-all lg:max-h-[300px] lg:overflow-scroll duration-300 ease-in-out list-country ${
                     isDropdownOpen
-                      ? "opacity-100 visible top-[-381px]"
-                      : "opacity-0 invisible top-[-370px]"
+                      ? "opacity-100 visible top-[-381px] lg:top-[-300px]"
+                      : "opacity-0 invisible top-[-367px] lg:top-[-270px]"
                   }`}
                 >
                   {FooterDropdown.map((item, index) => (

@@ -1044,3 +1044,21 @@ main {
 
   background-clip: content-box; /* Agar border tidak mengubah warna background */
 }
+
+.list-country::-webkit-scrollbar {
+  width: 9px; /* Width 3px */
+}
+
+.list-country::-webkit-scrollbar-track {
+  background: transparent; /* Track transparan */
+  border-radius: 20px; /* Rounded 20px */
+}
+
+.list-country::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 10px;
+  border-right: 3px solid transparent; /* Tambahkan space di kanan */
+  border-left: 3px solid transparent; /* Tambahkan space di kanan */
+
+  background-clip: content-box; /* Agar border tidak mengubah warna background */
+}
