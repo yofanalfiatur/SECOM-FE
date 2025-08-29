@@ -19,18 +19,23 @@ const LoginForm = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    // Email validation
+    // Username/Email validation - only check if not empty
     if (!formData.email) {
-      newErrors.email = "Email is required !";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email !";
+      newErrors.email =
+        locale === "en"
+          ? "Username/Email is required!"
+          : "Username/Email wajib diisi!";
     }
 
     // Password validation
     if (!formData.password) {
-      newErrors.password = "Password is required !";
+      newErrors.password =
+        locale === "en" ? "Password is required!" : "Kata sandi wajib diisi!";
     } else if (formData.password.length < 6) {
-      newErrors.password = "Password must be at least 6 characters !";
+      newErrors.password =
+        locale === "en"
+          ? "Password must be at least 6 characters!"
+          : "Kata sandi minimal 6 karakter!";
     }
 
     setErrors(newErrors);
@@ -79,7 +84,12 @@ const LoginForm = () => {
       // router.push('/dashboard');
     } catch (error) {
       console.error("Login error:", error);
-      setErrors({ submit: "Login failed. Please try again." });
+      setErrors({
+        submit:
+          locale === "en"
+            ? "Login failed. Please try again."
+            : "Login gagal. Silakan coba lagi.",
+      });
     } finally {
       setIsLoading(false);
     }
@@ -88,7 +98,7 @@ const LoginForm = () => {
   return (
     <div className="w-full lg:p-8 form__wrap">
       <div className="h-full flex flex-col">
-        {/* Email Field */}
+        {/* Username/Email Field */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -101,7 +111,7 @@ const LoginForm = () => {
             } `}
           >
             <input
-              type="email"
+              type="text"
               name="email"
               value={formData.email}
               onChange={handleChange}
@@ -115,7 +125,7 @@ const LoginForm = () => {
                   : ""
               }`}
             >
-              EMAIL
+              {locale === "en" ? "USERNAME/EMAIL" : "USERNAME/EMAIL"}
             </label>
           </div>
           {errors.email && (
@@ -189,7 +199,7 @@ const LoginForm = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
-            className="text-white text-sm lg:text-lg hover:text-blue-200 transition-colors duration-200 font-raleway"
+            className="text-white text-sm lg:text-lg hover:text-blue-200 transition-colors duration-200 font-raleway cursor-pointer"
             onClick={() => console.log("Forgot password clicked")}
           >
             {locale === "en" ? "Forgot password?" : "Lupa kata sandi?"}
@@ -226,7 +236,7 @@ const LoginForm = () => {
           {isLoading ? (
             <div className="flex items-center justify-center space-x-2">
               <Loader2 className="w-4 h-4 animate-spin" />
-              <span>LOGGING IN...</span>
+              <span>{locale === "en" ? "LOGGING IN..." : "MASUK..."}</span>
             </div>
           ) : locale === "en" ? (
             "LOGIN"
