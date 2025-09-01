@@ -13,14 +13,21 @@ import AmOverview from "@/components/Fragments/Alarm/AmOverview";
 import AmPlacement from "@/components/Fragments/Alarm/AmPlacement";
 import AmReason from "@/components/Fragments/Alarm/AmReason";
 import FloatButton from "@/components/Elements/FloatButton";
+import useIsDesktop from "@/components/Hooks/useIsDesktop";
+import AmHowWorks from "@/components/Fragments/Alarm/AmHowWorks";
 
 const AlarmLanding = () => {
+  const isDesktop = useIsDesktop();
   return (
     <>
       {/* business */}
       <AmBanner translationKey="AlarmBanner" />
       <AmOverview translationKey="AlarmOverview" />
-      <AmReason translationKey="AlarmReason" />
+      {isDesktop ? (
+        <AmHowWorks translationKey="AlarmReason" />
+      ) : (
+        <AmReason translationKey="AlarmReason" />
+      )}
       <AmProtect translationKey="AlarmProtect" />
       <AmProducts
         translationKey="AlarmProduct"

@@ -11,14 +11,21 @@ import AmOverview from "@/components/Fragments/Alarm/AmOverview";
 import AmPlacement from "@/components/Fragments/Alarm/AmPlacement";
 import AmReason from "@/components/Fragments/Alarm/AmReason";
 import FloatButton from "@/components/Elements/FloatButton";
+import AmHowWorks from "@/components/Fragments/Alarm/AmHowWorks";
+import useIsDesktop from "@/components/Hooks/useIsDesktop";
 
 const SolutionsPage = () => {
+  const isDesktop = useIsDesktop();
   return (
     <>
       {/* home */}
       <AmBanner translationKey="SolBanner" />
       <AmOverview translationKey="SolOverview" />
-      <AmReason translationKey="SolReason" />
+      {isDesktop ? (
+        <AmHowWorks translationKey="SolReason" />
+      ) : (
+        <AmReason translationKey="SolReason" />
+      )}
       <AmProtect translationKey="SolProtect" />
       <AmProducts
         translationKey="SolProduct"
