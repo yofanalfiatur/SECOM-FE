@@ -39,7 +39,7 @@ const Header = () => {
               className="flex flex-row items-center justify-center gap-2"
             >
               <Image
-                src="/img/secom-logo-fix.png"
+                src="/alarm/img/secom-logo-fix.png"
                 alt="SECOM Logo"
                 width={148}
                 height={37}
