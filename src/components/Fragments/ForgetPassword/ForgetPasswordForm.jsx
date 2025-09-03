@@ -107,7 +107,7 @@ const ForgetPasswordForm = () => {
                 onClick={() => handleSubmit("user")} // DITAMBAHKAN: Handler untuk tombol
                 className="bg-tosca w-[20%] cursor-pointer m-[3px] text-white text-sm lg:text-xl px-4 py-3 lg:px-5 lg:py-3.5 rounded-[5px] tracking-[3px] leading-none uppercase hover:bg-teal-600 transition-colors"
               >
-                SEND
+                {locale === "en" ? "SEND" : "KIRIM"}
               </button>
             </div>
             {/* DITAMBAHKAN: Tampilan pesan error */}
