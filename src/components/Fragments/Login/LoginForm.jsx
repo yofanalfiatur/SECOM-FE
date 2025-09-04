@@ -86,7 +86,7 @@ const LoginForm = () => {
       {/* form action
        */}
       <form
-        action="https://www.alarm.com/login.asp"
+        action="https://www.secomsmart.com/login.asp"
         method="POST"
         name="loginForm"
         id="loginForm"
@@ -98,7 +98,7 @@ const LoginForm = () => {
         <input
           type="hidden"
           name="loginFolder"
-          value="http://www.mycompany.com/myfolder/login.htm"
+          value="http://www.secomsmart.com/myfolder/login.htm"
         />
 
         <div className="h-full flex flex-col">
@@ -219,7 +219,7 @@ const LoginForm = () => {
 
           <div className="text-left">
             <motion.a
-              href="https://www.alarm.com/forgot_logininfo.asp"
+              href="https://www.secomsmart.com/forgot_logininfo.asp"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
