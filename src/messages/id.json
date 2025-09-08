@@ -1154,15 +1154,15 @@
   "BusinessPackages": [
     {
       "title": "Business",
-      "price": "1.065.000",
+      "price": "1.105.000",
       "serviceFee": [
         {
           "text": "Biaya Layanan Pemantauan 24/7",
-          "fee": "1.065.000"
+          "fee": "1.105.000"
         },
         {
           "text": "Biaya Layanan Pemantauan 24/7 + Respon Fisik",
-          "fee": "1.287.000"
+          "fee": "1.327.000"
         }
       ],
       "desc": "Paket sewa yang sederhana dan terjangkau untuk bisnis kecil atau kantor. Dilengkapi perangkat keamanan esensial untuk memulai perlindungan.",
@@ -1172,15 +1172,15 @@
     },
     {
       "title": "Business PRO",
-      "price": "1.464.000",
+      "price": "1.510.000",
       "serviceFee": [
         {
           "text": "Biaya Layanan Pemantauan 24/7",
-          "fee": "1.464.000"
+          "fee": "1.510.000"
         },
         {
           "text": "Biaya Layanan Pemantauan 24/7 + Respon Fisik",
-          "fee": "1.686.000"
+          "fee": "1.732.000"
         }
       ],
       "desc": "Perlindungan menyeluruh dengan fitur keamanan canggih dan tambahan fitur keselamatan, ideal untuk area dengan risiko tinggi.",
@@ -1191,15 +1191,15 @@
 
     {
       "title": "Business",
-      "price": "18.282.000",
+      "price": "18.732.000",
       "serviceFee": [
         {
           "text": "Biaya Layanan Pemantauan 24/7",
-          "fee": "446.000"
+          "fee": "471.000"
         },
         {
           "text": "Biaya Layanan Pemantauan 24/7 + Respon Fisik",
-          "fee": "668.000"
+          "fee": "693.000"
         }
       ],
       "desc": "Paket pembelian satu kali untuk bisnis kecil atau kantor. Termasuk perangkat keamanan penting untuk memulai. Sederhana, terjangkau, dan sepenuhnya milik Anda.",
@@ -1209,15 +1209,15 @@
     },
     {
       "title": "Business PRO",
-      "price": "25.955.000",
+      "price": "26.405.000",
       "serviceFee": [
         {
           "text": "Biaya Layanan Pemantauan 24/7",
-          "fee": "465.000"
+          "fee": "623.000"
         },
         {
           "text": "Biaya Layanan Pemantauan 24/7 + Respon Fisik",
-          "fee": "687.000"
+          "fee": "845.000"
         }
       ],
       "desc": "Miliki sistem keamanan lengkap dengan perlindungan canggih dan fitur keselamatan tambahan. Ideal untuk area berisiko tinggi dan keamanan jangka panjang bisnis Anda.",
@@ -1356,15 +1356,15 @@
   "HomePackages": [
     {
       "title": "Home",
-      "price": "928.000",
+      "price": "967.000",
       "serviceFee": [
         {
           "text": "Biaya Layanan Pemantauan 24/7",
-          "fee": "928.000"
+          "fee": "967.000"
         },
         {
           "text": "Biaya Layanan Pemantauan 24/7 + Respon Fisik",
-          "fee": "1.150.000"
+          "fee": "1.189.000"
         }
       ],
       "desc": "Keamanan dasar untuk rumah dengan alarm, sensor, dan respons 24/7 dari SECOM.",
@@ -1374,15 +1374,15 @@
     },
     {
       "title": "Home PRO",
-      "price": "1.400.000",
+      "price": "1.448.000",
       "serviceFee": [
         {
           "text": "Biaya Layanan Pemantauan 24/7",
-          "fee": "1.400.000"
+          "fee": "1.448.000"
         },
         {
           "text": "Biaya Layanan Pemantauan 24/7 + Respon Fisik",
-          "fee": "1.622.000"
+          "fee": "1.670.000"
         }
       ],
       "desc": "Perlindungan maksimal dengan cakupan dalam dan luar rumah, deteksi pintar, serta sistem peringatan dini.",
@@ -1393,7 +1393,7 @@
 
     {
       "title": "Home",
-      "price": "17.135.000",
+      "price": "17.585.000",
       "serviceFee": [
         {
           "text": "Biaya Layanan Pemantauan 24/7",
@@ -1401,7 +1401,7 @@
         },
         {
           "text": "Biaya Layanan Pemantauan 24/7 + Respon Fisik",
-          "fee": "568.000"
+          "fee": "593.000"
         }
       ],
       "desc": "Solusi keamanan yang pintar dan andal dengan perlindungan esensial serta pemantauan 24/7, kini tersedia untuk dimiliki.",
@@ -1411,15 +1411,15 @@
     },
     {
       "title": "Home PRO",
-      "price": "28.948.000",
+      "price": "29.398.000",
       "serviceFee": [
         {
           "text": "Biaya Layanan Pemantauan 24/7",
-          "fee": "375.000"
+          "fee": "463.000"
         },
         {
           "text": "Biaya Layanan Pemantauan 24/7 + Respon Fisik",
-          "fee": "597.000"
+          "fee": "685.000"
         }
       ],
       "desc": "Perlindungan total untuk rumah Anda mencakup dalam dan luar ruangan, deteksi canggih, dan pemantauan 24/7, kini bisa Anda miliki sepenuhnya.",

@@ -1165,15 +1165,15 @@
   "BusinessPackages": [
     {
       "title": "Business",
-      "price": "1,065,000",
+      "price": "1,105,000",
       "serviceFee": [
         {
           "text": "Service fee 24/7 monitoring only",
-          "fee": "1,065,000"
+          "fee": "1,105,000"
         },
         {
           "text": "Service fee 24/7 monitoring + dispatch",
-          "fee": "1,287,000"
+          "fee": "1,327,000"
         }
       ],
       "desc": "A simple and affordable rental package for small businesses or offices. Includes essential security devices to get you started.",
@@ -1183,15 +1183,15 @@
     },
     {
       "title": "Business PRO",
-      "price": "1,464,000",
+      "price": "1,510,000",
       "serviceFee": [
         {
           "text": "Service fee 24/7 monitoring only",
-          "fee": "1,464,000"
+          "fee": "1,510,000"
         },
         {
           "text": "Service fee 24/7 monitoring + dispatch",
-          "fee": "1,686,000"
+          "fee": "1,732,000"
         }
       ],
       "desc": "Comprehensive protection with advanced security features and added safety features, ideal for high-risk areas.",
@@ -1202,15 +1202,15 @@
 
     {
       "title": "Business",
-      "price": "18,282,000",
+      "price": "18,732,000",
       "serviceFee": [
         {
           "text": "Service fee 24/7 monitoring only",
-          "fee": "446,000"
+          "fee": "471,000"
         },
         {
           "text": "Service fee 24/7 monitoring + dispatch",
-          "fee": "668,000"
+          "fee": "693,000"
         }
       ],
       "desc": "A one-time purchase package for small businesses or offices. Includes essential security devices to get you started. Simple, affordable, and fully yours.",
@@ -1220,15 +1220,15 @@
     },
     {
       "title": "Business PRO",
-      "price": "25,955,000",
+      "price": "26,405,000",
       "serviceFee": [
         {
           "text": "Service fee 24/7 monitoring only",
-          "fee": "465,000"
+          "fee": "623,000"
         },
         {
           "text": "Service fee 24/7 monitoring + dispatch",
-          "fee": "687,000"
+          "fee": "845,000"
         }
       ],
       "desc": "Own a complete security system with advanced protection and added safety features, ideal for high-risk areas and long-term business security.",
@@ -1367,15 +1367,15 @@
   "HomePackages": [
     {
       "title": "Home",
-      "price": "928,000",
+      "price": "967,000",
       "serviceFee": [
         {
           "text": "Service fee 24/7 monitoring only",
-          "fee": "928,000"
+          "fee": "967,000"
         },
         {
           "text": "Service fee 24/7 monitoring + dispatch",
-          "fee": "1,150,000"
+          "fee": "1,189,000"
         }
       ],
       "desc": "Essential home safety with alarms, sensors, and 24/7 SECOM response.",
@@ -1385,15 +1385,15 @@
     },
     {
       "title": "Home PRO",
-      "price": "1,400,000",
+      "price": "1,448,000",
       "serviceFee": [
         {
           "text": "Service fee 24/7 monitoring only",
-          "fee": "1,400,000"
+          "fee": "1,448,000"
         },
         {
           "text": "Service fee 24/7 monitoring + dispatch",
-          "fee": "1,622,000"
+          "fee": "1,670,000"
         }
       ],
       "desc": "Maximum protection with complete indoor and outdoor coverage, smart detection, and early warning systems.",
@@ -1404,7 +1404,7 @@
 
     {
       "title": "Home",
-      "price": "17,135,000",
+      "price": "17,585,000",
       "serviceFee": [
         {
           "text": "Service fee 24/7 monitoring only",
@@ -1412,7 +1412,7 @@
         },
         {
           "text": "Service fee 24/7 monitoring + dispatch",
-          "fee": "568,000"
+          "fee": "593,000"
         }
       ],
       "desc": "A smart and reliable security solution with essential protection and 24/7 monitoring, now available for purchase.",
@@ -1422,15 +1422,15 @@
     },
     {
       "title": "Home PRO",
-      "price": "28,948,000",
+      "price": "29,398,000",
       "serviceFee": [
         {
           "text": "Service fee 24/7 monitoring only",
-          "fee": "375,000"
+          "fee": "463,000"
         },
         {
           "text": "Service fee 24/7 monitoring + dispatch",
-          "fee": "597,000"
+          "fee": "685,000"
         }
       ],
       "desc": "Complete home protection with full indoor and outdoor coverage, advanced detection, and 24/7 monitoring, now yours to own.",
