@@ -98,7 +98,7 @@ const LoginForm = () => {
         <input
           type="hidden"
           name="loginFolder"
-          value="http://www.secomsmart.com/myfolder/login.htm"
+          value="https://secom.co.id/alarm/login"
         />
 
         <div className="h-full flex flex-col">
@@ -219,8 +219,8 @@ const LoginForm = () => {
 
           <div className="text-left">
             <motion.a
-              href="https://www.secomsmart.com/forgot_logininfo.asp"
-              target="_blank"
+              href="forget-password"
+              target="_self"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
