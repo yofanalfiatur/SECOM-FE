@@ -12,7 +12,7 @@ const AboutStory = ({ translationKey }) => {
     <>
       <section className="relative lg:mt-[-140px] ab-story">
         <div className="container mx-auto flex lg:flex-row bg-navyblue">
-          <div className="w-7/12 flex flex-col justify-center px-12">
+          <div className="lg:w-7/12 flex flex-col justify-center px-12">
             <h2 className="text-white text-[30px] lg:text-[40px] font-raleway font-normal">
               {AboutStory.title}
             </h2>
@@ -21,7 +21,7 @@ const AboutStory = ({ translationKey }) => {
               dangerouslySetInnerHTML={{ __html: AboutStory.desc }}
             />
           </div>
-          <div className="w-7/12 flex flex-col">
+          <div className="lg:w-7/12 flex flex-col">
             <Image
               src={AboutStory.bgDesktop}
               alt="About"

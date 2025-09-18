@@ -12,15 +12,17 @@ const AboutLocation = ({ translationKey }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="flex flex-col relative overflow-hidden ab-location">
+    <section className="flex flex-col pt-10 pb-10 lg:pt-22 lg:pb-10 relative overflow-hidden ab-location">
       <div className="container flex flex-row mx-auto">
         {/* Left side: buttons */}
-        <div className="w-full lg:w-3/12">
+        <div className="w-full lg:w-3/12 flex flex-col pt-8">
           <h2 className="text-darkblue text-[25px] lg:text-[40px] font-medium font-raleway">
             {AboutLocation.title}
           </h2>
-          <p className="mb-4">{AboutLocation.desc}</p>
-          <div className="flex flex-col gap-2">
+          <p className="mt-2 mb-4 text-darkblue text-sm lg:text-lg">
+            {AboutLocation.desc}
+          </p>
+          <div className="flex flex-col gap-4">
             {AboutLocation.items.map((item, index) => (
               <button
                 key={index}
@@ -42,7 +44,7 @@ const AboutLocation = ({ translationKey }) => {
           {AboutLocation.items.map((item, index) => (
             <div
               key={index}
-              className={`flex flex-row ab-location__embed absolute top-0 left-0 w-full pl-8 transition-all duration-500 ${
+              className={`flex flex-row ab-location__embed absolute top-0 left-0 w-full pl-10 transition-all duration-500 ${
                 activeIndex === index
                   ? "opacity-100 visible relative"
                   : "opacity-0 invisible"
@@ -66,7 +68,7 @@ const AboutLocation = ({ translationKey }) => {
                   className="flex flex-col aspect-[720/270] w-full h-auto"
                 />
                 <div className="flex flex-col bg-tosca p-4">
-                  <p className="text-white">{item.address}</p>
+                  <p className="text-white text-sm">{item.address}</p>
                 </div>
               </div>
             </div>

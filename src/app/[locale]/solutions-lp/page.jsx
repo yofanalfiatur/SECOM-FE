@@ -1,12 +1,14 @@
 import BannerBasic from "@/components/Fragments/Global/BannerBasic";
-import SolCard from "@/components/Fragments/Solutions/SolCard";
+import SolProduct from "@/components/Fragments/Solutions/SolProduct";
+import SolServices from "@/components/Fragments/Solutions/SolServices";
 import React from "react";
 
 const SolutionsLP = () => {
   return (
     <>
       <BannerBasic translationKey="SolutionBanner" />
-      {/* <SolCard translationKey="SolutionCard" /> */}
+      <SolServices translationKey="SolutionServices" />
+      <SolProduct />
     </>
   );
 };

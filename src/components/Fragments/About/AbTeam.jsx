@@ -2,13 +2,14 @@
 
 import { useRef, useState, useEffect } from "react";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
 const AboutTeam = ({ translationKey }) => {
   const t = useTranslations();
   const AboutTeam = t.raw(translationKey);
   const isDesktop = useIsDesktop();
+  const locale = useLocale();
 
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -34,7 +35,7 @@ const AboutTeam = ({ translationKey }) => {
         style={{ backgroundImage: `url(${AboutTeam.image})` }}
       >
         <div className="container mx-auto flex flex-col items-center relative z-[2]">
-          <h2 className="text-white text-center w-full lg:w-[62%] text-[35px] lg:text-[50px] font-raleway font-normal pt-10 leading-[1.4] lg:leading-[1.2] mb-8">
+          <h2 className="text-white text-center w-full lg:w-[62%] text-[35px] lg:text-[50px] font-raleway font-normal pt-20 leading-[1.4] lg:leading-[1.2] mb-8">
             {AboutTeam.title}
           </h2>
         </div>
@@ -49,15 +50,15 @@ const AboutTeam = ({ translationKey }) => {
       </div>
 
       {/* Leadership List */}
-      <div className="container mx-auto mt-10">
-        <div className="flex flex-row items-center gap-10">
+      <div className="container mx-auto">
+        <div className="flex flex-row items-center mt-16 mb-8 gap-10">
           <p className="text-darkblue text-[25px] lg:text-[40px] font-raleway font-medium">
-            Our Leadership
+            {locale === "en" ? "Our Leadership" : "Our Leadership"}
           </p>
           <div className="flex-1 h-[1px] bg-[#13223333]"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 ab-team__list">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 ab-team__list">
           {AboutTeam.items.map((item, index) => {
             const videoRef = useRef(null);
             const videoRefPopup = useRef(null);

@@ -1,11 +1,10 @@
+import CareerCard from "@/components/Fragments/Career/CareerCard";
 import React from "react";
 
 const CarrerPage = () => {
   return (
     <>
-      <section>
-        <h1>Career</h1>
-      </section>
+      <CareerCard translationKey="CareerCard" />
     </>
   );
 };

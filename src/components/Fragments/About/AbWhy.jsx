@@ -12,7 +12,7 @@ const AboutWhy = ({ translationKey }) => {
   const isDesktop = useIsDesktop();
   return (
     <>
-      <section className="relative pt-6 lg:pt-15 ab-why">
+      <section className="relative pt-6 lg:pt-15 pb-10 lg:pb-12 ab-why">
         <div className="container mx-auto flex flex-col items-center">
           <h2 className="text-darkblue font-raleway font-medium text-[30px] lg:text-[40px]">
             {AboutWhy.title}
@@ -63,10 +63,10 @@ const AboutWhy = ({ translationKey }) => {
                         height={100}
                         className="mb-4 ab-why__icon"
                       />
-                      <p className="text-tosca font-raleway font-medium text-lg mb-2 text-center ab-why__item-title">
+                      <p className="text-tosca font-raleway font-bold text-lg text-center ab-why__item-title">
                         {item.title}
                       </p>
-                      <p className="text-sm text-center ab-why__item-desc">
+                      <p className="text-center ab-why__item-desc">
                         {item.desc}
                       </p>
                     </div>
