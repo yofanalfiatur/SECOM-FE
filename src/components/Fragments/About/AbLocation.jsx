@@ -13,16 +13,16 @@ const AboutLocation = ({ translationKey }) => {
 
   return (
     <section className="flex flex-col pt-10 pb-10 lg:pt-22 lg:pb-10 relative overflow-hidden ab-location">
-      <div className="container flex flex-row mx-auto">
+      <div className="container flex flex-col lg:flex-row mx-auto">
         {/* Left side: buttons */}
-        <div className="w-full lg:w-3/12 flex flex-col pt-8">
+        <div className="w-full lg:w-3/12 flex flex-col pt-0 lg:pt-8">
           <h2 className="text-darkblue text-[25px] lg:text-[40px] font-medium font-raleway">
             {AboutLocation.title}
           </h2>
-          <p className="mt-2 mb-4 text-darkblue text-sm lg:text-lg">
+          <p className="mt-2 mb-4 text-darkblue text-sm lg:text-lg leading-[1.7] lg:leading-[1.5]">
             {AboutLocation.desc}
           </p>
-          <div className="flex flex-col gap-4">
+          <div className="hidden lg:flex flex-col gap-4">
             {AboutLocation.items.map((item, index) => (
               <button
                 key={index}
@@ -44,14 +44,14 @@ const AboutLocation = ({ translationKey }) => {
           {AboutLocation.items.map((item, index) => (
             <div
               key={index}
-              className={`flex flex-row ab-location__embed absolute top-0 left-0 w-full pl-10 transition-all duration-500 ${
+              className={`flex flex-row ab-location__embed absolute top-0 left-0 w-full pl-0.5 lg:pl-10 transition-all duration-500 ${
                 activeIndex === index
                   ? "opacity-100 visible relative"
                   : "opacity-0 invisible"
               }`}
             >
               {/* Image */}
-              <div className="w-1/3 flex flex-col">
+              <div className="w-1/3 hidden lg:flex flex-col">
                 <Image
                   src={item.image}
                   alt={item.name}
@@ -62,7 +62,7 @@ const AboutLocation = ({ translationKey }) => {
               </div>
 
               {/* Embed + Address */}
-              <div className="w-2/3 flex flex-col">
+              <div className="w-full lg:w-2/3 flex flex-col">
                 <div
                   dangerouslySetInnerHTML={{ __html: item.embed }}
                   className="flex flex-col aspect-[720/270] w-full h-auto"

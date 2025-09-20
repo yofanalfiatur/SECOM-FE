@@ -12,12 +12,12 @@ const AboutWhy = ({ translationKey }) => {
   const isDesktop = useIsDesktop();
   return (
     <>
-      <section className="relative pt-6 lg:pt-15 pb-10 lg:pb-12 ab-why">
+      <section className="relative pt-10 lg:pt-15 pb-10 lg:pb-12 ab-why">
         <div className="container mx-auto flex flex-col items-center">
           <h2 className="text-darkblue font-raleway font-medium text-[30px] lg:text-[40px]">
             {AboutWhy.title}
           </h2>
-          <p className="text-sm font-normal lg:text-lg text-center text-darkblue w-[50%] pt-3 pb-3">
+          <p className="text-sm font-normal lg:text-lg text-center text-darkblue lg:w-[50%] pt-3 pb-3 leading-[1.7] lg:leading-[1.5]">
             {AboutWhy.desc}
           </p>
           <div className="w-full ab-why__wrap-slider">
@@ -42,7 +42,7 @@ const AboutWhy = ({ translationKey }) => {
                   },
                 },
               }}
-              className="w-full ab-why__slider"
+              className="w-full slider-with-pagin ab-why__slider"
               hasTrack={false}
             >
               <SplideTrack>

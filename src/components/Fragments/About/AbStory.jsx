@@ -12,12 +12,12 @@ const AboutStory = ({ translationKey }) => {
     <>
       <section className="relative mt-[-150px] lg:mt-[-140px] ab-story">
         <div className="container mx-auto flex flex-col lg:flex-row lg:bg-navyblue">
-          <div className="w-full lg:w-6/12 flex flex-col justify-center px-12 pt-10 lg:pt-0 pb-10 lg:pb-0 bg-navyblue lg:bg-[unset]">
+          <div className="w-full lg:w-6/12 flex flex-col justify-center  px-6 lg:px-12 pt-6 lg:pt-0 pb-10 lg:pb-0 bg-navyblue lg:bg-[unset]">
             <h2 className="text-white text-[30px] lg:text-[40px] font-raleway font-normal">
               {AboutStory.title}
             </h2>
             <p
-              className="text-white text-base lg:text-lg mt-3 mb-7 lg:w-[90%]"
+              className="text-white text-sm lg:text-lg leading-[1.7] lg:leading-[1.5] mt-3 lg:mb-7 lg:w-[90%]"
               dangerouslySetInnerHTML={{ __html: AboutStory.desc }}
             />
           </div>
@@ -27,7 +27,7 @@ const AboutStory = ({ translationKey }) => {
               alt="About"
               width={1000}
               height={1000}
-              className="object-cover w-full h-[486px]"
+              className="object-cover w-full aspect-[28/25] lg:aspect-[unset] lg:h-[486px]"
             />
           </div>
         </div>

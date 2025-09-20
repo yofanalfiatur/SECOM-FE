@@ -1125,12 +1125,13 @@ main {
   height: 100% !important;
 }
 
-.ab-trusted ul.splide__pagination {
+/* default slider pagination styles */
+.slider-with-pagin ul.splide__pagination {
   bottom: -25px;
   gap: 6px;
 }
 
-.ab-trusted li .splide__pagination__page {
+.slider-with-pagin li .splide__pagination__page {
   margin: unset;
   background-color: transparent;
   opacity: 100%;
@@ -1139,10 +1140,21 @@ main {
   border: 1px solid #00aaad;
 }
 
-.ab-trusted li .splide__pagination__page.is-active {
+.slider-with-pagin li .splide__pagination__page.is-active {
   margin: unset;
   background-color: #00aaad;
   transform: unset;
+}
+
+@media screen and (max-width: 1023px) {
+  .slider-with-pagin ul.splide__pagination {
+    bottom: -15px;
+    gap: 4px;
+  }
+  .slider-with-pagin li .splide__pagination__page {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 /* Alarm corner pin */

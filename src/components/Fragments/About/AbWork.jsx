@@ -35,13 +35,13 @@ const AboutWork = ({ translationKey }) => {
 
   return (
     <section className="relative bg-navyblue ab-work">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center">
-        <div className="w-7/12 flex flex-col justify-center h-[200px] border-white/50 border-r-[1px]">
-          <h2 className="text-white text-[30px] lg:text-[50px] font-normal my-auto">
+      <div className="container !p-0  mx-auto flex flex-col lg:flex-row items-center">
+        <div className="w-full lg:w-7/12 flex flex-col justify-center h-auto lg:h-[200px] lg:border-white/50 lg:border-r-[1px]">
+          <h2 className="text-white text-[35px] lg:text-[50px] font-normal my-4 lg:my-auto px-4 lg:px-0">
             {AboutWork.title}
           </h2>
         </div>
-        <div className="w-5/12 flex flex-col py-10 px-15 ab-work__wrap-slider-title">
+        <div className="w-full lg:w-5/12 flex flex-col py-4 px-4 lg:py-10 lg:px-15 border-t-[1px] lg:border-t-[unset] border-white/50 ab-work__wrap-slider-title">
           <Splide
             ref={titleSplideRef}
             options={{
@@ -53,7 +53,7 @@ const AboutWork = ({ translationKey }) => {
               pauseOnHover: true,
               gap: "0px",
             }}
-            className="w-full h-max ab-work__slider-title"
+            className="w-full h-max mt-3 lg:mt-0 ab-work__slider-title"
             hasTrack={false}
           >
             <SplideTrack>
@@ -108,9 +108,9 @@ const AboutWork = ({ translationKey }) => {
         </div>
       </div>
 
-      <div className="flex flex-col border-white/50 border-t-[1px]">
+      <div className="flex flex-col lg:border-white/50 lg:border-t-[1px]">
         <div className="container mx-auto flex flex-col lg:flex-row items-center">
-          <div className="w-7/12 border-white/50 border-r-[1px] pt-15 pr-15 pb-15 ab-work__wrap-slider-img">
+          <div className="w-full lg:w-7/12 lg:border-white/50 lg:border-r-[1px] pt-2 lg:pt-15 pr-0 lg:pr-15 pb-4 lg:pb-15 ab-work__wrap-slider-img">
             <Splide
               ref={imgSplideRef}
               options={{
@@ -134,7 +134,7 @@ const AboutWork = ({ translationKey }) => {
                       width={684}
                       height={331}
                       quality={100}
-                      className="w-full h-full aspect-[684/331] object-cover ab-work__item-img"
+                      className="w-full h-full aspect-[284/138] lg:aspect-[684/331] object-cover ab-work__item-img"
                     />
                   </SplideSlide>
                 ))}
@@ -142,7 +142,7 @@ const AboutWork = ({ translationKey }) => {
             </Splide>
           </div>
 
-          <div className="w-5/12 flex flex-col p-15 ab-work__wrap-slider-desc">
+          <div className="w-full lg:w-5/12 flex flex-col p-0 lg:p-15 ab-work__wrap-slider-desc">
             <Splide
               ref={descSplideRef}
               options={{
@@ -154,7 +154,7 @@ const AboutWork = ({ translationKey }) => {
                 pauseOnHover: true,
                 gap: "0px",
               }}
-              className="w-full h-max ab-work__slider-desc"
+              className="w-full pb-10 lg:pb-0 h-max ab-work__slider-desc"
               hasTrack={false}
             >
               <SplideTrack>
@@ -163,7 +163,7 @@ const AboutWork = ({ translationKey }) => {
                     key={index}
                     className="h-max ab-work__slide-desc"
                   >
-                    <p className="text-white h-max ab-work__item-desc">
+                    <p className="text-white leading-[1.7] lg:leading-[1.5] text-sm lg:text-base h-max ab-work__item-desc">
                       {item.desc}
                     </p>
                   </SplideSlide>

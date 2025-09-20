@@ -29,9 +29,9 @@ const AboutCertificate = ({ translationKey }) => {
 
   return (
     <>
-      <section className="flex flex-col pt-18 pb-21 relative ab-certif">
+      <section className="flex flex-col pt-11 pb-20 lg:pt-18 lg:pb-21 relative overflow-hidden ab-certif">
         <div className="container mx-auto flex flex-col-reverse lg:flex-row">
-          <div className="w-8/12 flex flex-col py-4 lg:pr-4 relative z-0">
+          <div className="w-full lg:w-8/12 flex flex-col py-4 lg:pr-4 relative z-0">
             <Splide
               options={{
                 type: "loop",
@@ -41,6 +41,11 @@ const AboutCertificate = ({ translationKey }) => {
                 arrows: true,
                 pagination: false,
                 perPage: 2,
+                breakpoints: {
+                  1024: {
+                    perPage: 1,
+                  },
+                },
                 gap: "1.5rem",
               }}
               className="w-full relative ab-certif__slider"
@@ -60,9 +65,9 @@ const AboutCertificate = ({ translationKey }) => {
                         height={188}
                         alt={`Certificate ${index + 1}`}
                         quality={100}
-                        className="lg:max-h-[188px] ab-certif__img"
+                        className="max-h-[138px] object-contain lg:max-h-[188px] ab-certif__img"
                       />
-                      <p className="text-sm lg:text-xl mt-2 mb-4 font-medium text-darkblue text-center ab-certif__caption">
+                      <p className="text-sm lg:text-xl mt-2 mb-2 lg:mb-4 font-medium text-darkblue text-center ab-certif__caption">
                         {item.title}
                       </p>
                     </div>
@@ -71,9 +76,9 @@ const AboutCertificate = ({ translationKey }) => {
               </SplideTrack>
 
               {/* Custom Arrow Buttons */}
-              <div className="splide__arrows absolute top-1/2 w-full z-10">
+              <div className="splide__arrows absolute top-[calc(100%+2.5rem)] lg:top-1/2 w-full z-10">
                 {/* Prev */}
-                <button className="splide__arrow splide__arrow--prev !bg-white !opacity-100 !border-white !border-[1px] !rounded-none !left-[-11px] shadow-[0px_1.96px_15px_0px_#0000001A]">
+                <button className="splide__arrow splide__arrow--prev !bg-white !opacity-100 !border-white !border-[1px] !rounded-none !left-[40%] lg:!left-[-11px] shadow-[0px_1.96px_15px_0px_#0000001A]">
                   <svg
                     width="22"
                     height="15"
@@ -89,7 +94,7 @@ const AboutCertificate = ({ translationKey }) => {
                   </svg>
                 </button>
                 {/* Next */}
-                <button className="splide__arrow splide__arrow--next !bg-white !opacity-100 !border-white !border-[1px] !rounded-none !right-[-11px] shadow-[0px_1.96px_15px_0px_#0000001A]">
+                <button className="splide__arrow splide__arrow--next !bg-white !opacity-100 !border-white !border-[1px] !rounded-none !right-[40%] lg:!right-[-11px] shadow-[0px_1.96px_15px_0px_#0000001A]">
                   <svg
                     width="22"
                     height="15"
@@ -109,11 +114,11 @@ const AboutCertificate = ({ translationKey }) => {
           </div>
 
           {/* Side Text */}
-          <div className="w-4/12 flex flex-col justify-center relative py-10 pl-12 z-[1] bg-white after:content-[''] after:absolute after:w-[calc(150%_+_(100vw-1320px+4rem)/2)] after:h-full after:bottom-0 after:left-0 after:bg-white after:z-[-1]">
-            <h2 className="text-darkblue text-[30px] lg:text-[40px] font-medium font-raleway lg:w-[80%] leading-[1.2] mb-4">
+          <div className="w-full lg:w-4/12 flex flex-col justify-center relative lg:py-10 lg:pl-12 z-[1] bg-white after:content-[''] after:absolute after:w-[calc(150%_+_(100vw-1320px+4rem)/2)] after:h-full after:bottom-0 after:left-0 after:bg-white after:z-[-1]">
+            <h2 className="text-darkblue text-[30px] lg:text-[40px] font-medium font-raleway lg:w-[80%] leading-[1.2] mb-2 lg:mb-4">
               {AboutCertificate.title}
             </h2>
-            <p className="text-darkblue text-sm lg:text-lg font-normal">
+            <p className="text-darkblue text-sm lg:text-lg font-normal leading-[1.7] lg:leading-[1.5]">
               {AboutCertificate.desc}
             </p>
           </div>

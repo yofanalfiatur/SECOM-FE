@@ -12,7 +12,7 @@ const AboutTrusted = ({ translationKey }) => {
   const isDesktop = useIsDesktop();
 
   return (
-    <section className="flex flex-col pt-8 pb-8 lg:pt-10 lg:pb-30 ab-trusted">
+    <section className="flex flex-col pt-0 pb-8 lg:pt-10 lg:pb-30 overflow-hidden ab-trusted">
       <div className="container mx-auto flex flex-col items-center justify-center">
         <h2 className="text-darkblue text-[30px] lg:text-[40px] font-raleway font-medium">
           {AboutTrusted.title}
@@ -27,8 +27,16 @@ const AboutTrusted = ({ translationKey }) => {
               arrows: false,
               pagination: true,
               perPage: 4,
+              breakpoints: {
+                1024: {
+                  perPage: 3,
+                },
+                768: {
+                  perPage: 2,
+                },
+              },
             }}
-            className="w-full ab-trusted__slider"
+            className="w-full slider-with-pagin ab-trusted__slider"
             hasTrack={false}
           >
             <SplideTrack className="!overflow-visible ab-trusted__track">
