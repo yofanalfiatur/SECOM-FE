@@ -13,12 +13,12 @@ const About = () => {
     <>
       <AboutBanner translationKey="AboutBanner" />
       <AboutStory translationKey="AboutStory" />
-      <AboutWhy translationKey="AboutWhy" />
-      <AboutWork translationKey="AboutWork" />
-      <AboutCertificate translationKey="AboutCertificate" />
-      <AboutTeam translationKey="AboutTeam" />
-      <AboutLocation translationKey="AboutLocation" />
-      <AboutTrusted translationKey="AboutTrusted" />
+      {/* <AboutWhy translationKey="AboutWhy" /> */}
+      {/* <AboutWork translationKey="AboutWork" /> */}
+      {/* <AboutCertificate translationKey="AboutCertificate" /> */}
+      {/* <AboutTeam translationKey="AboutTeam" /> */}
+      {/* <AboutLocation translationKey="AboutLocation" /> */}
+      {/* <AboutTrusted translationKey="AboutTrusted" /> */}
     </>
   );
 };

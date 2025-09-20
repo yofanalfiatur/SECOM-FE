@@ -10,9 +10,9 @@ const AboutStory = ({ translationKey }) => {
   const isDesktop = useIsDesktop();
   return (
     <>
-      <section className="relative lg:mt-[-140px] ab-story">
-        <div className="container mx-auto flex lg:flex-row bg-navyblue">
-          <div className="lg:w-7/12 flex flex-col justify-center px-12">
+      <section className="relative mt-[-150px] lg:mt-[-140px] ab-story">
+        <div className="container mx-auto flex flex-col lg:flex-row lg:bg-navyblue">
+          <div className="w-full lg:w-6/12 flex flex-col justify-center px-12 pt-10 lg:pt-0 pb-10 lg:pb-0 bg-navyblue lg:bg-[unset]">
             <h2 className="text-white text-[30px] lg:text-[40px] font-raleway font-normal">
               {AboutStory.title}
             </h2>
@@ -21,7 +21,7 @@ const AboutStory = ({ translationKey }) => {
               dangerouslySetInnerHTML={{ __html: AboutStory.desc }}
             />
           </div>
-          <div className="lg:w-7/12 flex flex-col">
+          <div className="w-full lg:w-6/12 flex flex-col bg-navyblue lg:bg-[unset]">
             <Image
               src={AboutStory.bgDesktop}
               alt="About"
