@@ -124,13 +124,13 @@ const AboutCertificate = ({ translationKey }) => {
           </div>
         </div>
 
-        {/* Popup */}
+        {/* Popup Certif */}
         <div className="flex flex-col">
           {AboutCertificate.items.map((item, index) => {
             const isActive = activeIndex === index;
             return (
               <div
-                className={`flex flex-col lg:flex-row fixed z-[999] top-0 w-full h-full bg-[#132233e6] ab-certif__item__popup transition-all duration-500 ${
+                className={`flex flex-col lg:flex-row fixed z-[999] top-0 w-full h-full bg-[#132233e6] ab-certif__item__popup transition-all duration-500 overflow-auto ${
                   isActive
                     ? "opacity-100 left-0 visible"
                     : "opacity-0 left-[120%] invisible"
@@ -138,41 +138,41 @@ const AboutCertificate = ({ translationKey }) => {
                 onClick={() => setActiveIndex(null)}
                 key={index}
               >
-                <div className="container flex flex-col h-max justify-center lg:flex-row mx-auto mt-[200px]">
+                <div className="container flex flex-col h-max justify-center lg:flex-row mx-auto mt-[150px] lg:mt-[200px] mb-[50px]">
                   <div
-                    className="w-10/12 bg-white flex flex-col lg:flex-row h-[430px] relative ab-certif__item__popup__wrap"
+                    className="w-full lg:w-10/12 bg-white flex flex-col lg:flex-row h-max relative ab-certif__item__popup__wrap"
                     onClick={(e) => e.stopPropagation()}
                   >
                     {/* Close Button */}
                     <button
-                      className="absolute top-[-60px] right-5 w-[30px] h-[30px] text-white flex items-center justify-center cursor-pointer"
+                      className="absolute top-[-40px] right-0 w-[30px] h-[30px] text-white flex items-center justify-center cursor-pointer"
                       onClick={() => setActiveIndex(null)}
                     >
                       <span className="text-[40px] leading-none">&times;</span>
                     </button>
 
                     {/* Image */}
-                    <div className="flex flex-col justify-center w-[35%] relative">
+                    <div className="flex flex-col justify-center w-full lg:w-[35%] relative">
                       <Image
                         src={item.image}
                         width={250}
                         height={250}
                         alt={item.title}
                         quality={100}
-                        className="mx-auto"
+                        className="m-auto"
                       />
                     </div>
 
                     {/* Text Content */}
-                    <div className="flex flex-col w-[65%] bg-[#e5e9f5] relative">
-                      <div className="flex flex-col justify-center lg:min-h-[130px] border-b-[1px] border-[#13223333] py-5 pl-10">
+                    <div className="flex flex-col w-full lg:w-[65%] bg-[#e5e9f5] relative">
+                      <div className="flex flex-col justify-center lg:min-h-[130px] border-b-[1px] border-[#13223333] py-5 px-6 lg:px-10">
                         <p className="text-darkblue text-[25px] lg:text-[35px] leading-[1.5] lg:leading-[1.2] font-raleway font-semibold">
                           {item.title}
                         </p>
                       </div>
-                      <div className="flex flex-col justify-center h-full">
+                      <div className="flex flex-col h-full">
                         <p
-                          className="text-sm lg:text-base font-normal leading-[1.7] lg:leading-[1.5] text-darkblue py-8 pl-10"
+                          className="text-sm lg:text-base font-normal leading-[1.7] lg:leading-[1.5] text-darkblue py-8 px-6 lg:px-10 overflow-y-auto min-h-[unset] lg:min-h-[300px] max-h-max lg:max-h-[45vh]"
                           dangerouslySetInnerHTML={{ __html: item.desc }}
                         />
                       </div>

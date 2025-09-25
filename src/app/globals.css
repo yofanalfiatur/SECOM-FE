@@ -1157,13 +1157,12 @@ main {
   }
 }
 
-/* Alarm corner pin */
 .abw-map .pulse-one {
   animation: pulsecircle 3s ease-in-out infinite;
   transition: all 0.3s ease;
 }
-.abw-map__item__pin__bg {
+/* .abw-map__item__pin__bg {
   animation: pulsecirclebg 3s ease-in-out infinite;
   opacity: 0;
   transition: all 0.3s ease;
-}
+} */

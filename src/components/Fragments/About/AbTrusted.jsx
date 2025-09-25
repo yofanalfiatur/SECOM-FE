@@ -27,6 +27,7 @@ const AboutTrusted = ({ translationKey }) => {
               arrows: false,
               pagination: true,
               perPage: 4,
+              gap: "1.5rem",
               breakpoints: {
                 1024: {
                   perPage: 3,
@@ -39,7 +40,7 @@ const AboutTrusted = ({ translationKey }) => {
             className="w-full slider-with-pagin ab-trusted__slider"
             hasTrack={false}
           >
-            <SplideTrack className="!overflow-visible ab-trusted__track">
+            <SplideTrack className="!overflow-visible mb-8 ab-trusted__track">
               {AboutTrusted.items.map((img, index) => (
                 <SplideSlide key={index} className="ab-trusted__slide">
                   <div className="ab-trusted__item flex flex-col items-center">
@@ -48,7 +49,7 @@ const AboutTrusted = ({ translationKey }) => {
                       alt={`trusted-${index}`}
                       width={310}
                       height={165}
-                      className="object-contain max-h-[165px] m-auto ab-trusted__img"
+                      className="object-contain w-full max-h-[72px] lg:max-h-[165px] m-auto ab-trusted__img"
                     />
                   </div>
                 </SplideSlide>

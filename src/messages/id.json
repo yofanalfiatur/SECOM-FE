@@ -1732,7 +1732,7 @@
       {
         "image": "/img/temp/products/Smart-Video-Camera.png",
         "title": "2Forbes 2024: Global 2000 World’s Largest Public Companies",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua"
+        "desc": "Perusahaan SECOM kembali dipilih oleh Forbes untuk penghargaan peruhaan besar Global 2000 tahun 2024.<br><br>SECOM sebagai perusahaan multi-nasional telah beroperasi di 3 benua, 17 negara (dengan pusatnya di Jepang) dan dengan pertumbuhan bisnis yang stabil yang telah melayani 3,7 juta pelanggan internasional, berjanji untuk memberikan “ketenangan pikiran” sebagai satu dari perusahaan multi-nasional terpercaya di dunia. Tercatatnya dalam daftar Forbes 2023 merupakan indikator yang terbukti dari nilai dan pencapaian bisnis SECOM. Perusahaan SECOM kembali dipilih oleh Forbes untuk penghargaan peruhaan besar Global 2000 tahun 2024.<br><br>SECOM sebagai perusahaan multi-nasional telah beroperasi di 3 benua, 17 negara (dengan pusatnya di Jepang) dan dengan pertumbuhan bisnis yang stabil yang telah melayani 3,7 juta pelanggan internasional, berjanji untuk memberikan “ketenangan pikiran” sebagai satu dari perusahaan multi-nasional terpercaya di dunia. Tercatatnya dalam daftar Forbes 2023 merupakan indikator yang terbukti dari nilai dan pencapaian bisnis SECOM.<br><br>Perusahaan SECOM kembali dipilih oleh Forbes untuk penghargaan peruhaan besar Global 2000 tahun 2024.<br><br>SECOM sebagai perusahaan multi-nasional telah beroperasi di 3 benua, 17 negara (dengan pusatnya di Jepang) dan dengan pertumbuhan bisnis yang stabil yang telah melayani 3,7 juta pelanggan internasional, berjanji untuk memberikan “ketenangan pikiran” sebagai satu dari perusahaan multi-nasional terpercaya di dunia. Tercatatnya dalam daftar Forbes 2023 merupakan indikator yang terbukti dari nilai dan pencapaian bisnis SECOM."
       },
       {
         "image": "/img/temp/products/Smart-Video-Camera.png",
@@ -1765,7 +1765,7 @@
         "video": "/img/temp/about/video-dummy.mp4",
         "name": "Ryoichi Kojima",
         "position": "Operations Director",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur."
+        "desc": "Sejak bergabung dengan SECOM pada tahun 2001, Go Miyachi telah memainkan peran penting dalam membentuk kesuksesan perusahaan dan memperluas kehadirannya di pasar lokal maupun internasional. Sebelum menjabat sebagai Presiden Direktur SECOM Indonesia, Go Miyachi memperdalam keahliannya dalam ekspansi bisnis di SECOM Thailand. Pengalaman ini memberinya perspektif unik tentang dinamika bisnis lokal dan global.<br><br>Sejak bergabung dengan SECOM pada tahun 2001, Go Miyachi telah memainkan peran penting dalam membentuk kesuksesan perusahaan dan memperluas kehadirannya di pasar lokal maupun internasional. Sebelum menjabat sebagai Presiden Direktur SECOM Indonesia, Go Miyachi memperdalam keahliannya dalam ekspansi bisnis di SECOM Thailand. Pengalaman ini memberinya perspektif unik tentang dinamika bisnis lokal dan global.Sejak bergabung dengan SECOM pada tahun 2001, Go Miyachi telah memainkan peran penting dalam membentuk kesuksesan perusahaan dan memperluas kehadirannya di pasar lokal maupun internasional. Sebelum menjabat sebagai Presiden Direktur SECOM Indonesia, Go Miyachi memperdalam keahliannya dalam ekspansi bisnis di SECOM Thailand. Pengalaman ini memberinya perspektif unik tentang dinamika bisnis lokal dan global.<br><br>Sejak bergabung dengan SECOM pada tahun 2001, Go Miyachi telah memainkan peran penting dalam membentuk kesuksesan perusahaan dan memperluas kehadirannya di pasar lokal maupun internasional. Sebelum menjabat sebagai Presiden Direktur SECOM Indonesia, Go Miyachi memperdalam keahliannya dalam ekspansi bisnis di SECOM Thailand. Pengalaman ini memberinya perspektif unik tentang dinamika bisnis lokal dan global."
       },
       {
         "image": "/img/temp/alarm/alarm-banner.jpg",
@@ -1784,18 +1784,24 @@
         "name": "Jakarta Head Office",
         "image": "/img/temp/alarm/alarm-banner.jpg",
         "address": "Mangkuluhur City Tower 1, 8th Floor Jl. Jend. Gatot Subroto Kav. 1-3 Jakarta Selatan 12930",
+        "gmaps": "https://maps.app.goo.gl/sLUzwEnV3YNrtTKb6",
+        "phone": "021-12345678",
         "embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.324156888034!2d106.81172947557094!3d-6.220916993767115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f41cdd44237f%3A0x51d08defabef4ce7!2sPT%20SECOM%20Indonesia!5e0!3m2!1sen!2sid!4v1757479767414!5m2!1sen!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
       },
       {
         "name": "Karawang Branch Office",
         "image": "/img/temp/alarm/alarm-banner.jpg",
         "address": "Karawang Branch Office, Karawang Branch Office, Karawang Branch Office",
+        "gmaps": "https://maps.app.goo.gl/sLUzwEnV3YNrtTKb6",
+        "phone": "021-12345678",
         "embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.324156888034!2d106.81172947557094!3d-6.220916993767115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f41cdd44237f%3A0x51d08defabef4ce7!2sPT%20SECOM%20Indonesia!5e0!3m2!1sen!2sid!4v1757479767414!5m2!1sen!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
       },
       {
         "name": "Surabaya Branch Office",
         "image": "/img/temp/alarm/alarm-banner.jpg",
         "address": "Surabaya Branch Office, Surabaya Branch Office,Surabaya Branch Office",
+        "gmaps": "https://maps.app.goo.gl/sLUzwEnV3YNrtTKb6",
+        "phone": "021-12345678",
         "embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.324156888034!2d106.81172947557094!3d-6.220916993767115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f41cdd44237f%3A0x51d08defabef4ce7!2sPT%20SECOM%20Indonesia!5e0!3m2!1sen!2sid!4v1757479767414!5m2!1sen!2sid\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
       }
     ]
@@ -1856,44 +1862,7 @@
   "AbWorldMap": {
     "title": "Our Global Presence",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur.",
-    "bgMap": "/img/temp/about/abw-bg-map.png",
-    "items": [
-      {
-        "flag": "/img/flag-en.svg",
-        "country": "United Kingdom",
-        "top": "25%",
-        "left": "80%",
-        "link": "#united-kingdom"
-      },
-      {
-        "flag": "/img/flag-en.svg",
-        "country": "United Kingdom",
-        "top": "75%",
-        "left": "15%",
-        "link": "#united-kingdom"
-      },
-      {
-        "flag": "/img/flag-en.svg",
-        "country": "United Kingdom",
-        "top": "50%",
-        "left": "50%",
-        "link": "#united-kingdom"
-      },
-      {
-        "flag": "/img/flag-en.svg",
-        "country": "United Kingdom",
-        "top": "85%",
-        "left": "90%",
-        "link": "#united-kingdom"
-      },
-      {
-        "flag": "/img/flag-en.svg",
-        "country": "United Kingdom",
-        "top": "10%",
-        "left": "30%",
-        "link": "#united-kingdom"
-      }
-    ]
+    "bgMap": "/img/temp/about/abw-bg-map.png"
   },
   "AbWorldRnD": {
     "subtitle": "R&D Innovation",
@@ -1903,7 +1872,7 @@
       {
         "title": "Virtual KEIBI System",
         "desc": "The Virtual KEIBI System is the world's first service featuring a 3D character on a mirror display for both security monitoring and reception. Developed in collaboration with three major Japanese companies, this innovation won the METI Minister Award at the 2021 Japan Open Innovation Prize, presented by the Cabinet Office of Japan for pioneering and creative open innovation initiatives.",
-        "image": "/img/temp/alarm/alarm-banner.jpg"
+        "image": "/img/temp/alarm-reason-bg.jpg"
       },
       {
         "title": "Cococbo",
@@ -1935,7 +1904,7 @@
         "link": "/#test"
       },
       {
-        "title": "3Customer-Oriented Services",
+        "title": "3Customer- Services",
         "desc": "Combining advanced technology and trusted collaborations to meet every customer's unique needs.",
         "image": "/img/temp/alarm/alarm-banner.jpg",
         "link": "/#test"
@@ -2588,6 +2557,100 @@
     {
       "question": "#3Contra legem facit qui id facit quod lex prohibet.",
       "answer": "Curabitur est gravida et libero vitae dictum. Quisque ut dolor gravida, placerat libero vel, euismod. Cum sociis natoque penatibus et magnis dis parturient. Integer legentibus erat a ante historiarum dapibus.<br><br>Etiam habebis sem dicantur magna mollis euismod. At nos hinc posthac, sitientis piros Afros. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras. Quisque placerat facilisis egestas cillum dolore. Non equidem invideo, miror magis posuere velit aliquet."
+    }
+  ],
+
+  "SecomWorldList": [
+    {
+      "flag": "/img/flag-en.svg",
+      "text": "Japan",
+      "top": "25%",
+      "left": "70%",
+      "href": "https://www.secom.co.jp/english/"
+    },
+    {
+      "flag": "/img/flag-en.svg",
+      "text": "Korea",
+      "top": "25%",
+      "left": "60%",
+      "href": "https://www.s1.co.kr/en"
+    },
+    {
+      "flag": "/img/flag-en.svg",
+      "text": "China",
+      "top": "25%",
+      "left": "50%",
+      "href": "https://www.secom.cn/"
+    },
+    {
+      "flag": "/img/flag-en.svg",
+      "text": "Taiwan",
+      "top": "25%",
+      "left": "40%",
+      "href": "https://www.secom.com.tw/"
+    },
+    {
+      "flag": "/img/flag-en.svg",
+      "text": "Thailand",
+      "top": "35%",
+      "left": "80%",
+      "href": "https://www.secom.co.th/en/"
+    },
+    {
+      "flag": "/img/flag-en.svg",
+      "text": "Vietnam",
+      "top": "45%",
+      "left": "10%",
+      "href": "https://www.secom.vn/en/"
+    },
+    {
+      "flag": "/img/flag-en.svg",
+      "text": "Malaysia",
+      "top": "55%",
+      "left": "20%",
+      "href": "https://www.secom.com.my/"
+    },
+    {
+      "flag": "/img/flag-en.svg",
+      "text": "Singapore",
+      "top": "45%",
+      "left": "90%",
+      "href": "https://www.secom.com.sg/"
+    },
+    {
+      "flag": "/img/flag-en.svg",
+      "text": "Indonesia",
+      "top": "25%",
+      "left": "90%",
+      "href": "https://secom.co.id/"
+    },
+    {
+      "flag": "/img/flag-en.svg",
+      "text": "Australia",
+      "top": "5%",
+      "left": "80%",
+      "href": "https://secom.com.au/"
+    },
+    {
+      "flag": "/img/flag-en.svg",
+      "text": "New Zealand",
+      "top": "5%",
+      "left": "11%",
+      "href": "https://secom.co.nz/"
+    },
+    {
+      "flag": "/img/flag-en.svg",
+      "text": "United Kingdom",
+      "top": "11%",
+      "left": "11%",
+      "href": "https://www.secom.plc.uk/"
+    },
+    {
+      "flag": "/img/flag-en.svg",
+      "text": "Turkey",
+      "top": "44%",
+      "left": "44%",
+      "href": "https://secomtr.com/"
     }
   ]
 }

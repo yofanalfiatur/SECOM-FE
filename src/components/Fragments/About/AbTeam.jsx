@@ -123,23 +123,23 @@ const AboutTeam = ({ translationKey }) => {
                   </p>
                 </div>
 
-                {/* Popup */}
+                {/* Popup team */}
                 <div
-                  className={`flex flex-col lg:flex-row fixed z-[999] top-0 w-full h-full bg-[#132233e6] ab-item__item__popup transition-all duration-500 ${
+                  className={`flex flex-col lg:flex-row fixed z-[999] top-0 w-full h-full bg-[#132233e6] ab-item__item__popup transition-all duration-500 overflow-auto ${
                     isActive
                       ? "left-0 opacity-100 visible"
                       : "left-[120%] opacity-0 invisible"
                   }`}
                   onClick={() => setActiveIndex(null)} // klik overlay = close
                 >
-                  <div className="container flex flex-col justify-center lg:flex-row mx-auto mt-[200px]">
+                  <div className="container flex flex-col h-max justify-center lg:flex-row mx-auto mt-[150px] lg:mt-[200px] mb-[50px]">
                     <div
-                      className="w-10/12 bg-white h-full flex flex-col lg:flex-row max-h-[550px] relative ab-team__item__popup__wrap"
+                      className="w-full lg:w-10/12 bg-white flex flex-col lg:flex-row h-max relative ab-team__item__popup__wrap"
                       onClick={(e) => e.stopPropagation()} // klik di dalam box putih jangan close
                     >
                       {/* Close Button */}
                       <button
-                        className="absolute top-[-60px] right-5 w-[30px] h-[30px] text-white flex items-center justify-center cursor-pointer ab-team__item__popup__close"
+                        className="absolute top-[-40px] right-0 w-[30px] h-[30px] text-white flex items-center justify-center cursor-pointer ab-team__item__popup__close"
                         onClick={() => setActiveIndex(null)}
                       >
                         <span className="text-[40px] leading-none">
@@ -149,7 +149,7 @@ const AboutTeam = ({ translationKey }) => {
 
                       {/* Image + Video */}
                       <div
-                        className="flex flex-col w-[35%] relative"
+                        className="flex flex-col justify-center w-full lg:w-[35%] relative"
                         onMouseEnter={() => videoRefPopup.current?.play()}
                         onMouseLeave={() => {
                           if (videoRefPopup.current) {
@@ -164,7 +164,7 @@ const AboutTeam = ({ translationKey }) => {
                           height={800}
                           alt={item.name}
                           quality={100}
-                          className="w-full h-full object-cover object-center"
+                          className="w-full h-full aspect-[385/542] object-cover object-center"
                         />
                         <video
                           ref={videoRefPopup}
@@ -177,7 +177,7 @@ const AboutTeam = ({ translationKey }) => {
                       </div>
 
                       {/* Text Content */}
-                      <div className="flex flex-col w-[65%] relative">
+                      <div className="flex flex-col w-full lg:w-[65%] relative bg-[#E6E9F5]">
                         <div className="flex flex-col border-b-[1px] border-[#13223333] p-6">
                           <p className="text-darkblue text-[25px] lg:text-[35px] font-raleway font-semibold">
                             {item.name}
@@ -186,9 +186,10 @@ const AboutTeam = ({ translationKey }) => {
                             {item.position}
                           </p>
                         </div>
-                        <p className="text-sm lg:text-lg font-normal leading-[1.7] lg:leading-[1.5] text-darkblue p-6">
-                          {item.desc}
-                        </p>
+                        <div
+                          dangerouslySetInnerHTML={{ __html: item.desc }}
+                          className="text-sm lg:text-base font-normal leading-[1.7] lg:leading-[1.5] text-darkblue py-6 px-6 overflow-y-auto min-h-[unset] lg:min-h-[300px] max-h-max lg:max-h-[45vh]"
+                        />
                       </div>
                     </div>
                   </div>
