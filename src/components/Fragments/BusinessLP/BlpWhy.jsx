@@ -12,25 +12,27 @@ const BlpWhy = ({ translationKey }) => {
   const BlpWhy = t.raw(translationKey);
   const isDesktop = useIsDesktop();
   return (
-    <section className="flex flex-col relative overflow-hidden pt-10 lg:pt-0 pb-9 lg:pb-0 lg:border-b-1 lg:border-[#13223333] blp-why ">
+    <section className="flex flex-col relative overflow-hidden pt-8 lg:pt-0 pb-9 lg:pb-0 lg:border-b-1 lg:border-[#13223333] blp-why ">
       <div className="container mx-auto flex flex-col lg:flex-row">
         <div className="w-full lg:w-7/12 flex flex-col justify-center lg:border-r-1 lg:border-[#13223333]">
-          <h2 className="text-darkblue leading-[1.3] lg:leading-[1.2] text-3xl lg:text-6xl font-medium font-raleway border-b-1 border-b-[#13223333] lg:border-b-0">
+          <h2 className="text-darkblue leading-[1.3] lg:leading-[1.2] text-3xl lg:text-6xl font-medium font-raleway relative after:content-[''] after:lg:content-none after:absolute after:w-[200%] after:h-[1px] after:bg-[#13223333] after:bottom-[0%] after:left-[-50%] after:-translate-y-1/2 pb-8 lg:pb-0">
             {BlpWhy.title}
           </h2>
 
           {!isDesktop && (
-            <Image
-              src={BlpWhy.image}
-              width={600}
-              height={600}
-              quality={100}
-              alt={BlpWhy.title}
-              className="mt-7 mb-8 lg:mt-20 lg:mb-20 lg:mr-0 w-full h-auto lg:aspect-[285/260] object-cover"
-            />
+            <div className="flex flex-col relative after:content-[''] after:lg:content-none after:absolute after:w-[200%] after:h-[1px] after:bg-[#13223333] after:bottom-[0%] after:left-[-50%] after:-translate-y-1/2">
+              <Image
+                src={BlpWhy.image}
+                width={600}
+                height={600}
+                quality={100}
+                alt={BlpWhy.title}
+                className="mt-7 mb-8 lg:mt-20 lg:mb-20 lg:mr-0 w-full h-auto lg:aspect-[285/260] object-cover"
+              />
+            </div>
           )}
 
-          <div className="flex flex-col mt-12 gap-8">
+          <div className="flex flex-col mt-12 gap-8 relative after:content-[''] after:lg:content-none after:absolute after:w-[200%] after:h-[1px] after:bg-[#13223333] after:bottom-[0%] after:left-[-50%] after:-translate-y-1/2 pb-10 lg:pb-0">
             {BlpWhy.items.map((item, index) => (
               <div className="flex flex-row items-center gap-4" key={index}>
                 <Image

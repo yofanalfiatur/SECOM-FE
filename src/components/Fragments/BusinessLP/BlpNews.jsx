@@ -5,11 +5,13 @@ import "@splidejs/react-splide/css";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import useIsDesktop from "@/components/Hooks/useIsDesktop";
 
 const BlpNews = ({ translationKey }) => {
   const t = useTranslations();
   const NewsArticle = t.raw(translationKey);
   const locale = useLocale();
+  const isDesktop = useIsDesktop();
 
   // ambil artikel pertama sebagai featured
   const featuredArticle = NewsArticle[0];
@@ -27,32 +29,32 @@ const BlpNews = ({ translationKey }) => {
   };
 
   return (
-    <section className="bg-navyblue mb-5 lg:mb-12 flex flex-col blp-news">
+    <section className="bg-navyblue mb-10 lg:mb-12 pb-20 lg:pb-0 flex flex-col gap-7 lg:gap-0 blp-news">
       {/* featured article */}
       {featuredArticle && (
-        <div className="flex flex-row justify-end relative overflow-hidden border-b-[1px] border-b-[#FFFFFF80] blp-news__featured">
-          <div className="w-[calc(67%+2rem)] flex">
+        <div className="flex flex-col-reverse lg:flex-row justify-end relative overflow-hidden border-b-[1px] border-b-[#FFFFFF80] blp-news__featured">
+          <div className="w-full lg:w-[calc(67%+2rem)] flex">
             <Image
               src={featuredArticle.featuredImage}
               width={1000}
               height={516}
               alt={featuredArticle.title}
-              className="object-cover w-full h-full aspect-[994/516]"
+              className="object-cover w-full h-full aspect-[320/166] lg:aspect-[994/516]"
             />
           </div>
-          <div className="absolute h-full w-full">
+          <div className="relative lg:absolute h-full w-full">
             <div className="container mx-auto flex flex-col h-full justify-center">
-              <div className="w-4/12 h-full flex flex-col justify-center lg:pr-12 bg-navyblue">
+              <div className="w-full lg:w-4/12 h-full flex flex-col justify-center lg:pr-12 bg-navyblue pt-7 lg:pt-8 pb-7 lg:pb-8">
                 <div className="flex flex-row blp-news__meta">
-                  <p className="text-white lg:text-sm uppercase leading-[1] relative flex flex-row items-center after:content-[''] after:w-[1px] after:h-full after:bg-white after:mx-3">
+                  <p className="text-white text-[10px] lg:text-sm uppercase leading-[1] relative flex flex-row items-center after:content-[''] after:w-[1px] after:h-full after:bg-white after:mx-3">
                     {featuredArticle.category}
                   </p>
-                  <p className="text-white lg:text-sm uppercase leading-[1]">
+                  <p className="text-white text-[10px] lg:text-sm uppercase leading-[1]">
                     {formatDate(featuredArticle.publishedDate, locale)}
                   </p>
                 </div>
                 <Link href={featuredArticle.slug}>
-                  <p className="text-white font-normal text-[25px] lg:text-[40px] leading-[1.2] mt-1 lg:mt-2 mb-2 lg:mb-4">
+                  <p className="text-white font-normal text-[30px] lg:text-[40px] leading-[1.3] lg:leading-[1.2] mt-2 mb-3 lg:mb-4">
                     {featuredArticle.title}
                   </p>
                 </Link>
@@ -61,9 +63,9 @@ const BlpNews = ({ translationKey }) => {
                 </p>
                 <Link
                   href={featuredArticle.slug}
-                  className="flex flex-row items-center gap-3 mt-3 lg:mt-6 relative max-w-max transition-all duration-300 ease hover:gap-6 after:content-[''] after:absolute after:w-0 after:h-[1px] after:bottom-0 after:left-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full "
+                  className="flex flex-row items-center gap-3 mt-5 lg:mt-6 relative max-w-max transition-all duration-300 ease hover:gap-6 after:content-[''] after:absolute after:w-0 after:h-[1px] after:bottom-0 after:left-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full "
                 >
-                  <p className="text-white lg:text-lg tracking-[3px] uppercase">
+                  <p className="text-white text-sm lg:text-lg tracking-[3px] uppercase">
                     {locale === "en" ? "Read More" : "Baca Selengkapnya"}
                   </p>
                   <svg
@@ -115,21 +117,58 @@ const BlpNews = ({ translationKey }) => {
                   className="flex flex-col blp-news__item"
                 >
                   <div className="flex flex-row blp-news__meta">
-                    <p className="text-white lg:text-sm uppercase leading-[1] relative flex flex-row items-center after:content-[''] after:w-[1px] after:h-full after:bg-white after:mx-3">
+                    <p className="text-white text-[10px] lg:text-sm uppercase leading-[1] relative flex flex-row items-center after:content-[''] after:w-[1px] after:h-full after:bg-white after:mx-3">
                       {item.category}
                     </p>
-                    <p className="text-white lg:text-sm uppercase leading-[1]">
+                    <p className="text-white text-[10px] lg:text-sm uppercase leading-[1]">
                       {formatDate(item.publishedDate, locale)}
                     </p>
                   </div>
                   <Link href={item.slug}>
-                    <p className="text-white font-normal text-[25px] lg:text-[30px] leading-[1.2] mt-2 lg:mt-5">
+                    <p className="text-white font-normal text-[20px] lg:text-[30px] leading-[1.3] lg:leading-[1.2] mt-2 lg:mt-5">
                       {item.title}
                     </p>
                   </Link>
                 </SplideSlide>
               ))}
             </SplideTrack>
+            {!isDesktop && (
+              <>
+                {/* Custom Arrow Buttons */}
+                <div className="splide__arrows absolute bottom-[-35px] w-full z-10">
+                  <button className="splide__arrow splide__arrow--prev !bg-white !opacity-100 !border-white !border-[1px] !rounded-none !left-[37%]">
+                    <svg
+                      width="22"
+                      height="15"
+                      viewBox="0 0 22 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="scale-75 rotate-[270deg]"
+                    >
+                      <path
+                        d="M21.3765 12.0804L10.9045 0L0.432595 12.0804C0.148111 12.4096 -0.00740039 12.8514 0.000270989 13.3085C0.00794236 13.7656 0.178168 14.2005 0.473501 14.5177C0.768834 14.8349 1.16508 15.0083 1.57507 14.9997C1.98507 14.9911 2.37522 14.8014 2.6597 14.4721L10.9045 4.95578L19.1585 14.4721C19.443 14.8014 19.8331 14.9911 20.2431 14.9997C20.6531 15.0083 21.0493 14.8349 21.3447 14.5177C21.64 14.2005 21.8102 13.7656 21.8179 13.3085C21.8256 12.8514 21.6701 12.4096 21.3856 12.0804H21.3765Z"
+                        fill="#00AAAD"
+                      />
+                    </svg>
+                  </button>
+                  <button className="splide__arrow splide__arrow--next !bg-white !opacity-100 !border-white !border-[1px] !rounded-none !right-[37%]">
+                    <svg
+                      width="22"
+                      height="15"
+                      viewBox="0 0 22 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="scale-75 rotate-[90deg]"
+                    >
+                      <path
+                        d="M21.3765 12.0804L10.9045 0L0.432595 12.0804C0.148111 12.4096 -0.00740039 12.8514 0.000270989 13.3085C0.00794236 13.7656 0.178168 14.2005 0.473501 14.5177C0.768834 14.8349 1.16508 15.0083 1.57507 14.9997C1.98507 14.9911 2.37522 14.8014 2.6597 14.4721L10.9045 4.95578L19.1585 14.4721C19.443 14.8014 19.8331 14.9911 20.2431 14.9997C20.6531 15.0083 21.0493 14.8349 21.3447 14.5177C21.64 14.2005 21.8102 13.7656 21.8179 13.3085C21.8256 12.8514 21.6701 12.4096 21.3856 12.0804H21.3765Z"
+                        fill="#00AAAD"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </>
+            )}
           </Splide>
         </div>
       )}

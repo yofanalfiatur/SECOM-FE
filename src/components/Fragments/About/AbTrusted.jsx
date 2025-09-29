@@ -14,7 +14,7 @@ const AboutTrusted = ({ translationKey }) => {
   return (
     <section className="flex flex-col pt-0 pb-8 lg:pt-10 lg:pb-30 overflow-hidden ab-trusted">
       <div className="container mx-auto flex flex-col items-center justify-center">
-        <h2 className="text-darkblue text-[30px] lg:text-[40px] font-raleway font-medium">
+        <h2 className="text-darkblue text-[25px] lg:text-[40px] font-raleway font-medium">
           {AboutTrusted.title}
         </h2>
         <div className="flex flex-col mb-4 mt-4 ab-trusted__wrap-slider">

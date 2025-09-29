@@ -14,8 +14,8 @@ const BusinessLP = () => {
       <BlpBanner translationKey="BusinessBanner" />
       <ResSurvey translationKey="ResSurvey" />
       <BlpWhy translationKey="BusinessWhy" />
-      {/* <BlpCard translationKey="BusinessCard" /> */}
-      {/* <BlpNews translationKey="NewsSingle" /> */}
+      <BlpCard translationKey="BusinessCard" />
+      <BlpNews translationKey="NewsSingle" />
       <AboutTrusted translationKey="AboutTrusted" />
     </>
   );
