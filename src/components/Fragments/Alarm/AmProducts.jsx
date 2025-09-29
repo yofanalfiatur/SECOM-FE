@@ -1,13 +1,10 @@
 "use client";
 
-import RadialGridCard from "@/components/Elements/RadialGridCard";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
-import Image from "next/image";
-import { Link } from "@/i18n/navigation";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useTranslations } from "next-intl";
-import RadialCardHover from "@/components/Elements/RadialCardHover";
+import CardProduct from "@/components/Elements/CardProduct";
 
 const AmProducts = (props) => {
   const { translationKey, listProducts, typeProduct } = props;
@@ -16,6 +13,7 @@ const AmProducts = (props) => {
   const ProductDetails = t.raw(listProducts);
   const AlarmProduct = t.raw(translationKey);
   const TypeProduct = typeProduct;
+
   return (
     <section
       className="pt-10 pb-12 lg:pt-20 lg:pb-26 bg-navyblue am-prod"
@@ -36,47 +34,12 @@ const AmProducts = (props) => {
               {ProductDetails.filter((item) =>
                 item.type.includes(TypeProduct)
               ).map((item, index) => (
-                <li
+                <CardProduct
                   key={index}
-                  className="w-[32.5%] relative flex flex-col min-h-[500px] group"
-                >
-                  <Link
-                    href={item.link}
-                    //temp
-                    onClick={(e) => {
-                      e.preventDefault();
-                    }}
-                    className="flex flex-col h-full bg-[#012146] pt-12 pb-6 px-8 m-1 relative z-[1] group !cursor-default"
-                  >
-                    <RadialCardHover
-                      dotSize="1px"
-                      spacing="11px"
-                      opacity={0.2}
-                      hoverRadius={300}
-                    />
-                    <div className="flex flex-col items-center pointer-events-none relative z-10">
-                      <p className="text-white text-[25px] font-raleway text-center">
-                        {item.title}
-                      </p>
-                      <p className="text-white text-center mt-2 mb-10 w-[80%] min-h-[80px]">
-                        {TypeProduct === "home" ? (
-                          <>{item.subtitleHome}</>
-                        ) : (
-                          <>{item.subtitleBusiness}</>
-                        )}
-                      </p>
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        width={216}
-                        height={216}
-                        className="transition-all duration-200 ease-in-out"
-                      />
-                    </div>
-                  </Link>
-                  <div className="absolute top-0 left-0 w-full h-full z-0 bg-[#012146] transition-all duration-200 ease opacity-100 group-hover:opacity-0"></div>
-                  <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg2 transition-all duration-200 ease opacity-0 group-hover:opacity-100"></div>
-                </li>
+                  item={item}
+                  TypeProduct={TypeProduct}
+                  variant="desktop"
+                />
               ))}
             </ul>
           </div>
@@ -101,38 +64,11 @@ const AmProducts = (props) => {
                   item.type.includes(TypeProduct)
                 ).map((item, index) => (
                   <SplideSlide key={index}>
-                    <div className="relative flex flex-col group min-h-[350px] bg-[#012146] pt-7 pb-6 px-8">
-                      <RadialGridCard />
-
-                      <Link
-                        href={item.link}
-                        //temp
-                        onClick={(e) => {
-                          e.preventDefault();
-                        }}
-                        className="flex flex-col h-full relative z-[1] !cursor-default group"
-                      >
-                        <div className="flex flex-col items-center relative z-10">
-                          <p className="text-white font-raleway text-center font-medium">
-                            {item.title}
-                          </p>
-                          <p className="text-white text-center mt-1 mb-8 w-[80%] text-sm">
-                            {TypeProduct === "home" ? (
-                              <>{item.subtitleHome}</>
-                            ) : (
-                              <>{item.subtitleBusiness}</>
-                            )}
-                          </p>
-                          <Image
-                            src={item.image}
-                            alt={item.title}
-                            width={147}
-                            height={147}
-                            className="group-hover:scale-110 transition-all duration-200 ease-in-out"
-                          />
-                        </div>
-                      </Link>
-                    </div>
+                    <CardProduct
+                      item={item}
+                      TypeProduct={TypeProduct}
+                      variant="mobile"
+                    />
                   </SplideSlide>
                 ))}
               </SplideTrack>

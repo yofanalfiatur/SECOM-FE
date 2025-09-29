@@ -5,15 +5,17 @@ import BlpBanner from "@/components/Fragments/BusinessLP/BlpBanner";
 import BlpCard from "@/components/Fragments/BusinessLP/BlpCard";
 import BlpNews from "@/components/Fragments/BusinessLP/BlpNews";
 import BlpWhy from "@/components/Fragments/BusinessLP/BlpWhy";
+import ResSurvey from "@/components/Fragments/Residential/R-Survey";
 import React from "react";
 
 const BusinessLP = () => {
   return (
     <>
       <BlpBanner translationKey="BusinessBanner" />
+      <ResSurvey translationKey="ResSurvey" />
       <BlpWhy translationKey="BusinessWhy" />
-      <BlpCard translationKey="BusinessCard" />
-      <BlpNews translationKey="" />
+      {/* <BlpCard translationKey="BusinessCard" /> */}
+      {/* <BlpNews translationKey="NewsSingle" /> */}
       <AboutTrusted translationKey="AboutTrusted" />
     </>
   );

@@ -1969,18 +1969,19 @@
     {
       "title": "Sectors We Support",
       "desc": "Inmensae subtilitatis, obscuris et malesuada fames. ",
-      "image": "/img/temp/alarm/alarm-banner.jpg"
+      "image": "/img/temp/business/blp-card-1.png"
     },
     {
       "title": "Our Solutions",
       "desc": "Inmensae subtilitatis, obscuris et malesuada fames. ",
-      "image": "/img/temp/alarm/alarm-banner.jpg"
+      "image": "/img/temp/business/blp-card-2.png"
     }
   ],
 
   "SolutionBanner": {
-    "title": "The Right Solution for Every Risk",
-    "image": "/img/temp/alarm/alarm-banner.jpg"
+    "title": "The <b>Right Solution</b> for Every Risk",
+    "image": "/img/temp/alarm/alarm-banner.jpg",
+    "imageMd": "/img/temp/alarm/alarm-banner.jpg"
   },
   "SolutionServices": {
     "title": "We Offer the Best Services",
@@ -2434,7 +2435,7 @@
   "NewsSingle": [
     {
       "id": "news-article-001",
-      "title": "Heading 1 : Cum sociis natoque penatibus et magnis dis parturient.",
+      "title": "Me non paenitet nullum festiviorem excogitasse ad hoc.",
       "slug": "news-article-001",
       "isFeatured": true,
       "featuredImage": "/img/temp/solutions/sol-bg-high.jpg",
