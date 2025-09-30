@@ -8,7 +8,10 @@ const SolutionsLP = () => {
     <>
       <BannerBasic translationKey="SolutionBanner" />
       <SolServices translationKey="SolutionServices" />
-      <SolProduct />
+      <SolProduct
+        translationKey="SolutionProducts"
+        listProducts="ProductDetails"
+      />
     </>
   );
 };
