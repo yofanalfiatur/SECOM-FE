@@ -15,6 +15,7 @@ import AmReason from "@/components/Fragments/Alarm/AmReason";
 import FloatButton from "@/components/Elements/FloatButton";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import AmHowWorks from "@/components/Fragments/Alarm/AmHowWorks";
+import OverviewGlobal from "@/components/Fragments/Global/OverviewGlobal";
 
 const AlarmLanding = () => {
   const isDesktop = useIsDesktop();
@@ -22,7 +23,7 @@ const AlarmLanding = () => {
     <>
       {/* business */}
       <AmBanner translationKey="AlarmBanner" />
-      <AmOverview translationKey="AlarmOverview" />
+      <OverviewGlobal translationKey="AlarmOverview" />
       {isDesktop ? (
         <AmHowWorks translationKey="AlarmReason" />
       ) : (

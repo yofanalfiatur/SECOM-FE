@@ -13,6 +13,7 @@ import AmReason from "@/components/Fragments/Alarm/AmReason";
 import FloatButton from "@/components/Elements/FloatButton";
 import AmHowWorks from "@/components/Fragments/Alarm/AmHowWorks";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
+import OverviewGlobal from "@/components/Fragments/Global/OverviewGlobal";
 
 const SolutionsPage = () => {
   const isDesktop = useIsDesktop();
@@ -20,7 +21,7 @@ const SolutionsPage = () => {
     <>
       {/* home */}
       <AmBanner translationKey="SolBanner" />
-      <AmOverview translationKey="SolOverview" />
+      <OverviewGlobal translationKey="SolOverview" />
       {isDesktop ? (
         <AmHowWorks translationKey="SolReason" />
       ) : (

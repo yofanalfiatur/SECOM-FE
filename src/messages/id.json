@@ -2010,9 +2010,9 @@
   },
 
   "SectorBanner": {
-    "title": "Total Security for Every Sectors",
-    "bgDesktop": "/img/temp/solutions/sol-bg-high.jpg",
-    "bgMobile": "/img/temp/residential/Residence LP Hero ENG Mobile.jpg"
+    "title": "<b>Total Security</b> for Every Sectors",
+    "image": "/img/temp/solutions/sol-bg-high.jpg",
+    "imageMd": "/img/temp/residential/Residence LP Hero ENG Mobile.jpg"
   },
 
   "SectorServices": {
@@ -2089,20 +2089,44 @@
         "desc": "We provide smart, reliable security solutions for data centers — from strict access control to 24/7 surveillance",
         "image": "/img/temp/solutions/sol-bg-high.jpg",
         "link": "/#data-center"
+      },
+      {
+        "title": "13Government",
+        "desc": "We provide smart, reliable security solutions for data centers — from strict access control to 24/7 surveillance",
+        "image": "/img/temp/solutions/sol-bg-high.jpg",
+        "link": "/#data-center"
+      },
+      {
+        "title": "14Hotel",
+        "desc": "We provide smart, reliable security solutions for data centers — from strict access control to 24/7 surveillance",
+        "image": "/img/temp/solutions/sol-bg-high.jpg",
+        "link": "/#data-center"
+      },
+      {
+        "title": "15Restaurant",
+        "desc": "We provide smart, reliable security solutions for data centers — from strict access control to 24/7 surveillance",
+        "image": "/img/temp/solutions/sol-bg-high.jpg",
+        "link": "/#data-center"
       }
     ]
   },
 
   "SectorDetailBanner": {
-    "title": "Complete Protection for Your Data Center",
-    "bgDesktop": "/img/temp/solutions/sol-bg-high.jpg",
+    "title": "<b>Complete Protection</b> for Your Data Center",
+    "image": "/img/temp/solutions/sol-bg-high.jpg",
+    "imageMd": "/img/temp/solutions/sol-bg-high.jpg",
     "desc": "Data center security is about more than hardware, it's about <b>protecting your entire digital operation</b>. We offer end-to-end solutions, from access control to on-site security, ensuring 24/7 protection, compliance, and peace of mind."
   },
   "SectorDetailSlider": {
     "title": "Data Center Security Challenges",
     "items": [
       {
-        "title": "Unauthorized Physical Access",
+        "title": "Unauthorized Physical Access Unauthorized Physical Access",
+        "desc": "Plura mihi bona sunt, inclinet, amari petere vellent. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae. Ab illo tempore, ab est sed immemorabili. Ambitioni dedisse scripsisse iudicaretur. Paullum deliquit, ponderibus modulisque suis ratio utitur. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Cras mattis iudicium purus",
+        "image": "/img/temp/solutions/sol-bg-high.jpg"
+      },
+      {
+        "title": "#2Unauthorized Physical Access",
         "desc": "Plura mihi bona sunt, inclinet, amari petere vellent. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae. Ab illo tempore, ab est sed immemorabili. Ambitioni dedisse scripsisse iudicaretur. Paullum deliquit, ponderibus modulisque suis ratio utitur. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Cras mattis iudicium purus",
         "image": "/img/temp/solutions/sol-bg-high.jpg"
       }
