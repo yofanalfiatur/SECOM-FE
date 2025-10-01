@@ -34,7 +34,7 @@ const SecDetailCard = ({ translationKey, secDetailCTA }) => {
         </div>
       </div>
 
-      <div className="container mx-auto flex flex-col lg:flex-row lg:bg-navyblue relative z-1">
+      <div className="container mt-18 mx-auto flex flex-col lg:flex-row lg:bg-navyblue relative z-1">
         <div className="w-full lg:w-[35%]">
           <Image
             src={SecDetailCTA.image}

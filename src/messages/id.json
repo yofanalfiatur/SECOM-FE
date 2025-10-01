@@ -2178,33 +2178,43 @@
   },
   "CareerCard": [
     {
-      "title": "1Curabitur blandit tempus ardua ridiculus sed magna.",
-      "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+      "title": "",
+      "icon": "",
       "image": "/img/temp/solutions/sol-bg-high.jpg"
     },
     {
       "title": "2Curabitur blandit tempus ardua ridiculus sed magna.",
       "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
-      "image": "/img/temp/solutions/sol-bg-high.jpg"
+      "image": ""
     },
     {
       "title": "3Curabitur blandit tempus ardua ridiculus sed magna.",
       "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
-      "image": "/img/temp/solutions/sol-bg-high.jpg"
+      "image": ""
     },
     {
       "title": "4Prima luce, cum quibus mons aliud consensu ab eo.",
       "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
-      "image": "/img/temp/solutions/sol-bg-high.jpg"
+      "image": ""
     },
     {
       "title": "5Curabitur blandit tempus ardua ridiculus sed magna.",
-      "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+      "icon": "",
+      "image": ""
+    },
+    {
+      "title": "",
+      "icon": "",
       "image": "/img/temp/solutions/sol-bg-high.jpg"
     },
     {
-      "title": "6Curabitur blandit tempus ardua ridiculus sed magna.",
+      "title": "5Prima luce, cum quibus mons aliud consensu ab eo.",
       "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+      "image": ""
+    },
+    {
+      "title": "",
+      "icon": "",
       "image": "/img/temp/solutions/sol-bg-high.jpg"
     }
   ],
@@ -2339,6 +2349,255 @@
     },
     {
       "title": "#6 Digital Marketing Specialist",
+      "shortDesc": "Plan and execute online marketing campaigns to boost brand awareness.",
+      "location": "Bali",
+      "type": "Freelance",
+      "experience": "5 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in Marketing or related field.",
+        "Proven experience in SEO, SEM, and social media ads.",
+        "Knowledge of Google Analytics and marketing automation tools.",
+        "Creative thinking and copywriting skills.",
+        "Ability to manage multiple campaigns simultaneously.",
+        "Strong communication and leadership skills."
+      ],
+      "responsibilities": [
+        "Develop and implement marketing strategies.",
+        "Manage advertising budgets and optimize ROI.",
+        "Monitor performance metrics and prepare reports."
+      ],
+      "benefit": [
+        "Performance-based bonuses",
+        "Remote work availability",
+        "Professional development courses"
+      ]
+    },
+    {
+      "title": "#7 Digital Marketing Specialist",
+      "shortDesc": "Plan and execute online marketing campaigns to boost brand awareness.",
+      "location": "Bali",
+      "type": "Freelance",
+      "experience": "5 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in Marketing or related field.",
+        "Proven experience in SEO, SEM, and social media ads.",
+        "Knowledge of Google Analytics and marketing automation tools.",
+        "Creative thinking and copywriting skills.",
+        "Ability to manage multiple campaigns simultaneously.",
+        "Strong communication and leadership skills."
+      ],
+      "responsibilities": [
+        "Develop and implement marketing strategies.",
+        "Manage advertising budgets and optimize ROI.",
+        "Monitor performance metrics and prepare reports."
+      ],
+      "benefit": [
+        "Performance-based bonuses",
+        "Remote work availability",
+        "Professional development courses"
+      ]
+    },
+    {
+      "title": "#8 Digital Marketing Specialist",
+      "shortDesc": "Plan and execute online marketing campaigns to boost brand awareness.",
+      "location": "Bali",
+      "type": "Freelance",
+      "experience": "5 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in Marketing or related field.",
+        "Proven experience in SEO, SEM, and social media ads.",
+        "Knowledge of Google Analytics and marketing automation tools.",
+        "Creative thinking and copywriting skills.",
+        "Ability to manage multiple campaigns simultaneously.",
+        "Strong communication and leadership skills."
+      ],
+      "responsibilities": [
+        "Develop and implement marketing strategies.",
+        "Manage advertising budgets and optimize ROI.",
+        "Monitor performance metrics and prepare reports."
+      ],
+      "benefit": [
+        "Performance-based bonuses",
+        "Remote work availability",
+        "Professional development courses"
+      ]
+    },
+
+    {
+      "title": "#9 Salesforce Developer",
+      "shortDesc": "Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras.",
+      "location": "Jakarta",
+      "type": "Full Time",
+      "experience": "5 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in any major.",
+        "Good knowledge of a programming language.",
+        "Minimum of 5 years of experience in software development with a focus on Salesforce Development.",
+        "Proficient in developing, deploying, customizing, and integrating Salesforce.",
+        "Demonstrated proficiency in installing and deploying CRM Organizations.",
+        "Demonstrated proficiency in customizing and creating CRM entities.",
+        "Demonstrated proficiency in understanding and implementing business workflows and processes.",
+        "Experience with source control management systems and continuous integration/deployment environments.",
+        "Ability to work independently as well as in a team environment.",
+        "Excellent communication skills with both internal team members and external business stakeholders.",
+        "Strong initiative to find ways to improve solutions, systems, and processes.",
+        "Experience working on an agile development team.",
+        "Fluent in English (Professionally)"
+      ],
+      "responsibilities": [
+        "Develop and maintain Salesforce applications.",
+        "Collaborate with cross-functional teams.",
+        "Participate in code reviews and technical discussions."
+      ],
+      "benefit": ["Health insurance", "Annual leave", "Flexible working hours"]
+    },
+    {
+      "title": "#10 Frontend Engineer",
+      "shortDesc": "Build modern and scalable user interfaces for enterprise applications.",
+      "location": "Bandung",
+      "type": "Part Time",
+      "experience": "3 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in Computer Science or related field.",
+        "Strong knowledge of React.js and Next.js.",
+        "Familiarity with TailwindCSS and responsive design.",
+        "Experience with state management libraries such as Redux or Zustand.",
+        "Understanding of RESTful APIs and GraphQL.",
+        "Knowledge of CI/CD workflows.",
+        "Strong problem-solving skills and teamwork.",
+        "Fluent in English."
+      ],
+      "responsibilities": [
+        "Develop responsive and reusable components.",
+        "Ensure application performance and scalability.",
+        "Work closely with backend engineers and designers."
+      ],
+      "benefit": ["Remote work option", "Project bonus", "Annual team retreat"]
+    },
+    {
+      "title": "#11 UI/UX Designer",
+      "shortDesc": "Design intuitive user experiences and interfaces for web and mobile applications.",
+      "location": "Yogyakarta",
+      "type": "Freelance",
+      "experience": "Fresh Graduate",
+      "requirements": [
+        "Bachelor’s degree in Design, IT, or related field.",
+        "Proficiency in Figma, Adobe XD, or Sketch.",
+        "Understanding of design systems and accessibility principles.",
+        "Ability to collaborate with engineers and product managers.",
+        "Portfolio showcasing design projects.",
+        "Strong visual and communication skills."
+      ],
+      "responsibilities": [
+        "Create wireframes, prototypes, and mockups.",
+        "Conduct user research and usability testing.",
+        "Ensure consistency across all design assets."
+      ],
+      "benefit": [
+        "Flexible working schedule",
+        "Project-based income",
+        "Networking opportunities"
+      ]
+    },
+    {
+      "title": "#12 Backend Engineer",
+      "shortDesc": "Design and implement server-side applications and scalable APIs.",
+      "location": "Surabaya",
+      "type": "Full Time",
+      "experience": "3 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in Computer Science or similar field.",
+        "Experience with Node.js, Express, or NestJS.",
+        "Knowledge of SQL/NoSQL databases.",
+        "Understanding of microservices architecture.",
+        "Experience with Docker and Kubernetes.",
+        "Familiarity with AWS or GCP.",
+        "Team collaboration and problem-solving skills."
+      ],
+      "responsibilities": [
+        "Develop REST and GraphQL APIs.",
+        "Maintain database performance and security.",
+        "Integrate third-party services and APIs."
+      ],
+      "benefit": ["Health insurance", "Performance bonus", "Learning budget"]
+    },
+    {
+      "title": "#13 Data Analyst",
+      "shortDesc": "Analyze data to provide business insights and recommendations.",
+      "location": "Medan",
+      "type": "Part Time",
+      "experience": "Fresh Graduate",
+      "requirements": [
+        "Bachelor’s degree in Statistics, Mathematics, or related field.",
+        "Strong skills in SQL and Excel.",
+        "Familiarity with Python or R for data analysis.",
+        "Experience with visualization tools like Tableau or PowerBI.",
+        "Analytical mindset and attention to detail.",
+        "Good communication and presentation skills."
+      ],
+      "responsibilities": [
+        "Prepare data reports for stakeholders.",
+        "Identify trends and insights from datasets.",
+        "Support business decision-making with data."
+      ],
+      "benefit": [
+        "Flexible hours",
+        "Remote-friendly",
+        "Skill development program"
+      ]
+    },
+    {
+      "title": "#14 Digital Marketing Specialist",
+      "shortDesc": "Plan and execute online marketing campaigns to boost brand awareness.",
+      "location": "Bali",
+      "type": "Freelance",
+      "experience": "5 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in Marketing or related field.",
+        "Proven experience in SEO, SEM, and social media ads.",
+        "Knowledge of Google Analytics and marketing automation tools.",
+        "Creative thinking and copywriting skills.",
+        "Ability to manage multiple campaigns simultaneously.",
+        "Strong communication and leadership skills."
+      ],
+      "responsibilities": [
+        "Develop and implement marketing strategies.",
+        "Manage advertising budgets and optimize ROI.",
+        "Monitor performance metrics and prepare reports."
+      ],
+      "benefit": [
+        "Performance-based bonuses",
+        "Remote work availability",
+        "Professional development courses"
+      ]
+    },
+    {
+      "title": "#15 Digital Marketing Specialist",
+      "shortDesc": "Plan and execute online marketing campaigns to boost brand awareness.",
+      "location": "Bali",
+      "type": "Freelance",
+      "experience": "5 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in Marketing or related field.",
+        "Proven experience in SEO, SEM, and social media ads.",
+        "Knowledge of Google Analytics and marketing automation tools.",
+        "Creative thinking and copywriting skills.",
+        "Ability to manage multiple campaigns simultaneously.",
+        "Strong communication and leadership skills."
+      ],
+      "responsibilities": [
+        "Develop and implement marketing strategies.",
+        "Manage advertising budgets and optimize ROI.",
+        "Monitor performance metrics and prepare reports."
+      ],
+      "benefit": [
+        "Performance-based bonuses",
+        "Remote work availability",
+        "Professional development courses"
+      ]
+    },
+    {
+      "title": "#16 Digital Marketing Specialist",
       "shortDesc": "Plan and execute online marketing campaigns to boost brand awareness.",
       "location": "Bali",
       "type": "Freelance",
