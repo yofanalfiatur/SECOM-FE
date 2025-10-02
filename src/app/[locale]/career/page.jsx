@@ -8,7 +8,7 @@ const CarrerPage = () => {
   return (
     <>
       <CareerBanner translationKey="CareerBanner" />
-      {/* <CareerCard translationKey="CareerCard" /> */}
+      <CareerCard translationKey="CareerCard" />
       <CareerVacancies translationKey="CareerVacancies" vacancies="Vacancies" />
     </>
   );

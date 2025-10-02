@@ -1,10 +1,18 @@
 "use client";
 
+import AmBanner from "@/components/Fragments/Alarm/AmBanner";
+import AmFAQ from "@/components/Fragments/Alarm/AmFAQ";
+import AmHowWorks from "@/components/Fragments/Alarm/AmHowWorks";
+import AmReason from "@/components/Fragments/Alarm/AmReason";
+import OverviewGlobal from "@/components/Fragments/Global/OverviewGlobal";
+import SolDtHighlight from "@/components/Fragments/Solution-Detail/SolDtHighlight";
+import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import { useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
 
 export default function SolutionDetailPage({ params }) {
   const t = useTranslations();
+  const isDesktop = useIsDesktop();
   //   const careerDetails = t.raw("CareerDetail"); // ambil array CareerDetail
   //   const career = careerDetails.find((c) => c.id === params.id);
 
@@ -13,8 +21,19 @@ export default function SolutionDetailPage({ params }) {
   //   }
 
   return (
-    <section className="max-w-3xl mx-auto py-10">
-      <h1 className="text-3xl font-bold mb-4">Solution Detail Test</h1>
-    </section>
+    <>
+      <AmBanner translationKey="AlarmBanner" />
+      <OverviewGlobal translationKey="AlarmOverview" />
+      {isDesktop ? (
+        <AmHowWorks translationKey="AlarmReason" />
+      ) : (
+        <AmReason translationKey="AlarmReason" />
+      )}
+      <SolDtHighlight
+        translationKey="SolutionDetailHighlight"
+        SolDetailDocument="SolutionDetailDocument"
+      />
+      <AmFAQ translationKey="AlarmFAQ" />
+    </>
   );
 }

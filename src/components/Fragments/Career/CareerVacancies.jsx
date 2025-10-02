@@ -47,7 +47,7 @@ const CareerVacancies = ({ translationKey, vacancies }) => {
         <div className="w-full h-full lg:w-8/12 cr-vac__list">
           <AnimatePresence mode="wait">
             <motion.ul
-              key={currentPage} // ⬅️ supaya framer motion detect perubahan halaman
+              key={currentPage}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -134,7 +134,7 @@ const CareerVacancies = ({ translationKey, vacancies }) => {
                 let startPage = Math.max(1, currentPage - 2);
                 let endPage = Math.min(totalPages, currentPage + 2);
 
-                // Adjust supaya selalu tampil 5 halaman kalau memungkinkan
+                // Adjust to show at least 5 page numbers
                 if (endPage - startPage < 4) {
                   if (startPage === 1) {
                     endPage = Math.min(5, totalPages);

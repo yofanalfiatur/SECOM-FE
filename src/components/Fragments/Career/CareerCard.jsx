@@ -6,7 +6,7 @@ const CareerCard = ({ translationKey }) => {
   const t = useTranslations();
   const CareerCard = t.raw(translationKey);
   return (
-    <section className="cr-card">
+    <section className="flex flex-col relative cr-card">
       <div className="container mx-auto grid grid-cols-3 gap-4">
         {CareerCard.map((item, index) => (
           <div className="flex flex-col cr-card__item" key={index}>
