@@ -3032,5 +3032,79 @@
       "left": "44%",
       "href": "https://secomtr.com/"
     }
+  ],
+
+  "MenuServices": [
+    {
+      "text": "Security Consulting",
+      "href": "#1"
+    },
+    {
+      "text": "Monitoring & Response",
+      "href": "#2"
+    },
+    {
+      "text": "Security Guard",
+      "href": "#3"
+    }
+  ],
+
+  "MenuProducts": [
+    {
+      "text": "Alarm Monitoring",
+      "href": "#"
+    },
+    {
+      "text": "CCTV",
+      "href": "#"
+    },
+    {
+      "text": "Access Control",
+      "href": "#"
+    },
+    {
+      "text": "X-Ray",
+      "href": "#"
+    },
+    {
+      "text": "Automated External Defibrilator",
+      "href": "#"
+    },
+    {
+      "text": "Pedestrian Gate and Full Height Turnstile",
+      "href": "#"
+    },
+    {
+      "text": "Boom Gate, blocker, bollard and barrier",
+      "href": "#"
+    },
+    {
+      "text": "Key Management System",
+      "href": "#"
+    },
+    {
+      "text": "Perimeter Border Security",
+      "href": "#"
+    },
+    {
+      "text": "Walkthrought and handheld metal detector",
+      "href": "#"
+    },
+    {
+      "text": "Under Vehicle Surveilence System",
+      "href": "#"
+    },
+    {
+      "text": "Digital Guard Patrol",
+      "href": "#"
+    },
+    {
+      "text": "Elevator Control",
+      "href": "#"
+    },
+    {
+      "text": "Security Guard",
+      "href": "#"
+    }
   ]
 }

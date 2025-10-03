@@ -17,7 +17,7 @@ const AccordionItem = ({ index, isOpen, onToggle, question, answer }) => {
             dangerouslySetInnerHTML={{ __html: question }}
           />
           <svg
-            className={`transform transition-transform duration-300 ${
+            className={`transform transition-transform duration-300 min-w-[22px] ${
               isOpen ? "rotate-0" : "rotate-180"
             }`}
             width="22"

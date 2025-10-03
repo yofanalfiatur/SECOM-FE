@@ -6,6 +6,7 @@ import React from "react";
 const SolutionsLP = () => {
   return (
     <>
+      <HeaderAdditional translationKey="HeaderAdditional" />
       <BannerBasic translationKey="SolutionBanner" />
       <SolServices translationKey="SolutionServices" />
       <SolProduct

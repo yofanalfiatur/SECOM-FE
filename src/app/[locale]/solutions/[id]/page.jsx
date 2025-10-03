@@ -6,9 +6,9 @@ import AmHowWorks from "@/components/Fragments/Alarm/AmHowWorks";
 import AmReason from "@/components/Fragments/Alarm/AmReason";
 import OverviewGlobal from "@/components/Fragments/Global/OverviewGlobal";
 import SolDtHighlight from "@/components/Fragments/Solution-Detail/SolDtHighlight";
-import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import { useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
+import useIsDesktop from "@/components/Hooks/useIsDesktop";
 
 export default function SolutionDetailPage({ params }) {
   const t = useTranslations();
