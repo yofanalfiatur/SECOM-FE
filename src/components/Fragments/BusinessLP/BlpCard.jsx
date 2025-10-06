@@ -12,7 +12,7 @@ const BlpCard = ({ translationKey }) => {
     <section className="flex pt-0 lg:pt-16 pb-10 lg:pb-28 flex-col blp-card">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-5">
         {BlpCard.map((item, index) => (
-          <div className=" flex flex-col">
+          <div className=" flex flex-col" key={index}>
             <Image
               src={item.image}
               width={1000}

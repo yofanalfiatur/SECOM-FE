@@ -13,16 +13,36 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
 
   // state untuk tab yang dihover
   const [hoveredTab, setHoveredTab] = useState(null);
-
-  // fungsi helper untuk handle event sesuai device
   const handleTabEvent = (tabName) => {
     if (isDesktop) {
-      // di desktop: hanya set tab saat hover
       setHoveredTab(tabName);
     } else {
-      // di mobile: toggle tab saat klik
       setHoveredTab((prev) => (prev === tabName ? null : tabName));
     }
+  };
+
+  // state untuk submenu yang terbuka (mobile)
+  const [openSubmenus, setOpenSubmenus] = useState({
+    sectorService: false,
+    sectorProducts: false,
+    solutionsService: false,
+    solutionsProducts: false,
+  });
+  const toggleSubmenu = (submenuName) => {
+    if (!isDesktop) {
+      setOpenSubmenus((prev) => ({
+        ...prev,
+        [submenuName]: !prev[submenuName],
+      }));
+    }
+  };
+  const getSubmenuClass = (isOpen) => {
+    if (isDesktop) {
+      return "max-h-[1000px] opacity-100 visible";
+    }
+    return isOpen
+      ? "max-h-[1000px] opacity-100 visible"
+      : "max-h-0 opacity-0 invisible";
   };
 
   return (
@@ -60,9 +80,10 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
                 ></path>
               </svg>
             </div>
+
             {/* triangle */}
             <div
-              className={`absolute z-[1] w-[15px] h-[15px] border-t-[15px] border-navyblue border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent scale-[100%] transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] ${
+              className={`absolute z-[1] w-[15px] h-[15px] border-navyblue border-t-[10px] lg:border-t-[15px] border-l-[10px] lg:border-l-[15px] border-l-transparent border-r-[10px] lg:border-r-[15px] border-r-transparent scale-[100%] transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] ${
                 hoveredTab === "sector"
                   ? "opacity-100 visible top-full"
                   : "opacity-0 invisible top-[50%]"
@@ -96,9 +117,10 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
                 ></path>
               </svg>
             </div>
+
             {/* triangle */}
             <div
-              className={`absolute z-[1] w-[15px] h-[15px] border-t-[15px] border-navyblue border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent scale-[100%] transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] ${
+              className={`absolute z-[1] w-[15px] h-[15px] border-navyblue border-t-[10px] lg:border-t-[15px] border-l-[10px] lg:border-l-[15px] border-l-transparent border-r-[10px] lg:border-r-[15px] border-r-transparent scale-[100%] transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] ${
                 hoveredTab === "solutions"
                   ? "opacity-100 visible top-full"
                   : "opacity-0 invisible top-[50%]"
@@ -111,7 +133,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
 
         {/* tab content sector */}
         <div
-          className={`w-full h-[calc(100vh-98px)] lg:h-max flex flex-col bg-[#E6E9F5] absolute z-0 left-0 transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] ${
+          className={`w-full h-[calc(100vh-98px)] lg:h-max overflow-scroll lg:overflow-[unset] flex flex-col bg-[#E6E9F5] absolute z-0 left-0 transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] ${
             hoveredTab === "sector"
               ? "opacity-100 visible top-full"
               : "opacity-0 invisible top-[50%]"
@@ -119,7 +141,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
           onMouseEnter={() => isDesktop && handleTabEvent("sector")}
           onMouseLeave={() => isDesktop && setHoveredTab(null)}
         >
-          <div className="container mx-auto pt-10 lg:pt-9 header-add__content h-max lg:h-[300px] grid grid-cols-12 gap-y-4">
+          <div className="container mx-auto mt-9 lg:mt-0 mb-20 lg:mb-0 pt-0 lg:pt-9 header-add__content h-max lg:h-[300px] grid grid-cols-12 lg:gap-y-4">
             <div className="col-span-12 lg:col-span-2 flex flex-col max-h-max">
               <Link
                 href={locale === "en" ? "/en/sector" : "/sector"}
@@ -147,17 +169,44 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
                 </svg>
               </Link>
 
-              <p className="text-darkblue font-medium text-base mb-4 lg:mb-4">
-                {locale === "en" ? "Service" : "Layanan"}
-              </p>
-              <ul className="flex flex-col">
+              <div
+                className="flex flex-row items-center justify-between mb-4 toggle-submenu"
+                onClick={() => toggleSubmenu("sectorService")}
+              >
+                <p className="text-darkblue font-medium text-base">
+                  {locale === "en" ? "Service" : "Layanan"}
+                </p>
+                {!isDesktop && (
+                  <svg
+                    width="16"
+                    height="9"
+                    viewBox="0 0 16 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`transition-transform duration-300 ${
+                      openSubmenus.sectorService ? "rotate-180" : ""
+                    }`}
+                  >
+                    <path
+                      d="M8.49844 8.78745L15.8099 1.15003C15.9319 1.0226 16 0.853291 16 0.67723C16 0.50117 15.9319 0.331866 15.8099 0.204432L15.8016 0.196209C15.7424 0.134217 15.6712 0.0848551 15.5923 0.0511237C15.5133 0.0173922 15.4283 -2.81104e-06 15.3424 -2.80353e-06C15.2565 -2.79602e-06 15.1715 0.0173922 15.0925 0.0511237C15.0136 0.0848552 14.9424 0.134217 14.8832 0.196209L7.99862 7.38824L1.11681 0.19621C1.05764 0.134219 0.986417 0.0848564 0.907475 0.0511249C0.828532 0.0173935 0.74352 -1.52726e-06 0.65761 -1.51975e-06C0.5717 -1.51224e-06 0.486689 0.0173935 0.407746 0.051125C0.328803 0.0848564 0.25758 0.134219 0.198409 0.19621L0.190148 0.204433C0.0680916 0.331868 1.16436e-06 0.501172 1.17975e-06 0.677231C1.19514e-06 0.853292 0.0680916 1.0226 0.190148 1.15003L7.50156 8.78745C7.56586 8.85461 7.64319 8.90809 7.72887 8.94462C7.81455 8.98116 7.90679 9 8 9C8.09321 9 8.18546 8.98116 8.27113 8.94462C8.35681 8.90809 8.43415 8.85461 8.49844 8.78745Z"
+                      fill="#00529C"
+                    />
+                  </svg>
+                )}
+              </div>
+
+              <ul
+                className={`flex flex-col list-submenu transition-all duration-300 overflow-hidden ${getSubmenuClass(
+                  openSubmenus.sectorService || isDesktop
+                )}`}
+              >
                 {MenuServices.map((item, index) => (
                   <li className="flex flex-col" key={index}>
                     <Link
                       href={item.href}
                       className="flex flex-row max-w-max items-center mb-4 lg:mb-4 transition-all duration-200 ease group relative"
                     >
-                      <p className="text-darkblue text-sm transition-all duration-200 ease  group-hover:text-tosca">
+                      <p className="text-darkblue text-sm transition-all duration-200 ease group-hover:text-tosca">
                         {item.text}
                       </p>
                       <svg
@@ -174,7 +223,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
                           strokeWidth="1.5"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          className=" transition-all duration-200 ease group-hover:stroke-tosca"
+                          className="transition-all duration-200 ease group-hover:stroke-tosca"
                         />
                       </svg>
                     </Link>
@@ -182,18 +231,46 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
                 ))}
               </ul>
             </div>
+
             <div className="col-span-12 lg:col-span-10 flex flex-col max-h-max">
-              <p className="text-darkblue font-medium text-base mb-4 lg:mb-4">
-                {locale === "en" ? "Products" : "Produk"}
-              </p>
-              <ul className="w-full h-full flex flex-col flex-wrap lg:max-h-[165px]">
+              <div
+                className="flex flex-row items-center justify-between mb-4 toggle-submenu"
+                onClick={() => toggleSubmenu("sectorProducts")}
+              >
+                <p className="text-darkblue font-medium text-base">
+                  {locale === "en" ? "Products" : "Produk"}
+                </p>
+                {!isDesktop && (
+                  <svg
+                    width="16"
+                    height="9"
+                    viewBox="0 0 16 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`transition-transform duration-300 ${
+                      openSubmenus.sectorProducts ? "rotate-180" : ""
+                    }`}
+                  >
+                    <path
+                      d="M8.49844 8.78745L15.8099 1.15003C15.9319 1.0226 16 0.853291 16 0.67723C16 0.50117 15.9319 0.331866 15.8099 0.204432L15.8016 0.196209C15.7424 0.134217 15.6712 0.0848551 15.5923 0.0511237C15.5133 0.0173922 15.4283 -2.81104e-06 15.3424 -2.80353e-06C15.2565 -2.79602e-06 15.1715 0.0173922 15.0925 0.0511237C15.0136 0.0848552 14.9424 0.134217 14.8832 0.196209L7.99862 7.38824L1.11681 0.19621C1.05764 0.134219 0.986417 0.0848564 0.907475 0.0511249C0.828532 0.0173935 0.74352 -1.52726e-06 0.65761 -1.51975e-06C0.5717 -1.51224e-06 0.486689 0.0173935 0.407746 0.051125C0.328803 0.0848564 0.25758 0.134219 0.198409 0.19621L0.190148 0.204433C0.0680916 0.331868 1.16436e-06 0.501172 1.17975e-06 0.677231C1.19514e-06 0.853292 0.0680916 1.0226 0.190148 1.15003L7.50156 8.78745C7.56586 8.85461 7.64319 8.90809 7.72887 8.94462C7.81455 8.98116 7.90679 9 8 9C8.09321 9 8.18546 8.98116 8.27113 8.94462C8.35681 8.90809 8.43415 8.85461 8.49844 8.78745Z"
+                      fill="#00529C"
+                    />
+                  </svg>
+                )}
+              </div>
+
+              <ul
+                className={`w-full h-full flex flex-col flex-wrap lg:max-h-[165px] list-submenu transition-all duration-300 overflow-hidden ${getSubmenuClass(
+                  openSubmenus.sectorProducts || isDesktop
+                )}`}
+              >
                 {MenuProducts.map((item, index) => (
                   <li className="flex flex-col" key={index}>
                     <Link
                       href={item.href}
                       className="flex flex-row max-w-max items-center mb-4 lg:mb-4 transition-all duration-200 ease group relative"
                     >
-                      <p className="text-darkblue text-sm transition-all duration-200 ease  group-hover:text-tosca">
+                      <p className="text-darkblue text-sm transition-all duration-200 ease group-hover:text-tosca">
                         {item.text}
                       </p>
                       <svg
@@ -210,7 +287,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
                           strokeWidth="1.5"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          className=" transition-all duration-300 ease group-hover:stroke-tosca"
+                          className="transition-all duration-300 ease group-hover:stroke-tosca"
                         />
                       </svg>
                     </Link>
@@ -223,7 +300,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
 
         {/* tab content solution */}
         <div
-          className={`w-full h-[calc(100vh-98px)] lg:h-max flex flex-col bg-[#E6E9F5] absolute z-0 left-0 transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] ${
+          className={`w-full h-[calc(100vh-98px)] lg:h-max overflow-scroll lg:overflow-[unset] flex flex-col bg-[#E6E9F5] absolute z-0 left-0 transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] ${
             hoveredTab === "solutions"
               ? "opacity-100 visible top-full"
               : "opacity-0 invisible top-[50%]"
@@ -231,7 +308,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
           onMouseEnter={() => isDesktop && handleTabEvent("solutions")}
           onMouseLeave={() => isDesktop && setHoveredTab(null)}
         >
-          <div className="container mx-auto pt-10 lg:pt-9 header-add__content h-max lg:h-[300px] grid grid-cols-12 gap-y-4">
+          <div className="container mx-auto mt-9 lg:mt-0 mb-20 lg:mb-0 pt-0 lg:pt-9 header-add__content h-max lg:h-[300px] grid grid-cols-12 lg:gap-y-4">
             <div className="col-span-12 lg:col-span-2 flex flex-col max-h-max">
               <Link
                 href={locale === "en" ? "/en/solutions" : "/solutions"}
@@ -259,17 +336,44 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
                 </svg>
               </Link>
 
-              <p className="text-darkblue font-medium text-base mb-4 lg:mb-4">
-                {locale === "en" ? "Service" : "Layanan"}
-              </p>
-              <ul className="flex flex-col">
+              <div
+                className="flex flex-row items-center justify-between mb-4 toggle-submenu"
+                onClick={() => toggleSubmenu("solutionsService")}
+              >
+                <p className="text-darkblue font-medium text-base">
+                  {locale === "en" ? "Service" : "Layanan"}
+                </p>
+                {!isDesktop && (
+                  <svg
+                    width="16"
+                    height="9"
+                    viewBox="0 0 16 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`transition-transform duration-300 ${
+                      openSubmenus.solutionsService ? "rotate-180" : ""
+                    }`}
+                  >
+                    <path
+                      d="M8.49844 8.78745L15.8099 1.15003C15.9319 1.0226 16 0.853291 16 0.67723C16 0.50117 15.9319 0.331866 15.8099 0.204432L15.8016 0.196209C15.7424 0.134217 15.6712 0.0848551 15.5923 0.0511237C15.5133 0.0173922 15.4283 -2.81104e-06 15.3424 -2.80353e-06C15.2565 -2.79602e-06 15.1715 0.0173922 15.0925 0.0511237C15.0136 0.0848552 14.9424 0.134217 14.8832 0.196209L7.99862 7.38824L1.11681 0.19621C1.05764 0.134219 0.986417 0.0848564 0.907475 0.0511249C0.828532 0.0173935 0.74352 -1.52726e-06 0.65761 -1.51975e-06C0.5717 -1.51224e-06 0.486689 0.0173935 0.407746 0.051125C0.328803 0.0848564 0.25758 0.134219 0.198409 0.19621L0.190148 0.204433C0.0680916 0.331868 1.16436e-06 0.501172 1.17975e-06 0.677231C1.19514e-06 0.853292 0.0680916 1.0226 0.190148 1.15003L7.50156 8.78745C7.56586 8.85461 7.64319 8.90809 7.72887 8.94462C7.81455 8.98116 7.90679 9 8 9C8.09321 9 8.18546 8.98116 8.27113 8.94462C8.35681 8.90809 8.43415 8.85461 8.49844 8.78745Z"
+                      fill="#00529C"
+                    />
+                  </svg>
+                )}
+              </div>
+
+              <ul
+                className={`flex flex-col list-submenu transition-all duration-300 overflow-hidden ${getSubmenuClass(
+                  openSubmenus.solutionsService || isDesktop
+                )}`}
+              >
                 {MenuServices.map((item, index) => (
                   <li className="flex flex-col" key={index}>
                     <Link
                       href={item.href}
                       className="flex flex-row max-w-max items-center mb-4 lg:mb-4 transition-all duration-200 ease group relative"
                     >
-                      <p className="text-darkblue text-sm transition-all duration-200 ease  group-hover:text-tosca">
+                      <p className="text-darkblue text-sm transition-all duration-200 ease group-hover:text-tosca">
                         {item.text}
                       </p>
                       <svg
@@ -286,7 +390,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
                           strokeWidth="1.5"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          className=" transition-all duration-200 ease group-hover:stroke-tosca"
+                          className="transition-all duration-200 ease group-hover:stroke-tosca"
                         />
                       </svg>
                     </Link>
@@ -294,18 +398,46 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
                 ))}
               </ul>
             </div>
+
             <div className="col-span-12 lg:col-span-10 flex flex-col max-h-max">
-              <p className="text-darkblue font-medium text-base mb-4 lg:mb-4">
-                {locale === "en" ? "Products" : "Produk"}
-              </p>
-              <ul className="w-full h-full flex flex-col flex-wrap lg:max-h-[165px]">
+              <div
+                className="flex flex-row items-center justify-between mb-4 toggle-submenu"
+                onClick={() => toggleSubmenu("solutionsProducts")}
+              >
+                <p className="text-darkblue font-medium text-base">
+                  {locale === "en" ? "Products" : "Produk"}
+                </p>
+                {!isDesktop && (
+                  <svg
+                    width="16"
+                    height="9"
+                    viewBox="0 0 16 9"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`transition-transform duration-300 ${
+                      openSubmenus.solutionsProducts ? "rotate-180" : ""
+                    }`}
+                  >
+                    <path
+                      d="M8.49844 8.78745L15.8099 1.15003C15.9319 1.0226 16 0.853291 16 0.67723C16 0.50117 15.9319 0.331866 15.8099 0.204432L15.8016 0.196209C15.7424 0.134217 15.6712 0.0848551 15.5923 0.0511237C15.5133 0.0173922 15.4283 -2.81104e-06 15.3424 -2.80353e-06C15.2565 -2.79602e-06 15.1715 0.0173922 15.0925 0.0511237C15.0136 0.0848552 14.9424 0.134217 14.8832 0.196209L7.99862 7.38824L1.11681 0.19621C1.05764 0.134219 0.986417 0.0848564 0.907475 0.0511249C0.828532 0.0173935 0.74352 -1.52726e-06 0.65761 -1.51975e-06C0.5717 -1.51224e-06 0.486689 0.0173935 0.407746 0.051125C0.328803 0.0848564 0.25758 0.134219 0.198409 0.19621L0.190148 0.204433C0.0680916 0.331868 1.16436e-06 0.501172 1.17975e-06 0.677231C1.19514e-06 0.853292 0.0680916 1.0226 0.190148 1.15003L7.50156 8.78745C7.56586 8.85461 7.64319 8.90809 7.72887 8.94462C7.81455 8.98116 7.90679 9 8 9C8.09321 9 8.18546 8.98116 8.27113 8.94462C8.35681 8.90809 8.43415 8.85461 8.49844 8.78745Z"
+                      fill="#00529C"
+                    />
+                  </svg>
+                )}
+              </div>
+
+              <ul
+                className={`w-full h-full flex flex-col flex-wrap lg:max-h-[165px] list-submenu transition-all duration-300 overflow-hidden ${getSubmenuClass(
+                  openSubmenus.solutionsProducts || isDesktop
+                )}`}
+              >
                 {MenuProducts.map((item, index) => (
                   <li className="flex flex-col" key={index}>
                     <Link
                       href={item.href}
                       className="flex flex-row max-w-max items-center mb-4 lg:mb-4 transition-all duration-200 ease group relative"
                     >
-                      <p className="text-darkblue text-sm transition-all duration-200 ease  group-hover:text-tosca">
+                      <p className="text-darkblue text-sm transition-all duration-200 ease group-hover:text-tosca">
                         {item.text}
                       </p>
                       <svg
@@ -322,7 +454,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
                           strokeWidth="1.5"
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          className=" transition-all duration-300 ease group-hover:stroke-tosca"
+                          className="transition-all duration-300 ease group-hover:stroke-tosca"
                         />
                       </svg>
                     </Link>
