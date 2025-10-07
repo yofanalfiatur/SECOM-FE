@@ -38,20 +38,31 @@ const NewsLanding = () => {
     }).format(date);
   };
 
+  const [clickedFilter, setClickedFilter] = useState(null);
+
   return (
     <>
-      <section className="flex flex-col relative news-lp">
+      <section className="flex flex-col relative pt-10 lg:pt-0 overflow-hidden news-lp">
         <div className="container mx-auto flex flex-col lg:flex-row relative">
-          <div className="w-full h-max lg:w-3/12 flex flex-col relative lg:sticky lg:top-[120] lg:pr-10 lg:pt-10 lg:pb-20">
+          <div className="w-full h-max lg:w-3/12 flex flex-col relative lg:sticky lg:top-[120] lg:pr-10 lg:pt-10 pb-10 lg:pb-20">
             <p className="text-darkblue text-[30px] lg:text-[40px] font-raleway font-normal leading-[1] pb-4 lg:pb-6">
               {locale === "en" ? "Articles" : "Artikel"}
             </p>
-            <div className="flex flex-col gap-4 news-lp__filter">
-              <div className="flex flex-col relative news-lp__years">
+            <div className="flex flex-col gap-y-3 lg:gap-y-4 news-lp__filter">
+              <div
+                className={`flex flex-col relative news-lp__years ${
+                  clickedFilter === "archive" ? "z-[3]" : "z-0"
+                }`}
+              >
                 <button
                   name=""
                   id=""
-                  className="text-navyblue relative z-0 uppercase tracking-[3px] font-raleway text-sm lg:text-base rounded-[5px] px-4 py-[18px] appearance-none w-full border-[1px] border-[#00000033] news-lp__years"
+                  className="text-navyblue relative z-0 uppercase tracking-[3px] font-raleway text-xs lg:text-base rounded-[5px] px-4 py-[16px] appearance-none w-full border-[1px] border-[#00000033] text-start cursor-pointer news-lp__years"
+                  onClick={() =>
+                    setClickedFilter(
+                      clickedFilter === "archive" ? null : "archive"
+                    )
+                  }
                 >
                   {locale === "en" ? "Archive" : "Arsip"}
                 </button>
@@ -61,7 +72,9 @@ const NewsLanding = () => {
                   viewBox="0 0 22 15"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute z-0 right-4 top-1/2 transform -translate-y-1/2 rotate-180 pointer-events-none"
+                  className={`absolute z-0 right-4 top-1/2 transform -translate-y-1/2 pointer-events-none transition-all duration-300 ease scale-60 lg:scale-100 ${
+                    clickedFilter === "archive" ? "rotate-0" : "rotate-180"
+                  }`}
                 >
                   <path
                     d="M21.3765 12.0804L10.9045 0L0.432595 12.0804C0.148111 12.4096 -0.00740039 12.8514 0.000270989 13.3085C0.00794236 13.7656 0.178168 14.2005 0.473501 14.5177C0.768834 14.8349 1.16508 15.0083 1.57507 14.9997C1.98507 14.9911 2.37522 14.8014 2.6597 14.4721L10.9045 4.95578L19.1585 14.4721C19.443 14.8014 19.8331 14.9911 20.2431 14.9997C20.6531 15.0083 21.0493 14.8349 21.3447 14.5177C21.64 14.2005 21.8102 13.7656 21.8179 13.3085C21.8256 12.8514 21.6701 12.4096 21.3856 12.0804H21.3765Z"
@@ -69,7 +82,13 @@ const NewsLanding = () => {
                   />
                 </svg>
 
-                <ul className="flex flex-col absolute z-[2] transform top-full left-0 bg-white w-full border-[1px] border-[#00000033] rounded-[5px]">
+                <ul
+                  className={`flex flex-col absolute z-[2] transform top-full left-0 bg-white w-full h-auto border-[1px] border-[#00000033] rounded-[5px] cursor-pointer ease-[cubic-bezier(.2,1,.3,1)] duration-300 transition-all ${
+                    clickedFilter === "archive"
+                      ? "max-h-[2000px] opacity-100 visible"
+                      : "max-h-0 opacity-0 invisible"
+                  }`}
+                >
                   {NewsThumb.map((item, index) => (
                     <li
                       key={index}
@@ -82,11 +101,20 @@ const NewsLanding = () => {
                 </ul>
               </div>
 
-              <div className="flex flex-col relative news-lp__category">
+              <div
+                className={`flex flex-col relative news-lp__category ${
+                  clickedFilter === "category" ? "z-[3]" : "z-0"
+                }`}
+              >
                 <button
                   name=""
                   id=""
-                  className="text-navyblue relative z-0 uppercase tracking-[3px] font-raleway text-sm lg:text-base rounded-[5px] px-4 py-[18px] appearance-none w-full border-[1px] border-[#00000033] news-lp__years"
+                  className="text-navyblue relative z-0 uppercase tracking-[3px] font-raleway text-xs lg:text-base rounded-[5px] px-4 py-[16px] appearance-none w-full border-[1px] border-[#00000033] text-start cursor-pointer news-lp__years"
+                  onClick={() =>
+                    setClickedFilter(
+                      clickedFilter === "category" ? null : "category"
+                    )
+                  }
                 >
                   {locale === "en" ? "Category" : "Kategori"}
                 </button>
@@ -96,7 +124,9 @@ const NewsLanding = () => {
                   viewBox="0 0 22 15"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute z-0 right-4 top-1/2 transform -translate-y-1/2 rotate-180 pointer-events-none"
+                  className={`absolute z-0 right-4 top-1/2 transform -translate-y-1/2 pointer-events-none transition-all duration-300 ease scale-60 lg:scale-100 ${
+                    clickedFilter === "category" ? "rotate-0" : "rotate-180"
+                  }`}
                 >
                   <path
                     d="M21.3765 12.0804L10.9045 0L0.432595 12.0804C0.148111 12.4096 -0.00740039 12.8514 0.000270989 13.3085C0.00794236 13.7656 0.178168 14.2005 0.473501 14.5177C0.768834 14.8349 1.16508 15.0083 1.57507 14.9997C1.98507 14.9911 2.37522 14.8014 2.6597 14.4721L10.9045 4.95578L19.1585 14.4721C19.443 14.8014 19.8331 14.9911 20.2431 14.9997C20.6531 15.0083 21.0493 14.8349 21.3447 14.5177C21.64 14.2005 21.8102 13.7656 21.8179 13.3085C21.8256 12.8514 21.6701 12.4096 21.3856 12.0804H21.3765Z"
@@ -104,7 +134,13 @@ const NewsLanding = () => {
                   />
                 </svg>
 
-                <ul className="flex flex-col absolute z-[2] transform top-full left-0 bg-white w-full border-[1px] border-[#00000033] rounded-[5px]">
+                <ul
+                  className={`flex flex-col absolute z-[2] transform top-full left-0 bg-white w-full h-auto border-[1px] border-[#00000033] rounded-[5px] cursor-pointer ease-[cubic-bezier(.2,1,.3,1)] duration-300 transition-all ${
+                    clickedFilter === "category"
+                      ? "max-h-[2000px] opacity-100 visible"
+                      : "max-h-0 opacity-0 invisible"
+                  }`}
+                >
                   {NewsThumb.map((item, index) => (
                     <li
                       key={index}
@@ -119,7 +155,7 @@ const NewsLanding = () => {
             </div>
           </div>
 
-          <div className="w-full lg:w-9/12 flex flex-col border-l-[1px] border-[#13223333]">
+          <div className="w-full lg:w-9/12 flex flex-col lg:border-l-[1px] lg:border-[#13223333]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentPage}
@@ -132,10 +168,10 @@ const NewsLanding = () => {
                 {currentItems.map((item, index) => (
                   <div
                     key={index}
-                    className="flex flex-col lg:flex-row after:content-[''] after:absolute after:w-[calc(150%_+_(100vw-1320px+4rem)/2)] after:h-[1px] after:bottom-0 after:left-0 after:bg-[#13223333] after:z-[-1] relative lg:pl-16 lg:pb-16 lg:pt-16"
+                    className="flex flex-col lg:flex-row after:content-[''] after:absolute after:w-[calc(300%_+_(100vw-1320px+8rem)/2)] after:md:w-[calc(200%_+_(100vw-1320px+8rem)/2)] after:lg:w-[calc(150%_+_(100vw-1320px+4rem)/2)] after:h-[1px] after:bottom-0 after:left-[-50%] after:lg:left-0 after:bg-[#13223333] after:z-[-1] relative lg:pl-16 pb-9 lg:pb-16 lg:pt-16 mb-11 lg:mb-0"
                   >
                     {item.featuredImage && (
-                      <div className="w-full lg:w-4/12 flex flex-col news-item__wrap-image lg:pr-12">
+                      <div className="w-full lg:w-4/12 flex flex-col news-item__wrap-image px-8 pb-6 lg:px-0 lg:pb-0 lg:pr-12">
                         <Image
                           src={item.featuredImage}
                           alt={item.title}
@@ -149,23 +185,25 @@ const NewsLanding = () => {
 
                     <div className="w-full lg:w-full flex flex-col news-item__wrap-content">
                       <div className="flex flex-row max-w-max">
-                        <p className="text-darkblue lg:text-sm uppercase relative flex flex-row after:content-[''] after:bg-darkblue after:w-[1px] after:h-full after:mx-2 leading-[1]">
+                        <p className="text-darkblue text-[10px] lg:text-sm uppercase relative flex flex-row after:content-[''] after:bg-darkblue after:w-[1px] after:h-full after:mx-2 leading-[1]">
                           {item.category}
                         </p>
-                        <p className="text-darkblue lg:text-sm uppercase leading-[1]">
+                        <p className="text-darkblue text-[10px] lg:text-sm uppercase leading-[1]">
                           {formatDate(item.publishedDate, locale)}
                         </p>
                       </div>
                       <Link
                         href={`#detail`}
-                        className="text-darkblue text-lg lg:text-[25px] font-normal font-raleway transition-all ease duration-300 hover:text-navyblue mt-3 mb-1"
+                        className="text-darkblue text-[25px] leading-[1.3] font-normal font-raleway transition-all ease duration-300 hover:text-navyblue mt-3 mb-2 lg:mb-1"
                       >
                         {item.title}
                       </Link>
-                      <p className="text-darkblue lg:text-lg">{item.excerpt}</p>
+                      <p className="text-darkblue text-sm lg:text-lg leading-[1.7] lg:leading-[1.5]">
+                        {item.excerpt}
+                      </p>
                       <Link
                         href={`#detail`}
-                        className="flex flex-row max-w-max items-center gap-2 relative mt-5 mb-4 after:content-[''] after:absolute after:bg-navyblue after:w-0 after:h-[1px] after:left-0 after:bottom-0 after:z-[-1] hover:after:w-full hover:after:transition-all hover:after:ease-in-out hover:after:duration-300"
+                        className="flex flex-row max-w-max items-center gap-2 relative mt-5 lg:mb-4 after:content-[''] after:absolute after:bg-navyblue after:w-0 after:h-[1px] after:left-0 after:bottom-0 after:z-[-1] hover:after:w-full hover:after:transition-all hover:after:ease-in-out hover:after:duration-300"
                       >
                         <p className="flex flex-col text-navyblue uppercase tracking-[2px] text-sm lg:text-lg leading-[1.7] lg:leading-[1.5]">
                           {locale === "en" ? "Read more" : "Baca Selengkapnya"}
@@ -191,7 +229,7 @@ const NewsLanding = () => {
 
             {/* Pagination */}
             {totalPages > 1 && (
-              <div className="flex items-center mt-8 lg:mt-9 mb-3 lg:mb-9 gap-2 lg:gap-8 lg:pl-16">
+              <div className="flex justify-center lg:justify-start items-center mt-0 lg:mt-9 mb-6 lg:mb-9 gap-2 lg:gap-8 lg:pl-16">
                 {/* Prev */}
                 <button
                   onClick={() => handlePageChange(currentPage - 1)}
