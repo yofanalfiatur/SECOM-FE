@@ -2176,48 +2176,51 @@
     "desc": "Plura mihi bona sunt, inclinet, amari petere vellent. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae. Ab illo tempore, ab est sed immemorabili. Ambitioni dedisse scripsisse iudicaretur. Paullum deliquit, ponderibus modulisque suis ratio utitur. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Cras mattis iudicium purus",
     "image": "/img/temp/solutions/sol-bg-high.jpg"
   },
-  "CareerCard": [
-    {
-      "title": "",
-      "icon": "",
-      "image": "/img/temp/solutions/sol-bg-high.jpg"
-    },
-    {
-      "title": "2Curabitur blandit tempus ardua ridiculus sed magna.",
-      "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
-      "image": ""
-    },
-    {
-      "title": "3Curabitur blandit tempus ardua ridiculus sed magna.",
-      "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
-      "image": ""
-    },
-    {
-      "title": "4Prima luce, cum quibus mons aliud consensu ab eo.",
-      "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
-      "image": ""
-    },
-    {
-      "title": "5Curabitur blandit tempus ardua ridiculus sed magna.",
-      "icon": "",
-      "image": ""
-    },
-    {
-      "title": "",
-      "icon": "",
-      "image": "/img/temp/solutions/sol-bg-high.jpg"
-    },
-    {
-      "title": "5Prima luce, cum quibus mons aliud consensu ab eo.",
-      "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
-      "image": ""
-    },
-    {
-      "title": "",
-      "icon": "",
-      "image": "/img/temp/solutions/sol-bg-high.jpg"
-    }
-  ],
+  "CareerCard": {
+    "title": "Prima luce, cum quibus mons aliud consensu ab eo.",
+    "items": [
+      {
+        "title": "",
+        "icon": "",
+        "image": "/img/temp/solutions/sol-bg-high.jpg"
+      },
+      {
+        "title": "2Curabitur blandit tempus ardua ridiculus sed magna.",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "image": ""
+      },
+      {
+        "title": "3Curabitur blandit tempus ardua ridiculus sed magna.",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "image": ""
+      },
+      {
+        "title": "4Prima luce, cum quibus mons aliud consensu ab eo.",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "image": ""
+      },
+      {
+        "title": "5Curabitur blandit tempus ardua ridiculus sed magna.",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "image": ""
+      },
+      {
+        "title": "",
+        "icon": "",
+        "image": "/img/temp/solutions/sol-bg-high.jpg"
+      },
+      {
+        "title": "5Prima luce, cum quibus mons aliud consensu ab eo.",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "image": ""
+      },
+      {
+        "title": "",
+        "icon": "",
+        "image": "/img/temp/solutions/sol-bg-high.jpg"
+      }
+    ]
+  },
   "CareerVacancies": {
     "title": "Job Vacancies",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur."

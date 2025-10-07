@@ -31,10 +31,10 @@ const CareerVacancies = ({ translationKey, vacancies }) => {
   };
 
   return (
-    <section className="flex flex-col pt-10 lg:pt-20 pb-4 lg:pb-10 bg-[#E6F3FF] cr-vac">
+    <section className="flex flex-col pt-10 lg:pt-20 pb-6 lg:pb-10 bg-[#E6F3FF] cr-vac">
       <div className="container mx-auto flex flex-col lg:flex-row">
         {/* Intro */}
-        <div className="w-full lg:w-4/12 lg:pr-25 cr-vac__intro">
+        <div className="w-full lg:w-4/12 lg:pr-25 mb-5 lg:mb-0 cr-vac__intro">
           <h2 className="text-darkblue text-[30px] lg:text-[40px] font-raleway font-normal">
             {CareerVacancies.title}
           </h2>
@@ -52,19 +52,19 @@ const CareerVacancies = ({ translationKey, vacancies }) => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="grid grid-cols-2 gap-6"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6"
             >
               {currentItems.map((item, index) => (
                 <li
                   key={index}
-                  className="flex flex-col border-[1px] border-[#00000033] bg-white rounded-[5px] last:border-0"
+                  className="flex flex-col border-[1px] border-[#00000033] bg-white lg:rounded-[5px] last:border-0"
                 >
-                  <div className="flex flex-col border-b-[1px] px-5 pt-5 pb-3 border-[#00000033] gap-2">
+                  <div className="flex flex-col border-b-[1px] px-5 pt-5 pb-4 lg:pb-3 border-[#00000033] gap-2">
                     <div className="flex flex-row gap-3">
-                      <p className="text-darkblue text-sm leading-[1] bg-[#e6e6e6] flex flex-col items-center justify-center py-[7px] px-4 font-normal rounded-[5px]">
+                      <p className="text-darkblue text-xs leading-[1] bg-[#e6e6e6] flex flex-col items-center justify-center py-[7px] px-4 font-semibold lg:font-normal lg:rounded-[5px]">
                         {item.location}
                       </p>
-                      <p className="text-darkblue text-sm leading-[1] bg-[#e6e6e6] flex flex-col items-center justify-center py-[7px] px-4 font-normal rounded-[5px]">
+                      <p className="text-darkblue text-xs leading-[1] bg-[#e6e6e6] flex flex-col items-center justify-center py-[7px] px-4 font-semibold lg:font-normal lg:rounded-[5px]">
                         {item.type}
                       </p>
                     </div>
@@ -72,8 +72,8 @@ const CareerVacancies = ({ translationKey, vacancies }) => {
                       {item.title}
                     </p>
                   </div>
-                  <div className="flex flex-col px-5 pt-6 pb-7">
-                    <p className="text-darkblue text-sm lg:text-base leading-[1.7] lg:leading-[1.5] pb-6">
+                  <div className="flex flex-col px-5 pt-4 lg:pt-6 pb-6 lg:pb-7">
+                    <p className="text-darkblue text-base lg:text-base leading-[1.7] lg:leading-[1.5] pb-4 lg:pb-6">
                       {item.shortDesc}
                     </p>
                     <Link
@@ -105,7 +105,7 @@ const CareerVacancies = ({ translationKey, vacancies }) => {
 
           {/* Pagination */}
           {totalPages > 1 && (
-            <div className="flex items-center mt-8 lg:mt-11 gap-2 lg:gap-8">
+            <div className="flex justify-center lg:justify-start items-center mt-8 lg:mt-11 gap-2 lg:gap-8">
               {/* Prev */}
               <button
                 onClick={() => handlePageChange(currentPage - 1)}
