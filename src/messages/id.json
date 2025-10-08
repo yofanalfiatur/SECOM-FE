@@ -21,29 +21,14 @@
     {
       "icon": "/img/menu-type-1.svg",
       "text": "Bisnis",
-      "href": "",
-      "subMenu": [
-        {
-          "subMenuText": "SECOM Smart Security",
-          "subMenuHref": "/alarm"
-        }
-      ]
+      "href": "business",
+      "subMenu": ""
     },
     {
       "icon": "/img/menu-type-2.svg",
       "text": "Residensial",
-      "href": "",
-
-      "subMenu": [
-        {
-          "subMenuText": "Sekilas",
-          "subMenuHref": "/"
-        },
-        {
-          "subMenuText": "Solusi",
-          "subMenuHref": "/solutions"
-        }
-      ]
+      "href": "/residential",
+      "subMenu": ""
     }
   ],
   "MenuHeader": [
@@ -53,61 +38,62 @@
     },
     {
       "text": "Tentang",
-      "href": "/about",
+      "href": "#",
       "subMenu": [
         {
-          "subMenuText": "Alarm",
-          "subMenuHref": "/alarm"
+          "subMenuText": "Secom Indonesia",
+          "subMenuHref": "/about"
         },
         {
-          "subMenuText": "Our Team",
-          "subMenuHref": "/about/our-team"
-        },
-        {
-          "subMenuText": "Our Partners",
-          "subMenuHref": "/about/our-partners"
-        },
-        {
-          "subMenuText": "Thank You",
-          "subMenuHref": "/thankyou"
-        },
-        {
-          "subMenuText": "Error Page 404",
-          "subMenuHref": "/error"
+          "subMenuText": "Secom Worldwide",
+          "subMenuHref": "/about-world"
         }
       ]
     },
     {
       "text": "Articles",
-      "href": "/articles"
+      "href": "/news"
     }
   ],
   "MenuHeaderMd": [
     {
+      "text": "Beranda",
+      "href": "/",
+      "icon": "",
+      "subMenu": ""
+    },
+    {
       "text": "Bisnis",
       "href": "/#",
       "icon": "/img/menu-type-1.svg",
-      "subMenu": [
-        {
-          "subMenuText": "SECOM Smart Security",
-          "subMenuHref": "/alarm"
-        }
-      ]
+      "subMenu": ""
     },
     {
       "text": "Residensial",
       "href": "/#",
       "icon": "/img/menu-type-2.svg",
+      "subMenu": ""
+    },
+    {
+      "text": "Tentang",
+      "href": "#",
+      "icon": "",
       "subMenu": [
         {
-          "subMenuText": "Sekilas",
-          "subMenuHref": "/"
+          "subMenuText": "Secom Indonesia",
+          "subMenuHref": "/about"
         },
         {
-          "subMenuText": "Solusi",
-          "subMenuHref": "/solutions"
+          "subMenuText": "Secom Worldwide",
+          "subMenuHref": "/about-world"
         }
       ]
+    },
+    {
+      "text": "Articles",
+      "href": "/articles",
+      "icon": "",
+      "subMenu": ""
     }
   ],
   "HeaderButton": {

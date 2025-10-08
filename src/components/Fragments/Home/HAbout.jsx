@@ -1,3 +1,4 @@
+"use client";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useRef, useEffect } from "react";
