@@ -49,7 +49,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
     <section className="flex flex-col header-add sticky top-[60px] lg:top-[94px] z-[999]">
       <div className="flex flex-col relative">
         {/* tab list */}
-        <div className="bg-navyblue grid grid-cols-2 relative z-[1]">
+        <div className="bg-navyblue grid grid-cols-2 relative z-[100]">
           {/* tab sector */}
           <div className="flex flex-col justify-center items-center border-r-[1px] border-[#FFFFFF33] relative header-add__wrap-item">
             <div
@@ -83,7 +83,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
 
             {/* triangle */}
             <div
-              className={`absolute z-[1] w-[15px] h-[15px] border-navyblue border-t-[10px] lg:border-t-[15px] border-l-[10px] lg:border-l-[15px] border-l-transparent border-r-[10px] lg:border-r-[15px] border-r-transparent scale-[100%] transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] ${
+              className={`pointer-events-none absolute z-[1] w-[15px] h-[15px] border-navyblue border-t-[10px] lg:border-t-[15px] border-l-[10px] lg:border-l-[15px] border-l-transparent border-r-[10px] lg:border-r-[15px] border-r-transparent scale-[100%] transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] ${
                 hoveredTab === "sector"
                   ? "opacity-100 visible top-full"
                   : "opacity-0 invisible top-[50%]"
@@ -120,7 +120,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
 
             {/* triangle */}
             <div
-              className={`absolute z-[1] w-[15px] h-[15px] border-navyblue border-t-[10px] lg:border-t-[15px] border-l-[10px] lg:border-l-[15px] border-l-transparent border-r-[10px] lg:border-r-[15px] border-r-transparent scale-[100%] transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] ${
+              className={`pointer-events-none absolute z-[1] w-[15px] h-[15px] border-navyblue border-t-[10px] lg:border-t-[15px] border-l-[10px] lg:border-l-[15px] border-l-transparent border-r-[10px] lg:border-r-[15px] border-r-transparent scale-[100%] transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] ${
                 hoveredTab === "solutions"
                   ? "opacity-100 visible top-full"
                   : "opacity-0 invisible top-[50%]"
@@ -133,10 +133,10 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
 
         {/* tab content sector */}
         <div
-          className={`w-full h-[calc(100vh-98px)] lg:h-max overflow-scroll lg:overflow-[unset] flex flex-col bg-[#E6E9F5] absolute z-0 left-0 transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] ${
+          className={`w-full h-[calc(100vh-98px)] lg:h-max overflow-scroll lg:overflow-[unset] flex flex-col bg-[#E6E9F5] absolute left-0 transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] header-add__ct-wrap ${
             hoveredTab === "sector"
-              ? "opacity-100 visible top-full"
-              : "opacity-0 invisible top-[50%]"
+              ? "opacity-100 visible top-full z-[10] lg:max-h-[1000px]"
+              : "opacity-0 invisible top-[-50%] z-[-1] lg:max-h-[0px]"
           }`}
           onMouseEnter={() => isDesktop && handleTabEvent("sector")}
           onMouseLeave={() => isDesktop && setHoveredTab(null)}
@@ -300,10 +300,10 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
 
         {/* tab content solution */}
         <div
-          className={`w-full h-[calc(100vh-98px)] lg:h-max overflow-scroll lg:overflow-[unset] flex flex-col bg-[#E6E9F5] absolute z-0 left-0 transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] ${
+          className={`w-full h-[calc(100vh-98px)] lg:h-max overflow-scroll lg:overflow-[unset] flex flex-col bg-[#E6E9F5] absolute left-0 transition-all duration-300 ease-[cubic-bezier(.2,1,.3,1)] header-add__ct-wrap ${
             hoveredTab === "solutions"
-              ? "opacity-100 visible top-full"
-              : "opacity-0 invisible top-[50%]"
+              ? "opacity-100 visible top-full z-[10] lg:max-h-[1000px]"
+              : "opacity-0 invisible top-[-50%] z-[-1] lg:max-h-[0px]"
           }`}
           onMouseEnter={() => isDesktop && handleTabEvent("solutions")}
           onMouseLeave={() => isDesktop && setHoveredTab(null)}
