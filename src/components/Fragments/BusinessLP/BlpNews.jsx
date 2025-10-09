@@ -53,8 +53,11 @@ const BlpNews = ({ translationKey }) => {
                     {formatDate(featuredArticle.publishedDate, locale)}
                   </p>
                 </div>
-                <Link href={featuredArticle.slug}>
-                  <p className="text-white font-normal text-[30px] lg:text-[40px] leading-[1.3] lg:leading-[1.2] mt-2 mb-3 lg:mb-4">
+                <Link
+                  href={featuredArticle.slug}
+                  className="blp-news__link group"
+                >
+                  <p className="text-white font-normal text-[30px] lg:text-[40px] leading-[1.3] lg:leading-[1.2] mt-2 mb-3 lg:mb-4 transition-all duration-300 ease group-hover:text-tosca">
                     {featuredArticle.title}
                   </p>
                 </Link>
@@ -124,8 +127,8 @@ const BlpNews = ({ translationKey }) => {
                       {formatDate(item.publishedDate, locale)}
                     </p>
                   </div>
-                  <Link href={item.slug}>
-                    <p className="text-white font-normal text-[20px] lg:text-[30px] leading-[1.3] lg:leading-[1.2] mt-2 lg:mt-5">
+                  <Link href={item.slug} className="blp-news__link group">
+                    <p className="text-white font-normal text-[20px] lg:text-[30px] leading-[1.3] lg:leading-[1.2] mt-2 lg:mt-5 transition-all duration-300 ease group-hover:text-tosca">
                       {item.title}
                     </p>
                   </Link>

@@ -114,7 +114,7 @@ const HomeBanner = ({ translationKey }) => {
                 </SplideTrack>
               </Splide>
             </div>
-            <div className="w-full lg:w-4/12 pt-0 pb-10 lg:pt-9 lg:pb-9 lg:pl-8 h-banner__wrap-desc">
+            <div className="w-full lg:w-4/12 pt-0 pb-15 lg:pt-9 lg:pb-20 lg:pl-8 h-banner__wrap-desc">
               <Splide
                 ref={descSplideRef}
                 options={{

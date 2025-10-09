@@ -2,7 +2,7 @@
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const HeaderAdditional = ({ menuServices, menuProducts }) => {
   const t = useTranslations();
@@ -11,15 +11,58 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
   const MenuServices = t.raw(menuServices);
   const MenuProducts = t.raw(menuProducts);
 
-  // state untuk tab yang dihover
+  // scroll state
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrollDown, setIsScrollDown] = useState(false);
+
+  // Scroll effect header
+  useEffect(() => {
+    let lastScrollTop = 0;
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+
+      // scroll > 50px
+      setIsScrolled(scrollPosition > 50);
+
+      if (scrollPosition > 100 && scrollPosition > lastScrollTop) {
+        setIsScrollDown(true); // scroll down
+      } else {
+        setIsScrollDown(false); // scroll up
+      }
+
+      lastScrollTop = scrollPosition <= 0 ? 0 : scrollPosition;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const [hoveredTab, setHoveredTab] = useState(null);
   const handleTabEvent = (tabName) => {
     if (isDesktop) {
       setHoveredTab(tabName);
     } else {
-      setHoveredTab((prev) => (prev === tabName ? null : tabName));
+      // Toggle tab dan set overflow body
+      const newHoveredTab = hoveredTab === tabName ? null : tabName;
+      setHoveredTab(newHoveredTab);
+
+      // Set overflow hidden ketika tab dibuka di mobile
+      if (newHoveredTab !== null) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
     }
   };
+
+  // Tambahkan useEffect untuk cleanup ketika komponen unmount
+  useEffect(() => {
+    return () => {
+      // Reset overflow body ketika komponen unmount
+      document.body.style.overflow = "";
+    };
+  }, []);
 
   // state untuk submenu yang terbuka (mobile)
   const [openSubmenus, setOpenSubmenus] = useState({
@@ -46,7 +89,15 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
   };
 
   return (
-    <section className="flex flex-col header-add sticky top-[60px] lg:top-[94px] z-[999]">
+    <section
+      className={`flex flex-col header-add sticky top-[60px] lg:top-[94px] z-[999] transition-all duration-200 ease-[cubic-bezier(.2,1,.3,1)] 
+          ${isScrolled ? "header__scrolled" : ""}
+          ${
+            isScrollDown
+              ? "!top-[-62px] lg:!top-[-95px] header__scroll-down"
+              : ""
+          }`}
+    >
       <div className="flex flex-col relative">
         {/* tab list */}
         <div className="bg-navyblue grid grid-cols-2 relative z-[100]">

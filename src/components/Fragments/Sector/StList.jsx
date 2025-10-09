@@ -30,14 +30,14 @@ const SectorList = ({ translationKey }) => {
                 <li
                   key={item.id ?? index}
                   onClick={() => setActiveIndex(index)}
-                  className={`flex flex-col cursor-pointer px-4 border-l-[8px] transition-all duration-200 ease
+                  className={`flex flex-col cursor-pointer max-w-max px-4 border-l-[8px] transition-all duration-200 ease
                   ${
                     activeIndex === index
                       ? "border-tosca"
                       : "border-darkblue hover:border-tosca"
                   }`}
                 >
-                  <p className="text-white font-raleway font-normal text-[25px] lg:text-[30px] leading-[1.7]">
+                  <p className="text-white font-raleway font-normal text-[25px] lg:text-[30px] leading-[1.7] max-w-max">
                     {item.title}
                   </p>
                 </li>
