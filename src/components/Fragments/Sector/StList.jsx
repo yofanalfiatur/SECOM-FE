@@ -14,8 +14,12 @@ const SectorList = ({ translationKey }) => {
   const isDesktop = useIsDesktop();
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const handleChange = (e) => {
+    setActiveIndex(parseInt(e.target.value));
+  };
+
   return (
-    <section className="flex flex-col bg-darkblue st-list">
+    <section className="flex flex-col pb-9 lg:pb-0 bg-darkblue st-list">
       <div className="container mx-auto flex flex-col lg:flex-row relative">
         <div className="w-full lg:w-5/12 lg:border-r lg:border-[#FFFFFF80]">
           <div className="flex flex-col pt-11 pb-6 lg:pb-10 lg:pt-10 pr-0 lg:pr-20 relative after:absolute after:content-none after:lg:content-[''] after:w-[calc(150%_+_(100vw-1320px+4rem)/2)] after:h-[1px] after:bottom-0 after:right-0 after:bg-[#FFFFFF80] after:z-[1] ">
@@ -23,47 +27,48 @@ const SectorList = ({ translationKey }) => {
               {SectorList.title}
             </h2>
           </div>
+
           {/* Tab List */}
           {isDesktop ? (
+            // Tab list for desktop
             <ul className="flex flex-col gap-2 mt-4 lg:mt-12 mb-4 lg:mb-12 st-list__tab-list">
               {SectorList.items.map((item, index) => (
                 <li
                   key={item.id ?? index}
                   onClick={() => setActiveIndex(index)}
-                  className={`flex flex-col cursor-pointer max-w-max px-4 border-l-[8px] transition-all duration-200 ease
-                  ${
+                  className={`flex flex-col cursor-pointer max-w-max px-4 border-l-[8px] transition-all duration-200 ease ${
                     activeIndex === index
                       ? "border-tosca"
                       : "border-darkblue hover:border-tosca"
                   }`}
                 >
-                  <p className="text-white font-raleway font-normal text-[25px] lg:text-[30px] leading-[1.7] max-w-max">
+                  <p
+                    className={`font-raleway font-normal text-[25px] lg:text-[30px] leading-[1.7] max-w-max transition-all duration-200 ease ${
+                      activeIndex === index
+                        ? "text-white"
+                        : "text-[#FFFFFFB2] hover:text-white"
+                    }`}
+                  >
                     {item.title}
                   </p>
                 </li>
               ))}
             </ul>
           ) : (
+            // Tab list for mobile
             <div className="w-full h-max flex flex-col mb-4 lg:mb-0 relative st-list__tab-list-md-wrap">
               <select
-                name=""
-                id=""
-                className="w-full py-3 px-4 appearance-none text-white rounded-[5px] border-[1px] border-white"
+                value={activeIndex}
+                onChange={handleChange}
+                className="w-full py-3 px-4 appearance-none text-white rounded-[5px] border-[1px] border-white bg-transparent font-raleway text-[18px]"
               >
                 {SectorList.items.map((item, index) => (
                   <option
                     key={item.id ?? index}
-                    onClick={() => setActiveIndex(index)}
-                    className={`flex flex-col cursor-pointer px-4 border-l-[8px] transition-all duration-200 ease
-                        ${
-                          activeIndex === index
-                            ? "border-tosca"
-                            : "border-darkblue hover:border-tosca"
-                        }`}
+                    value={index}
+                    className="bg-darkblue text-white"
                   >
-                    <p className="text-white font-raleway font-normal text-[25px] lg:text-[30px] leading-[1.7]">
-                      {item.title}
-                    </p>
+                    {item.title}
                   </option>
                 ))}
               </select>
@@ -85,7 +90,7 @@ const SectorList = ({ translationKey }) => {
         </div>
 
         {/* Tab Content */}
-        <div className="w-full h-max lg:w-7/12 sticky top-[94px]">
+        <div className="w-full h-max lg:w-7/12 sticky top-[0px]">
           <AnimatePresence mode="wait">
             {SectorList.items[activeIndex] && (
               <motion.div
@@ -107,15 +112,30 @@ const SectorList = ({ translationKey }) => {
                 <p className="text-white text-[25px] lg:text-[35px] mt-4 lg:mt-6">
                   {SectorList.items[activeIndex].title}
                 </p>
-                <p className="text-white text-sm lg:text-[20px] mt-3 mb-6 leading-[1.3]">
+                <p className="text-white text-base lg:text-[20px] mt-3 mb-6 lg:leading-[1.3]">
                   {SectorList.items[activeIndex].desc}
                 </p>
                 <Link
                   href={SectorList.items[activeIndex].link}
                   target="_self"
-                  className="text-white text-sm lg:text-lg font-raleway uppercase tracking-[2px] max-w-max"
+                  className="text-white text-sm lg:text-lg font-raleway uppercase tracking-[2px] max-w-max flex flex-row gap-2 hover:gap-4 transition-all ease duration-300 items-center relative after:absolute after:content-[''] after:w-0 after:h-[1px] after:bg-white after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full"
                 >
-                  {locale === "en" ? "Learn More" : "Pelajari Lebih Lanjut"}
+                  <p>
+                    {locale === "en" ? "Learn More" : "Pelajari Lebih Lanjut"}
+                  </p>
+
+                  <svg
+                    width="12"
+                    height="11"
+                    viewBox="0 0 12 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.195 10.83L12 5.99998L7.195 1.16998C7.1516 1.11299 7.09647 1.066 7.03333 1.03217C6.9702 0.998342 6.90053 0.978476 6.82904 0.973915C6.75756 0.969354 6.68593 0.980205 6.61901 1.00573C6.55208 1.03126 6.49142 1.07087 6.44114 1.12188C6.39085 1.17289 6.35211 1.23411 6.32754 1.30139C6.30297 1.36867 6.29315 1.44045 6.29873 1.51186C6.30431 1.58327 6.32517 1.65265 6.35989 1.7153C6.39462 1.77795 6.4424 1.8324 6.5 1.87498L10.095 5.49998L0.53 5.49998C0.397391 5.49998 0.270215 5.55266 0.176447 5.64643C0.0826786 5.74019 0.0299995 5.86737 0.0299995 5.99998C0.0299995 6.13259 0.0826786 6.25977 0.176447 6.35353C0.270215 6.4473 0.397391 6.49998 0.529999 6.49998L10.095 6.49998L6.5 10.125C6.40651 10.2191 6.35425 10.3466 6.35472 10.4792C6.35519 10.6119 6.40835 10.739 6.5025 10.8325C6.59665 10.926 6.72409 10.9782 6.85677 10.9778C6.98945 10.9773 7.11651 10.9241 7.21 10.83L7.195 10.83Z"
+                      fill="white"
+                    />
+                  </svg>
                 </Link>
               </motion.div>
             )}
