@@ -21,7 +21,7 @@ const HomeValue = ({ translationKey }) => {
             {HValue.items.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center gap-4 lg:gap-8 px-6 lg:px-0"
+                className="flex flex-col items-center lg:items-start gap-4 lg:gap-8 px-6 lg:px-0"
               >
                 <Image
                   src={item.icon}
