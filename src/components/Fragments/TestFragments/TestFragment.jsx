@@ -62,7 +62,9 @@ const TestFragment = ({ data }) => {
               <SplideSlide key={index}>
                 <div className="relative w-full h-full h-banner__slide">
                   <img
-                    src={`https://api.secom.madebystucel.com/storage/${item.image}`}
+                    src={`${process.env.NEXT_PUBLIC_STORAGE_URL}${
+                      isDesktop ? item.image_desktop : item.image_mobile
+                    }`}
                     alt={item.title || `Banner ${index + 1}`}
                     className="object-cover w-full h-full"
                   />

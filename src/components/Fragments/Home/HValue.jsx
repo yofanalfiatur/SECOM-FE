@@ -17,7 +17,7 @@ const HomeValue = ({ translationKey }) => {
           <h2 className="text-navyblue text-[30px] lg:text-[45px] leading-[1.4] font-raleway font-medium mb-8 lg:mb-20">
             {HValue.title}
           </h2>
-          <div className="flex flex-col md:flex-row gap-8 lg:gap-3">
+          <div className="flex flex-col md:flex-row gap-8 lg:gap-5">
             {HValue.items.map((item, index) => (
               <div
                 key={index}
