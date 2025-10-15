@@ -1,9 +1,8 @@
 "use client";
-import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
-import { useRef, useEffect } from "react";
+
+import { useEffect } from "react";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import ButtonPrimary from "@/components/Elements/ButtonPrimary";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
