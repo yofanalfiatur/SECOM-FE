@@ -4,17 +4,17 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useRef, useEffect } from "react";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import ButtonPrimary from "@/components/Elements/ButtonPrimary";
+import Image from "next/image";
 
-const HomeBanner = ({ translationKey }) => {
-  const t = useTranslations();
-  const HBanner = t.raw(translationKey);
+const HomeBanner = ({ dataSection }) => {
   const isDesktop = useIsDesktop();
 
   const mainSplideRef = useRef(null);
   const titleSplideRef = useRef(null);
   const descSplideRef = useRef(null);
+  const locale = useLocale();
 
   useEffect(() => {
     // Sync all splides
@@ -59,14 +59,23 @@ const HomeBanner = ({ translationKey }) => {
             hasTrack={false}
           >
             <SplideTrack>
-              {HBanner.map((item, index) => (
+              {dataSection.map((item, index) => (
                 <SplideSlide key={index}>
                   <div className=" relative w-full h-full h-banner__slide">
-                    <img
-                      src={isDesktop ? item.bgDesktop : item.bgMobile}
-                      alt={`Banner ${index + 1}`}
-                      className="object-cover w-full h-full"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1024px)"
+                        srcSet={`${process.env.NEXT_PUBLIC_STORAGE_URL}${item.image_desktop}`}
+                      />
+                      <Image
+                        src={`${process.env.NEXT_PUBLIC_STORAGE_URL}${item.image_mobile}`}
+                        quality={100}
+                        width={2000}
+                        height={1000}
+                        alt={`Banner ${index + 1}`}
+                        className="object-cover w-full h-full"
+                      />
+                    </picture>
                   </div>
                 </SplideSlide>
               ))}
@@ -93,19 +102,19 @@ const HomeBanner = ({ translationKey }) => {
                 hasTrack={false}
               >
                 <SplideTrack className="h-full">
-                  {HBanner.map((item, index) => (
+                  {dataSection.map((item, index) => (
                     <SplideSlide key={index} className="w-full h-full">
                       <div className="w-full h-full flex flex-col">
                         <p className="text-white text-[30px] lg:text-[45px] font-raleway font-normal lg:mb-2 leading-[1.3]">
                           {item.title}
                         </p>
-                        {item.href !== null && item.btnCTA && (
+                        {item.button_link && (
                           <ButtonPrimary
-                            href={item.btnCTA.href}
-                            target={item.btnCTA.target}
+                            href={item.button_link}
+                            target="_self"
                             className="mt-2 hidden lg:flex"
                           >
-                            {item.btnCTA.text}
+                            {locale === "en" ? "LEARN MORE" : "SELENGKAPNYA"}
                           </ButtonPrimary>
                         )}
                       </div>
@@ -131,11 +140,11 @@ const HomeBanner = ({ translationKey }) => {
                 hasTrack={false}
               >
                 <SplideTrack>
-                  {HBanner.map((item, index) => (
+                  {dataSection.map((item, index) => (
                     <SplideSlide key={index}>
                       <div className="">
                         <p className="text-sm lg:text-lg text-white leading-[1.7] lg:leading-[1.5]">
-                          {item.desc}
+                          {item.description}
                         </p>
                       </div>
                     </SplideSlide>

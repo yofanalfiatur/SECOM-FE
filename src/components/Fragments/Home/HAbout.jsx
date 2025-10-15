@@ -10,9 +10,7 @@ import Image from "next/image";
 import "glightbox/dist/css/glightbox.min.css";
 import BackgroundDots from "@/components/Elements/BackgroundDots";
 
-const HomeAbout = ({ translationKey }) => {
-  const t = useTranslations();
-  const HAbout = t.raw(translationKey);
+const HomeAbout = ({ dataSection }) => {
   const isDesktop = useIsDesktop();
   const locale = useLocale();
 
@@ -49,31 +47,28 @@ const HomeAbout = ({ translationKey }) => {
           dotsY={isDesktop ? 35 : 35}
         />
         <div className="container relative z-1 mx-auto flex flex-row flex-wrap items-center justify-between lg:gap-y-5">
-          <div className="flex flex-col justify-center w-full lg:w-8/12 mb-8 lg:mb-[unset] lg:pr-60">
+          <div className="flex flex-col justify-center w-full lg:w-8/12 mb-8 lg:mb-[unset] lg:pr-60 bg-white/40">
             <h2 className="text-[35px] lg:text-6xl font-raleway leading-[1.3] lg:leading-[1.4] font-medium text-navyblue">
-              {HAbout.title}
+              {dataSection.title}
             </h2>
-            <p className="text-sm lg:text-lg mt-3 mb-2">{HAbout.desc}</p>
+            <p className="text-sm lg:text-lg mt-3 mb-2">
+              {dataSection.description}
+            </p>
             <ButtonPrimary
-              href={HAbout.btnCTA.href}
-              target={HAbout.btnCTA.target}
+              href={dataSection.button_link}
+              target="_self"
               className="mt-4"
             >
-              {HAbout.btnCTA.text}
+              {dataSection.button_text}
             </ButtonPrimary>
           </div>
           <div className="flex flex-col w-[48%] lg:w-4/12">
             <Link
-              href={HAbout.linkVideo}
+              href={dataSection.video_profile}
               className="glightbox w-full h-full relative flex flex-col justify-center items-center after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-tosca after:opacity-60 group"
             >
               <Image
-                src={
-                  HAbout.thumb && HAbout.thumb.trim() !== ""
-                    ? HAbout.thumb
-                    : "/img/thumb-default-blue.jpg"
-                }
-                // src={HAbout.thumb}
+                src={`${process.env.NEXT_PUBLIC_STORAGE_URL}${dataSection.image_thumbnail}`}
                 width={600}
                 height={600}
                 quality={100}
@@ -91,7 +86,9 @@ const HomeAbout = ({ translationKey }) => {
           </div>
           <div className="flex flex-col w-full lg:w-8/12 order-1 lg:order-[unset] mt-4 lg:mt-[unset] mb-3 lg:mb-[unset]">
             <Image
-              src={HAbout.image}
+              src={
+                process.env.NEXT_PUBLIC_STORAGE_URL + dataSection.image_large
+              }
               width={1600}
               height={1000}
               quality={100}
@@ -100,7 +97,9 @@ const HomeAbout = ({ translationKey }) => {
           </div>
           <div className="flex flex-col w-[48%] lg:w-4/12 ">
             <Image
-              src={HAbout.image2}
+              src={
+                process.env.NEXT_PUBLIC_STORAGE_URL + dataSection.image_small
+              }
               width={1600}
               height={1000}
               quality={100}

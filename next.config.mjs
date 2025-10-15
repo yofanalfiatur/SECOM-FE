@@ -16,6 +16,10 @@ const nextConfig = {
     workerThreads: false,
     cpus: 2,
   },
+
+  images: {
+    domains: ["api.secom.madebystucel.com"],
+  },
 };
 
 export default withNextIntl(nextConfig);
