@@ -48,7 +48,7 @@ const SliderBasic = ({ items, linkLabel }) => {
                 {/* Image */}
                 <div className="flex flex-col w-full">
                   <Image
-                    src={item.image}
+                    src={process.env.NEXT_PUBLIC_STORAGE_URL + item.image}
                     alt={`trusted-${index}`}
                     width={420}
                     height={291}
@@ -63,11 +63,13 @@ const SliderBasic = ({ items, linkLabel }) => {
                     {item.title}
                   </p>
                   <p className="text-darkblue text-sm lg:text-base font-normal">
-                    {item.desc}
+                    {item.description}
                   </p>
 
                   <Link
-                    href={item.link}
+                    //temp
+                    // href={item.link}
+                    href={"#"}
                     className="uppercase text-sm lg:text-lg text-tosca font-raleway tracking-[2px] max-w-max flex pt-2 lg:pt-5 mt-auto flex-row transition-all duration-200 ease items-center gap-2 hover:gap-3 relative after:content-[''] after:w-0 after:h-[1px] after:absolute after:bottom-0 after:bg-tosca after:transition-all after:ease after:duration-200 hover:after:w-full card-slider-basic__link"
                     target="_self"
                   >

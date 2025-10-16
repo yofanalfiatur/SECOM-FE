@@ -4,9 +4,7 @@ import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const AbWorldRnD = ({ translationKey }) => {
-  const t = useTranslations();
-  const AbWorldRnd = t.raw(translationKey);
+const AbWorldRnD = ({ dataSection }) => {
   const isDesktop = useIsDesktop();
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -17,10 +15,12 @@ const AbWorldRnD = ({ translationKey }) => {
         {/* LEFT SIDE */}
         <div className="w-full flex flex-col lg:pr-4">
           <p className="text-darkblue uppercase tracking-[3px] lg:text-xl">
-            {AbWorldRnd.subtitle}
+            {dataSection.subtitle}
+            lorem ipsum subtitle
           </p>
           <h2 className="text-darkblue font-raleway font-medium text-[30px] lg:text-[45px] leading-[1.3] lg:leading-[1.2] mt-3 mb-5">
-            {AbWorldRnd.title}
+            {dataSection.title}
+            Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum
           </h2>
 
           {/* Dropdown (Mobile Only) */}
@@ -31,7 +31,7 @@ const AbWorldRnD = ({ translationKey }) => {
                 value={activeIndex}
                 onChange={(e) => setActiveIndex(Number(e.target.value))}
               >
-                {AbWorldRnd.items.map((item, index) => (
+                {dataSection.tabs.map((item, index) => (
                   <option key={index} value={index}>
                     {item.title}
                   </option>
@@ -42,7 +42,7 @@ const AbWorldRnD = ({ translationKey }) => {
 
           {/* Tab List */}
           <div className="flex flex-col lg:pr-6">
-            {AbWorldRnd.items.map((item, index) => {
+            {dataSection.tabs.map((item, index) => {
               const isActive = activeIndex === index;
 
               return (
@@ -73,7 +73,7 @@ const AbWorldRnD = ({ translationKey }) => {
                     </button>
                   ) : (
                     <Image
-                      src={item.image}
+                      src={process.env.NEXT_PUBLIC_STORAGE_URL + item.image}
                       width={1000}
                       height={1000}
                       alt={item.title}
@@ -88,7 +88,7 @@ const AbWorldRnD = ({ translationKey }) => {
                       ${
                         isActive ? "pt-4 pb-4 lg:max-h-[1000px]" : "lg:max-h-0"
                       }`}
-                    dangerouslySetInnerHTML={{ __html: item.desc }}
+                    dangerouslySetInnerHTML={{ __html: item.description }}
                   />
                 </div>
               );
@@ -99,7 +99,7 @@ const AbWorldRnD = ({ translationKey }) => {
         {/* RIGHT SIDE (Desktop Only) */}
         {isDesktop && (
           <div className="w-full flex flex-col relative">
-            {AbWorldRnd.items.map((item, index) => (
+            {dataSection.tabs.map((item, index) => (
               <div
                 key={index}
                 className={`absolute top-0 left-0 w-full h-full transition-all duration-500 ease
@@ -110,7 +110,7 @@ const AbWorldRnD = ({ translationKey }) => {
                   }`}
               >
                 <Image
-                  src={item.image}
+                  src={process.env.NEXT_PUBLIC_STORAGE_URL + item.image}
                   width={1000}
                   height={1000}
                   alt={item.title}
