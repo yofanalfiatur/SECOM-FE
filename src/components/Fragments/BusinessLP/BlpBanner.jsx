@@ -2,19 +2,17 @@
 
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import { useRef, useEffect, use } from "react";
+import { useRef, useEffect } from "react";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const BlpBanner = ({ translationKey }) => {
-  const t = useTranslations();
-  const BlpBanner = t.raw(translationKey);
+const BlpBanner = ({ dataSection }) => {
   const isDesktop = useIsDesktop();
 
-  // Refs untuk kedua slider
   const mainSliderRef = useRef(null);
   const contentSliderRef = useRef(null);
+
+  const isLoop = dataSection.length > 1;
 
   useEffect(() => {
     if (mainSliderRef.current && contentSliderRef.current) {
@@ -35,52 +33,57 @@ const BlpBanner = ({ translationKey }) => {
 
   return (
     <section className="h-max flex flex-col overflow-hidden relative bg-navyblue lg:bg-[unset] blp-banner">
+      {/* Background Slider */}
       <div className="w-full lg:h-full blp-banner__wrap-slider__bg">
         <Splide
           ref={mainSliderRef}
           options={{
-            type: "loop",
+            type: isLoop ? "loop" : "slide",
             perPage: 1,
             perMove: 1,
             pagination: false,
             arrows: false,
-            autoplay: false,
+            autoplay: isLoop,
             interval: 5000,
+            drag: isLoop, // disable drag kalau cuma 1
           }}
           className="w-full h-full blp-banner__slider-bg"
         >
-          {BlpBanner.map((item, index) => (
+          {dataSection.map((item, index) => (
             <SplideSlide key={index} className="w-full h-full flex flex-col">
               <Image
                 width={1920}
                 height={1000}
                 quality={100}
-                src={isDesktop ? item.bgDesktop : item.bgMobile}
+                src={`${process.env.NEXT_PUBLIC_STORAGE_URL}${item.background_image_desktop}`}
                 alt=""
-                className="w-full h-full aspect-[320/181] lg:aspect-[1980/880] lg:flex object-cover"
+                className="w-full h-full aspect-[320/181] lg:aspect-[1980/880] object-cover"
               />
             </SplideSlide>
           ))}
         </Splide>
       </div>
+
+      {/* Content Slider */}
       <div className="relative lg:absolute w-full h-full flex flex-col justify-center lg:top-0 lg:left-0">
         <div className="container mx-auto mb-[100px] lg:mb-[50px] flex flex-col">
           <div className="w-full lg:w-[35%] flex flex-col blp-banner__wrap-slider">
             <Splide
               ref={contentSliderRef}
               options={{
-                type: "loop",
+                type: isLoop ? "loop" : "slide",
                 perPage: 1,
                 perMove: 1,
                 height: "100%",
-                pagination: true,
+                pagination: isLoop,
                 arrows: false,
+                drag: isLoop,
               }}
               className="w-full h-full blp-banner__slider relative z-[1]"
               hasTrack={false}
             >
               <SplideTrack>
-                {BlpBanner.map((item, index) => (
+                {dataSection.map((item, index) => (
                   <SplideSlide
                     key={index}
                     className="w-full flex flex-col bg-navyblue"
@@ -90,7 +93,7 @@ const BlpBanner = ({ translationKey }) => {
                         {item.title}
                       </p>
                       <p className="text-white text-sm lg:text-lg leading-[1.7] lg:leading-[1.5] mt-2 lg:mt-0 mb-4 lg:mb-0">
-                        {item.desc}
+                        {item.description}
                       </p>
                     </div>
                   </SplideSlide>

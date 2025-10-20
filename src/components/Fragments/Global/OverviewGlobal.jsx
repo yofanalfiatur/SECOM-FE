@@ -1,12 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 
-const OverviewGlobal = ({ translationKey, className }) => {
-  const t = useTranslations();
-  const OverviewGlobal = t.raw(translationKey);
-
+const OverviewGlobal = (props) => {
+  const { dataSection, className } = props;
   useEffect(() => {
     const boldElements = document.querySelectorAll(
       ".am-value__desc b, .am-value__desc strong"
@@ -41,23 +38,23 @@ const OverviewGlobal = ({ translationKey, className }) => {
       <div className="container mx-auto flex flex-col gap-6 lg:gap-9">
         <div
           className="w-full lg:w-10/12 text-xl lg:text-[45px] text-start lg:text-center font-medium self-center font-raleway am-value__desc text-darkblue"
-          dangerouslySetInnerHTML={{ __html: OverviewGlobal.desc }}
+          dangerouslySetInnerHTML={{ __html: dataSection.desc }}
         />
-        {OverviewGlobal.items && OverviewGlobal.items.length > 0 && (
+        {dataSection.items && (
           <ul className="flex flex-col lg:flex-row gap-6 lg:gap-35 justify-center">
-            {OverviewGlobal.items.map((item, index) => (
+            {dataSection.items.map((item, index) => (
               <li
                 key={index}
                 className="flex flex-row gap-6 items-center w-full lg:w-max"
               >
                 <Image
-                  src={item.icon}
-                  alt={item.title}
+                  src={process.env.NEXT_PUBLIC_STORAGE_URL + item.logo}
+                  alt={item.text}
                   width={55}
                   height={52}
                   className="w-[44px] lg:w-[55px] lg:h-auto"
                 />
-                <p className="text-sm lg:text-xl">{item.title}</p>
+                <p className="text-sm lg:text-xl">{item.text}</p>
               </li>
             ))}
           </ul>

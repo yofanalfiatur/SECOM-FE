@@ -7,31 +7,30 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
-const ResBannerImage = () => {
-  const t = useTranslations();
-  const ReBanner = t.raw("ReBanner");
-
+const ResBannerImage = ({ dataSection }) => {
   const isDesktop = useIsDesktop();
   return (
     <>
       <section className="h-max w-screen bg-center res-bg-img">
-        <div className="">
-          <Image
-            src={ReBanner.bgImage}
-            alt="Residential Banner"
-            width={1980}
-            height={880}
-            sizes="100vw"
-            className="w-full h-auto hidden aspect-[1980/880] lg:flex object-cover"
-          />
-          <Image
-            src={ReBanner.bgImageMd}
-            alt="Residential Banner"
-            width={1000}
-            height={1200}
-            sizes="100vw"
-            className="w-full h-full flex lg:hidden"
-          />
+        <div className="flex flex-col">
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcSet={`${process.env.NEXT_PUBLIC_STORAGE_URL}${dataSection.background_image_desktop}`}
+            />
+            <Image
+              src={
+                process.env.NEXT_PUBLIC_STORAGE_URL +
+                dataSection.background_image_mobile
+              }
+              alt="Residential Banner"
+              width={1000}
+              height={1200}
+              quality={100}
+              sizes="100vw"
+              className="w-full h-full lg:h-auto lg:aspect-[1980/880] flex object-cover"
+            />
+          </picture>
         </div>
       </section>
       {!isDesktop && (
@@ -85,11 +84,14 @@ const ResBannerImage = () => {
                 </button>
               </div>
               <SplideTrack className="">
-                {ReBanner.items.map((item, index) => (
+                {dataSection.slides.map((item, index) => (
                   <SplideSlide key={index}>
                     <div className="w-full h-full flex flex-col items-center px-10">
                       <Image
-                        src={item.icon}
+                        src={
+                          process.env.NEXT_PUBLIC_STORAGE_URL +
+                          item.photo_circle
+                        }
                         alt={`Banner Item ${index + 1}`}
                         width={55}
                         height={55}

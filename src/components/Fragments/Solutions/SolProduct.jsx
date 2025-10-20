@@ -7,10 +7,10 @@ import { useTranslations } from "next-intl";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import CardProduct from "@/components/Elements/CardProduct";
 
-const SolProduct = ({ translationKey, listProducts }) => {
+const SolProduct = (props) => {
+  const { dataSection, listProducts } = props;
   const t = useTranslations();
   const ProductDetails = t.raw(listProducts);
-  const SolProduct = t.raw(translationKey);
   const isDesktop = useIsDesktop();
   const locale = useLocale();
 
@@ -20,10 +20,10 @@ const SolProduct = ({ translationKey, listProducts }) => {
         <div className="flex flex-col lg:flex-row sol-product__intro">
           <div className="w-full lg:w-8/12 lg:pr-20">
             <h2 className="text-white text-[30px] lg:text-[40px] font-raleway font-normal ">
-              {SolProduct.title}
+              {dataSection.title_section}
             </h2>
             <p className="text-white text-sm lg:text-lg leading-[1.7] lg:leading-[1.5] mt-2 mb-5 lg:mb-14">
-              {SolProduct.desc}
+              {dataSection.description_section}
             </p>
           </div>
           <div className="w-full lg:w-4/12 lg:pl-3 ">

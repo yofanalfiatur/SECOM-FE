@@ -4,11 +4,7 @@ import { useTranslations } from "next-intl";
 import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const AmHowWorks = ({ translationKey }) => {
-  const isDesktop = useIsDesktop();
-  const t = useTranslations();
-  const AlarmReason = t.raw(translationKey);
-
+const AmHowWorks = ({ dataSection }) => {
   // State untuk menyimpan opacity setiap card
   const [cardOpacities, setCardOpacities] = useState([]);
 
@@ -16,11 +12,15 @@ const AmHowWorks = ({ translationKey }) => {
     <section className="am-how relative">
       {/* Background Sticky */}
       <div className="relative">
-        {AlarmReason.items.map((item, index) => (
+        {dataSection.items.map((item, index) => (
           <motion.div
             key={index}
-            className="h-[calc(100vh)] w-screen bg-cover bg-center bg-no-repeat sticky top-[94px] am-how__bg-img"
-            style={{ backgroundImage: `url(${item.image})` }}
+            className="h-[calc(100vh)] w-screen bg-cover bg-center bg-no-repeat sticky top-[0px] am-how__bg-img"
+            style={{
+              backgroundImage: `url(${
+                process.env.NEXT_PUBLIC_STORAGE_URL + item.image
+              })`,
+            }}
           />
         ))}
       </div>
@@ -29,7 +29,7 @@ const AmHowWorks = ({ translationKey }) => {
       <div className="absolute top-0 left-0 w-full h-full flex z-10 pointer-events-none am-how__wrap-card">
         <div className="container mx-auto pointer-events-auto flex flex-col items-end">
           <div className="w-5/12 flex flex-col gap-4">
-            {AlarmReason.items.map((item, index) => {
+            {dataSection.items.map((item, index) => {
               const cardRef = useRef(null);
               const [isSticky, setIsSticky] = useState(false);
 
@@ -124,13 +124,13 @@ const AmHowWorks = ({ translationKey }) => {
                 >
                   <div className="bg-navyblue py-10 px-7 lg:py-8 lg:px-10 flex flex-col justify-center shadow-lg h-[45vh] am-how__card__content">
                     <p className="text-[#ffffff99] uppercase text-sm lg:text-lg tracking-[2px] font-raleway mb-3 lg:mb-4">
-                      {AlarmReason.title}
+                      {dataSection.title}
                     </p>
                     <p className="text-[25px] lg:text-[45px] font-raleway font-normal text-white lg:leading-[1.1]">
                       {item.title}
                     </p>
                     <p className="leading-[1.7] lg:leading-[1.5] lg:text-lg text-white opacity-80 mt-3">
-                      {item.desc}
+                      {item.description}
                     </p>
                   </div>
                 </motion.div>
@@ -145,7 +145,7 @@ const AmHowWorks = ({ translationKey }) => {
           <div
             className={`w-full flex flex-col items-end justify-center pr-3 gap-1 min-h-[80px] absolute top-[52%] -translate-y-1/2`}
           >
-            {AlarmReason.items.map((item, index) => {
+            {dataSection.items.map((item, index) => {
               // Menentukan dot mana yang harus aktif berdasarkan card dengan opacity 1
               const getActiveDotIndex = () => {
                 // Cari card terakhir yang memiliki opacity mendekati 1 (>= 0.9)

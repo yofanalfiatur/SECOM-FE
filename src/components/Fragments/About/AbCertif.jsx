@@ -7,10 +7,8 @@ import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const AboutCertificate = ({ translationKey }) => {
-  const t = useTranslations();
-  const AboutCertificate = t.raw(translationKey);
-  const isDesktop = useIsDesktop();
+const AboutCertificate = (props) => {
+  const { dataSection, dataCertif } = props;
 
   const [activeIndex, setActiveIndex] = useState(null);
   const videoRefPopup = useRef(null);
@@ -52,22 +50,22 @@ const AboutCertificate = ({ translationKey }) => {
               hasTrack={false}
             >
               <SplideTrack className="!overflow-visible ab-certif__track">
-                {AboutCertificate.items.map((item, index) => (
+                {dataCertif.map((item, index) => (
                   <SplideSlide
                     key={index}
                     className="ab-certif__slide"
                     onClick={() => setActiveIndex(index)}
                   >
-                    <div className="ab-certif__item flex flex-col items-center p-4 bg-white !shadow-[0px_4px_15px_0px_#0000001A] cursor-pointer">
+                    <div className="ab-certif__item h-full flex flex-col items-center p-4 bg-white !shadow-[0px_4px_15px_0px_#0000001A] cursor-pointer">
                       <Image
-                        src={item.image}
+                        src={process.env.NEXT_PUBLIC_STORAGE_URL + item.image}
                         width={204}
                         height={188}
                         alt={`Certificate ${index + 1}`}
                         quality={100}
-                        className="max-h-[138px] object-contain lg:max-h-[188px] ab-certif__img"
+                        className="max-h-[138px] w-full lg:max-h-[188px] object-contain h-full  ab-certif__img"
                       />
-                      <p className="text-sm lg:text-xl mt-2 mb-2 lg:mb-4 font-medium text-darkblue text-center ab-certif__caption">
+                      <p className="text-sm lg:text-xl mt-2 lg:mt-4 mb-2 lg:mb-4 font-medium text-darkblue text-center ab-certif__caption">
                         {item.title}
                       </p>
                     </div>
@@ -116,17 +114,17 @@ const AboutCertificate = ({ translationKey }) => {
           {/* Side Text */}
           <div className="w-full lg:w-4/12 flex flex-col justify-center relative lg:py-10 lg:pl-12 z-[1] bg-white after:content-[''] after:absolute after:w-[calc(150%_+_(100vw-1320px+4rem)/2)] after:h-full after:bottom-0 after:left-0 after:bg-white after:z-[-1]">
             <h2 className="text-darkblue text-[30px] lg:text-[40px] font-medium font-raleway lg:w-[80%] leading-[1.2] mb-2 lg:mb-4">
-              {AboutCertificate.title}
+              {dataSection.title}
             </h2>
             <p className="text-darkblue text-sm lg:text-lg font-normal leading-[1.7] lg:leading-[1.5]">
-              {AboutCertificate.desc}
+              {dataSection.desc}
             </p>
           </div>
         </div>
 
         {/* Popup Certif */}
         <div className="flex flex-col">
-          {AboutCertificate.items.map((item, index) => {
+          {dataCertif.map((item, index) => {
             const isActive = activeIndex === index;
             return (
               <div
@@ -154,7 +152,7 @@ const AboutCertificate = ({ translationKey }) => {
                     {/* Image */}
                     <div className="flex flex-col justify-center w-full lg:w-[35%] relative">
                       <Image
-                        src={item.image}
+                        src={process.env.NEXT_PUBLIC_STORAGE_URL + item.image}
                         width={250}
                         height={250}
                         alt={item.title}
@@ -173,7 +171,7 @@ const AboutCertificate = ({ translationKey }) => {
                       <div className="flex flex-col h-full">
                         <p
                           className="text-sm lg:text-base font-normal leading-[1.7] lg:leading-[1.5] text-darkblue py-8 px-6 lg:px-10 overflow-y-auto min-h-[unset] lg:min-h-[300px] max-h-max lg:max-h-[45vh]"
-                          dangerouslySetInnerHTML={{ __html: item.desc }}
+                          dangerouslySetInnerHTML={{ __html: item.description }}
                         />
                       </div>
                     </div>

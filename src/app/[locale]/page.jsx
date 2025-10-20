@@ -10,9 +10,13 @@ export default async function HomePage(props) {
   const params = await props.params;
   const locale = params.locale;
 
-  //server side
   const response = await getPageData("homepage");
-  const pageData = response.data[locale];
+  const pageData = response.data?.[locale] || response.data?.id;
+
+  if (!pageData || !pageData.sections) {
+    console.error("Invalid page data:", response);
+    return <div>Error loading page content</div>;
+  }
 
   const sections = pageData.sections.reduce((acc, section) => {
     acc[section.component] = section.fields;
@@ -23,12 +27,13 @@ export default async function HomePage(props) {
   const valueData = sections.home_value || {};
   const segmentData = sections.home_segmen || {};
   const aboutData = sections.home_about || {};
+
   return (
     <>
       <HomeBanner dataSection={bannerData} />
       <HomeValue dataSection={valueData} />
       <HomeSegment dataSection={segmentData} />
-      <HomeAbout translationKey="HomeAbout" dataSection={aboutData} />
+      <HomeAbout dataSection={aboutData} />
       <FloatButton />
     </>
   );

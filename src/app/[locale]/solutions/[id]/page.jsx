@@ -22,7 +22,7 @@ export default function SolutionDetailPage({ params }) {
 
   return (
     <>
-      <AmBanner translationKey="AlarmBanner" />
+      {/* <AmBanner translationKey="AlarmBanner" />
       <OverviewGlobal translationKey="AlarmOverview" />
       {isDesktop ? (
         <AmHowWorks translationKey="AlarmReason" />
@@ -33,7 +33,7 @@ export default function SolutionDetailPage({ params }) {
         translationKey="SolutionDetailHighlight"
         SolDetailDocument="SolutionDetailDocument"
       />
-      <AmFAQ translationKey="AlarmFAQ" />
+      <AmFAQ translationKey="AlarmFAQ" /> */}
     </>
   );
 }

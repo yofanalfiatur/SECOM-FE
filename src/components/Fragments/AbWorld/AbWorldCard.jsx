@@ -10,6 +10,7 @@ const AbWorldCard = ({ dataSection }) => {
         {dataSection.cards.map((item, index) => (
           <Link
             href={item.url}
+            target="_blank"
             className={`flex flex-col items-center pt-6 lg:pt-8 pb-5 lg:pb-16 px-8 gap-4 justify-between transition-all duration-300 ease hover:shadow-lg hover:shadow-black/30 abw-card__item ${
               index === 0
                 ? "bg-navyblue hover:bg-tosca"

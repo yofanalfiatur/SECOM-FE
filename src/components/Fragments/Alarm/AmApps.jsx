@@ -1,14 +1,11 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { motion } from "framer-motion";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 
-const AmApps = ({ translationKey }) => {
-  const t = useTranslations();
-  const AlarmApps = t.raw(translationKey);
+const AmApps = ({ dataSection }) => {
   const isDesktop = useIsDesktop();
 
   return (
@@ -22,10 +19,10 @@ const AmApps = ({ translationKey }) => {
           className="flex lg:flex-col justify-center lg:justify-start absolute left-[50%] lg:left-0 top-[4%] md:top-[3%] lg:top-[50%] transform translate-y-[-50%] translate-x-[-50%] lg:translate-x-[0%] z-[2] w-full lg:w-max"
         >
           <Image
-            src={AlarmApps.image}
+            src={process.env.NEXT_PUBLIC_STORAGE_URL + dataSection.image}
             alt="apps"
-            width={540}
-            height={345}
+            width={800}
+            height={600}
             quality={100}
             className="w-[330px] lg:w-[480px] 2xl:w-[540px] "
           />
@@ -42,7 +39,7 @@ const AmApps = ({ translationKey }) => {
             <div className="flex flex-row gap-4 lg:items-center">
               {isDesktop && (
                 <Image
-                  src={AlarmApps.logo}
+                  src={process.env.NEXT_PUBLIC_STORAGE_URL + dataSection.logo}
                   alt="logo"
                   width={180}
                   height={180}
@@ -53,7 +50,9 @@ const AmApps = ({ translationKey }) => {
                 <div className="flex flex-row gap-3 lg:gap-0 mb-2 lg:mb-0 items-center">
                   {!isDesktop && (
                     <Image
-                      src={AlarmApps.logo}
+                      src={
+                        process.env.NEXT_PUBLIC_STORAGE_URL + dataSection.logo
+                      }
                       alt="logo"
                       width={180}
                       height={180}
@@ -76,7 +75,7 @@ const AmApps = ({ translationKey }) => {
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
                   className="text-white text-[25px] lg:text-[35px] font-raleway font-medium leading-[1.4] lg:leading-[1.2]"
-                  dangerouslySetInnerHTML={{ __html: AlarmApps.title }}
+                  dangerouslySetInnerHTML={{ __html: dataSection.title }}
                 />
               </div>
             </div>
@@ -86,10 +85,10 @@ const AmApps = ({ translationKey }) => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.7 }}
               className="text-white text-sm lg:text-base leading-[1.7] lg:leading-[1.5] mt-2 lg:mt-4 mb-2 lg:mb-4"
-              dangerouslySetInnerHTML={{ __html: AlarmApps.desc }}
+              dangerouslySetInnerHTML={{ __html: dataSection.desc }}
             />
             <ul className="grid grid-cols-12 gap-x-3 gap-y-3 lg:gap-x-4 lg:gap-y-5">
-              {AlarmApps.items.map((item, index) => (
+              {dataSection.items.map((item, index) => (
                 <motion.li
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -99,7 +98,7 @@ const AmApps = ({ translationKey }) => {
                   key={index}
                 >
                   <Image
-                    src={item.icon}
+                    src={process.env.NEXT_PUBLIC_STORAGE_URL + item.icon}
                     alt={item.title}
                     width={45}
                     height={37}
@@ -109,7 +108,9 @@ const AmApps = ({ translationKey }) => {
                       {item.title}
                     </p>
                     <div
-                      dangerouslySetInnerHTML={{ __html: item.desc }}
+                      dangerouslySetInnerHTML={{
+                        __html: item.short_description,
+                      }}
                       className="text-white text-xs lg:text-[14px]"
                     />
                   </div>
@@ -122,7 +123,7 @@ const AmApps = ({ translationKey }) => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.7 }}
               className="text-white text-[10px] lg:text-xs leading-[1.7] lg:leading-[1.5] mt-4 lg:mt-6 mb-2"
-              dangerouslySetInnerHTML={{ __html: AlarmApps.descBottom }}
+              dangerouslySetInnerHTML={{ __html: dataSection.hint }}
             />
 
             <motion.div
@@ -132,16 +133,36 @@ const AmApps = ({ translationKey }) => {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="flex flex-row mt-6 gap-3"
             >
-              {AlarmApps.download.map((item, index) => (
-                <Link key={index} href={item.link} target="_blank">
-                  <Image
-                    src={item.image}
-                    alt="download button"
-                    width={150}
-                    height={50}
-                  />
-                </Link>
-              ))}
+              <Link
+                href={dataSection.playStoreURL}
+                target="_blank"
+                className="flex flex-col"
+              >
+                <Image
+                  src={
+                    process.env.NEXT_PUBLIC_STORAGE_URL +
+                    dataSection.playStoreImage
+                  }
+                  alt="playstore download button"
+                  width={150}
+                  height={50}
+                />
+              </Link>
+              <Link
+                href={dataSection.appStoreURL}
+                target="_blank"
+                className="flex flex-col"
+              >
+                <Image
+                  src={
+                    process.env.NEXT_PUBLIC_STORAGE_URL +
+                    dataSection.appStoreImage
+                  }
+                  alt="appstore download button"
+                  width={150}
+                  height={50}
+                />
+              </Link>
             </motion.div>
           </div>
         </motion.div>

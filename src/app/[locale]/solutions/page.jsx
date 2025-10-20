@@ -20,7 +20,7 @@ const SolutionsPage = () => {
   return (
     <>
       {/* home */}
-      <AmBanner translationKey="SolBanner" />
+      {/* <AmBanner translationKey="SolBanner" />
       <OverviewGlobal translationKey="SolOverview" />
       {isDesktop ? (
         <AmHowWorks translationKey="SolReason" />
@@ -48,7 +48,7 @@ const SolutionsPage = () => {
         packagesRent="HomePackagesRent"
       />
       <AmFAQ translationKey="SolFAQ" />
-      <FloatButton />
+      <FloatButton /> */}
     </>
   );
 };

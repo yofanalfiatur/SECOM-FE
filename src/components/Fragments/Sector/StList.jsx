@@ -1,15 +1,13 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 
-const SectorList = ({ translationKey }) => {
-  const t = useTranslations();
-  const SectorList = t.raw(translationKey);
+const SectorList = ({ dataSection, listSectors }) => {
   const locale = useLocale();
   const isDesktop = useIsDesktop();
   const [activeIndex, setActiveIndex] = useState(0);
@@ -24,15 +22,14 @@ const SectorList = ({ translationKey }) => {
         <div className="w-full lg:w-5/12 lg:border-r lg:border-[#FFFFFF80]">
           <div className="flex flex-col pt-11 pb-6 lg:pb-10 lg:pt-10 pr-0 lg:pr-20 relative after:absolute after:content-none after:lg:content-[''] after:w-[calc(150%_+_(100vw-1320px+4rem)/2)] after:h-[1px] after:bottom-0 after:right-0 after:bg-[#FFFFFF80] after:z-[1] ">
             <h2 className="text-white font-raleway text-[30px] lg:text-[45px] font-normal leading-[1.3] lg:leading-[1.2]">
-              {SectorList.title}
+              {dataSection.title_section}
             </h2>
           </div>
 
           {/* Tab List */}
           {isDesktop ? (
-            // Tab list for desktop
             <ul className="flex flex-col gap-2 mt-4 lg:mt-12 mb-4 lg:mb-12 st-list__tab-list">
-              {SectorList.items.map((item, index) => (
+              {listSectors.map((item, index) => (
                 <li
                   key={item.id ?? index}
                   onClick={() => setActiveIndex(index)}
@@ -55,14 +52,13 @@ const SectorList = ({ translationKey }) => {
               ))}
             </ul>
           ) : (
-            // Tab list for mobile
             <div className="w-full h-max flex flex-col mb-4 lg:mb-0 relative st-list__tab-list-md-wrap">
               <select
                 value={activeIndex}
                 onChange={handleChange}
                 className="w-full py-3 px-4 appearance-none text-white rounded-[5px] border-[1px] border-white bg-transparent font-raleway text-[18px]"
               >
-                {SectorList.items.map((item, index) => (
+                {listSectors.map((item, index) => (
                   <option
                     key={item.id ?? index}
                     value={index}
@@ -92,9 +88,9 @@ const SectorList = ({ translationKey }) => {
         {/* Tab Content */}
         <div className="w-full h-max lg:w-7/12 sticky top-[0px]">
           <AnimatePresence mode="wait">
-            {SectorList.items[activeIndex] && (
+            {listSectors[activeIndex] && (
               <motion.div
-                key={SectorList.items[activeIndex].id ?? activeIndex}
+                key={listSectors[activeIndex].id ?? activeIndex}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
@@ -102,21 +98,21 @@ const SectorList = ({ translationKey }) => {
                 className="flex flex-col lg:pl-12 lg:pt-12 lg:pb-12 st-list__tab-content__item"
               >
                 <Image
-                  src={SectorList.items[activeIndex].image}
+                  src={listSectors[activeIndex].image}
                   width={1000}
                   height={1000}
                   quality={100}
-                  alt={SectorList.items[activeIndex].title}
+                  alt={listSectors[activeIndex].title}
                   className="w-full h-full aspect-[285/175] lg:aspect-[764/486] object-cover"
                 />
                 <p className="text-white text-[25px] lg:text-[35px] mt-4 lg:mt-6">
-                  {SectorList.items[activeIndex].title}
+                  {listSectors[activeIndex].title}
                 </p>
                 <p className="text-white text-base lg:text-[20px] mt-3 mb-6 lg:leading-[1.3]">
-                  {SectorList.items[activeIndex].desc}
+                  {listSectors[activeIndex].desc}
                 </p>
                 <Link
-                  href={SectorList.items[activeIndex].link}
+                  href={listSectors[activeIndex].link}
                   target="_self"
                   className="text-white text-sm lg:text-lg font-raleway uppercase tracking-[2px] max-w-max flex flex-row gap-2 hover:gap-4 transition-all ease duration-300 items-center relative after:absolute after:content-[''] after:w-0 after:h-[1px] after:bg-white after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full"
                 >

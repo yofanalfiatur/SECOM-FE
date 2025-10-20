@@ -1387,3 +1387,13 @@ main {
   padding-left: 1.5rem;
   list-style-type: disc;
 }
+
+.cr-detail__desc ul,
+.cr-detail__desc ol {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+.cr-detail__desc strong,
+.cr-detail__desc b {
+  font-weight: 600;
+}

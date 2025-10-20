@@ -42,3 +42,7 @@ export async function getPosts(type) {
 export async function getPostBySlug(type, slug) {
   return apiFetch(`/${type}/${slug}`);
 }
+
+export async function getPostById(type, id) {
+  return apiFetch(`/${type}/${id}`);
+}

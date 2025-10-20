@@ -1,38 +1,28 @@
-"use client";
-
 import AccordionItem from "@/components/Elements/AccordionItem";
 import ButtonPrimary from "@/components/Elements/ButtonPrimary";
-import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import { Link } from "@/i18n/navigation";
-import { useLocale, useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
-import { useState } from "react";
+import { getPostBySlug } from "@/libs/api";
+import CareerDetail from "@/components/Fragments/CareerDetail/CareerDetail";
 
-export default function CareerDetailPage({ params }) {
-  const t = useTranslations();
-  const locale = useLocale();
-  const isDesktop = useIsDesktop();
+export default async function CareerDetailPage({ params }) {
+  const { id, locale } = await params;
 
-  const vacancies = t.raw("Vacancies");
-  const careerDetail = vacancies[0]; //temp
+  const response = await getPostBySlug("vacancies", id);
+  if (!response || !response.data) return notFound();
 
-  if (!careerDetail) {
-    notFound();
-  }
-
-  //state accordion
-  const [activeIndex, setActiveIndex] = useState(null);
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+  const vacanciesByLocale = response.data[locale] || response.data.id;
+  const careerDetail = vacanciesByLocale?.[0];
+  if (!careerDetail) return notFound();
 
   return (
     <section className="flex flex-col pt-8 lg:pt-18 pb-12 lg:pb-19 bg-[#E6F3FF] cr-detail">
       <div className="container mx-auto relative flex flex-col lg:flex-row">
-        <div className="w-ful lg:w-4/12 flex flex-col h-max relative lg:sticky lg:top-[120] border-[1px] border-[#00000033] bg-white rounded-[5px] overflow-hidden">
+        <div className="w-full lg:w-4/12 flex flex-col h-max relative lg:sticky lg:top-[120px] border-[1px] border-[#00000033] bg-white rounded-[5px] overflow-hidden">
           <h1 className="text-darkblue text-base lg:text-[25px] font-medium leading-[1.3] lg:leading-[1.2] w-full border-b-[1px] border-[#00000033] py-3.5 lg:py-[23px] px-7">
             {careerDetail.title}
           </h1>
+
           <div className="flex flex-col pt-3.5 lg:pt-6 pb-4 lg:pb-7 px-7 gap-1.5 lg:gap-4">
             {careerDetail.location && (
               <div className="flex flex-row items-center gap-3 wrap-info">
@@ -101,13 +91,14 @@ export default function CareerDetailPage({ params }) {
                 </div>
                 <p className="font-medium text-[13px] lg:text-lg text-darkblue">
                   {careerDetail.experience}
+                  {locale === "en" ? " Experience" : " Pengalaman"}
                 </p>
               </div>
             )}
           </div>
 
           <Link
-            href={"#apply"}
+            href={careerDetail.url}
             target="_blank"
             className="font-raleway text-[13px] lg:text-xl text-white bg-tosca transition-all duration-300 hover:bg-navyblue w-full py-3 lg:py-4 px-2 text-center tracking-[2px]"
           >
@@ -117,54 +108,17 @@ export default function CareerDetailPage({ params }) {
 
         <div className="w-ful lg:w-8/12 flex flex-col lg:pl-16 pt-4 lg:pt-3">
           <div
-            className="mb-5 lg:mb-9 text-sm lg:text-base leading-[1.7] lg:leading-[1.5] cr-detail__desc"
-            dangerouslySetInnerHTML={{ __html: careerDetail.desc }}
+            className="mb-5 lg:mb-9 text-sm lg:text-base leading-[1.7] lg:leading-[1.5] flex flex-col cr-detail__desc"
+            dangerouslySetInnerHTML={{ __html: careerDetail.description }}
           />
 
-          {/* Accordion */}
-          <div className="flex flex-col gap-4">
-            {careerDetail.requirements && (
-              <AccordionItem
-                index={0}
-                isOpen={activeIndex === 0}
-                onToggle={toggleAccordion}
-                question={locale === "en" ? "Requirements" : "Kebutuhan"}
-                answer={
-                  Array.isArray(careerDetail.requirements)
-                    ? `<ul>${careerDetail.requirements
-                        .map((r) => `<li>${r}</li>`)
-                        .join("")}</ul>`
-                    : careerDetail.requirements
-                }
-              />
-            )}
+          <CareerDetail careerDetail={careerDetail} />
 
-            {careerDetail.responsibilities && (
-              <AccordionItem
-                index={1}
-                isOpen={activeIndex === 1}
-                onToggle={toggleAccordion}
-                question={
-                  locale === "en"
-                    ? "Responsibilities"
-                    : "Tugas dan tanggung jawab"
-                }
-                answer={careerDetail.responsibilities}
-              />
-            )}
-
-            {careerDetail.benefit && (
-              <AccordionItem
-                index={2}
-                isOpen={activeIndex === 2}
-                onToggle={toggleAccordion}
-                question={locale === "en" ? "Benefit" : "Keuntungan"}
-                answer={careerDetail.benefit}
-              />
-            )}
-          </div>
-
-          <ButtonPrimary href={"#apply"} target="_blank" className="mt-8">
+          <ButtonPrimary
+            href={careerDetail.url}
+            target="_blank"
+            className="mt-8"
+          >
             {locale === "en" ? "APPLY NOW" : "LAMAR SEKARANG"}
           </ButtonPrimary>
         </div>

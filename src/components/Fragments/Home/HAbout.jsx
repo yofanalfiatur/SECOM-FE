@@ -71,6 +71,7 @@ const HomeAbout = ({ dataSection }) => {
                 width={600}
                 height={600}
                 quality={100}
+                alt="profile"
                 className="w-full h-full lg:h-[388] aspect-[135/124] lg:aspect-auto object-cover top-0 left-0 opacity-100"
               />
               <div className="absolute z-[1] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col lg:flex-row justify-center items-center w-max gap-4 lg:gap-6 after:content-[''] after:absolute after:bottom-[-10px] after:left-0 after:transition-all after:duration-200 after:ease-in-out after:w-[0%] after:h-[2px] after:z-[4] after:bg-white group-hover:after:w-full">
@@ -91,6 +92,7 @@ const HomeAbout = ({ dataSection }) => {
               width={1600}
               height={1000}
               quality={100}
+              alt="about"
               className="w-full h-full lg:h-[400px] object-cover object-center opacity-100 lg:pr-5 aspect-[285/128] lg:aspect-auto"
             />
           </div>
@@ -99,6 +101,7 @@ const HomeAbout = ({ dataSection }) => {
               src={
                 process.env.NEXT_PUBLIC_STORAGE_URL + dataSection.image_small
               }
+              alt="about"
               width={1600}
               height={1000}
               quality={100}

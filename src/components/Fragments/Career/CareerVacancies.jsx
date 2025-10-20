@@ -5,12 +5,11 @@ import { useLocale, useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const CareerVacancies = ({ translationKey, vacancies }) => {
+const CareerVacancies = (props) => {
+  const { dataSection, listVacancies } = props;
+
   const ITEMS_PER_PAGE = 4;
 
-  const t = useTranslations();
-  const CareerVacancies = t.raw(translationKey);
-  const Vacancies = t.raw(vacancies);
   const isDesktop = useIsDesktop();
   const locale = useLocale();
 
@@ -18,11 +17,14 @@ const CareerVacancies = ({ translationKey, vacancies }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   // calculate total pages
-  const totalPages = Math.ceil(Vacancies.length / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil(listVacancies.length / ITEMS_PER_PAGE);
 
   // data for current page
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const currentItems = Vacancies.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const currentItems = listVacancies.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE
+  );
 
   const handlePageChange = (page) => {
     if (page >= 1 && page <= totalPages) {
@@ -36,10 +38,10 @@ const CareerVacancies = ({ translationKey, vacancies }) => {
         {/* Intro */}
         <div className="w-full lg:w-4/12 lg:pr-25 mb-5 lg:mb-0 cr-vac__intro">
           <h2 className="text-darkblue text-[30px] lg:text-[40px] font-raleway font-normal">
-            {CareerVacancies.title}
+            {dataSection.title_section}
           </h2>
           <p className="text-darkblue text-sm lg:text-lg leading-[1.7] lg:leading-[1.5] mt-2 lg:mt-4">
-            {CareerVacancies.desc}
+            {dataSection.description_section}
           </p>
         </div>
 
@@ -57,7 +59,7 @@ const CareerVacancies = ({ translationKey, vacancies }) => {
               {currentItems.map((item, index) => (
                 <li
                   key={index}
-                  className="flex flex-col border-[1px] border-[#00000033] bg-white lg:rounded-[5px] last:border-0"
+                  className="flex flex-col border-[1px] border-[#00000033] bg-white lg:rounded-[5px]"
                 >
                   <div className="flex flex-col border-b-[1px] px-5 pt-5 pb-4 lg:pb-3 border-[#00000033] gap-2">
                     <div className="flex flex-row gap-3">
@@ -72,12 +74,12 @@ const CareerVacancies = ({ translationKey, vacancies }) => {
                       {item.title}
                     </p>
                   </div>
-                  <div className="flex flex-col px-5 pt-4 lg:pt-6 pb-6 lg:pb-7">
+                  <div className="flex flex-col justify-between px-5 pt-4 lg:pt-6 pb-6 lg:pb-7 h-full">
                     <p className="text-darkblue text-base lg:text-base leading-[1.7] lg:leading-[1.5] pb-4 lg:pb-6">
                       {item.shortDesc}
                     </p>
                     <Link
-                      href={`#detail-career`}
+                      href={`/career/${item.slug}`}
                       target="_self"
                       className="flex flex-row max-w-max gap-3 items-center hover:gap-5 transition-all duration-300 ease relative after:w-0 after:h-[1px] after:absolute after:bottom-0 after:left-0 after:bg-tosca after:transition-all after:duration-300 after:ease-in-out hover:after:w-full hover:after:h-[1px]"
                     >

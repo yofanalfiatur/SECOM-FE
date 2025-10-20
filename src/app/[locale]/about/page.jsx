@@ -6,7 +6,7 @@ import AboutTeam from "@/components/Fragments/About/AbTeam";
 import AboutTrusted from "@/components/Fragments/About/AbTrusted";
 import AboutWhy from "@/components/Fragments/About/AbWhy";
 import AboutWork from "@/components/Fragments/About/AbWork";
-import { getPageData } from "@/libs/api";
+import { getPageData, getPosts } from "@/libs/api";
 import React from "react";
 
 export default async function AboutPage(props) {
@@ -32,25 +32,32 @@ export default async function AboutPage(props) {
   const teamData = sections.about_teams || {};
   const locationData = sections.about_locations || {};
 
+  // ambil data dari posts Representative
+  const responseCertif = await getPosts("awards");
+  // temp
+  const listCertif = responseCertif.data || [];
+
+  const listDataCertif = listCertif.map((item) => ({
+    title: item.name?.[locale] || "",
+    description: item.description?.[locale] || "",
+    image: item.image || "",
+  }));
+
+  // ambil data dari posts Representative
+  const responseLogoTrustedBy = await getPosts("settings");
+  // temp
+  const logoTrustedData = responseLogoTrustedBy.data.logo || [];
+
   return (
     <>
       <AboutBanner dataSection={bannerData} />
       <AboutStory dataSection={storyData} />
       <AboutWhy dataSection={whyData} />
-      {/* <AboutWork dataSection={workData} /> */}
-      {/* <AboutCertificate dataSection={certifData} /> */}
-      {/* <AboutTeam dataSection={teamData} /> */}
-      {/* <AboutLocation dataSection={locationData} /> */}
-      {/* <AboutTrusted dataSection={trustedData} /> */}
-
-      {/* static */}
-      {/* <AboutStory translationKey="AboutStory" /> */}
-      {/* <AboutWhy translationKey="AboutWhy" /> */}
-      <AboutWork translationKey="AboutWork" />
-      <AboutCertificate translationKey="AboutCertificate" />
-      <AboutTeam translationKey="AboutTeam" />
-      <AboutLocation translationKey="AboutLocation" />
-      <AboutTrusted translationKey="AboutTrusted" />
+      <AboutWork dataSection={workData} />
+      <AboutCertificate dataSection={certifData} dataCertif={listDataCertif} />
+      <AboutTeam dataSection={teamData} />
+      <AboutLocation dataSection={locationData} />
+      <AboutTrusted dataSection={logoTrustedData} />
     </>
   );
 }

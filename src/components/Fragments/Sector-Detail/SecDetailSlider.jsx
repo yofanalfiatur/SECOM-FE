@@ -7,11 +7,7 @@ import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const SecDetailSlider = ({ translationKey }) => {
-  const t = useTranslations();
-  const SecDetailSlider = t.raw(translationKey);
-  const isDesktop = useIsDesktop();
-
+const SecDetailSlider = ({ dataSection }) => {
   // Refs untuk sync
   const imgSplideRef = useRef(null);
   const descSplideRef = useRef(null);
@@ -32,7 +28,7 @@ const SecDetailSlider = ({ translationKey }) => {
       <div className="container !p-0 mx-auto flex flex-col lg:flex-row items-center">
         <div className="w-full lg:w-7/12 flex flex-col justify-center min-h-[unset] lg:min-h-[160px] border-white/50 border-b-[1px] lg:border-r-[1px]">
           <h2 className="text-white text-[30px] lg:text-[50px] leading-[1.3] lg:leading-[1.2] font-normal mt-8 mb-4 lg:mt-auto lg:mb-auto px-4 lg:px-0 font-raleway">
-            {SecDetailSlider.title}
+            {dataSection.title}
           </h2>
         </div>
       </div>
@@ -56,13 +52,13 @@ const SecDetailSlider = ({ translationKey }) => {
               hasTrack={false}
             >
               <SplideTrack>
-                {SecDetailSlider.items.map((item, index) => (
+                {dataSection.items.map((item, index) => (
                   <SplideSlide
                     key={index}
                     className="h-max sd-slider__slide-img"
                   >
                     <Image
-                      src={item.image}
+                      src={process.env.NEXT_PUBLIC_STORAGE_URL + item.image}
                       alt={item.title}
                       width={684}
                       height={331}
@@ -126,7 +122,7 @@ const SecDetailSlider = ({ translationKey }) => {
               </div>
 
               <SplideTrack>
-                {SecDetailSlider.items.map((item, index) => (
+                {dataSection.items.map((item, index) => (
                   <SplideSlide
                     key={index}
                     className="h-max flex flex-col sd-slider__slide-desc"

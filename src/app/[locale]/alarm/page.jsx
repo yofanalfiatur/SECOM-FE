@@ -21,7 +21,7 @@ const AlarmLanding = () => {
   return (
     <>
       {/* business */}
-      <AmBanner translationKey="AlarmBanner" />
+      {/* <AmBanner translationKey="AlarmBanner" />
       <OverviewGlobal translationKey="AlarmOverview" />
       {isDesktop ? (
         <AmHowWorks translationKey="AlarmReason" />
@@ -49,7 +49,7 @@ const AlarmLanding = () => {
         packagesRent="BusinessPackagesRent"
       />
       <AmFAQ translationKey="AlarmFAQ" />
-      <FloatButton />
+      <FloatButton /> */}
     </>
   );
 };

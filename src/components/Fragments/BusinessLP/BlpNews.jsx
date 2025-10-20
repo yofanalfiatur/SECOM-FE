@@ -7,16 +7,11 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 
-const BlpNews = ({ translationKey }) => {
-  const t = useTranslations();
-  const NewsArticle = t.raw(translationKey);
+const BlpNews = (props) => {
+  const { dataFirstPost, dataPosts } = props;
+
   const locale = useLocale();
   const isDesktop = useIsDesktop();
-
-  // ambil artikel pertama sebagai featured
-  const featuredArticle = NewsArticle[0];
-  // sisanya untuk slider
-  const sliderArticles = NewsArticle.slice(1, 4);
 
   // helper untuk format tanggal
   const formatDate = (dateString, locale) => {
@@ -31,14 +26,14 @@ const BlpNews = ({ translationKey }) => {
   return (
     <section className="bg-navyblue mb-10 lg:mb-12 pb-20 lg:pb-0 flex flex-col gap-7 lg:gap-0 blp-news">
       {/* featured article */}
-      {featuredArticle && (
+      {dataFirstPost && (
         <div className="flex flex-col-reverse lg:flex-row justify-end relative overflow-hidden border-b-[1px] border-b-[#FFFFFF80] blp-news__featured">
           <div className="w-full lg:w-[calc(67%+2rem)] flex">
             <Image
-              src={featuredArticle.featuredImage}
+              src={process.env.NEXT_PUBLIC_STORAGE_URL + dataFirstPost.image}
               width={1000}
               height={516}
-              alt={featuredArticle.title}
+              alt={dataFirstPost.title}
               className="object-cover w-full h-full aspect-[320/166] lg:aspect-[994/516]"
             />
           </div>
@@ -47,25 +42,27 @@ const BlpNews = ({ translationKey }) => {
               <div className="w-full lg:w-4/12 h-full flex flex-col justify-center lg:pr-12 bg-navyblue pt-7 lg:pt-8 pb-7 lg:pb-8">
                 <div className="flex flex-row blp-news__meta">
                   <p className="text-white text-[10px] lg:text-sm uppercase leading-[1] relative flex flex-row items-center after:content-[''] after:w-[1px] after:h-full after:bg-white after:mx-3">
-                    {featuredArticle.category}
+                    {dataFirstPost.categories
+                      ?.map((cat) => cat.name)
+                      .join(", ")}
                   </p>
                   <p className="text-white text-[10px] lg:text-sm uppercase leading-[1]">
-                    {formatDate(featuredArticle.publishedDate, locale)}
+                    {formatDate(dataFirstPost.published_at, locale)}
                   </p>
                 </div>
                 <Link
-                  href={featuredArticle.slug}
+                  href={`/news/${dataFirstPost.slug}-${dataFirstPost.id}`}
                   className="blp-news__link group"
                 >
                   <p className="text-white font-normal text-[30px] lg:text-[40px] leading-[1.3] lg:leading-[1.2] mt-2 mb-3 lg:mb-4 transition-all duration-300 ease group-hover:text-tosca">
-                    {featuredArticle.title}
+                    {dataFirstPost.title}
                   </p>
                 </Link>
                 <p className="text-white text-sm lg:text-lg leading-[1.7] lg:leading-[1.5]">
-                  {featuredArticle.excerpt}
+                  {dataFirstPost.excerpt}
                 </p>
                 <Link
-                  href={featuredArticle.slug}
+                  href={`/news/${dataFirstPost.slug}-${dataFirstPost.id}`}
                   className="flex flex-row items-center gap-3 mt-5 lg:mt-6 relative max-w-max transition-all duration-300 ease hover:gap-6 after:content-[''] after:absolute after:w-0 after:h-[1px] after:bottom-0 after:left-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full "
                 >
                   <p className="text-white text-sm lg:text-lg tracking-[3px] uppercase">
@@ -92,7 +89,7 @@ const BlpNews = ({ translationKey }) => {
       )}
 
       {/* slider articles */}
-      {sliderArticles.length > 0 && (
+      {dataPosts.length > 0 && (
         <div className="container mx-auto blp-news__wrap-slider">
           <Splide
             options={{
@@ -114,20 +111,23 @@ const BlpNews = ({ translationKey }) => {
             hasTrack={false}
           >
             <SplideTrack>
-              {sliderArticles.map((item, index) => (
+              {dataPosts.map((item, index) => (
                 <SplideSlide
                   key={index}
                   className="flex flex-col blp-news__item"
                 >
                   <div className="flex flex-row blp-news__meta">
                     <p className="text-white text-[10px] lg:text-sm uppercase leading-[1] relative flex flex-row items-center after:content-[''] after:w-[1px] after:h-full after:bg-white after:mx-3">
-                      {item.category}
+                      {item.categories?.map((cat) => cat.name).join(", ")}
                     </p>
                     <p className="text-white text-[10px] lg:text-sm uppercase leading-[1]">
-                      {formatDate(item.publishedDate, locale)}
+                      {formatDate(item.published_at, locale)}
                     </p>
                   </div>
-                  <Link href={item.slug} className="blp-news__link group">
+                  <Link
+                    href={`/news/${item.slug}-${item.id}`}
+                    className="blp-news__link group"
+                  >
                     <p className="text-white font-normal text-[20px] lg:text-[30px] leading-[1.3] lg:leading-[1.2] mt-2 lg:mt-5 transition-all duration-300 ease group-hover:text-tosca">
                       {item.title}
                     </p>

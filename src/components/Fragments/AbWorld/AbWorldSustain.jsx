@@ -12,7 +12,7 @@ const AbWorldSustain = ({ dataSection }) => {
         </p>
 
         <div className="flex flex-col w-full abw-sustain__wrap-slider">
-          <SliderBasic items={dataSection.cards} />
+          <SliderBasic items={dataSection.cards} target="_blank" />
         </div>
       </div>
     </section>

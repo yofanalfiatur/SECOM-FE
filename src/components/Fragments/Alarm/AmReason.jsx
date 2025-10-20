@@ -8,10 +8,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 
-const AmReason = ({ translationKey }) => {
+const AmReason = ({ dataSection }) => {
   const isDesktop = useIsDesktop();
-  const t = useTranslations();
-  const AlarmReason = t.raw(translationKey);
 
   const [current, setCurrent] = useState(0);
   const bgSplideRef = useRef(null);
@@ -20,7 +18,7 @@ const AmReason = ({ translationKey }) => {
   const scrollAccumulator = useRef(0);
   const isInSection = useRef(false);
   const lastScrollTime = useRef(0);
-  const total = AlarmReason.items.length;
+  const total = dataSection.items.length;
 
   const SCROLL_THRESHOLD = 100;
   const SCROLL_RESET_DELAY = 150;
@@ -193,7 +191,7 @@ const AmReason = ({ translationKey }) => {
       splideInst.off("moved", unlock);
       clearTimeout(scrollTimeout);
     };
-  }, [current, total, isDesktop]); // Tambahkan isDesktop sebagai dependency
+  }, [current, total, isDesktop]);
 
   return (
     <section
@@ -226,13 +224,16 @@ const AmReason = ({ translationKey }) => {
           }}
           className="w-full h-full"
         >
-          {AlarmReason.items.map((item, index) => (
+          {dataSection.items.map((item, index) => (
             <SplideSlide
               key={index}
               className="relative z-1 w-full h-max lg:h-full"
             >
               <Image
-                src={isDesktop ? item.image : item.imageMd}
+                src={
+                  process.env.NEXT_PUBLIC_STORAGE_URL +
+                  (item.imageMd && !isDesktop ? item.imageMd : item.image)
+                }
                 alt=""
                 width={1920}
                 height={693}
@@ -250,7 +251,7 @@ const AmReason = ({ translationKey }) => {
         <div className="container h-full flex flex-row justify-end items-center mx-auto">
           <div className="w-full lg:w-5/12 h-full lg:h-[60%] relative flex flex-col justify-center items-start">
             <AnimatePresence initial={false} mode="popLayout">
-              {AlarmReason.items.map((item, index) => {
+              {dataSection.items.map((item, index) => {
                 const position = (index - current + total) % total;
                 if (position > 1) return null;
 
@@ -290,7 +291,7 @@ const AmReason = ({ translationKey }) => {
                           position === 0 ? "opacity-100" : "opacity-0"
                         }`}
                       >
-                        {AlarmReason.title}
+                        {dataSection.title}
                       </p>
                       <p
                         className={`text-[25px] lg:text-[45px] font-raleway font-normal text-white lg:leading-[1.1] transition-all ease duration-200 ${
@@ -304,7 +305,7 @@ const AmReason = ({ translationKey }) => {
                           position === 0 ? "opacity-100" : "opacity-0"
                         }`}
                       >
-                        {item.desc}
+                        {item.description}
                       </p>
                     </div>
                   </motion.div>
@@ -320,7 +321,7 @@ const AmReason = ({ translationKey }) => {
                   : "flex-row right-[unset] left-1/2 transform -translate-x-1/2 bottom-3 top-[unset]"
               }`}
             >
-              {AlarmReason.items.map((_, index) => (
+              {dataSection.items.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrent(index)}

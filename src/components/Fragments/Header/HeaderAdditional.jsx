@@ -4,12 +4,10 @@ import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import React, { useEffect, useState } from "react";
 
-const HeaderAdditional = ({ menuServices, menuProducts }) => {
-  const t = useTranslations();
+const HeaderAdditional = (props) => {
+  const { menuServices, menuProducts, menuSectors } = props;
   const locale = useLocale();
   const isDesktop = useIsDesktop();
-  const MenuServices = t.raw(menuServices);
-  const MenuProducts = t.raw(menuProducts);
 
   // scroll state
   const [isScrolled, setIsScrolled] = useState(false);
@@ -251,7 +249,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
                   openSubmenus.sectorService || isDesktop
                 )}`}
               >
-                {MenuServices.map((item, index) => (
+                {menuServices.map((item, index) => (
                   <li className="flex flex-col" key={index}>
                     <Link
                       href={item.href}
@@ -289,7 +287,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
                 onClick={() => toggleSubmenu("sectorProducts")}
               >
                 <p className="text-darkblue font-medium text-base">
-                  {locale === "en" ? "Products" : "Produk"}
+                  {locale === "en" ? "Sectors" : "Sektor"}
                 </p>
                 {!isDesktop && (
                   <svg
@@ -315,7 +313,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
                   openSubmenus.sectorProducts || isDesktop
                 )}`}
               >
-                {MenuProducts.map((item, index) => (
+                {menuSectors.map((item, index) => (
                   <li className="flex flex-col" key={index}>
                     <Link
                       href={item.href}
@@ -362,7 +360,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
           <div className="container mx-auto mt-9 lg:mt-0 mb-20 lg:mb-0 pt-0 lg:pt-9 header-add__content h-max lg:h-[300px] grid grid-cols-12 lg:gap-y-4">
             <div className="col-span-12 lg:col-span-2 flex flex-col max-h-max">
               <Link
-                href={locale === "en" ? "/en/solutions" : "/solutions"}
+                href={locale === "en" ? "/en/solution" : "/solution"}
                 className="flex flex-row max-w-max items-center mb-4 lg:mb-4 group transition-all duration-300 ease relative"
               >
                 <p className="text-darkblue font-medium text-base group-hover:text-tosca transition-all duration-300 ease">
@@ -418,7 +416,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
                   openSubmenus.solutionsService || isDesktop
                 )}`}
               >
-                {MenuServices.map((item, index) => (
+                {menuServices.map((item, index) => (
                   <li className="flex flex-col" key={index}>
                     <Link
                       href={item.href}
@@ -482,7 +480,7 @@ const HeaderAdditional = ({ menuServices, menuProducts }) => {
                   openSubmenus.solutionsProducts || isDesktop
                 )}`}
               >
-                {MenuProducts.map((item, index) => (
+                {menuProducts.map((item, index) => (
                   <li className="flex flex-col" key={index}>
                     <Link
                       href={item.href}

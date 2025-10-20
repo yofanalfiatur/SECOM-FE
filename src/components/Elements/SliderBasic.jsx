@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 
-const SliderBasic = ({ items, linkLabel }) => {
+const SliderBasic = ({ items, linkLabel, target }) => {
   const locale = useLocale();
 
   // fallback if linkLabel is not provided
@@ -67,11 +67,9 @@ const SliderBasic = ({ items, linkLabel }) => {
                   </p>
 
                   <Link
-                    //temp
-                    // href={item.link}
-                    href={"#"}
+                    href={item.url}
+                    target={target}
                     className="uppercase text-sm lg:text-lg text-tosca font-raleway tracking-[2px] max-w-max flex pt-2 lg:pt-5 mt-auto flex-row transition-all duration-200 ease items-center gap-2 hover:gap-3 relative after:content-[''] after:w-0 after:h-[1px] after:absolute after:bottom-0 after:bg-tosca after:transition-all after:ease after:duration-200 hover:after:w-full card-slider-basic__link"
-                    target="_self"
                   >
                     <p>{finalLabel}</p>
 
