@@ -5,13 +5,10 @@ import BackgroundDots from "@/components/Elements/BackgroundDots";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import { useTranslations } from "next-intl";
 
-const ResTesti = () => {
-  const t = useTranslations();
-  const ReTestimonial = t.raw("ReTestimonial");
-
+const ResTesti = ({ dataSection }) => {
   const isDesktop = useIsDesktop();
   const [current, setCurrent] = useState(0);
-  const testimonials = ReTestimonial.items;
+  const testimonials = dataSection.cards;
   const total = testimonials.length;
 
   const next = () => {
@@ -31,10 +28,10 @@ const ResTesti = () => {
       />
       <div className="container mx-auto flex flex-col items-center">
         <h2 className="text-center text-[25px] lg:text-[45px] font-raleway font-normal text-darkblue">
-          {ReTestimonial.title}
+          {dataSection.title_section}
         </h2>
         <p className="text-center text-sm lg:text-lg font-normal text-darkblue opacity-80 w-full lg:w-[60%] mt-3 mb-10 lg:mb-13">
-          {ReTestimonial.desc}
+          {dataSection.description_section}
         </p>
 
         {/* Stack Cards */}

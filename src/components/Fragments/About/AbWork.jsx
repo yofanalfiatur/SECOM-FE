@@ -3,15 +3,9 @@
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useRef, useEffect } from "react";
-import useIsDesktop from "@/components/Hooks/useIsDesktop";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const AboutWork = ({ translationKey }) => {
-  const t = useTranslations();
-  const AboutWork = t.raw(translationKey);
-  const isDesktop = useIsDesktop();
-
+const AboutWork = ({ dataSection }) => {
   // Refs untuk sync
   const titleSplideRef = useRef(null);
   const imgSplideRef = useRef(null);
@@ -38,7 +32,7 @@ const AboutWork = ({ translationKey }) => {
       <div className="container !p-0  mx-auto flex flex-col lg:flex-row items-center">
         <div className="w-full lg:w-7/12 flex flex-col justify-center h-auto lg:h-[200px] lg:border-white/50 lg:border-r-[1px]">
           <h2 className="text-white text-[35px] lg:text-[50px] font-normal my-4 lg:my-auto px-4 lg:px-0">
-            {AboutWork.title}
+            {dataSection.title}
           </h2>
         </div>
         <div className="w-full lg:w-5/12 flex flex-col py-4 px-4 lg:py-10 lg:px-15 border-t-[1px] lg:border-t-[0] border-white/50 ab-work__wrap-slider-title">
@@ -57,7 +51,7 @@ const AboutWork = ({ translationKey }) => {
             hasTrack={false}
           >
             <SplideTrack>
-              {AboutWork.items.map((item, index) => (
+              {dataSection.slides.map((item, index) => (
                 <SplideSlide
                   key={index}
                   className="h-max flex flex-row justify-center items-center gap-4 ab-work__slide-title"
@@ -126,10 +120,10 @@ const AboutWork = ({ translationKey }) => {
               hasTrack={false}
             >
               <SplideTrack>
-                {AboutWork.items.map((item, index) => (
+                {dataSection.slides.map((item, index) => (
                   <SplideSlide key={index} className="h-max ab-work__slide-img">
                     <Image
-                      src={item.image}
+                      src={process.env.NEXT_PUBLIC_STORAGE_URL + item.logo}
                       alt={item.title}
                       width={684}
                       height={331}
@@ -158,13 +152,13 @@ const AboutWork = ({ translationKey }) => {
               hasTrack={false}
             >
               <SplideTrack>
-                {AboutWork.items.map((item, index) => (
+                {dataSection.slides.map((item, index) => (
                   <SplideSlide
                     key={index}
                     className="h-max ab-work__slide-desc"
                   >
                     <p className="text-white leading-[1.7] lg:leading-[1.5] text-sm lg:text-base h-max ab-work__item-desc">
-                      {item.desc}
+                      {item.description}
                     </p>
                   </SplideSlide>
                 ))}

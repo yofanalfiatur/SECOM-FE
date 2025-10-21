@@ -1,15 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import useIsDesktop from "@/components/Hooks/useIsDesktop";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 
-const AboutLocation = ({ translationKey }) => {
-  const t = useTranslations();
-  const AboutLocation = t.raw(translationKey);
-  const isDesktop = useIsDesktop();
+const AboutLocation = ({ dataSection }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const locale = useLocale();
   // Fungsi untuk membersihkan nomor telepon
@@ -23,15 +19,15 @@ const AboutLocation = ({ translationKey }) => {
         {/* Left side: buttons */}
         <div className="w-full lg:w-3/12 flex flex-col pt-0 lg:pt-8">
           <h2 className="text-darkblue text-[25px] lg:text-[40px] font-medium font-raleway">
-            {AboutLocation.title}
+            {dataSection.title}
           </h2>
           <p className="mt-2 mb-4 text-darkblue text-sm lg:text-lg leading-[1.7] lg:leading-[1.5]">
-            {AboutLocation.desc}
+            {dataSection.description}
           </p>
 
           {/* filter desktop */}
           <div className="hidden lg:flex flex-col gap-4">
-            {AboutLocation.items.map((item, index) => (
+            {dataSection.cards.map((item, index) => (
               <button
                 key={index}
                 onClick={() => setActiveIndex(index)}
@@ -53,7 +49,7 @@ const AboutLocation = ({ translationKey }) => {
               onChange={(e) => setActiveIndex(Number(e.target.value))}
               className="border-[#00000033] border rounded-[5px] px-3 py-3.5 text-xs md:text-sm text-navyblue font-normal cursor-pointer w-full mb-5"
             >
-              {AboutLocation.items.map((item, index) => (
+              {dataSection.cards.map((item, index) => (
                 <option key={index} value={index}>
                   {item.name}
                 </option>
@@ -64,7 +60,7 @@ const AboutLocation = ({ translationKey }) => {
 
         {/* Right side: embeds */}
         <div className="w-full lg:w-9/12 relative">
-          {AboutLocation.items.map((item, index) => (
+          {dataSection.cards.map((item, index) => (
             <div
               key={index}
               className={`flex flex-row lg:items-end ab-location__embed absolute top-0 left-0 w-full pl-0.5 lg:pl-10 transition-all duration-500 ${
@@ -76,7 +72,7 @@ const AboutLocation = ({ translationKey }) => {
               {/* Image */}
               <div className="w-1/3 hidden lg:flex flex-col">
                 <Image
-                  src={item.image}
+                  src={process.env.NEXT_PUBLIC_STORAGE_URL + item.image}
                   alt={item.name}
                   width={1000}
                   height={1000}
@@ -87,37 +83,40 @@ const AboutLocation = ({ translationKey }) => {
               {/* Embed + Address */}
               <div className="w-full lg:w-2/3 flex flex-col">
                 <div
-                  dangerouslySetInnerHTML={{ __html: item.embed }}
+                  dangerouslySetInnerHTML={{ __html: item.embed_gmaps }}
                   className="flex flex-col aspect-[285/147] lg:aspect-[720/300] w-full h-auto"
                 />
                 <div className="grid grid-cols-12 items-center bg-tosca pl-4 lg:pl-5 pr-4 lg:pr-8">
-                  <div className="col-span-12 lg:col-span-6 gap-1 flex flex-col mt-3 mb-4">
+                  <div className="col-span-12 lg:col-span-8 gap-2 flex flex-col mt-3 mb-4">
                     <p className="text-white text-sm leading-[1.7] mb-2 lg:mb-0">
                       {item.address}
                     </p>
-                    <Link
-                      href={`tel:${cleanPhoneNumber(item.phone)}`}
-                      className="text-white text-[15px] lg:text-base font-semibold flex flex-row items-center gap-3 w-max relative after:content-[''] after:absolute after:bottom-0 after:bg-white after:h-[1px] after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease"
-                    >
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
+                    {item.telephone && (
+                      <Link
+                        href={`tel:${cleanPhoneNumber(item.telephone)}`}
+                        className="text-white text-[15px] lg:text-base font-semibold flex flex-row items-center gap-3 w-max relative after:content-[''] after:absolute after:bottom-0 after:bg-white after:h-[1px] after:w-0 hover:after:w-full after:transition-all after:duration-300 after:ease"
                       >
-                        <path
-                          d="M15.4434 1.60742C15.7656 1.69531 16 1.95898 16 2.28125C16 9.81055 9.90625 15.875 2.40625 15.875C2.05469 15.875 1.79102 15.6699 1.70312 15.3477L1 12.3008C0.941406 11.9785 1.08789 11.627 1.41016 11.4805L4.69141 10.0742C4.98438 9.95703 5.30664 10.0449 5.51172 10.2793L6.97656 12.0664C9.26172 10.9824 11.1074 9.10742 12.1621 6.88086L10.375 5.41602C10.1406 5.21094 10.0527 4.88867 10.1699 4.5957L11.5762 1.31445C11.7227 0.992188 12.0742 0.816406 12.3965 0.904297L15.4434 1.60742Z"
-                          fill="white"
-                        />
-                      </svg>
-                      <p className="text-white">{item.phone}</p>
-                    </Link>
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15.4434 1.60742C15.7656 1.69531 16 1.95898 16 2.28125C16 9.81055 9.90625 15.875 2.40625 15.875C2.05469 15.875 1.79102 15.6699 1.70312 15.3477L1 12.3008C0.941406 11.9785 1.08789 11.627 1.41016 11.4805L4.69141 10.0742C4.98438 9.95703 5.30664 10.0449 5.51172 10.2793L6.97656 12.0664C9.26172 10.9824 11.1074 9.10742 12.1621 6.88086L10.375 5.41602C10.1406 5.21094 10.0527 4.88867 10.1699 4.5957L11.5762 1.31445C11.7227 0.992188 12.0742 0.816406 12.3965 0.904297L15.4434 1.60742Z"
+                            fill="white"
+                          />
+                        </svg>
+                        <p className="text-white">{item.telephone}</p>
+                      </Link>
+                    )}
                   </div>
 
-                  <div className="col-span-12 lg:col-span-6 flex flex-col lg:items-end mb-8 lg:mb-0">
+                  <div className="col-span-12 lg:col-span-4 flex flex-col lg:items-end mb-8 lg:mb-0">
                     <Link
-                      href={item.gmaps}
+                      href={item.address_url}
+                      target="_blank"
                       className="text-white font-raleway text-xs lg:text-sm tracking-[2px] flex flex-row items-center h-max w-max gap-3 transition-all ease duration-200 hover:gap-4 relative after:content-[''] after:w-0 after:h-[1px] after:absolute after:bottom-0 after:bg-white after:transition-all after:ease after:duration-200 hover:after:w-full"
                     >
                       {locale === "en" ? "GET DIRECTION" : "LIHAT PETA"}

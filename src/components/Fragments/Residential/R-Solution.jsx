@@ -4,30 +4,26 @@ import Image from "next/image";
 import ButtonSecondary from "@/components/Elements/ButtonSecondary";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
-const ResSolution = () => {
-  const t = useTranslations();
-  const ReSolution = t.raw("ReSolution");
+const ResSolution = ({ dataSection }) => {
+  const locale = useLocale();
 
   return (
     <section className="pt-11 pb-19 lg:py-10 res-sol bg-navyblue overflow-hidden">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between gap-8 lg:gap-2">
         <div className="flex flex-col justify-center w-full lg:w-[45%] z-10 bg-navyblue relative lg:pr-6 before:content-[''] before:absolute before:h-full before:bottom-0 before:right-[-2rem] before:bg-navyblue before:-z-10 before:[width:calc(150%+(100vw-1320px+0rem)/2)]">
           <p className="text-sm lg:text-xl text-white font-raleway tracking-[5px] font-light opacity-80 uppercase">
-            {ReSolution.hint}
+            {locale === "en" ? "Our Solutions" : "Solusi Kami"}
           </p>
           <h2 className="text-white text-[25px] lg:text-[45px] font-raleway font-medium mt-3 lg:mt-5 mb-2 w-full lg:w-[80%] leading-[1.4] lg:leading-[1.2]">
-            {ReSolution.title}
+            {dataSection.title_section}
           </h2>
           <p className="text-white text-sm lg:text-lg font-raleway font-normal mb-6 leading-[1.5] w-full lg:w-[80%]">
-            {ReSolution.desc}
+            {dataSection.description_section}
           </p>
-          <ButtonSecondary
-            href={ReSolution.btnSolution.href}
-            target={ReSolution.btnSolution.target}
-          >
-            {ReSolution.btnSolution.text}
+          <ButtonSecondary href={`/solution`} target={"_self"}>
+            {locale === "en" ? "LEARN MORE" : "SELENGKAPNYA"}
           </ButtonSecondary>
         </div>
 
@@ -82,11 +78,11 @@ const ResSolution = () => {
               </button>
             </div>
             <SplideTrack>
-              {ReSolution.itemSlider.map((item, index) => (
+              {dataSection.slides.map((item, index) => (
                 <SplideSlide key={index} className="flex flex-col">
                   <div className="bg-white overflow-hidden relative h-full flex flex-col w-full">
                     <Image
-                      src={item.photo}
+                      src={process.env.NEXT_PUBLIC_STORAGE_URL + item.image}
                       alt={item.title}
                       width={693}
                       height={524}
@@ -100,7 +96,7 @@ const ResSolution = () => {
                         </p>
                         <div
                           className="text-white text-sm lg:text-base leading-[1.7] lg:leading-[1.5] "
-                          dangerouslySetInnerHTML={{ __html: item.desc }}
+                          dangerouslySetInnerHTML={{ __html: item.description }}
                         />
                       </div>
                     </div>

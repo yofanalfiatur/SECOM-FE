@@ -1,33 +1,59 @@
 "use client";
 
-import ButtonPrimary from "@/components/Elements/ButtonPrimary";
 import React, { useState } from "react";
 import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
-const ResSurvey = () => {
-  const t = useTranslations();
-  const ReSurvey = t.raw("ReSurvey");
+const ResSurvey = ({ dataSection }) => {
   const locale = useLocale();
 
+  // --- MAP DATA from API ---
+  const survey =
+    dataSection?.cards?.map((card) => ({
+      question: card.question,
+      options: [
+        { text: card.answer_a, value: "a" },
+        { text: card.answer_b, value: "b" },
+      ],
+    })) || [];
+
+  const result =
+    dataSection?.result?.map((r) => ({
+      icon: r.icon ? `${process.env.NEXT_PUBLIC_STORAGE_URL + r.icon}` : "",
+      title: r.title,
+      subtitle: r.title,
+      desc: r.description,
+      btn: {
+        text: locale === "en" ? "Discover Now" : "Temukan Solusinya",
+        href: "/solution/",
+        target: "_self",
+      },
+    })) || [];
+
+  // --- RESULT COMBINATION (HARDCODE) ---
+  const resultCombinations = {
+    high: ["a-a-a", "a-b-a", "b-a-a"],
+    moderate: ["a-a-b", "a-b-b", "b-a-b", "b-b-a", "b-b-b"],
+  };
+
+  // --- STATES ---
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [showResult, setShowResult] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
+  // --- HANDLER ---
   const handleAnswer = (value) => {
     setIsTransitioning(true);
-
     setTimeout(() => {
       const newAnswers = [...answers, value];
       setAnswers(newAnswers);
 
-      if (currentQuestion < ReSurvey.survey.length - 1) {
+      if (currentQuestion < survey.length - 1) {
         setCurrentQuestion(currentQuestion + 1);
       } else {
-        // Survey completed, show result
         setShowResult(true);
       }
       setIsTransitioning(false);
@@ -36,22 +62,20 @@ const ResSurvey = () => {
 
   const getResult = () => {
     const answerKey = answers.join("-");
-
     for (const [riskLevel, combinations] of Object.entries(
-      ReSurvey.resultCombinations
+      resultCombinations
     )) {
       if (combinations.includes(answerKey)) {
         switch (riskLevel) {
           case "high":
-            return ReSurvey.result[0];
+            return result[0];
           case "moderate":
-            return ReSurvey.result[1];
           default:
-            return ReSurvey.result[1]; // Default to moderate
+            return result[1];
         }
       }
     }
-    return ReSurvey.result[1]; // Default to moderate if no match
+    return result[1];
   };
 
   const resetSurvey = () => {
@@ -64,11 +88,13 @@ const ResSurvey = () => {
     }, 300);
   };
 
+  // --- RENDER ---
   return (
     <section className="relative res-survey mt-[-50px] lg:mt-[-3rem] z-10">
       <div className="container mx-auto flex flex-col relative">
         <div className="flex flex-col relative w-full">
           <div className="flex bg-white pt-[1.9rem] lg:pt-[2.3rem] flex-col items-center justify-center relative z-[1] m-[3px] md:m-[5px] res-survey__wrap">
+            {/* Title & Description */}
             <motion.div
               animate={{ opacity: 1 }}
               initial={{ opacity: 0 }}
@@ -88,6 +114,7 @@ const ResSurvey = () => {
                 />
               </svg>
             </motion.div>
+
             <div className="flex flex-col w-full border-b-1 border-[#00529C33] pb-5 px-6">
               <motion.p
                 animate={{ opacity: 1 }}
@@ -95,15 +122,17 @@ const ResSurvey = () => {
                 transition={{ duration: 0.3 }}
                 className="text-navyblue text-center font-bold text-[13px] md:text-lg lg:text-[25px] font-raleway"
               >
-                {ReSurvey.title}
+                {dataSection.title_section}
               </motion.p>
               <motion.p
                 animate={{ opacity: 1 }}
                 initial={{ opacity: 0 }}
                 transition={{ duration: 0.3, delay: 0.4 }}
-                className="text-[13px] md:text-lg  lg:text-[25px] text-center font-normal text-navyblue font-raleway mt-1 lg:mt-0"
+                className="text-[13px] md:text-lg lg:text-[25px] text-center font-normal text-navyblue font-raleway mt-1 lg:mt-0"
               >
-                {showResult ? ReSurvey.descResult : ReSurvey.desc}
+                {showResult
+                  ? dataSection.description_result_section
+                  : dataSection.description_section}
               </motion.p>
             </div>
 
@@ -118,21 +147,20 @@ const ResSurvey = () => {
                   }`}
                 >
                   <p className="text-navyblue text-[25px] md:text-3xl lg:text-6xl text-center w-[95%] lg:w-[70%] mb-5 lg:mb-10 leading-[1.15]">
-                    {ReSurvey.survey[currentQuestion]?.question}
+                    {survey[currentQuestion]?.question}
                   </p>
+
                   <div className="flex flex-col items-center md:items-start res-survey__wrap-btn gap-3 lg:gap-4 max-w-max">
-                    {ReSurvey.survey[currentQuestion]?.options.map(
-                      (answer, index) => (
-                        <button
-                          key={index}
-                          className="py-3 lg:py-4 pl-6 pr-[22px] bg-tosca text-sm lg:text-base tracking-[4px] text-white rounded-[5px] hover:bg-tosca-dark transition-colors duration-300 text-center uppercase cursor-pointer flex flex-col items-center justify-center w-full hover:bg-navyblue"
-                          onClick={() => handleAnswer(answer.value)}
-                          disabled={isTransitioning}
-                        >
-                          {answer.text}
-                        </button>
-                      )
-                    )}
+                    {survey[currentQuestion]?.options.map((answer, index) => (
+                      <button
+                        key={index}
+                        className="py-3 lg:py-4 pl-6 pr-[22px] bg-tosca text-sm lg:text-base tracking-[4px] text-white rounded-[5px] hover:bg-tosca-dark transition-colors duration-300 text-center uppercase cursor-pointer flex flex-col items-center justify-center w-full hover:bg-navyblue"
+                        onClick={() => handleAnswer(answer.value)}
+                        disabled={isTransitioning}
+                      >
+                        {answer.text}
+                      </button>
+                    ))}
                   </div>
                 </div>
               ) : (
@@ -153,13 +181,11 @@ const ResSurvey = () => {
                   <p className="text-navyblue font-normal text-[25px] lg:text-6xl text-center mb-2 lg:mb-4">
                     {getResult().title}
                   </p>
-                  <p className="text-navyblue font-medium leading-[1.7] lg:leading-[1.5] text-sm lg:text-xl text-center w-[90%] md:w-[70%]">
-                    {getResult().subtitle}
-                  </p>
+                  <p
+                    className="text-navyblue leading-[1.7] lg:leading-[1.5] text-sm lg:text-xl text-center w-[90%] md:w-[70%] mb-4 lg:mb-6"
+                    dangerouslySetInnerHTML={{ __html: getResult().desc }}
+                  />
 
-                  <p className="text-navyblue leading-[1.7] lg:leading-[1.5] text-sm lg:text-xl text-center w-[90%] md:w-[70%] mb-4 lg:mb-6">
-                    {getResult().desc}
-                  </p>
                   <div className="flex flex-row res-survey__wrap-btn gap-4 mb-5">
                     <Link
                       target={getResult().btn.target}
@@ -169,18 +195,9 @@ const ResSurvey = () => {
                       {getResult().btn.text}
                     </Link>
                   </div>
-                  {/* hide temp */}
-                  {/* <button
-                    onClick={resetSurvey}
-                    className="text-navyblue text-lg underline hover:text-tosca transition-colors duration-300 cursor-pointer"
-                    disabled={isTransitioning}
-                  >
-                    {locale === "en" ? "Take Survey Again" : "Ulangi Survey"}
-                  </button> */}
                 </div>
               )}
             </div>
-            {/* End Survey */}
           </div>
           <div className="absolute top-0 left-0 w-full h-full z-0 animated-gradient-bg2 transition-all duration-200 ease opacity-100"></div>
         </div>

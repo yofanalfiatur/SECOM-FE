@@ -13,14 +13,15 @@ import AmReason from "@/components/Fragments/Alarm/AmReason";
 import FloatButton from "@/components/Elements/FloatButton";
 import AmHowWorks from "@/components/Fragments/Alarm/AmHowWorks";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
+import OverviewGlobal from "@/components/Fragments/Global/OverviewGlobal";
 
 const SolutionsPage = () => {
   const isDesktop = useIsDesktop();
   return (
     <>
       {/* home */}
-      <AmBanner translationKey="SolBanner" />
-      <AmOverview translationKey="SolOverview" />
+      {/* <AmBanner translationKey="SolBanner" />
+      <OverviewGlobal translationKey="SolOverview" />
       {isDesktop ? (
         <AmHowWorks translationKey="SolReason" />
       ) : (
@@ -47,7 +48,7 @@ const SolutionsPage = () => {
         packagesRent="HomePackagesRent"
       />
       <AmFAQ translationKey="SolFAQ" />
-      <FloatButton />
+      <FloatButton /> */}
     </>
   );
 };

@@ -3,15 +3,11 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { useEffect, useState } from "react";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 
 const AbWorldMap = (props) => {
-  const { translationKey } = props;
-  const t = useTranslations();
-  const AbWorldMap = t.raw(translationKey);
-  const SecomWorldList = t.raw("SecomWorldList");
+  const { dataSection, pinMap } = props;
 
   const isDesktop = useIsDesktop();
 
@@ -36,17 +32,17 @@ const AbWorldMap = (props) => {
     <section className="bg-darkblue pt-13 pb-10 lg:pt-13 lg:pb-10 flex flex-col items-center overflow-hidden abw-map">
       <div className="container mx-auto flex flex-col items-center">
         <h2 className="text-white text-[30px] lg:text-[40px] font-raleway font-normal text-center">
-          {AbWorldMap.title}
+          {dataSection.title}
         </h2>
         <p className="text-white lg:w-[55%] text-sm lg:text-lg leading-[1.7] lg:leading-[1.5] text-center mt-2 lg:mt-3 mb-8 lg:mb-13">
-          {AbWorldMap.desc}
+          {dataSection.description}
         </p>
       </div>
 
       {/* MAP + PIN */}
       <div className="px-4 lg:px-15 xl:px-20 flex flex-col items-center w-full relative">
         <Image
-          src={AbWorldMap.bgMap}
+          src={`/img/temp/about/abw-bg-map.png`}
           width={1920}
           height={1080}
           alt="ab-world-map"
@@ -54,7 +50,7 @@ const AbWorldMap = (props) => {
           className="w-full h-full object-cover"
         />
 
-        {SecomWorldList.map((item, index) => (
+        {pinMap.map((item, index) => (
           <Link
             href={item.href}
             className={`absolute ${
@@ -139,7 +135,7 @@ const AbWorldMap = (props) => {
             onMoved={(splide, newIndex) => setActiveSlide(newIndex)}
           >
             <SplideTrack>
-              {SecomWorldList.map((item, index) => (
+              {pinMap.map((item, index) => (
                 <SplideSlide
                   key={index}
                   className="w-full flex flex-col items-center justify-center"

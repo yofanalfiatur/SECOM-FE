@@ -21,29 +21,14 @@
     {
       "icon": "/img/menu-type-1.svg",
       "text": "Bisnis",
-      "href": "",
-      "subMenu": [
-        {
-          "subMenuText": "SECOM Smart Security",
-          "subMenuHref": "/alarm"
-        }
-      ]
+      "href": "business",
+      "subMenu": ""
     },
     {
       "icon": "/img/menu-type-2.svg",
       "text": "Residensial",
-      "href": "",
-
-      "subMenu": [
-        {
-          "subMenuText": "Sekilas",
-          "subMenuHref": "/"
-        },
-        {
-          "subMenuText": "Solusi",
-          "subMenuHref": "/solutions"
-        }
-      ]
+      "href": "/residential",
+      "subMenu": ""
     }
   ],
   "MenuHeader": [
@@ -53,61 +38,62 @@
     },
     {
       "text": "Tentang",
-      "href": "/about",
+      "href": "#",
       "subMenu": [
         {
-          "subMenuText": "Alarm",
-          "subMenuHref": "/alarm"
+          "subMenuText": "Secom Indonesia",
+          "subMenuHref": "/about"
         },
         {
-          "subMenuText": "Our Team",
-          "subMenuHref": "/about/our-team"
-        },
-        {
-          "subMenuText": "Our Partners",
-          "subMenuHref": "/about/our-partners"
-        },
-        {
-          "subMenuText": "Thank You",
-          "subMenuHref": "/thankyou"
-        },
-        {
-          "subMenuText": "Error Page 404",
-          "subMenuHref": "/error"
+          "subMenuText": "Secom Worldwide",
+          "subMenuHref": "/about-world"
         }
       ]
     },
     {
       "text": "Articles",
-      "href": "/articles"
+      "href": "/news"
     }
   ],
   "MenuHeaderMd": [
     {
+      "text": "Beranda",
+      "href": "/",
+      "icon": "",
+      "subMenu": ""
+    },
+    {
       "text": "Bisnis",
       "href": "/#",
       "icon": "/img/menu-type-1.svg",
-      "subMenu": [
-        {
-          "subMenuText": "SECOM Smart Security",
-          "subMenuHref": "/alarm"
-        }
-      ]
+      "subMenu": ""
     },
     {
       "text": "Residensial",
       "href": "/#",
       "icon": "/img/menu-type-2.svg",
+      "subMenu": ""
+    },
+    {
+      "text": "Tentang",
+      "href": "#",
+      "icon": "",
       "subMenu": [
         {
-          "subMenuText": "Sekilas",
-          "subMenuHref": "/"
+          "subMenuText": "Secom Indonesia",
+          "subMenuHref": "/about"
         },
         {
-          "subMenuText": "Solusi",
-          "subMenuHref": "/solutions"
+          "subMenuText": "Secom Worldwide",
+          "subMenuHref": "/about-world"
         }
       ]
+    },
+    {
+      "text": "Articles",
+      "href": "/articles",
+      "icon": "",
+      "subMenu": ""
     }
   ],
   "HeaderButton": {
@@ -1569,7 +1555,7 @@
   "HomeBanner": [
     {
       "title": "#1 Qui ipsorum lingua Celtae, nostra",
-      "desc": "Quisque ut dolor gravida, placerat libero vel, euismod. Unam incolunt Belgae, aliam Aquitani, tertiam. Hi omnes lingua, institutis, legibus inter se differunt.",
+      "desc": "Quisque ut dolor gravida, placerat libero vel, euismod. Unam incolunt Belgae, aliam Aquitani, tertiam. Hi omnes lingua, institutis, legibus inter se differunt. gravida, placerat libero vel, euismod. Unam incolunt Belgae, aliam Aquitani, tertiam. Hi omnes lingua, institutis, legibus inter se differunt.",
       "btnCTA": {
         "text": "Lebih Lengkap",
         "href": "/#lebihlengkap",
@@ -2010,9 +1996,9 @@
   },
 
   "SectorBanner": {
-    "title": "Total Security for Every Sectors",
-    "bgDesktop": "/img/temp/solutions/sol-bg-high.jpg",
-    "bgMobile": "/img/temp/residential/Residence LP Hero ENG Mobile.jpg"
+    "title": "<b>Total Security</b> for Every Sectors",
+    "image": "/img/temp/solutions/sol-bg-high.jpg",
+    "imageMd": "/img/temp/residential/Residence LP Hero ENG Mobile.jpg"
   },
 
   "SectorServices": {
@@ -2089,20 +2075,44 @@
         "desc": "We provide smart, reliable security solutions for data centers — from strict access control to 24/7 surveillance",
         "image": "/img/temp/solutions/sol-bg-high.jpg",
         "link": "/#data-center"
+      },
+      {
+        "title": "13Government",
+        "desc": "We provide smart, reliable security solutions for data centers — from strict access control to 24/7 surveillance",
+        "image": "/img/temp/solutions/sol-bg-high.jpg",
+        "link": "/#data-center"
+      },
+      {
+        "title": "14Hotel",
+        "desc": "We provide smart, reliable security solutions for data centers — from strict access control to 24/7 surveillance",
+        "image": "/img/temp/solutions/sol-bg-high.jpg",
+        "link": "/#data-center"
+      },
+      {
+        "title": "15Restaurant",
+        "desc": "We provide smart, reliable security solutions for data centers — from strict access control to 24/7 surveillance",
+        "image": "/img/temp/solutions/sol-bg-high.jpg",
+        "link": "/#data-center"
       }
     ]
   },
 
   "SectorDetailBanner": {
-    "title": "Complete Protection for Your Data Center",
-    "bgDesktop": "/img/temp/solutions/sol-bg-high.jpg",
+    "title": "<b>Complete Protection</b> for Your Data Center",
+    "image": "/img/temp/solutions/sol-bg-high.jpg",
+    "imageMd": "/img/temp/solutions/sol-bg-high.jpg",
     "desc": "Data center security is about more than hardware, it's about <b>protecting your entire digital operation</b>. We offer end-to-end solutions, from access control to on-site security, ensuring 24/7 protection, compliance, and peace of mind."
   },
   "SectorDetailSlider": {
     "title": "Data Center Security Challenges",
     "items": [
       {
-        "title": "Unauthorized Physical Access",
+        "title": "Unauthorized Physical Access Unauthorized Physical Access",
+        "desc": "Plura mihi bona sunt, inclinet, amari petere vellent. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae. Ab illo tempore, ab est sed immemorabili. Ambitioni dedisse scripsisse iudicaretur. Paullum deliquit, ponderibus modulisque suis ratio utitur. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Cras mattis iudicium purus",
+        "image": "/img/temp/solutions/sol-bg-high.jpg"
+      },
+      {
+        "title": "#2Unauthorized Physical Access",
         "desc": "Plura mihi bona sunt, inclinet, amari petere vellent. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae. Ab illo tempore, ab est sed immemorabili. Ambitioni dedisse scripsisse iudicaretur. Paullum deliquit, ponderibus modulisque suis ratio utitur. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Cras mattis iudicium purus",
         "image": "/img/temp/solutions/sol-bg-high.jpg"
       }
@@ -2152,38 +2162,51 @@
     "desc": "Plura mihi bona sunt, inclinet, amari petere vellent. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae. Ab illo tempore, ab est sed immemorabili. Ambitioni dedisse scripsisse iudicaretur. Paullum deliquit, ponderibus modulisque suis ratio utitur. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Cras mattis iudicium purus",
     "image": "/img/temp/solutions/sol-bg-high.jpg"
   },
-  "CareerCard": [
-    {
-      "title": "1Curabitur blandit tempus ardua ridiculus sed magna.",
-      "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
-      "image": "/img/temp/solutions/sol-bg-high.jpg"
-    },
-    {
-      "title": "2Curabitur blandit tempus ardua ridiculus sed magna.",
-      "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
-      "image": "/img/temp/solutions/sol-bg-high.jpg"
-    },
-    {
-      "title": "3Curabitur blandit tempus ardua ridiculus sed magna.",
-      "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
-      "image": "/img/temp/solutions/sol-bg-high.jpg"
-    },
-    {
-      "title": "4Prima luce, cum quibus mons aliud consensu ab eo.",
-      "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
-      "image": "/img/temp/solutions/sol-bg-high.jpg"
-    },
-    {
-      "title": "5Curabitur blandit tempus ardua ridiculus sed magna.",
-      "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
-      "image": "/img/temp/solutions/sol-bg-high.jpg"
-    },
-    {
-      "title": "6Curabitur blandit tempus ardua ridiculus sed magna.",
-      "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
-      "image": "/img/temp/solutions/sol-bg-high.jpg"
-    }
-  ],
+  "CareerCard": {
+    "title": "Prima luce, cum quibus mons aliud consensu ab eo.",
+    "items": [
+      {
+        "title": "",
+        "icon": "",
+        "image": "/img/temp/solutions/sol-bg-high.jpg"
+      },
+      {
+        "title": "2Curabitur blandit tempus ardua ridiculus sed magna.",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "image": ""
+      },
+      {
+        "title": "3Curabitur blandit tempus ardua ridiculus sed magna.",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "image": ""
+      },
+      {
+        "title": "4Prima luce, cum quibus mons aliud consensu ab eo.",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "image": ""
+      },
+      {
+        "title": "5Curabitur blandit tempus ardua ridiculus sed magna.",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "image": ""
+      },
+      {
+        "title": "",
+        "icon": "",
+        "image": "/img/temp/solutions/sol-bg-high.jpg"
+      },
+      {
+        "title": "5Prima luce, cum quibus mons aliud consensu ab eo.",
+        "icon": "/img/temp/alarm/Residence How SECOM Protects You Alarm.svg",
+        "image": ""
+      },
+      {
+        "title": "",
+        "icon": "",
+        "image": "/img/temp/solutions/sol-bg-high.jpg"
+      }
+    ]
+  },
   "CareerVacancies": {
     "title": "Job Vacancies",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Ambitioni dedisse scripsisse iudicaretur."
@@ -2192,6 +2215,7 @@
   "Vacancies": [
     {
       "title": "#1 Salesforce Developer",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
       "shortDesc": "Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras.",
       "location": "Jakarta",
       "type": "Full Time",
@@ -2220,6 +2244,7 @@
     },
     {
       "title": "#2 Frontend Engineer",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
       "shortDesc": "Build modern and scalable user interfaces for enterprise applications.",
       "location": "Bandung",
       "type": "Part Time",
@@ -2243,6 +2268,7 @@
     },
     {
       "title": "#3 UI/UX Designer",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
       "shortDesc": "Design intuitive user experiences and interfaces for web and mobile applications.",
       "location": "Yogyakarta",
       "type": "Freelance",
@@ -2268,6 +2294,7 @@
     },
     {
       "title": "#4 Backend Engineer",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
       "shortDesc": "Design and implement server-side applications and scalable APIs.",
       "location": "Surabaya",
       "type": "Full Time",
@@ -2290,6 +2317,7 @@
     },
     {
       "title": "#5 Data Analyst",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
       "shortDesc": "Analyze data to provide business insights and recommendations.",
       "location": "Medan",
       "type": "Part Time",
@@ -2315,6 +2343,266 @@
     },
     {
       "title": "#6 Digital Marketing Specialist",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
+      "shortDesc": "Plan and execute online marketing campaigns to boost brand awareness.",
+      "location": "Bali",
+      "type": "Freelance",
+      "experience": "5 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in Marketing or related field.",
+        "Proven experience in SEO, SEM, and social media ads.",
+        "Knowledge of Google Analytics and marketing automation tools.",
+        "Creative thinking and copywriting skills.",
+        "Ability to manage multiple campaigns simultaneously.",
+        "Strong communication and leadership skills."
+      ],
+      "responsibilities": [
+        "Develop and implement marketing strategies.",
+        "Manage advertising budgets and optimize ROI.",
+        "Monitor performance metrics and prepare reports."
+      ],
+      "benefit": [
+        "Performance-based bonuses",
+        "Remote work availability",
+        "Professional development courses"
+      ]
+    },
+    {
+      "title": "#7 Digital Marketing Specialist",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
+      "shortDesc": "Plan and execute online marketing campaigns to boost brand awareness.",
+      "location": "Bali",
+      "type": "Freelance",
+      "experience": "5 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in Marketing or related field.",
+        "Proven experience in SEO, SEM, and social media ads.",
+        "Knowledge of Google Analytics and marketing automation tools.",
+        "Creative thinking and copywriting skills.",
+        "Ability to manage multiple campaigns simultaneously.",
+        "Strong communication and leadership skills."
+      ],
+      "responsibilities": [
+        "Develop and implement marketing strategies.",
+        "Manage advertising budgets and optimize ROI.",
+        "Monitor performance metrics and prepare reports."
+      ],
+      "benefit": [
+        "Performance-based bonuses",
+        "Remote work availability",
+        "Professional development courses"
+      ]
+    },
+    {
+      "title": "#8 Digital Marketing Specialist",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
+      "shortDesc": "Plan and execute online marketing campaigns to boost brand awareness.",
+      "location": "Bali",
+      "type": "Freelance",
+      "experience": "5 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in Marketing or related field.",
+        "Proven experience in SEO, SEM, and social media ads.",
+        "Knowledge of Google Analytics and marketing automation tools.",
+        "Creative thinking and copywriting skills.",
+        "Ability to manage multiple campaigns simultaneously.",
+        "Strong communication and leadership skills."
+      ],
+      "responsibilities": [
+        "Develop and implement marketing strategies.",
+        "Manage advertising budgets and optimize ROI.",
+        "Monitor performance metrics and prepare reports."
+      ],
+      "benefit": [
+        "Performance-based bonuses",
+        "Remote work availability",
+        "Professional development courses"
+      ]
+    },
+
+    {
+      "title": "#9 Salesforce Developer",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
+      "shortDesc": "Excepteur sint obcaecat cupiditat non proident culpa. Mercedem aut nummos unde unde extricat, amaras.",
+      "location": "Jakarta",
+      "type": "Full Time",
+      "experience": "5 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in any major.",
+        "Good knowledge of a programming language.",
+        "Minimum of 5 years of experience in software development with a focus on Salesforce Development.",
+        "Proficient in developing, deploying, customizing, and integrating Salesforce.",
+        "Demonstrated proficiency in installing and deploying CRM Organizations.",
+        "Demonstrated proficiency in customizing and creating CRM entities.",
+        "Demonstrated proficiency in understanding and implementing business workflows and processes.",
+        "Experience with source control management systems and continuous integration/deployment environments.",
+        "Ability to work independently as well as in a team environment.",
+        "Excellent communication skills with both internal team members and external business stakeholders.",
+        "Strong initiative to find ways to improve solutions, systems, and processes.",
+        "Experience working on an agile development team.",
+        "Fluent in English (Professionally)"
+      ],
+      "responsibilities": [
+        "Develop and maintain Salesforce applications.",
+        "Collaborate with cross-functional teams.",
+        "Participate in code reviews and technical discussions."
+      ],
+      "benefit": ["Health insurance", "Annual leave", "Flexible working hours"]
+    },
+    {
+      "title": "#10 Frontend Engineer",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
+      "shortDesc": "Build modern and scalable user interfaces for enterprise applications.",
+      "location": "Bandung",
+      "type": "Part Time",
+      "experience": "3 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in Computer Science or related field.",
+        "Strong knowledge of React.js and Next.js.",
+        "Familiarity with TailwindCSS and responsive design.",
+        "Experience with state management libraries such as Redux or Zustand.",
+        "Understanding of RESTful APIs and GraphQL.",
+        "Knowledge of CI/CD workflows.",
+        "Strong problem-solving skills and teamwork.",
+        "Fluent in English."
+      ],
+      "responsibilities": [
+        "Develop responsive and reusable components.",
+        "Ensure application performance and scalability.",
+        "Work closely with backend engineers and designers."
+      ],
+      "benefit": ["Remote work option", "Project bonus", "Annual team retreat"]
+    },
+    {
+      "title": "#11 UI/UX Designer",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
+      "shortDesc": "Design intuitive user experiences and interfaces for web and mobile applications.",
+      "location": "Yogyakarta",
+      "type": "Freelance",
+      "experience": "Fresh Graduate",
+      "requirements": [
+        "Bachelor’s degree in Design, IT, or related field.",
+        "Proficiency in Figma, Adobe XD, or Sketch.",
+        "Understanding of design systems and accessibility principles.",
+        "Ability to collaborate with engineers and product managers.",
+        "Portfolio showcasing design projects.",
+        "Strong visual and communication skills."
+      ],
+      "responsibilities": [
+        "Create wireframes, prototypes, and mockups.",
+        "Conduct user research and usability testing.",
+        "Ensure consistency across all design assets."
+      ],
+      "benefit": [
+        "Flexible working schedule",
+        "Project-based income",
+        "Networking opportunities"
+      ]
+    },
+    {
+      "title": "#12 Backend Engineer",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
+      "shortDesc": "Design and implement server-side applications and scalable APIs.",
+      "location": "Surabaya",
+      "type": "Full Time",
+      "experience": "3 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in Computer Science or similar field.",
+        "Experience with Node.js, Express, or NestJS.",
+        "Knowledge of SQL/NoSQL databases.",
+        "Understanding of microservices architecture.",
+        "Experience with Docker and Kubernetes.",
+        "Familiarity with AWS or GCP.",
+        "Team collaboration and problem-solving skills."
+      ],
+      "responsibilities": [
+        "Develop REST and GraphQL APIs.",
+        "Maintain database performance and security.",
+        "Integrate third-party services and APIs."
+      ],
+      "benefit": ["Health insurance", "Performance bonus", "Learning budget"]
+    },
+    {
+      "title": "#13 Data Analyst",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
+      "shortDesc": "Analyze data to provide business insights and recommendations.",
+      "location": "Medan",
+      "type": "Part Time",
+      "experience": "Fresh Graduate",
+      "requirements": [
+        "Bachelor’s degree in Statistics, Mathematics, or related field.",
+        "Strong skills in SQL and Excel.",
+        "Familiarity with Python or R for data analysis.",
+        "Experience with visualization tools like Tableau or PowerBI.",
+        "Analytical mindset and attention to detail.",
+        "Good communication and presentation skills."
+      ],
+      "responsibilities": [
+        "Prepare data reports for stakeholders.",
+        "Identify trends and insights from datasets.",
+        "Support business decision-making with data."
+      ],
+      "benefit": [
+        "Flexible hours",
+        "Remote-friendly",
+        "Skill development program"
+      ]
+    },
+    {
+      "title": "#14 Digital Marketing Specialist",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
+      "shortDesc": "Plan and execute online marketing campaigns to boost brand awareness.",
+      "location": "Bali",
+      "type": "Freelance",
+      "experience": "5 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in Marketing or related field.",
+        "Proven experience in SEO, SEM, and social media ads.",
+        "Knowledge of Google Analytics and marketing automation tools.",
+        "Creative thinking and copywriting skills.",
+        "Ability to manage multiple campaigns simultaneously.",
+        "Strong communication and leadership skills."
+      ],
+      "responsibilities": [
+        "Develop and implement marketing strategies.",
+        "Manage advertising budgets and optimize ROI.",
+        "Monitor performance metrics and prepare reports."
+      ],
+      "benefit": [
+        "Performance-based bonuses",
+        "Remote work availability",
+        "Professional development courses"
+      ]
+    },
+    {
+      "title": "#15 Digital Marketing Specialist",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
+      "shortDesc": "Plan and execute online marketing campaigns to boost brand awareness.",
+      "location": "Bali",
+      "type": "Freelance",
+      "experience": "5 Years of experience",
+      "requirements": [
+        "Bachelor’s degree in Marketing or related field.",
+        "Proven experience in SEO, SEM, and social media ads.",
+        "Knowledge of Google Analytics and marketing automation tools.",
+        "Creative thinking and copywriting skills.",
+        "Ability to manage multiple campaigns simultaneously.",
+        "Strong communication and leadership skills."
+      ],
+      "responsibilities": [
+        "Develop and implement marketing strategies.",
+        "Manage advertising budgets and optimize ROI.",
+        "Monitor performance metrics and prepare reports."
+      ],
+      "benefit": [
+        "Performance-based bonuses",
+        "Remote work availability",
+        "Professional development courses"
+      ]
+    },
+    {
+      "title": "#16 Digital Marketing Specialist",
+      "desc": "Email your CV to lusi@secom.co.id with the subject “position_FullName”. We are looking forward to working together with you!<br><br>SECOM is a global corporation providing comprehensive, integrated security services and systems that make your life more secure, convenient, and comfortable. SECOM, means SECURITY COMMUNICATION, initially established in 1962, is a pioneer in Japan’s security services industry and has expertise in every aspect of security management through its Total Security Solutions services.",
       "shortDesc": "Plan and execute online marketing campaigns to boost brand awareness.",
       "location": "Bali",
       "type": "Freelance",
@@ -2441,7 +2729,7 @@
       "featuredImage": "/img/temp/solutions/sol-bg-high.jpg",
       "content": "<p>Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor. Gallia est omnis divisa in partes tres, quarum. Quis aute iure reprehenderit in voluptate velit esse.</p><p>Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor. Gallia est omnis divisa in partes tres, quarum. Quis aute iure reprehenderit in voluptate velit esse.</p><h2>Heading 2</h2><p>Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor. Gallia est omnis divisa in partes tres, quarum. Quis aute iure reprehenderit in voluptate velit esse.</p><p>Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor. Gallia est omnis divisa in partes tres, quarum. Quis aute iure reprehenderit in voluptate velit esse.</p><ul><li>Me non paenitet nullum festiviorem excogitasse ad hoc.</li><li>Me non paenitet nullum festiviorem excogitasse ad hoc.</li><li>Me non paenitet nullum festiviorem excogitasse ad hoc.</li></ul><ol><li>Me non paenitet nullum festiviorem excogitasse ad hoc.<ol type=\"a\"><li>Fabio vel iudice vincam, sunt in culpa qui officia.</li><li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus.<ol type=\"i\"><li>Gallia est omnis divisa in partes tres, quarum. Ut enim ad minim veniam, quis nostrud exercitation. Excepteur sint obcaecat cupiditat non proident culpa.</li></ol></li></ol></li><li>Me non paenitet nullum festiviorem excogitasse ad hoc.<ol type=\"a\"><li>Gallia est omnis divisa in partes tres, quarum.</li></ol></li></ol><h3>Heading 3 : Tityre, tu patulae recubans sub tegmine fagi dolor.</h3><img src=\"https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80\" alt=\"Elderly couple sitting on couch\" style=\"width: 100%; height: auto; border-radius: 8px; margin: 20px 0;\"><p>Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor. Gallia est omnis divisa in partes tres, quarum. Quis aute iure reprehenderit in voluptate velit esse.Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor.</p><h4>Heading 4 : Tityre, tu patulae recubans sub tegmine fagi dolor.</h4><blockquote style=\"border-left: 4px solid #20b2aa; padding-left: 20px; margin: 20px 0; font-style: italic; color: #2c3e50; font-size: 1.1em;\">Pellentesque habitant morbi tristique senectus et netus. Tityre, tu patulae recubans sub tegmine fagi dolor.</blockquote><h5>Heading 5 : Tityre, tu patulae recubans sub tegmine fagi dolor.</h5><p>Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor. Gallia est omnis divisa in partes tres, quarum. Quis aute iure reprehenderit in voluptate velit esse. Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor. Gallia est omnis divisa.</p>",
       "author": "John Doe",
-      "publishedDate": "2025-09-18T10:30:00Z",
+      "publishedDate": "2024-09-18T10:30:00Z",
       "category": "General",
       "tags": ["lorem", "ipsum", "content", "article"],
       "excerpt": "Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor."
@@ -2451,7 +2739,7 @@
       "title": "Heading 1 : Lorem ipsum dolor sit amet consectetur adipiscing elit.",
       "slug": "news-article-002",
       "isFeatured": true,
-      "featuredImage": "/img/temp/solutions/sol-bg-medium.jpg",
+      "featuredImage": "",
       "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p><h2>Secondary Heading</h2><p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p><p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p><ul><li>At vero eos et accusamus et iusto odio dignissimos ducimus.</li><li>Qui blanditiis praesentium voluptatum deleniti atque corrupti.</li><li>Quos dolores et quas molestias excepturi sint occaecati.</li></ul><ol><li>Cupiditate non provident, similique sunt in culpa.<ol type=\"a\"><li>Qui officia deserunt mollitia animi, id est laborum.</li><li>Et harum quidem rerum facilis est et expedita distinctio.<ol type=\"i\"><li>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.</li></ol></li></ol></li><li>Quo minus id quod maxime placeat facere possimus.<ol type=\"a\"><li>Omnis voluptas assumenda est, omnis dolor repellendus.</li></ol></li></ol><h3>Heading 3 : Temporibus autem quibusdam et aut officiis debitis.</h3><img src=\"https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80\" alt=\"Modern office workspace\" style=\"width: 100%; height: auto; border-radius: 8px; margin: 20px 0;\"><p>Aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p><h4>Heading 4 : Itaque earum rerum hic tenetur a sapiente delectus.</h4><blockquote style=\"border-left: 4px solid #3498db; padding-left: 20px; margin: 20px 0; font-style: italic; color: #2c3e50; font-size: 1.1em;\">Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</blockquote><h5>Heading 5 : Et harum quidem rerum facilis est et expedita distinctio.</h5><p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.</p>",
       "author": "Jane Smith",
       "publishedDate": "2025-09-17T14:15:00Z",
@@ -2464,7 +2752,7 @@
       "title": "Heading 1 : Sed ut perspiciatis unde omnis iste natus error.",
       "slug": "news-article-003",
       "isFeatured": true,
-      "featuredImage": "/img/temp/solutions/sol-bg-low.jpg",
+      "featuredImage": "/img/temp/alarm/alarm-banner.jpg",
       "content": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p><h2>Important Section</h2><p>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p><p>Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p><ul><li>Excepteur sint occaecat cupidatat non proident sunt in culpa.</li><li>Qui officia deserunt mollit anim id est laborum et dolorum fuga.</li><li>Et harum quidem rerum facilis est et expedita distinctio.</li></ul><ol><li>Nam libero tempore cum soluta nobis est eligendi.<ol type=\"a\"><li>Optio cumque nihil impedit quo minus id quod maxime.</li><li>Placeat facere possimus omnis voluptas assumenda est.<ol type=\"i\"><li>Omnis dolor repellendus temporibus autem quibusdam et aut officiis debitis.</li></ol></li></ol></li><li>Aut rerum necessitatibus saepe eveniet ut et voluptates.<ol type=\"a\"><li>Repudiandae sint et molestiae non recusandae.</li></ol></li></ol><h3>Heading 3 : Itaque earum rerum hic tenetur a sapiente delectus.</h3><img src=\"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80\" alt=\"Person using laptop\" style=\"width: 100%; height: auto; border-radius: 8px; margin: 20px 0;\"><p>Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p><h4>Heading 4 : Omnis voluptas assumenda est omnis dolor repellendus.</h4><blockquote style=\"border-left: 4px solid #e74c3c; padding-left: 20px; margin: 20px 0; font-style: italic; color: #2c3e50; font-size: 1.1em;\">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint.</blockquote><h5>Heading 5 : Et molestiae non recusandae itaque earum rerum.</h5><p>Hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>",
       "author": "Michael Johnson",
       "publishedDate": "2025-09-16T09:45:00Z",
@@ -2477,7 +2765,7 @@
       "title": "Heading 1 : At vero eos et accusamus et iusto odio dignissimos.",
       "slug": "news-article-004",
       "isFeatured": true,
-      "featuredImage": "/img/temp/solutions/sol-bg-extra.jpg",
+      "featuredImage": "/img/temp/solutions/sol-bg-high.jpg",
       "content": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio.</p><h2>Key Points</h2><p>Cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.</p><p>Ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p><ul><li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</li><li>Accusantium doloremque laudantium totam rem aperiam eaque ipsa.</li><li>Quae ab illo inventore veritatis et quasi architecto beatae vitae.</li></ul><ol><li>Dicta sunt explicabo nemo enim ipsam voluptatem.<ol type=\"a\"><li>Quia voluptas sit aspernatur aut odit aut fugit.</li><li>Sed quia consequuntur magni dolores eos qui ratione.<ol type=\"i\"><li>Voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum.</li></ol></li></ol></li><li>Quia dolor sit amet consectetur adipisci velit.<ol type=\"a\"><li>Sed quia non numquam eius modi tempora incidunt.</li></ol></li></ol><h3>Heading 3 : Ut labore et dolore magnam aliquam quaerat voluptatem.</h3><img src=\"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80\" alt=\"Team collaboration\" style=\"width: 100%; height: auto; border-radius: 8px; margin: 20px 0;\"><p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p><h4>Heading 4 : Vel illum qui dolorem eum fugiat quo voluptas nulla.</h4><blockquote style=\"border-left: 4px solid #f39c12; padding-left: 20px; margin: 20px 0; font-style: italic; color: #2c3e50; font-size: 1.1em;\">Pariatur at vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</blockquote><h5>Heading 5 : Deleniti atque corrupti quos dolores et quas molestias.</h5><p>Excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.</p>",
       "author": "Sarah Williams",
       "publishedDate": "2025-09-15T16:20:00Z",
@@ -2490,7 +2778,72 @@
       "title": "Heading 1 : Nemo enim ipsam voluptatem quia voluptas sit aspernatur.",
       "slug": "news-article-005",
       "isFeatured": true,
-      "featuredImage": "/img/temp/solutions/sol-bg-alt.jpg",
+      "featuredImage": "/img/temp/alarm/alarm-banner.jpg",
+      "content": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p><p>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p><h2>Main Content</h2><p>Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><ul><li>Similique sunt in culpa qui officia deserunt mollitia animi.</li><li>Id est laborum et dolorum fuga et harum quidem rerum.</li><li>Facilis est et expedita distinctio nam libero tempore.</li></ul><ol><li>Cum soluta nobis est eligendi optio cumque nihil.<ol type=\"a\"><li>Impedit quo minus id quod maxime placeat facere possimus.</li><li>Omnis voluptas assumenda est omnis dolor repellendus.<ol type=\"i\"><li>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus.</li></ol></li></ol></li><li>Saepe eveniet ut et voluptates repudiandae sint.<ol type=\"a\"><li>Et molestiae non recusandae itaque earum rerum hic.</li></ol></li></ol><h3>Heading 3 : Tenetur a sapiente delectus ut aut reiciendis voluptatibus.</h3><img src=\"https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80\" alt=\"Woman working on computer\" style=\"width: 100%; height: auto; border-radius: 8px; margin: 20px 0;\"><p>Maiores alias consequatur aut perferendis doloribus asperiores repellat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p><h4>Heading 4 : Et quasi architecto beatae vitae dicta sunt explicabo.</h4><blockquote style=\"border-left: 4px solid #9b59b6; padding-left: 20px; margin: 20px 0; font-style: italic; color: #2c3e50; font-size: 1.1em;\">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores.</blockquote><h5>Heading 5 : Eos qui ratione voluptatem sequi nesciunt neque porro.</h5><p>Quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>",
+      "author": "David Brown",
+      "publishedDate": "2025-09-14T11:10:00Z",
+      "category": "Category 4",
+      "tags": ["science", "research", "innovation", "discovery"],
+      "excerpt": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores."
+    },
+    {
+      "id": "news-article-006",
+      "title": "#6 Me non paenitet nullum festiviorem excogitasse ad hoc.",
+      "slug": "news-article-006",
+      "isFeatured": true,
+      "featuredImage": "/img/temp/solutions/sol-bg-high.jpg",
+      "content": "<p>Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor. Gallia est omnis divisa in partes tres, quarum. Quis aute iure reprehenderit in voluptate velit esse.</p><p>Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor. Gallia est omnis divisa in partes tres, quarum. Quis aute iure reprehenderit in voluptate velit esse.</p><h2>Heading 2</h2><p>Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor. Gallia est omnis divisa in partes tres, quarum. Quis aute iure reprehenderit in voluptate velit esse.</p><p>Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor. Gallia est omnis divisa in partes tres, quarum. Quis aute iure reprehenderit in voluptate velit esse.</p><ul><li>Me non paenitet nullum festiviorem excogitasse ad hoc.</li><li>Me non paenitet nullum festiviorem excogitasse ad hoc.</li><li>Me non paenitet nullum festiviorem excogitasse ad hoc.</li></ul><ol><li>Me non paenitet nullum festiviorem excogitasse ad hoc.<ol type=\"a\"><li>Fabio vel iudice vincam, sunt in culpa qui officia.</li><li>Vivamus sagittis lacus vel augue laoreet rutrum faucibus.<ol type=\"i\"><li>Gallia est omnis divisa in partes tres, quarum. Ut enim ad minim veniam, quis nostrud exercitation. Excepteur sint obcaecat cupiditat non proident culpa.</li></ol></li></ol></li><li>Me non paenitet nullum festiviorem excogitasse ad hoc.<ol type=\"a\"><li>Gallia est omnis divisa in partes tres, quarum.</li></ol></li></ol><h3>Heading 3 : Tityre, tu patulae recubans sub tegmine fagi dolor.</h3><img src=\"https://images.unsplash.com/photo-1609220136736-443140cffec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80\" alt=\"Elderly couple sitting on couch\" style=\"width: 100%; height: auto; border-radius: 8px; margin: 20px 0;\"><p>Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor. Gallia est omnis divisa in partes tres, quarum. Quis aute iure reprehenderit in voluptate velit esse.Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor.</p><h4>Heading 4 : Tityre, tu patulae recubans sub tegmine fagi dolor.</h4><blockquote style=\"border-left: 4px solid #20b2aa; padding-left: 20px; margin: 20px 0; font-style: italic; color: #2c3e50; font-size: 1.1em;\">Pellentesque habitant morbi tristique senectus et netus. Tityre, tu patulae recubans sub tegmine fagi dolor.</blockquote><h5>Heading 5 : Tityre, tu patulae recubans sub tegmine fagi dolor.</h5><p>Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor. Gallia est omnis divisa in partes tres, quarum. Quis aute iure reprehenderit in voluptate velit esse. Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor. Gallia est omnis divisa.</p>",
+      "author": "John Doe",
+      "publishedDate": "2024-09-18T10:30:00Z",
+      "category": "General",
+      "tags": ["lorem", "ipsum", "content", "article"],
+      "excerpt": "Cum sociis natoque penatibus et magnis dis parturient. Quo usque tandem abutere, Catilina, patientia nostra? Tityre, tu patulae recubans sub tegmine fagi dolor."
+    },
+    {
+      "id": "news-article-007",
+      "title": "#7 Heading 1 : Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+      "slug": "news-article-007",
+      "isFeatured": true,
+      "featuredImage": "",
+      "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p><h2>Secondary Heading</h2><p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p><p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p><ul><li>At vero eos et accusamus et iusto odio dignissimos ducimus.</li><li>Qui blanditiis praesentium voluptatum deleniti atque corrupti.</li><li>Quos dolores et quas molestias excepturi sint occaecati.</li></ul><ol><li>Cupiditate non provident, similique sunt in culpa.<ol type=\"a\"><li>Qui officia deserunt mollitia animi, id est laborum.</li><li>Et harum quidem rerum facilis est et expedita distinctio.<ol type=\"i\"><li>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.</li></ol></li></ol></li><li>Quo minus id quod maxime placeat facere possimus.<ol type=\"a\"><li>Omnis voluptas assumenda est, omnis dolor repellendus.</li></ol></li></ol><h3>Heading 3 : Temporibus autem quibusdam et aut officiis debitis.</h3><img src=\"https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80\" alt=\"Modern office workspace\" style=\"width: 100%; height: auto; border-radius: 8px; margin: 20px 0;\"><p>Aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p><h4>Heading 4 : Itaque earum rerum hic tenetur a sapiente delectus.</h4><blockquote style=\"border-left: 4px solid #3498db; padding-left: 20px; margin: 20px 0; font-style: italic; color: #2c3e50; font-size: 1.1em;\">Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</blockquote><h5>Heading 5 : Et harum quidem rerum facilis est et expedita distinctio.</h5><p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.</p>",
+      "author": "Jane Smith",
+      "publishedDate": "2025-09-17T14:15:00Z",
+      "category": "Category 1",
+      "tags": ["business", "technology", "innovation", "growth"],
+      "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "id": "news-article-008",
+      "title": "#8 Heading 1 : Sed ut perspiciatis unde omnis iste natus error.",
+      "slug": "news-article-008",
+      "isFeatured": true,
+      "featuredImage": "/img/temp/alarm/alarm-banner.jpg",
+      "content": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p><h2>Important Section</h2><p>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p><p>Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p><ul><li>Excepteur sint occaecat cupidatat non proident sunt in culpa.</li><li>Qui officia deserunt mollit anim id est laborum et dolorum fuga.</li><li>Et harum quidem rerum facilis est et expedita distinctio.</li></ul><ol><li>Nam libero tempore cum soluta nobis est eligendi.<ol type=\"a\"><li>Optio cumque nihil impedit quo minus id quod maxime.</li><li>Placeat facere possimus omnis voluptas assumenda est.<ol type=\"i\"><li>Omnis dolor repellendus temporibus autem quibusdam et aut officiis debitis.</li></ol></li></ol></li><li>Aut rerum necessitatibus saepe eveniet ut et voluptates.<ol type=\"a\"><li>Repudiandae sint et molestiae non recusandae.</li></ol></li></ol><h3>Heading 3 : Itaque earum rerum hic tenetur a sapiente delectus.</h3><img src=\"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80\" alt=\"Person using laptop\" style=\"width: 100%; height: auto; border-radius: 8px; margin: 20px 0;\"><p>Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p><h4>Heading 4 : Omnis voluptas assumenda est omnis dolor repellendus.</h4><blockquote style=\"border-left: 4px solid #e74c3c; padding-left: 20px; margin: 20px 0; font-style: italic; color: #2c3e50; font-size: 1.1em;\">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint.</blockquote><h5>Heading 5 : Et molestiae non recusandae itaque earum rerum.</h5><p>Hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>",
+      "author": "Michael Johnson",
+      "publishedDate": "2025-09-16T09:45:00Z",
+      "category": "Category 2",
+      "tags": ["education", "learning", "development", "skills"],
+      "excerpt": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+    },
+    {
+      "id": "news-article-009",
+      "title": "#9 Heading 1 : At vero eos et accusamus et iusto odio dignissimos.",
+      "slug": "news-article-009",
+      "isFeatured": true,
+      "featuredImage": "/img/temp/solutions/sol-bg-high.jpg",
+      "content": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio.</p><h2>Key Points</h2><p>Cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.</p><p>Ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p><ul><li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</li><li>Accusantium doloremque laudantium totam rem aperiam eaque ipsa.</li><li>Quae ab illo inventore veritatis et quasi architecto beatae vitae.</li></ul><ol><li>Dicta sunt explicabo nemo enim ipsam voluptatem.<ol type=\"a\"><li>Quia voluptas sit aspernatur aut odit aut fugit.</li><li>Sed quia consequuntur magni dolores eos qui ratione.<ol type=\"i\"><li>Voluptatem sequi nesciunt neque porro quisquam est qui dolorem ipsum.</li></ol></li></ol></li><li>Quia dolor sit amet consectetur adipisci velit.<ol type=\"a\"><li>Sed quia non numquam eius modi tempora incidunt.</li></ol></li></ol><h3>Heading 3 : Ut labore et dolore magnam aliquam quaerat voluptatem.</h3><img src=\"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80\" alt=\"Team collaboration\" style=\"width: 100%; height: auto; border-radius: 8px; margin: 20px 0;\"><p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p><h4>Heading 4 : Vel illum qui dolorem eum fugiat quo voluptas nulla.</h4><blockquote style=\"border-left: 4px solid #f39c12; padding-left: 20px; margin: 20px 0; font-style: italic; color: #2c3e50; font-size: 1.1em;\">Pariatur at vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</blockquote><h5>Heading 5 : Deleniti atque corrupti quos dolores et quas molestias.</h5><p>Excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.</p>",
+      "author": "Sarah Williams",
+      "publishedDate": "2025-09-15T16:20:00Z",
+      "category": "Category 3",
+      "tags": ["health", "wellness", "lifestyle", "fitness"],
+      "excerpt": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti."
+    },
+    {
+      "id": "news-article-0010",
+      "title": "#10 Heading 1 : Nemo enim ipsam voluptatem quia voluptas sit aspernatur.",
+      "slug": "news-article-010",
+      "isFeatured": true,
+      "featuredImage": "/img/temp/alarm/alarm-banner.jpg",
       "content": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p><p>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p><h2>Main Content</h2><p>Nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><ul><li>Similique sunt in culpa qui officia deserunt mollitia animi.</li><li>Id est laborum et dolorum fuga et harum quidem rerum.</li><li>Facilis est et expedita distinctio nam libero tempore.</li></ul><ol><li>Cum soluta nobis est eligendi optio cumque nihil.<ol type=\"a\"><li>Impedit quo minus id quod maxime placeat facere possimus.</li><li>Omnis voluptas assumenda est omnis dolor repellendus.<ol type=\"i\"><li>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus.</li></ol></li></ol></li><li>Saepe eveniet ut et voluptates repudiandae sint.<ol type=\"a\"><li>Et molestiae non recusandae itaque earum rerum hic.</li></ol></li></ol><h3>Heading 3 : Tenetur a sapiente delectus ut aut reiciendis voluptatibus.</h3><img src=\"https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80\" alt=\"Woman working on computer\" style=\"width: 100%; height: auto; border-radius: 8px; margin: 20px 0;\"><p>Maiores alias consequatur aut perferendis doloribus asperiores repellat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p><h4>Heading 4 : Et quasi architecto beatae vitae dicta sunt explicabo.</h4><blockquote style=\"border-left: 4px solid #9b59b6; padding-left: 20px; margin: 20px 0; font-style: italic; color: #2c3e50; font-size: 1.1em;\">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores.</blockquote><h5>Heading 5 : Eos qui ratione voluptatem sequi nesciunt neque porro.</h5><p>Quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>",
       "author": "David Brown",
       "publishedDate": "2025-09-14T11:10:00Z",
@@ -2556,9 +2909,9 @@
       "image": "/img/temp/alarm/solutions-how-secom-works-5.jpg"
     }
   ],
-  "SolutionDetailCTA": {
+  "SolutionDetailDocument": {
     "title": "Check our product in our catalogue",
-    "image": "/img/temp/alarm/solutions-how-secom-works-5.jpg",
+    "image": "/img/temp/products/PIR-Camera-Indoor.png",
     "file": "/dummy.pdf"
   },
   "SolutionDetailFAQ": [
@@ -2667,6 +3020,80 @@
       "top": "44%",
       "left": "44%",
       "href": "https://secomtr.com/"
+    }
+  ],
+
+  "MenuServices": [
+    {
+      "text": "Security Consulting",
+      "href": "#1"
+    },
+    {
+      "text": "Monitoring & Response",
+      "href": "#2"
+    },
+    {
+      "text": "Security Guard",
+      "href": "#3"
+    }
+  ],
+
+  "MenuProducts": [
+    {
+      "text": "Alarm Monitoring",
+      "href": "#"
+    },
+    {
+      "text": "CCTV",
+      "href": "#"
+    },
+    {
+      "text": "Access Control",
+      "href": "#"
+    },
+    {
+      "text": "X-Ray",
+      "href": "#"
+    },
+    {
+      "text": "Automated External Defibrilator",
+      "href": "#"
+    },
+    {
+      "text": "Pedestrian Gate and Full Height Turnstile",
+      "href": "#"
+    },
+    {
+      "text": "Boom Gate, blocker, bollard and barrier",
+      "href": "#"
+    },
+    {
+      "text": "Key Management System",
+      "href": "#"
+    },
+    {
+      "text": "Perimeter Border Security",
+      "href": "#"
+    },
+    {
+      "text": "Walkthrought and handheld metal detector",
+      "href": "#"
+    },
+    {
+      "text": "Under Vehicle Surveilence System",
+      "href": "#"
+    },
+    {
+      "text": "Digital Guard Patrol",
+      "href": "#"
+    },
+    {
+      "text": "Elevator Control",
+      "href": "#"
+    },
+    {
+      "text": "Security Guard",
+      "href": "#"
     }
   ]
 }

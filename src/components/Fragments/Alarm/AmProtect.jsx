@@ -6,13 +6,11 @@ import Image from "next/image";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import BackgroundDots from "@/components/Elements/BackgroundDots";
 import ButtonPrimary from "@/components/Elements/ButtonPrimary";
-import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
-const AmProtect = ({ translationKey }) => {
-  const t = useTranslations();
-  const AlarmProtect = t.raw(translationKey);
-
+const AmProtect = ({ dataSection }) => {
   const isDesktop = useIsDesktop();
+  const locale = useLocale();
 
   return (
     <section className="relative pt-9 pb-13 mt-[-3px] lg:mt-0 lg:pb-23 lg:pt-17 overflow-hidden after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:lg:h-10/12 after:h-full after:bg-[linear-gradient(0deg,_#ffffff_30%,_rgba(255,255,255,0)_60%)]">
@@ -23,20 +21,27 @@ const AmProtect = ({ translationKey }) => {
       />
       <div className="container mx-auto relative z-[3] flex flex-col justify-center items-center">
         <h2 className="text-[25px] lg:text-[40px] text-darkblue lg:text-center font-raleway font-medium">
-          {AlarmProtect.title}
+          {dataSection.title}
         </h2>
-        <p className="text-sm lg:text-lg lg:text-center mt-3 leading-[1.7] lg:leading-[1.5] lg:mt-4 lg:mb-10 w-full lg:w-[65%]">
-          {AlarmProtect.desc}
-        </p>
+        {/* temp */}
+        {/* <p className="text-sm lg:text-lg lg:text-center mt-3 leading-[1.7] lg:leading-[1.5] lg:mt-4 lg:mb-10 w-full lg:w-[65%]">
+          {dataSection.desc}
+        </p> */}
 
-        <Image
-          src={isDesktop ? AlarmProtect.image : AlarmProtect.imageMobile}
-          alt="Alarm Protect"
-          width={1321}
-          height={671}
-          className="max-w-full w-[100%] h-auto mb-5 mt-2 lg:mb-7"
-          quality={100}
-        />
+        <picture>
+          <source
+            media="(min-width: 1024px)"
+            srcSet={`${process.env.NEXT_PUBLIC_STORAGE_URL}${dataSection.image}`}
+          />
+          <Image
+            src={`${process.env.NEXT_PUBLIC_STORAGE_URL}${dataSection.imageMobile}`}
+            alt="Alarm Protect"
+            width={1321}
+            height={671}
+            className="max-w-full w-[100%] h-auto mb-5 mt-2 lg:mb-7"
+            quality={100}
+          />
+        </picture>
 
         <div className="relative w-full flex flex-col justify-center py-1">
           {!isDesktop ? (
@@ -54,7 +59,7 @@ const AmProtect = ({ translationKey }) => {
               hasTrack={false}
             >
               <SplideTrack className="test-track pb-19">
-                {AlarmProtect.items.map((item, index) => (
+                {dataSection.items.map((item, index) => (
                   <SplideSlide key={index} className="group">
                     <div className="text-center flex flex-col items-center justify-center">
                       <p
@@ -72,7 +77,7 @@ const AmProtect = ({ translationKey }) => {
                         {item.title}
                       </p>
                       <div
-                        dangerouslySetInnerHTML={{ __html: item.desc }}
+                        dangerouslySetInnerHTML={{ __html: item.description }}
                         className="text-sm leading-[1.7] text-gray-600"
                       />
                     </div>
@@ -115,7 +120,7 @@ const AmProtect = ({ translationKey }) => {
             </Splide>
           ) : (
             <div className="grid grid-cols-12 gap-18">
-              {AlarmProtect.items.map((item, index) => (
+              {dataSection.items.map((item, index) => (
                 <div key={index} className="col-span-4 flex flex-col group">
                   <p className="text-3xl font-semibold text-white mb-2 group-nth-[1]:bg-[#CE2129] group-nth-[2]:bg-navyblue group-nth-[3]:bg-tosca w-[52px] h-[52px] flex flex-col items-center justify-center rounded-full font-raleway">
                     {index + 1}
@@ -124,7 +129,7 @@ const AmProtect = ({ translationKey }) => {
                     {item.title}
                   </p>
                   <div
-                    dangerouslySetInnerHTML={{ __html: item.desc }}
+                    dangerouslySetInnerHTML={{ __html: item.description }}
                     className="text-lg text-gray-600 w-full xl:w-10/12"
                   />
                 </div>
@@ -133,12 +138,8 @@ const AmProtect = ({ translationKey }) => {
           )}
         </div>
 
-        <ButtonPrimary
-          href={AlarmProtect.btnCTA.href}
-          target={AlarmProtect.btnCTA.target}
-          className="lg:mt-15"
-        >
-          {AlarmProtect.btnCTA.text}
+        <ButtonPrimary href="contact" target="_self" className="lg:mt-15">
+          {locale === "en" ? "CONSULT NOW" : "KONSULTASI SEKARANG"}
         </ButtonPrimary>
       </div>
     </section>

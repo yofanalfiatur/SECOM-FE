@@ -5,10 +5,7 @@ import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
-const AboutTeam = ({ translationKey }) => {
-  const t = useTranslations();
-  const AboutTeam = t.raw(translationKey);
-  const isDesktop = useIsDesktop();
+const AboutTeam = ({ dataSection }) => {
   const locale = useLocale();
 
   const [activeIndex, setActiveIndex] = useState(null);
@@ -32,15 +29,19 @@ const AboutTeam = ({ translationKey }) => {
       {/* Intro Section */}
       <div
         className="flex flex-col h-full w-full relative bg-cover bg-center bg-no-repeat after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[#00529C99] ab-team__intro"
-        style={{ backgroundImage: `url(${AboutTeam.image})` }}
+        style={{
+          backgroundImage: `url(${
+            process.env.NEXT_PUBLIC_STORAGE_URL + dataSection.background
+          })`,
+        }}
       >
         <div className="container mx-auto flex flex-col items-center relative z-[2]">
           <h2 className="text-white text-center w-full lg:w-[62%] text-sm sm:text-[18px] md:text-2xl lg:text-[50px] font-raleway font-normal pt-5 lg:pt-20 leading-[1.4] lg:leading-[1.2] mb-2 lg:mb-8">
-            {AboutTeam.title}
+            {dataSection.title}
           </h2>
         </div>
         <Image
-          src={AboutTeam.photo}
+          src={process.env.NEXT_PUBLIC_STORAGE_URL + dataSection.photo_group}
           width={1920}
           height={768}
           alt="About"
@@ -59,7 +60,7 @@ const AboutTeam = ({ translationKey }) => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-5 ab-team__list">
-          {AboutTeam.items.map((item, index) => {
+          {dataSection.cards.map((item, index) => {
             const videoRef = useRef(null);
             const videoRefPopup = useRef(null);
             const isActive = activeIndex === index;
@@ -88,7 +89,7 @@ const AboutTeam = ({ translationKey }) => {
                     {/* Video */}
                     <video
                       ref={videoRef}
-                      src={item.video}
+                      src={process.env.NEXT_PUBLIC_STORAGE_URL + item.video}
                       className="absolute z-0 inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                       muted
                       loop
@@ -97,7 +98,7 @@ const AboutTeam = ({ translationKey }) => {
 
                     {/* Image */}
                     <Image
-                      src={item.image}
+                      src={process.env.NEXT_PUBLIC_STORAGE_URL + item.image}
                       width={800}
                       height={800}
                       alt={item.name}
@@ -159,7 +160,7 @@ const AboutTeam = ({ translationKey }) => {
                         }}
                       >
                         <Image
-                          src={item.image}
+                          src={process.env.NEXT_PUBLIC_STORAGE_URL + item.image}
                           width={800}
                           height={800}
                           alt={item.name}
@@ -168,7 +169,7 @@ const AboutTeam = ({ translationKey }) => {
                         />
                         <video
                           ref={videoRefPopup}
-                          src={item.video}
+                          src={process.env.NEXT_PUBLIC_STORAGE_URL + item.video}
                           className="absolute z-0 inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-500 hover:opacity-100"
                           muted
                           loop
@@ -187,7 +188,7 @@ const AboutTeam = ({ translationKey }) => {
                           </p>
                         </div>
                         <div
-                          dangerouslySetInnerHTML={{ __html: item.desc }}
+                          dangerouslySetInnerHTML={{ __html: item.description }}
                           className="text-sm lg:text-base font-normal leading-[1.7] lg:leading-[1.5] text-darkblue py-6 px-6 overflow-y-auto min-h-[unset] lg:min-h-[300px] max-h-max lg:max-h-[45vh]"
                         />
                       </div>

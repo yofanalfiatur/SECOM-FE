@@ -7,34 +7,34 @@ import { useTranslations } from "next-intl";
 import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import CardProduct from "@/components/Elements/CardProduct";
 
-const SolProduct = ({ translationKey, listProducts }) => {
+const SolProduct = (props) => {
+  const { dataSection, listProducts } = props;
   const t = useTranslations();
   const ProductDetails = t.raw(listProducts);
-  const SolProduct = t.raw(translationKey);
   const isDesktop = useIsDesktop();
   const locale = useLocale();
 
   return (
-    <section className="bg-navyblue flex flex-col pt-10 lg:pt-21 pb-10 lg:pb-25 sol-product">
+    <section className="bg-navyblue flex flex-col pt-6 lg:pt-21 pb-20 lg:pb-25 sol-product">
       <div className="container mx-auto flex flex-col">
-        <div className="flex flex-row sol-product__intro">
+        <div className="flex flex-col lg:flex-row sol-product__intro">
           <div className="w-full lg:w-8/12 lg:pr-20">
             <h2 className="text-white text-[30px] lg:text-[40px] font-raleway font-normal ">
-              {SolProduct.title}
+              {dataSection.title_section}
             </h2>
-            <p className="text-white text-sm lg:text-lg leading-[1.7] lg:leading-[1.5] mt-2 mb-14">
-              {SolProduct.desc}
+            <p className="text-white text-sm lg:text-lg leading-[1.7] lg:leading-[1.5] mt-2 mb-5 lg:mb-14">
+              {dataSection.description_section}
             </p>
           </div>
           <div className="w-full lg:w-4/12 lg:pl-3 ">
-            <p className="text-white lg:mt-6 lg:mb-3 lg:text-lg">
+            <p className="text-white lg:mt-6 mb-3 text-sm lg:text-lg">
               {locale === "en" ? "FILTER BY" : "FILTER BERDASARKAN"}
             </p>
-            <div className="flex flex-col relative">
+            <div className="flex flex-col relative mb-5 lg:mb-0">
               <select
                 name=""
                 id=""
-                className="border-[1px] rounded-[5px] border-white lg:text-lg text-white py-4 px-4 w-full appearance-none"
+                className="border-[1px] rounded-[5px] border-white text-sm lg:text-lg text-white py-3 lg:py-4 px-4 w-full appearance-none"
               >
                 <option value="">
                   {locale === "en" ? "All Industries" : "Semua Industri"}
@@ -76,8 +76,8 @@ const SolProduct = ({ translationKey, listProducts }) => {
                 autoplay: false,
                 pauseOnHover: true,
                 gap: "20px",
-                arrows: false,
-                pagination: true,
+                arrows: true,
+                pagination: false,
               }}
               hasTrack={false}
               className="[&_.splide__track]:!overflow-visible w-full"
@@ -89,6 +89,39 @@ const SolProduct = ({ translationKey, listProducts }) => {
                   </SplideSlide>
                 ))}
               </SplideTrack>
+              {/* Custom Arrow Buttons */}
+              <div className="splide__arrows absolute bottom-[-35px] w-full z-10">
+                <button className="splide__arrow splide__arrow--prev !bg-white !opacity-100 !border-white !border-[1px] !rounded-none !left-[37%]">
+                  <svg
+                    width="22"
+                    height="15"
+                    viewBox="0 0 22 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="scale-75 rotate-[270deg]"
+                  >
+                    <path
+                      d="M21.3765 12.0804L10.9045 0L0.432595 12.0804C0.148111 12.4096 -0.00740039 12.8514 0.000270989 13.3085C0.00794236 13.7656 0.178168 14.2005 0.473501 14.5177C0.768834 14.8349 1.16508 15.0083 1.57507 14.9997C1.98507 14.9911 2.37522 14.8014 2.6597 14.4721L10.9045 4.95578L19.1585 14.4721C19.443 14.8014 19.8331 14.9911 20.2431 14.9997C20.6531 15.0083 21.0493 14.8349 21.3447 14.5177C21.64 14.2005 21.8102 13.7656 21.8179 13.3085C21.8256 12.8514 21.6701 12.4096 21.3856 12.0804H21.3765Z"
+                      fill="#00AAAD"
+                    />
+                  </svg>
+                </button>
+                <button className="splide__arrow splide__arrow--next !bg-white !opacity-100 !border-white !border-[1px] !rounded-none !right-[37%]">
+                  <svg
+                    width="22"
+                    height="15"
+                    viewBox="0 0 22 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="scale-75 rotate-[90deg]"
+                  >
+                    <path
+                      d="M21.3765 12.0804L10.9045 0L0.432595 12.0804C0.148111 12.4096 -0.00740039 12.8514 0.000270989 13.3085C0.00794236 13.7656 0.178168 14.2005 0.473501 14.5177C0.768834 14.8349 1.16508 15.0083 1.57507 14.9997C1.98507 14.9911 2.37522 14.8014 2.6597 14.4721L10.9045 4.95578L19.1585 14.4721C19.443 14.8014 19.8331 14.9911 20.2431 14.9997C20.6531 15.0083 21.0493 14.8349 21.3447 14.5177C21.64 14.2005 21.8102 13.7656 21.8179 13.3085C21.8256 12.8514 21.6701 12.4096 21.3856 12.0804H21.3765Z"
+                      fill="#00AAAD"
+                    />
+                  </svg>
+                </button>
+              </div>
             </Splide>
           </>
         )}

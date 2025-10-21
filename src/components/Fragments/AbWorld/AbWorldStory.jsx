@@ -5,9 +5,7 @@ import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const AbWorldStory = ({ translationKey }) => {
-  const t = useTranslations();
-  const AbWorldStory = t.raw(translationKey);
+const AbWorldStory = ({ dataSection }) => {
   const isDesktop = useIsDesktop();
 
   return (
@@ -15,10 +13,10 @@ const AbWorldStory = ({ translationKey }) => {
       {/* Title & Description */}
       <div className="container mx-auto flex flex-col items-center">
         <h2 className="text-darkblue text-[30px] lg:text-[40px] font-raleway font-normal text-center">
-          {AbWorldStory.title}
+          {dataSection.title}
         </h2>
         <p className="text-sm lg:text-lg leading-[1.7] lg:leading-[1.5] text-darkblue text-center lg:w-[55%] mt-2 lg:mt-3 mb-7 lg:mb-15">
-          {AbWorldStory.desc}
+          {dataSection.desc}
         </p>
       </div>
 
@@ -27,14 +25,14 @@ const AbWorldStory = ({ translationKey }) => {
         {isDesktop ? (
           // Desktop → Grid
           <div className="grid grid-cols-3">
-            {AbWorldStory.items.map((item, index) => (
+            {dataSection.cards.map((item, index) => (
               <div
                 key={index}
                 className="flex flex-col border-r border-b border-[#00000033] relative group"
               >
-                <div className="pl-10 pt-5 pb-10 pr-4 flex flex-col relative z-[1] m-[3px] bg-white">
+                <div className="pl-10 pt-5 pb-10 pr-4 flex flex-col relative z-[1] h-full  m-[3px] bg-white">
                   <Image
-                    src={item.icon}
+                    src={process.env.NEXT_PUBLIC_STORAGE_URL + item.logo}
                     width={50}
                     height={50}
                     alt={item.title}
@@ -44,7 +42,7 @@ const AbWorldStory = ({ translationKey }) => {
                     {item.title}
                   </p>
                   <p className="font-raleway font-normal text-darkblue text-base lg:text-[25px]">
-                    {item.desc}
+                    {item.description}
                   </p>
                 </div>
 
@@ -69,11 +67,11 @@ const AbWorldStory = ({ translationKey }) => {
             className="slider-with-pagin abw-story__slider"
           >
             <SplideTrack>
-              {AbWorldStory.items.map((item, index) => (
+              {dataSection.cards.map((item, index) => (
                 <SplideSlide key={index} className="abw-story__item">
                   <div className="flex flex-col pt-4 pb-5">
                     <Image
-                      src={item.icon}
+                      src={process.env.NEXT_PUBLIC_STORAGE_URL + item.logo}
                       width={50}
                       height={50}
                       quality={100}

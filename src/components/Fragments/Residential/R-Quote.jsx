@@ -8,10 +8,7 @@ import "glightbox/dist/css/glightbox.min.css";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
-const ResQuote = () => {
-  const t = useTranslations();
-  const ReQuote = t.raw("ReQuote");
-
+const ResQuote = ({ dataSection }) => {
   const imageSliderRef = useRef(null);
   const textSliderRef = useRef(null);
 
@@ -57,10 +54,10 @@ const ResQuote = () => {
         <Splide
           ref={imageSliderRef}
           options={{
-            type: ReQuote.length > 1 ? "loop" : "slide",
+            type: dataSection.length > 1 ? "loop" : "slide",
             perPage: 1,
             perMove: 1,
-            arrows: ReQuote.length > 1 ? true : false,
+            arrows: dataSection.length > 1 ? true : false,
             pagination: false,
             gap: "0px",
           }}
@@ -106,18 +103,20 @@ const ResQuote = () => {
 
           {/* Image Slides */}
           <SplideTrack className="res-quote__track">
-            {ReQuote.map((item, index) => (
+            {dataSection.map((item, index) => (
               <SplideSlide key={index} className="h-max flex flex-col">
                 <div className="flex justify-center h-full items-center w-full bg-gray-200">
                   <Link
                     key={index}
-                    href={item.linkVideo}
+                    href={item.url_video}
                     className="glightbox w-full h-full relative flex flex-col justify-center items-center"
                   >
                     <Image
                       src={
-                        item.thumb && item.thumb.trim() !== ""
-                          ? item.thumb
+                        item.thumbnail_video &&
+                        item.thumbnail_video.trim() !== ""
+                          ? process.env.NEXT_PUBLIC_STORAGE_URL +
+                            item.thumbnail_video
                           : "/img/thumb-default-blue.jpg"
                       }
                       width={1840}
@@ -145,7 +144,7 @@ const ResQuote = () => {
           <Splide
             ref={textSliderRef}
             options={{
-              type: ReQuote.length > 1 ? "loop" : "slide",
+              type: dataSection.length > 1 ? "loop" : "slide",
               perPage: 1,
               arrows: false,
               pagination: false,
@@ -155,7 +154,7 @@ const ResQuote = () => {
             aria-label="Text Slider"
             className=""
           >
-            {ReQuote.map((item, index) => (
+            {dataSection.map((item, index) => (
               <SplideSlide key={index} className="!h-full">
                 <div className="flex flex-col justify-center items-start py-15 px-0 lg:py-8 lg:pl-16 lg:pr-20 h-full">
                   <svg
@@ -172,7 +171,7 @@ const ResQuote = () => {
                     />
                   </svg>
                   <p className="text-[25px] lg:text-[35px] font-normal font-raleway leading-[1.4] text-white">
-                    {item.text}
+                    {item.testimony}
                   </p>
                 </div>
               </SplideSlide>

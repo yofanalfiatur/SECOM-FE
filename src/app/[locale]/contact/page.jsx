@@ -1,37 +1,42 @@
-"use client";
-
-import { useLocale, useTranslations } from "next-intl";
 import ContactForm from "@/components/Fragments/Contact/ContactForm";
-import { motion } from "framer-motion";
 import Image from "next/image";
-import useIsDesktop from "@/components/Hooks/useIsDesktop";
 import FloatButton from "@/components/Elements/FloatButton";
-import ButtonPrimary from "@/components/Elements/ButtonPrimary";
-import ButtonSecondary from "@/components/Elements/ButtonSecondary";
+import { getPageData } from "@/libs/api";
 
-const Contact = () => {
-  const t = useTranslations();
-  const locale = useLocale();
-  const ContactPage = t.raw("ContactPage");
-  const isDesktop = useIsDesktop();
+export default async function Contact(props) {
+  const params = await props.params;
+  const locale = params.locale;
+
+  // Ambil data halaman dari API
+  const response = await getPageData("contact-us");
+  const pageData = response.data[locale];
+
+  // Mapping section agar mudah diakses berdasarkan nama component
+  const sections = pageData.sections.reduce((acc, section) => {
+    acc[section.component] = section.fields;
+    return acc;
+  }, {});
+
+  const ContactPage = sections.contact_us || {};
 
   return (
     <>
       <section className="flex flex-col items-center justify-center relative overflow-hidden hide__footer__top contact-page">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col relative lg:absolute top-0 left-0 w-full h-auto lg:h-full lg:max-h-[calc(100vh-94px)] lg:w-[45vw]"
-        >
-          <Image
-            src={isDesktop ? ContactPage.photo : ContactPage.photoMd}
-            width={630}
-            height={1091}
-            alt="Contact"
-            className="w-full lg:h-full lg:max-h-[calc(100vh-94px)] aspect-[32/22] lg:aspect-auto object-cover object-center"
-          />
-        </motion.div>
+        <div className="flex flex-col relative lg:absolute top-0 left-0 w-full h-auto lg:h-full lg:max-h-[calc(100vh-94px)] lg:w-[45vw]">
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcSet={`${process.env.NEXT_PUBLIC_STORAGE_URL}${ContactPage.image_desktop}`}
+            />
+            <Image
+              src={`${process.env.NEXT_PUBLIC_STORAGE_URL}${ContactPage.image_mobile}`}
+              width={1000}
+              height={1200}
+              alt="Contact"
+              className="w-full lg:h-full lg:max-h-[calc(100vh-94px)] aspect-[32/22] lg:aspect-auto object-cover object-center"
+            />
+          </picture>
+        </div>
 
         <div className="container mx-auto flex flex-row justify-end h-full lg:max-h-[calc(100vh-94px)] overflow-y-scroll pt-0 pb-5 lg:pt-10 lg:pb-10 custom-scrollbar">
           <div className="w-full lg:w-1/2 flex flex-col h-full">
@@ -39,7 +44,7 @@ const Contact = () => {
               {ContactPage.title}
             </h1>
             <p className="text-darkblue font-open-sans text-sm lg:text-lg">
-              {ContactPage.desc}
+              {ContactPage.description}
             </p>
             <p className="text-[14px] text-darkblue flex flex-row mt-4 mb-6">
               <span className="text-red-500">* </span>
@@ -55,6 +60,4 @@ const Contact = () => {
       <FloatButton />
     </>
   );
-};
-
-export default Contact;
+}

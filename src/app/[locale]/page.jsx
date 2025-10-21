@@ -1,28 +1,39 @@
-"use client";
 import FloatButton from "@/components/Elements/FloatButton";
-// import PromotionDeals from "@/components/Elements/PromotionDeals";
-import ResAbout from "@/components/Fragments/Residential/R-About";
-import ResBanner from "@/components/Fragments/Residential/R-Banner";
-import ResBannerImage from "@/components/Fragments/Residential/R-BannerImage";
-import ResPromotion from "@/components/Fragments/Residential/R-Promotion";
-import ResQuote from "@/components/Fragments/Residential/R-Quote";
-import ResSolution from "@/components/Fragments/Residential/R-Solution";
-import ResSurvey from "@/components/Fragments/Residential/R-Survey";
-import ResTesti from "@/components/Fragments/Residential/R-Testimonial";
+import HomeAbout from "@/components/Fragments/Home/HAbout";
+import HomeBanner from "@/components/Fragments/Home/HBanner";
+import HomeSegment from "@/components/Fragments/Home/HSegment";
+import HomeValue from "@/components/Fragments/Home/HValue";
+import React from "react";
+import { getPageData } from "@/libs/api";
 
-export default async function HomePage() {
+export default async function HomePage(props) {
+  const params = await props.params;
+  const locale = params.locale;
+
+  const response = await getPageData("homepage");
+  const pageData = response.data?.[locale] || response.data?.id;
+
+  if (!pageData || !pageData.sections) {
+    console.error("Invalid page data:", response);
+    return <div>Error loading page content</div>;
+  }
+
+  const sections = pageData.sections.reduce((acc, section) => {
+    acc[section.component] = section.fields;
+    return acc;
+  }, {});
+
+  const bannerData = Object.values(sections.home_banner?.slides || []);
+  const valueData = sections.home_value || {};
+  const segmentData = sections.home_segmen || {};
+  const aboutData = sections.home_about || {};
+
   return (
     <>
-      {/* temporary direct to residential */}
-      <ResBannerImage />
-      {/* <ResBanner /> */}
-      <ResSurvey />
-      <ResAbout />
-      <ResSolution />
-      <ResTesti />
-      <ResQuote />
-      {/* <ResPromotion /> */}
-      {/* <PromotionDeals /> */}
+      <HomeBanner dataSection={bannerData} />
+      <HomeValue dataSection={valueData} />
+      <HomeSegment dataSection={segmentData} />
+      <HomeAbout dataSection={aboutData} />
       <FloatButton />
     </>
   );
